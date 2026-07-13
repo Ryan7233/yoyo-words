@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { WORDS, wordsByCategory } from '../js/words.js';
+import { WORDS, KIWI_ITEMS, wordsByCategory } from '../js/words.js';
 import {
   shuffle, pickDistractors, buildQuestion, buildQuiz,
   gradeAnswer, emptyEntry, isMastered, dueWords,
   starReward, masteredCount, summarize, wrongBookWords,
   pickPicDistractors, buildPicQuestion, buildPicQuiz, PIC_QUIZ_SIZE,
+  buildKiwiSession, buildKiwiQuiz,
   spellableWords, spellingTiles, sentenceTokens, sentenceWords,
   speechScore, SPEECH_PASS,
   addSticker, updateSticker, resizeSticker, removeSticker, buildUnlockRound,
@@ -86,6 +87,38 @@ test('buildQuiz：词不够时按实际数量出题', () => {
   assert.equal(buildQuiz(few, WORDS, 8, seededRng()).length, 3);
 });
 
+test('一词多义：题目提供语境，选项不会出现两个相同英文', () => {
+  for (const id of ['cookperson', 'flyverb']) {
+    const word = WORDS.find((w) => w.id === id);
+    const meaningQuestion = buildQuestion(word, WORDS, 'en2zh', seededRng(11));
+    assert.equal(meaningQuestion.context, word.sentence);
+    const englishQuestion = buildQuestion(word, WORDS, 'zh2en', seededRng(12));
+    assert.equal(new Set(englishQuestion.options.map((o) => o.label.toLowerCase())).size, 4);
+    const listeningQuestion = buildQuestion(word, WORDS, 'listen', seededRng(13));
+    assert.equal(listeningQuestion.audioText, word.sentence);
+    assert.equal(new Set(listeningQuestion.options.map((o) => o.label.toLowerCase())).size, 4);
+  }
+});
+
+test('Kiwi 首日：只引入 2 项新内容，6 题围绕这两项重复', () => {
+  const session = buildKiwiSession(KIWI_ITEMS, {}, 1000, 2, 4);
+  assert.deepEqual(session.newItems.map((w) => w.id), KIWI_ITEMS.slice(0, 2).map((w) => w.id));
+  assert.equal(session.reviewItems.length, 0);
+  const quiz = buildKiwiQuiz(session, KIWI_ITEMS, 6, seededRng(21));
+  assert.equal(quiz.length, 6);
+  assert.deepEqual(new Set(quiz.map((q) => q.word.id)), new Set(session.newItems.map((w) => w.id)));
+});
+
+test('Kiwi 后续：2 项新内容配已学复习，不重新引入已学项', () => {
+  const progress = Object.fromEntries(KIWI_ITEMS.slice(0, 2).map((w) => [w.id, {
+    box: 1, correct: 1, wrong: 0, nextDue: 0,
+  }]));
+  const session = buildKiwiSession(KIWI_ITEMS, progress, 1000, 2, 4);
+  assert.deepEqual(session.newItems.map((w) => w.id), KIWI_ITEMS.slice(2, 4).map((w) => w.id));
+  assert.deepEqual(new Set(session.reviewItems.map((w) => w.id)), new Set(KIWI_ITEMS.slice(0, 2).map((w) => w.id)));
+  assert.equal(new Set(session.items.map((w) => w.id)).size, session.items.length);
+});
+
 test('gradeAnswer：答对升级、答错回到 1 级、边界不越界', () => {
   const now = 1_000_000;
   let e = gradeAnswer(undefined, true, now);
@@ -115,6 +148,18 @@ test('gradeAnswer：不修改传入的原对象', () => {
   assert.deepEqual(orig, { box: 2, correct: 5, wrong: 1, nextDue: 0 });
 });
 
+test('gradeAnswer：缺字段和坏数值会回退，不产生 NaN', () => {
+  assert.deepEqual(gradeAnswer({ box: 2 }, true, 1000), {
+    box: 3, correct: 1, wrong: 0, nextDue: 1000 + BOX_INTERVALS_DAYS[3] * DAY_MS,
+  });
+  const out = gradeAnswer({ box: 'bad', correct: NaN, wrong: -2, nextDue: Infinity }, false, NaN);
+  assert.equal(out.box, 0);
+  assert.equal(out.correct, 0);
+  assert.equal(out.wrong, 1);
+  assert.ok(Number.isFinite(out.nextDue));
+  assert.ok(Object.values(out).every((value) => !Number.isNaN(value)));
+});
+
 test('isMastered：盒子达到阈值算掌握', () => {
   assert.equal(isMastered({ box: MASTERED_BOX - 1 }), false);
   assert.equal(isMastered({ box: MASTERED_BOX }), true);
@@ -141,7 +186,21 @@ test('dueWords：limit 生效', () => {
   assert.equal(dueWords(WORDS.slice(0, 3), {}, Date.now(), 8).length, 3);
 });
 
+test('dueWords：同盒子的到期词按 nextDue 从早到晚排序', () => {
+  const words = WORDS.slice(0, 3);
+  const progress = {
+    [words[0].id]: { box: 1, nextDue: 30 },
+    [words[1].id]: { box: 1, nextDue: 10 },
+    [words[2].id]: { box: 1, nextDue: 20 },
+  };
+  assert.deepEqual(dueWords(words, progress, 100, 3).map((w) => w.id),
+    [words[1].id, words[2].id, words[0].id]);
+});
+
 test('starReward：普通答对 1 星，每连对 3 题得 2 星', () => {
+  assert.equal(starReward(0), 0);
+  assert.equal(starReward(-1), 0);
+  assert.equal(starReward(NaN), 0);
   assert.equal(starReward(1), 1);
   assert.equal(starReward(2), 1);
   assert.equal(starReward(3), 2);
@@ -211,6 +270,14 @@ test('跟读评分：全读对 1 分、部分对按比例、通过线 0.7', () =
   assert.equal(speechScore('', 'cat'), 0);
   assert.ok(speechScore('dolphins live in sea', 'Dolphins live in the sea.') >= SPEECH_PASS,
     '5 个词中 4 个 = 0.8，应该通过');
+});
+
+test('跟读评分：乱序、重复和额外词都会扣分', () => {
+  const target = 'dolphins live in the sea';
+  assert.ok(speechScore('sea the in live dolphins', target) < SPEECH_PASS, '倒序不能通过');
+  assert.equal(speechScore('cat', 'cat cat'), 0.5, '重复目标词不能被 Set 去重');
+  assert.equal(speechScore('cat cat', 'cat'), 0.5, '额外重复词也要扣分');
+  assert.ok(speechScore('dolphins really live in the blue sea', target) < 1, '额外词不能满分');
 });
 
 test('我的世界：addSticker 追加实例、尺寸夹范围、不改原数组', () => {
@@ -288,11 +355,11 @@ test('听指令：从场景词挑目标、从学过词挑要放的东西 + 2 干
 test('听指令：要放的东西排除已在世界里的词（不重复）', () => {
   const seed = WORDS.filter((w) => w.lvl === 'seed');
   const sceneWords = [seed.find((w) => w.id === 'cat')];
-  const learned = seed.filter((w) => ['apple', 'dog'].includes(w.id));
+  const learned = seed.filter((w) => ['apple', 'dog', 'sun', 'egg'].includes(w.id));
   for (let s = 1; s <= 20; s++) {
-    // apple 已在世界里 → item 只能是 dog
-    const task = buildRoomTask(sceneWords, learned, ['cat', 'apple'], seededRng(s));
-    assert.equal(task.item.id, 'dog', 'apple 已摆过，只能放 dog');
+    // 其他词都已在世界里 → item 只能是 dog；它们仍可作为不落地的干扰选项
+    const task = buildRoomTask(sceneWords, learned, ['cat', 'apple', 'sun', 'egg'], seededRng(s));
+    assert.equal(task.item.id, 'dog', '其他词已摆过，只能放 dog');
   }
 });
 
@@ -304,6 +371,13 @@ test('听指令：场景空或没有可放的词时返回 null（引导先摆/�
   assert.equal(buildRoomTask(onlyCat, onlyCat), null, '学过的只有参照物自己 → null');
   const learned = seed.filter((w) => ['cat', 'dog'].includes(w.id));
   assert.equal(buildRoomTask(onlyCat, learned, ['cat', 'dog']), null, '能放的都摆过了 → null');
+});
+
+test('听指令：凑不齐两个不同图片干扰项时返回 null', () => {
+  const cat = WORDS.find((w) => w.id === 'cat');
+  const dog = WORDS.find((w) => w.id === 'dog');
+  const apple = WORDS.find((w) => w.id === 'apple');
+  assert.equal(buildRoomTask([cat], [dog, apple], [], seededRng(1)), null);
 });
 
 test('听指令：落点判定 isNear 按阈值内外区分', () => {

@@ -3,12 +3,12 @@
   --bg2: #c9b6ff;
   --card: #ffffff;
   --ink: #4a3b5c;
-  --ink-soft: #8a7ba3;
-  --pink: #ff6fa5;
-  --purple: #8b5cf6;
+  --ink-soft: #5a476a;
+  --pink: #cf3474;
+  --purple: #6f3fd1;
   --yellow: #ffc94d;
   --green: #34c98e;
-  --red: #ff7070;
+  --red: #c93d3d;
   --radius: 24px;
   --shadow: 0 6px 20px rgba(139, 92, 246, 0.18);
   --ball-hi: #ffb3d1;
@@ -20,8 +20,8 @@
 body[data-theme="blue"] {
   --bg1: #d2ecff;
   --bg2: #b9c6ff;
-  --pink: #3f8cff;
-  --purple: #6a5cff;
+  --pink: #196fd1;
+  --purple: #5645db;
   --ball-hi: #a8d4ff;
   --ball-mid: #3f8cff;
   --ball-dark: #2b64c9;
@@ -31,8 +31,27 @@ body[data-theme="blue"] {
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  /* 禁用双击缩放，小朋友乱点也不会误触把屏幕放大 */
+  /* 消除旧式点击延迟。 */
   touch-action: manipulation;
+}
+
+/* 保留正常上下/左右滚动，但不允许双指捏合缩放。不要再用全局 touchend
+   preventDefault：它会吞掉孩子快速拼字母时的第二次点击。 */
+html, body, #app { touch-action: pan-x pan-y; }
+
+:where(button, a, input, textarea, select, [tabindex]):focus-visible {
+  outline: 4px solid #2f1b69;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 7px #2f1b69;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:disabled:not(.option) {
+  opacity: 0.52;
+  filter: saturate(0.55);
 }
 
 html, body {
@@ -47,6 +66,11 @@ body {
   color: var(--ink);
   user-select: none;
   -webkit-user-select: none;
+}
+
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 #app {
@@ -255,7 +279,7 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 
 /* —— 错题本 —— */
 .btn.wrong-book {
-  background: linear-gradient(135deg, #ff8a80, #ff5252);
+  background: linear-gradient(135deg, #c93d3d, #a92e4d);
 }
 .wrong-list {
   background: var(--card);
@@ -398,7 +422,12 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 .option:active { transform: scale(0.98); }
 .option.correct { border-color: var(--green); background: #e8fff5; }
 .option.wrong { border-color: var(--red); background: #ffecec; }
-.option:disabled { opacity: 1; }
+.option:disabled:not(.correct):not(.wrong) {
+  opacity: 0.58;
+  filter: saturate(0.55);
+}
+.option.correct:disabled,
+.option.wrong:disabled { opacity: 1; }
 
 /* —— 无字模式：听音点图 —— */
 .quiz-prompt.compact { padding: 18px 16px; }
@@ -930,4 +959,162 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   font-size: 15px;
   font-weight: 800;
   color: var(--ink);
+}
+
+/* —— Kiwi：以声音、图片和动作组织的无字启蒙 —— */
+.btn.kiwi-daily {
+  background: linear-gradient(135deg, #19b7b0, #3b82f6);
+  box-shadow: 0 10px 24px rgba(35, 135, 220, 0.25);
+}
+.kiwi-pack {
+  min-height: 132px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(220, 248, 255, 0.88));
+}
+.kiwi-intro { text-align: center; }
+.kid-stage {
+  margin: 22px 0;
+  padding: 24px 18px;
+  border: 4px solid rgba(63, 180, 224, 0.3);
+  border-radius: 32px;
+  background: linear-gradient(160deg, #fff, #eafcff);
+  box-shadow: var(--shadow);
+}
+.kid-stage-emoji {
+  font-size: clamp(104px, 34vw, 168px);
+  line-height: 1.1;
+  filter: drop-shadow(0 10px 10px rgba(35, 120, 170, 0.16));
+}
+.kid-stage-word {
+  margin-top: 12px;
+  color: var(--ink);
+  font-size: clamp(32px, 10vw, 48px);
+  font-weight: 900;
+}
+.kid-stage p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* —— Power Up 2 单元综合任务：句型 → 对话 → 自主表达 —— */
+.btn.unit-mission {
+  background: linear-gradient(135deg, #7c4dff, #e34ba9);
+  line-height: 1.25;
+}
+.btn.unit-mission span {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.92;
+}
+.mission-progress {
+  width: fit-content;
+  margin: 12px auto 18px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(124, 77, 255, 0.12);
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 800;
+}
+.chunk-list,
+.dialogue-list {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0 22px;
+}
+.chunk-card,
+.dialogue-line {
+  position: relative;
+  width: 100%;
+  border: 2px solid rgba(124, 77, 255, 0.12);
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.chunk-card {
+  display: grid;
+  gap: 4px;
+  padding: 15px 48px 15px 16px;
+}
+.chunk-card b,
+.dialogue-line b { font-size: 17px; }
+.chunk-card span,
+.dialogue-line small { color: var(--ink-soft); font-size: 13px; }
+.chunk-card i {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  font-style: normal;
+}
+.chunk-card:active,
+.dialogue-line:active { transform: scale(0.98); }
+.dialogue-line {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 2px 10px;
+  align-items: center;
+  padding: 14px;
+}
+.dialogue-line small { grid-column: 2; }
+.speaker-tag {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: #fff;
+  font-weight: 900;
+}
+.mission-card {
+  padding: 18px;
+  border-radius: 26px;
+  background: linear-gradient(155deg, rgba(255,255,255,0.96), rgba(239,232,255,0.95));
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.mission-card h2 { margin: 4px 0 10px; }
+.mission-prompts {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  text-align: left;
+}
+.mission-prompts div {
+  padding: 10px 13px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--purple);
+  font-weight: 800;
+}
+.question-context {
+  max-width: 360px;
+  margin: 10px auto 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .confetti {
+    display: none;
+  }
 }

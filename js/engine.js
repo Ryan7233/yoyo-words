@@ -17,8 +17,12 @@ export function shuffle(arr, rng = Math.random) {
 
 // 选干扰项：优先同分类，不够再从全库补，绝不包含正确答案、绝不重复
 export function pickDistractors(word, pool, n = 3, rng = Math.random) {
-  const sameCat = pool.filter((w) => w.id !== word.id && w.cat === word.cat);
-  const others = pool.filter((w) => w.id !== word.id && w.cat !== word.cat);
+  const sameForm = (w) => String(w.en).toLowerCase() === String(word.en).toLowerCase();
+  // cook（厨师/做饭）、fly（苍蝇/飞）这类一词多义不能互相成为干扰项，
+  // 否则选项会出现两个完全相同的英文。
+  const eligible = (w) => w.id !== word.id && !sameForm(w);
+  const sameCat = pool.filter((w) => eligible(w) && w.cat === word.cat);
+  const others = pool.filter((w) => eligible(w) && w.cat !== word.cat);
   const picked = shuffle(sameCat, rng).slice(0, n);
   if (picked.length < n) {
     picked.push(...shuffle(others, rng).slice(0, n - picked.length));
@@ -29,13 +33,24 @@ export function pickDistractors(word, pool, n = 3, rng = Math.random) {
 // 构造一道题：{ word, mode, options: [{id, label}], answerId, prompt }
 export function buildQuestion(word, pool, mode, rng = Math.random) {
   const distractors = pickDistractors(word, pool, 3, rng);
+  const ambiguous = pool.some((w) =>
+    w.id !== word.id && String(w.en).toLowerCase() === String(word.en).toLowerCase()
+  );
   const labelOf = (w) => (mode === 'en2zh' ? w.zh : mode === 'zh2en' ? w.en : w.en);
   const options = shuffle(
     [word, ...distractors].map((w) => ({ id: w.id, label: labelOf(w), emoji: w.emoji })),
     rng
   );
   const prompt = mode === 'en2zh' ? word.en : mode === 'zh2en' ? word.zh : '';
-  return { word, mode, options, answerId: word.id, prompt };
+  return {
+    word,
+    mode,
+    options,
+    answerId: word.id,
+    prompt,
+    context: ambiguous && mode === 'en2zh' ? word.sentence : '',
+    audioText: ambiguous && mode === 'listen' ? word.sentence : word.en,
+  };
 }
 
 // 构造一关测验：count 道题，题型轮换
@@ -50,7 +65,15 @@ export function emptyEntry() {
 
 // 答题后更新一个单词的记忆状态（Leitner 间隔重复）
 export function gradeAnswer(entry, isCorrect, now = Date.now()) {
-  const e = entry ? { ...entry } : emptyEntry();
+  const source = entry && typeof entry === 'object' ? entry : {};
+  const count = (value) => (Number.isFinite(value) && value >= 0 ? Math.trunc(value) : 0);
+  const e = {
+    box: Math.min(count(source.box), MAX_BOX),
+    correct: count(source.correct),
+    wrong: count(source.wrong),
+    nextDue: count(source.nextDue),
+  };
+  const safeNow = Number.isFinite(now) ? now : Date.now();
   if (isCorrect) {
     e.box = Math.min(e.box + 1, MAX_BOX);
     e.correct += 1;
@@ -58,7 +81,7 @@ export function gradeAnswer(entry, isCorrect, now = Date.now()) {
     e.box = Math.min(e.box, 1);
     e.wrong += 1;
   }
-  e.nextDue = now + BOX_INTERVALS_DAYS[e.box] * DAY_MS;
+  e.nextDue = safeNow + BOX_INTERVALS_DAYS[e.box] * DAY_MS;
   return e;
 }
 
@@ -68,10 +91,11 @@ export function isMastered(entry) {
 
 // 挑选本关要考的单词：到期的优先（按盒子低→高），不够再补新词
 export function dueWords(words, progress, now = Date.now(), limit = 8) {
-  const entryOf = (w) => progress[w.id];
+  const entries = progress && typeof progress === 'object' ? progress : {};
+  const entryOf = (w) => entries[w.id];
   const due = words
     .filter((w) => entryOf(w) && entryOf(w).nextDue <= now)
-    .sort((a, b) => entryOf(a).box - entryOf(b).box);
+    .sort((a, b) => entryOf(a).box - entryOf(b).box || entryOf(a).nextDue - entryOf(b).nextDue);
   const fresh = words.filter((w) => !entryOf(w));
   const rest = words.filter((w) => entryOf(w) && entryOf(w).nextDue > now);
   return [...due, ...fresh, ...rest].slice(0, Math.min(limit, words.length));
@@ -79,7 +103,8 @@ export function dueWords(words, progress, now = Date.now(), limit = 8) {
 
 // 星星奖励：答对 1 颗，连击 3 的倍数额外 +1
 export function starReward(combo) {
-  return combo > 0 && combo % 3 === 0 ? 2 : 1;
+  if (!Number.isFinite(combo) || combo <= 0) return 0;
+  return combo % 3 === 0 ? 2 : 1;
 }
 
 export function masteredCount(progress) {
@@ -116,6 +141,24 @@ export function buildPicQuiz(words, pool, count, rng = Math.random) {
   return chosen.map((w) => buildPicQuestion(w, pool, rng));
 }
 
+// Kiwi 每次只引入 2 项新内容，配 4 项已学内容；第一轮还没有旧内容时，
+// 只围绕两项新内容重复练习，不一次塞进更多新词。
+export function buildKiwiSession(words, progress, now = Date.now(), newLimit = 2, reviewLimit = 4) {
+  const entries = progress && typeof progress === 'object' ? progress : {};
+  const newItems = words.filter((w) => !entries[w.id]).slice(0, newLimit);
+  const known = words.filter((w) => entries[w.id]);
+  const reviewItems = dueWords(known, entries, now, reviewLimit);
+  return { newItems, reviewItems, items: [...newItems, ...reviewItems] };
+}
+
+export function buildKiwiQuiz(session, pool, count = PIC_QUIZ_SIZE, rng = Math.random) {
+  const base = [...session.newItems, ...session.reviewItems];
+  if (!base.length) return [];
+  const targets = [];
+  for (let i = 0; i < count; i++) targets.push(base[i % base.length]);
+  return targets.map((word) => buildPicQuestion(word, pool, rng));
+}
+
 // —— 写：拼单词（字母块）。只挑纯字母、3~10 位的词 ——
 export function spellableWords(words) {
   return words.filter((w) => /^[a-zA-Z]{3,10}$/.test(w.en));
@@ -143,7 +186,7 @@ export function sentenceWords(words) {
   });
 }
 
-// —— 说：跟读评分。目标词在识别结果中的覆盖率 ——
+// —— 说：跟读评分。用词级编辑距离同时衡量顺序、重复、漏词和多词 ——
 export const SPEECH_PASS = 0.7;
 
 export function speechScore(transcript, target) {
@@ -153,8 +196,20 @@ export function speechScore(transcript, target) {
     .filter(Boolean);
   const targetWords = norm(target);
   if (!targetWords.length) return 0;
-  const heard = new Set(norm(transcript));
-  return targetWords.filter((w) => heard.has(w)).length / targetWords.length;
+  const heardWords = norm(transcript);
+  const rows = targetWords.length + 1;
+  const cols = heardWords.length + 1;
+  const dp = Array.from({ length: rows }, () => Array(cols).fill(0));
+  for (let i = 0; i < rows; i++) dp[i][0] = i;
+  for (let j = 0; j < cols; j++) dp[0][j] = j;
+  for (let i = 1; i < rows; i++) {
+    for (let j = 1; j < cols; j++) {
+      const substitution = dp[i - 1][j - 1] + (targetWords[i - 1] === heardWords[j - 1] ? 0 : 1);
+      dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, substitution);
+    }
+  }
+  const scale = Math.max(targetWords.length, heardWords.length);
+  return scale ? Math.max(0, (scale - dp[targetWords.length][heardWords.length]) / scale) : 0;
 }
 
 // —— 「我的世界」贴纸场景（仅姐姐）：全部纯函数，实例形如 { id, x, y, size } ——
@@ -223,6 +278,7 @@ export function buildRoomTask(sceneWords, learnedPool, worldIds = [], rng = Math
   const item = shuffle(itemCandidates, rng)[0];
   const decoyPool = learnedPool.filter((w) => w.id !== target.id);
   const distractors = pickPicDistractors(item, decoyPool, 2, rng);
+  if (distractors.length < 2) return null;
   const choices = shuffle([item, ...distractors], rng);
   return {
     target,
@@ -243,7 +299,7 @@ export function wrongBookWords(words, progress) {
     .sort((a, b) => progress[b.id].wrong - progress[a.id].wrong);
 }
 
-// —— 毕业机制：掌握本级 80% 单词解锁毕业挑战，12 题答对 10 题即毕业升级 ——
+// —— 词汇通关：掌握本级 80% 解锁挑战，12 题答对 10 题进入下一词汇级别 ——
 export const GRADUATION_THRESHOLD = 0.8;
 export const GRADUATION_QUIZ_SIZE = 12;
 export const GRADUATION_PASS_CORRECT = 10;
@@ -262,7 +318,7 @@ export function canGraduate(words, progress) {
   return levelMastery(words, progress).ratio >= GRADUATION_THRESHOLD;
 }
 
-// 距离解锁毕业挑战还差几个单词
+// 距离解锁词汇通关挑战还差几个单词
 export function wordsToGraduation(words, progress) {
   const m = levelMastery(words, progress);
   return Math.max(0, Math.ceil(m.total * GRADUATION_THRESHOLD) - m.mastered);
