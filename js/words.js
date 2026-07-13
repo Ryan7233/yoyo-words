@@ -50,9 +50,9 @@ const SEED = [
   { id: 'dog',      en: 'dog',      zh: '狗',   emoji: '🐶' },
   { id: 'bird',     en: 'bird',     zh: '鸟',   emoji: '🐦' },
   { id: 'fish',     en: 'fish',     zh: '鱼',   emoji: '🐟' },
-  { id: 'rabbit',   en: 'rabbit',   zh: '兔子', emoji: '🐰' },
-  { id: 'panda',    en: 'panda',    zh: '熊猫', emoji: '🐼' },
-  { id: 'lion',     en: 'lion',     zh: '狮子', emoji: '🦁' },
+  { id: 'rabbit',   en: 'rabbit',   zh: '兔子', emoji: '🐰', sentence: 'The rabbit can hop and run.' },
+  { id: 'panda',    en: 'panda',    zh: '熊猫', emoji: '🐼', sentence: 'The panda eats green leaves.' },
+  { id: 'lion',     en: 'lion',     zh: '狮子', emoji: '🦁', sentence: 'The lion can run very fast.' },
   { id: 'elephant', en: 'elephant', zh: '大象', emoji: '🐘' },
   { id: 'monkey',   en: 'monkey',   zh: '猴子', emoji: '🐵' },
   { id: 'duck',     en: 'duck',     zh: '鸭子', emoji: '🦆' },
@@ -102,7 +102,7 @@ const SEED = [
   { id: 'hair',  en: 'hair',  zh: '头发', emoji: '💇' },
 ].map((w) => ({ ...w, cat: 'body' }))).concat([
   // 家庭
-  { id: 'mom',     en: 'mom',     zh: '妈妈', emoji: '👩' },
+  { id: 'mom',     en: 'mum',     zh: '妈妈', emoji: '👩' },
   { id: 'dad',     en: 'dad',     zh: '爸爸', emoji: '👨' },
   { id: 'sister',  en: 'sister',  zh: '姐妹', emoji: '👧' },
   { id: 'brother', en: 'brother', zh: '兄弟', emoji: '👦' },
@@ -125,11 +125,11 @@ const SEED = [
   { id: 'sun',    en: 'sun',    zh: '太阳', emoji: '🌞' },
   { id: 'moon',   en: 'moon',   zh: '月亮', emoji: '🌙' },
   { id: 'star',   en: 'star',   zh: '星星', emoji: '⭐' },
-  { id: 'tree',   en: 'tree',   zh: '树',   emoji: '🌳' },
+  { id: 'tree',   en: 'tree',   zh: '树',   emoji: '🌳', sentence: 'There is a tall tree by the river.' },
   { id: 'flower', en: 'flower', zh: '花',   emoji: '🌸' },
-  { id: 'rain',   en: 'rain',   zh: '雨',   emoji: '🌧️' },
-  { id: 'snow',   en: 'snow',   zh: '雪',   emoji: '❄️' },
-  { id: 'cloud',  en: 'cloud',  zh: '云',   emoji: '☁️' },
+  { id: 'rain',   en: 'rain',   zh: '雨',   emoji: '🌧️', sentence: 'The rain makes the ground wet.' },
+  { id: 'snow',   en: 'snow',   zh: '雪',   emoji: '❄️', sentence: 'The snow is cold and white.' },
+  { id: 'cloud',  en: 'cloud',  zh: '云',   emoji: '☁️', sentence: 'A grey cloud is over the town.' },
 ].map((w) => ({ ...w, cat: 'nature' }))).map((w) => ({ ...w, lvl: 'seed' }));
 
 const STARTERS = [
@@ -158,7 +158,7 @@ const STARTERS = [
   { id: 'burger',    en: 'burger',    zh: '汉堡',   emoji: '🍔', cat: 'food' },
   { id: 'chocolate', en: 'chocolate', zh: '巧克力', emoji: '🍫', cat: 'food' },
   // 服装
-  { id: 'tshirt',  en: 'T-shirt', zh: 'T恤',    emoji: '👕', cat: 'clothes' },
+  { id: 'tshirt',  en: 'T-shirt', zh: 'T恤',    emoji: '👕', cat: 'clothes', sentence: 'I wear a T-shirt on sunny days.' },
   { id: 'dress',   en: 'dress',   zh: '连衣裙', emoji: '👗', cat: 'clothes' },
   { id: 'hat',     en: 'hat',     zh: '帽子',   emoji: '👒', cat: 'clothes' },
   { id: 'shoes',   en: 'shoes',   zh: '鞋子',   emoji: '👟', cat: 'clothes' },
@@ -166,7 +166,7 @@ const STARTERS = [
   { id: 'jacket',  en: 'jacket',  zh: '夹克',   emoji: '🧥', cat: 'clothes' },
   { id: 'jeans',   en: 'jeans',   zh: '牛仔裤', emoji: '👖', cat: 'clothes' },
   { id: 'glasses', en: 'glasses', zh: '眼镜',   emoji: '👓', cat: 'clothes' },
-  { id: 'boots',   en: 'boots',   zh: '靴子',   emoji: '👢', cat: 'clothes' },
+  { id: 'boots',   en: 'boots',   zh: '靴子',   emoji: '👢', cat: 'clothes', sentence: 'Put on your boots in the rain.' },
   { id: 'watch',   en: 'watch',   zh: '手表',   emoji: '⌚', cat: 'clothes' },
   // 家居
   { id: 'bed',     en: 'bed',     zh: '床',   emoji: '🛏️', cat: 'home' },
@@ -202,9 +202,9 @@ const STARTERS = [
   { id: 'helicopter', en: 'helicopter', zh: '直升机',   emoji: '🚁', cat: 'transport' },
   { id: 'ship',       en: 'ship',       zh: '轮船',     emoji: '🚢', cat: 'transport' },
   // 动作
-  { id: 'run',   en: 'run',   zh: '跑',   emoji: '🏃', cat: 'actions' },
-  { id: 'jump',  en: 'jump',  zh: '跳',   emoji: '🤸', cat: 'actions' },
-  { id: 'swim',  en: 'swim',  zh: '游泳', emoji: '🏊', cat: 'actions' },
+  { id: 'run',   en: 'run',   zh: '跑',   emoji: '🏃', cat: 'actions', sentence: 'The children run across the field.' },
+  { id: 'jump',  en: 'jump',  zh: '跳',   emoji: '🤸', cat: 'actions', sentence: 'Kangaroos can jump very high.' },
+  { id: 'swim',  en: 'swim',  zh: '游泳', emoji: '🏊', cat: 'actions', sentence: 'Dolphins swim in the sea.' },
   { id: 'sing',  en: 'sing',  zh: '唱歌', emoji: '🎤', cat: 'actions' },
   { id: 'dance', en: 'dance', zh: '跳舞', emoji: '💃', cat: 'actions' },
   { id: 'read',  en: 'read',  zh: '读书', emoji: '📖', cat: 'actions' },
@@ -238,7 +238,7 @@ const MOVERS = [
   { id: 'city',        en: 'city',          zh: '城市',     emoji: '🏙️', cat: 'places', sentence: 'The city is big and busy.' },
   { id: 'village',     en: 'village',       zh: '村庄',     emoji: '🏘️', cat: 'places', sentence: 'My grandma lives in a village.' },
   { id: 'cafe',        en: 'cafe',          zh: '咖啡馆',   emoji: '🫖', cat: 'places', sentence: 'We drink juice at the cafe.' },
-  { id: 'busstop',     en: 'bus stop',      zh: '公交车站', emoji: '🚏', cat: 'places', sentence: 'Wait for the bus at the bus stop.' },
+  { id: 'busstop',     en: 'bus station',   zh: '公交车站', emoji: '🚏', cat: 'places', sentence: 'The bus leaves from the bus station.' },
   // 天气
   { id: 'sunny',   en: 'sunny',   zh: '晴朗的', emoji: '☀️', cat: 'weather', sentence: "It's sunny today. Let's go out!" },
   { id: 'cloudy',  en: 'cloudy',  zh: '多云的', emoji: '⛅', cat: 'weather', sentence: 'The sky is grey and cloudy.' },
@@ -315,7 +315,7 @@ const MOVERS = [
   { id: 'mountain', en: 'mountain', zh: '山',   emoji: '⛰️', cat: 'nature', sentence: 'The mountain is very high.' },
   { id: 'forest',   en: 'forest',   zh: '森林', emoji: '🌲', cat: 'nature', sentence: 'Many trees grow in the forest.' },
   { id: 'jungle',   en: 'jungle',   zh: '丛林', emoji: '🌴', cat: 'nature', sentence: 'Monkeys live in the jungle.' },
-  { id: 'leaf',     en: 'leaf',     zh: '叶子', emoji: '🍃', cat: 'nature', sentence: 'A green leaf falls from the tree.' },
+  { id: 'leaf',     en: 'leaf',     zh: '叶子', emoji: '🍃', cat: 'nature', forms: ['leaf', 'leaves'], sentence: 'One leaf falls; two leaves fall.' },
   { id: 'grass',    en: 'grass',    zh: '草',   emoji: '🌿', cat: 'nature', sentence: 'The grass is soft and green.' },
   // 服装
   { id: 'coat',     en: 'coat',     zh: '大衣', emoji: '🥼', cat: 'clothes', sentence: "Put on your coat. It's cold!" },
@@ -468,6 +468,7 @@ const MOVERS_PU2 = [
   { id: 'photo',     en: 'photo',     zh: '照片',   emoji: '🖼️', cat: 'objects', sentence: 'This is a photo of my cat.' },
   // Unit 3: 人物与外貌
   { id: 'clown',     en: 'clown',     zh: '小丑',     emoji: '🤡', cat: 'people', sentence: 'The clown makes everyone laugh.' },
+  { id: 'cookperson', en: 'cook',      zh: '厨师',     emoji: '🧑‍🍳', cat: 'people', pos: 'noun', sentence: 'The cook makes soup in the kitchen.' },
   { id: 'dentist',   en: 'dentist',   zh: '牙医',     emoji: '🦷', cat: 'people', sentence: 'The dentist looks at my teeth.' },
   { id: 'filmstar',  en: 'film star', zh: '电影明星', emoji: '🎬', cat: 'people', sentence: 'The film star waves to everyone.' },
   { id: 'pirate',    en: 'pirate',    zh: '海盗',     emoji: '🏴‍☠️', cat: 'people', sentence: 'The pirate looks for treasure.' },
@@ -516,6 +517,7 @@ const MOVERS_PU2 = [
   { id: 'hop',  en: 'hop',  zh: '单脚跳', emoji: '🦵', cat: 'actions', sentence: 'Rabbits hop in the garden.' },
   { id: 'skip', en: 'skip', zh: '蹦跳',   emoji: '🪢', cat: 'actions', sentence: 'The girls skip in the playground.' },
   { id: 'walk', en: 'walk', zh: '走',     emoji: '🚶‍♀️', cat: 'actions', sentence: 'We walk in the park.' },
+  { id: 'flyverb', en: 'fly', zh: '飞',   emoji: '🪽', cat: 'actions', pos: 'verb', sentence: 'Birds can fly over the trees.' },
   // Unit 6: 天气与衣物
   { id: 'wind',    en: 'wind',     zh: '风',   emoji: '💨', cat: 'weather', sentence: 'The wind blows my kite high.' },
   { id: 'weather', en: 'weather',  zh: '天气', emoji: '🌦️', cat: 'weather', sentence: "What's the weather like today?" },
@@ -571,6 +573,51 @@ const MOVERS_PU2 = [
 
 export const WORDS = [...SEED, ...STARTERS, ...MOVERS, ...MOVERS_PU2, ...FLYERS];
 
+// Kiwi 的首批听说启蒙内容：不是考试词表，而是能在家庭生活中立刻听懂、执行和表达的 24 项。
+// 每组 6 项，包含具体名词、动作和完整口语块；id 独立，避免改动旧的 seed 学习记录。
+export const KIWI_ITEMS = [
+  // 1. 身体动起来
+  { id: 'kiwi_nose', en: 'nose', zh: '鼻子', emoji: '👃', cat: 'kiwi_body' },
+  { id: 'kiwi_hands', en: 'hands', zh: '双手', emoji: '🙌', cat: 'kiwi_body' },
+  { id: 'kiwi_feet', en: 'feet', zh: '双脚', emoji: '🦶', cat: 'kiwi_body' },
+  { id: 'kiwi_jump', en: 'Jump!', zh: '跳起来', emoji: '🤸', cat: 'kiwi_body', kind: 'command' },
+  { id: 'kiwi_clap', en: 'Clap your hands!', zh: '拍拍手', emoji: '👏', cat: 'kiwi_body', kind: 'command' },
+  { id: 'kiwi_sit', en: 'Sit down!', zh: '坐下来', emoji: '🪑', cat: 'kiwi_body', kind: 'command' },
+  // 2. 我的家人
+  { id: 'kiwi_mum', en: 'Mummy', zh: '妈妈', emoji: '👩', cat: 'kiwi_family' },
+  { id: 'kiwi_dad', en: 'Daddy', zh: '爸爸', emoji: '👨', cat: 'kiwi_family' },
+  { id: 'kiwi_yoyo', en: 'Yoyo', zh: '姐姐 Yoyo', emoji: '🎀', cat: 'kiwi_family' },
+  { id: 'kiwi_me', en: 'Kiwi', zh: '我 Kiwi', emoji: '🦖', cat: 'kiwi_family' },
+  { id: 'kiwi_hello', en: 'Hello!', zh: '你好', emoji: '👋', cat: 'kiwi_family', kind: 'chunk' },
+  { id: 'kiwi_bye', en: 'Bye-bye!', zh: '再见', emoji: '🚪', cat: 'kiwi_family', kind: 'chunk' },
+  // 3. 我想要
+  { id: 'kiwi_water', en: 'water', zh: '水', emoji: '💧', cat: 'kiwi_needs' },
+  { id: 'kiwi_milk', en: 'milk', zh: '牛奶', emoji: '🥛', cat: 'kiwi_needs' },
+  { id: 'kiwi_apple', en: 'apple', zh: '苹果', emoji: '🍎', cat: 'kiwi_needs' },
+  { id: 'kiwi_banana', en: 'banana', zh: '香蕉', emoji: '🍌', cat: 'kiwi_needs' },
+  { id: 'kiwi_more', en: 'More, please.', zh: '请再给我一点', emoji: '➕', cat: 'kiwi_needs', kind: 'chunk' },
+  { id: 'kiwi_done', en: 'All done!', zh: '我吃完了', emoji: '✅', cat: 'kiwi_needs', kind: 'chunk' },
+  // 4. 玩具和指令
+  { id: 'kiwi_ball', en: 'ball', zh: '球', emoji: '⚽', cat: 'kiwi_play' },
+  { id: 'kiwi_car', en: 'car', zh: '小汽车', emoji: '🚗', cat: 'kiwi_play' },
+  { id: 'kiwi_book', en: 'book', zh: '书', emoji: '📖', cat: 'kiwi_play' },
+  { id: 'kiwi_open', en: 'Open it.', zh: '把它打开', emoji: '📬', cat: 'kiwi_play', kind: 'command' },
+  { id: 'kiwi_give', en: 'Give it to me.', zh: '把它给我', emoji: '🤲', cat: 'kiwi_play', kind: 'command' },
+  { id: 'kiwi_putin', en: 'Put it in.', zh: '把它放进去', emoji: '📥', cat: 'kiwi_play', kind: 'command' },
+].map((item) => ({ ...item, lvl: 'kiwi' }));
+
+export const KIWI_PACKS = [
+  { id: 'body', name: '身体动起来', zh: '听指令做动作', emoji: '🤸', ids: KIWI_ITEMS.slice(0, 6).map((x) => x.id) },
+  { id: 'family', name: '我的家人', zh: '打招呼认家人', emoji: '👨‍👩‍👧', ids: KIWI_ITEMS.slice(6, 12).map((x) => x.id) },
+  { id: 'needs', name: '我想要', zh: '吃喝和表达需要', emoji: '🥛', ids: KIWI_ITEMS.slice(12, 18).map((x) => x.id) },
+  { id: 'play', name: '玩具和指令', zh: '拿、给、放进去', emoji: '⚽', ids: KIWI_ITEMS.slice(18, 24).map((x) => x.id) },
+];
+
+export function kiwiPackItems(packId) {
+  const pack = KIWI_PACKS.find((x) => x.id === packId);
+  return pack ? pack.ids.map((id) => KIWI_ITEMS.find((x) => x.id === id)).filter(Boolean) : [];
+}
+
 // —— Power Up 2 课本单元（Movers 级按单元学习，可跨级引用已有单词）——
 const UNIT_DEFS = [
   { id: 'welcome', name: 'Welcome', zh: '认识家人 · 日常', emoji: '👋',
@@ -580,11 +627,11 @@ const UNIT_DEFS = [
   { id: 'u2', name: 'Unit 2', zh: '休闲时光', emoji: '🎮',
     ids: ['goshopping', 'goskating', 'listencd', 'listenmusic', 'readcomic', 'watchdvd', 'watchfilm', 'writeemail', 'playgames', 'often', 'sometimes', 'weekend', 'hobby', 'camera', 'photo'] },
   { id: 'u3', name: 'Unit 3', zh: '人物与外貌', emoji: '🧑‍🎤',
-    ids: ['clown', 'dentist', 'doctor', 'farmer', 'filmstar', 'nurse', 'pirate', 'popstar', 'beard', 'blonde', 'curly', 'fair', 'fat', 'moustache', 'short', 'straight', 'tall', 'thin', 'present', 'treasure', 'clever', 'naughty'] },
+    ids: ['clown', 'cookperson', 'dentist', 'doctor', 'farmer', 'filmstar', 'nurse', 'pirate', 'popstar', 'beard', 'blonde', 'curly', 'fair', 'fat', 'moustache', 'short', 'straight', 'tall', 'thin', 'present', 'treasure', 'clever', 'naughty'] },
   { id: 'u4', name: 'Unit 4', zh: '我们的家', emoji: '🏡',
     ids: ['aunt', 'cousin', 'daughter', 'granddaughter', 'grandparents', 'grandson', 'parents', 'son', 'uncle', 'balcony', 'basement', 'downstairs', 'groundfloor', 'firstfloor', 'secondfloor', 'inside', 'lift', 'outside', 'roof', 'stairs', 'upstairs', 'address', 'home'] },
   { id: 'u5', name: 'Unit 5', zh: '动物与动作', emoji: '🦘',
-    ids: ['bat', 'bear', 'cage', 'dolphin', 'kangaroo', 'lion', 'panda', 'parrot', 'penguin', 'rabbit', 'whale', 'pet', 'climb', 'fall', 'hide', 'jump', 'lose', 'move', 'run', 'walk', 'hop', 'skip', 'swim'] },
+    ids: ['bat', 'bear', 'cage', 'dolphin', 'kangaroo', 'lion', 'panda', 'parrot', 'penguin', 'rabbit', 'whale', 'pet', 'climb', 'fall', 'flyverb', 'hide', 'jump', 'lose', 'move', 'run', 'walk', 'hop', 'skip', 'swim'] },
   { id: 'u6', name: 'Unit 6', zh: '天气与衣物', emoji: '🌦️',
     ids: ['cloud', 'cloudy', 'cold', 'hot', 'rain', 'rainbow', 'snow', 'sunny', 'wind', 'windy', 'boots', 'coat', 'scarf', 'shorts', 'sweater', 'tshirt', 'puton', 'takeoff', 'wear', 'weather', 'dry', 'wet'] },
   { id: 'u7', name: 'Unit 7', zh: '烹饪时间', emoji: '🍳',
@@ -594,6 +641,35 @@ const UNIT_DEFS = [
   { id: 'u9', name: 'Unit 9', zh: '感受与情绪', emoji: '😊',
     ids: ['afraid', 'bored', 'boring', 'busy', 'careful', 'dangerous', 'difficult', 'easy', 'exciting', 'frightened', 'hungry', 'thirsty', 'tired', 'surprised', 'terrible', 'happy', 'sad', 'angry', 'adventure', 'round'] },
 ];
+
+// 第一批“从词到使用”的 Power Up 2 单元内容包。后续按同一结构扩展 Unit 2–9。
+export const UNIT_CONTENT = {
+  u1: {
+    title: 'Nature Explorer 自然探险任务',
+    goal: '听懂并用 3–4 句话描述一个自然场景',
+    chunks: [
+      { en: 'What can you see?', zh: '你能看到什么？' },
+      { en: 'I can see a river and some trees.', zh: '我能看到一条河和一些树。' },
+      { en: 'There is a path by the lake.', zh: '湖边有一条小路。' },
+      { en: 'The forest is quiet.', zh: '森林很安静。' },
+    ],
+    dialogue: [
+      { speaker: 'A', en: 'Look at the field! What can you see?', zh: '看看田野！你能看到什么？' },
+      { speaker: 'B', en: 'I can see a river and some trees.', zh: '我能看到一条河和一些树。' },
+      { speaker: 'A', en: 'Is the forest loud?', zh: '森林吵吗？' },
+      { speaker: 'B', en: "No, it isn't. The forest is quiet.", zh: '不吵，森林很安静。' },
+    ],
+    mission: {
+      instruction: 'Look at a nature picture or look out of the window. Say four sentences.',
+      zh: '看一张自然图片，或者看看窗外，用英语说四句话。',
+      prompts: ['I can see ...', 'There is ...', 'It is ...', 'I like ... because ...'],
+    },
+  },
+};
+
+export function findUnitContent(unitId) {
+  return UNIT_CONTENT[unitId] || null;
+}
 
 // 拓展单元：未进入课本单元的 Movers 词自动归入，保证每个词都有学习入口
 const assignedIds = new Set(UNIT_DEFS.flatMap((u) => u.ids));

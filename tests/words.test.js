@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  CATEGORIES, LEVELS, WORDS, UNITS, SCENES,
+  CATEGORIES, LEVELS, WORDS, UNITS, SCENES, KIWI_ITEMS, KIWI_PACKS,
   wordsForLevel, categoriesForLevel, wordsByCategory, findWord, findLevel, unitWords,
+  kiwiPackItems, findUnitContent,
 } from '../js/words.js';
 
 test('单词库：总量不少于 400，覆盖四个级别', () => {
@@ -75,13 +76,57 @@ test('单词库：分类合法，每级每个分类不少于 6 个词', () => {
   }
 });
 
-test('单词库：英文全局不重复、中文在同级别内不重复（保证选项不撞车）', () => {
-  const ens = WORDS.map((w) => w.en.toLowerCase());
-  assert.equal(new Set(ens).size, ens.length);
+test('单词库：同一英文可保留不同词义，但“英文 + 中文词义”不重复', () => {
+  const senses = WORDS.map((w) => `${w.en.toLowerCase()}\u0000${w.zh}`);
+  assert.equal(new Set(senses).size, senses.length);
+  const byEnglish = new Map();
+  for (const w of WORDS) {
+    const key = w.en.toLowerCase();
+    byEnglish.set(key, [...(byEnglish.get(key) || []), w]);
+  }
+  for (const [en, entries] of byEnglish) {
+    if (entries.length < 2) continue;
+    assert.equal(new Set(entries.map((w) => w.zh)).size, entries.length, `${en} 的词义重复`);
+    assert.ok(entries.every((w) => w.sentence), `${en} 一词多义时必须有语境例句`);
+  }
   for (const lvl of LEVELS) {
     const zhs = wordsForLevel(lvl.id).map((w) => w.zh);
     assert.equal(new Set(zhs).size, zhs.length, `级别 ${lvl.name} 中文有重复`);
   }
+});
+
+test('Power Up 2：课本 10 个主单元的每项内容都有可朗读例句', () => {
+  for (const unit of UNITS.slice(0, 10)) {
+    for (const word of unitWords(unit.id)) {
+      assert.ok(word.sentence, `${unit.id}/${word.id} 缺少例句`);
+    }
+  }
+});
+
+test('Power Up 2：补齐关键词义、英式用词和不规则复数', () => {
+  assert.ok(unitWords('u3').some((w) => w.id === 'cookperson' && w.zh === '厨师'));
+  assert.ok(unitWords('u5').some((w) => w.id === 'flyverb' && w.zh === '飞'));
+  assert.equal(findWord('busstop').en, 'bus station');
+  assert.deepEqual(findWord('leaf').forms, ['leaf', 'leaves']);
+});
+
+test('Kiwi 听说启蒙：24 项分成 4 组，每组 6 项且图片不重复', () => {
+  assert.equal(KIWI_ITEMS.length, 24);
+  assert.equal(new Set(KIWI_ITEMS.map((w) => w.id)).size, 24);
+  assert.equal(new Set(KIWI_ITEMS.map((w) => w.emoji)).size, 24);
+  assert.equal(KIWI_PACKS.length, 4);
+  for (const pack of KIWI_PACKS) assert.equal(kiwiPackItems(pack.id).length, 6);
+  assert.ok(KIWI_ITEMS.filter((w) => ['command', 'chunk'].includes(w.kind)).length >= 8,
+    '除了名词，还要有足够的动作指令和完整口语块');
+});
+
+test('Unit 1 综合任务：包含句型、对话和自主表达三层内容', () => {
+  const content = findUnitContent('u1');
+  assert.ok(content);
+  assert.ok(content.chunks.length >= 4);
+  assert.ok(content.dialogue.length >= 4);
+  assert.ok(content.mission.prompts.length >= 4);
+  assert.equal(findUnitContent('u2'), null, '第一批只开放 Unit 1，避免伪装成全量完成');
 });
 
 test('单词库：Movers 和 Flyers 级每个词都有例句，且例句包含该单词', () => {

@@ -59,6 +59,66 @@ test('storage：数据损坏时回退到默认状态而不是崩溃', () => {
   assert.deepEqual(createStorage(be).load(), defaultState());
   be.setItem('yoyo-words-v1', '"just a string"');
   assert.deepEqual(createStorage(be).load(), defaultState());
+  be.setItem('yoyo-words-v1', ' '.repeat(2_000_001));
+  assert.deepEqual(createStorage(be).load(), defaultState(), '异常大的本地存档不应继续解析');
+});
+
+test('storage：畸形 v2 字段会按白名单修复，未知字段不会进入状态', () => {
+  const be = memoryBackend();
+  be.setItem('yoyo-words-v1', JSON.stringify({
+    v: 2,
+    current: '<img onerror=alert(1)>',
+    speechRate: 99,
+    injected: true,
+    profiles: {
+      yoyo: {
+        stars: '<img onerror=alert(1)>',
+        progress: null,
+        level: 'admin',
+        graduated: ['movers', 'movers', '<script>'],
+        seen: { cat: true, dog: 'yes', '__proto__': true },
+        missions: { 'movers:u1': true, bad: 'yes', '<img>': true },
+        learnPos: { 'unit:u1': 7, bad: -1, huge: 9_999_999 },
+        world: [
+          { id: 'cat', x: -20, y: 150, size: 999, html: '<img>' },
+          { id: '<img>', x: 1, y: 2, size: 84 },
+          { id: 'dog', x: '50', y: 2, size: 84 },
+        ],
+        worldScene: '<img>',
+        extra: 'discard me',
+      },
+    },
+  }));
+  const state = createStorage(be).load();
+  assert.equal(state.current, null);
+  assert.equal(state.speechRate, 1.2);
+  assert.equal(state.injected, undefined);
+  assert.equal(state.profiles.yoyo.stars, 0);
+  assert.deepEqual(state.profiles.yoyo.progress, {});
+  assert.equal(state.profiles.yoyo.level, 'movers');
+  assert.deepEqual(state.profiles.yoyo.graduated, ['movers']);
+  assert.deepEqual(state.profiles.yoyo.seen, { cat: true });
+  assert.deepEqual(state.profiles.yoyo.missions, { 'movers:u1': true });
+  assert.deepEqual(state.profiles.yoyo.learnPos, { 'unit:u1': 7, huge: 1_000_000 });
+  assert.deepEqual(state.profiles.yoyo.world, [{ id: 'cat', x: 0, y: 100, size: 168 }]);
+  assert.equal(state.profiles.yoyo.worldScene, 'grassland');
+  assert.equal(state.profiles.yoyo.extra, undefined);
+});
+
+test('storage：progress 各字段容错并限制到安全范围', () => {
+  const be = memoryBackend();
+  be.setItem('yoyo-words-v1', JSON.stringify({
+    v: 2,
+    profiles: { yoyo: { progress: {
+      cat: { box: 99, correct: 2.9, wrong: -2, nextDue: 42.8, extra: 'no' },
+      dog: { box: '2', correct: 1, wrong: 0, nextDue: 4 },
+      '<img>': { box: 1, correct: 1, wrong: 0, nextDue: 0 },
+    } } },
+  }));
+  assert.deepEqual(createStorage(be).load().profiles.yoyo.progress, {
+    cat: { box: 5, correct: 2, wrong: 0, nextDue: 42 },
+    dog: { box: 0, correct: 1, wrong: 0, nextDue: 4 },
+  });
 });
 
 test('storage：v2 数据缺字段时用默认值补齐（含毕业记录）', () => {
@@ -89,10 +149,11 @@ test('storage：毕业记录能保存和读回', () => {
   assert.deepEqual(loaded.profiles.yodi.graduated, []);
 });
 
-test('storage：默认档案带学习记录字段（seen / learnPos）', () => {
+test('storage：默认档案带学习记录字段（seen / learnPos / missions）', () => {
   const p = defaultProfileState('yoyo');
   assert.deepEqual(p.seen, {});
   assert.deepEqual(p.learnPos, {});
+  assert.deepEqual(p.missions, {});
   // 旧版 v2 数据缺这两个字段时自动补齐
   const be = memoryBackend();
   be.setItem('yoyo-words-v1', JSON.stringify({
@@ -101,6 +162,7 @@ test('storage：默认档案带学习记录字段（seen / learnPos）', () => {
   const state = createStorage(be).load();
   assert.deepEqual(state.profiles.yodi.seen, {});
   assert.deepEqual(state.profiles.yodi.learnPos, {});
+  assert.deepEqual(state.profiles.yodi.missions, {});
 });
 
 test('storage：学习位置和学过标记能保存读回', () => {
@@ -112,6 +174,15 @@ test('storage：学习位置和学过标记能保存读回', () => {
   const loaded = s.load();
   assert.deepEqual(loaded.profiles.yoyo.seen, { dolphin: true, cat: true });
   assert.equal(loaded.profiles.yoyo.learnPos['unit:u1'], 7);
+});
+
+test('storage：单元综合任务完成状态能存档并进入备份码', () => {
+  const s = createStorage(memoryBackend());
+  const state = defaultState();
+  state.profiles.yoyo.missions = { 'movers:u1': true };
+  s.save(state);
+  assert.deepEqual(s.load().profiles.yoyo.missions, { 'movers:u1': true });
+  assert.deepEqual(decodeBackup(encodeBackup(state)).profiles.yoyo.missions, { 'movers:u1': true });
 });
 
 test('备份码：导出后能完整恢复（含中文），坏码返回 null', () => {
@@ -126,6 +197,23 @@ test('备份码：导出后能完整恢复（含中文），坏码返回 null', 
   assert.deepEqual(decodeBackup(`  ${code}  `), state, '首尾空格应被容忍');
   assert.equal(decodeBackup('not-a-valid-code!!!'), null);
   assert.equal(decodeBackup(encodeBackup({ hello: 'world' })), null, '结构不对也算无效');
+});
+
+test('备份码：恢复前规范化内部字段，顶层无效或超长输入返回 null', () => {
+  const badInner = {
+    v: 2,
+    current: 'someone',
+    speechRate: 'fast',
+    profiles: { yoyo: { stars: '<svg onload=alert(1)>', progress: null }, yodi: [] },
+  };
+  const restored = decodeBackup(encodeBackup(badInner));
+  assert.equal(restored.current, null);
+  assert.equal(restored.speechRate, 0.8);
+  assert.deepEqual(restored.profiles.yoyo, defaultProfileState('yoyo'));
+  assert.deepEqual(restored.profiles.yodi, defaultProfileState('yodi'));
+  assert.equal(decodeBackup(encodeBackup({ v: 2, profiles: null })), null);
+  assert.equal(decodeBackup('a'.repeat(2_000_001)), null);
+  assert.equal(decodeBackup(123), null);
 });
 
 test('我的世界：Yoyo 档案带 world 字段，默认空、能存读、老数据自动补齐', () => {

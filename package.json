@@ -1,7 +1,7 @@
 {
   "name": "yoyo-words",
   "version": "1.0.0",
-  "description": "Yoyo 的单词乐园 —— 专属英语单词学习 PWA",
+  "description": "Yoyo & Kiwi 的英语王国 —— 听说读写与情境学习 PWA",
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.js",

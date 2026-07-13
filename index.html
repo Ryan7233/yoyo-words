@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Yoyo & Kiwi 的英语王国</title>
   <meta name="description" content="Yoyo 和 Kiwi 专属的英语学习王国" />
   <link rel="manifest" href="manifest.webmanifest" />
@@ -16,21 +16,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    // iOS Safari 会忽略 viewport 的 user-scalable=no，这里再拦截双指缩放手势，
-    // 防止小朋友触屏时误触把界面放大缩小。
-    ['gesturestart', 'gesturechange', 'gestureend'].forEach((evt) => {
-      document.addEventListener(evt, (e) => e.preventDefault(), { passive: false });
-    });
-    // 兜底：拦截 300ms 内的第二次点击（双击缩放）。
-    let lastTouchEnd = 0;
-    document.addEventListener('touchend', (e) => {
-      const now = Date.now();
-      if (now - lastTouchEnd <= 300) e.preventDefault();
-      lastTouchEnd = now;
-    }, { passive: false });
-  </script>
+  <main id="app"></main>
   <script type="module" src="js/app.js"></script>
 </body>
 </html>
