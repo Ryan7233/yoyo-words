@@ -1,0 +1,15 @@
+{
+  "name": "Yoyo & Kiwi 的英语王国",
+  "short_name": "英语王国",
+  "description": "Yoyo 和 Kiwi 专属的英语学习王国",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffd6e8",
+  "theme_color": "#ffd6e8",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
