@@ -28,6 +28,19 @@ body[data-theme="blue"] {
   --shadow: 0 6px 20px rgba(63, 140, 255, 0.20);
 }
 
+/* 妈妈的成人学习主题：更安静、适合长时间阅读。 */
+body[data-theme="sage"] {
+  --bg1: #edf7f1;
+  --bg2: #d7e9e3;
+  --ink: #243d36;
+  --ink-soft: #48665d;
+  --pink: #267a62;
+  --purple: #315f70;
+  --yellow: #e5b955;
+  --green: #238765;
+  --shadow: 0 8px 24px rgba(35, 87, 71, 0.14);
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -163,6 +176,20 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 .profile-card .pstars { font-size: 15px; font-weight: 700; color: var(--ink); margin-top: 4px; }
 .profile-card.theme-pink { border-color: #ffb3d1; }
 .profile-card.theme-blue { border-color: #a8d4ff; }
+.profile-card.theme-sage {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  border-color: #8fc8b4;
+  padding: 18px 22px;
+  text-align: left;
+}
+.profile-card.theme-sage .avatar { grid-row: 1 / span 2; font-size: 46px; }
+.profile-card.theme-sage .pname { justify-self: start; }
+.profile-card.theme-sage .ptitle { justify-self: start; }
+.profile-card.theme-sage .pstars { grid-column: 3; grid-row: 1 / span 2; align-self: center; }
 
 /* —— 级别切换 —— */
 .levels {
@@ -795,12 +822,18 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   40%, 80% { transform: translateX(10px); }
 }
 
-/* —— 语速选择 —— */
+/* —— 自然语音：语速 + 设备音色选择 —— */
+.speech-controls {
+  margin: 8px 0 16px;
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+}
 .speed-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 6px 0 14px;
+  margin: 0 0 10px;
 }
 .speed-label { font-size: 13px; color: var(--ink-soft); font-weight: 700; white-space: nowrap; }
 .speed-chip {
@@ -821,6 +854,40 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   background: var(--card);
   color: var(--pink);
   box-shadow: var(--shadow);
+}
+.voice-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+}
+.voice-select,
+.voice-preview {
+  min-height: 42px;
+  border: none;
+  border-radius: 13px;
+  background: var(--card);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 3px 12px rgba(75, 55, 110, 0.10);
+}
+.voice-select {
+  width: 100%;
+  padding: 0 30px 0 10px;
+}
+.voice-preview {
+  padding: 0 12px;
+  color: var(--pink);
+  cursor: pointer;
+}
+.voice-preview:active { transform: scale(0.96); }
+.voice-note {
+  margin: 8px 2px 0;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.4;
 }
 .redo-tip { color: var(--pink); font-weight: 700; margin-top: 8px; }
 
@@ -928,6 +995,13 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   min-height: 50px;
   font-size: 16px;
   margin: 4px 0 8px;
+}
+.scene-note {
+  margin: -2px 6px 10px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
 }
 .scene-grid {
   display: grid;
@@ -1103,6 +1177,152 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   font-size: 15px;
   font-weight: 700;
   line-height: 1.45;
+}
+
+/* —— 妈妈成人词汇：克制的卡片、可选中文本、分组长列表 —— */
+.adult-home,
+.adult-collection,
+.adult-learn,
+.adult-result {
+  user-select: text;
+  -webkit-user-select: text;
+}
+.adult-hero {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 6px 0 14px;
+  padding: 16px;
+  border: 1px solid rgba(38, 122, 98, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+}
+.adult-hero-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #267a62, #315f70);
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+.adult-hero h1 { margin: 0 0 3px; font-size: 22px; }
+.adult-hero p { margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.45; }
+.adult-routes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.adult-routes .level-chip {
+  min-height: 62px;
+  border: 1px solid rgba(38, 122, 98, 0.14);
+}
+.adult-stats { margin-bottom: 12px; }
+.btn.adult-primary { background: linear-gradient(135deg, #267a62, #315f70); }
+.section-title { margin: 22px 0 4px; font-size: 19px; }
+.adult-deck-grid { display: grid; gap: 10px; }
+.adult-deck-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 2px 12px;
+  align-items: center;
+  width: 100%;
+  min-height: 72px;
+  padding: 12px 14px;
+  border: 1px solid rgba(38, 122, 98, 0.12);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.adult-deck-card:active { transform: scale(0.985); }
+.adult-deck-card .deck-number {
+  grid-row: 1 / span 2;
+  color: var(--pink);
+  font-size: 22px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+.adult-deck-card .deck-title { font-size: 16px; font-weight: 800; }
+.adult-deck-card .deck-progress { color: var(--ink-soft); font-size: 12px; }
+.adult-collection-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 16px;
+  padding: 15px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+}
+.adult-collection-summary span { color: var(--ink-soft); font-size: 13px; }
+.adult-wrong-list .wrong-item { display: grid; gap: 4px; }
+.adult-wrong-list .wrong-item span:last-child { text-align: left; }
+.flashcard.adult-flashcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 410px;
+  justify-content: center;
+  border: 1px solid rgba(38, 122, 98, 0.14);
+  color: var(--ink);
+  font-family: inherit;
+}
+.adult-word {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 13vw, 60px);
+  font-weight: 700;
+  line-height: 1.12;
+}
+.adult-phonetic {
+  margin-top: 12px;
+  color: var(--purple);
+  font-size: 19px;
+  letter-spacing: 0.02em;
+}
+.adult-pos {
+  margin-top: 18px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(38, 122, 98, 0.1);
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 800;
+}
+.adult-meaning {
+  max-width: 360px;
+  margin-top: 12px;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.5;
+}
+.adult-result-mark {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 24px auto 18px;
+  border: 8px solid rgba(38, 122, 98, 0.16);
+  border-radius: 50%;
+  color: var(--pink);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+@media (max-width: 380px) {
+  .profile-card.theme-sage { grid-template-columns: auto 1fr; }
+  .profile-card.theme-sage .pstars { grid-column: 2; grid-row: 3; justify-self: start; }
+  .adult-routes { grid-template-columns: 1fr 1fr; }
+  .adult-meaning { font-size: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

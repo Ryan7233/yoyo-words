@@ -1,7 +1,7 @@
 {
-  "name": "Yoyo & Kiwi 的英语王国",
-  "short_name": "英语王国",
-  "description": "Yoyo 和 Kiwi 专属的英语学习王国",
+  "name": "家庭英语学习",
+  "short_name": "英语学习",
+  "description": "Yoyo、Kiwi 和森蝶共用的家庭英语学习 PWA",
   "lang": "zh-CN",
   "id": "./",
   "scope": "./",
