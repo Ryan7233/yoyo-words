@@ -5,6 +5,7 @@ import {
 } from './words.js';
 import {
   buildQuiz, gradeAnswer, dueWords, starReward, summarize, isMastered,
+  wrongBookReward, WRONG_BOOK_CLEAR_STARS,
   wrongBookWords, buildPicQuiz, buildKiwiSession, buildKiwiQuiz, PIC_QUIZ_SIZE,
   spellableWords, spellingTiles, sentenceWords, sentenceTokens, shuffle,
   speechScore, SPEECH_PASS,
@@ -16,6 +17,12 @@ import {
 import {
   createStorage, PROFILES, findProfile, encodeBackup, decodeBackup,
 } from './storage.js';
+import {
+  SPEEDS, naturalRate, selectVoice, englishVoices,
+} from './speech.js';
+import {
+  ADULT_LEVELS, ADULT_WORDS, adultWordsForLevel, findAdultLevel,
+} from './adult-words.js';
 
 const storage = createStorage();
 let state = storage.load();
@@ -27,6 +34,14 @@ const app = document.getElementById('app');
 let viewGeneration = 0;
 const pendingViewTimers = new Set();
 let activeRecognition = null;
+let speechRunId = 0;
+let activeUtterance = null;
+
+function stopSpeech() {
+  speechRunId += 1;
+  activeUtterance = null;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+}
 
 function clearViewAsync() {
   for (const id of pendingViewTimers) clearTimeout(id);
@@ -35,6 +50,7 @@ function clearViewAsync() {
     try { activeRecognition.abort(); } catch { /* 已经结束 */ }
     activeRecognition = null;
   }
+  stopSpeech();
 }
 
 function later(fn, delay) {
@@ -48,7 +64,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v18';
+const APP_VERSION = 'v21';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -79,20 +95,82 @@ function pdata() {
 }
 
 function levelWords() {
-  return wordsForLevel(pdata().level);
+  return profile()?.adult ? adultWordsForLevel(pdata().level) : wordsForLevel(pdata().level);
 }
 
-// —— 语音朗读（iOS Safari 原生支持，需要用户点击触发）——
-export const SPEEDS = [
-  { id: 'slow', label: '🐢 慢', rate: 0.6 },
-  { id: 'mid',  label: '🐇 适中', rate: 0.8 },
-  { id: 'fast', label: '⚡ 快', rate: 1.0 },
-];
+function profilePool() {
+  if (profile()?.adult) return levelWords();
+  return profile()?.preReader ? KIWI_ITEMS : WORDS;
+}
 
-function rateFor(lang) {
-  const base = state.speechRate || 0.8;
-  // 中文比英文略快一点点，但不超过 1.1，读起来更自然
-  return (lang || '').startsWith('zh') ? Math.min(base + 0.15, 1.1) : base;
+// 同一学习通道保留一个短期窗口：仍遵守 SRS 的到期优先级，但刚在上一轮
+// 出现过的词会后移，词池足够时不会连续几轮撞到同一个词。
+const recentSelections = new Map();
+
+function rememberRecentWords(words, channel = 'quiz') {
+  const d = pdata();
+  const key = `${state.current || 'none'}:${channel}`;
+  const pickedIds = words.map((w) => w.id);
+  const channelRecent = recentSelections.get(key) || [];
+  const globalRecent = Array.isArray(d.recentWords) ? d.recentWords : [];
+  const nextChannel = [
+    ...pickedIds,
+    ...channelRecent.filter((id) => !pickedIds.includes(id)),
+  ].slice(0, Math.max(8, words.length * 2));
+  const nextGlobal = [
+    ...pickedIds,
+    ...globalRecent.filter((id) => !pickedIds.includes(id)),
+  ].slice(0, 24);
+  recentSelections.set(key, nextChannel);
+  d.recentWords = nextGlobal;
+  saveState();
+  return words;
+}
+
+function scheduledWords(words, limit, channel = 'quiz') {
+  const key = `${state.current || 'none'}:${channel}`;
+  const channelRecent = recentSelections.get(key) || [];
+  const globalRecent = Array.isArray(pdata().recentWords) ? pdata().recentWords : [];
+  const recent = [...new Set([...globalRecent, ...channelRecent])];
+  const picked = dueWords(words, pdata().progress, Date.now(), limit, recent);
+  return rememberRecentWords(picked, channel);
+}
+
+function currentSceneWorld(d = pdata()) {
+  if (!d.worlds || typeof d.worlds !== 'object' || Array.isArray(d.worlds)) d.worlds = {};
+  const sceneId = d.worldScene || 'grassland';
+  if (!Array.isArray(d.worlds[sceneId])) d.worlds[sceneId] = [];
+  return d.worlds[sceneId];
+}
+
+function setCurrentSceneWorld(world, d = pdata()) {
+  if (!d.worlds || typeof d.worlds !== 'object' || Array.isArray(d.worlds)) d.worlds = {};
+  d.worlds[d.worldScene || 'grassland'] = world;
+  return world;
+}
+
+// —— 自然语音：优先设备上的高质量英式声音，并让多段内容之间留出呼吸感。——
+function deviceVoices() {
+  if (!('speechSynthesis' in window)) return [];
+  try { return speechSynthesis.getVoices(); } catch { return []; }
+}
+
+function utteranceFor(part) {
+  const lang = part.lang || 'en-GB';
+  const text = String(part.text || '').trim();
+  const utterance = new SpeechSynthesisUtterance(text);
+  const preferred = lang.toLowerCase().startsWith('en') ? (state.speechVoice || 'auto') : 'auto';
+  const voice = selectVoice(deviceVoices(), lang, preferred);
+  if (voice) {
+    utterance.voice = voice;
+    utterance.lang = voice.lang || lang;
+  } else {
+    utterance.lang = lang;
+  }
+  utterance.rate = naturalRate(state.speechRate, utterance.lang, text);
+  utterance.pitch = 1;
+  utterance.volume = 1;
+  return utterance;
 }
 
 // 切换下一题的停顿：语速越慢，留给孩子看/听的时间越长
@@ -100,45 +178,108 @@ function gap(base) {
   return Math.round(base + (0.85 - (state.speechRate || 0.8)) * 1600);
 }
 
-function speak(text, lang = 'en-GB') {
-  if (!('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = lang;
-  u.rate = rateFor(lang);
-  speechSynthesis.speak(u);
+function speak(text, lang = 'en-GB', options = {}) {
+  speakSeq([{ text, lang, ...options }]);
 }
 
 // 连续朗读多段（如英文单词 + 中文释义），给不识字的小朋友"听懂"用
 function speakSeq(parts) {
   if (!('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  for (const p of parts) {
-    const u = new SpeechSynthesisUtterance(p.text);
-    u.lang = p.lang || 'en-GB';
-    u.rate = rateFor(p.lang);
-    speechSynthesis.speak(u);
-  }
+  const queue = parts.filter((part) => String(part?.text || '').trim());
+  if (!queue.length) return;
+  stopSpeech();
+  const runId = speechRunId;
+
+  const play = (index) => {
+    if (runId !== speechRunId || index >= queue.length) return;
+    const part = queue[index];
+    const utterance = utteranceFor(part);
+    activeUtterance = utterance; // 防止部分 Safari 在朗读结束前回收对象
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      if (runId !== speechRunId) return;
+      const next = queue[index + 1];
+      const changedLanguage = next && (part.lang || 'en-GB').slice(0, 2) !== (next.lang || 'en-GB').slice(0, 2);
+      const pause = Number.isFinite(part.pauseAfter)
+        ? part.pauseAfter
+        : changedLanguage ? 320 : 190;
+      window.setTimeout(() => play(index + 1), pause);
+    };
+    utterance.onend = finish;
+    utterance.onerror = finish;
+    speechSynthesis.speak(utterance);
+  };
+  play(0);
 }
 
-// 语速选择行：一处全局设置，点了立即生效并保存
+// 语速 + 音色：允许家长在这台设备上试听并固定最自然的声音。
 function speedRow() {
-  const row = el('<div class="speed-row"><span class="speed-label">🔊 读得多快</span></div>');
+  const controls = el(`
+    <div class="speech-controls">
+      <div class="speed-row"><span class="speed-label">🔊 朗读节奏</span></div>
+      <div class="voice-row">
+        <label class="speed-label" for="voice-select">🎙️ 英文音色</label>
+        <select class="voice-select" id="voice-select" aria-label="选择英文朗读音色"></select>
+        <button class="voice-preview" type="button">试听</button>
+      </div>
+      <p class="voice-note" aria-live="polite"></p>
+    </div>
+  `);
+  const row = controls.querySelector('.speed-row');
   for (const sp of SPEEDS) {
     const active = Math.abs((state.speechRate || 0.8) - sp.rate) < 0.001;
     const chip = el(`<button class="speed-chip${active ? ' active' : ''}" aria-pressed="${active}">${sp.label}</button>`);
     chip.addEventListener('click', () => {
       state.speechRate = sp.rate;
       saveState();
-      row.querySelectorAll('.speed-chip').forEach((c) => c.classList.remove('active'));
-      row.querySelectorAll('.speed-chip').forEach((c) => c.setAttribute('aria-pressed', 'false'));
+      controls.querySelectorAll('.speed-chip').forEach((c) => c.classList.remove('active'));
+      controls.querySelectorAll('.speed-chip').forEach((c) => c.setAttribute('aria-pressed', 'false'));
       chip.classList.add('active');
       chip.setAttribute('aria-pressed', 'true');
-      speak('OK'); // 立刻用新语速示范一下
+      speak("Let's learn English together!");
     });
     row.appendChild(chip);
   }
-  return row;
+
+  const select = controls.querySelector('.voice-select');
+  const note = controls.querySelector('.voice-note');
+  const populateVoices = () => {
+    const voices = englishVoices(deviceVoices());
+    const previous = state.speechVoice || 'auto';
+    select.replaceChildren();
+    const automatic = document.createElement('option');
+    automatic.value = 'auto';
+    automatic.textContent = '自动选择（推荐英音）';
+    select.appendChild(automatic);
+    for (const voice of voices) {
+      const option = document.createElement('option');
+      option.value = voice.voiceURI;
+      option.textContent = `${voice.name} · ${voice.lang}`;
+      select.appendChild(option);
+    }
+    select.value = voices.some((voice) => voice.voiceURI === previous) ? previous : 'auto';
+    const chosen = selectVoice(voices, 'en-GB', select.value);
+    note.textContent = chosen
+      ? `当前使用：${chosen.name}（${chosen.lang}）`
+      : '当前使用系统默认声音；可在 iPhone 设置中下载增强英语声音。';
+  };
+  select.addEventListener('change', () => {
+    state.speechVoice = select.value;
+    saveState();
+    populateVoices();
+    speak("Hello! I'm your English learning friend.");
+  });
+  controls.querySelector('.voice-preview').addEventListener('click', () => {
+    speak("Hello! Let's learn English together.");
+  });
+  populateVoices();
+  if ('speechSynthesis' in window && speechSynthesis.addEventListener) {
+    speechSynthesis.addEventListener('voiceschanged', populateVoices, { once: true });
+  }
+  window.setTimeout(populateVoices, 300);
+  return controls;
 }
 
 function saveState() {
@@ -167,7 +308,9 @@ function render(node) {
 function applyTheme() {
   const p = profile();
   document.body.dataset.theme = p ? p.theme : 'pink';
-  document.title = p ? `${p.name} 的英语王国` : '英语王国';
+  document.title = p
+    ? (p.adult ? `${p.name}的英语学习` : `${p.name} 的英语王国`)
+    : '家庭英语学习';
 }
 
 // ————— 选人页：今天谁来学习？ —————
@@ -176,10 +319,10 @@ function showProfileSelect() {
   const node = el(`
     <div>
       <div class="mascot"><div class="yoyo"></div></div>
-      <h1 style="text-align:center">英语王国 👑</h1>
+      <h1 style="text-align:center">家庭英语学习</h1>
       <p class="subtitle" style="text-align:center">今天谁来学习呀？</p>
       <div class="profile-grid" id="profiles"></div>
-      <p class="footer-note">姐姐和弟弟的星星分开数，谁都不吃亏 💖</p>
+      <p class="footer-note">三个人的学习进度独立保存，互不影响</p>
       <button class="btn ghost" id="backup">💾 备份 / 恢复进度</button>
       <button class="btn ghost" id="force-update">🔄 更新到最新版（清缓存）</button>
       <p class="footer-note" id="ver">版本 ${APP_VERSION}</p>
@@ -193,14 +336,17 @@ function showProfileSelect() {
   const grid = node.querySelector('#profiles');
   for (const p of PROFILES) {
     const d = state.profiles[p.id];
-    const lvl = findLevel(d.level);
+    const lvl = p.adult ? findAdultLevel(d.level) : findLevel(d.level);
     const routeLabel = p.preReader ? '🎧 听说启蒙' : `${lvl.emoji} ${lvl.name}`;
+    const adultMastered = p.adult
+      ? adultWordsForLevel(d.level).filter((w) => isMastered(d.progress[w.id])).length
+      : 0;
     const card = el(`
       <button class="profile-card theme-${p.theme}">
         <span class="avatar">${p.emoji}</span>
         <span class="pname">${p.name}</span>
         <span class="ptitle">${p.title} · ${routeLabel}</span>
-        <span class="pstars">⭐ ${d.stars}</span>
+        <span class="pstars">${p.adult ? `已掌握 ${adultMastered} 个词` : `⭐ ${d.stars}`}</span>
       </button>
     `);
     card.addEventListener('click', () => {
@@ -281,9 +427,12 @@ function showKiwiHome() {
 }
 
 function startKiwiDaily() {
-  const session = buildKiwiSession(KIWI_ITEMS, pdata().progress, Date.now(), 2, 4);
+  const session = buildKiwiSession(
+    KIWI_ITEMS, pdata().progress, Date.now(), 2, 4, pdata().recentWords || []
+  );
   const questions = buildKiwiQuiz(session, KIWI_ITEMS, PIC_QUIZ_SIZE);
   if (!questions.length) return showKiwiHome();
+  rememberRecentWords(session.items, 'kiwi-daily');
   if (session.newItems.length) showKiwiIntro(session, questions, 0);
   else startQuiz(session.items, '今天的听说', { pool: KIWI_ITEMS, questions, kiwiDaily: true });
 }
@@ -316,12 +465,252 @@ function showKiwiIntro(session, questions, idx) {
   say();
 }
 
+// ————— 森蝶首页：成人词汇路线，先背词卡、再用小测巩固 —————
+const ADULT_DAILY_SIZE = 20;
+const ADULT_QUIZ_SIZE = 10;
+const ADULT_DECK_SIZE = 200;
+
+function adultDecks(words) {
+  const decks = [];
+  for (let start = 0; start < words.length; start += ADULT_DECK_SIZE) {
+    decks.push({
+      index: decks.length,
+      start,
+      end: Math.min(start + ADULT_DECK_SIZE, words.length),
+      words: words.slice(start, start + ADULT_DECK_SIZE),
+    });
+  }
+  return decks;
+}
+
+function showAdultHome() {
+  const p = profile();
+  const d = pdata();
+  const words = levelWords();
+  const lvl = findAdultLevel(d.level);
+  const learned = words.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
+  const mastered = words.filter((w) => isMastered(d.progress[w.id])).length;
+  const reviewable = words.filter((w) => d.seen[w.id] || d.progress[w.id]);
+  const todayCount = Math.min(ADULT_DAILY_SIZE, words.length);
+  const node = el(`
+    <div class="adult-home">
+      <div class="topbar">
+        <button class="icon-btn" id="switch-user" aria-label="切换学习者">${p.emoji}</button>
+        <div class="title">${p.name}的英语学习</div>
+        <div style="width:44px"></div>
+      </div>
+      <div class="adult-hero">
+        <span class="adult-hero-icon">Aa</span>
+        <div><h1>先记住，再用起来</h1><p>${lvl.name} · 每天 20 个，按记忆节奏复习</p></div>
+      </div>
+      <div class="levels adult-routes" id="adult-routes"></div>
+      <div class="stats adult-stats">
+        <div class="stat"><div class="num">${learned}</div><div class="label">本路线已背</div></div>
+        <div class="stat">
+          <div class="num">${mastered}/${words.length}</div>
+          <div class="label">已经掌握</div>
+          <div class="progress-track" role="progressbar" aria-label="${lvl.name} 掌握进度" aria-valuemin="0" aria-valuemax="${words.length}" aria-valuenow="${mastered}"><div class="progress-fill" style="width:${words.length ? Math.round((mastered / words.length) * 100) : 0}%"></div></div>
+        </div>
+      </div>
+      <button class="btn adult-primary" id="adult-daily">📖 今日背词 · ${todayCount} 个</button>
+      <p class="counter">先看单词、音标和释义，完成后再做 10 题小测</p>
+      <button class="btn secondary" id="adult-review" ${reviewable.length ? '' : 'disabled'}>${reviewable.length ? '🧠 直接复习小测' : '🧠 背完第一组后开启复习'}</button>
+      <div id="speed-anchor"></div>
+      <h2 class="section-title">完整词表</h2>
+      <p class="subtitle">按高频顺序分组；跨 CET4、CET6、考研的同一个词共用进度。</p>
+      <div class="adult-deck-grid" id="adult-decks"></div>
+      <p class="footer-note">词表来源：ECDICT（MIT License）· 进度只保存在本机</p>
+    </div>
+  `);
+
+  const routes = node.querySelector('#adult-routes');
+  for (const route of ADULT_LEVELS) {
+    const active = route.id === d.level;
+    const chip = el(`
+      <button class="level-chip ${active ? 'active' : ''}" aria-pressed="${active}">
+        ${route.emoji} ${route.name}<span class="tag">${route.tag}</span>
+      </button>
+    `);
+    chip.addEventListener('click', () => {
+      d.level = route.id;
+      saveState();
+      showAdultHome();
+    });
+    routes.appendChild(chip);
+  }
+
+  const decksBox = node.querySelector('#adult-decks');
+  for (const deck of adultDecks(words)) {
+    const deckLearned = deck.words.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
+    const deckMastered = deck.words.filter((w) => isMastered(d.progress[w.id])).length;
+    const card = el(`
+      <button class="adult-deck-card">
+        <span class="deck-number">${String(deck.index + 1).padStart(2, '0')}</span>
+        <span class="deck-title">第 ${deck.start + 1}–${deck.end} 词</span>
+        <span class="deck-progress">已背 ${deckLearned} · 掌握 ${deckMastered}/${deck.words.length}</span>
+      </button>
+    `);
+    card.addEventListener('click', () => showAdultCollection({
+      key: `adult:${d.level}:deck:${deck.index}`,
+      title: `${lvl.name} 第 ${deck.index + 1} 组`,
+      words: deck.words,
+      pool: words,
+      adult: true,
+    }));
+    decksBox.appendChild(card);
+  }
+
+  const wrongWords = wrongBookWords(words, d.progress);
+  if (wrongWords.length) {
+    const wrongBtn = el(`<button class="btn wrong-book">📕 本路线错词 · ${wrongWords.length} 个</button>`);
+    wrongBtn.addEventListener('click', () => showAdultCollection({
+      key: `adult:${d.level}:wrongbook`,
+      title: `${lvl.name} 错词`,
+      words: wrongBookWords(levelWords(), pdata().progress),
+      pool: levelWords(),
+      adult: true,
+      wrongbook: true,
+    }));
+    node.querySelector('#adult-review').after(wrongBtn);
+  }
+
+  node.querySelector('#speed-anchor').replaceWith(speedRow());
+  node.querySelector('#switch-user').addEventListener('click', showProfileSelect);
+  node.querySelector('#adult-daily').addEventListener('click', () => {
+    const todayWords = scheduledWords(words, ADULT_DAILY_SIZE, 'adult-daily');
+    showAdultLearn({
+      key: `adult:${d.level}:daily`,
+      title: `${lvl.name} 今日背词`,
+      words: todayWords,
+      pool: words,
+      adult: true,
+      daily: true,
+    }, todayWords, 0);
+  });
+  node.querySelector('#adult-review').addEventListener('click', () => {
+    if (!reviewable.length) return;
+    const reviewWords = scheduledWords(reviewable, ADULT_QUIZ_SIZE, 'adult-review');
+    startQuiz(reviewWords, `${lvl.name} 复习`, {
+      adult: true,
+      count: ADULT_QUIZ_SIZE,
+      pool: words,
+      sourceScope: { key: `adult:${d.level}:review`, words: reviewable, pool: words, adult: true },
+    });
+  });
+  render(node);
+}
+
+function showAdultCollection(scope) {
+  const d = pdata();
+  const savedIdx = Math.min(d.learnPos[scope.key] || 0, Math.max(0, scope.words.length - 1));
+  const learned = scope.words.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
+  const mastered = scope.words.filter((w) => isMastered(d.progress[w.id])).length;
+  const node = el(`
+    <div class="adult-collection">
+      <div class="topbar">
+        <button class="icon-btn" id="back" aria-label="返回成人学习首页">←</button>
+        <div class="title">${scope.wrongbook ? '📕' : '📚'} ${scope.title}</div>
+        <div style="width:44px"></div>
+      </div>
+      <div class="adult-collection-summary">
+        <b>${scope.words.length} 个词</b>
+        <span>已背 ${learned} · 掌握 ${mastered}</span>
+      </div>
+      <button class="btn adult-primary" id="learn">📖 ${savedIdx > 0 ? `从第 ${savedIdx + 1} 个继续背` : '从词卡开始背'}</button>
+      ${savedIdx > 0 ? '<button class="btn ghost" id="restart">↺ 从第 1 个重新背</button>' : ''}
+      <button class="btn secondary" id="quiz">${scope.wrongbook ? '🎯 训练并移出错词' : '🎯 做一组 10 题小测'}</button>
+      ${scope.wrongbook ? '<p class="counter">答对会提升熟练度，达到 3 级后自动移出；成人训练不计星星。</p>' : ''}
+      ${scope.wrongbook ? '<div class="wrong-list adult-wrong-list" id="wrong-list"></div>' : ''}
+    </div>
+  `);
+  if (scope.wrongbook) {
+    const list = node.querySelector('#wrong-list');
+    for (const w of scope.words.slice(0, 100)) {
+      list.appendChild(el(`
+        <div class="wrong-item"><span><b>${w.en}</b> ${w.phonetic ? `/${w.phonetic}/` : ''}</span><span>${w.zh} · 熟练 ${Math.min(3, d.progress[w.id]?.box || 0)}/3 · 错 ${d.progress[w.id]?.wrong || 0} 次</span></div>
+      `));
+    }
+    if (scope.words.length > 100) list.appendChild(el(`<p class="counter">这里只预览前 100 个，背词和小测会覆盖全部。</p>`));
+  }
+  node.querySelector('#back').addEventListener('click', showAdultHome);
+  node.querySelector('#learn').addEventListener('click', () => showAdultLearn(scope, scope.words, savedIdx));
+  const restart = node.querySelector('#restart');
+  if (restart) restart.addEventListener('click', () => showAdultLearn(scope, scope.words, 0));
+  node.querySelector('#quiz').addEventListener('click', () => {
+    const quizWords = scheduledWords(
+      scope.words,
+      ADULT_QUIZ_SIZE,
+      scope.wrongbook ? 'adult-wrongbook' : 'adult-quiz'
+    );
+    startQuiz(quizWords, `${scope.title}小测`, {
+      adult: true,
+      count: ADULT_QUIZ_SIZE,
+      pool: scope.pool || levelWords(),
+      sourceScope: scope,
+    });
+  });
+  render(node);
+}
+
+function showAdultLearn(scope, words, idx) {
+  if (!words.length) return showAdultHome();
+  const safeIdx = Math.max(0, Math.min(idx, words.length - 1));
+  const w = words[safeIdx];
+  const d = pdata();
+  d.seen[w.id] = true;
+  d.learnPos[scope.key] = safeIdx;
+  saveState();
+  const seenCount = words.filter((x) => d.seen[x.id]).length;
+  const phonetic = w.phonetic ? `/${w.phonetic}/` : '点击听发音';
+  const node = el(`
+    <div class="adult-learn">
+      <div class="topbar">
+        <button class="icon-btn" id="back" aria-label="退出背词">←</button>
+        <div class="title">📖 ${scope.daily ? '今日背词' : scope.title}</div>
+        <button class="icon-btn" id="replay" aria-label="播放单词发音">🔊</button>
+      </div>
+      <p class="counter">${safeIdx + 1} / ${words.length} · 本组已看 ${seenCount} 个</p>
+      <button class="flashcard adult-flashcard" id="card" type="button">
+        <span class="adult-word">${w.en}</span>
+        <span class="adult-phonetic">${phonetic}</span>
+        ${w.pos ? `<span class="adult-pos">${w.pos}</span>` : ''}
+        <span class="adult-meaning">${w.zh}</span>
+        <span class="hint">点卡片再听一遍</span>
+      </button>
+      <div class="learn-nav">
+        <button class="btn secondary" id="prev" ${safeIdx === 0 ? 'disabled' : ''}>上一个</button>
+        <button class="btn" id="next">${safeIdx === words.length - 1 ? (scope.daily ? '开始小测 →' : '完成 ✅') : '下一个'}</button>
+      </div>
+    </div>
+  `);
+  const say = () => speak(w.en);
+  node.querySelector('#back').addEventListener('click', () => scope.daily ? showAdultHome() : showAdultCollection(scope));
+  node.querySelector('#replay').addEventListener('click', say);
+  node.querySelector('#card').addEventListener('click', say);
+  node.querySelector('#prev').addEventListener('click', () => showAdultLearn(scope, words, safeIdx - 1));
+  node.querySelector('#next').addEventListener('click', () => {
+    if (safeIdx < words.length - 1) return showAdultLearn(scope, words, safeIdx + 1);
+    d.learnPos[scope.key] = 0;
+    saveState();
+    if (!scope.daily) return showAdultCollection(scope);
+    startQuiz(words, '今日背词小测', {
+      adult: true,
+      count: ADULT_QUIZ_SIZE,
+      pool: scope.pool || levelWords(),
+      sourceScope: scope,
+    });
+  });
+  render(node);
+  say();
+}
+
 // ————— 首页 —————
 function showHome() {
   const p = profile();
   if (!p) return showProfileSelect();
   applyTheme();
   if (p.preReader) return showKiwiHome();
+  if (p.adult) return showAdultHome();
   const d = pdata();
   const words = levelWords();
   const mastered = words.filter((w) => isMastered(d.progress[w.id])).length;
@@ -385,7 +774,10 @@ function showHome() {
       </button>
     `);
     btn.addEventListener('click', () => {
-      startQuiz(words, `${lvlInfo.name} 词汇通关挑战`, { graduation: true });
+      startQuiz(
+        scheduledWords(words, GRADUATION_QUIZ_SIZE, 'graduation'),
+        `${lvlInfo.name} 词汇通关挑战`, { graduation: true }
+      );
     });
     gradBox.appendChild(btn);
   } else {
@@ -457,7 +849,7 @@ function showHome() {
 
   node.querySelector('#switch-user').addEventListener('click', showProfileSelect);
   node.querySelector('#smart-quiz').addEventListener('click', () => {
-    startQuiz(dueWords(levelWords(), pdata().progress, Date.now(), 8), '智能闯关');
+    startQuiz(scheduledWords(levelWords(), 8, 'smart-quiz'), '智能闯关');
   });
   render(node);
 }
@@ -470,13 +862,15 @@ function showCollection(scope) {
   const learnLabel = preReader
     ? '🖼️ 看图学一学'
     : (savedIdx > 0 ? `📖 学一学（继续第 ${savedIdx + 1} 个）` : '📖 学一学（翻卡片）');
-  const quizLabel = preReader ? '👂 听音点图（6 题）' : '🎯 考一考（8 道题闯关）';
+  const quizLabel = scope.wrongbook
+    ? (preReader ? '👂 训练听懂并移出' : '🎯 训练并移出错题')
+    : (preReader ? '👂 听音点图（6 题）' : '🎯 考一考（8 道题闯关）');
   const unitContent = !preReader && scope.unitId ? findUnitContent(scope.unitId) : null;
 
   // 姐姐版四技能扩展模式：写（拼单词）、读（组句子）、说（跟读）
-  const canSpell = !preReader && spellableWords(scope.words).length >= 4;
-  const canBuild = !preReader && sentenceWords(scope.words).length >= 3;
-  const modeGridHtml = preReader ? '' : `
+  const canSpell = !preReader && !scope.wrongbook && spellableWords(scope.words).length >= 4;
+  const canBuild = !preReader && !scope.wrongbook && sentenceWords(scope.words).length >= 3;
+  const modeGridHtml = (preReader || scope.wrongbook) ? '' : `
     <div class="mode-grid">
       ${canSpell ? '<button class="mode-btn" id="spell">✍️ 拼一拼<span>看图拼单词</span></button>' : ''}
       ${canBuild ? '<button class="mode-btn" id="build">🧩 组句子<span>把句子拼回来</span></button>' : ''}
@@ -492,7 +886,7 @@ function showCollection(scope) {
       </div>
       <div class="mascot"><div class="yoyo"></div></div>
       <p class="subtitle" style="text-align:center">${scope.wrongbook
-        ? `${preReader ? '这些声音还需要再听一听' : '这些词答错过，多练几次就会啦'}！`
+        ? `${preReader ? '反复听对，熟练度到 3 级就会自动移出' : '答对会提升熟练度；到 3 级自动移出，并一次性奖励星星'}。`
         : preReader
           ? `这里有 ${scope.words.length} 个声音、图片和动作等着 ${profile().name}！`
           : `这里有 ${scope.words.length} 个单词等着 ${profile().name}！`}</p>
@@ -515,8 +909,9 @@ function showCollection(scope) {
   if (scope.wrongbook) {
     const list = node.querySelector('#wrong-list');
     for (const w of scope.words) {
+      const box = Math.min(3, d.progress[w.id]?.box || 0);
       list.appendChild(el(`
-        <div class="wrong-item"><span>${w.emoji} ${w.en}</span><span>${w.zh} · 错 ${d.progress[w.id].wrong} 次</span></div>
+        <div class="wrong-item"><span>${w.emoji} ${w.en}</span><span>${w.zh} · 熟练 ${box}/3 · 错 ${d.progress[w.id].wrong} 次</span></div>
       `));
     }
   }
@@ -525,9 +920,11 @@ function showCollection(scope) {
   const restart = node.querySelector('#restart');
   if (restart) restart.addEventListener('click', () => showLearn(scope, scope.words, 0));
   node.querySelector('#quiz').addEventListener('click', () => {
-    const quizWords = scope.wrongbook
-      ? scope.words
-      : dueWords(scope.words, d.progress, Date.now(), 8);
+    const quizWords = scheduledWords(
+      scope.words,
+      preReader ? PIC_QUIZ_SIZE : 8,
+      scope.wrongbook ? 'wrongbook' : 'collection-quiz'
+    );
     startQuiz(quizWords, `${scope.title}闯关`, {
       pool: scope.pool || (scope.wrongbook ? (preReader ? KIWI_ITEMS : WORDS) : undefined),
       sourceScope: scope,
@@ -936,7 +1333,7 @@ function showNeedLearn(title) {
     </div>
   `);
   node.querySelector('#quiz').addEventListener('click', () => {
-    startQuiz(dueWords(levelWords(), pdata().progress, Date.now(), 8), '智能闯关');
+    startQuiz(scheduledWords(levelWords(), 8, 'smart-quiz'), '智能闯关');
   });
   const toWorld = () => showWorld();
   node.querySelector('#back').addEventListener('click', toWorld);
@@ -947,10 +1344,11 @@ function showNeedLearn(title) {
 // Story 1：听音找它，答对解锁一个贴纸飞进场景（只从"学过且没摆过"的词里出）
 function showUnlock() {
   const d = pdata();
-  const available = availableStickerWords(WORDS, d.seen, d.progress, d.world.map((s) => s.id));
+  const world = currentSceneWorld(d);
+  const available = availableStickerWords(WORDS, d.seen, d.progress, world.map((s) => s.id));
   if (!available.length) return showNeedLearn('➕ 加一个');
   // 在学过的词里，交给 SRS 调度优先挑到期复习的
-  const word = dueWords(available, d.progress, Date.now(), 1)[0];
+  const word = scheduledWords(available, 1, 'world-unlock')[0];
   const round = buildUnlockRound(word, levelWords());
   const ask = () => speak(`Where is the ${word.en}?`);
   let solved = false;
@@ -977,8 +1375,8 @@ function showUnlock() {
         d.progress[word.id] = gradeAnswer(d.progress[word.id], true);
         d.seen[word.id] = true; // 解锁即"学过"，进贴纸库
         // 贴纸落进场景，中心附近轻微错开避免完全重叠
-        const spawn = [[50, 52], [40, 44], [60, 58], [46, 64], [58, 40], [34, 60]][d.world.length % 6];
-        d.world = addSticker(d.world, word.id, spawn[0], spawn[1]);
+        const spawn = [[50, 52], [40, 44], [60, 58], [46, 64], [58, 40], [34, 60]][world.length % 6];
+        setCurrentSceneWorld(addSticker(world, word.id, spawn[0], spawn[1]), d);
         saveState();
         b.classList.add('correct', 'fly');
         speakSeq([{ text: word.en }, { text: '真棒！', lang: 'zh-CN' }]);
@@ -1001,10 +1399,14 @@ function showUnlock() {
 function showWorld() {
   worldSel = null;
   const d = pdata();
-  // 同一个单词在世界里只保留一个（"不要重复"，顺手清掉历史重复）
+  let world = currentSceneWorld(d);
+  // 同一个单词在当前场景里只保留一个；不同背景各自有独立贴纸布局。
   const seenIds = new Set();
-  const deduped = d.world.filter((s) => (seenIds.has(s.id) ? false : seenIds.add(s.id)));
-  if (deduped.length !== d.world.length) { d.world = deduped; saveState(); }
+  const deduped = world.filter((s) => (seenIds.has(s.id) ? false : seenIds.add(s.id)));
+  if (deduped.length !== world.length) {
+    world = setCurrentSceneWorld(deduped, d);
+    saveState();
+  }
   const curScene = SCENES.find((s) => s.id === (d.worldScene || 'grassland')) || SCENES[0];
   const node = el(`
     <div class="world-page">
@@ -1014,6 +1416,7 @@ function showWorld() {
         <button class="icon-btn" id="add-top" aria-label="添加贴纸">➕</button>
       </div>
       <button class="btn secondary scene-open" id="scene-open">🖼️ 换背景（现在：${curScene.emoji} ${curScene.name}）</button>
+      <p class="scene-note">每个背景都有自己的一套贴纸，切换不会把小动物带过去。</p>
       <div class="scene scene--${d.worldScene || 'grassland'}" id="scene">
         <div class="stickers" id="stickers"></div>
         <div class="scene-hint" id="hint"></div>
@@ -1038,7 +1441,7 @@ function showWorld() {
 
   function paint() {
     layer.innerHTML = '';
-    d.world.forEach((s, i) => {
+    world.forEach((s, i) => {
       const w = findWord(s.id);
       if (!w) return;
       const t = el(`<button class="sticker${i === worldSel ? ' selected' : ''}" data-i="${i}" aria-label="${w.en}，${w.zh}">${w.emoji}</button>`);
@@ -1048,8 +1451,8 @@ function showWorld() {
       layer.appendChild(t);
     });
     tools.hidden = worldSel === null;
-    hint.style.display = d.world.length ? 'none' : '';
-    hint.textContent = d.world.length ? '' : '点 ➕ 加一个，把单词摆进你的世界 🌱';
+    hint.style.display = world.length ? 'none' : '';
+    hint.textContent = world.length ? '' : '这个场景还是空的，点 ➕ 加一个吧 🌱';
   }
 
   // 拖拽 + 点击（移动超阈值算拖，否则算点：点=选中并读英文）
@@ -1068,10 +1471,10 @@ function showWorld() {
   layer.addEventListener('pointermove', (e) => {
     if (!drag) return;
     if (Math.abs(e.clientX - drag.startX) > 6 || Math.abs(e.clientY - drag.startY) > 6) drag.moved = true;
-    if (!drag.moved || !d.world[drag.i]) return;
+    if (!drag.moved || !world[drag.i]) return;
     const x = clampPct(((e.clientX - drag.rect.left) / drag.rect.width) * 100);
     const y = clampPct(((e.clientY - drag.rect.top) / drag.rect.height) * 100);
-    d.world[drag.i] = { ...d.world[drag.i], x, y };
+    world[drag.i] = { ...world[drag.i], x, y };
     const sel = layer.querySelector(`.sticker[data-i="${drag.i}"]`);
     if (sel) { sel.style.left = x + '%'; sel.style.top = y + '%'; }
   });
@@ -1082,7 +1485,7 @@ function showWorld() {
       saveState(); // 自动存
       if (sel) { sel.classList.add('dropped'); later(() => sel.classList.remove('dropped'), 200); }
     } else {
-      const w = findWord(d.world[drag.i].id); // 点一下：再读一遍英文
+      const w = findWord(world[drag.i].id); // 点一下：再读一遍英文
       if (w) speak(w.en);
     }
     drag = null;
@@ -1093,17 +1496,17 @@ function showWorld() {
 
   node.querySelector('#bigger').addEventListener('click', () => {
     if (worldSel === null) return;
-    d.world = resizeSticker(d.world, worldSel, STICKER_SIZE_STEP);
+    world = setCurrentSceneWorld(resizeSticker(world, worldSel, STICKER_SIZE_STEP), d);
     saveState(); paint();
   });
   node.querySelector('#smaller').addEventListener('click', () => {
     if (worldSel === null) return;
-    d.world = resizeSticker(d.world, worldSel, -STICKER_SIZE_STEP);
+    world = setCurrentSceneWorld(resizeSticker(world, worldSel, -STICKER_SIZE_STEP), d);
     saveState(); paint();
   });
   node.querySelector('#del').addEventListener('click', () => {
     if (worldSel === null) return;
-    d.world = removeSticker(d.world, worldSel);
+    world = setCurrentSceneWorld(removeSticker(world, worldSel), d);
     worldSel = null;
     saveState(); paint();
   });
@@ -1127,7 +1530,7 @@ function showScenePicker() {
         <div class="title">🖼️ 选个背景</div>
         <div style="width:44px"></div>
       </div>
-      <p class="subtitle" style="text-align:center">点一个，就是 ${profile().name} 世界的背景啦！</p>
+      <p class="subtitle" style="text-align:center">每个背景会保留自己的小动物和贴纸，互不串场。</p>
       <div class="scene-grid" id="grid"></div>
     </div>
   `);
@@ -1154,8 +1557,9 @@ function showScenePicker() {
 // 📖 贴纸库：她学过的词，点一个直接放进世界（学得越多，能选的越多）
 function showStickerLibrary() {
   const d = pdata();
+  const world = currentSceneWorld(d);
   // 只列"学过且还没摆进世界"的词——摆过的不再出现，保证不重复
-  const available = availableStickerWords(WORDS, d.seen, d.progress, d.world.map((s) => s.id));
+  const available = availableStickerWords(WORDS, d.seen, d.progress, world.map((s) => s.id));
   if (!available.length) return showNeedLearn('📖 我的贴纸库');
   const node = el(`
     <div>
@@ -1172,8 +1576,8 @@ function showStickerLibrary() {
   for (const w of available) {
     const item = el(`<button class="lib-item" data-id="${w.id}"><span class="e">${w.emoji}</span><span class="w">${w.en}</span></button>`);
     item.addEventListener('click', () => {
-      const spawn = [[50, 52], [40, 44], [60, 58], [46, 64], [58, 40], [34, 60]][d.world.length % 6];
-      d.world = addSticker(d.world, w.id, spawn[0], spawn[1]);
+      const spawn = [[50, 52], [40, 44], [60, 58], [46, 64], [58, 40], [34, 60]][world.length % 6];
+      setCurrentSceneWorld(addSticker(world, w.id, spawn[0], spawn[1]), d);
       saveState();
       speak(w.en);
       showWorld();
@@ -1193,11 +1597,25 @@ function showRoomGame() {
 
 function runRoomTask(roundIdx, earned) {
   const d = pdata();
-  const worldIds = d.world.map((s) => s.id);
+  const world = currentSceneWorld(d);
+  const worldIds = world.map((s) => s.id);
   const sceneWords = [...new Set(worldIds)].map(findWord).filter(Boolean);
   const learned = learnedStickerWords(WORDS, d.seen, d.progress);
+  const targetRecentKey = `${state.current}:${d.worldScene || 'grassland'}:world-room-target`;
+  const itemRecentKey = `${state.current}:${d.worldScene || 'grassland'}:world-room-item`;
+  const recentTargets = recentSelections.get(targetRecentKey) || [];
+  const recentItems = recentSelections.get(itemRecentKey) || [];
+  const targetPool = sceneWords.filter((w) => !recentTargets.includes(w.id));
+  const itemPool = learned.filter((w) => !recentItems.includes(w.id));
   // 要放进去的东西排除已在世界里的，保证不重复
-  const task = roundIdx <= ROOM_ROUNDS ? buildRoomTask(sceneWords, learned, worldIds) : null;
+  let task = roundIdx <= ROOM_ROUNDS
+    ? buildRoomTask(targetPool.length ? targetPool : sceneWords, itemPool, worldIds)
+    : null;
+  if (!task && roundIdx <= ROOM_ROUNDS) task = buildRoomTask(sceneWords, learned, worldIds);
+  if (task) {
+    recentSelections.set(targetRecentKey, [task.target.id, ...recentTargets.filter((id) => id !== task.target.id)].slice(0, 3));
+    recentSelections.set(itemRecentKey, [task.item.id, ...recentItems.filter((id) => id !== task.item.id)].slice(0, 6));
+  }
 
   if (!task) {
     if (roundIdx > 1) return roomDone(earned); // 玩过几轮，正常结束
@@ -1247,7 +1665,7 @@ function runRoomTask(roundIdx, earned) {
   let settled = false;
 
   // 只读渲染现有贴纸，目标贴纸加脉冲高亮帮她定位
-  d.world.forEach((s) => {
+  world.forEach((s) => {
     const w = findWord(s.id);
     if (!w) return;
     const t = el(`<div class="sticker${s.id === task.target.id ? ' target-hint' : ''}">${w.emoji}</div>`);
@@ -1263,7 +1681,7 @@ function runRoomTask(roundIdx, earned) {
     pic.addEventListener('keydown', (e) => {
       if (e.key !== 'Enter' && e.key !== ' ') return;
       e.preventDefault();
-      const targetSticker = d.world.find((s) => s.id === task.target.id);
+      const targetSticker = world.find((s) => s.id === task.target.id);
       if (!targetSticker) return;
       const rect = scene.getBoundingClientRect();
       const x = Math.min(92, targetSticker.x + 8);
@@ -1291,16 +1709,20 @@ function runRoomTask(roundIdx, earned) {
     if (!inScene) { showFlash(`拖到房间里，放到 ${task.target.zh} 旁边`); return; }
     const dropX = ((clientX - rect.left) / rect.width) * 100;
     const dropY = ((clientY - rect.top) / rect.height) * 100;
-    const near = d.world.some((s) => s.id === task.target.id && isNear(dropX, dropY, s.x, s.y));
+    const near = world.some((s) => s.id === task.target.id && isNear(dropX, dropY, s.x, s.y));
     if (!near) { showFlash(`放到 ${task.target.zh} 旁边哦，再试一次 💪`); return; }
     // 成功：放下并留在场景
     settled = true;
     tray.querySelectorAll('button').forEach((button) => { button.disabled = true; });
-    d.world = addSticker(d.world, task.item.id, dropX, dropY);
-    d.stars += 2;
+    setCurrentSceneWorld(addSticker(world, task.item.id, dropX, dropY), d);
+    const firstRoomReward = !d.roomRewarded?.[task.item.id];
+    if (firstRoomReward) {
+      d.roomRewarded = { ...(d.roomRewarded || {}), [task.item.id]: true };
+      d.stars += 2;
+    }
     saveState();
     speakSeq([{ text: 'Well done!' }, { text: '真棒！', lang: 'zh-CN' }]);
-    later(() => runRoomTask(roundIdx + 1, earned + 2), gap(1400));
+    later(() => runRoomTask(roundIdx + 1, earned + (firstRoomReward ? 2 : 0)), gap(1400));
   }
 
   // 跨容器拖拽：按住托盘图 → 浮层跟手 → 松手判定落点
@@ -1363,7 +1785,7 @@ function showBackup() {
         <div class="title">💾 备份 / 恢复</div>
         <div style="width:44px"></div>
       </div>
-      <p class="subtitle">备份码包含两个人的全部星星和学习进度。换手机或重装时，把备份码粘贴回来即可恢复。</p>
+      <p class="subtitle">备份码包含三个人的全部学习进度。换手机或重装时，把备份码粘贴回来即可恢复。</p>
       <textarea class="backup-code" id="code" placeholder="点下面按钮生成备份码，或把备份码粘贴到这里再点恢复"></textarea>
       <button class="btn" id="export">📤 生成备份码（自动复制）</button>
       <button class="btn secondary" id="import">📥 从备份码恢复</button>
@@ -1438,7 +1860,9 @@ function showLearn(scope, words, idx) {
     ? speakSeq(familiar
       ? [{ text: w.en }]
       : [{ text: w.en }, { text: w.zh, lang: 'zh-CN' }, { text: w.en }])
-    : speak(w.sentence ? `${w.en}. ${w.sentence}` : w.en));
+    : w.sentence
+      ? speakSeq([{ text: w.en, pauseAfter: 280 }, { text: w.sentence }])
+      : speak(w.en));
   const stopAuto = () => {
     if (window.__autoLearn) { clearInterval(window.__autoLearn); window.__autoLearn = null; }
   };
@@ -1478,11 +1902,14 @@ function startQuiz(words, title, opts = {}) {
   if (!words.length) return showHome();
   const pool = opts.pool || levelWords();
   const preReader = !!profile().preReader;
-  const count = opts.graduation ? GRADUATION_QUIZ_SIZE : (preReader ? PIC_QUIZ_SIZE : 8);
+  const count = opts.count || (opts.graduation
+    ? GRADUATION_QUIZ_SIZE
+    : (preReader ? PIC_QUIZ_SIZE : (opts.adult ? ADULT_QUIZ_SIZE : 8)));
   quiz = {
     title,
     graduation: !!opts.graduation,
     kiwiDaily: !!opts.kiwiDaily,
+    adult: !!opts.adult,
     pool,
     sourceScope: opts.sourceScope || null,
     // 不识字的小朋友全部用"听音点图"，不需要认字也能答题
@@ -1557,13 +1984,33 @@ function answer(q, pickedId, box) {
   }
 
   activeQuiz.combo = isCorrect ? activeQuiz.combo + 1 : 0;
-  const starsEarned = isCorrect ? starReward(activeQuiz.combo) : 0;
-  activeQuiz.results.push({ wordId: q.word.id, isCorrect, starsEarned });
-
   const d = pdata();
-  d.progress[q.word.id] = gradeAnswer(d.progress[q.word.id], isCorrect);
+  const beforeProgress = d.progress[q.word.id];
+  const afterProgress = gradeAnswer(beforeProgress, isCorrect);
+  const wrongbookTraining = !!activeQuiz.sourceScope?.wrongbook;
+  const clearedWrongbook = wrongbookTraining
+    && !isMastered(beforeProgress)
+    && isMastered(afterProgress);
+  const alreadyRewarded = !!d.wrongbookRewarded?.[q.word.id];
+  const starsEarned = activeQuiz.adult
+    ? 0
+    : wrongbookTraining
+      ? wrongBookReward(beforeProgress, afterProgress, isCorrect, alreadyRewarded)
+      : (isCorrect ? starReward(activeQuiz.combo) : 0);
+  activeQuiz.results.push({ wordId: q.word.id, isCorrect, starsEarned, clearedWrongbook });
+
+  d.progress[q.word.id] = afterProgress;
   d.stars += starsEarned;
+  if (wrongbookTraining && starsEarned > 0) {
+    d.wrongbookRewarded = { ...(d.wrongbookRewarded || {}), [q.word.id]: true };
+  }
   saveState();
+  if (clearedWrongbook) {
+    const combo = document.getElementById('combo');
+    if (combo) combo.textContent = activeQuiz.adult
+      ? '✅ 已掌握，自动移出错词'
+      : `✅ 已掌握，移出错题本 +${WRONG_BOOK_CLEAR_STARS}⭐`;
+  }
 
   // 语音反馈：不识字的小朋友靠听觉知道对错
   if (profile().preReader) {
@@ -1582,8 +2029,11 @@ function answer(q, pickedId, box) {
 
 function showResult() {
   if (quiz.graduation) return showGraduationResult();
+  if (quiz.adult) return showAdultResult();
   const name = profile().name;
   const s = summarize(quiz.results);
+  const wrongbookTraining = !!quiz.sourceScope?.wrongbook;
+  const clearedCount = quiz.results.filter((r) => r.clearedWrongbook).length;
   const praise = s.accuracy === 100 ? `太厉害了 ${name}，全对！🏆`
     : s.accuracy >= 75 ? `${name} 你真棒！🎉`
     : s.accuracy >= 50 ? '越来越好啦，继续加油！💪'
@@ -1592,10 +2042,13 @@ function showResult() {
     <div class="result">
       <div class="big-emoji">${s.accuracy >= 75 ? '🥳' : '🤗'}</div>
       <h2>${praise}</h2>
-      <div class="stars-earned">本关收获 ⭐ × ${s.stars}</div>
+      <div class="stars-earned">${wrongbookTraining
+        ? `移出错题本 ${clearedCount} 个 · 通关奖励 ⭐ × ${s.stars}`
+        : `本关收获 ⭐ × ${s.stars}`}</div>
       <div class="accuracy">答对 ${s.correct} / ${s.total} 题（${s.accuracy}%）</div>
+      ${wrongbookTraining ? '<p class="subtitle">答对会提升熟练度；达到 3 级的词已自动移出，未达到的下轮继续练。</p>' : ''}
       <div style="margin-top:30px">
-        <button class="btn" id="again">🚀 再来一关</button>
+        <button class="btn" id="again">${wrongbookTraining ? '📕 继续清错题' : '🚀 再来一关'}</button>
         <button class="btn ghost" id="home">回到王国</button>
       </div>
     </div>
@@ -1605,25 +2058,69 @@ function showResult() {
       startKiwiDaily();
     } else if (quiz.sourceScope) {
       const source = quiz.sourceScope;
-      const sourcePool = source.pool || (profile().preReader ? KIWI_ITEMS : WORDS);
+      const sourcePool = source.pool || profilePool();
       const sourceWords = source.wrongbook
         ? wrongBookWords(sourcePool, pdata().progress)
         : source.words;
       if (!sourceWords.length) return showHome();
       const nextWords = source.wrongbook
-        ? sourceWords
-        : dueWords(sourceWords, pdata().progress, Date.now(), 8);
+        ? scheduledWords(sourceWords, profile().preReader ? PIC_QUIZ_SIZE : 8, 'wrongbook')
+        : scheduledWords(sourceWords, 8, 'collection-quiz');
       startQuiz(nextWords, quiz.title, {
         pool: source.wrongbook ? sourcePool : quiz.pool,
         sourceScope: source,
       });
     } else {
-      startQuiz(dueWords(levelWords(), pdata().progress, Date.now(), 8), '智能闯关');
+      startQuiz(scheduledWords(levelWords(), 8, 'smart-quiz'), '智能闯关');
     }
   });
   node.querySelector('#home').addEventListener('click', showHome);
   render(node);
   if (s.accuracy >= 75) confetti();
+}
+
+function showAdultResult() {
+  const s = summarize(quiz.results);
+  const routeWords = levelWords();
+  const mastered = routeWords.filter((w) => isMastered(pdata().progress[w.id])).length;
+  const clearedCount = quiz.results.filter((r) => r.clearedWrongbook).length;
+  const message = s.accuracy >= 90 ? '这一组记得很稳'
+    : s.accuracy >= 70 ? '已经形成印象，再复习一次会更牢'
+    : '先看一遍错词，再测会更有效';
+  const node = el(`
+    <div class="result adult-result">
+      <div class="adult-result-mark">${s.accuracy}%</div>
+      <h2>${message}</h2>
+      <div class="accuracy">答对 ${s.correct} / ${s.total} 题</div>
+      ${quiz.sourceScope?.wrongbook ? `<p class="subtitle">本轮有 ${clearedCount} 个词达到掌握线并自动移出错词。</p>` : ''}
+      <p class="subtitle">当前路线已掌握 ${mastered} / ${routeWords.length} 个词；系统会按记忆间隔继续安排复习。</p>
+      <div style="margin-top:30px">
+        <button class="btn adult-primary" id="again">再测一轮</button>
+        <button class="btn ghost" id="home">回到学习计划</button>
+      </div>
+    </div>
+  `);
+  node.querySelector('#again').addEventListener('click', () => {
+    const source = quiz.sourceScope;
+    const sourcePool = source?.pool || quiz.pool || routeWords;
+    const sourceWords = source?.wrongbook
+      ? wrongBookWords(sourcePool, pdata().progress)
+      : (source?.words || quiz.questions.map((q) => q.word));
+    if (!sourceWords.length) return showAdultHome();
+    const nextWords = scheduledWords(
+      sourceWords,
+      ADULT_QUIZ_SIZE,
+      source?.wrongbook ? 'adult-wrongbook' : 'adult-review'
+    );
+    startQuiz(nextWords, quiz.title, {
+      adult: true,
+      count: ADULT_QUIZ_SIZE,
+      pool: sourcePool,
+      sourceScope: source,
+    });
+  });
+  node.querySelector('#home').addEventListener('click', showAdultHome);
+  render(node);
 }
 
 // 应用内词汇通关结算：通过则发毕业帽、+20 星、自动升入下一级
@@ -1677,7 +2174,10 @@ function showGraduationResult() {
   if (goNext) goNext.addEventListener('click', showHome);
   const again = node.querySelector('#again');
   if (again) again.addEventListener('click', () => {
-    startQuiz(levelWords(), `${fromLvl.name} 词汇通关挑战`, { graduation: true });
+    startQuiz(
+      scheduledWords(levelWords(), GRADUATION_QUIZ_SIZE, 'graduation'),
+      `${fromLvl.name} 词汇通关挑战`, { graduation: true }
+    );
   });
   node.querySelector('#home').addEventListener('click', showHome);
   render(node);

@@ -1,0 +1,178 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {
+  DEFAULT_ADULT_LEVEL_ID,
+  ADULT_LEVELS,
+  ADULT_WORDS,
+  adultWordsForLevel,
+  findAdultLevel,
+  adultWordPage,
+} from '../js/adult-words.js';
+
+const LEVEL_IDS = ['life', 'cet4', 'cet6', 'postgrad'];
+const ID_PATTERN = /^[a-z0-9][a-z0-9:_-]{0,63}$/i;
+
+test('成人词库：四条路线齐全，默认从 CET4 开始', () => {
+  assert.deepEqual(ADULT_LEVELS.map((level) => level.id), LEVEL_IDS);
+  assert.equal(DEFAULT_ADULT_LEVEL_ID, 'cet4');
+  assert.equal(ADULT_LEVELS.filter((level) => level.isDefault).length, 1);
+  assert.equal(findAdultLevel('cet6').id, 'cet6');
+  assert.equal(findAdultLevel('not-a-level').id, 'cet4');
+});
+
+test('成人词库：生活常用约 1800，CET4/CET6/考研保留完整量级', () => {
+  const counts = Object.fromEntries(
+    LEVEL_IDS.map((levelId) => [levelId, adultWordsForLevel(levelId).length]),
+  );
+  assert.equal(counts.life, 1800);
+  assert.ok(counts.cet4 >= 3800 && counts.cet4 <= 3900, `CET4 数量异常: ${counts.cet4}`);
+  assert.ok(counts.cet6 >= 5350 && counts.cet6 <= 5450, `CET6 数量异常: ${counts.cet6}`);
+  assert.ok(counts.postgrad >= 4750 && counts.postgrad <= 4850,
+    `考研数量异常: ${counts.postgrad}`);
+  assert.ok(ADULT_WORDS.length >= 6000, `成人词库总量不足: ${ADULT_WORDS.length}`);
+});
+
+test('成人词库：英文和 id 全局唯一，id 可安全写入存档', () => {
+  const ids = ADULT_WORDS.map((word) => word.id);
+  const english = ADULT_WORDS.map((word) => word.en.toLocaleLowerCase('en'));
+  assert.equal(new Set(ids).size, ids.length);
+  assert.equal(new Set(english).size, english.length);
+  for (const id of ids) {
+    assert.ok(id.startsWith('adult:'), `${id} 没有 adult: 前缀`);
+    assert.match(id, ID_PATTERN);
+  }
+  assert.ok(!english.includes('reservior'), '已知拼写错误应合并为 reservoir');
+  assert.ok(!english.includes('uptodate'), 'up-to-date 不应再有无连字符重复项');
+  assert.ok(!english.includes('world-wide'), 'worldwide 不应再有重复拼写项');
+});
+
+test('成人词库：学习字段完整，中文释义已清洗为短释义', () => {
+  const validTracks = new Set(LEVEL_IDS);
+  for (const word of ADULT_WORDS) {
+    for (const field of ['id', 'en', 'zh', 'phonetic', 'pos', 'tracks', 'rank']) {
+      assert.ok(Object.hasOwn(word, field), `${word.id || '?'} 缺少字段 ${field}`);
+    }
+    assert.ok(word.en.length > 0);
+    assert.ok(word.zh.length > 0 && word.zh.length <= 36, `${word.id} 释义过长: ${word.zh}`);
+    assert.ok(!word.zh.includes('\\n') && !word.zh.includes('\n'), `${word.id} 释义仍有换行`);
+    assert.equal(typeof word.phonetic, 'string');
+    assert.ok(typeof word.pos === 'string' && word.pos.length > 0);
+    assert.ok(Number.isInteger(word.rank) && word.rank > 0);
+    assert.ok(Array.isArray(word.tracks) && word.tracks.length > 0);
+    assert.equal(new Set(word.tracks).size, word.tracks.length);
+    assert.ok(word.tracks.every((track) => validTracks.has(track)));
+  }
+});
+
+test('成人词库：重叠考试词只存一份，并记录多条共享路线', () => {
+  const shared = ADULT_WORDS.filter((word) => word.tracks.length >= 3);
+  assert.ok(shared.length >= 3000, `多路线共享词只有 ${shared.length} 个`);
+  const abandon = ADULT_WORDS.find((word) => word.en.toLowerCase() === 'abandon');
+  assert.ok(abandon);
+  assert.ok(abandon.tracks.includes('cet4'));
+  assert.ok(abandon.tracks.includes('cet6'));
+  assert.ok(abandon.tracks.includes('postgrad'));
+});
+
+test('成人词库：高频多义词使用日常义，不把生僻首义当成主卡片', () => {
+  const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
+  const expected = {
+    a: '一个、任一',
+    can: '能、可以',
+    will: '将、会、愿意',
+    want: '想要、需要',
+    give: '给、给予',
+    well: '很好地、健康的',
+    may: '可以、可能',
+    still: '仍然、还是',
+    just: '只是、刚刚、正好',
+    mean: '意思是、意味着',
+    might: '可能、也许',
+    lot: '许多、大量、一批',
+    natural: '自然的、天然的',
+    special: '特别的、特殊的',
+    pm: '下午',
+    ms: '女士',
+    jew: '犹太人',
+  };
+  for (const [word, gloss] of Object.entries(expected)) {
+    assert.equal(byEnglish.get(word)?.zh, gloss, `${word} 没有使用校正后的日常义`);
+  }
+  assert.ok(!byEnglish.has("n't"), "n't 不能作为独立背词项");
+});
+
+test('成人词库：生活路线的错误首义和冒犯性旧义已校正', () => {
+  const lifeWords = adultWordsForLevel('life');
+  const byEnglish = new Map(lifeWords.map((word) => [word.en.toLowerCase(), word]));
+  const expected = {
+    woman: ['女人、女性', 'n.'],
+    girl: ['女孩、少女', 'n.'],
+    save: ['保存、节省、挽救', 'v.'],
+    medical: ['医疗的、医学的', 'adj.'],
+    current: ['当前的、现行的、水流', 'adj.'],
+    despite: ['尽管、不管', 'prep.'],
+    dog: ['狗', 'n.'],
+    ready: ['准备好的、愿意的', 'adj.'],
+    miss: ['错过、想念、未击中', 'v.'],
+    final: ['最后的、最终的', 'adj.'],
+    main: ['主要的、最重要的', 'adj.'],
+    specific: ['具体的、特定的', 'adj.'],
+    somebody: ['某人、有人', 'pron.'],
+    tough: ['艰难的、强硬的', 'adj.'],
+    modern: ['现代的、近代的', 'adj.'],
+    safe: ['安全的、平安的', 'adj.'],
+    nobody: ['没有人、无人', 'pron.'],
+    perfect: ['完美的、完全的', 'adj.'],
+    basic: ['基本的、基础的', 'adj.'],
+    none: ['没有一个、毫无', 'pron.'],
+    southern: ['南方的、南部的', 'adj.'],
+    settle: ['解决、定居、安顿', 'v.'],
+    hide: ['隐藏、躲藏', 'v.'],
+    independent: ['独立的、自主的', 'adj.'],
+    christian: ['基督徒、基督教的', 'n.'],
+    express: ['表达、表示、快递', 'v.'],
+    select: ['选择、挑选', 'v.'],
+    sick: ['生病的、不舒服的', 'adj.'],
+    cat: ['猫', 'n.'],
+    equal: ['相等的、平等的', 'adj.'],
+    due: ['到期的、预定的、由于', 'adj.'],
+    separate: ['分开的、把…分开', 'adj.'],
+    somewhat: ['有点、稍微', 'adv.'],
+    initial: ['最初的、首字母', 'adj.'],
+    contemporary: ['当代的、同时代的', 'adj.'],
+    multiple: ['多个的、多重的', 'adj.'],
+    essential: ['必不可少的、本质的', 'adj.'],
+    supreme: ['最高的、至高的', 'adj.'],
+    vegetable: ['蔬菜、植物', 'n.'],
+    narrow: ['狭窄的、有限的', 'adj.'],
+  };
+
+  for (const [word, [gloss, pos]] of Object.entries(expected)) {
+    assert.equal(byEnglish.get(word)?.zh, gloss, `${word} 的常用义仍不准确`);
+    assert.equal(byEnglish.get(word)?.pos, pos, `${word} 的主词性仍不准确`);
+  }
+
+  const bannedGloss = /女仆|女佣|坏蛋|恶妇|男风|无名小卒|有背长椅|无精打采之人/;
+  for (const word of lifeWords) {
+    assert.doesNotMatch(word.zh, bannedGloss, `${word.en} 仍含不适合作为主卡片的旧义`);
+  }
+});
+
+test('成人词库：普通方向词和 core 不沿用来源中的异常大写', () => {
+  const byLowerEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word.en]));
+  assert.equal(byLowerEnglish.get('north'), 'north');
+  assert.equal(byLowerEnglish.get('core'), 'core');
+});
+
+test('adultWordPage：按页返回，越界页会安全收敛', () => {
+  const first = adultWordPage('cet4', 0, 25);
+  assert.equal(first.page, 0);
+  assert.equal(first.words.length, 25);
+  assert.equal(first.total, adultWordsForLevel('cet4').length);
+  const last = adultWordPage('cet4', 99999, 25);
+  assert.equal(last.page, last.pageCount - 1);
+  assert.ok(last.words.length >= 1 && last.words.length <= 25);
+  const fallback = adultWordPage('invalid', -3, 0);
+  assert.equal(fallback.total, adultWordsForLevel('cet4').length);
+  assert.equal(fallback.words.length, 20);
+});

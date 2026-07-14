@@ -89,7 +89,7 @@ function makeResponse({
 
 test('service worker lifecycle waits for activation and only deletes its own old caches', async () => {
   const { listeners, state } = loadWorker({
-    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v18', 'another-app-v9', 'shared-cache'],
+    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v21', 'another-app-v9', 'shared-cache'],
   });
 
   let installWork;
@@ -97,6 +97,8 @@ test('service worker lifecycle waits for activation and only deletes its own old
   await installWork;
   assert.equal(state.skipWaiting, 1);
   assert.ok(state.addedAssets.includes('./index.html'));
+  assert.ok(state.addedAssets.includes('./js/speech.js'));
+  assert.ok(state.addedAssets.includes('./js/adult-words.js'));
 
   let activateWork;
   listeners.activate({ waitUntil: (promise) => { activateWork = promise; } });

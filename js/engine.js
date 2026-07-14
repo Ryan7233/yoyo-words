@@ -3,6 +3,7 @@
 export const BOX_INTERVALS_DAYS = [0, 1, 2, 4, 7, 15];
 export const MAX_BOX = BOX_INTERVALS_DAYS.length - 1;
 export const MASTERED_BOX = 3;
+export const WRONG_BOOK_CLEAR_STARS = 3;
 export const QUIZ_MODES = ['en2zh', 'zh2en', 'listen'];
 export const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -16,27 +17,33 @@ export function shuffle(arr, rng = Math.random) {
 }
 
 // 选干扰项：优先同分类，不够再从全库补，绝不包含正确答案、绝不重复
-export function pickDistractors(word, pool, n = 3, rng = Math.random) {
+export function pickDistractors(word, pool, n = 3, rng = Math.random, labelOf = null) {
   const sameForm = (w) => String(w.en).toLowerCase() === String(word.en).toLowerCase();
+  const normalizedLabel = (w) => String(labelOf ? labelOf(w) : w.id).trim().toLowerCase();
+  const usedLabels = new Set([normalizedLabel(word)]);
   // cook（厨师/做饭）、fly（苍蝇/飞）这类一词多义不能互相成为干扰项，
   // 否则选项会出现两个完全相同的英文。
   const eligible = (w) => w.id !== word.id && !sameForm(w);
   const sameCat = pool.filter((w) => eligible(w) && w.cat === word.cat);
   const others = pool.filter((w) => eligible(w) && w.cat !== word.cat);
-  const picked = shuffle(sameCat, rng).slice(0, n);
-  if (picked.length < n) {
-    picked.push(...shuffle(others, rng).slice(0, n - picked.length));
+  const picked = [];
+  for (const candidate of [...shuffle(sameCat, rng), ...shuffle(others, rng)]) {
+    if (picked.length >= n) break;
+    const label = normalizedLabel(candidate);
+    if (usedLabels.has(label)) continue;
+    usedLabels.add(label);
+    picked.push(candidate);
   }
   return picked;
 }
 
 // 构造一道题：{ word, mode, options: [{id, label}], answerId, prompt }
 export function buildQuestion(word, pool, mode, rng = Math.random) {
-  const distractors = pickDistractors(word, pool, 3, rng);
+  const labelOf = (w) => (mode === 'en2zh' ? w.zh : mode === 'zh2en' ? w.en : w.en);
+  const distractors = pickDistractors(word, pool, 3, rng, labelOf);
   const ambiguous = pool.some((w) =>
     w.id !== word.id && String(w.en).toLowerCase() === String(word.en).toLowerCase()
   );
-  const labelOf = (w) => (mode === 'en2zh' ? w.zh : mode === 'zh2en' ? w.en : w.en);
   const options = shuffle(
     [word, ...distractors].map((w) => ({ id: w.id, label: labelOf(w), emoji: w.emoji })),
     rng
@@ -89,8 +96,9 @@ export function isMastered(entry) {
   return !!entry && entry.box >= MASTERED_BOX;
 }
 
-// 挑选本关要考的单词：到期的优先（按盒子低→高），不够再补新词
-export function dueWords(words, progress, now = Date.now(), limit = 8) {
+// 挑选本关要考的单词：到期的优先（按盒子低→高），不够再补新词；
+// 刚出现过的词整体后移，非近期词不足时再按原顺序回填。
+export function dueWords(words, progress, now = Date.now(), limit = 8, recentIds = []) {
   const entries = progress && typeof progress === 'object' ? progress : {};
   const entryOf = (w) => entries[w.id];
   const due = words
@@ -98,7 +106,13 @@ export function dueWords(words, progress, now = Date.now(), limit = 8) {
     .sort((a, b) => entryOf(a).box - entryOf(b).box || entryOf(a).nextDue - entryOf(b).nextDue);
   const fresh = words.filter((w) => !entryOf(w));
   const rest = words.filter((w) => entryOf(w) && entryOf(w).nextDue > now);
-  return [...due, ...fresh, ...rest].slice(0, Math.min(limit, words.length));
+  const ordered = [...due, ...fresh, ...rest];
+  const recent = recentIds instanceof Set
+    ? recentIds
+    : new Set(Array.isArray(recentIds) ? recentIds : []);
+  const preferred = ordered.filter((w) => !recent.has(w.id));
+  const deferred = ordered.filter((w) => recent.has(w.id));
+  return [...preferred, ...deferred].slice(0, Math.min(limit, words.length));
 }
 
 // 星星奖励：答对 1 颗，连击 3 的倍数额外 +1
@@ -143,11 +157,18 @@ export function buildPicQuiz(words, pool, count, rng = Math.random) {
 
 // Kiwi 每次只引入 2 项新内容，配 4 项已学内容；第一轮还没有旧内容时，
 // 只围绕两项新内容重复练习，不一次塞进更多新词。
-export function buildKiwiSession(words, progress, now = Date.now(), newLimit = 2, reviewLimit = 4) {
+export function buildKiwiSession(
+  words,
+  progress,
+  now = Date.now(),
+  newLimit = 2,
+  reviewLimit = 4,
+  recentIds = []
+) {
   const entries = progress && typeof progress === 'object' ? progress : {};
   const newItems = words.filter((w) => !entries[w.id]).slice(0, newLimit);
   const known = words.filter((w) => entries[w.id]);
-  const reviewItems = dueWords(known, entries, now, reviewLimit);
+  const reviewItems = dueWords(known, entries, now, reviewLimit, recentIds);
   return { newItems, reviewItems, items: [...newItems, ...reviewItems] };
 }
 
@@ -297,6 +318,13 @@ export function wrongBookWords(words, progress) {
       return e && e.wrong > 0 && !isMastered(e);
     })
     .sort((a, b) => progress[b.id].wrong - progress[a.id].wrong);
+}
+
+// 错题词只有在一次正确作答后首次达到“已掌握”、且从未领过奖励时，才发放毕业奖励。
+export function wrongBookReward(beforeEntry, afterEntry, isCorrect, alreadyRewarded = false) {
+  return !alreadyRewarded && isCorrect && !isMastered(beforeEntry) && isMastered(afterEntry)
+    ? WRONG_BOOK_CLEAR_STARS
+    : 0;
 }
 
 // —— 词汇通关：掌握本级 80% 解锁挑战，12 题答对 10 题进入下一词汇级别 ——

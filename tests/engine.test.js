@@ -4,7 +4,7 @@ import { WORDS, KIWI_ITEMS, wordsByCategory } from '../js/words.js';
 import {
   shuffle, pickDistractors, buildQuestion, buildQuiz,
   gradeAnswer, emptyEntry, isMastered, dueWords,
-  starReward, masteredCount, summarize, wrongBookWords,
+  starReward, masteredCount, summarize, wrongBookWords, wrongBookReward,
   pickPicDistractors, buildPicQuestion, buildPicQuiz, PIC_QUIZ_SIZE,
   buildKiwiSession, buildKiwiQuiz,
   spellableWords, spellingTiles, sentenceTokens, sentenceWords,
@@ -13,7 +13,7 @@ import {
   STICKER_DEFAULT_SIZE, STICKER_MIN_SIZE, STICKER_MAX_SIZE, STICKER_SIZE_STEP,
   learnedStickerWords, availableStickerWords, buildRoomTask, isNear, ROOM_DROP_THRESHOLD,
   levelMastery, canGraduate, wordsToGraduation, nextLevelId, isGraduationPassed,
-  BOX_INTERVALS_DAYS, MAX_BOX, MASTERED_BOX, QUIZ_MODES, DAY_MS,
+  BOX_INTERVALS_DAYS, MAX_BOX, MASTERED_BOX, WRONG_BOOK_CLEAR_STARS, QUIZ_MODES, DAY_MS,
   GRADUATION_THRESHOLD, GRADUATION_PASS_CORRECT,
 } from '../js/engine.js';
 
@@ -74,6 +74,19 @@ test('buildQuestion：4 个选项、正确答案恰好出现一次、题面正�
   }
 });
 
+test('buildQuestion：成人大词表中中文释义重复时不会生成两个同文案选项', () => {
+  const pool = [
+    { id: 'adult:book', en: 'book', zh: '书；预订', cat: 'common' },
+    { id: 'adult:volume', en: 'volume', zh: '书；预订', cat: 'common' },
+    { id: 'adult:novel', en: 'novel', zh: '小说', cat: 'common' },
+    { id: 'adult:page', en: 'page', zh: '页', cat: 'common' },
+    { id: 'adult:read', en: 'read', zh: '阅读', cat: 'common' },
+  ];
+  const question = buildQuestion(pool[0], pool, 'en2zh', seededRng(2));
+  assert.equal(question.options.length, 4);
+  assert.equal(new Set(question.options.map((o) => o.label)).size, 4);
+});
+
 test('buildQuiz：题目数量正确、单词不重复、题型轮换', () => {
   const quiz = buildQuiz(WORDS, WORDS, 8, seededRng(3));
   assert.equal(quiz.length, 8);
@@ -101,7 +114,9 @@ test('一词多义：题目提供语境，选项不会出现两个相同英文',
 });
 
 test('Kiwi 首日：只引入 2 项新内容，6 题围绕这两项重复', () => {
-  const session = buildKiwiSession(KIWI_ITEMS, {}, 1000, 2, 4);
+  const session = buildKiwiSession(
+    KIWI_ITEMS, {}, 1000, 2, 4, new Set(KIWI_ITEMS.slice(0, 8).map((w) => w.id))
+  );
   assert.deepEqual(session.newItems.map((w) => w.id), KIWI_ITEMS.slice(0, 2).map((w) => w.id));
   assert.equal(session.reviewItems.length, 0);
   const quiz = buildKiwiQuiz(session, KIWI_ITEMS, 6, seededRng(21));
@@ -117,6 +132,19 @@ test('Kiwi 后续：2 项新内容配已学复习，不重新引入已学项', (
   assert.deepEqual(session.newItems.map((w) => w.id), KIWI_ITEMS.slice(2, 4).map((w) => w.id));
   assert.deepEqual(new Set(session.reviewItems.map((w) => w.id)), new Set(KIWI_ITEMS.slice(0, 2).map((w) => w.id)));
   assert.equal(new Set(session.items.map((w) => w.id)).size, session.items.length);
+});
+
+test('Kiwi 后续：已学复习项避让近期词，仍保持引入 2 项新内容', () => {
+  const known = KIWI_ITEMS.slice(0, 8);
+  const progress = Object.fromEntries(known.map((w) => [w.id, {
+    box: 1, correct: 1, wrong: 0, nextDue: 0,
+  }]));
+  const recentIds = known.slice(0, 4).map((w) => w.id);
+  const session = buildKiwiSession(KIWI_ITEMS, progress, 1000, 2, 4, recentIds);
+
+  assert.deepEqual(session.newItems.map((w) => w.id), KIWI_ITEMS.slice(8, 10).map((w) => w.id));
+  assert.deepEqual(session.reviewItems.map((w) => w.id), known.slice(4, 8).map((w) => w.id));
+  assert.ok(session.reviewItems.every((w) => !recentIds.includes(w.id)));
 });
 
 test('gradeAnswer：答对升级、答错回到 1 级、边界不越界', () => {
@@ -195,6 +223,33 @@ test('dueWords：同盒子的到期词按 nextDue 从早到晚排序', () => {
   };
   assert.deepEqual(dueWords(words, progress, 100, 3).map((w) => w.id),
     [words[1].id, words[2].id, words[0].id]);
+});
+
+test('dueWords：近期词整体后移，非近期词仍保持到期、新词、未到期顺序', () => {
+  const now = 100;
+  const words = WORDS.slice(0, 6);
+  const progress = {
+    [words[0].id]: { box: 1, nextDue: 10 }, // 到期，近期
+    [words[1].id]: { box: 2, nextDue: 20 }, // 到期，非近期
+    [words[4].id]: { box: 1, nextDue: 200 }, // 未到期，非近期
+    [words[5].id]: { box: 1, nextDue: 300 }, // 未到期，近期
+  };
+
+  const out = dueWords(words, progress, now, 4, [words[0].id, words[2].id, words[5].id]);
+  assert.deepEqual(out.map((w) => w.id), [
+    words[1].id, // 非近期到期词
+    words[3].id, // 非近期新词
+    words[4].id, // 非近期未到期词
+    words[0].id, // 非近期词不够时才回填近期词
+  ]);
+});
+
+test('dueWords：小词池会按原顺序回填近期词，recentIds 也支持 Set', () => {
+  const words = WORDS.slice(0, 3);
+  const recent = new Set([words[0].id, words[1].id]);
+  const out = dueWords(words, {}, 100, 8, recent);
+  assert.deepEqual(out.map((w) => w.id), [words[2].id, words[0].id, words[1].id]);
+  assert.equal(out.length, words.length, '近期避让不能让小词池少出题');
 });
 
 test('starReward：普通答对 1 星，每连对 3 题得 2 星', () => {
@@ -399,6 +454,21 @@ test('错题本：只收答错过且未掌握的词，按错误次数排序，�
   const book = wrongBookWords(words, progress);
   assert.deepEqual(book.map((w) => w.id), [words[0].id, words[1].id]);
   assert.deepEqual(wrongBookWords(words, {}), []);
+});
+
+test('错题本奖励：仅正确作答并首次练到掌握时奖励 3 星', () => {
+  const almostMastered = { box: MASTERED_BOX - 1, wrong: 2 };
+  const mastered = { box: MASTERED_BOX, wrong: 2 };
+
+  assert.equal(WRONG_BOOK_CLEAR_STARS, 3);
+  assert.equal(wrongBookReward(almostMastered, mastered, true), 3, '首次掌握奖励 3 星');
+  assert.equal(wrongBookReward(almostMastered, mastered, false), 0, '答错不能领奖');
+  assert.equal(wrongBookReward(almostMastered, almostMastered, true), 0, '尚未掌握不能领奖');
+  assert.equal(wrongBookReward(mastered, { ...mastered, box: MASTERED_BOX + 1 }, true), 0,
+    '已经掌握的词不能重复领奖');
+  assert.equal(wrongBookReward(undefined, mastered, true), 3, '缺少旧状态但首次达到掌握仍算毕业');
+  assert.equal(wrongBookReward(almostMastered, mastered, true, true), 0,
+    '已领过毕业奖励的词再次达到掌握也不能重复领奖');
 });
 
 test('毕业机制：levelMastery 统计掌握比例', () => {
