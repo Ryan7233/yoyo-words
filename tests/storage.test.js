@@ -38,6 +38,7 @@ test('storage：保存后能完整读回，三人进度互不干扰且 current �
   state.profiles.mom.stars = 12;
   state.profiles.mom.level = 'cet6';
   state.profiles.mom.progress.abandon = { box: 3, correct: 4, wrong: 1, nextDue: 123 };
+  state.profiles.mom.knownWords['adult:temperamental'] = true;
   s.save(state);
   const loaded = s.load();
   assert.deepEqual(loaded, state);
@@ -45,6 +46,7 @@ test('storage：保存后能完整读回，三人进度互不干扰且 current �
   assert.equal(loaded.profiles.yoyo.progress.cat, undefined);
   assert.equal(loaded.profiles.yodi.progress.dolphin, undefined);
   assert.equal(loaded.profiles.mom.progress.cat, undefined);
+  assert.deepEqual(loaded.profiles.mom.knownWords, { 'adult:temperamental': true });
 });
 
 test('storage：v1 旧数据迁移 —— 星星和进度归 Yoyo', () => {
@@ -198,6 +200,7 @@ test('storage：v2 迁移保留 Yoyo/Kiwi 全部白名单字段并自动补 mom'
     level: 'flyers',
     graduated: ['movers'],
     seen: { dolphin: true },
+    knownWords: {},
     learnPos: { 'unit:u1': 8 },
     missions: { 'movers:u1': true },
     wrongbookRewarded: {},
@@ -212,6 +215,7 @@ test('storage：v2 迁移保留 Yoyo/Kiwi 全部白名单字段并自动补 mom'
     level: 'starters',
     graduated: ['seed'],
     seen: { cat: true },
+    knownWords: {},
     learnPos: { 'kiwi:animals': 2 },
     missions: { 'seed:u1': true },
     wrongbookRewarded: {},

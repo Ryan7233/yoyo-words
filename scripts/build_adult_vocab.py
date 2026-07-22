@@ -194,6 +194,22 @@ COMMON_GLOSS_OVERRIDES: dict[str, tuple[str, str]] = {
     "supreme": ("最高的、至高的", "adj."),
     "vegetable": ("蔬菜、植物", "n."),
     "narrow": ("狭窄的、有限的", "adj."),
+    # Cross-route semantic audit: prefer the modern, high-frequency learning
+    # sense over ECDICT's dictionary-order first sense or dated wording.
+    "assimilate": ("吸收、理解、使同化", "v."),
+    "bit": ("一点、少量、比特", "n."),
+    "commission": ("委员会、佣金、委托", "n."),
+    "configuration": ("配置、结构、布局", "n."),
+    "doll": ("玩偶、洋娃娃", "n."),
+    "hate": ("憎恨、讨厌", "v."),
+    "ice-cream": ("冰淇淋", "n."),
+    "intercourse": ("交往、交流、性交", "n."),
+    "intermediate": ("中间的、中级的、中间物", "adj."),
+    "loose": ("松的、宽松的、不牢固的", "adj."),
+    "species": ("物种、种类", "n."),
+    "temperamental": ("喜怒无常的、情绪多变的", "adj."),
+    "unpaid": ("未支付的、无薪的", "adj."),
+    "x-ray": ("X射线、X光检查", "n."),
 }
 
 # Merge a few known typo/orthographic duplicates before assigning ids so the

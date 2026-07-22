@@ -53,6 +53,7 @@ export function defaultProfileState(profileId) {
     level: p ? p.defaultLevel : 'seed',
     graduated: [],
     seen: {},     // 学过的单词（翻过卡片就算）
+    knownWords: {}, // 成人背词中自评“我认识”的词，从后续学习计划中排除
     learnPos: {}, // 每个分类/单元上次学到第几张卡片
     missions: {}, // 完成过的单元综合任务（句型 → 对话 → 自主表达）
     wrongbookRewarded: {}, // 已从错题本毕业并领取过奖励的单词（终身一次）
@@ -239,6 +240,7 @@ function normalizeProfile(value, profileId) {
     level: typeof input.level === 'string' && allowedLevels.has(input.level) ? input.level : base.level,
     graduated: normalizeGraduated(input.graduated, profileId),
     seen: normalizeSeen(input.seen),
+    knownWords: normalizeRewarded(input.knownWords),
     learnPos: normalizeLearnPos(input.learnPos),
     missions: normalizeSeen(input.missions),
     wrongbookRewarded: normalizeRewarded(input.wrongbookRewarded),
