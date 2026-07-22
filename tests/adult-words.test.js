@@ -164,6 +164,26 @@ test('成人词库：普通方向词和 core 不沿用来源中的异常大写',
   assert.equal(byLowerEnglish.get('core'), 'core');
 });
 
+test('成人词库：跨路线语义抽检使用现代常用义和正确主词性', () => {
+  const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
+  const expected = {
+    assimilate: ['吸收、理解、使同化', 'v.'],
+    bit: ['一点、少量、比特', 'n.'],
+    commission: ['委员会、佣金、委托', 'n.'],
+    configuration: ['配置、结构、布局', 'n.'],
+    doll: ['玩偶、洋娃娃', 'n.'],
+    'ice-cream': ['冰淇淋', 'n.'],
+    intermediate: ['中间的、中级的、中间物', 'adj.'],
+    loose: ['松的、宽松的、不牢固的', 'adj.'],
+    temperamental: ['喜怒无常的、情绪多变的', 'adj.'],
+    'x-ray': ['X射线、X光检查', 'n.'],
+  };
+  for (const [word, [gloss, pos]] of Object.entries(expected)) {
+    assert.equal(byEnglish.get(word)?.zh, gloss, `${word} 的主释义不准确`);
+    assert.equal(byEnglish.get(word)?.pos, pos, `${word} 的主词性不准确`);
+  }
+});
+
 test('adultWordPage：按页返回，越界页会安全收敛', () => {
   const first = adultWordPage('cet4', 0, 25);
   assert.equal(first.page, 0);

@@ -43,9 +43,17 @@ test('成人路线：独立首页先背词再小测，测验不累加儿童星�
   assert.match(appSource, /function showAdultResult\(\)/);
 });
 
+test('成人背词：“我认识”持久化并从后续计划排除，且可恢复', () => {
+  assert.match(appSource, /function adultWordsToLearn\(words, d = pdata\(\)\)/);
+  assert.match(appSource, /d\.knownWords\[w\.id\] = true/);
+  assert.match(appSource, /delete d\.knownWords\[word\.id\]/);
+  assert.match(appSource, /我认识，移出学习计划/);
+  assert.match(appSource, /function showAdultKnownWords\(\)/);
+});
+
 test('成人路线：错词、词表分组和重测都使用当前成人词池', () => {
   assert.match(appSource, /adultWordsForLevel\(pdata\(\)\.level\)/);
-  assert.match(appSource, /wrongBookWords\(words, d\.progress\)/);
+  assert.match(appSource, /wrongBookWords\(wordsToLearn, d\.progress\)/);
   assert.match(appSource, /source\?\.pool \|\| quiz\.pool \|\| routeWords/);
   assert.match(appSource, /ADULT_DECK_SIZE = 200/);
 });

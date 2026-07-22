@@ -1242,6 +1242,7 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   cursor: pointer;
 }
 .adult-deck-card:active { transform: scale(0.985); }
+.adult-deck-card:disabled { opacity: 0.55; cursor: default; }
 .adult-deck-card .deck-number {
   grid-row: 1 / span 2;
   color: var(--pink);
@@ -1264,6 +1265,9 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 .adult-collection-summary span { color: var(--ink-soft); font-size: 13px; }
 .adult-wrong-list .wrong-item { display: grid; gap: 4px; }
 .adult-wrong-list .wrong-item span:last-child { text-align: left; }
+.adult-known-item small { display: block; margin-top: 4px; color: var(--ink-soft); }
+.adult-known-item .btn { margin: 2px 0 0; }
+.adult-known-action { margin-top: 10px; }
 .flashcard.adult-flashcard {
   display: flex;
   flex-direction: column;

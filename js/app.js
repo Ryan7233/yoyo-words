@@ -64,7 +64,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v21';
+const APP_VERSION = 'v22';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -483,15 +483,21 @@ function adultDecks(words) {
   return decks;
 }
 
+function adultWordsToLearn(words, d = pdata()) {
+  return words.filter((word) => !d.knownWords[word.id]);
+}
+
 function showAdultHome() {
   const p = profile();
   const d = pdata();
   const words = levelWords();
+  const wordsToLearn = adultWordsToLearn(words, d);
   const lvl = findAdultLevel(d.level);
-  const learned = words.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
-  const mastered = words.filter((w) => isMastered(d.progress[w.id])).length;
-  const reviewable = words.filter((w) => d.seen[w.id] || d.progress[w.id]);
-  const todayCount = Math.min(ADULT_DAILY_SIZE, words.length);
+  const known = words.length - wordsToLearn.length;
+  const learned = wordsToLearn.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
+  const mastered = wordsToLearn.filter((w) => isMastered(d.progress[w.id])).length;
+  const reviewable = wordsToLearn.filter((w) => d.seen[w.id] || d.progress[w.id]);
+  const todayCount = Math.min(ADULT_DAILY_SIZE, wordsToLearn.length);
   const node = el(`
     <div class="adult-home">
       <div class="topbar">
@@ -505,16 +511,17 @@ function showAdultHome() {
       </div>
       <div class="levels adult-routes" id="adult-routes"></div>
       <div class="stats adult-stats">
-        <div class="stat"><div class="num">${learned}</div><div class="label">本路线已背</div></div>
+        <div class="stat"><div class="num">${learned}</div><div class="label">本路线已背 · 待学 ${wordsToLearn.length}</div></div>
         <div class="stat">
-          <div class="num">${mastered}/${words.length}</div>
+          <div class="num">${mastered}/${wordsToLearn.length}</div>
           <div class="label">已经掌握</div>
-          <div class="progress-track" role="progressbar" aria-label="${lvl.name} 掌握进度" aria-valuemin="0" aria-valuemax="${words.length}" aria-valuenow="${mastered}"><div class="progress-fill" style="width:${words.length ? Math.round((mastered / words.length) * 100) : 0}%"></div></div>
+          <div class="progress-track" role="progressbar" aria-label="${lvl.name} 掌握进度" aria-valuemin="0" aria-valuemax="${wordsToLearn.length}" aria-valuenow="${mastered}"><div class="progress-fill" style="width:${wordsToLearn.length ? Math.round((mastered / wordsToLearn.length) * 100) : 0}%"></div></div>
         </div>
       </div>
-      <button class="btn adult-primary" id="adult-daily">📖 今日背词 · ${todayCount} 个</button>
+      <button class="btn adult-primary" id="adult-daily" ${todayCount ? '' : 'disabled'}>${todayCount ? `📖 今日背词 · ${todayCount} 个` : '🎉 本路线已全部标记完成'}</button>
       <p class="counter">先看单词、音标和释义，完成后再做 10 题小测</p>
       <button class="btn secondary" id="adult-review" ${reviewable.length ? '' : 'disabled'}>${reviewable.length ? '🧠 直接复习小测' : '🧠 背完第一组后开启复习'}</button>
+      ${known ? `<button class="btn ghost" id="adult-known">✅ 我认识的词 · ${known} 个（可恢复）</button>` : ''}
       <div id="speed-anchor"></div>
       <h2 class="section-title">完整词表</h2>
       <p class="subtitle">按高频顺序分组；跨 CET4、CET6、考研的同一个词共用进度。</p>
@@ -541,33 +548,36 @@ function showAdultHome() {
 
   const decksBox = node.querySelector('#adult-decks');
   for (const deck of adultDecks(words)) {
-    const deckLearned = deck.words.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
-    const deckMastered = deck.words.filter((w) => isMastered(d.progress[w.id])).length;
+    const deckWords = adultWordsToLearn(deck.words, d);
+    const deckLearned = deckWords.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
+    const deckMastered = deckWords.filter((w) => isMastered(d.progress[w.id])).length;
     const card = el(`
-      <button class="adult-deck-card">
+      <button class="adult-deck-card" ${deckWords.length ? '' : 'disabled'}>
         <span class="deck-number">${String(deck.index + 1).padStart(2, '0')}</span>
         <span class="deck-title">第 ${deck.start + 1}–${deck.end} 词</span>
-        <span class="deck-progress">已背 ${deckLearned} · 掌握 ${deckMastered}/${deck.words.length}</span>
+        <span class="deck-progress">待学 ${deckWords.length} · 已背 ${deckLearned} · 掌握 ${deckMastered}</span>
       </button>
     `);
-    card.addEventListener('click', () => showAdultCollection({
-      key: `adult:${d.level}:deck:${deck.index}`,
-      title: `${lvl.name} 第 ${deck.index + 1} 组`,
-      words: deck.words,
-      pool: words,
-      adult: true,
-    }));
+    if (deckWords.length) {
+      card.addEventListener('click', () => showAdultCollection({
+        key: `adult:${d.level}:deck:${deck.index}`,
+        title: `${lvl.name} 第 ${deck.index + 1} 组`,
+        words: deckWords,
+        pool: wordsToLearn,
+        adult: true,
+      }));
+    }
     decksBox.appendChild(card);
   }
 
-  const wrongWords = wrongBookWords(words, d.progress);
+  const wrongWords = wrongBookWords(wordsToLearn, d.progress);
   if (wrongWords.length) {
     const wrongBtn = el(`<button class="btn wrong-book">📕 本路线错词 · ${wrongWords.length} 个</button>`);
     wrongBtn.addEventListener('click', () => showAdultCollection({
       key: `adult:${d.level}:wrongbook`,
       title: `${lvl.name} 错词`,
-      words: wrongBookWords(levelWords(), pdata().progress),
-      pool: levelWords(),
+      words: wrongBookWords(adultWordsToLearn(levelWords()), pdata().progress),
+      pool: adultWordsToLearn(levelWords()),
       adult: true,
       wrongbook: true,
     }));
@@ -577,26 +587,64 @@ function showAdultHome() {
   node.querySelector('#speed-anchor').replaceWith(speedRow());
   node.querySelector('#switch-user').addEventListener('click', showProfileSelect);
   node.querySelector('#adult-daily').addEventListener('click', () => {
-    const todayWords = scheduledWords(words, ADULT_DAILY_SIZE, 'adult-daily');
+    if (!wordsToLearn.length) return;
+    const todayWords = scheduledWords(wordsToLearn, ADULT_DAILY_SIZE, 'adult-daily');
     showAdultLearn({
       key: `adult:${d.level}:daily`,
       title: `${lvl.name} 今日背词`,
       words: todayWords,
-      pool: words,
+      pool: wordsToLearn,
       adult: true,
       daily: true,
     }, todayWords, 0);
   });
+  const knownBtn = node.querySelector('#adult-known');
+  if (knownBtn) knownBtn.addEventListener('click', () => showAdultKnownWords());
   node.querySelector('#adult-review').addEventListener('click', () => {
     if (!reviewable.length) return;
     const reviewWords = scheduledWords(reviewable, ADULT_QUIZ_SIZE, 'adult-review');
     startQuiz(reviewWords, `${lvl.name} 复习`, {
       adult: true,
       count: ADULT_QUIZ_SIZE,
-      pool: words,
-      sourceScope: { key: `adult:${d.level}:review`, words: reviewable, pool: words, adult: true },
+      pool: wordsToLearn,
+      sourceScope: { key: `adult:${d.level}:review`, words: reviewable, pool: wordsToLearn, adult: true },
     });
   });
+  render(node);
+}
+
+function showAdultKnownWords() {
+  const d = pdata();
+  const lvl = findAdultLevel(d.level);
+  const knownWords = levelWords().filter((word) => d.knownWords[word.id]);
+  const node = el(`
+    <div class="adult-collection">
+      <div class="topbar">
+        <button class="icon-btn" id="back" aria-label="返回成人学习首页">←</button>
+        <div class="title">✅ ${lvl.name} 已认识</div>
+        <div style="width:44px"></div>
+      </div>
+      <div class="adult-collection-summary"><b>${knownWords.length} 个词</b><span>恢复后会重新进入背词和复习计划</span></div>
+      <div class="wrong-list adult-wrong-list" id="known-list"></div>
+    </div>
+  `);
+  const list = node.querySelector('#known-list');
+  for (const word of knownWords) {
+    const item = el(`
+      <div class="wrong-item adult-known-item">
+        <span><b>${word.en}</b> ${word.phonetic ? `/${word.phonetic}/` : ''}<small>${word.zh}</small></span>
+        <button class="btn ghost" type="button">恢复学习</button>
+      </div>
+    `);
+    item.querySelector('button').addEventListener('click', () => {
+      delete d.knownWords[word.id];
+      saveState();
+      if (!levelWords().some((item) => d.knownWords[item.id])) return showAdultHome();
+      showAdultKnownWords();
+    });
+    list.appendChild(item);
+  }
+  node.querySelector('#back').addEventListener('click', showAdultHome);
   render(node);
 }
 
@@ -677,6 +725,7 @@ function showAdultLearn(scope, words, idx) {
         <span class="adult-meaning">${w.zh}</span>
         <span class="hint">点卡片再听一遍</span>
       </button>
+      <button class="btn ghost adult-known-action" id="known" type="button">✅ 我认识，移出学习计划</button>
       <div class="learn-nav">
         <button class="btn secondary" id="prev" ${safeIdx === 0 ? 'disabled' : ''}>上一个</button>
         <button class="btn" id="next">${safeIdx === words.length - 1 ? (scope.daily ? '开始小测 →' : '完成 ✅') : '下一个'}</button>
@@ -687,6 +736,19 @@ function showAdultLearn(scope, words, idx) {
   node.querySelector('#back').addEventListener('click', () => scope.daily ? showAdultHome() : showAdultCollection(scope));
   node.querySelector('#replay').addEventListener('click', say);
   node.querySelector('#card').addEventListener('click', say);
+  node.querySelector('#known').addEventListener('click', () => {
+    d.knownWords[w.id] = true;
+    const remainingWords = words.filter((word) => !d.knownWords[word.id]);
+    const remainingScope = {
+      ...scope,
+      words: scope.words.filter((word) => !d.knownWords[word.id]),
+      pool: scope.pool ? scope.pool.filter((word) => !d.knownWords[word.id]) : scope.pool,
+    };
+    d.learnPos[scope.key] = Math.min(safeIdx, Math.max(0, remainingWords.length - 1));
+    saveState();
+    if (!remainingWords.length) return showAdultHome();
+    showAdultLearn(remainingScope, remainingWords, Math.min(safeIdx, remainingWords.length - 1));
+  });
   node.querySelector('#prev').addEventListener('click', () => showAdultLearn(scope, words, safeIdx - 1));
   node.querySelector('#next').addEventListener('click', () => {
     if (safeIdx < words.length - 1) return showAdultLearn(scope, words, safeIdx + 1);
@@ -2081,7 +2143,7 @@ function showResult() {
 
 function showAdultResult() {
   const s = summarize(quiz.results);
-  const routeWords = levelWords();
+  const routeWords = adultWordsToLearn(levelWords());
   const mastered = routeWords.filter((w) => isMastered(pdata().progress[w.id])).length;
   const clearedCount = quiz.results.filter((r) => r.clearedWrongbook).length;
   const message = s.accuracy >= 90 ? '这一组记得很稳'
