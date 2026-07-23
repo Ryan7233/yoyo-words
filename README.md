@@ -47,7 +47,7 @@ python3 serve.py --help
 - App 内在**选人页**点 **🔄 更新到最新版（清缓存）**——会注销当前 App 的
   Service Worker、清理 `yoyo-words-` 缓存并硬刷新，**不会动学习进度**
   （星星、错题、我的世界都保留），也不会影响同域名下的其他 App；
-- 选人页底部有**版本号**（当前 `版本 v22`），可确认是否已更新到最新；
+- 选人页底部有**版本号**（当前 `版本 v23`），可确认是否已更新到最新；
 - 正常情况下 App 每次打开会自动检测新版并秒切，一般不需要手动点。
 
 ## 在 iPhone 上使用
@@ -95,6 +95,20 @@ npm test        # 单元测试 + PWA/本地服务器安全回归测试
 
 每次 push 或创建 Pull Request 时，GitHub Actions 也会自动运行同一套测试。
 
+## 成人词库释义审计
+
+成人词库不再只按 ECDICT 的释义行顺序选择主词性。审计脚本会用
+[SUBTLEX-UK](https://psychology.nottingham.ac.uk/subtlex-uk/) 的现代字幕语料检查
+6,911 个词的主词性，并把错误首义与应当同时保留的常用多词性分开：
+
+```bash
+python3 scripts/audit_adult_vocab.py /path/to/ecdict.csv /path/to/SUBTLEX-UK.txt
+```
+
+审计摘要见 [reports/adult-vocab-audit.md](reports/adult-vocab-audit.md)，完整候选明细见
+[reports/adult-vocab-pos-candidates.csv](reports/adult-vocab-pos-candidates.csv)。原始
+SUBTLEX-UK 数据不进入仓库。
+
 ## 项目结构
 
 ```
@@ -108,6 +122,7 @@ js/engine.js          出题 / 判分 / 间隔重复 / 奖励（纯函数）
 js/storage.js         localStorage 进度存储（容错降级）
 js/app.js             界面与交互
 scripts/              成人词库可复现生成脚本（原始大文件不入库）
+reports/              成人词库释义审计摘要与候选明细
 tests/                node:test 单元测试
 docs/REQUIREMENTS.md  需求分析文档
 icons/                粉色悠悠球图标（180/192/512）

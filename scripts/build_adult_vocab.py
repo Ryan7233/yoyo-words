@@ -22,6 +22,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = Path("/tmp/ecdict.csv")
 DEFAULT_OUTPUT = ROOT / "js" / "adult-words.js"
+REVIEWED_SENSES_SOURCE = ROOT / "scripts" / "data" / "adult-vocab-review.csv"
 LIFE_LIMIT = 1_800
 
 TRACK_ORDER = ("life", "cet4", "cet6", "postgrad")
@@ -210,7 +211,100 @@ COMMON_GLOSS_OVERRIDES: dict[str, tuple[str, str]] = {
     "temperamental": ("喜怒无常的、情绪多变的", "adj."),
     "unpaid": ("未支付的、无薪的", "adj."),
     "x-ray": ("X射线、X光检查", "n."),
+    # Corpus-backed primary-POS audit (SUBTLEX-UK). These source rows put a
+    # secondary or obsolete sense first even though modern usage and ECDICT's
+    # own English definitions agree on another primary part of speech.
+    "resolute": ("坚定的、坚决的", "adj."),
+    "invert": ("使倒置、使颠倒、反转", "v."),
+    "invalid": ("无效的、不合法的", "adj."),
+    "retire": ("退休、退役、退出", "v."),
+    "sometime": ("某个时候、改天", "adv."),
+    "exploit": ("利用、开发、剥削", "v."),
+    "safeguard": ("保护、保卫", "v."),
+    "incorporate": ("包含、合并、使并入", "v."),
+    "rotate": ("旋转、转动、轮换", "v."),
+    "revise": ("修改、修订、复习", "v."),
+    "indispensable": ("不可缺少的、必不可少的", "adj."),
+    "wring": ("拧、绞、扭", "v."),
+    "substantial": ("大量的、实质的、重要的", "adj."),
+    "many": ("许多的、许多", "adj."),
+    "disrupt": ("扰乱、使中断、破坏", "v."),
+    "meanwhile": ("同时、在此期间", "adv."),
+    "dependent": ("依赖的、取决于…的", "adj."),
+    "entire": ("全部的、整个的", "adj."),
+    "normal": ("正常的、通常的", "adj."),
+    "melt": ("融化、熔化", "v."),
+    "nowadays": ("现今、如今", "adv."),
+    "reject": ("拒绝、驳回、摒弃", "v."),
+    "cancel": ("取消、撤销", "v."),
+    "wipe": ("擦、擦去", "v."),
+    "elect": ("选举、选择", "v."),
+    "mediate": ("调停、调解", "v."),
+    "retard": ("延缓、妨碍、使减速", "v."),
+    "shrink": ("收缩、缩小、退缩", "v."),
+    "westward": ("向西、朝西", "adv."),
+    "secular": ("世俗的、非宗教的", "adj."),
+    "superficial": ("表面的、肤浅的", "adj."),
+    "edible": ("可食用的", "adj."),
+    "prerequisite": ("先决条件、必备条件", "n."),
+    "hopeful": ("有希望的、乐观的", "adj."),
+    "headlong": ("头朝前地、猛然地", "adv."),
+    "streamline": ("使精简、使效率更高", "v."),
+    "scoff": ("嘲笑、嘲弄", "v."),
+    "lateral": ("侧面的、横向的", "adj."),
+    "seaside": ("海滨、海边", "n."),
+    "eastward": ("向东、朝东", "adv."),
+    "mortal": ("终有一死的、致命的", "adj."),
+    "quiet": ("安静的、平静的", "adj."),
+    "try": ("尝试、试用、努力", "v."),
+    "random": ("随机的、任意的", "adj."),
+    "automatic": ("自动的、无意识的", "adj."),
+    "hurt": ("伤害、使疼痛", "v."),
+    "minor": ("较小的、次要的", "adj."),
+    "sudden": ("突然的、意外的", "adj."),
+    "pour": ("倒、倾泻、涌出", "v."),
+    "revolutionary": ("革命性的、突破性的", "adj."),
+    "shatter": ("打碎、粉碎、使破灭", "v."),
+    "opaque": ("不透明的、难理解的", "adj."),
 }
+
+# These entries were individually accepted after the corpus audit described in
+# reports/adult-vocab-audit.md.  Keeping the set explicit lets the audit tool
+# distinguish reviewed fixes from lower-confidence candidates.
+CORPUS_AUDITED_WORDS = frozenset({
+    "automatic", "cancel", "dependent", "disrupt", "eastward", "edible",
+    "elect", "entire", "exploit", "headlong", "hopeful", "hurt",
+    "incorporate", "indispensable", "invalid", "invert", "lateral", "many",
+    "meanwhile", "mediate", "melt", "minor", "mortal", "normal", "nowadays",
+    "opaque", "pour", "prerequisite", "quiet", "random", "reject", "resolute",
+    "retard", "retire", "revise", "revolutionary", "rotate", "safeguard",
+    "scoff", "seaside", "secular", "shatter", "shrink", "sometime",
+    "streamline", "substantial", "sudden", "superficial", "try", "westward",
+    "wipe", "wring",
+})
+
+# User-reviewed examples where both forms are useful enough to show on the
+# flashcard. The first sense remains the concise quiz answer.
+COMMON_MULTIPOS_OVERRIDES: dict[str, list[tuple[str, str]]] = {
+    "relative": [("adj.", "相对的、相关的"), ("n.", "亲戚、亲属")],
+    "civilian": [("adj.", "平民的、民用的"), ("n.", "平民")],
+    "tender": [("adj.", "柔软的、嫩的"), ("n.", "投标、投标书")],
+    "safeguard": [("v.", "保护、保卫"), ("n.", "保护措施、保障")],
+}
+
+
+def read_reviewed_senses(source: Path = REVIEWED_SENSES_SOURCE) -> dict[str, dict[str, str]]:
+    if not source.is_file():
+        return {}
+    with source.open("r", encoding="utf-8-sig", newline="") as handle:
+        return {
+            row["word"].casefold(): row
+            for row in csv.DictReader(handle)
+            if row.get("word") and row.get("primary_pos") and row.get("primary_zh")
+        }
+
+
+REVIEWED_SENSES = read_reviewed_senses()
 
 # Merge a few known typo/orthographic duplicates before assigning ids so the
 # learner does not meet the same headword twice under two spellings.
@@ -387,9 +481,26 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             tracks.add("life")
         if not tracks:
             continue
-        zh, pos = COMMON_GLOSS_OVERRIDES.get(key, (record["zh"], record["pos"]))
-        words.append(
-            {
+        review = REVIEWED_SENSES.get(key)
+        reviewed_primary = (
+            (review["primary_zh"], review["primary_pos"])
+            if review else (record["zh"], record["pos"])
+        )
+        zh, pos = COMMON_GLOSS_OVERRIDES.get(key, reviewed_primary)
+        senses: list[dict[str, str]] = []
+        if key in COMMON_MULTIPOS_OVERRIDES:
+            senses = [
+                {"pos": sense_pos, "zh": sense_zh}
+                for sense_pos, sense_zh in COMMON_MULTIPOS_OVERRIDES[key]
+            ]
+            pos, zh = senses[0]["pos"], senses[0]["zh"]
+        elif review and review.get("keep_secondary") == "yes":
+            senses = [{"pos": pos, "zh": zh}]
+            secondary = {"pos": review["secondary_pos"], "zh": review["secondary_zh"]}
+            if secondary not in senses:
+                senses.append(secondary)
+
+        word = {
                 "id": safe_word_id(record["en"], used_ids),
                 "en": record["en"],
                 "zh": zh,
@@ -398,7 +509,9 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 "tracks": [track for track in TRACK_ORDER if track in tracks],
                 "rank": record["rank"],
             }
-        )
+        if len(senses) > 1:
+            word["senses"] = senses
+        words.append(word)
 
     words.sort(key=lambda word: (word["rank"], word["en"].casefold()))
     return words

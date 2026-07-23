@@ -57,6 +57,13 @@ test('成人词库：学习字段完整，中文释义已清洗为短释义', ()
     assert.ok(!word.zh.includes('\\n') && !word.zh.includes('\n'), `${word.id} 释义仍有换行`);
     assert.equal(typeof word.phonetic, 'string');
     assert.ok(typeof word.pos === 'string' && word.pos.length > 0);
+    if (word.senses) {
+      assert.ok(Array.isArray(word.senses) && word.senses.length >= 2);
+      for (const sense of word.senses) {
+        assert.ok(typeof sense.pos === 'string' && sense.pos.length > 0);
+        assert.ok(typeof sense.zh === 'string' && sense.zh.length > 0 && sense.zh.length <= 36);
+      }
+    }
     assert.ok(Number.isInteger(word.rank) && word.rank > 0);
     assert.ok(Array.isArray(word.tracks) && word.tracks.length > 0);
     assert.equal(new Set(word.tracks).size, word.tracks.length);
@@ -176,12 +183,38 @@ test('成人词库：跨路线语义抽检使用现代常用义和正确主词�
     intermediate: ['中间的、中级的、中间物', 'adj.'],
     loose: ['松的、宽松的、不牢固的', 'adj.'],
     temperamental: ['喜怒无常的、情绪多变的', 'adj.'],
+    resolute: ['坚定的、坚决的', 'adj.'],
+    invert: ['使倒置、使颠倒、反转', 'v.'],
+    inverse: ['倒转的、相反的', 'adj.'],
+    invalid: ['无效的、不合法的', 'adj.'],
     'x-ray': ['X射线、X光检查', 'n.'],
   };
   for (const [word, [gloss, pos]] of Object.entries(expected)) {
     assert.equal(byEnglish.get(word)?.zh, gloss, `${word} 的主释义不准确`);
     assert.equal(byEnglish.get(word)?.pos, pos, `${word} 的主词性不准确`);
   }
+
+  assert.ok(!ADULT_WORDS.some((word) => /残废者|病人、残/.test(word.zh)),
+    '过时或冒犯性的 invalid 名词义不应作为主卡片');
+});
+
+test('成人词库：常用多词性分开保留，过时或冒犯义不重新混入', () => {
+  const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
+  assert.deepEqual(byEnglish.get('relative')?.senses, [
+    { pos: 'adj.', zh: '相对的、相关的' },
+    { pos: 'n.', zh: '亲戚、亲属' },
+  ]);
+  assert.deepEqual(byEnglish.get('civilian')?.senses, [
+    { pos: 'adj.', zh: '平民的、民用的' },
+    { pos: 'n.', zh: '平民' },
+  ]);
+  assert.deepEqual(byEnglish.get('tender')?.senses, [
+    { pos: 'adj.', zh: '柔软的、嫩的' },
+    { pos: 'n.', zh: '投标、投标书' },
+  ]);
+  assert.equal(byEnglish.get('invalid')?.senses, undefined);
+  assert.equal(byEnglish.get('stale')?.senses, undefined);
+  assert.equal(byEnglish.get('natural')?.senses, undefined);
 });
 
 test('adultWordPage：按页返回，越界页会安全收敛', () => {

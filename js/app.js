@@ -64,7 +64,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v22';
+const APP_VERSION = 'v23';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -710,6 +710,13 @@ function showAdultLearn(scope, words, idx) {
   saveState();
   const seenCount = words.filter((x) => d.seen[x.id]).length;
   const phonetic = w.phonetic ? `/${w.phonetic}/` : '点击听发音';
+  const senses = Array.isArray(w.senses) && w.senses.length > 1 ? w.senses : null;
+  const meanings = senses
+    ? `<span class="adult-senses">${senses.map((sense) => `
+        <span class="adult-sense"><b>${sense.pos}</b><span>${sense.zh}</span></span>
+      `).join('')}</span>`
+    : `${w.pos ? `<span class="adult-pos">${w.pos}</span>` : ''}
+       <span class="adult-meaning">${w.zh}</span>`;
   const node = el(`
     <div class="adult-learn">
       <div class="topbar">
@@ -721,8 +728,7 @@ function showAdultLearn(scope, words, idx) {
       <button class="flashcard adult-flashcard" id="card" type="button">
         <span class="adult-word">${w.en}</span>
         <span class="adult-phonetic">${phonetic}</span>
-        ${w.pos ? `<span class="adult-pos">${w.pos}</span>` : ''}
-        <span class="adult-meaning">${w.zh}</span>
+        ${meanings}
         <span class="hint">点卡片再听一遍</span>
       </button>
       <button class="btn ghost adult-known-action" id="known" type="button">✅ 我认识，移出学习计划</button>

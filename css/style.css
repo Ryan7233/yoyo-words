@@ -1309,6 +1309,29 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   font-size: 22px;
   line-height: 1.5;
 }
+.adult-senses {
+  display: grid;
+  gap: 10px;
+  width: min(100%, 390px);
+  margin-top: 18px;
+  text-align: left;
+}
+.adult-sense {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 14px;
+  background: rgba(38, 122, 98, 0.07);
+  font-size: 18px;
+  line-height: 1.35;
+}
+.adult-sense b {
+  color: var(--pink);
+  font-size: 12px;
+  text-align: center;
+}
 .adult-result-mark {
   display: grid;
   place-items: center;
