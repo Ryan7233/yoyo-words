@@ -5,7 +5,7 @@
 ## 功能
 
 - **459 词四级梯度**：🌱 萌芽（启蒙 70 词）→ ⭐ Starters（剑桥 Pre-A1，72 词）→ 🚀 Movers（剑桥 A1，**Power Up 2 对齐 241 词**，按 Welcome + Unit 1~9 + 拓展的课本单元学习，可跨级引用）→ 🏆 Flyers（剑桥 A2，76 词），Movers 和 Flyers 每词配例句朗读
-- **森蝶成人背词路线**：默认从 CET4 开始，也可切换 ☕ 生活高频（1,800 词）、CET6 和考研；共 **6,911 个唯一英文词条**（CET4 3,844 / CET6 5,406 / 考研 4,801），先看单词、音标、词性和现代常用短释义，再做 10 题小测；重叠词只存一份进度，切换路线不用重复从零开始
+- **森蝶成人背词路线**：默认从 CET4 开始，也可切换 ☕ 生活高频（1,800 词）、CET6 和考研；共 **6,912 个词条**（CET4 3,845 / CET6 5,407 / 考研 4,802），先看单词、音标、词性和现代常用短释义，再做 10 题小测；重叠词只存一份进度，切换路线不用重复从零开始
 - **成人记忆计划**：每天优先安排 20 个到期词和新词；词卡可点“我认识”直接移出后续背词、复习和错词计划，并可在“我认识的词”中恢复；完整词表按每 200 个分组，成人测验不参与孩子的星星、毕业帽和贴纸奖励
 - **词汇通关机制**：掌握本级 80% 单词解锁“词汇通关挑战”（12 题答对 10 题），通过后发毕业帽 🎓、奖励 ⭐×20、自动进入下一词汇级别；这里表示应用内核心词汇掌握，不等同于 Cambridge 真实考试通过
 - **从单词走向表达（姐姐版第一批）**：Unit 1 增加“句型输入 → 情境对话 → 自主说四句话”的 Nature Explorer 综合任务，完成状态自动存档；后续单元按同一结构扩展
@@ -47,7 +47,7 @@ python3 serve.py --help
 - App 内在**选人页**点 **🔄 更新到最新版（清缓存）**——会注销当前 App 的
   Service Worker、清理 `yoyo-words-` 缓存并硬刷新，**不会动学习进度**
   （星星、错题、我的世界都保留），也不会影响同域名下的其他 App；
-- 选人页底部有**版本号**（当前 `版本 v22`），可确认是否已更新到最新；
+- 选人页底部有**版本号**（当前 `版本 v24`），可确认是否已更新到最新；
 - 正常情况下 App 每次打开会自动检测新版并秒切，一般不需要手动点。
 
 ## 在 iPhone 上使用
@@ -95,6 +95,20 @@ npm test        # 单元测试 + PWA/本地服务器安全回归测试
 
 每次 push 或创建 Pull Request 时，GitHub Actions 也会自动运行同一套测试。
 
+## 成人词库释义审计
+
+成人词库不再只按 ECDICT 的释义行顺序选择主词性。审计脚本会用
+[SUBTLEX-UK](https://psychology.nottingham.ac.uk/subtlex-uk/) 的现代字幕语料检查
+6,912 个词条的主词性，并把错误首义与应当同时保留的常用多词性分开：
+
+```bash
+python3 scripts/audit_adult_vocab.py /path/to/ecdict.csv /path/to/SUBTLEX-UK.txt
+```
+
+审计摘要见 [reports/adult-vocab-audit.md](reports/adult-vocab-audit.md)，完整候选明细见
+[reports/adult-vocab-pos-candidates.csv](reports/adult-vocab-pos-candidates.csv)。原始
+SUBTLEX-UK 数据不进入仓库。
+
 ## 项目结构
 
 ```
@@ -108,6 +122,7 @@ js/engine.js          出题 / 判分 / 间隔重复 / 奖励（纯函数）
 js/storage.js         localStorage 进度存储（容错降级）
 js/app.js             界面与交互
 scripts/              成人词库可复现生成脚本（原始大文件不入库）
+reports/              成人词库释义审计摘要与候选明细
 tests/                node:test 单元测试
 docs/REQUIREMENTS.md  需求分析文档
 icons/                粉色悠悠球图标（180/192/512）

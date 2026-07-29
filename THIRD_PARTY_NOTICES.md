@@ -35,3 +35,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## SUBTLEX-UK
+
+The adult-vocabulary audit uses dominant part-of-speech counts from
+[SUBTLEX-UK](https://psychology.nottingham.ac.uk/subtlex-uk/), described in
+van Heuven, Mandera, Keuleers and Brysbaert (2014),
+“SUBTLEX-UK: A new and improved word frequency database for British English”.
+The original SUBTLEX-UK data file is not redistributed in this repository;
+only the audit status and the small set of evidence fields used to review this
+project's vocabulary entries are recorded.

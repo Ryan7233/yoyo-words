@@ -89,7 +89,7 @@ function makeResponse({
 
 test('service worker lifecycle waits for activation and only deletes its own old caches', async () => {
   const { listeners, state } = loadWorker({
-    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'another-app-v9', 'shared-cache'],
+    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'another-app-v9', 'shared-cache'],
   });
 
   let installWork;
@@ -103,7 +103,7 @@ test('service worker lifecycle waits for activation and only deletes its own old
   let activateWork;
   listeners.activate({ waitUntil: (promise) => { activateWork = promise; } });
   await activateWork;
-  assert.deepEqual(state.deleted, ['yoyo-words-v14', 'yoyo-words-v21']);
+  assert.deepEqual(state.deleted, ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23']);
   assert.equal(state.claimed, 1);
 });
 
