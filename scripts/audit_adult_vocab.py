@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REPORT = ROOT / "reports" / "adult-vocab-audit.md"
 DEFAULT_CSV = ROOT / "reports" / "adult-vocab-pos-candidates.csv"
 DEFAULT_DECISIONS = ROOT / "scripts" / "data" / "adult-vocab-review.csv"
+DEFAULT_SENSES = ROOT / "scripts" / "data" / "adult-vocab-senses.csv"
 CONTENT_POS = {"noun", "verb", "adjective", "adverb"}
 SHORT_POS = {"noun": "n.", "verb": "v.", "adjective": "adj.", "adverb": "adv."}
 POS_ALIASES = {
@@ -113,20 +114,23 @@ def main() -> None:
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
     parser.add_argument("--csv", type=Path, default=DEFAULT_CSV)
     parser.add_argument("--decisions", type=Path, default=DEFAULT_DECISIONS)
+    parser.add_argument("--senses", type=Path, default=DEFAULT_SENSES)
     parser.add_argument("--min-count", type=int, default=3)
     parser.add_argument("--min-dominance", type=float, default=0.65)
     args = parser.parse_args()
 
     source_rows = read_source_rows(args.ecdict)
     raw_records = vocab.read_records(args.ecdict)
-    final_words = {word["en"].casefold(): word for word in vocab.build_words(raw_records)}
+    final_words = vocab.build_words(raw_records)
     corpus, corpus_spellings = read_subtlex(args.subtlex)
     results: list[dict[str, str]] = []
+    multipos_rows: list[dict[str, str]] = []
     matched = 0
     content_pos_matched = 0
     unmatched: list[str] = []
 
-    for key, word in sorted(final_words.items()):
+    for word in sorted(final_words, key=lambda item: item["en"].casefold()):
+        key = word["en"].casefold()
         if key not in corpus_spellings:
             unmatched.append(word["en"])
             continue
@@ -138,6 +142,51 @@ def main() -> None:
         raw = raw_records[key]
         raw_pos = POS_ALIASES.get(raw["pos"])
         senses = translation_senses(source_rows.get(key, {}).get("translation", ""))
+        if key in vocab.HOMOGRAPH_VARIANTS:
+            # These variants are explicitly split and curated because a
+            # case-insensitive corpus cannot distinguish polish from Polish.
+            continue
+        common_senses = []
+        for sense_pos, sense_gloss in senses.items():
+            count = evidence.pos_counts.get(sense_pos, 0)
+            share = count / evidence.total_count if evidence.total_count else 0
+            # A secondary POS must be visible in modern usage, not merely be
+            # listed in dictionary order. Twenty observations plus a 1% share
+            # filters tagging noise while retaining exam-relevant uses such as
+            # effect (v.), state (v.) and representative (adj.).
+            if count >= 20 and share >= 0.01:
+                common_senses.append((
+                    sense_pos,
+                    sense_gloss,
+                    count,
+                    share,
+                ))
+        banned_sense = {
+            ("invalid", "noun"),
+            ("natural", "noun"),
+            ("oriental", "noun"),
+            ("stale", "noun"),
+        }
+        common_senses = [
+            item for item in common_senses
+            if (key, item[0]) not in banned_sense
+            and not any(term in item[1] for term in (
+                "残废者", "白痴", "女仆", "女佣", "男风", "无名小卒",
+            ))
+        ]
+        if len(common_senses) >= 2:
+            for sense_pos, sense_gloss, count, share in sorted(
+                common_senses,
+                key=lambda item: (-item[2], item[0]),
+            ):
+                multipos_rows.append({
+                    "word": word["en"],
+                    "pos": SHORT_POS[sense_pos],
+                    "zh": sense_gloss,
+                    "corpus_count": str(count),
+                    "corpus_share": f"{share:.3f}",
+                    "tracks": "+".join(word["tracks"]),
+                })
         is_candidate = (
             raw_pos in CONTENT_POS
             and raw_pos != evidence.dominant_pos
@@ -205,25 +254,51 @@ def main() -> None:
 
     args.decisions.parent.mkdir(parents=True, exist_ok=True)
     with args.decisions.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(decisions[0]))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(decisions[0]),
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(sorted(decisions, key=lambda row: row["word"].casefold()))
+
+    args.senses.parent.mkdir(parents=True, exist_ok=True)
+    with args.senses.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=["word", "pos", "zh", "corpus_count", "corpus_share", "tracks"],
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(sorted(
+            multipos_rows,
+            key=lambda row: (row["word"].casefold(), -int(row["corpus_count"])),
+        ))
 
     status_order = {"corrected": 0, "resolved_multi": 1, "resolved_primary": 2}
     results.sort(key=lambda row: (status_order[row["status"]], -float(row["dominance"]), row["word"].casefold()))
     args.csv.parent.mkdir(parents=True, exist_ok=True)
     with args.csv.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(results[0]))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(results[0]),
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(results)
 
     corrected = [row for row in results if row["status"] == "corrected"]
-    multi = [row for row in results if row["status"] == "resolved_multi"]
-    primary_only = [row for row in results if row["status"] == "resolved_primary"]
+    secondary_visible = [row for row in results if row["status"] == "resolved_multi"]
+    secondary_sparse = [row for row in results if row["status"] == "resolved_primary"]
+    final_multi = [word for word in final_words if len(word.get("senses", ())) >= 2]
+    final_three_plus = [word for word in final_words if len(word.get("senses", ())) >= 3]
+    postgrad_words = [word for word in final_words if "postgrad" in word["tracks"]]
+    postgrad_multi = [word for word in postgrad_words if len(word.get("senses", ())) >= 2]
+    postgrad_three_plus = [word for word in postgrad_words if len(word.get("senses", ())) >= 3]
     lines = [
         "# 成人词库主词性与释义审计",
         "",
-        "本报告检查全部成人词库词条。主词性证据来自 SUBTLEX-UK 影视字幕语料；中文候选义来自 ECDICT。语料只用于发现风险，不把统计结果直接当成词典结论。",
+        "本报告对全部成人词库词条做结构化扫描，并对高风险首义与多词性词作显式人工校正；它不是把 6,912 个中文义逐条人工重译。主词性证据来自 SUBTLEX-UK 影视字幕语料，中文候选义来自 ECDICT。语料只用于发现风险，不把统计结果直接当成词典结论。",
         "",
         "## 结果摘要",
         "",
@@ -232,12 +307,18 @@ def main() -> None:
         f"- 其中有名词/动词/形容词/副词主词性证据：{content_pos_matched:,}",
         f"- 未匹配词形、需其他来源复核：{len(unmatched):,}",
         f"- 已确认并修正：{len(corrected):,}",
-        f"- 原待复核词性冲突：{len(multi) + len(primary_only):,}",
-        f"- 两种常用词性均保留：{len(multi):,}",
-        f"- 次要词性证据不足，仅保留现代主词性：{len(primary_only):,}",
-        f"- 候选阈值：主词性至少 {args.min_count} 次，且占全部内容词性至少 {args.min_dominance:.0%}",
+        f"- 原主词性冲突候选：{len(secondary_visible) + len(secondary_sparse):,}",
+        f"- 其中来源词性在语料中仍可见：{len(secondary_visible):,}",
+        f"- 其中来源词性语料证据较少：{len(secondary_sparse):,}",
+        f"- 语料筛出的现代常用多词性候选：{len(multipos_rows):,} 条，"
+        f"覆盖 {len({row['word'].casefold() for row in multipos_rows}):,} 个词",
+        f"- 成品多词性卡片：{len(final_multi):,} 个（三词性及以上 {len(final_three_plus):,} 个）",
+        f"- 其中考研路线：{len(postgrad_multi):,} 个（三词性及以上 {len(postgrad_three_plus):,} 个）",
+        f"- 显式人工维护的高风险多词性/首义词：{len(vocab.COMMON_MULTIPOS_OVERRIDES):,} 个",
+        f"- 主词性冲突候选阈值：主词性至少 {args.min_count} 次，且占全部内容词性至少 {args.min_dominance:.0%}",
+        "- 多词性候选阈值：每个词性至少出现 20 次，且占内容词性至少 1%",
         "",
-        "完整处理明细见 `adult-vocab-pos-candidates.csv`。`resolved_multi` 表示两种常用词性都会显示；`resolved_primary` 表示次要词性在现代语料中证据不足；`corrected` 是此前已人工接受的错误修正。",
+        "完整诊断明细见 `adult-vocab-pos-candidates.csv`。其中 `resolved_multi` 和 `resolved_primary` 是历史状态名，只表示语料风险分组，不再直接决定成品词卡的主词性或删除义项；构建器只自动读取全词库多词性候选，并由显式人工覆盖确定高风险词的核心释义。",
         "",
         "## 已确认修正",
         "",
@@ -253,8 +334,9 @@ def main() -> None:
         "",
         "## 多词性处理规则",
         "",
-        "- 现代语料中次要词性至少出现 5 次且占比至少 1%，两种词性都保留。",
-        "- `relative`、`civilian`、`tender` 等已确认常用的多词性词作人工补充。",
+        "- 对全部词条逐词性扫描：同一词至少有两个词性分别出现 20 次且占比至少 1%，才进入多词性候选表。",
+        "- SUBTLEX-UK 只用于发现和排序风险，不自动覆盖主释义，也不单独作为删除某个词性的依据。",
+        "- `relative`、`civilian`、`tender`、异读词等高风险词使用显式人工覆盖。",
         "- `invalid` 的过时名词义、`stale` 的古旧名词义以及冒犯性称谓不保留。",
         "- 卡片分行显示多词性；小测只使用第一条现代核心义，避免答案过长。",
         "",
@@ -266,6 +348,7 @@ def main() -> None:
         "",
         "- [ECDICT（MIT License）](https://github.com/skywind3000/ECDICT)：项目生成器记录的固定源文件 SHA-256。",
         "- [SUBTLEX-UK](https://psychology.nottingham.ac.uk/subtlex-uk/)：[van Heuven et al. (2014)](https://doi.org/10.1080/17470218.2013.850521)，British English word frequencies based on subtitles；审计使用其 DomPoS、DomPoSFreq 与 AllPoSFreq 字段。",
+        "- [Merriam-Webster Dictionary](https://www.merriam-webster.com/)：用于复核 `invalid`、`render`、`steer`、`tan`、`pale`、`mute` 等高风险现代义项，不作为批量词库来源。",
         "",
     ])
     args.report.parent.mkdir(parents=True, exist_ok=True)
@@ -275,10 +358,11 @@ def main() -> None:
         f"content_pos={content_pos_matched}, unmatched={len(unmatched)}"
     )
     print(
-        f"Wrote {len(corrected)} corrected, {len(multi)} multi-POS and "
-        f"{len(primary_only)} primary-only rows to {args.csv}"
+        f"Wrote {len(corrected)} corrected, {len(secondary_visible)} secondary-visible and "
+        f"{len(secondary_sparse)} secondary-sparse rows to {args.csv}"
     )
     print(f"Wrote {len(decisions)} reviewed decisions to {args.decisions}")
+    print(f"Wrote {len(multipos_rows)} common POS senses to {args.senses}")
     print(f"Wrote summary to {args.report}")
 
 

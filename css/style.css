@@ -1280,12 +1280,23 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   font-family: inherit;
 }
 .adult-word {
+  display: block;
   max-width: 100%;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow-wrap: normal;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(40px, 13vw, 60px);
+  font-size: clamp(38px, 11.5vw, 60px);
   font-weight: 700;
   line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+.adult-word-long {
+  font-size: clamp(28px, 8.5vw, 42px);
+  letter-spacing: -0.025em;
+}
+.adult-word-very-long {
+  font-size: clamp(25px, 7.4vw, 36px);
+  letter-spacing: -0.035em;
 }
 .adult-phonetic {
   margin-top: 12px;
@@ -1318,7 +1329,7 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 }
 .adult-sense {
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: 68px 1fr;
   align-items: center;
   gap: 10px;
   padding: 9px 12px;
@@ -1331,6 +1342,16 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   color: var(--pink);
   font-size: 12px;
   text-align: center;
+}
+.adult-sense-label {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+}
+.adult-sense-label small {
+  color: var(--purple);
+  font-size: 9px;
+  white-space: nowrap;
 }
 .adult-result-mark {
   display: grid;
