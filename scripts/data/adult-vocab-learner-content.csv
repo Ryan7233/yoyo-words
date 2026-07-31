@@ -1,0 +1,203 @@
+word,pos,zh,definition,example,collocations,status,primary
+"the","art.","这、那（特指）","used before a noun when the person or thing is specific or already known","The keys are on the table.","",generated,yes
+"a","art.","一个、任一","used before one person or thing that is not specific","She bought a new bag.","",generated,yes
+"in","prep.","在……里面、在……期间","inside a place or during a period of time","The children are in the garden.","in time|in the room",generated,yes
+"it","pron.","它","used for a thing, animal, situation, or idea already mentioned","I found my phone and put it in my bag.","",generated,yes
+"I","pron.","我","used by the speaker to refer to himself or herself","I am ready to begin.","",generated,yes
+"he","pron.","他","used for a male person or boy already mentioned","He works near our home.","",generated,yes
+"on","prep.","在……上面、在……时候","touching or supported by a surface; also used for a particular day","The book is on the desk.","on time|on Monday",generated,yes
+"at","prep.","在、向、对","used to show a place, point, time, event, or target","Meet me at the station at six.","at home|at work",generated,yes
+"but","conj.","但是、不过","used to connect two ideas that are different or unexpected","I was tired, but I finished the work.","",generated,yes
+"by","prep.","被、经、由","used to show who did something, how it happened, or what is beside something","The song was written by her.","by hand|by bus",generated,yes
+"or","conj.","或、或者","used to show an alternative, choice, or other possibility","Would you like tea or coffee?","",generated,yes
+"as","prep.","作为、像、当……时","used to describe a role, comparison, or something happening at the same time","She works as a teacher.","as usual|as a result",generated,yes
+"can","aux.","能、可以","used to say that someone is able or allowed to do something","I can help you today.","",generated,yes
+"who","pron.","谁","used to ask which person or to add information about a person","Who is at the door?","",generated,yes
+"about","prep.","关于、大约、在……周围","connected with a subject; also meaning approximately","We talked about the new plan.","about time|about five minutes",generated,yes
+"will","aux.","将、会、愿意","used to talk about the future or a decision to do something","I will call you tomorrow.","",generated,yes
+"up","adv.","向上、起来","toward a higher place or position","Please stand up.","go up|look up",generated,yes
+"me","pron.","我","used by the speaker as the object of a verb or preposition","Please send me the photo.","",generated,yes
+"out","adv.","出去、在外","away from the inside of a place","She went out after dinner.","go out|find out",generated,yes
+"just","adv.","只是、刚刚、正好","only, very recently, or exactly","I have just finished lunch.","just now|just right",generated,yes
+"its","pron.","它的","used to show that something belongs to or is connected with a thing or animal","The dog moved its tail.","",generated,yes
+"more","adv.","更多、更","to a greater amount, number, or degree","We need more time.","more than|more often",generated,yes
+"well","adv.","很好地、充分地","in a good, successful, or satisfactory way","She speaks English very well.","do well|work well",generated,yes
+"only","adv.","只、仅仅","used to say that there is no more than one thing, person, amount, or choice","I only need five minutes.","only one|not only",generated,yes
+"even","adv.","甚至、即使","used to emphasize something surprising or more extreme","Even the youngest child understood.","even better|even if",generated,yes
+"back","adv.","回来、向后","toward an earlier place, position, or time","Please come back soon.","go back|give back",generated,yes
+"us","pron.","我们","used by the speaker for a group including himself or herself as the object","She invited us to dinner.","",generated,yes
+"down","adv.","向下、下来","toward a lower place or position","Please sit down.","go down|write down",generated,yes
+"may","aux.","可以、可能","used to say that something is possible or that someone has permission","It may rain this afternoon.","",generated,yes
+"after","prep.","在……之后","later than a particular time or event","We went home after dinner.","after work|after school",generated,yes
+"call","v.","打电话、称呼、叫","to speak to someone by phone, give a name, or ask someone to come","Please call me tonight.","call back|call for help",generated,yes
+"over","prep.","在……上方、越过、遍及","above, across, or covering something","The plane flew over the city.","all over|over time",generated,yes
+"still","adv.","仍然、还是","continuing to happen or be true at the present time","She still lives in Beijing.","still waiting|still young",generated,yes
+"first","adv.","首先、最先","before anything or anyone else","Wash your hands first.","first of all|come first",generated,yes
+"high","adj.","高的、高度较大的","far above the ground or greater than the usual level","The wall is too high to climb.","high level|high price",generated,yes
+"while","conj.","当……时、虽然","during the time that something happens; sometimes used to contrast two facts","She listened while I spoke.","while waiting|a while",generated,yes
+"why","adv.","为什么","for what reason or purpose","Why are you late?","",generated,yes
+"help","v.","帮助、协助","to make it easier for someone to do something","Can you help me carry this box?","help with|help someone",generated,yes
+"turn","v.","转动、转向、轮到","to move around a point or change direction","Turn left at the next street.","turn on|turn into",generated,yes
+"start","v.","开始、出发","to begin doing something or begin to happen","The meeting starts at nine.","start with|start work",generated,yes
+"might","aux.","可能、也许","used to say that something is possible but not certain","We might go out later.","",generated,yes
+"right","adj.","正确的、合适的","correct, true, or suitable for a situation","You chose the right answer.","right way|right time",generated,yes
+"play","v.","玩、播放、演奏","to take part in a game, make music, or use something for enjoyment","The children play outside every day.","play a game|play music",generated,yes
+"run","v.","跑、运行、经营","to move quickly on foot, operate, or manage something","She runs in the park every morning.","run a business|run out",generated,yes
+"must","aux.","必须、一定","used to say that something is necessary or certainly true","You must wear a seat belt.","",generated,yes
+"young","adj.","年轻的、年幼的","having lived for only a short time","The young boy is learning to swim.","young people|young child",generated,yes
+"lot","n.","许多、大量","a large number or amount","We learned a lot today.","a lot of|a whole lot",generated,yes
+"set","v.","设置、放置、确定","to put something in a position or decide a value, time, or rule","Set the alarm for seven.","set a goal|set up",generated,yes
+"change","v.","改变、变化、更换","to make or become different","The weather can change quickly.","change your mind|change into",generated,yes
+"best","adj.","最好的、最合适的","better than all other people or things","This is the best choice for us.","best friend|do your best",generated,yes
+"white","adj.","白色的","having the colour of fresh snow or milk","She wore a white shirt.","white paper|black and white",generated,yes
+"kid","n.","孩子、小孩","a child or young person","The kids are playing outside.","little kid|smart kid",generated,yes
+"lead","v.","带领、领先、通向","to guide people, be ahead, or go to a place","She will lead the project.","lead to|take the lead",generated,yes
+"watch","v.","观看、留意","to look at something for a period of time and pay attention","We watched a film together.","watch TV|watch carefully",generated,yes
+"together","adv.","一起、共同","with another person or in one group","We cooked dinner together.","work together|get together",generated,yes
+"centre","n.","中心、中央","the middle point or main part of a place or activity","The hotel is in the city centre.","city centre|shopping centre",generated,yes
+"sure","adj.","确信的、一定的","certain that something is true or will happen","I am sure the door is locked.","make sure|be sure",generated,yes
+"within","prep.","在……之内、不超过","inside a place, period, distance, or limit","Please reply within two days.","within reach|within a week",generated,yes
+"open","adj.","打开的、开放的","not closed, covered, or blocked","The shop is open until nine.","open door|open to",generated,yes
+"boy","n.","男孩、少年","a male child or young male person","The boy is riding a bike.","little boy|school boy",generated,yes
+"maybe","adv.","也许、可能","used when something is possible but not certain","Maybe we can meet tomorrow.","",generated,yes
+"human","adj.","人的、人类的","relating to people rather than animals or machines","Trust is a basic human need.","human life|human body",generated,yes
+"fall","v.","落下、跌倒、下降","to move down suddenly or become lower","Leaves fall from the trees in autumn.","fall down|fall asleep",generated,yes
+"oh","interj.","哦、噢","used to show surprise, understanding, pain, or another strong feeling","Oh, I forgot my keys.","",generated,yes
+"cut","v.","切、割、削减","to divide something with a sharp tool or reduce an amount","Cut the paper into two pieces.","cut down|cut costs",generated,yes
+"yeah","interj.","是、对","an informal way to say yes","Yeah, I agree with you.","",generated,yes
+"care","n.","关心、照料、小心","attention and help given to someone or something","The patient needs careful medical care.","take care|health care",generated,yes
+"perhaps","adv.","也许、可能","used to say that something may be true or may happen","Perhaps we should leave early.","",generated,yes
+"hard","adj.","困难的、坚硬的","difficult to do or solid and not easy to bend","This question is hard to answer.","hard work|hard time",generated,yes
+"pass","v.","经过、通过、递给","to go past, succeed in a test, or give something to someone","She passed the exam last week.","pass by|pass a test",generated,yes
+"major","adj.","主要的、重大的","very important, serious, or large","Traffic is a major problem in the city.","major change|major role",generated,yes
+"better","adj.","更好的、更合适的","of a higher quality or more suitable than something else","This plan is better than the old one.","feel better|better choice",generated,yes
+"pull","v.","拉、拖","to move something toward you or in a particular direction","Pull the door to open it.","pull out|pull together",generated,yes
+"free","adj.","自由的、免费的、空闲的","not controlled, not costing money, or available to use","The museum is free on Sundays.","free time|for free",generated,yes
+"drive","v.","驾驶、驱动","to control a vehicle or make something happen","She drives to work every day.","drive a car|drive growth",generated,yes
+"break","v.","打破、弄坏、中断","to damage something so it separates or stops working","Be careful not to break the glass.","break down|take a break",generated,yes
+"pick","v.","挑选、采摘、拿取","to choose or take one thing from a group","Pick the colour you like best.","pick up|pick one",generated,yes
+"and","conj.","和、与、并且","used to join words, phrases, or ideas","She bought bread and milk.","",generated,yes
+"of","prep.","的、属于","used to show belonging, connection, amount, or part of something","The door of the room was open.","a cup of|part of",generated,yes
+"to","prep.","到、向、给","used to show movement, direction, a receiver, or an end point","We walked to the station.","go to|talk to",generated,yes
+"have","v.","有、拥有、经历","to own, hold, contain, or experience something","They have two children.","have time|have a problem",generated,yes
+"that","adj.","那、那个","used to point to a particular person or thing farther away or already mentioned","I remember that day clearly.","that time|that person",generated,yes
+"for","prep.","为、给、因为","used to show purpose, reason, a receiver, or a period of time","This gift is for you.","for example|for two hours",generated,yes
+"you","pron.","你、你们","used to refer to the person or people being spoken to","You can sit here.","",generated,yes
+"with","prep.","和……一起、用、带有","together with someone or using, having, or feeling something","She came with her sister.","with care|with friends",generated,yes
+"this","pron.","这、这个","used to point to a person, thing, or idea that is near or being discussed","This is my favourite book.","",generated,yes
+"they","pron.","他们、她们、它们","used for two or more people or things already mentioned","They live near the school.","",generated,yes
+"we","pron.","我们","used by the speaker for a group that includes himself or herself","We are ready to begin.","",generated,yes
+"from","prep.","从、来自、根据","used to show where something starts, comes from, or is separated","She came from Shanghai.","from home|from now on",generated,yes
+"she","pron.","她","used for a female person or girl already mentioned","She is waiting outside.","",generated,yes
+"what","pron.","什么","used to ask for information about a thing, action, or idea","What do you need?","",generated,yes
+"their","pron.","他们的、她们的、它们的","used to show that something belongs to or is connected with them","Their house is near the park.","",generated,yes
+"if","conj.","如果、是否","used to introduce a possible condition or an indirect question","Call me if you need help.","if possible|what if",generated,yes
+"would","aux.","将、会、愿意","used for imagined situations, polite requests, or the future seen from the past","Would you like some tea?","",generated,yes
+"her","pron.","她的、她","used for a female person as an object or to show belonging","I gave her the book.","",generated,yes
+"which","pron.","哪一个、哪个","used to ask or say what person or thing is meant from a limited group","Which colour do you prefer?","",generated,yes
+"them","pron.","他们、她们、它们","used for people or things already mentioned as the object","I saw them at the station.","",generated,yes
+"him","pron.","他","used for a male person as the object of a verb or preposition","Please give him the message.","",generated,yes
+"your","pron.","你的、你们的","used to show that something belongs to or is connected with the person spoken to","Your phone is on the desk.","",generated,yes
+"could","aux.","可以、能够、可能","used to describe past ability, possibility, or a polite request","Could you open the window?","",generated,yes
+"than","conj.","比、较之","used when comparing two people, things, or amounts","This room is larger than that one.","more than|rather than",generated,yes
+"our","pron.","我们的","used to show that something belongs to or is connected with us","Our train leaves at eight.","",generated,yes
+"these","pron.","这些","used to point to people or things that are near or being discussed","These are my keys.","",generated,yes
+"those","pron.","那些","used to point to people or things farther away or already mentioned","Those are the books I ordered.","",generated,yes
+"should","aux.","应该、应当","used to say what is right, expected, or likely","You should get some rest.","",generated,yes
+"until","prep.","直到……为止","up to a particular time or event","The shop is open until six.","wait until|until now",generated,yes
+"among","prep.","在……之中","in the middle of or included in a group of people or things","She sat among her friends.","among people|among the best",generated,yes
+"whether","conj.","是否、不管","used when talking about two possibilities or expressing doubt","I do not know whether he will come.","whether or not",generated,yes
+"although","conj.","虽然、尽管","used to introduce a fact that makes the main statement surprising","Although it was raining, we went out.","",generated,yes
+"toward","prep.","朝、向、对于","in the direction of someone or something","She walked toward the door.","toward the end|attitude toward",generated,yes
+"else","adv.","其他、另外","in addition to or instead of what has already been mentioned","Would you like anything else?","someone else|what else",generated,yes
+"themselves","pron.","他们自己、她们自己、它们自己","used when people or things are both the subject and object of an action","They made the meal themselves.","",generated,yes
+"whose","pron.","谁的","used to ask or say which person something belongs to","Whose bag is this?","",generated,yes
+"everyone","pron.","每个人、人人","every person in a group","Everyone enjoyed the trip.","",generated,yes
+"whom","pron.","谁、什么人","used in formal English for the person receiving an action","Whom did you invite?","",generated,yes
+"ought","aux.","应该、应当","used to say what is right, expected, or likely","You ought to tell the truth.","ought to",generated,yes
+"amid","prep.","在……之中","in the middle of or surrounded by something","The town stayed calm amid the storm.","amid concerns|amid reports",generated,yes
+"against","prep.","反对、靠着、与……竞争","in opposition to, touching, or competing with someone or something","The bike was leaning against the wall.","against the law|play against",generated,yes
+"yourself","pron.","你自己、你亲自","used when the person spoken to is both the subject and object","Be proud of yourself.","by yourself",generated,yes
+"internet","n.","互联网、因特网","the worldwide system that connects computers and allows people to share information","You can find the form on the internet.","internet access|on the internet",generated,yes
+"ourselves","pron.","我们自己、我们亲自","used when we are both the subject and object of an action","We prepared the meal ourselves.","by ourselves",generated,yes
+"rubber","n.","橡胶、橡皮","a strong material that bends easily and is used for tyres and many other products","These gloves are made of rubber.","rubber band|rubber gloves",generated,yes
+"worm","n.","蠕虫、虫","a small animal with a long soft body and no legs","A worm was moving through the soil.","earthworm|computer worm",generated,yes
+"pharmacy","n.","药店、药房","a shop or place where medicines are prepared and sold","I bought the medicine at the pharmacy.","local pharmacy|hospital pharmacy",generated,yes
+"pneumonia","n.","肺炎","a serious illness that causes swelling and infection in the lungs","He was treated in hospital for pneumonia.","develop pneumonia",generated,yes
+"sponge","n.","海绵、海绵状物","a soft material with many small holes that holds water","Use a sponge to clean the table.","kitchen sponge|sponge cake",generated,yes
+"cyberspace","n.","网络空间","the online world where people communicate and share information","Personal data can spread quickly through cyberspace.","in cyberspace",generated,yes
+"Marxism","n.","马克思主义","a political and economic system of ideas based on the work of Karl Marx","The course introduces the history of Marxism.","Marxist theory",generated,yes
+"dynamo","n.","发电机、精力充沛的人","a machine that produces electricity from movement","The bicycle dynamo powers the light.","bicycle dynamo",generated,yes
+"put","v.","放、安置、使处于","to move something into a particular place or position","Put the cup on the table.","put on|put away",generated,yes
+"continue","v.","继续、持续","to keep doing something or keep happening without stopping","Please continue with your work.","continue to|continue doing",generated,yes
+"serve","v.","服务、供应、担任","to provide help, food, or a useful function","They serve breakfast from seven.","serve as|serve food",generated,yes
+"build","v.","建造、建立、逐步形成","to make something by joining parts or to develop it over time","They plan to build a new school.","build up|build trust",generated,yes
+"reach","v.","到达、伸手够到、达到","to arrive at a place, level, or goal","We reached the station before noon.","reach a goal|reach an agreement",generated,yes
+"raise","v.","提高、举起、筹集","to move something higher or increase an amount","The company plans to raise wages.","raise money|raise a question",generated,yes
+"require","v.","需要、要求","to need something or make something necessary","The job requires careful planning.","require approval|require someone to",generated,yes
+"indicate","v.","表明、指出","to show that something exists or is likely, or to point something out","The results indicate a clear change.","indicate that|clearly indicate",generated,yes
+"fail","v.","失败、未能、不及格","to be unsuccessful or not do something that is needed","The plan failed because costs were too high.","fail to|fail an exam",generated,yes
+"blue","adj.","蓝色的、忧郁的","having the colour of a clear sky","She wore a blue coat.","dark blue|feel blue",generated,yes
+"remove","v.","移走、去除、脱下","to take something away from a place or position","Please remove your shoes at the door.","remove from|remove a stain",generated,yes
+"green","adj.","绿色的、环保的","having the colour of grass or causing little harm to the environment","The leaves are bright green.","green energy|green light",generated,yes
+"respond","v.","回答、回应、作出反应","to answer or react to something","She responded quickly to the message.","respond to|respond quickly",generated,yes
+"deliver","v.","递送、发表、履行","to take something to a person or place, or provide what was promised","They deliver fresh food every morning.","deliver a speech|deliver results",generated,yes
+"contribute","v.","贡献、捐助、促成","to give money, time, ideas, or effort to help achieve something","Many people contributed to the project.","contribute to|contribute money",generated,yes
+"settle","v.","解决、定居、安顿","to solve a disagreement or begin living permanently in a place","They settled the problem calmly.","settle down|settle a dispute",generated,yes
+"connect","v.","连接、联系","to join things or people together","This bridge connects the two towns.","connect to|connect with",generated,yes
+"yellow","adj.","黄色的","having the colour of lemons or ripe bananas","The child drew a yellow sun.","bright yellow|yellow light",generated,yes
+"investigate","v.","调查、研究","to examine facts carefully in order to discover the truth","Police are investigating the accident.","investigate a case|investigate whether",generated,yes
+"expose","v.","暴露、揭露、使接触","to make something visible or known, or leave it without protection","The report exposed serious problems.","expose to|expose the truth",generated,yes
+"compete","v.","竞争、比赛","to try to win or be more successful than others","Several teams will compete in the final.","compete with|compete for",generated,yes
+"portray","v.","描绘、扮演","to show or describe someone or something in a particular way","The film portrays life in a small town.","portray as|accurately portray",generated,yes
+"behave","v.","表现、举止","to act in a particular way, especially toward other people","The children behaved well during dinner.","behave well|behave like",generated,yes
+"confess","v.","承认、坦白","to admit that you did something wrong or reveal a private truth","He confessed that he had lied.","confess to|confess that",generated,yes
+"disclose","v.","披露、揭示","to make secret or private information known","The company refused to disclose the price.","disclose information|disclose that",generated,yes
+"cease","v.","停止、终止","to stop happening or stop doing something","The noise finally ceased.","cease to|cease operations",generated,yes
+"chew","v.","咀嚼","to crush food with the teeth before swallowing it","Chew your food slowly.","chew gum|chew on",generated,yes
+"straighten","v.","弄直、整理、纠正","to make something straight or tidy","She straightened the picture on the wall.","straighten up|straighten out",generated,yes
+"inquire","v.","询问、打听","to ask for information","I called to inquire about the course.","inquire about|inquire whether",generated,yes
+"wither","v.","枯萎、衰弱","to become dry, weak, or smaller","The flowers withered in the heat.","wither away",generated,yes
+"torment","v.","折磨、使痛苦","to cause severe physical or emotional pain","The memory continued to torment him.","torment someone",generated,yes
+"situated","adj.","位于……的、处于……的","located in a particular place or position","The hotel is situated near the station.","situated in|ideally situated",generated,yes
+"big","adj.","大的、重要的","large in size, amount, or importance","They live in a big house.","big change|big difference",generated,yes
+"again","adv.","再一次、又","one more time or in the same way as before","Please say that again.","again and again|once again",generated,yes
+"invalid","adj.","无效的、不成立的","not legally acceptable, officially recognized, or based on correct facts","The ticket is invalid after midnight.","invalid password|invalid request",generated,yes
+"relative","adj.","相对的、相关的","considered by comparing it with something else","The task is easy relative to the last one.","relative importance|relative size",generated,yes
+"relative","n.","亲戚、亲属","a person who belongs to the same family","Most of her relatives live nearby.","close relative|distant relative",generated,no
+"civilian","adj.","平民的、民用的","relating to people who are not members of the armed forces","The building was returned to civilian use.","civilian life|civilian use",generated,yes
+"civilian","n.","平民","a person who is not a member of the armed forces or police","The area was opened to civilians again.","civilian population|innocent civilian",generated,no
+"tender","adj.","柔软的、嫩的、温柔的","soft, easy to cut, or showing gentle care","Cook the meat until it is tender.","tender meat|tender care",generated,yes
+"tender","n.","投标、投标书","a formal written offer to provide work or goods for a stated price","The company submitted a tender for the project.","submit a tender|open tender",generated,no
+"tender","v.","正式提出、投标","to make a formal offer or submit something officially","Three firms tendered for the contract.","tender for|tender an offer",generated,no
+"patient","n.","病人、患者","a person who receives medical care or treatment","The doctor spoke with the patient.","hospital patient|treat a patient",generated,yes
+"patient","adj.","有耐心的","able to wait or deal with difficulty without becoming angry","Please be patient while the page loads.","patient with|remain patient",generated,no
+"state","n.","状态、州、国家","a condition, one of the main political areas of a country, or a country","The equipment is in good condition and a safe state.","current state|state government",generated,yes
+"state","v.","陈述、说明","to say or write something clearly and officially","Please state your name and address.","clearly state|state that",generated,no
+"award","n.","奖、奖项","a prize or honour given for an achievement","She won an award for her research.","win an award|award ceremony",generated,yes
+"award","v.","授予、判给","to officially give a prize, payment, or decision","The judges awarded her first prize.","award a prize|award damages",generated,no
+"implement","v.","实施、执行","to put a plan, decision, or system into action","The team will implement the new policy next month.","implement a plan|implement changes",generated,yes
+"implement","n.","工具、器具","a tool used for a particular kind of work","The farmer cleaned each metal implement after use.","farm implement",generated,no
+"duplicate","n.","副本、复制品","an exact copy of something","Keep the original and send me the duplicate.","exact duplicate|in duplicate",generated,yes
+"duplicate","adj.","完全相同的、重复的","exactly the same as another thing","The system found two duplicate records.","duplicate copy|duplicate entry",generated,no
+"duplicate","v.","复制、使加倍","to make an exact copy of something or repeat it","Please duplicate this file before editing it.","duplicate a file|duplicate work",generated,no
+"envisage","v.","设想、展望","to form a mental picture of a future situation, especially one you may plan for","We envisage the work taking three months.","envisage a future|envisage doing",generated,yes
+"irrigate","v.","灌溉、给……供水","to bring water to dry land so that plants can grow","Farmers irrigate the fields during the dry season.","irrigate crops|irrigate farmland",generated,yes
+"maltreat","v.","虐待、苛待","to treat a person or animal badly or cruelly","The law protects animals from people who maltreat them.","maltreat animals",generated,yes
+"malfunction","n.","故障、失灵","a failure to work normally or correctly","A software malfunction stopped the machine.","system malfunction|technical malfunction",generated,yes
+"malfunction","v.","发生故障、失灵","to stop working normally or correctly","The alarm may malfunction in extreme heat.","malfunction badly",generated,no
+"temperamental","adj.","喜怒无常的、情绪不稳定的","likely to change mood suddenly and sometimes become difficult to deal with","The actor was talented but temperamental.","temperamental person",generated,yes
+"circumference","n.","圆周、周长","the distance around the outside of a circle","Measure the circumference of the wheel.","circle circumference",generated,yes
+"transcendental","adj.","超越经验的、先验的","beyond ordinary experience or based on abstract ideas rather than direct observation","The book discusses transcendental ideas about knowledge.","transcendental philosophy",generated,yes
+"resolute","adj.","坚决的、坚定的","firmly determined and not likely to change your mind","She remained resolute despite the criticism.","remain resolute|resolute leader",generated,yes
+"invert","v.","使倒置、使反转","to turn something upside down or reverse its usual order","Invert the bottle before use.","invert an image|invert the order",generated,yes
+"exploit","v.","利用、开发、剥削","to use a resource or situation for benefit, sometimes in an unfair way","The company hopes to exploit new technology.","exploit resources|exploit workers",generated,yes
+"exploit","n.","英勇事迹、壮举","a brave, exciting, or notable action","The book tells of the explorer's early exploits.","military exploit|heroic exploit",generated,no
+"retire","v.","退休、退下、就寝","to stop working permanently, leave a position, or go to bed","She plans to retire next year.","retire from|retire early",generated,yes
+"revise","v.","修改、复习","to change something to improve it or study it again for an examination","I need to revise this report before sending it.","revise a plan|revise for an exam",generated,yes
+"substantial","adj.","大量的、重大的、坚固的","large in amount, value, or importance; also strong and solid","The project requires a substantial investment.","substantial amount|substantial evidence",generated,yes
+"mean","v.","意思是、意味着、打算","to express, show, or intend a particular idea","What does this word mean?","mean that|mean to",generated,yes
+"keep","v.","保持、保留、继续","to continue to have, hold, or do something","Please keep the door closed.","keep doing|keep in touch",generated,yes
+"same","adj.","相同的、同样的","not different; exactly like another person or thing","We chose the same colour.","the same as|at the same time",generated,yes
+"few","adj.","很少的、不多的、少数的","not many; only a small number of people or things","Few people knew the answer.","a few|very few",generated,yes
+"whichever","pron.","无论哪一个、任何一个","any one from a group when it does not matter which one is chosen","Choose whichever you prefer.","whichever one",generated,yes

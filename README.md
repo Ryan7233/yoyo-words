@@ -47,7 +47,7 @@ python3 serve.py --help
 - App 内在**选人页**点 **🔄 更新到最新版（清缓存）**——会注销当前 App 的
   Service Worker、清理 `yoyo-words-` 缓存并硬刷新，**不会动学习进度**
   （星星、错题、我的世界都保留），也不会影响同域名下的其他 App；
-- 选人页底部有**版本号**（当前 `版本 v26`），可确认是否已更新到最新；
+- 选人页底部有**版本号**（当前 `版本 v27`），可确认是否已更新到最新；
 - 正常情况下 App 每次打开会自动检测新版并秒切，一般不需要手动点。
 
 ## 在 iPhone 上使用
@@ -109,6 +109,18 @@ python3 scripts/audit_adult_vocab.py /path/to/ecdict.csv /path/to/SUBTLEX-UK.txt
 [reports/adult-vocab-pos-candidates.csv](reports/adult-vocab-pos-candidates.csv)。原始
 SUBTLEX-UK 数据不进入仓库。
 
+英英释义还有一套不依赖外部语料的确定性扫描，用于发现缩写/同形词错义、
+旧式交叉引用、明显残句、循环定义和学习难度候选：
+
+```bash
+python3 scripts/audit_adult_definitions.py
+```
+
+结果见 [reports/adult-definition-audit.md](reports/adult-definition-audit.md) 和
+[reports/adult-definition-top-500.csv](reports/adult-definition-top-500.csv)。
+规则未命中不等于语义已经确认；前 500 高频词和长尾分批重建方案见
+[docs/ADULT_VOCAB_QUALITY_PLAN.md](docs/ADULT_VOCAB_QUALITY_PLAN.md)。
+
 ## 项目结构
 
 ```
@@ -125,6 +137,7 @@ scripts/              成人词库可复现生成脚本（原始大文件不入�
 reports/              成人词库释义审计摘要与候选明细
 tests/                node:test 单元测试
 docs/REQUIREMENTS.md  需求分析文档
+docs/ADULT_VOCAB_QUALITY_PLAN.md 成人词汇质量重建与发布门槛
 icons/                粉色悠悠球图标（180/192/512）
 THIRD_PARTY_NOTICES.md 第三方数据来源与许可证
 ```

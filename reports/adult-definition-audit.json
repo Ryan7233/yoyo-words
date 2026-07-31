@@ -1,0 +1,73 @@
+{
+  "script_version": 1,
+  "input": "js/adult-words.js",
+  "input_sha256": "3ea2ed1a6d96cb8c23ddbf0eda480f9857d9b667fc62eb8287328adbb29442a9",
+  "total_words": 6912,
+  "flagged_words": 726,
+  "automatically_unflagged_not_semantically_verified": 6186,
+  "top_n": 500,
+  "top_flagged_words": 24,
+  "top_p0_words": 0,
+  "thresholds": {
+    "defining_rank": 3000,
+    "outside_vocab_ratio": 0.5,
+    "advanced_token_ratio": 0.6,
+    "minimum_content_tokens_for_ratio_flags": 3
+  },
+  "issue_counts": {
+    "definition_too_advanced": 614,
+    "high_outside_vocab_ratio": 177,
+    "pos_definition_conflict": 71
+  },
+  "category_matches": {
+    "heuristic": 791,
+    "risk": 71
+  },
+  "issue_metadata": {
+    "abbreviation_sense_mismatch": {
+      "category": "defect",
+      "meaning": "A short non-noun card selected an abbreviation or unrelated domain sense."
+    },
+    "definition_too_advanced": {
+      "category": "heuristic",
+      "meaning": "Too many content tokens fall outside the configured rank-based proxy list."
+    },
+    "headword_self_reference": {
+      "category": "defect",
+      "meaning": "The definition starts by repeating the headword."
+    },
+    "high_outside_vocab_ratio": {
+      "category": "heuristic",
+      "meaning": "Too many content tokens are absent from the 6,912-word inventory."
+    },
+    "homograph_sense_mismatch": {
+      "category": "defect",
+      "meaning": "A non-noun card selected a known concrete or abstract noun homograph sense."
+    },
+    "legacy_cross_reference": {
+      "category": "defect",
+      "meaning": "The text contains a dictionary cross-reference instead of a standalone explanation."
+    },
+    "legacy_grammar_notation": {
+      "category": "defect",
+      "meaning": "The text contains old or reader-hostile grammatical notation."
+    },
+    "letter_sense_mismatch": {
+      "category": "defect",
+      "meaning": "A non-noun card selected an alphabet-letter sense."
+    },
+    "missing_definition": {
+      "category": "defect",
+      "meaning": "The generated card has no English definition."
+    },
+    "obvious_truncation": {
+      "category": "defect",
+      "meaning": "The definition ends with dangling punctuation or a connector."
+    },
+    "pos_definition_conflict": {
+      "category": "risk",
+      "meaning": "The grammatical shape of the definition conflicts with the card's primary POS."
+    }
+  },
+  "top_p0": []
+}

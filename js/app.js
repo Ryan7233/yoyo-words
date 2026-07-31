@@ -65,7 +65,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v26';
+const APP_VERSION = 'v27';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -715,17 +715,25 @@ function adultLearningMarkup(word) {
   const parts = (word.parts || [])
     .map((partId) => ADULT_WORD_PARTS[partId])
     .filter(Boolean);
-  const relatedCandidates = [
-    ...(word.family || []),
-    ...parts.flatMap((part) => part.examples || []),
-  ];
-  const seenRelated = new Set();
-  const related = relatedCandidates.filter((item) => {
-    const key = String(item.en || '').toLocaleLowerCase('en');
-    if (!key || key === word.en.toLocaleLowerCase('en') || seenRelated.has(key)) return false;
-    seenRelated.add(key);
-    return true;
-  }).slice(0, 3);
+  const uniqueRelated = (items) => {
+    const seen = new Set();
+    return items.filter((item) => {
+      const key = String(item.en || '').toLocaleLowerCase('en');
+      if (!key || key === word.en.toLocaleLowerCase('en') || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).slice(0, 3);
+  };
+  const family = uniqueRelated(word.family || []);
+  const patternExamples = uniqueRelated(parts.flatMap((part) => part.examples || []));
+  const collocations = [...new Set(
+    (word.collocations || []).map((item) => String(item).trim()).filter(Boolean),
+  )].slice(0, 3);
+  const relatedListMarkup = (items) => `
+    <span class="adult-related-list">${items.map((item) => `
+      <span class="adult-related-word"><b>${escapeHtml(item.en)}</b><small>${escapeHtml(item.zh)}</small></span>
+    `).join('')}</span>
+  `;
   const partKind = { prefix: '前缀', root: '词根', suffix: '后缀' };
   const partMarkup = parts.length ? `
     <span class="adult-learning-block adult-word-building">
@@ -738,14 +746,46 @@ function adultLearningMarkup(word) {
       `).join('')}</span>
     </span>
   ` : '';
-  const relatedMarkup = related.length ? `
+  const familyMarkup = family.length ? `
     <span class="adult-learning-block">
-      <span class="adult-learning-label">举一反三</span>
-      <span class="adult-related-list">${related.map((item) => `
-        <span class="adult-related-word"><b>${escapeHtml(item.en)}</b><small>${escapeHtml(item.zh)}</small></span>
-      `).join('')}</span>
+      <span class="adult-learning-label">WORD FAMILY · 词族</span>
+      ${relatedListMarkup(family)}
     </span>
   ` : '';
+  const patternMarkup = patternExamples.length ? `
+    <span class="adult-learning-block">
+      <span class="adult-learning-label">SAME PATTERN · 同构词例词</span>
+      ${relatedListMarkup(patternExamples)}
+    </span>
+  ` : '';
+  const exampleMarkup = word.example ? `
+    <span class="adult-example">
+      <small>EXAMPLE · 例句</small>
+      <span>${escapeHtml(word.example)}</span>
+    </span>
+  ` : '';
+  const collocationMarkup = collocations.length ? `
+    <span class="adult-collocations">
+      <small>COLLOCATIONS · 常用搭配</small>
+      <span>${collocations.map((item) => `<b>${escapeHtml(item)}</b>`).join('')}</span>
+    </span>
+  ` : '';
+  const primarySenseHasDefinition = Boolean(word.senses?.[0]?.definition);
+  const englishClueMarkup = primarySenseHasDefinition
+    ? (word.hook ? `
+      <span class="adult-learning-block">
+        <span class="adult-memory-hook">🧠 ${escapeHtml(word.hook)}</span>
+      </span>
+    ` : '')
+    : `
+      <span class="adult-learning-block adult-english-clue">
+        <span class="adult-learning-label">ENGLISH CLUE · 英英理解</span>
+        <span class="adult-definition">${escapeHtml(word.definition)}</span>
+        ${exampleMarkup}
+        ${collocationMarkup}
+        ${word.hook ? `<span class="adult-memory-hook">🧠 ${escapeHtml(word.hook)}</span>` : ''}
+      </span>
+    `;
   const formsMarkup = word.forms?.length ? `
     <span class="adult-forms">
       <span>词形变化</span>
@@ -754,13 +794,10 @@ function adultLearningMarkup(word) {
   ` : '';
   return `
     <span class="adult-learning-panel">
-      <span class="adult-learning-block adult-english-clue">
-        <span class="adult-learning-label">ENGLISH CLUE · 英英理解</span>
-        <span class="adult-definition">${escapeHtml(word.definition)}</span>
-        ${word.hook ? `<span class="adult-memory-hook">🧠 ${escapeHtml(word.hook)}</span>` : ''}
-      </span>
+      ${englishClueMarkup}
       ${partMarkup}
-      ${relatedMarkup}
+      ${familyMarkup}
+      ${patternMarkup}
       ${formsMarkup}
     </span>
   `;
@@ -785,7 +822,16 @@ function showAdultLearn(scope, words, idx) {
     ? `<span class="adult-senses">${senses.map((sense) => `
         <span class="adult-sense">
           <span class="adult-sense-label"><b>${sense.pos}</b>${sense.phonetic ? `<small>/${sense.phonetic}/</small>` : ''}</span>
-          <span>${sense.zh}</span>
+          <span class="adult-sense-copy">
+            <span>${escapeHtml(sense.zh)}</span>
+            ${sense.definition ? `<small>${escapeHtml(sense.definition)}</small>` : ''}
+            ${sense.example ? `<em>${escapeHtml(sense.example)}</em>` : ''}
+            ${sense.collocations?.length ? `
+              <span class="adult-sense-collocations">
+                ${sense.collocations.slice(0, 3).map((item) => `<b>${escapeHtml(item)}</b>`).join('')}
+              </span>
+            ` : ''}
+          </span>
         </span>
       `).join('')}</span>`
     : `${w.pos ? `<span class="adult-pos">${w.pos}</span>` : ''}

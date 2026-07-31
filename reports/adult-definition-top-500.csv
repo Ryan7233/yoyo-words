@@ -1,0 +1,501 @@
+﻿rank,en,pos,zh,definition,tracks,priority,issue_codes,defect_count,risk_count,heuristic_count,content_token_count,outside_vocab_ratio,advanced_token_ratio,harder_than_headword_ratio,outside_tokens,advanced_tokens
+1,the,art.,这、那（特指）,used before a noun when the person or thing is specific or already known,life,AUTO_CLEAR,,0,0,0,7,0.000,0.143,1.000,,noun
+2,be,v.,是、表示、在,have the quality of being,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+3,and,conj.,和、与、并且,"used to join words, phrases, or ideas",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+4,of,prep.,的、属于,"used to show belonging, connection, amount, or part of something",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+5,a,art.,一个、任一,used before one person or thing that is not specific,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+6,in,prep.,在……里面、在……期间,inside a place or during a period of time,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+7,to,prep.,到、向、给,"used to show movement, direction, a receiver, or an end point",life,AUTO_CLEAR,,0,0,0,7,0.000,0.143,1.000,,receiver
+8,have,v.,有、拥有、经历,"to own, hold, contain, or experience something",life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+10,it,pron.,它,"used for a thing, animal, situation, or idea already mentioned",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+11,I,pron.,我,used by the speaker to refer to himself or herself,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+12,that,adj.,那、那个,used to point to a particular person or thing farther away or already mentioned,life,AUTO_CLEAR,,0,0,0,9,0.000,0.111,1.000,,farther
+13,for,prep.,为、给、因为,"used to show purpose, reason, a receiver, or a period of time",life,AUTO_CLEAR,,0,0,0,7,0.000,0.143,1.000,,receiver
+14,you,pron.,你、你们,used to refer to the person or people being spoken to,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+15,he,pron.,他,used for a male person or boy already mentioned,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+16,with,prep.,和……一起、用、带有,"together with someone or using, having, or feeling something",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+17,on,prep.,在……上面、在……时候,touching or supported by a surface; also used for a particular day,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+18,do,v.,做、进行、完成,get (something) done,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+19,say,v.,说、讲、念,communicate or express nonverbally,life,AUTO_CLEAR,,0,0,0,3,0.333,0.333,1.000,nonverbally,nonverbally
+20,this,pron.,这、这个,"used to point to a person, thing, or idea that is near or being discussed",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+21,they,pron.,他们、她们、它们,used for two or more people or things already mentioned,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+22,at,prep.,在、向、对,"used to show a place, point, time, event, or target",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+23,but,conj.,但是、不过,used to connect two ideas that are different or unexpected,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,1.000,,unexpected
+24,we,pron.,我们,used by the speaker for a group that includes himself or herself,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+25,his,pron.,他的,Belonging or pertaining to him,life,AUTO_CLEAR,,0,0,0,2,0.500,0.500,1.000,pertaining,pertaining
+26,from,prep.,从、来自、根据,"used to show where something starts, comes from, or is separated",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+28,not,adv.,不、非、未,negation of a word or group of words,life,AUTO_CLEAR,,0,0,0,4,0.250,0.250,1.000,negation,negation
+30,by,prep.,被、经、由,"used to show who did something, how it happened, or what is beside something",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+31,she,pron.,她,used for a female person or girl already mentioned,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+32,or,conj.,或、或者,"used to show an alternative, choice, or other possibility",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+33,as,prep.,作为、像、当……时,"used to describe a role, comparison, or something happening at the same time",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+34,what,pron.,什么,"used to ask for information about a thing, action, or idea",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+35,go,v.,去、走、达到,follow a procedure or take a course,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+36,their,pron.,他们的、她们的、它们的,used to show that something belongs to or is connected with them,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+37,can,aux.,能、可以,used to say that someone is able or allowed to do something,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
+38,who,pron.,谁,used to ask which person or to add information about a person,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+39,get,v.,得到、获得、变成,come into the possession of something concrete or abstract,life,P3,definition_too_advanced,0,0,1,5,0.000,0.600,1.000,,abstract|concrete|possession
+40,if,conj.,如果、是否,used to introduce a possible condition or an indirect question,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,1.000,,indirect
+41,would,aux.,将、会、愿意,"used for imagined situations, polite requests, or the future seen from the past",life,AUTO_CLEAR,,0,0,0,8,0.125,0.125,1.000,polite,polite
+42,her,pron.,她的、她,used for a female person as an object or to show belonging,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+43,all,adj.,所有的、全部的、一切的,quantifier; used with either mass or count nouns to indicate the whole number or amount of or every one of a class,life,AUTO_CLEAR,,0,0,0,12,0.083,0.167,1.000,quantifier,nouns|quantifier
+44,my,pron.,我的,Of or belonging to me,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+45,make,v.,制造、安排、创造,engage in,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+46,about,prep.,关于、大约、在……周围,connected with a subject; also meaning approximately,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+47,know,v.,知道、了解、认识,be cognizant or aware of a fact or a specific piece of information,life,AUTO_CLEAR,,0,0,0,6,0.167,0.167,1.000,cognizant,cognizant
+48,will,aux.,将、会、愿意,used to talk about the future or a decision to do something,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+50,up,adv.,向上、起来,toward a higher place or position,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+51,one,n.,一(个),the smallest whole number or a numeral representing this number,life,AUTO_CLEAR,,0,0,0,6,0.167,0.167,1.000,numeral,numeral
+52,time,n.,时间、时侯、时机,an instance or single occasion for some event,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+53,there,adv.,在那里,a location other than here,life,P2,pos_definition_conflict,0,1,0,1,0.000,0.000,1.000,,
+54,year,n.,年、年度、年龄,a period of time containing 365 (or 366) days,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+55,so,adv.,如此、如是、如...那样,to a very great extent or degree,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+56,think,v.,想、考虑、想起,judge or regard,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+57,when,conj.,当...的时候,At what time,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
+58,which,pron.,哪一个、哪个,used to ask or say what person or thing is meant from a limited group,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.875,,
+59,them,pron.,他们、她们、它们,used for people or things already mentioned as the object,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+60,some,pron.,一些、一部分、若干,quantifier; used with either mass nouns or plural count nouns to indicate an unspecified number or quantity,life,AUTO_CLEAR,,0,0,0,11,0.182,0.545,1.000,quantifier|unspecified,nouns|plural|quantifier|quantity|unspecified
+61,me,pron.,我,used by the speaker as the object of a verb or preposition,life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,1.000,,preposition|verb
+62,people,n.,人、人民、民族,(plural) any group of human beings (men or women or children) collectively,life,AUTO_CLEAR,,0,0,0,8,0.125,0.250,0.875,collectively,collectively|plural
+63,take,v.,拿、取、抓,carry out,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+64,out,adv.,出去、在外,away from the inside of a place,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+65,into,prep.,进入...之内、朝、深入...之中,To the inside of,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+66,just,adv.,只是、刚刚、正好,"only, very recently, or exactly",life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+67,see,v.,看见、查看、参观,perceive by sight or have the power to perceive by sight,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+68,him,pron.,他,used for a male person as the object of a verb or preposition,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,1.000,,preposition|verb
+69,your,pron.,你的、你们的,used to show that something belongs to or is connected with the person spoken to,life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+70,come,v.,过来、来、到达,"move toward, travel toward something or somebody or approach something or somebody",life,AUTO_CLEAR,,0,0,0,9,0.000,0.000,1.000,,
+71,could,aux.,可以、能够、可能,"used to describe past ability, possibility, or a polite request",life,AUTO_CLEAR,,0,0,0,7,0.143,0.143,1.000,polite,polite
+72,now,adv.,现在、刚才、目前,the momentary present,life,P2,pos_definition_conflict,0,1,0,2,0.000,0.500,1.000,,momentary
+73,than,conj.,比、较之,"used when comparing two people, things, or amounts",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
+74,like,v.,喜欢、像,find enjoyable or agreeable,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,enjoyable,agreeable|enjoyable
+75,other,adj.,其他的、另外的、从前的,not the same one or ones already mentioned or implied,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.600,,
+76,how,adv.,如何、怎样、多少,In what manner or way,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+77,then,adv.,然后、当时,that time; that moment,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+78,its,pron.,它的,used to show that something belongs to or is connected with a thing or animal,life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+79,our,pron.,我们的,used to show that something belongs to or is connected with us,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+80,two,num.,二、二个,the cardinal number that is the sum of one and one or a numeral representing this number,life,AUTO_CLEAR,,0,0,0,8,0.125,0.375,0.750,numeral,cardinal|numeral|sum
+81,more,adv.,更多、更,"to a greater amount, number, or degree",life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+82,these,pron.,这些,used to point to people or things that are near or being discussed,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
+83,want,v.,想要、需要,have need of,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+84,way,n.,路、路线、路途,the condition of things generally,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+85,look,v.,看、看起来,perceive with attention,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+86,first,adv.,首先、最先,before anything or anyone else,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+87,also,adv.,也、并且、同样地,in addition,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+88,new,adj.,新的、陌生的、最近的,not of long duration,life,AUTO_CLEAR,,0,0,0,2,0.000,0.500,1.000,,duration
+89,because,conj.,因为,By or for the cause that,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+90,day,n.,天、日子、白天,time for Earth to make a complete rotation on its axis,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,0.667,,axis|rotation
+92,use,v.,使用、利用,put into service,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+93,no,adv.,不、没有,a negative,life,P2,pos_definition_conflict,0,1,0,1,0.000,0.000,1.000,,
+94,man,n.,男人、人类、人,an adult person who is male (as opposed to a woman),life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+95,find,v.,发现、感到、找到,"come upon, as if by accident",life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+96,here,adv.,在这里、此时、这里,the present location,life,P2,pos_definition_conflict,0,1,0,2,0.000,0.000,1.000,,
+97,thing,n.,事物、东西、物,a special situation,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+98,give,v.,给、给予,"cause to have, in the abstract sense or physical sense",life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,1.000,,abstract
+99,many,adj.,许多的、许多,a quantifier that can be used with count nouns and is often preceded by `as' or `too' or `so' or `that',life,AUTO_CLEAR,,0,0,0,6,0.167,0.500,0.833,quantifier,nouns|preceded|quantifier
+100,well,adv.,很好地、充分地,"in a good, successful, or satisfactory way",life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,satisfactory
+101,only,adv.,只、仅仅,"used to say that there is no more than one thing, person, amount, or choice",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.429,,
+102,those,pron.,那些,used to point to people or things farther away or already mentioned,life,AUTO_CLEAR,,0,0,0,8,0.000,0.125,0.625,,farther
+103,tell,v.,告诉、说、吩咐,let something be known,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+105,very,adv.,非常、很,precisely as stated,life,AUTO_CLEAR,,0,0,0,2,0.500,0.500,1.000,precisely,precisely
+107,even,adv.,甚至、即使,used to emphasize something surprising or more extreme,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+108,back,adv.,回来、向后,"toward an earlier place, position, or time",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+109,any,adj.,任何的,one or some or every or all without specification,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,specification
+110,good,adj.,好的、良好的,having desirable or positive qualities especially those suitable for a thing specified,life,AUTO_CLEAR,,0,0,0,7,0.000,0.429,0.857,,desirable|specified|suitable
+111,woman,n.,女人、女性,an adult female person (as opposed to a man),life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+112,through,prep.,穿过、通过,(of a route or journey etc.) continuing without requiring stops or changes,life,AUTO_CLEAR,,0,0,0,8,0.125,0.125,1.000,etc,etc
+113,us,pron.,我们,used by the speaker for a group including himself or herself as the object,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+114,life,n.,生活、生命、人生,a characteristic state or mode of living,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+115,child,n.,孩子、产物、追随者,a young person of either sex,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+117,work,n.,工作、劳动、职业,activity directed toward making or doing something,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+118,down,adv.,向下、下来,toward a lower place or position,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+119,may,aux.,可以、可能,used to say that something is possible or that someone has permission,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,0.667,,permission
+120,after,prep.,在……之后,later than a particular time or event,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+121,should,aux.,应该、应当,"used to say what is right, expected, or likely",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.600,,
+122,call,v.,打电话、称呼、叫,"to speak to someone by phone, give a name, or ask someone to come",life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.750,,
+123,world,n.,世界、地球、宇宙,people in general,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+124,over,prep.,在……上方、越过、遍及,"above, across, or covering something",life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+125,school,n.,学校、上学,an educational institution,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+126,still,adv.,仍然、还是,continuing to happen or be true at the present time,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+127,try,v.,尝试、试用、努力,make an effort or attempt,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+130,last,adj.,最后的、持续,the last or lowest in an ordering or series,life,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.750,,
+131,ask,v.,问、要求,inquire about,life,AUTO_CLEAR,,0,0,0,1,0.000,1.000,1.000,,inquire
+132,need,n.,需要、必须、缺乏,a condition requiring relief,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+133,too,adv.,也、非常、太,to a degree exceeding normal or proper limits,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,1.000,,exceeding
+134,feel,v.,感觉、觉得、触摸,undergo an emotional sensation or be in a particular state of mind,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,1.000,,sensation|undergo
+135,three,num.,三、三个,the cardinal number that is the sum of one and one and one,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,0.500,,cardinal|sum
+137,state,n.,状态、州、国家,"a condition, one of the main political areas of a country, or a country",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.857,,
+138,never,adv.,从不、决不、不曾,not ever; at no time in the past or future,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+139,become,v.,变成、变得,enter or assume a certain state or condition,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+140,between,prep.,在...之间,in the interval,life,AUTO_CLEAR,,0,0,0,1,0.000,1.000,1.000,,interval
+141,high,adj.,高的、高度较大的,far above the ground or greater than the usual level,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+142,something,pron.,某事、某物,"Anything unknown, undetermined, or not specifically",life,AUTO_CLEAR,,0,0,0,4,0.250,0.250,1.000,undetermined,undetermined
+143,really,adv.,实际上、真实地、实在,in accordance with truth or fact or reality,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,1.000,,accordance
+144,most,pron.,大多数、最,(superlative of `many' used with count nouns and often preceded by `the') quantifier meaning the greatest in number,life,AUTO_CLEAR,,0,0,0,11,0.182,0.364,0.818,quantifier|superlative,nouns|preceded|quantifier|superlative
+145,another,adj.,另外的、再一的、不同的,any of various alternatives,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+146,much,n.,大量、许多、重要的事,a great amount or extent,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+147,family,n.,家庭、家人、族,a social unit living together,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+148,own,adj.,自己的、拥有,belonging to or on behalf of a specified person (especially yourself),life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,1.000,,behalf|specified
+150,leave,v.,离开、留下,go away from a place,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+151,put,v.,放、安置、使处于,to move something into a particular place or position,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+152,old,adj.,老的、旧的,(used especially of persons) having lived for a relatively long time or attained a specific age,life,AUTO_CLEAR,,0,0,0,10,0.000,0.100,0.800,,attained
+153,while,conj.,当……时、虽然,during the time that something happens; sometimes used to contrast two facts,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.500,,
+154,mean,v.,意思是、意味着、打算,"to express, show, or intend a particular idea",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+156,keep,v.,保持、保留、继续,"to continue to have, hold, or do something",life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+157,student,n.,学生、研究者、学者,a learner who is enrolled in an educational institution,life,AUTO_CLEAR,,0,0,0,4,0.250,0.500,1.000,learner,enrolled|learner
+158,why,adv.,为什么,for what reason or purpose,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+159,let,v.,让、假设、出租,make it possible through a specific action or lack of action for something to happen,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.750,,
+160,great,adj.,很棒的、伟大的,relatively large in size or number or extent,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+161,same,adj.,相同的、同样的,not different; exactly like another person or thing,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+162,big,adj.,大的、重要的,"large in size, amount, or importance",life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+163,group,n.,团体、组、团,any number of entities (members) considered as a unit,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,1.000,,entities
+164,begin,v.,开始,"have a beginning, in a temporal, spatial, or evaluative sense",life,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.800,evaluative|temporal,evaluative|spatial|temporal
+165,seem,v.,象是、似乎,appear to exist,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+166,country,n.,国家、乡村、地区,the territory occupied by a nation,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+167,help,v.,帮助、协助,to make it easier for someone to do something,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+168,talk,n.,谈话、交谈、会谈,an exchange of ideas via conversation,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+169,where,adv.,在哪里,At or in what place,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+170,turn,v.,转动、转向、轮到,to move around a point or change direction,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+171,problem,n.,问题、难题,a state of difficulty that needs to be resolved,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+172,every,adj.,每一、所有的,(used of count nouns) each and all of the members of a group considered singly and without exception,life,AUTO_CLEAR,,0,0,0,9,0.111,0.222,0.778,singly,nouns|singly
+173,start,v.,开始、出发,to begin doing something or begin to happen,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
+174,hand,n.,手、爪、指针,the (prehensile) extremity of the superior limb,life,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,1.000,1.000,extremity|prehensile,extremity|limb|prehensile|superior
+175,might,aux.,可能、也许,used to say that something is possible but not certain,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+176,American,n.,美国人,a native or inhabitant of the United States,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,inhabitant
+177,show,n.,显示、表现、展览,the act of publicly exhibiting or entertaining,life,P3,definition_too_advanced,0,0,1,4,0.250,0.750,1.000,publicly,entertaining|exhibiting|publicly
+178,part,n.,部分、局部、零件,something determined in relation to something that includes it,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.600,,
+180,against,prep.,反对、靠着、与……竞争,"in opposition to, touching, or competing with someone or something",life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+181,place,n.,地方、地点、位置,any area set aside for a particular purpose,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+183,such,adj.,如此的、这样的,of so extreme a degree or extent,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+184,again,adv.,再一次、又,one more time or in the same way as before,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.000,,
+185,few,adj.,很少的、不多的、少数的,not many; only a small number of people or things,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+186,case,n.,情形、情况、箱,an occurrence of something,life,AUTO_CLEAR,,0,0,0,2,0.000,0.500,0.500,,occurrence
+188,week,n.,星期、周,any period of seven consecutive days,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,consecutive
+189,company,n.,公司、友伴、交往,an institution created to conduct business,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+191,Mr,word,先生,a form of address for a man,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+191,system,n.,系统、体系、制度,instrumentality that combines interrelated interacting artifacts designed to work as a coherent entity,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,9,0.333,0.667,0.889,artifacts|instrumentality|interrelated,artifacts|coherent|entity|instrumentality|interacting|interrelated
+192,each,adj.,每个、每一,(used of count nouns) every one considered individually,life,AUTO_CLEAR,,0,0,0,7,0.143,0.286,0.571,individually,individually|nouns
+193,right,adj.,正确的、合适的,"correct, true, or suitable for a situation",life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,1.000,,suitable
+194,program,n.,节目、节目单、程序,a system of projects or services intended to meet a public need,life+cet4+cet6,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.714,,
+195,hear,v.,听到、倾听、听说,perceive (sound) via the auditory sense,life,AUTO_CLEAR,,0,0,0,5,0.200,0.200,1.000,auditory,auditory
+197,question,n.,问题、询问,an instance of questioning,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+198,during,prep.,在...的时候,In the time of,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
+200,play,v.,玩、播放、演奏,"to take part in a game, make music, or use something for enjoyment",life,AUTO_CLEAR,,0,0,0,8,0.125,0.125,0.375,enjoyment,enjoyment
+201,government,n.,政府、内阁,the organization that is the governing authority of a political unit,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.200,1.000,,governing
+202,run,v.,跑、运行、经营,"to move quickly on foot, operate, or manage something",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
+203,small,adj.,小的、少的、小型的,limited or below average in number or quantity or magnitude or extent,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,1.000,,magnitude|quantity
+204,number,n.,数、数字、数目,the property possessed by a sum or total or indefinite quantity of units or individuals,life,AUTO_CLEAR,,0,0,0,8,0.000,0.375,1.000,,indefinite|quantity|sum
+205,off,adj.,关着的、不再生效的、处于...境况的,not in operation or operational,life,AUTO_CLEAR,,0,0,0,2,0.000,0.500,1.000,,operational
+206,always,adv.,总是、始终,at all times,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
+207,move,n.,移动、迁居、步骤,the act of deciding to do something,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+209,night,n.,夜、夜晚、晚上,the time after sunset and before sunrise while it is dark outside,life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.800,,sunrise|sunset
+210,live,v.,生活、居住、活着,lead a certain kind of life,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+211,point,n.,点、小数点、标点,a geometric element that has position but no extension,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.250,0.500,1.000,geometric,extension|geometric
+212,believe,v.,相信,accept as true,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+213,hold,v.,拿着、保持、举行,have or hold in one's hands or grip,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.250,,grip
+214,today,n.,今天、当今、现在,the present time or age,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+215,bring,v.,带来、产生、促使,take something or somebody with oneself somewhere,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,0.600,,oneself
+216,happen,v.,发生、恰巧,come to pass,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+217,next,adj.,下一个、接下来,at the time or occasion immediately following,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+218,without,prep.,没有、不、在...之外,On or at the outside of,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+219,before,prep.,在...之前,earlier in time,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+220,large,adj.,大的、大量的、宽大的,above average in size or number or quantity or magnitude or extent,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,0.833,,magnitude|quantity
+222,million,n.,百万、无数,the number that is represented as a one followed by 6 zeros,life,AUTO_CLEAR,,0,0,0,5,0.200,0.200,0.600,zeros,zeros
+223,must,aux.,必须、一定,used to say that something is necessary or certainly true,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+224,home,n.,家、避难所、故乡,where you live at a particular time,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+225,under,prep.,在...之下、低于,"lower in rank, power, or authority",life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+226,water,n.,水、雨水、海水,binary compound that occurs at room temperature as a clear colorless odorless tasteless liquid,life,P3,definition_too_advanced,0,0,1,10,0.400,0.600,1.000,binary|colorless|odorless|tasteless,binary|colorless|compound|liquid|odorless|tasteless
+227,room,n.,房间、空位、场所,an area within a building enclosed by walls and floor and ceiling,life,AUTO_CLEAR,,0,0,0,7,0.000,0.143,1.000,,enclosed
+228,write,v.,书写、著述、写,produce a literary work,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+229,mother,n.,母亲、修女院长,a woman who has given birth to a child (also used as a term of address to your mother),life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.375,,
+230,area,n.,区域、面积、范围,a particular geographical region of indefinite boundary (usually serving some special purpose or distinguished by its people or culture or geography),life+cet4+postgrad,AUTO_CLEAR,,0,0,0,13,0.000,0.308,0.923,,distinguished|geographical|geography|indefinite
+231,national,adj.,国家的、国立的、全国性的,of or relating to or belonging to a nation or country,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+232,money,n.,金钱、一笔款、财富,the most common medium of exchange,life,AUTO_CLEAR,,0,0,0,3,0.000,0.333,1.000,,medium
+233,story,n.,故事、小说、传奇,a piece of fiction that narrates a chain of related events,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,1.000,,narrates
+234,young,adj.,年轻的、年幼的,having lived for only a short time,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+235,fact,n.,事实、真实性、真相,a piece of information about circumstances that exist or events that have occurred,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
+236,month,n.,月,a time unit of approximately 30 days,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+237,different,adj.,不同的,unlike in nature or quality or form or degree,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+238,lot,n.,许多、大量,a large number or amount,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+240,study,v.,学习、研究,applying the mind to learning and understanding a subject (especially by reading),life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
+241,book,n.,书、书籍、帐簿,a written work or composition that has been published (printed on pages bound together),life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.750,,
+242,eye,n.,眼睛、视力、看,the organ of sight,life,AUTO_CLEAR,,0,0,0,2,0.000,0.500,1.000,,organ
+243,job,n.,工作、零活、职业,a specific piece of work required to be done as a duty or for a specific fee,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.750,,
+244,word,n.,话、消息、词,a unit of language that native speakers can identify,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+245,though,adv.,然而、可是,(postpositive) however,life,AUTO_CLEAR,,0,0,0,2,0.500,0.500,1.000,postpositive,postpositive
+246,business,n.,生意、事情、业务,a commercial or industrial enterprise and the people who constitute it,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+247,four,num.,四、四个,the cardinal number that is the sum of three and one,life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.400,,cardinal|sum
+248,issue,n.,问题、议题、期号,an important question that is in dispute and must be settled,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+249,side,n.,旁边、侧、方面,a place within a region identified relative to a center or reference location,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.875,,
+250,kind,n.,种类、友善的,a category of things distinguished by some common characteristic or quality,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,0.833,,distinguished
+251,head,n.,头、头脑、领袖,the upper part of the human body or the front part of the body in animals,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.750,,
+252,far,adj.,远的、久远的、遥远的,located at a great distance in time or space or degree,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.667,,
+253,black,n.,黑色、黑颜料,the quality or state of the achromatic color of least lightness (bearing the least resemblance to white),life,AUTO_CLEAR,,0,0,0,10,0.200,0.300,0.900,achromatic|lightness,achromatic|lightness|resemblance
+254,long,adj.,长的、长久的、冗长的,primarily temporal sense,life,AUTO_CLEAR,,0,0,0,3,0.333,0.333,1.000,temporal,temporal
+255,both,adj.,两者的,(used with count nouns) two considered together,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,0.667,,nouns
+256,little,adj.,小的、少量,(quantifier used with mass nouns) small in quantity or degree,life,AUTO_CLEAR,,0,0,0,7,0.143,0.429,0.714,quantifier,nouns|quantifier|quantity
+257,house,n.,房子、住宅、机构,a dwelling that serves as living quarters for one or more families,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,0.500,,dwelling
+258,yes,adv.,是,an affirmative,life,P2,pos_definition_conflict,0,1,0,1,1.000,1.000,1.000,affirmative,affirmative
+260,since,prep.,自...以后、自...以来,From the time of,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
+262,provide,v.,提供、供应、规定,"give what is desired or needed, especially support, food or sustenance",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.143,0.143,0.714,sustenance,sustenance
+263,service,n.,服务、贡献、雇佣,work done by one person or group that benefits another,life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.286,,
+264,around,prep.,包围、在...周围、四处,by a circular or circuitous route,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,circuitous,circuitous|circular
+265,friend,n.,朋友、支持者、赞助者,a person you know well and regard with affection and trust,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,0.667,,affection
+266,important,adj.,重要的、有地位的、大量的,of great significance or value,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+267,father,n.,父亲、祖先、长辈,a male parent (also used as a term of address to your father),life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.667,,
+268,sit,v.,坐、就座、坐落,be seated,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+269,away,adv.,离去,not present; having left,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+270,until,prep.,直到……为止,up to a particular time or event,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+271,power,n.,力、体力、力量,possession of controlling influence,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.333,1.000,,possession
+272,hour,n.,小时、钟头、时间,a period of time equal to 1/24th of a day,life,AUTO_CLEAR,,0,0,0,5,0.200,0.200,0.600,th,th
+273,game,n.,比赛、玩耍、比分,a contest with rules to determine a winner,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,1.000,,contest
+274,often,adv.,时常、常常,in many cases or instances,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+275,yet,adv.,还、尚、仍然,up to the present time,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+276,line,n.,列、线、绳,a formation of people or things one beside another,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.167,0.333,,formation
+277,political,adj.,政治的、政治上的、政党的,involving or characteristic of politics or parties or politicians,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+278,end,n.,结束、终点、目标,either extremity of something that has length,life,AUTO_CLEAR,,0,0,0,3,0.333,0.333,0.667,extremity,extremity
+279,among,prep.,在……之中,in the middle of or included in a group of people or things,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+280,ever,adv.,曾经、究竟、永远,at any time,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
+281,stand,n.,站立、站住、停顿,the position where a thing or person stands,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+282,bad,adj.,坏的,having undesirable or negative qualities,life,AUTO_CLEAR,,0,0,0,3,0.000,0.333,1.000,,undesirable
+283,lose,v.,遗失、损失、丢失,fail to keep or to maintain,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+284,however,adv.,然而、无论如何、究竟怎样,despite anything to the contrary (usually following a concession),life+cet4+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.333,1.000,,concession|contrary
+285,member,n.,成员、会员,one of the persons who compose a social group (especially individuals who have joined and participate in a group organization),life,AUTO_CLEAR,,0,0,0,11,0.000,0.091,0.727,,compose
+286,pay,v.,支付、工资,"give money, usually in exchange for goods or services",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.333,,
+287,law,n.,法律、法则、定律,the collection of rules imposed by authority,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+288,meet,v.,遇见、会面,come together,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+289,car,n.,汽车、客车,a motor vehicle with four wheels,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,motor
+290,city,n.,城市、市,a large and densely populated urban area,life,AUTO_CLEAR,,0,0,0,5,0.400,0.400,0.600,densely|populated,densely|populated
+291,almost,adv.,几乎、差不多,(of actions or states) slightly short of or not quite accomplished,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
+292,include,v.,包括、把...算入、包住,"have as a part, be made up out of",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+293,continue,v.,继续、持续,to keep doing something or keep happening without stopping,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.167,,
+294,set,v.,设置、放置、确定,"to put something in a position or decide a value, time, or rule",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.571,,
+295,later,adv.,以后、随后,coming at a subsequent time or stage,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.500,,subsequent
+296,community,n.,社区、公众、共有,a group of people living in a particular local area,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.333,,
+298,name,n.,名字、名称、姓名,a language unit by which a person or thing is known,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.600,,
+299,five,num.,五、五个,the cardinal number that is the sum of four and one,life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.400,,cardinal|sum
+300,once,adv.,一次、曾经、一旦,on one occasion,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+301,white,adj.,白色的,having the colour of fresh snow or milk,life,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,1.000,colour|milk,colour|milk
+302,least,n.,最少、最小、最小限度,something that is of no importance,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+303,president,n.,总统、总裁、董事长,an executive officer of a firm or corporation,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+304,learn,v.,学习、认识到、得知,gain knowledge or skills,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+305,real,adj.,真的、真实的、实际的,being or occurring in fact or actuality,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.333,0.333,0.667,actuality,actuality
+306,change,v.,改变、变化、更换,to make or become different,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.000,,
+307,team,n.,队、组,a cooperative unit (especially in sports),life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.250,1.000,,cooperative
+308,minute,n.,分、分钟、片刻,a unit of time equal to 60 seconds or 1/60th of an hour,life,AUTO_CLEAR,,0,0,0,6,0.167,0.167,0.667,th,th
+309,best,adj.,最好的、最合适的,better than all other people or things,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.000,,
+310,several,adj.,几个的、一些的、各自的,(used with count nouns) of an indefinite number more than 2 or 3 but not many,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,0.500,,indefinite|nouns
+311,idea,n.,主意、办法、理想,the content of cognition,life,AUTO_CLEAR,,0,0,0,2,0.500,0.500,1.000,cognition,cognition
+312,kid,n.,孩子、小孩,a child or young person,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+313,body,n.,身体、人、尸体,"the entire structure of an organism (an animal, plant, or human being)",life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,1.000,,organism
+314,information,n.,消息、知识、通知,a message received and understood,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+315,nothing,n.,无、不关紧要之事、零,a quantity of no importance,life,AUTO_CLEAR,,0,0,0,2,0.000,0.500,1.000,,quantity
+316,ago,adv.,以前,gone by; or in the past,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+318,lead,v.,带领、领先、通向,"to guide people, be ahead, or go to a place",life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+319,social,adj.,社会的、群居的、社交的,relating to human society and its members,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+320,understand,v.,理解、了解、领会,know and comprehend the nature or meaning of,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.500,,comprehend
+321,whether,conj.,是否、不管,used when talking about two possibilities or expressing doubt,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+323,watch,v.,观看、留意,to look at something for a period of time and pay attention,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.333,,
+324,together,adv.,一起、共同,with another person or in one group,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
+325,follow,v.,跟随、沿行、遵循,"to travel behind, go after, come after",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+327,centre,n.,中心、中央,the middle point or main part of a place or activity,cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+327,parent,n.,父母、父母亲、根源,a father or mother,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+329,stop,n.,停止、车站、逗留,the event of something ending,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+330,face,n.,脸、面容、正面,the front of the human head from the forehead to the chin and ear to ear,life,AUTO_CLEAR,,0,0,0,7,0.000,0.286,0.857,,chin|forehead
+331,anything,pron.,任何事,"Any object, act, state, event, or fact whatever",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.667,,
+332,create,v.,创造、建造、引起,bring into existence,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+333,public,adj.,公众的、公共的,not private; open to or concerning the people as a whole,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+334,already,adv.,已经、早已,prior to a specified or implied time,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,specified
+335,speak,v.,说、说话、演说,use language,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+336,others,pron.,其他人,other people or things,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+337,read,v.,读、阅读、理解,interpret something that is written or printed,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+338,level,n.,水平、水准、平地,height above ground,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+339,allow,v.,允许、同意给予、承认,let have,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
+340,add,v.,增加、添加、附带说明,make an addition (to),life+cet4+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+341,office,n.,办公室、部、公职,place of business where professional or clerical duties are performed,life,AUTO_CLEAR,,0,0,0,6,0.167,0.167,0.667,clerical,clerical
+342,spend,v.,花费、度过,pass time in a specific way,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+343,door,n.,门,a swinging or sliding barrier that will close the entrance to a room or building or vehicle,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.875,,
+344,health,n.,健康、卫生、蓬勃,a healthy state of wellbeing free from disease,life,AUTO_CLEAR,,0,0,0,5,0.200,0.200,0.800,wellbeing,wellbeing
+345,person,n.,人、人身、人称,a human being,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
+346,art,n.,艺术、人文科学、技术,the products of human creativity,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.333,0.333,1.000,creativity,creativity
+347,sure,adj.,确信的、一定的,certain that something is true or will happen,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+349,war,n.,战争、战争状态、战术,the waging of armed conflict against an enemy,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+350,history,n.,历史、过去、经历,the aggregate of past events,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.333,0.333,1.000,aggregate,aggregate
+351,party,n.,宴会、党、政党,an organization to gain political power,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+352,within,prep.,在……之内、不超过,"inside a place, period, distance, or limit",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+353,grow,v.,成长、增长、种植,"become larger, greater, or bigger",life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.000,,
+354,result,n.,结果、成绩、答案,something that results,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+355,open,adj.,打开的、开放的,"not closed, covered, or blocked",life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+357,morning,n.,早晨、早上、初期,the time period between dawn and noon,life,AUTO_CLEAR,,0,0,0,4,0.250,0.500,0.750,noon,dawn|noon
+358,walk,n.,走、散步、步行,the act of traveling by foot,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+359,reason,n.,理由、原因、理智,a rational motive for a belief or action,life,AUTO_CLEAR,,0,0,0,4,0.000,0.500,1.000,,motive|rational
+360,low,adj.,低的、低声地,less than normal in degree or intensity or amount,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,1.000,,intensity
+360,programme,n.,节目、节目单、程序,an announcement of the events that will occur as part of a theatrical or sporting event,postgrad,AUTO_CLEAR,,0,0,0,7,0.286,0.286,0.857,announcement|theatrical,announcement|theatrical
+361,win,v.,赢、获胜,be the winner in a contest or competition,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.333,1.000,,contest
+362,research,n.,研究、调查、考察,systematic investigation to establish facts,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,systematic
+363,girl,n.,女孩、少女,a young woman,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+364,guy,n.,家伙、人,an informal term for a youth or man,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,4,0.250,0.250,0.750,informal,informal
+365,early,adj.,早的、早熟的,at or near the beginning of a period of time or course of events or before the usual or expected time,life,AUTO_CLEAR,,0,0,0,9,0.000,0.000,0.667,,
+366,food,n.,食物、养料,any substance that can be metabolized by an animal to give energy and build tissue,life,AUTO_CLEAR,,0,0,0,7,0.143,0.143,0.857,metabolized,metabolized
+367,himself,pron.,他自己、他亲自,An emphasized form of the third person masculine,life,P2,pos_definition_conflict,0,1,0,5,0.000,0.200,0.800,,masculine
+369,moment,n.,片刻、瞬间、重要,a particular point in time,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+370,air,n.,空气、旋律、态度,a mixture of gases (especially oxygen) required for breathing,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,1.000,,oxygen
+371,teacher,n.,教师、老师、导师,a person whose occupation is teaching,life,AUTO_CLEAR,,0,0,0,3,0.000,0.333,0.667,,occupation
+372,force,n.,力量、武力,a powerful effect or influence,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+373,offer,v.,提供、提议,"make available or accessible, provide or furnish",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.600,,accessible|furnish
+374,enough,n.,充足、够、很多,an adequate quantity,life,AUTO_CLEAR,,0,0,0,2,0.000,1.000,1.000,,adequate|quantity
+376,education,n.,教育、训练、教育学,the activities of educating or instructing,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,educating|instructing
+377,across,prep.,越过、穿过、与...相交叉,to the opposite side,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+378,although,conj.,虽然、尽管,used to introduce a fact that makes the main statement surprising,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.571,,
+379,remember,v.,记得、回忆起、记住,recall knowledge from memory,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
+380,foot,n.,脚、步调、英尺,the part of the leg of a human being below the ankle joint,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,0.800,,ankle
+381,second,n.,秒、瞬间、第二名,1/60 of a minute,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
+382,boy,n.,男孩、少年,a male child or young male person,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+383,maybe,adv.,也许、可能,used when something is possible but not certain,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+384,toward,prep.,朝、向、对于,in the direction of someone or something,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+385,able,adj.,能干的、能够的,(usually followed by `to') having the necessary means or skill or know-how or authority to do something,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.500,,
+386,age,n.,年龄、老年、成年,how long something has existed,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+388,policy,n.,政策、方针、策略,a plan of action adopted by an individual or social group,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.667,,
+389,everything,pron.,每件事物、所有事物,Whatever pertains to the subject under consideration,life,AUTO_CLEAR,,0,0,0,4,0.250,0.250,1.000,pertains,pertains
+390,love,n.,爱、恋爱、爱情,a strong positive emotion of regard and affection,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,1.000,,affection
+391,process,n.,程序、进行、过程,(psychology) the performance of some composite cognitive activity,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.400,1.000,,cognitive|composite
+392,music,n.,音乐、乐曲,an artistic form of auditory communication incorporating instrumental or vocal tones in a structured and continuous manner,life,AUTO_CLEAR,,0,0,0,11,0.091,0.455,1.000,auditory,artistic|auditory|continuous|instrumental|vocal
+393,including,prep.,包含、包括,"have as a part, be made up out of",life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+394,consider,v.,考虑、思考、认为,take into consideration for exemplifying purposes,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,exemplifying
+395,appear,v.,出现、显得、来到,come into sight or view,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+396,actually,adv.,事实上、竟然、如今,in actual fact,life+cet4+cet6,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+397,buy,v.,买、获得,obtain by purchase,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+398,probably,adv.,大概、或许,with considerable certainty,life+cet4+cet6,AUTO_CLEAR,,0,0,0,2,0.000,0.500,1.000,,certainty
+399,human,adj.,人的、人类的,relating to people rather than animals or machines,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+400,wait,n.,等待、等候,the act of waiting (remaining inactive in one place while expecting something),life,AUTO_CLEAR,,0,0,0,8,0.125,0.125,0.500,inactive,inactive
+401,serve,v.,服务、供应、担任,"to provide help, food, or a useful function",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+402,market,n.,市场、交易、集市,the world of commercial activity where goods and services are bought and sold,life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.429,,
+403,die,v.,死亡、消逝、平息,pass from physical life and lose all bodily attributes and functions necessary to sustain life,life,AUTO_CLEAR,,0,0,0,10,0.100,0.200,0.700,bodily,attributes|bodily
+404,send,v.,发送、使进入、寄,cause to go somewhere,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+405,expect,v.,预期、盼望、期待,regard something as probable or likely,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,probable
+407,sense,n.,感应、感觉、感官,a general conscious awareness,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,awareness,awareness|conscious
+408,build,v.,建造、建立、逐步形成,to make something by joining parts or to develop it over time,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.333,,
+409,stay,n.,停留、逗留、制止,continuing or remaining in a place or state,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
+410,fall,v.,落下、跌倒、下降,to move down suddenly or become lower,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
+411,oh,interj.,哦、噢,"used to show surprise, understanding, pain, or another strong feeling",life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.375,,
+412,nation,n.,国家、民族,the people who live in a nation or country,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.000,,
+413,plan,n.,计划、方案、策略,a series of steps to be carried out or goals to be accomplished,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+414,cut,v.,切、割、削减,to divide something with a sharp tool or reduce an amount,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
+415,college,n.,学院、大学、学会,the body of faculty and students of a college,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
+416,interest,n.,兴趣、嗜好、利息,a sense of concern with and curiosity about someone or something,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.200,0.600,,curiosity
+417,death,n.,死亡,the event of dying or departure from life,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.500,,departure
+418,course,n.,课程、路线、过程,education imparted in a series of lessons or meetings,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.200,0.600,,imparted
+419,someone,pron.,有人、某人,a human being,life,P2,pos_definition_conflict,0,1,0,1,0.000,0.000,0.000,,
+420,experience,n.,经历、经验、体验,the accumulation of knowledge or skill that results from direct participation in events or activities,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,8,0.250,0.250,0.875,accumulation|participation,accumulation|participation
+421,behind,adv.,在后地,having the lower score or lagging position in a contest,life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.800,,contest|lagging
+422,reach,v.,到达、伸手够到、达到,"to arrive at a place, level, or goal",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+423,local,adj.,地方性的、当地的、局部的,relating to or applicable to or concerned with the administration of a city or town or district rather than a larger area,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,10,0.000,0.100,0.700,,applicable
+424,six,num.,六、六个,the cardinal number that is the sum of five and one,life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.400,,cardinal|sum
+425,kill,v.,杀死、消磨,cause to die,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+426,remain,v.,仍然是、留下,"be left; of persons, questions, problems, results, evidence, etc.",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.143,0.143,0.286,etc,etc
+427,effect,n.,结果、影响、效果,an impression (especially one that is artificial or contrived),life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.800,,artificial|contrived
+429,yeah,interj.,是、对,an informal way to say yes,life,AUTO_CLEAR,,0,0,0,4,0.250,0.250,0.250,informal,informal
+430,suggest,v.,提议、建议、促成,imply as a possibility,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+431,class,n.,班级、阶级、种类,a collection of things sharing a common attribute,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,0.800,,attribute
+432,control,n.,控制、管理、克制,power to direct or determine,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+433,raise,v.,提高、举起、筹集,to move something higher or increase an amount,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+434,care,n.,关心、照料、小心,attention and help given to someone or something,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.200,,
+435,perhaps,adv.,也许、可能,used to say that something may be true or may happen,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.200,,
+437,late,adj.,迟的、晚的、已故的,being or occurring at an advanced period of time or after a usual or expected time,life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.571,,
+438,hard,adj.,困难的、坚硬的,difficult to do or solid and not easy to bend,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+439,field,n.,领域、田地、场地,a piece of land cleared of trees and usually enclosed,life,AUTO_CLEAR,,0,0,0,6,0.000,0.167,1.000,,enclosed
+440,else,adv.,其他、另外,in addition to or instead of what has already been mentioned,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+441,pass,v.,经过、通过、递给,"to go past, succeed in a test, or give something to someone",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.429,,
+442,former,adj.,从前的、前者的,referring to the first of two things or persons mentioned (or the earlier one or ones of several),life+cet4+postgrad,AUTO_CLEAR,,0,0,0,10,0.000,0.000,0.200,,
+443,sell,v.,卖、背叛、销售,exchange or deliver for money or its equivalent,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,equivalent
+444,major,adj.,主要的、重大的,"very important, serious, or large",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+445,sometimes,adv.,有时、时常、往往,on certain occasions or in certain cases but not always,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.600,,
+446,require,v.,需要、要求,to need something or make something necessary,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.200,,
+447,along,prep.,沿着、向前,with a forward motion,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+448,development,n.,发展,act of improving by expanding or enlarging or refining,life,AUTO_CLEAR,,0,0,0,5,0.000,0.400,1.000,,enlarging|refining
+449,themselves,pron.,他们自己、她们自己、它们自己,used when people or things are both the subject and object of an action,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+450,report,n.,报告、报道、传说,a written document describing the findings of some individual or group,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+451,role,n.,角色、职责、任务,normal or customary activity of a person in a particular social setting,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.143,0.571,,customary
+452,better,adj.,更好的、更合适的,of a higher quality or more suitable than something else,life,AUTO_CLEAR,,0,0,0,5,0.000,0.200,0.400,,suitable
+453,economic,adj.,经济上的、实用的、节省的,"of or relating to an economy, the system of production and management of material wealth",life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.857,,
+454,effort,n.,努力、成就,use of physical or mental energy,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.750,,
+456,decide,v.,决定、判决,"reach, make, or come to a decision about something",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.200,,
+457,rate,n.,比率、率、速度,a magnitude or frequency relative to a time unit,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.800,,frequency|magnitude
+458,strong,adj.,强壮的、坚固的、坚强的,having strength or power greater than average or expected,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+459,possible,adj.,可能的、潜在的、合适的,capable of happening or existing,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+460,heart,n.,心、心脏、中心,the locus of feelings and intuitions,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,locus,intuitions|locus
+461,drug,n.,药、麻药、麻醉药,a substance that is used as a medicine or narcotic,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.250,0.250,0.750,narcotic,narcotic
+463,leader,n.,领导者、社论、指挥,a person who rules or guides or inspires others,life+cet4+cet6,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.600,,
+464,light,n.,光、灯,(physics) electromagnetic radiation that can produce a visual sensation,life,P3,definition_too_advanced,0,0,1,6,0.167,0.667,1.000,electromagnetic,electromagnetic|physics|radiation|sensation
+465,voice,n.,声音、嗓音、嗓子,the distinctive quality or pitch or condition of a person's speech,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.333,0.833,,distinctive|pitch
+466,wife,n.,妻子、太太、夫人,a married woman,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+467,whole,n.,全部、全体、整体,all of something including all its component elements or parts,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+468,police,n.,警察、警察当局、治安,the force of policemen and officers,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.333,0.333,0.667,policemen,policemen
+469,mind,n.,思想、愿望、智力,that which is responsible for one's thoughts and feelings,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
+470,finally,adv.,最后、终于,after an unspecified period of time or an especially long delay,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,6,0.167,0.333,0.667,unspecified,delay|unspecified
+471,pull,v.,拉、拖,to move something toward you or in a particular direction,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+472,return,n.,回来、返回、来回票,a coming to or returning home,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.000,,
+473,free,adj.,自由的、免费的、空闲的,"not controlled, not costing money, or available to use",life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+474,military,n.,军队,the military forces of a nation,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.000,,
+475,price,n.,价格、代价、价值,the amount of money needed to purchase something,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+477,less,adj.,更少的、较小的,(comparative of `little' usually used with mass nouns) a quantifier meaning not as great in amount or degree,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,11,0.091,0.273,0.636,quantifier,comparative|nouns|quantifier
+478,according,adj.,相符的、根据...而定的,(followed by `to') in agreement with or accordant with,life,AUTO_CLEAR,,0,0,0,3,0.333,0.333,0.667,accordant,accordant
+479,decision,n.,决定、决心、决断,the act of making up your mind about something,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
+480,explain,v.,解释、说明,make plain and comprehensible,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,comprehensible,comprehensible|plain
+481,son,n.,儿子、女婿、子孙,a male human offspring,life,AUTO_CLEAR,,0,0,0,3,0.000,0.333,0.667,,offspring
+482,hope,n.,希望、信心、期待,a specific instance of feeling hopeful,life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.750,,hopeful
+484,develop,v.,发展、使发达、进步,"make something new, such as a product or a mental or artistic creation",life,AUTO_CLEAR,,0,0,0,7,0.143,0.286,0.571,creation,artistic|creation
+485,view,n.,视野、风景、见解,the visual percept of a region,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.333,0.333,1.000,percept,percept
+486,relationship,n.,关系、关联,a relation between people,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+487,carry,v.,携带、搬运、承载,have with oneself,life,AUTO_CLEAR,,0,0,0,1,0.000,1.000,1.000,,oneself
+488,town,n.,城镇、市、镇,an urban area with a fixed boundary that is smaller than a city,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+489,road,n.,路、道路、公路,an open way (generally public) for travel or transportation,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+490,drive,v.,驾驶、驱动,to control a vehicle or make something happen,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.200,,
+491,arm,n.,手臂、袖子、狭长港湾,a human limb,life,AUTO_CLEAR,,0,0,0,2,0.000,0.500,0.500,,limb
+492,true,adj.,真实的、正确的、忠诚的,consistent with fact or reality,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+493,federal,adj.,联邦的、联合的、同盟的,national; especially in reference to the government of the United States as distinct from that of its member units,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,9,0.000,0.111,0.556,,distinct
+494,break,v.,打破、弄坏、中断,to damage something so it separates or stops working,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+496,difference,n.,不同、差异,the quality of being unlike or dissimilar,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,3,0.333,0.333,1.000,dissimilar,dissimilar
+497,receive,v.,收到、接到、得到,get something,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+498,thank,v.,感谢、谢谢,express gratitude or show appreciation to,life,AUTO_CLEAR,,0,0,0,4,0.000,0.500,0.750,,appreciation|gratitude
+499,value,n.,价值、价格、购买力,a numerical quantity measured or assigned or computed,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,1.000,,computed|numerical|quantity
+500,international,adj.,国际的,concerning or belonging to all or at least two or more nations,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+501,building,n.,建筑物、建筑,a structure that has a roof and walls and stands more or less permanently in one place,life,AUTO_CLEAR,,0,0,0,8,0.000,0.125,0.500,,permanently
+502,action,n.,行动、活动、动作,something done (usually as opposed to something said),life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.333,,
+503,full,adj.,满的、完整的,containing as much or as many as is possible or normal,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.400,,
+504,model,n.,模型、模范、模特儿,a hypothetical description of a complex entity or process,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.200,0.400,0.800,hypothetical,entity|hypothetical
+505,join,v.,参加、结合、加入,become part of,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.000,,
+506,season,n.,季节、时节、当令期,a period of the year marked by special events or activities in some field,life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.714,,
+507,society,n.,社会、社交界、交往,an extended social group having a distinctive cultural and economic organization,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.143,0.571,,distinctive
+509,tax,n.,税、税款、重负,charge against a citizen's person or property or activity for the support of government,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.714,,
+510,director,n.,主管、导演、董事,someone who controls resources and expenditures,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.250,0.500,,expenditures
+512,position,n.,位置、地位、身分,the particular portion of space occupied by something,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+513,player,n.,竞赛者、上场队员、游戏者,a person who participates in or is skilled at some game,life+cet4+cet6,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+514,agree,v.,同意、赞成、应允,be in accord,life,AUTO_CLEAR,,0,0,0,1,0.000,1.000,1.000,,accord
+515,especially,adv.,尤其、特别、格外,to a distinctly greater extent or degree than is common,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.200,0.800,,distinctly
+516,record,n.,记录、档案、纪录,anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,11,0.091,0.091,0.636,phonograph,phonograph
+517,pick,v.,挑选、采摘、拿取,to choose or take one thing from a group,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.200,,
+518,wear,n.,穿着、戴、使用,impairment resulting from long use,life,AUTO_CLEAR,,0,0,0,4,0.250,0.250,0.250,impairment,impairment
+519,paper,n.,纸、文件、文章,a material made of cellulose pulp derived mainly from wood or rags or certain grasses,life,AUTO_CLEAR,,0,0,0,10,0.300,0.500,0.900,cellulose|grasses|pulp,cellulose|derived|grasses|pulp|rags
+520,special,adj.,特别的、特殊的,for a special service or occasion,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,
+521,space,n.,位置、空间、距离,the unlimited expanse in which everything is located,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.250,0.500,0.750,expanse,expanse|unlimited
+522,ground,n.,土地、战场、场地,a position to be won or defended in battle (or as if in battle),life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.600,,
+523,form,n.,形状、形体、类型,the phonological or orthographic sound or appearance of a word that can be used to describe or identify something,life,AUTO_CLEAR,,0,0,0,9,0.222,0.222,0.667,orthographic|phonological,orthographic|phonological
+524,support,n.,支持、支撑、援助,the activity of providing for or maintaining by supplying with money or necessities,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,6,0.000,0.167,0.667,,necessities
+525,event,n.,事件、结果、事情的进程,something that happens at a given place and time,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.000,,
+526,official,n.,官员、公务员、职员,a worker who holds or is invested with an office,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+527,whose,pron.,谁的,used to ask or say which person something belongs to,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.167,,
+528,matter,n.,事件、物质、原因,a vaguely specified concern,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,vaguely,specified|vaguely
+529,everyone,pron.,每个人、人人,every person in a group,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.000,,
+530,center,n.,中心、中心点、中锋,an area that is approximately central within some larger region,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.500,,
+531,couple,n.,对、夫妇、数个,a pair who associate with one another,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
+532,site,n.,位置、场所、地点,the piece of land on which something is located (or is to be located),life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+534,project,n.,项目、计划,a planned undertaking,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.500,0.500,,undertaking
+535,hit,n.,打击、打、冲撞,(baseball) a successful stroke in an athletic contest (especially in baseball),life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.286,0.857,,contest|stroke
+536,base,n.,底部、垒、基础,installation from which a military force initiates operations,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.400,0.600,,initiates|installation
+537,activity,n.,活动、行动、活跃,any specific behavior,life+cet4+postgrad,AUTO_CLEAR,,0,0,0,2,0.000,0.000,1.000,,
+538,star,n.,星、恒星、星形物,(astronomy) a celestial body of hot gases that radiates energy derived from thermonuclear reactions in the interior,life,AUTO_CLEAR,,0,0,0,11,0.182,0.545,0.909,celestial|thermonuclear,astronomy|celestial|derived|interior|radiates|thermonuclear
+539,table,n.,桌子、餐桌、工作台,a set of data arranged in rows and columns,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,0.800,,
+541,court,n.,法院、庭院、奉承,an assembly (including one or more judges) to conduct judicial business,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.286,0.571,,assembly|judicial
+542,produce,v.,生产、产生,bring forth or yield,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.667,,
+543,eat,v.,吃、腐蚀,take in solid food,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,0.333,,

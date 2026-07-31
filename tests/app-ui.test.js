@@ -26,8 +26,8 @@ test('PWA 强制更新只清理本应用作用域和缓存前缀', () => {
 });
 
 test('发布资源带版本号，强制更新不会继续命中旧 CSS 和主脚本', () => {
-  assert.match(htmlSource, /css\/style\.css\?v=26/);
-  assert.match(htmlSource, /js\/app\.js\?v=26/);
+  assert.match(htmlSource, /css\/style\.css\?v=27/);
+  assert.match(htmlSource, /js\/app\.js\?v=27/);
 });
 
 test('自然语音：换页停止旧朗读、支持设备音色选择和试听', () => {
@@ -49,7 +49,10 @@ test('成人路线：独立首页先背词再小测，测验不累加儿童星�
   assert.match(appSource, /function adultLearningMarkup\(word\)/);
   assert.match(appSource, /ENGLISH CLUE · 英英理解/);
   assert.match(appSource, /WORD BUILDING · 构词/);
-  assert.match(appSource, /举一反三/);
+  assert.match(appSource, /WORD FAMILY · 词族/);
+  assert.match(appSource, /SAME PATTERN · 同构词例词/);
+  assert.match(appSource, /EXAMPLE · 例句/);
+  assert.match(appSource, /COLLOCATIONS · 常用搭配/);
   assert.match(appSource, /word\.forms/);
   assert.match(cssSource, /\.adult-word-long[\s\S]*font-size: clamp/);
   assert.match(cssSource, /\.adult-word-very-long[\s\S]*font-size: clamp/);

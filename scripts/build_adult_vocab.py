@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = Path("/tmp/ecdict.csv")
 DEFAULT_OUTPUT = ROOT / "js" / "adult-words.js"
 COMMON_MULTIPOS_SOURCE = ROOT / "scripts" / "data" / "adult-vocab-senses.csv"
+LEARNER_CONTENT_SOURCE = ROOT / "scripts" / "data" / "adult-vocab-learner-content.csv"
 LIFE_LIMIT = 1_800
 
 TRACK_ORDER = ("life", "cet4", "cet6", "postgrad")
@@ -977,6 +978,97 @@ def read_common_multipos(
 
 COMMON_MULTIPOS = read_common_multipos()
 
+
+def read_learner_content(
+    source: Path = LEARNER_CONTENT_SOURCE,
+) -> dict[str, list[dict[str, Any]]]:
+    """Read human-reviewed learner copy kept outside the generated module.
+
+    The ECDICT English field is useful as source material, but it is not a
+    learner dictionary and can select an abbreviation or a rare homograph for
+    short, common words.  Reviewed rows are therefore the specification for
+    exposed definitions, examples and collocations.
+    """
+
+    if not source.is_file():
+        return {}
+    content: dict[str, list[dict[str, Any]]] = {}
+    with source.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        required = {
+            "word", "pos", "zh", "definition", "example",
+            "collocations", "status", "primary",
+        }
+        missing = required.difference(reader.fieldnames or ())
+        if missing:
+            raise ValueError(
+                "Learner-content CSV is missing columns: "
+                + ", ".join(sorted(missing))
+            )
+        for line_number, row in enumerate(reader, start=2):
+            key = (row.get("word") or "").strip().casefold()
+            pos = {
+                "a.": "adj.",
+                "ad.": "adv.",
+                "vt.": "v.",
+                "vi.": "v.",
+                "vt.vi.": "v.",
+                "vi.vt.": "v.",
+            }.get((row.get("pos") or "").strip().lower(), (row.get("pos") or "").strip().lower())
+            zh = re.sub(r"\s+", " ", row.get("zh") or "").strip()
+            definition = re.sub(r"\s+", " ", row.get("definition") or "").strip()
+            example = re.sub(r"\s+", " ", row.get("example") or "").strip()
+            collocations = [
+                item.strip()
+                for item in (row.get("collocations") or "").split("|")
+                if item.strip()
+            ]
+            status = (row.get("status") or "").strip().lower()
+            primary = (row.get("primary") or "").strip().lower() in {"1", "true", "yes"}
+            if not key or not definition or not zh or not pos:
+                raise ValueError(
+                    "Invalid learner-content row "
+                    f"{line_number}: word, pos, zh and definition are required"
+                )
+            if status not in {"reviewed", "generated"}:
+                raise ValueError(
+                    f"Invalid learner-content status for {key}: {status or '(empty)'}"
+                )
+            if len(definition) > 150:
+                raise ValueError(f"Learner definition is too long for {key}")
+            if len(collocations) > 3:
+                raise ValueError(f"Too many collocations for {key}")
+            if any(item["pos"] == pos for item in content.get(key, [])):
+                raise ValueError(f"Duplicate learner-content sense: {key} {pos}")
+            content.setdefault(key, []).append({
+                "pos": pos,
+                "zh": zh,
+                "definition": definition,
+                "example": example,
+                "collocations": collocations,
+                "status": status,
+                "primary": primary,
+            })
+    for key, senses in content.items():
+        primary_count = sum(item["primary"] for item in senses)
+        if primary_count != 1:
+            raise ValueError(
+                f"Learner-content word {key} must have exactly one primary sense"
+            )
+    return content
+
+
+LEARNER_CONTENT = read_learner_content()
+
+
+def learner_content_for(word: str, pos: str | None = None) -> dict[str, Any] | None:
+    senses = LEARNER_CONTENT.get(word.casefold(), [])
+    if pos:
+        matching = next((sense for sense in senses if sense["pos"] == pos), None)
+        if matching:
+            return matching
+    return next((sense for sense in senses if sense["primary"]), None)
+
 # Merge a few known typo/orthographic duplicates before assigning ids so the
 # learner does not meet the same headword twice under two spellings.
 CANONICAL_WORDS = {
@@ -1056,6 +1148,9 @@ def clean_translation(raw: str) -> tuple[str, str] | None:
 def clean_english_definition(raw: str, primary_pos: str, word: str) -> str:
     """Return one readable English explanation, preferring the card's POS."""
 
+    reviewed = learner_content_for(word, primary_pos)
+    if reviewed:
+        return reviewed["definition"]
     override = ENGLISH_DEFINITION_OVERRIDES.get(word.casefold())
     if override:
         return override
@@ -1312,6 +1407,22 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 if reviewed["pos"] == pos:
                     continue
                 senses.append(reviewed)
+        learner_senses = LEARNER_CONTENT.get(key, [])
+        learner_primary = learner_content_for(key)
+        if learner_primary:
+            pos, zh = learner_primary["pos"], learner_primary["zh"]
+            merged_senses = [
+                {"pos": item["pos"], "zh": item["zh"]}
+                for item in sorted(
+                    learner_senses,
+                    key=lambda item: not item["primary"],
+                )
+            ]
+            reviewed_poses = {sense["pos"] for sense in merged_senses}
+            merged_senses.extend(
+                sense for sense in senses if sense["pos"] not in reviewed_poses
+            )
+            senses = merged_senses if len(merged_senses) > 1 else senses
         definition = clean_english_definition(record["definition_raw"], pos, key)
         if not definition:
             raise ValueError(f"No English definition available for {record['en']!r}")
@@ -1325,7 +1436,25 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 "tracks": [track for track in TRACK_ORDER if track in tracks],
                 "rank": record["rank"],
             }
+        learner_content = learner_content_for(key, pos)
+        if learner_content:
+            if learner_content["example"]:
+                word["example"] = learner_content["example"]
+            if learner_content["collocations"]:
+                word["collocations"] = learner_content["collocations"]
+            word["definitionStatus"] = learner_content["status"]
         if len(senses) > 1:
+            for sense in senses:
+                reviewed_sense = learner_content_for(key, sense["pos"])
+                if not reviewed_sense:
+                    continue
+                sense["zh"] = reviewed_sense["zh"]
+                sense["definition"] = reviewed_sense["definition"]
+                if reviewed_sense["example"]:
+                    sense["example"] = reviewed_sense["example"]
+                if reviewed_sense["collocations"]:
+                    sense["collocations"] = reviewed_sense["collocations"]
+                sense["definitionStatus"] = reviewed_sense["status"]
             word["senses"] = senses
         poses = {pos}
         poses.update(sense["pos"] for sense in senses)

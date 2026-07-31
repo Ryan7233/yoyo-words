@@ -1378,6 +1378,35 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   font-size: 9px;
   white-space: nowrap;
 }
+.adult-sense-copy {
+  display: grid;
+  gap: 4px;
+}
+.adult-sense-copy small {
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+.adult-sense-copy em {
+  color: var(--green);
+  font-size: 10px;
+  font-style: normal;
+  line-height: 1.4;
+}
+.adult-sense-collocations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.adult-sense-collocations b {
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: rgba(116, 88, 168, 0.08);
+  color: var(--purple);
+  font-size: 9px;
+  font-weight: 750;
+}
 .adult-learning-panel {
   display: grid;
   gap: 11px;
@@ -1404,6 +1433,39 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   font-size: 15px;
   font-weight: 650;
   line-height: 1.48;
+}
+.adult-example,
+.adult-collocations {
+  display: grid;
+  gap: 5px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(38, 122, 98, 0.2);
+}
+.adult-example small,
+.adult-collocations small {
+  color: var(--ink-soft);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+}
+.adult-example > span {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+.adult-collocations > span {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.adult-collocations b {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(38, 122, 98, 0.09);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
 }
 .adult-memory-hook {
   padding-top: 7px;

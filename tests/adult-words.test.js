@@ -67,6 +67,24 @@ test('成人词库：学习字段完整，中文释义已清洗为短释义', ()
     assert.ok(word.definition.length <= 150, `${word.id} 英英解释过长`);
     assert.doesNotMatch(word.definition, /[\u3400-\u9fff<>]/,
       `${word.id} 英英解释含中文或 HTML`);
+    if (word.definitionStatus !== undefined) {
+      assert.ok(['generated', 'reviewed'].includes(word.definitionStatus),
+        `${word.id} 英英解释审定状态非法`);
+      if (word.example !== undefined) {
+        assert.ok(typeof word.example === 'string' && word.example.length >= 5,
+          `${word.id} 学习例句无效`);
+        assert.doesNotMatch(word.example, /[\u3400-\u9fff<>]/,
+          `${word.id} 学习例句含中文或 HTML`);
+      }
+      if (word.collocations !== undefined) {
+        assert.ok(Array.isArray(word.collocations)
+          && word.collocations.length >= 1
+          && word.collocations.length <= 3,
+        `${word.id} 常用搭配数量非法`);
+        assert.equal(new Set(word.collocations).size, word.collocations.length,
+          `${word.id} 常用搭配重复`);
+      }
+    }
     assert.ok(typeof word.pos === 'string' && word.pos.length > 0);
     if (word.senses) {
       assert.ok(Array.isArray(word.senses) && word.senses.length >= 2);
@@ -82,6 +100,16 @@ test('成人词库：学习字段完整，中文释义已清洗为短释义', ()
         assert.ok(typeof sense.zh === 'string' && sense.zh.length > 0 && sense.zh.length <= 36);
         if (sense.phonetic !== undefined) {
           assert.ok(typeof sense.phonetic === 'string' && sense.phonetic.length > 0);
+        }
+        if (sense.definitionStatus !== undefined) {
+          assert.ok(['generated', 'reviewed'].includes(sense.definitionStatus));
+          assert.ok(typeof sense.definition === 'string' && sense.definition.length >= 3);
+          if (sense.example !== undefined) {
+            assert.ok(typeof sense.example === 'string' && sense.example.length >= 5);
+          }
+          if (sense.collocations !== undefined) {
+            assert.ok(Array.isArray(sense.collocations) && sense.collocations.length <= 3);
+          }
         }
       }
     }
@@ -110,14 +138,16 @@ test('成人词库：所有卡片有英英解释，大量词提供可靠构词�
   const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
   assert.equal(
     byEnglish.get('envisage')?.definition,
-    'to imagine or picture a future situation, especially one you may plan for',
+    'to form a mental picture of a future situation, especially one you may plan for',
   );
+  assert.match(byEnglish.get('envisage')?.example || '', /\benvisage\b/i);
   assert.deepEqual(byEnglish.get('envisage')?.parts, ['vis']);
   assert.equal(byEnglish.get('envisage')?.family?.[0]?.en, 'imagine');
   assert.equal(
     byEnglish.get('irrigate')?.definition,
-    'to supply land or crops with water through pipes or channels',
+    'to bring water to dry land so that plants can grow',
   );
+  assert.match(byEnglish.get('irrigate')?.example || '', /\birrigate\b/i);
   assert.equal(byEnglish.get('irrigate')?.hook, 'water → land or crops');
   assert.deepEqual(byEnglish.get('maltreat')?.parts, ['mal']);
   assert.ok(byEnglish.get('malfunction')?.parts?.includes('mal'));
@@ -126,6 +156,23 @@ test('成人词库：所有卡片有英英解释，大量词提供可靠构词�
 
   assert.equal(ADULT_WORD_PARTS.mal.en, 'bad or badly');
   assert.ok(ADULT_WORD_PARTS.mal.examples.some((item) => item.en === 'malfunction'));
+});
+
+test('成人词库：首批 learner 内容带审定状态、例句和逐义项解释', () => {
+  const learnerWords = ADULT_WORDS.filter((word) => word.definitionStatus);
+  assert.ok(learnerWords.length >= 180, `首批 learner 内容只有 ${learnerWords.length} 词`);
+  assert.ok(learnerWords.every((word) => word.example),
+    '首批 learner 内容必须提供例句');
+  assert.ok(learnerWords.every((word) => word.definitionStatus === 'generated'),
+    '未经人工最终验收的内容不能冒充 reviewed');
+
+  const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
+  for (const english of ['relative', 'civilian', 'tender', 'duplicate', 'implement']) {
+    const senses = byEnglish.get(english)?.senses || [];
+    assert.ok(senses.length >= 2, `${english} 没有保留常用多词性`);
+    assert.ok(senses.every((sense) => sense.definition && sense.example),
+      `${english} 的常用义项没有各自的解释和例句`);
+  }
 });
 
 test('成人词库：重叠考试词只存一份，并记录多条共享路线', () => {
@@ -146,13 +193,13 @@ test('成人词库：高频多义词使用日常义，不把生僻首义当成�
     will: '将、会、愿意',
     want: '想要、需要',
     give: '给、给予',
-    well: '很好地、健康的',
+    well: '很好地、充分地',
     may: '可以、可能',
     still: '仍然、还是',
     just: '只是、刚刚、正好',
-    mean: '意思是、意味着',
+    mean: '意思是、意味着、打算',
     might: '可能、也许',
-    lot: '许多、大量、一批',
+    lot: '许多、大量',
     natural: '自然的、天然的',
     special: '特别的、特殊的',
     pm: '下午',
@@ -239,13 +286,13 @@ test('成人词库：跨路线语义抽检使用现代常用义和正确主词�
     'ice-cream': ['冰淇淋', 'n.'],
     intermediate: ['中间的、中级的', 'adj.'],
     loose: ['松的、宽松的、不牢固的', 'adj.'],
-    temperamental: ['喜怒无常的、情绪多变的', 'adj.'],
-    resolute: ['坚定的、坚决的', 'adj.'],
-    invert: ['使倒置、使颠倒、反转', 'v.'],
+    temperamental: ['喜怒无常的、情绪不稳定的', 'adj.'],
+    resolute: ['坚决的、坚定的', 'adj.'],
+    invert: ['使倒置、使反转', 'v.'],
     inverse: ['倒转的、相反的', 'adj.'],
-    invalid: ['无效的、不合法的', 'adj.'],
+    invalid: ['无效的、不成立的', 'adj.'],
     circumference: ['圆周、周长', 'n.'],
-    transcendental: ['先验的、超验的、超凡的', 'adj.'],
+    transcendental: ['超越经验的、先验的', 'adj.'],
     'x-ray': ['X射线、X光检查', 'n.'],
   };
   for (const [word, [gloss, pos]] of Object.entries(expected)) {
@@ -259,29 +306,31 @@ test('成人词库：跨路线语义抽检使用现代常用义和正确主词�
 
 test('成人词库：常用多词性分开保留，过时或冒犯义不重新混入', () => {
   const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
-  assert.deepEqual(byEnglish.get('relative')?.senses, [
+  const sensesOf = (word) => byEnglish.get(word)?.senses
+    ?.map(({ pos, zh }) => ({ pos, zh }));
+  assert.deepEqual(sensesOf('relative'), [
     { pos: 'adj.', zh: '相对的、相关的' },
     { pos: 'n.', zh: '亲戚、亲属' },
   ]);
-  assert.deepEqual(byEnglish.get('civilian')?.senses, [
+  assert.deepEqual(sensesOf('civilian'), [
     { pos: 'adj.', zh: '平民的、民用的' },
     { pos: 'n.', zh: '平民' },
   ]);
-  assert.deepEqual(byEnglish.get('tender')?.senses, [
-    { pos: 'adj.', zh: '柔软的、嫩的' },
-    { pos: 'v.', zh: '正式提出、提交、投标' },
+  assert.deepEqual(sensesOf('tender'), [
+    { pos: 'adj.', zh: '柔软的、嫩的、温柔的' },
     { pos: 'n.', zh: '投标、投标书' },
+    { pos: 'v.', zh: '正式提出、投标' },
   ]);
-  assert.deepEqual(byEnglish.get('duplicate')?.senses, [
+  assert.deepEqual(sensesOf('duplicate'), [
     { pos: 'n.', zh: '副本、复制品' },
-    { pos: 'adj.', zh: '复制的、完全相同的' },
+    { pos: 'adj.', zh: '完全相同的、重复的' },
     { pos: 'v.', zh: '复制、使加倍' },
   ]);
-  assert.deepEqual(byEnglish.get('implement')?.senses, [
+  assert.deepEqual(sensesOf('implement'), [
     { pos: 'v.', zh: '实施、执行' },
     { pos: 'n.', zh: '工具、器具' },
   ]);
-  assert.deepEqual(byEnglish.get('representative')?.senses, [
+  assert.deepEqual(sensesOf('representative'), [
     { pos: 'n.', zh: '代表、代表性人物' },
     { pos: 'adj.', zh: '有代表性的、典型的' },
   ]);
