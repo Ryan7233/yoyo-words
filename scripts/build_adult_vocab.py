@@ -36,6 +36,11 @@ POS_RE = re.compile(
 )
 BRACKET_LABEL_RE = re.compile(r"(?:\[[^\]]{1,12}\]|<[^>]{1,12}>)")
 ID_REPLACEMENT_RE = re.compile(r"[^a-z0-9_-]+")
+ENGLISH_POS_RE = re.compile(
+    r"^(?P<pos>n|v|a|s|adj|adv|r|prep|conj|pron|interj)\.?\s+",
+    re.IGNORECASE,
+)
+ENGLISH_LABEL_RE = re.compile(r"(?:\[[^\]]{1,20}\]|<[^>]{1,20}>)")
 
 
 LEVELS = [
@@ -209,6 +214,11 @@ COMMON_GLOSS_OVERRIDES: dict[str, tuple[str, str]] = {
     "loose": ("松的、宽松的、不牢固的", "adj."),
     "species": ("物种、种类", "n."),
     "temperamental": ("喜怒无常的、情绪多变的", "adj."),
+    "envisage": ("设想、想象（未来情景）", "v."),
+    "irrigate": ("灌溉（土地、作物）、冲洗（伤口）", "v."),
+    "malfunction": ("故障、失灵", "n."),
+    "award": ("奖项、奖品、奖金", "n."),
+    "spoil": ("破坏、糟蹋、使变质", "v."),
     "circumference": ("圆周、周长", "n."),
     "transcendental": ("先验的、超验的、超凡的", "adj."),
     "unpaid": ("未支付的、无薪的", "adj."),
@@ -296,6 +306,7 @@ COMMON_MULTIPOS_OVERRIDES: dict[str, list[tuple[str, ...]]] = {
         ("n.", "投标、投标书"),
     ],
     "safeguard": [("v.", "保护、保卫"), ("n.", "保护措施、保障")],
+    "malfunction": [("n.", "故障、失灵"), ("v.", "发生故障、失灵")],
     "abstract": [
         ("adj.", "抽象的、抽象派的", "ˈæbstrækt"),
         ("n.", "摘要、抽象概念", "ˈæbstrækt"),
@@ -513,6 +524,7 @@ HOMOGRAPH_VARIANTS: dict[str, list[dict[str, Any]]] = {
             "phonetic": "ˈpɒlɪʃ",
             "pos": "v.",
             "zh": "擦亮、润色",
+            "definition": "to make something smooth and shiny, or to improve it carefully",
             "senses": [
                 {"pos": "v.", "zh": "擦亮、润色"},
                 {"pos": "n.", "zh": "抛光、光泽"},
@@ -523,12 +535,419 @@ HOMOGRAPH_VARIANTS: dict[str, list[dict[str, Any]]] = {
             "phonetic": "ˈpəʊlɪʃ",
             "pos": "adj.",
             "zh": "波兰的",
+            "definition": "from, in, or relating to Poland",
             "senses": [
                 {"pos": "adj.", "zh": "波兰的"},
                 {"pos": "n.", "zh": "波兰语、波兰人"},
             ],
         },
     ],
+}
+
+
+# ECDICT supplies an English WordNet-style definition for almost every selected
+# word. These overrides make a small set of important or easily misunderstood
+# cards more natural for a learner instead of exposing a technical dictionary
+# sentence.
+ENGLISH_DEFINITION_OVERRIDES = {
+    "state": "the condition something is in; also, a country or political area; as a verb, to say something clearly",
+    "award": "a prize or honour for an achievement; also, to officially give such a prize",
+    "spoil": "to damage or ruin something; food spoils when it becomes unfit to eat",
+    "compile": "to collect information into one work; in computing, to translate source code into executable code",
+    "patient": "a person receiving medical care; as an adjective, able to wait calmly",
+    "relative": "connected by comparison; as a noun, a person in the same family",
+    "civilian": "a person who is not in the armed forces; also, relating to ordinary citizens",
+    "tender": "soft or gentle; also, to formally offer something or submit a bid",
+    "duplicate": "an exact copy; also, to copy something or make it twice",
+    "implement": "to put a plan into action; as a noun, a tool used for a purpose",
+    "envisage": "to imagine or picture a future situation, especially one you may plan for",
+    "irrigate": "to supply land or crops with water through pipes or channels",
+    "irrigation": "the process of supplying land or crops with water",
+    "maltreat": "to treat a person or animal badly or cruelly",
+    "malfunction": "a failure to work normally; also, to stop working properly",
+    "invalid": "not legally or officially acceptable, or not based on correct facts",
+    "temperamental": "likely to change mood suddenly and sometimes be difficult to deal with",
+    "circumference": "the distance around the outside of a circle",
+    "transcendental": "beyond ordinary experience or knowledge; based on abstract ideas",
+    "resolute": "firmly determined and not likely to change your mind",
+    "invert": "to turn something upside down or reverse its usual order",
+    "equipe": "a sports team together with its equipment",
+    "ice-cream": "a frozen sweet food made from milk or cream and sugar",
+    "others": "other people or things",
+    "reservoir": "a natural or artificial lake used for storing water",
+    "second-hand": "previously owned or used by someone else",
+    "sitting-room": "a room in a home used for sitting and relaxing",
+    "up-to-date": "modern, current, and containing the latest information",
+    "vitamin": "a substance in food that the body needs for health and growth",
+    "vitamine": "an older spelling of vitamin: a substance needed for health and growth",
+}
+
+# A hook is a learner-friendly association, not a claim about strict etymology.
+MEMORY_HOOK_OVERRIDES = {
+    "envisage": "picture it in your mind + plan for it",
+    "irrigate": "water → land or crops",
+    "maltreat": "mal- (badly) + treat",
+    "malfunction": "mal- (badly) + function",
+    "circumference": "circum- (around) + fer (carry) → the distance carried around a circle",
+    "transcendental": "trans- (beyond) + ascend (rise) → go beyond the ordinary",
+}
+
+WORD_FAMILY_OVERRIDES = {
+    "envisage": [
+        {"en": "imagine", "zh": "想象、设想"},
+        {"en": "vision", "zh": "想象、构想、视野"},
+        {"en": "visualize", "zh": "在脑中形成图像"},
+    ],
+    "irrigate": [
+        {"en": "irrigation", "zh": "灌溉"},
+        {"en": "irrigated", "zh": "经过灌溉的"},
+        {"en": "irrigation system", "zh": "灌溉系统"},
+    ],
+}
+
+# Only transparent, useful word-building relationships are shown. Ambiguous
+# short prefixes such as re- and dis- use explicit word lists; productive
+# suffixes additionally require the expected part of speech.
+WORD_PART_GROUPS: dict[str, dict[str, Any]] = {
+    "mal": {
+        "label": "mal-",
+        "kind": "prefix",
+        "en": "bad or badly",
+        "zh": "坏的、恶的、不良地",
+        "words": ("malpractice", "malignant", "malicious", "malice", "malfunction", "malign", "maltreat"),
+        "examples": (("maltreat", "虐待"), ("malfunction", "发生故障"), ("malnutrition", "营养不良")),
+    },
+    "un": {
+        "label": "un-",
+        "kind": "prefix",
+        "en": "not; the opposite of",
+        "zh": "不、非；表示相反",
+        "words": (
+            "unable", "unacceptable", "unaware", "uncertain", "uncomfortable",
+            "unconscious", "uncover", "unemployed", "unfair", "unfamiliar",
+            "unfortunate", "unhappy", "unimportant", "unknown", "unlikely",
+            "unnecessary", "unpleasant", "unreasonable", "unusual", "unwilling",
+        ),
+        "examples": (("unfair", "不公平的"), ("unknown", "未知的"), ("unnecessary", "不必要的")),
+    },
+    "re": {
+        "label": "re-",
+        "kind": "prefix",
+        "en": "again or back",
+        "zh": "再次、重新、返回",
+        "words": (
+            "rebuild", "reconsider", "reconstruct", "recover", "recreate", "recycle",
+            "redo", "reform", "refresh", "regain", "reopen", "reorganize",
+            "replace", "reproduce", "restart", "restore", "rethink", "reuse", "rewrite",
+        ),
+        "examples": (("rebuild", "重建"), ("reconsider", "重新考虑"), ("rewrite", "重写")),
+    },
+    "mis": {
+        "label": "mis-",
+        "kind": "prefix",
+        "en": "wrongly or badly",
+        "zh": "错误地、不当地",
+        "words": ("mistake", "misunderstand", "mislead", "misfortune", "mischief", "misuse", "misjudge", "misplace"),
+        "examples": (("misunderstand", "误解"), ("mislead", "误导"), ("misuse", "误用、滥用")),
+    },
+    "negative": {
+        "label": "in- / im- / il- / ir-",
+        "kind": "prefix",
+        "en": "not or the opposite of",
+        "zh": "不、非；表示否定",
+        "words": (
+            "inactive", "incomplete", "incorrect", "indirect", "inexpensive",
+            "informal", "insecure", "insensitive", "invalid", "invisible",
+            "illegal", "illogical", "immature", "impatient", "imperfect",
+            "impossible", "improper", "irregular", "irrelevant", "irresponsible",
+        ),
+        "examples": (("invalid", "无效的"), ("impossible", "不可能的"), ("irregular", "不规则的")),
+    },
+    "inter": {
+        "label": "inter-",
+        "kind": "prefix",
+        "en": "between or among",
+        "zh": "在……之间、相互",
+        "words": (
+            "international", "interaction", "interact", "interconnect", "interface",
+            "interfere", "intermediate", "internal", "interpret", "interrupt",
+            "intersection", "interval", "intervene", "interview",
+        ),
+        "examples": (("interact", "互动"), ("international", "国际的"), ("interconnect", "相互连接")),
+    },
+    "trans": {
+        "label": "trans-",
+        "kind": "prefix",
+        "en": "across, through, or beyond",
+        "zh": "横跨、穿过、超越",
+        "words": (
+            "transaction", "transcend", "transcendental", "transfer", "transform",
+            "transition", "translate", "transmit", "transparent", "transplant",
+            "transport", "transportation", "transverse",
+        ),
+        "examples": (("transport", "运输"), ("transform", "改变形态"), ("transcend", "超越")),
+    },
+    "sub": {
+        "label": "sub-",
+        "kind": "prefix",
+        "en": "under, below, or smaller",
+        "zh": "在下面、次级、较小",
+        "words": ("submarine", "submerge", "subordinate", "subscript", "subscription", "subdivide", "subway", "subtract"),
+        "examples": (("submarine", "潜水艇"), ("subdivide", "再细分"), ("subway", "地铁")),
+    },
+    "super": {
+        "label": "super-",
+        "kind": "prefix",
+        "en": "above, beyond, or more than usual",
+        "zh": "在上、超过、超级",
+        "words": ("superficial", "superfluous", "superhuman", "superpower", "supersonic", "superstructure"),
+        "examples": (("supersonic", "超音速的"), ("superhuman", "超人的"), ("superfluous", "多余的")),
+    },
+    "over": {
+        "label": "over-",
+        "kind": "prefix",
+        "en": "above, across, or too much",
+        "zh": "在上方、越过、过度",
+        "words": (
+            "overcome", "overestimate", "overflow", "overhang", "overhear", "overload",
+            "overlook", "overnight", "overseas", "overtake", "overthrow", "overturn", "overwhelming",
+        ),
+        "examples": (("overestimate", "高估"), ("overload", "使超载"), ("overcome", "克服")),
+    },
+    "under": {
+        "label": "under-",
+        "kind": "prefix",
+        "en": "below or not enough",
+        "zh": "在下面、不足",
+        "words": ("underestimate", "undergraduate", "underlie", "underline", "underlying", "undermine", "underneath", "underwear"),
+        "examples": (("underestimate", "低估"), ("undergraduate", "本科生"), ("underlying", "潜在的、在下面的")),
+    },
+    "multi": {
+        "label": "multi-",
+        "kind": "prefix",
+        "en": "many or multiple",
+        "zh": "多、多个",
+        "words": ("multiple", "multiplication", "multiply", "multitude", "multimedia", "multinational"),
+        "examples": (("multiple", "多个的"), ("multimedia", "多媒体"), ("multinational", "跨国的")),
+    },
+    "micro": {
+        "label": "micro-",
+        "kind": "prefix",
+        "en": "very small",
+        "zh": "微小的",
+        "words": ("microcomputer", "microphone", "microprocessor", "microscope", "microscopic", "microwave"),
+        "examples": (("microscope", "显微镜"), ("microcomputer", "微型计算机"), ("microscopic", "微小的")),
+    },
+    "tele": {
+        "label": "tele-",
+        "kind": "prefix",
+        "en": "far or at a distance",
+        "zh": "远距离",
+        "words": ("telegram", "telegraph", "telephone", "telescope", "television"),
+        "examples": (("telephone", "电话"), ("telescope", "望远镜"), ("television", "电视")),
+    },
+    "auto": {
+        "label": "auto-",
+        "kind": "prefix",
+        "en": "self or by itself",
+        "zh": "自己、自动",
+        "words": ("automate", "automatic", "automatically", "automation", "autobiography", "automobile", "autonomy"),
+        "examples": (("automatic", "自动的"), ("autobiography", "自传"), ("autonomy", "自主")),
+    },
+    "vis": {
+        "label": "vis / vid",
+        "kind": "root",
+        "en": "see",
+        "zh": "看、视觉",
+        "words": ("envisage", "vision", "visual", "visible", "invisible", "revise", "video"),
+        "examples": (("vision", "视觉、构想"), ("visual", "视觉的"), ("visible", "看得见的")),
+    },
+    "spect": {
+        "label": "spect",
+        "kind": "root",
+        "en": "look or see",
+        "zh": "看、观察",
+        "words": ("aspect", "inspect", "inspection", "perspective", "respect", "spectacle", "spectator"),
+        "examples": (("inspect", "检查"), ("spectator", "观众"), ("perspective", "视角")),
+    },
+    "dict": {
+        "label": "dict",
+        "kind": "root",
+        "en": "say or speak",
+        "zh": "说、表达",
+        "words": ("contradict", "dictate", "dictation", "dictionary", "predict", "prediction", "verdict"),
+        "examples": (("predict", "预言"), ("contradict", "反驳"), ("dictate", "口述、命令")),
+    },
+    "port": {
+        "label": "port",
+        "kind": "root",
+        "en": "carry",
+        "zh": "携带、运输",
+        "words": ("export", "import", "portable", "porter", "transport", "transportation"),
+        "examples": (("transport", "运输"), ("import", "进口"), ("portable", "便携的")),
+    },
+    "tract": {
+        "label": "tract",
+        "kind": "root",
+        "en": "pull or draw",
+        "zh": "拉、牵引",
+        "words": ("attract", "contract", "distract", "extract", "subtract", "tractor"),
+        "examples": (("attract", "吸引"), ("extract", "提取"), ("distract", "使分心")),
+    },
+    "struct": {
+        "label": "struct",
+        "kind": "root",
+        "en": "build",
+        "zh": "建造、构成",
+        "words": ("construct", "construction", "instruct", "instruction", "structure", "structural"),
+        "examples": (("construct", "建造"), ("structure", "结构"), ("instruct", "指导")),
+    },
+    "aud": {
+        "label": "aud",
+        "kind": "root",
+        "en": "hear",
+        "zh": "听",
+        "words": ("audible", "audience", "audio", "audit", "auditorium"),
+        "examples": (("audio", "音频"), ("audible", "听得见的"), ("audience", "听众、观众")),
+    },
+    "bio": {
+        "label": "bio-",
+        "kind": "root",
+        "en": "life",
+        "zh": "生命、生物",
+        "words": ("biography", "biology", "biological", "biotech", "autobiography"),
+        "examples": (("biology", "生物学"), ("biography", "传记"), ("biological", "生物的")),
+    },
+    "graph": {
+        "label": "graph",
+        "kind": "root",
+        "en": "write or record",
+        "zh": "书写、记录",
+        "words": ("autobiography", "biography", "geography", "graph", "graphic", "photograph", "photography"),
+        "examples": (("photograph", "照片"), ("biography", "传记"), ("graphic", "图表的、形象的")),
+    },
+    "tion": {
+        "label": "-tion / -sion",
+        "kind": "suffix",
+        "en": "an action, process, or result",
+        "zh": "动作、过程或结果",
+        "suffixes": ("tion", "sion"),
+        "poses": ("n.",),
+        "examples": (("action", "行动"), ("decision", "决定"), ("education", "教育")),
+    },
+    "ment": {
+        "label": "-ment",
+        "kind": "suffix",
+        "en": "an action, process, state, or result",
+        "zh": "动作、过程、状态或结果",
+        "suffixes": ("ment",),
+        "poses": ("n.",),
+        "examples": (("development", "发展"), ("movement", "运动"), ("treatment", "处理、治疗")),
+    },
+    "ness": {
+        "label": "-ness",
+        "kind": "suffix",
+        "en": "a state or quality",
+        "zh": "状态或性质",
+        "suffixes": ("ness",),
+        "poses": ("n.",),
+        "exclude": ("business", "witness"),
+        "examples": (("happiness", "幸福"), ("weakness", "弱点"), ("darkness", "黑暗")),
+    },
+    "ity": {
+        "label": "-ity",
+        "kind": "suffix",
+        "en": "a state, quality, or condition",
+        "zh": "状态、性质或情况",
+        "suffixes": ("ity",),
+        "poses": ("n.",),
+        "examples": (("ability", "能力"), ("activity", "活动"), ("security", "安全")),
+    },
+    "able": {
+        "label": "-able / -ible",
+        "kind": "suffix",
+        "en": "can be or suitable for",
+        "zh": "能够……的、适合……的",
+        "suffixes": ("able", "ible"),
+        "poses": ("adj.",),
+        "exclude": ("responsible", "terrible"),
+        "examples": (("readable", "可读的"), ("visible", "看得见的"), ("acceptable", "可接受的")),
+    },
+    "ful": {
+        "label": "-ful",
+        "kind": "suffix",
+        "en": "full of or having",
+        "zh": "充满……的、具有……的",
+        "suffixes": ("ful",),
+        "poses": ("adj.",),
+        "examples": (("helpful", "有帮助的"), ("careful", "小心的"), ("powerful", "强大的")),
+    },
+    "less": {
+        "label": "-less",
+        "kind": "suffix",
+        "en": "without",
+        "zh": "没有、缺少",
+        "suffixes": ("less",),
+        "poses": ("adj.", "adv."),
+        "exclude": ("nonetheless", "nevertheless"),
+        "examples": (("careless", "粗心的"), ("endless", "无尽的"), ("useless", "无用的")),
+    },
+    "ist": {
+        "label": "-ist",
+        "kind": "suffix",
+        "en": "a person who practices, studies, or believes",
+        "zh": "从事者、研究者或信奉者",
+        "suffixes": ("ist",),
+        "poses": ("n.",),
+        "exclude": ("christ",),
+        "examples": (("scientist", "科学家"), ("artist", "艺术家"), ("journalist", "记者")),
+    },
+    "ism": {
+        "label": "-ism",
+        "kind": "suffix",
+        "en": "a belief, system, condition, or practice",
+        "zh": "主义、体系、状态或做法",
+        "suffixes": ("ism",),
+        "poses": ("n.",),
+        "examples": (("capitalism", "资本主义"), ("optimism", "乐观主义"), ("mechanism", "机制")),
+    },
+    "ology": {
+        "label": "-ology",
+        "kind": "suffix",
+        "en": "the study of",
+        "zh": "……学、对……的研究",
+        "suffixes": ("ology",),
+        "poses": ("n.",),
+        "examples": (("biology", "生物学"), ("psychology", "心理学"), ("sociology", "社会学")),
+    },
+    "graphy": {
+        "label": "-graphy",
+        "kind": "suffix",
+        "en": "writing, recording, or describing",
+        "zh": "书写、记录或描述",
+        "suffixes": ("graphy",),
+        "poses": ("n.",),
+        "examples": (("photography", "摄影"), ("biography", "传记"), ("geography", "地理学")),
+    },
+    "ify": {
+        "label": "-ify",
+        "kind": "suffix",
+        "en": "to make or become",
+        "zh": "使成为、变成",
+        "suffixes": ("ify",),
+        "poses": ("v.",),
+        "examples": (("simplify", "简化"), ("clarify", "澄清"), ("identify", "识别")),
+    },
+    "ize": {
+        "label": "-ize",
+        "kind": "suffix",
+        "en": "to make, become, or use in a particular way",
+        "zh": "使成为、变成或按某种方式处理",
+        "suffixes": ("ize",),
+        "poses": ("v.",),
+        "exclude": ("size", "prize"),
+        "examples": (("organize", "组织"), ("modernize", "现代化"), ("realize", "意识到、实现")),
+    },
 }
 
 
@@ -586,6 +1005,7 @@ def normalize_pos(raw: str | None) -> str:
     token = raw.lower()
     aliases = {
         "a.": "adj.",
+        "s.": "adj.",
         "ad.": "adv.",
         "pl.": "n.",
         "int.": "interj.",
@@ -633,10 +1053,98 @@ def clean_translation(raw: str) -> tuple[str, str] | None:
     return None
 
 
-def row_score(row: dict[str, Any]) -> tuple[int, int, int]:
+def clean_english_definition(raw: str, primary_pos: str, word: str) -> str:
+    """Return one readable English explanation, preferring the card's POS."""
+
+    override = ENGLISH_DEFINITION_OVERRIDES.get(word.casefold())
+    if override:
+        return override
+
+    candidates: list[tuple[str, str]] = []
+    for line in LINE_SPLIT_RE.split(raw or ""):
+        line = ENGLISH_LABEL_RE.sub("", line)
+        line = re.sub(r"\s+", " ", line).strip(" ;")
+        if not line:
+            continue
+        match = ENGLISH_POS_RE.match(line)
+        source_pos = normalize_pos(match.group("pos") + "." if match else None)
+        content = line[match.end() :] if match else line
+        content = re.sub(r'\s*;\s*["“].*$', "", content).strip(" ;")
+        if not content or len(content) < 3:
+            continue
+        candidates.append((source_pos, content))
+
+    if not candidates:
+        return ""
+    matching = next((text for pos, text in candidates if pos == primary_pos), None)
+    definition = matching or candidates[0][1]
+    definition = re.sub(r"\s+", " ", definition).strip()
+    first_clause = definition.split(";", 1)[0].strip()
+    if len(first_clause) >= 12:
+        definition = first_clause
+    if len(definition) > 150:
+        definition = definition[:150].rsplit(" ", 1)[0].rstrip(" ,;:")
+    return definition
+
+
+def clean_exchange(raw: str, word: str, poses: set[str]) -> list[str]:
+    """Keep up to three useful, unique inflected forms from ECDICT."""
+
+    values: dict[str, str] = {}
+    allowed_kinds: set[str] = set()
+    if "v." in poses:
+        allowed_kinds.update({"d", "p", "i", "3"})
+    if "n." in poses:
+        allowed_kinds.add("s")
+    if poses.intersection({"adj.", "adv."}):
+        allowed_kinds.update({"r", "t"})
+
+    for token in (raw or "").split("/"):
+        if ":" not in token:
+            continue
+        kind, value = token.split(":", 1)
+        value = value.strip()
+        if kind in allowed_kinds and WORD_RE.fullmatch(value):
+            values[kind] = value
+
+    forms: list[str] = []
+    for kind in ("p", "d", "i", "s", "3", "r", "t"):
+        value = values.get(kind)
+        if not value or value.casefold() == word.casefold() or value in forms:
+            continue
+        forms.append(value)
+        if len(forms) == 3:
+            break
+    return forms
+
+
+def detect_word_parts(word: str, poses: set[str]) -> list[str]:
+    """Find at most two transparent word-building clues for a card."""
+
+    key = word.casefold()
+    matched: list[str] = []
+    for part_id, group in WORD_PART_GROUPS.items():
+        exact_words = {item.casefold() for item in group.get("words", ())}
+        excluded = {item.casefold() for item in group.get("exclude", ())}
+        is_match = key in exact_words
+        if not is_match and key not in excluded and group.get("suffixes"):
+            allowed_poses = set(group.get("poses", ()))
+            is_match = bool(poses.intersection(allowed_poses)) and any(
+                key.endswith(suffix) and len(key) >= len(suffix) + 3
+                for suffix in group["suffixes"]
+            )
+        if is_match:
+            matched.append(part_id)
+            if len(matched) == 2:
+                break
+    return matched
+
+
+def row_score(row: dict[str, Any]) -> tuple[int, int, int, int]:
     """Prefer entries with phonetics, an explicit POS, then a useful short gloss."""
 
     return (
+        1 if row["definition_raw"] else 0,
         1 if row["phonetic"] else 0,
         1 if row["pos"] != "word" else 0,
         min(len(row["zh"]), 24),
@@ -663,7 +1171,10 @@ def read_records(source: Path) -> dict[str, dict[str, Any]]:
 
     with source.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
-        required = {"word", "phonetic", "translation", "tag", "bnc", "frq"}
+        required = {
+            "word", "phonetic", "definition", "translation",
+            "tag", "bnc", "frq", "exchange",
+        }
         missing = required.difference(reader.fieldnames or ())
         if missing:
             raise ValueError(f"ECDICT CSV is missing columns: {', '.join(sorted(missing))}")
@@ -699,6 +1210,8 @@ def read_records(source: Path) -> dict[str, dict[str, Any]]:
                 "exam_tracks": exam_tracks,
                 "life_rank": life_rank,
                 "rank": rank,
+                "definition_raw": (source_row.get("definition") or "").strip(),
+                "exchange_raw": (source_row.get("exchange") or "").strip(),
             }
 
             key = word.casefold()
@@ -712,8 +1225,10 @@ def read_records(source: Path) -> dict[str, dict[str, Any]]:
             if life_rank is not None:
                 current["life_rank"] = min(current["life_rank"] or life_rank, life_rank)
             if row_score(incoming) > row_score(current):
-                for field in ("en", "zh", "phonetic", "pos"):
+                for field in ("en", "zh", "phonetic", "pos", "definition_raw", "exchange_raw"):
                     current[field] = incoming[field]
+            elif not current["definition_raw"] and incoming["definition_raw"]:
+                current["definition_raw"] = incoming["definition_raw"]
 
     return records
 
@@ -737,16 +1252,30 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             continue
         if key in HOMOGRAPH_VARIANTS:
             for variant in HOMOGRAPH_VARIANTS[key]:
+                variant_poses = {variant["pos"]}
+                variant_poses.update(sense["pos"] for sense in variant["senses"])
                 word = {
                     "id": safe_word_id(variant["en"], used_ids),
                     "en": variant["en"],
                     "zh": variant["zh"],
                     "phonetic": variant["phonetic"],
                     "pos": variant["pos"],
+                    "definition": variant["definition"],
                     "tracks": [track for track in TRACK_ORDER if track in tracks],
                     "rank": record["rank"],
                     "senses": variant["senses"],
                 }
+                if variant["en"] == "polish":
+                    variant_forms = clean_exchange(
+                        record["exchange_raw"],
+                        variant["en"],
+                        variant_poses,
+                    )
+                    if variant_forms:
+                        word["forms"] = variant_forms
+                parts = detect_word_parts(variant["en"], variant_poses)
+                if parts:
+                    word["parts"] = parts
                 words.append(word)
             continue
         # The corpus audit is a risk detector, not an automatic dictionary
@@ -783,17 +1312,35 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 if reviewed["pos"] == pos:
                     continue
                 senses.append(reviewed)
+        definition = clean_english_definition(record["definition_raw"], pos, key)
+        if not definition:
+            raise ValueError(f"No English definition available for {record['en']!r}")
         word = {
                 "id": safe_word_id(record["en"], used_ids),
                 "en": record["en"],
                 "zh": zh,
                 "phonetic": record["phonetic"],
                 "pos": pos,
+                "definition": definition,
                 "tracks": [track for track in TRACK_ORDER if track in tracks],
                 "rank": record["rank"],
             }
         if len(senses) > 1:
             word["senses"] = senses
+        poses = {pos}
+        poses.update(sense["pos"] for sense in senses)
+        forms = clean_exchange(record["exchange_raw"], record["en"], poses)
+        if forms:
+            word["forms"] = forms
+        hook = MEMORY_HOOK_OVERRIDES.get(key)
+        if hook:
+            word["hook"] = hook
+        family = WORD_FAMILY_OVERRIDES.get(key)
+        if family:
+            word["family"] = family
+        parts = detect_word_parts(record["en"], poses)
+        if parts:
+            word["parts"] = parts
         words.append(word)
 
     words.sort(key=lambda word: (word["rank"], word["en"].casefold()))
@@ -802,6 +1349,23 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
 
 def render_module(words: list[dict[str, Any]], source_sha256: str) -> str:
     levels_json = json.dumps(LEVELS, ensure_ascii=False, separators=(",", ":"))
+    word_parts_json = json.dumps(
+        {
+            part_id: {
+                "label": group["label"],
+                "kind": group["kind"],
+                "en": group["en"],
+                "zh": group["zh"],
+                "examples": [
+                    {"en": example[0], "zh": example[1]}
+                    for example in group["examples"]
+                ],
+            }
+            for part_id, group in WORD_PART_GROUPS.items()
+        },
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
     rows = ",\n".join(
         json.dumps(word, ensure_ascii=False, separators=(",", ":")) for word in words
     )
@@ -811,6 +1375,7 @@ def render_module(words: list[dict[str, Any]], source_sha256: str) -> str:
 
 export const DEFAULT_ADULT_LEVEL_ID = 'cet4';
 export const ADULT_LEVELS = {levels_json};
+export const ADULT_WORD_PARTS = {word_parts_json};
 
 export const ADULT_WORDS = [
 {rows}

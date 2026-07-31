@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   DEFAULT_ADULT_LEVEL_ID,
   ADULT_LEVELS,
+  ADULT_WORD_PARTS,
   ADULT_WORDS,
   adultWordsForLevel,
   findAdultLevel,
@@ -54,13 +55,18 @@ test('成人词库：英文和 id 全局唯一，id 可安全写入存档', () =
 test('成人词库：学习字段完整，中文释义已清洗为短释义', () => {
   const validTracks = new Set(LEVEL_IDS);
   for (const word of ADULT_WORDS) {
-    for (const field of ['id', 'en', 'zh', 'phonetic', 'pos', 'tracks', 'rank']) {
+    for (const field of ['id', 'en', 'zh', 'phonetic', 'pos', 'definition', 'tracks', 'rank']) {
       assert.ok(Object.hasOwn(word, field), `${word.id || '?'} 缺少字段 ${field}`);
     }
     assert.ok(word.en.length > 0);
     assert.ok(word.zh.length > 0 && word.zh.length <= 36, `${word.id} 释义过长: ${word.zh}`);
     assert.ok(!word.zh.includes('\\n') && !word.zh.includes('\n'), `${word.id} 释义仍有换行`);
     assert.equal(typeof word.phonetic, 'string');
+    assert.ok(typeof word.definition === 'string' && word.definition.length >= 3,
+      `${word.id} 缺少英英解释`);
+    assert.ok(word.definition.length <= 150, `${word.id} 英英解释过长`);
+    assert.doesNotMatch(word.definition, /[\u3400-\u9fff<>]/,
+      `${word.id} 英英解释含中文或 HTML`);
     assert.ok(typeof word.pos === 'string' && word.pos.length > 0);
     if (word.senses) {
       assert.ok(Array.isArray(word.senses) && word.senses.length >= 2);
@@ -83,7 +89,43 @@ test('成人词库：学习字段完整，中文释义已清洗为短释义', ()
     assert.ok(Array.isArray(word.tracks) && word.tracks.length > 0);
     assert.equal(new Set(word.tracks).size, word.tracks.length);
     assert.ok(word.tracks.every((track) => validTracks.has(track)));
+    if (word.forms) {
+      assert.ok(Array.isArray(word.forms) && word.forms.length >= 1 && word.forms.length <= 3);
+      assert.equal(new Set(word.forms).size, word.forms.length);
+    }
+    if (word.parts) {
+      assert.ok(Array.isArray(word.parts) && word.parts.length >= 1 && word.parts.length <= 2);
+      assert.ok(word.parts.every((partId) => ADULT_WORD_PARTS[partId]));
+    }
   }
+});
+
+test('成人词库：所有卡片有英英解释，大量词提供可靠构词和词形线索', () => {
+  assert.equal(ADULT_WORDS.filter((word) => word.definition).length, ADULT_WORDS.length);
+  assert.ok(ADULT_WORDS.filter((word) => word.parts).length >= 850,
+    '构词线索覆盖不足');
+  assert.ok(ADULT_WORDS.filter((word) => word.forms).length >= 5000,
+    '词形变化覆盖不足');
+
+  const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
+  assert.equal(
+    byEnglish.get('envisage')?.definition,
+    'to imagine or picture a future situation, especially one you may plan for',
+  );
+  assert.deepEqual(byEnglish.get('envisage')?.parts, ['vis']);
+  assert.equal(byEnglish.get('envisage')?.family?.[0]?.en, 'imagine');
+  assert.equal(
+    byEnglish.get('irrigate')?.definition,
+    'to supply land or crops with water through pipes or channels',
+  );
+  assert.equal(byEnglish.get('irrigate')?.hook, 'water → land or crops');
+  assert.deepEqual(byEnglish.get('maltreat')?.parts, ['mal']);
+  assert.ok(byEnglish.get('malfunction')?.parts?.includes('mal'));
+  assert.equal(byEnglish.get('invalid')?.forms, undefined,
+    '形容词 invalid 不应展示过时动词的 invalided');
+
+  assert.equal(ADULT_WORD_PARTS.mal.en, 'bad or badly');
+  assert.ok(ADULT_WORD_PARTS.mal.examples.some((item) => item.en === 'malfunction'));
 });
 
 test('成人词库：重叠考试词只存一份，并记录多条共享路线', () => {
