@@ -25,6 +25,11 @@ test('PWA 强制更新只清理本应用作用域和缓存前缀', () => {
   assert.doesNotMatch(appSource, /keys\.map\(\(k\) => caches\.delete\(k\)\)/);
 });
 
+test('发布资源带版本号，强制更新不会继续命中旧 CSS 和主脚本', () => {
+  assert.match(htmlSource, /css\/style\.css\?v=26/);
+  assert.match(htmlSource, /js\/app\.js\?v=26/);
+});
+
 test('自然语音：换页停止旧朗读、支持设备音色选择和试听', () => {
   assert.match(appSource, /function stopSpeech\(\)/);
   assert.match(appSource, /selectVoice\(deviceVoices\(\), lang, preferred\)/);
