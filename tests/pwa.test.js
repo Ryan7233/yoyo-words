@@ -97,6 +97,8 @@ test('service worker lifecycle waits for activation and only deletes its own old
   await installWork;
   assert.equal(state.skipWaiting, 1);
   assert.ok(state.addedAssets.includes('./index.html'));
+  assert.ok(state.addedAssets.includes('./css/style.css?v=26'));
+  assert.ok(state.addedAssets.includes('./js/app.js?v=26'));
   assert.ok(state.addedAssets.includes('./js/speech.js'));
   assert.ok(state.addedAssets.includes('./js/adult-words.js'));
 
