@@ -65,7 +65,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v25';
+const APP_VERSION = 'v26';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -798,7 +798,7 @@ function showAdultLearn(scope, words, idx) {
         <div class="title">📖 ${scope.daily ? '今日背词' : scope.title}</div>
         <button class="icon-btn" id="replay" aria-label="播放单词发音">🔊</button>
       </div>
-      <p class="counter">${safeIdx + 1} / ${words.length} · 本组已看 ${seenCount} 个</p>
+      <p class="counter" aria-live="polite">${safeIdx + 1} / ${words.length} · 本组已看 ${seenCount} 个</p>
       <button class="flashcard adult-flashcard" id="card" type="button">
         <span class="adult-word${wordSizeClass}">${w.en}</span>
         <span class="adult-phonetic">${phonetic}</span>
@@ -808,8 +808,8 @@ function showAdultLearn(scope, words, idx) {
       </button>
       <button class="btn ghost adult-known-action" id="known" type="button">✅ 我认识，移出学习计划</button>
       <div class="learn-nav">
-        <button class="btn secondary" id="prev" ${safeIdx === 0 ? 'disabled' : ''}>上一个</button>
-        <button class="btn" id="next">${safeIdx === words.length - 1 ? (scope.daily ? '开始小测 →' : '完成 ✅') : '下一个'}</button>
+        <button class="btn secondary" id="prev" type="button" ${safeIdx === 0 ? 'disabled' : ''}>上一个</button>
+        <button class="btn" id="next" type="button">${safeIdx === words.length - 1 ? (scope.daily ? '开始小测 →' : '完成 ✅') : '下一个'}</button>
       </div>
     </div>
   `);

@@ -51,6 +51,11 @@ test('成人路线：独立首页先背词再小测，测验不累加儿童星�
   assert.match(cssSource, /white-space: nowrap/);
   assert.match(cssSource, /\.adult-learning-panel/);
   assert.match(cssSource, /\.adult-related-list/);
+  assert.match(cssSource, /\.adult-learn \.learn-nav[\s\S]*position: fixed/);
+  assert.match(cssSource, /padding-bottom: calc\(108px \+ env\(safe-area-inset-bottom\)\)/);
+  assert.match(appSource, /id="prev" type="button"/);
+  assert.match(appSource, /id="next" type="button"/);
+  assert.match(appSource, /class="counter" aria-live="polite"/);
   assert.match(appSource, /scope\.daily[\s\S]*startQuiz\(words, '今日背词小测'/);
   assert.match(appSource, /activeQuiz\.adult\s*\?\s*0/);
   assert.match(appSource, /function showAdultResult\(\)/);

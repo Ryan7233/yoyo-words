@@ -1187,6 +1187,29 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   user-select: text;
   -webkit-user-select: text;
 }
+.adult-learn {
+  padding-bottom: calc(108px + env(safe-area-inset-bottom));
+}
+.adult-learn .learn-nav {
+  position: fixed;
+  z-index: 40;
+  right: 50%;
+  bottom: calc(10px + env(safe-area-inset-bottom));
+  width: min(calc(100% - 32px), 500px);
+  padding: 10px;
+  border: 1px solid rgba(38, 122, 98, 0.12);
+  border-radius: 22px;
+  background: rgba(244, 251, 248, 0.94);
+  box-shadow: 0 12px 32px rgba(42, 91, 76, 0.2);
+  transform: translateX(50%);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+.adult-learn .learn-nav .btn {
+  min-height: 54px;
+  margin: 0;
+  touch-action: manipulation;
+}
 .adult-hero {
   display: flex;
   align-items: center;
