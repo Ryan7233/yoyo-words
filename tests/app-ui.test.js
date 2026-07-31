@@ -41,9 +41,16 @@ test('成人路线：独立首页先背词再小测，测验不累加儿童星�
   assert.match(appSource, /class="adult-sense"/);
   assert.match(appSource, /adult-word-very-long/);
   assert.match(appSource, /sense\.phonetic/);
+  assert.match(appSource, /function adultLearningMarkup\(word\)/);
+  assert.match(appSource, /ENGLISH CLUE · 英英理解/);
+  assert.match(appSource, /WORD BUILDING · 构词/);
+  assert.match(appSource, /举一反三/);
+  assert.match(appSource, /word\.forms/);
   assert.match(cssSource, /\.adult-word-long[\s\S]*font-size: clamp/);
   assert.match(cssSource, /\.adult-word-very-long[\s\S]*font-size: clamp/);
   assert.match(cssSource, /white-space: nowrap/);
+  assert.match(cssSource, /\.adult-learning-panel/);
+  assert.match(cssSource, /\.adult-related-list/);
   assert.match(appSource, /scope\.daily[\s\S]*startQuiz\(words, '今日背词小测'/);
   assert.match(appSource, /activeQuiz\.adult\s*\?\s*0/);
   assert.match(appSource, /function showAdultResult\(\)/);

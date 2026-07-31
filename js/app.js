@@ -21,7 +21,8 @@ import {
   SPEEDS, naturalRate, selectVoice, englishVoices,
 } from './speech.js';
 import {
-  ADULT_LEVELS, ADULT_WORDS, adultWordsForLevel, findAdultLevel,
+  ADULT_LEVELS, ADULT_WORDS, ADULT_WORD_PARTS,
+  adultWordsForLevel, findAdultLevel,
 } from './adult-words.js';
 
 const storage = createStorage();
@@ -64,7 +65,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v24';
+const APP_VERSION = 'v25';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -290,6 +291,16 @@ function el(html) {
   const t = document.createElement('template');
   t.innerHTML = html.trim();
   return t.content.firstElementChild;
+}
+
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  })[char]);
 }
 
 function render(node) {
@@ -700,6 +711,61 @@ function showAdultCollection(scope) {
   render(node);
 }
 
+function adultLearningMarkup(word) {
+  const parts = (word.parts || [])
+    .map((partId) => ADULT_WORD_PARTS[partId])
+    .filter(Boolean);
+  const relatedCandidates = [
+    ...(word.family || []),
+    ...parts.flatMap((part) => part.examples || []),
+  ];
+  const seenRelated = new Set();
+  const related = relatedCandidates.filter((item) => {
+    const key = String(item.en || '').toLocaleLowerCase('en');
+    if (!key || key === word.en.toLocaleLowerCase('en') || seenRelated.has(key)) return false;
+    seenRelated.add(key);
+    return true;
+  }).slice(0, 3);
+  const partKind = { prefix: '前缀', root: '词根', suffix: '后缀' };
+  const partMarkup = parts.length ? `
+    <span class="adult-learning-block adult-word-building">
+      <span class="adult-learning-label">WORD BUILDING · 构词</span>
+      <span class="adult-part-list">${parts.map((part) => `
+        <span class="adult-part">
+          <span><small>${partKind[part.kind] || '构词'}</small><b>${escapeHtml(part.label)}</b></span>
+          <span><strong>${escapeHtml(part.en)}</strong><small>${escapeHtml(part.zh)}</small></span>
+        </span>
+      `).join('')}</span>
+    </span>
+  ` : '';
+  const relatedMarkup = related.length ? `
+    <span class="adult-learning-block">
+      <span class="adult-learning-label">举一反三</span>
+      <span class="adult-related-list">${related.map((item) => `
+        <span class="adult-related-word"><b>${escapeHtml(item.en)}</b><small>${escapeHtml(item.zh)}</small></span>
+      `).join('')}</span>
+    </span>
+  ` : '';
+  const formsMarkup = word.forms?.length ? `
+    <span class="adult-forms">
+      <span>词形变化</span>
+      <b>${word.forms.map(escapeHtml).join(' · ')}</b>
+    </span>
+  ` : '';
+  return `
+    <span class="adult-learning-panel">
+      <span class="adult-learning-block adult-english-clue">
+        <span class="adult-learning-label">ENGLISH CLUE · 英英理解</span>
+        <span class="adult-definition">${escapeHtml(word.definition)}</span>
+        ${word.hook ? `<span class="adult-memory-hook">🧠 ${escapeHtml(word.hook)}</span>` : ''}
+      </span>
+      ${partMarkup}
+      ${relatedMarkup}
+      ${formsMarkup}
+    </span>
+  `;
+}
+
 function showAdultLearn(scope, words, idx) {
   if (!words.length) return showAdultHome();
   const safeIdx = Math.max(0, Math.min(idx, words.length - 1));
@@ -724,6 +790,7 @@ function showAdultLearn(scope, words, idx) {
       `).join('')}</span>`
     : `${w.pos ? `<span class="adult-pos">${w.pos}</span>` : ''}
        <span class="adult-meaning">${w.zh}</span>`;
+  const learning = adultLearningMarkup(w);
   const node = el(`
     <div class="adult-learn">
       <div class="topbar">
@@ -736,7 +803,8 @@ function showAdultLearn(scope, words, idx) {
         <span class="adult-word${wordSizeClass}">${w.en}</span>
         <span class="adult-phonetic">${phonetic}</span>
         ${meanings}
-        <span class="hint">点卡片再听一遍</span>
+        ${learning}
+        <span class="hint">点卡片听单词发音</span>
       </button>
       <button class="btn ghost adult-known-action" id="known" type="button">✅ 我认识，移出学习计划</button>
       <div class="learn-nav">
