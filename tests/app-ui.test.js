@@ -26,8 +26,8 @@ test('PWA 强制更新只清理本应用作用域和缓存前缀', () => {
 });
 
 test('发布资源带版本号，强制更新不会继续命中旧 CSS 和主脚本', () => {
-  assert.match(htmlSource, /css\/style\.css\?v=27/);
-  assert.match(htmlSource, /js\/app\.js\?v=27/);
+  assert.match(htmlSource, /css\/style\.css\?v=28/);
+  assert.match(htmlSource, /js\/app\.js\?v=28/);
 });
 
 test('自然语音：换页停止旧朗读、支持设备音色选择和试听', () => {
@@ -64,17 +64,29 @@ test('成人路线：独立首页先背词再小测，测验不累加儿童星�
   assert.match(appSource, /id="prev" type="button"/);
   assert.match(appSource, /id="next" type="button"/);
   assert.match(appSource, /class="counter" aria-live="polite"/);
-  assert.match(appSource, /scope\.daily[\s\S]*startQuiz\(words, '今日背词小测'/);
+  assert.match(appSource, /activeScope\.daily[\s\S]*startQuiz\(activeWords, '今日背词小测'/);
   assert.match(appSource, /activeQuiz\.adult\s*\?\s*0/);
   assert.match(appSource, /function showAdultResult\(\)/);
 });
 
 test('成人背词：“我认识”持久化并从后续计划排除，且可恢复', () => {
   assert.match(appSource, /function adultWordsToLearn\(words, d = pdata\(\)\)/);
+  assert.match(appSource, /const activeWords = adultWordsToLearn\(words, d\)/);
+  assert.match(appSource, /showAdultLearn\(activeScope, activeWords, safeIdx \+ 1\)/);
   assert.match(appSource, /d\.knownWords\[w\.id\] = true/);
   assert.match(appSource, /delete d\.knownWords\[word\.id\]/);
   assert.match(appSource, /我认识，移出学习计划/);
   assert.match(appSource, /function showAdultKnownWords\(\)/);
+});
+
+test('成人长词卡：固定导航不用 iOS 易错位的 transform 或背景模糊层', () => {
+  const navRule = cssSource.match(/\.adult-learn \.learn-nav \{([\s\S]*?)\n\}/)?.[1] || '';
+  assert.match(navRule, /position:\s*fixed/);
+  assert.match(navRule, /left:\s*max\(/);
+  assert.match(navRule, /right:\s*max\(/);
+  assert.match(navRule, /z-index:\s*1000/);
+  assert.doesNotMatch(navRule, /transform:/);
+  assert.doesNotMatch(navRule, /backdrop-filter:/);
 });
 
 test('成人路线：错词、词表分组和重测都使用当前成人词池', () => {

@@ -1192,18 +1192,18 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 }
 .adult-learn .learn-nav {
   position: fixed;
-  z-index: 40;
-  right: 50%;
+  z-index: 1000;
+  left: max(16px, calc((100vw - 480px) / 2 + 16px));
+  right: max(16px, calc((100vw - 480px) / 2 + 16px));
   bottom: calc(10px + env(safe-area-inset-bottom));
-  width: min(calc(100% - 32px), 500px);
+  width: auto;
   padding: 10px;
   border: 1px solid rgba(38, 122, 98, 0.12);
   border-radius: 22px;
-  background: rgba(244, 251, 248, 0.94);
+  background: #f4fbf8;
   box-shadow: 0 12px 32px rgba(42, 91, 76, 0.2);
-  transform: translateX(50%);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  pointer-events: auto;
+  isolation: isolate;
 }
 .adult-learn .learn-nav .btn {
   min-height: 54px;

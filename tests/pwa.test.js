@@ -89,7 +89,7 @@ function makeResponse({
 
 test('service worker lifecycle waits for activation and only deletes its own old caches', async () => {
   const { listeners, state } = loadWorker({
-    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26', 'yoyo-words-v27', 'another-app-v9', 'shared-cache'],
+    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26', 'yoyo-words-v27', 'yoyo-words-v28', 'another-app-v9', 'shared-cache'],
   });
 
   let installWork;
@@ -97,15 +97,15 @@ test('service worker lifecycle waits for activation and only deletes its own old
   await installWork;
   assert.equal(state.skipWaiting, 1);
   assert.ok(state.addedAssets.includes('./index.html'));
-  assert.ok(state.addedAssets.includes('./css/style.css?v=27'));
-  assert.ok(state.addedAssets.includes('./js/app.js?v=27'));
+  assert.ok(state.addedAssets.includes('./css/style.css?v=28'));
+  assert.ok(state.addedAssets.includes('./js/app.js?v=28'));
   assert.ok(state.addedAssets.includes('./js/speech.js'));
   assert.ok(state.addedAssets.includes('./js/adult-words.js'));
 
   let activateWork;
   listeners.activate({ waitUntil: (promise) => { activateWork = promise; } });
   await activateWork;
-  assert.deepEqual(state.deleted, ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26']);
+  assert.deepEqual(state.deleted, ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26', 'yoyo-words-v27']);
   assert.equal(state.claimed, 1);
 });
 

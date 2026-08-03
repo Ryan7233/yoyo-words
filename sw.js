@@ -1,12 +1,12 @@
 // 离线缓存（仅在 localhost / HTTPS 等安全上下文下生效）
 const CACHE_PREFIX = 'yoyo-words-';
-const CACHE = `${CACHE_PREFIX}v27`;
+const CACHE = `${CACHE_PREFIX}v28`;
 const ASSETS = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './css/style.css?v=27',
-  './js/app.js?v=27',
+  './css/style.css?v=28',
+  './js/app.js?v=28',
   './js/words.js',
   './js/engine.js',
   './js/storage.js',

@@ -65,7 +65,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v27';
+const APP_VERSION = 'v28';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -804,14 +804,22 @@ function adultLearningMarkup(word) {
 }
 
 function showAdultLearn(scope, words, idx) {
-  if (!words.length) return showAdultHome();
-  const safeIdx = Math.max(0, Math.min(idx, words.length - 1));
-  const w = words[safeIdx];
   const d = pdata();
+  // 每次进入词卡都以最新的 knownWords 重新收敛会话。这样即使 iOS 在换页后
+  // 补发了旧按钮的 click，旧闭包也不能把刚移出的词重新带回页面。
+  const activeWords = adultWordsToLearn(words, d);
+  if (!activeWords.length) return showAdultHome();
+  const activeScope = {
+    ...scope,
+    words: adultWordsToLearn(scope.words || activeWords, d),
+    pool: scope.pool ? adultWordsToLearn(scope.pool, d) : scope.pool,
+  };
+  const safeIdx = Math.max(0, Math.min(idx, activeWords.length - 1));
+  const w = activeWords[safeIdx];
   d.seen[w.id] = true;
-  d.learnPos[scope.key] = safeIdx;
+  d.learnPos[activeScope.key] = safeIdx;
   saveState();
-  const seenCount = words.filter((x) => d.seen[x.id]).length;
+  const seenCount = activeWords.filter((x) => d.seen[x.id]).length;
   const phonetic = w.phonetic ? `/${w.phonetic}/` : '点击听发音';
   const letterCount = [...w.en.replace(/[^A-Za-z]/g, '')].length;
   const wordSizeClass = letterCount >= 15
@@ -841,10 +849,10 @@ function showAdultLearn(scope, words, idx) {
     <div class="adult-learn">
       <div class="topbar">
         <button class="icon-btn" id="back" aria-label="退出背词">←</button>
-        <div class="title">📖 ${scope.daily ? '今日背词' : scope.title}</div>
+        <div class="title">📖 ${activeScope.daily ? '今日背词' : activeScope.title}</div>
         <button class="icon-btn" id="replay" aria-label="播放单词发音">🔊</button>
       </div>
-      <p class="counter" aria-live="polite">${safeIdx + 1} / ${words.length} · 本组已看 ${seenCount} 个</p>
+      <p class="counter" aria-live="polite">${safeIdx + 1} / ${activeWords.length} · 本组已看 ${seenCount} 个</p>
       <button class="flashcard adult-flashcard" id="card" type="button">
         <span class="adult-word${wordSizeClass}">${w.en}</span>
         <span class="adult-phonetic">${phonetic}</span>
@@ -855,38 +863,38 @@ function showAdultLearn(scope, words, idx) {
       <button class="btn ghost adult-known-action" id="known" type="button">✅ 我认识，移出学习计划</button>
       <div class="learn-nav">
         <button class="btn secondary" id="prev" type="button" ${safeIdx === 0 ? 'disabled' : ''}>上一个</button>
-        <button class="btn" id="next" type="button">${safeIdx === words.length - 1 ? (scope.daily ? '开始小测 →' : '完成 ✅') : '下一个'}</button>
+        <button class="btn" id="next" type="button">${safeIdx === activeWords.length - 1 ? (activeScope.daily ? '开始小测 →' : '完成 ✅') : '下一个'}</button>
       </div>
     </div>
   `);
   const say = () => speak(w.en);
-  node.querySelector('#back').addEventListener('click', () => scope.daily ? showAdultHome() : showAdultCollection(scope));
+  node.querySelector('#back').addEventListener('click', () => activeScope.daily ? showAdultHome() : showAdultCollection(activeScope));
   node.querySelector('#replay').addEventListener('click', say);
   node.querySelector('#card').addEventListener('click', say);
   node.querySelector('#known').addEventListener('click', () => {
     d.knownWords[w.id] = true;
-    const remainingWords = words.filter((word) => !d.knownWords[word.id]);
+    const remainingWords = adultWordsToLearn(activeWords, d);
     const remainingScope = {
-      ...scope,
-      words: scope.words.filter((word) => !d.knownWords[word.id]),
-      pool: scope.pool ? scope.pool.filter((word) => !d.knownWords[word.id]) : scope.pool,
+      ...activeScope,
+      words: adultWordsToLearn(activeScope.words, d),
+      pool: activeScope.pool ? adultWordsToLearn(activeScope.pool, d) : activeScope.pool,
     };
-    d.learnPos[scope.key] = Math.min(safeIdx, Math.max(0, remainingWords.length - 1));
+    d.learnPos[activeScope.key] = Math.min(safeIdx, Math.max(0, remainingWords.length - 1));
     saveState();
     if (!remainingWords.length) return showAdultHome();
     showAdultLearn(remainingScope, remainingWords, Math.min(safeIdx, remainingWords.length - 1));
   });
-  node.querySelector('#prev').addEventListener('click', () => showAdultLearn(scope, words, safeIdx - 1));
+  node.querySelector('#prev').addEventListener('click', () => showAdultLearn(activeScope, activeWords, safeIdx - 1));
   node.querySelector('#next').addEventListener('click', () => {
-    if (safeIdx < words.length - 1) return showAdultLearn(scope, words, safeIdx + 1);
-    d.learnPos[scope.key] = 0;
+    if (safeIdx < activeWords.length - 1) return showAdultLearn(activeScope, activeWords, safeIdx + 1);
+    d.learnPos[activeScope.key] = 0;
     saveState();
-    if (!scope.daily) return showAdultCollection(scope);
-    startQuiz(words, '今日背词小测', {
+    if (!activeScope.daily) return showAdultCollection(activeScope);
+    startQuiz(activeWords, '今日背词小测', {
       adult: true,
       count: ADULT_QUIZ_SIZE,
-      pool: scope.pool || levelWords(),
-      sourceScope: scope,
+      pool: activeScope.pool || adultWordsToLearn(levelWords(), d),
+      sourceScope: activeScope,
     });
   });
   render(node);
