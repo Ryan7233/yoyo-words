@@ -20,7 +20,7 @@ word,pos,zh,definition,example,collocations,status,primary
 "out","adv.","出去、在外","away from the inside of a place","She went out after dinner.","go out|find out",generated,yes
 "just","adv.","只是、刚刚、正好","only, very recently, or exactly","I have just finished lunch.","just now|just right",generated,yes
 "its","pron.","它的","used to show that something belongs to or is connected with a thing or animal","The dog moved its tail.","",generated,yes
-"more","adv.","更多、更","to a greater amount, number, or degree","We need more time.","more than|more often",generated,yes
+"more","adv.","更、更加；再","to a greater degree or for a longer time","She visits us more often now.","more often|more quickly",generated,yes
 "well","adv.","很好地、充分地","in a good, successful, or satisfactory way","She speaks English very well.","do well|work well",generated,yes
 "only","adv.","只、仅仅","used to say that there is no more than one thing, person, amount, or choice","I only need five minutes.","only one|not only",generated,yes
 "even","adv.","甚至、即使","used to emphasize something surprising or more extreme","Even the youngest child understood.","even better|even if",generated,yes
@@ -37,7 +37,7 @@ word,pos,zh,definition,example,collocations,status,primary
 "while","conj.","当……时、虽然","during the time that something happens; sometimes used to contrast two facts","She listened while I spoke.","while waiting|a while",generated,yes
 "why","adv.","为什么","for what reason or purpose","Why are you late?","",generated,yes
 "help","v.","帮助、协助","to make it easier for someone to do something","Can you help me carry this box?","help with|help someone",generated,yes
-"turn","v.","转动、转向、轮到","to move around a point or change direction","Turn left at the next street.","turn on|turn into",generated,yes
+"turn","v.","转动、转向；变成","to move around a point, change direction, or become different","Turn left at the next street.","turn on|turn into",generated,yes
 "start","v.","开始、出发","to begin doing something or begin to happen","The meeting starts at nine.","start with|start work",generated,yes
 "might","aux.","可能、也许","used to say that something is possible but not certain","We might go out later.","",generated,yes
 "right","adj.","正确的、合适的","correct, true, or suitable for a situation","You chose the right answer.","right way|right time",generated,yes
@@ -48,10 +48,10 @@ word,pos,zh,definition,example,collocations,status,primary
 "lot","n.","许多、大量","a large number or amount","We learned a lot today.","a lot of|a whole lot",generated,yes
 "set","v.","设置、放置、确定","to put something in a position or decide a value, time, or rule","Set the alarm for seven.","set a goal|set up",generated,yes
 "change","v.","改变、变化、更换","to make or become different","The weather can change quickly.","change your mind|change into",generated,yes
-"best","adj.","最好的、最合适的","better than all other people or things","This is the best choice for us.","best friend|do your best",generated,yes
+"best","adj.","最好的、最合适的","better than all other people or things","This is the best choice for us.","best friend|best choice",generated,yes
 "white","adj.","白色的","having the colour of fresh snow or milk","She wore a white shirt.","white paper|black and white",generated,yes
 "kid","n.","孩子、小孩","a child or young person","The kids are playing outside.","little kid|smart kid",generated,yes
-"lead","v.","带领、领先、通向","to guide people, be ahead, or go to a place","She will lead the project.","lead to|take the lead",generated,yes
+"lead","v.","带领、领先、通向","to guide people, be ahead, or go to a place","She will lead the project.","lead to|lead a team",generated,yes
 "watch","v.","观看、留意","to look at something for a period of time and pay attention","We watched a film together.","watch TV|watch carefully",generated,yes
 "together","adv.","一起、共同","with another person or in one group","We cooked dinner together.","work together|get together",generated,yes
 "centre","n.","中心、中央","the middle point or main part of a place or activity","The hotel is in the city centre.","city centre|shopping centre",generated,yes
@@ -72,9 +72,9 @@ word,pos,zh,definition,example,collocations,status,primary
 "major","adj.","主要的、重大的","very important, serious, or large","Traffic is a major problem in the city.","major change|major role",generated,yes
 "better","adj.","更好的、更合适的","of a higher quality or more suitable than something else","This plan is better than the old one.","feel better|better choice",generated,yes
 "pull","v.","拉、拖","to move something toward you or in a particular direction","Pull the door to open it.","pull out|pull together",generated,yes
-"free","adj.","自由的、免费的、空闲的","not controlled, not costing money, or available to use","The museum is free on Sundays.","free time|for free",generated,yes
+"free","adj.","自由的、免费的、空闲的","not controlled, not costing money, or available to use","The museum is free on Sundays.","free time|free of charge",generated,yes
 "drive","v.","驾驶、驱动","to control a vehicle or make something happen","She drives to work every day.","drive a car|drive growth",generated,yes
-"break","v.","打破、弄坏、中断","to damage something so it separates or stops working","Be careful not to break the glass.","break down|take a break",generated,yes
+"break","v.","打破、弄坏、中断","to damage something so it separates or stops working","Be careful not to break the glass.","break down|break a promise",generated,yes
 "pick","v.","挑选、采摘、拿取","to choose or take one thing from a group","Pick the colour you like best.","pick up|pick one",generated,yes
 "and","conj.","和、与、并且","used to join words, phrases, or ideas","She bought bread and milk.","",generated,yes
 "of","prep.","的、属于","used to show belonging, connection, amount, or part of something","The door of the room was open.","a cup of|part of",generated,yes
@@ -201,3 +201,61 @@ word,pos,zh,definition,example,collocations,status,primary
 "same","adj.","相同的、同样的","not different; exactly like another person or thing","We chose the same colour.","the same as|at the same time",generated,yes
 "few","adj.","很少的、不多的、少数的","not many; only a small number of people or things","Few people knew the answer.","a few|very few",generated,yes
 "whichever","pron.","无论哪一个、任何一个","any one from a group when it does not matter which one is chosen","Choose whichever you prefer.","whichever one",generated,yes
+"mean","adj.","刻薄的、吝啬的；平均的","unkind or unwilling to share; in maths, based on an average","It was mean of him to laugh at her.","be mean to|mean temperature",generated,no
+"mean","n.","平均数、平均值","the total of a set of numbers divided by how many numbers there are","The mean of two and four is three.","the mean of|calculate the mean",generated,no
+"right","n.","权利；右边、右侧","something you are allowed to do or have; the side opposite the left","Everyone has a right to education.","the right to|on the right",generated,no
+"right","adv.","向右；正确地；正好、就","towards the side opposite the left; correctly; exactly","Turn right at the next street.","turn right|right now|get it right",generated,no
+"back","n.","背部；后面、背面","the part of your body opposite your chest; the rear part of something","My back hurts after sitting all day.","back pain|the back of",generated,no
+"back","adj.","后面的、背面的；过去的","at the rear of something; from an earlier time","Please use the back door.","back door|back issues",generated,no
+"back","v.","支持；后退、倒车","to support someone or something; to move backwards","Her team agreed to back the plan.","back a plan|back away",generated,no
+"call","n.","电话；呼声、叫声；要求","a conversation by phone; a shout or a request for something","I missed your call this morning.","a phone call|a call for help",generated,no
+"high","adv.","在高处、向高处","far above the ground or a lower position","The bird flew high above the trees.","fly high|aim high",generated,no
+"help","n.","帮助、援助","support that makes it easier for someone to do something","Thank you for your help.","ask for help|with your help",generated,no
+"turn","n.","轮到的机会；转弯、转变","your chance to do something; a change in direction or situation","It is your turn to choose a game.","take turns|a left turn",generated,no
+"start","n.","开始、开端；出发点","the beginning of an activity, event, or journey","We arrived before the start of the film.","at the start|a fresh start",generated,no
+"play","n.","戏剧；玩耍、游戏活动","a story performed by actors; an activity done for enjoyment","We watched a play at the theatre.","a school play|free play",generated,no
+"run","n.","跑步；一段连续的活动或时期","a period of running; a series of similar events","I go for a run every morning.","go for a run|a run of bad luck",generated,no
+"set","n.","一套、一组；装置；布景","a group of things that belong together; equipment or scenery used for a purpose","She bought a set of new plates.","a set of|a film set",generated,no
+"set","adj.","固定的、规定的；准备好的","fixed or arranged in advance; ready for something","There is no set time for lunch.","a set time|all set",generated,no
+"change","n.","变化、改变；零钱、找零","a difference from before; coins or money returned after a payment","Please keep the change.","a change of plan|small change",generated,no
+"best","adv.","最好地、最出色地","in the most successful or suitable way","I work best in the morning.","like best|know best",generated,no
+"lead","n.","领先地位；线索；铅","the position ahead of others; information that helps an investigation; a heavy grey metal","Our team took the lead in the second half.","take the lead|follow a lead|lead poisoning",generated,no
+"lead","adj.","主要的、领头的","having the main or most important role","She is the lead singer in the band.","lead singer|lead role",generated,no
+"watch","n.","手表；监视、值守","a small clock worn on the wrist; a period of looking out for danger","My watch says it is nine o'clock.","wear a watch|keep watch",generated,no
+"centre","v.","使居中；以……为中心","to put something in the middle; to focus on a main subject","The discussion centred on school safety.","centre on|centre around",generated,no
+"sure","adv.","确实、当然（口语）","certainly; used informally to agree or show that something is true","It sure is cold today.","sure is|sure can",generated,no
+"open","v.","打开；开办；开始营业","to move something so it is no longer closed; to start a business or activity","Could you open the window?","open a door|open a shop",generated,no
+"fall","n.","落下、跌倒；下降；秋天（美式）","an act of dropping down; a decrease; the season after summer in American English","She hurt her arm in a fall.","a fall in prices|in the fall",generated,no
+"cut","n.","伤口、切口；削减","an opening made by something sharp; a reduction in size or amount","He has a small cut on his finger.","a deep cut|a pay cut",generated,no
+"reach","n.","够得到的范围；影响范围","the distance you can stretch to touch something; the range of an effect","Keep medicines out of children's reach.","within reach|out of reach",generated,no
+"raise","n.","加薪（美式）","an increase in the money you earn from your job, in American English","She asked her boss for a raise.","get a raise|a pay raise",generated,no
+"care","v.","关心、在意；照顾","to feel that someone or something matters; to look after someone","I care about how you feel.","care about|care for",generated,no
+"hard","adv.","努力地；猛烈地、用力地","with a lot of effort or force","She worked hard to finish on time.","work hard|rain hard",generated,no
+"pass","n.","通行证；及格；传球；山口","a permit to enter; a successful test result; a throw to a teammate; a route through mountains","You need a pass to enter this building.","a boarding pass|a mountain pass",generated,no
+"major","n.","主修专业；主修生；少校","a main subject studied at university; a student of that subject; an army officer's rank","Her major is history.","a history major|an army major",generated,no
+"major","v.","主修（美式）","to study a particular subject as your main subject at university","He plans to major in biology.","major in",generated,no
+"better","adv.","更好地、更加","in a more successful or suitable way; to a greater degree","I can hear you better now.","know better|do better",generated,no
+"pull","n.","拉、拖；吸引力","an act of drawing something towards you; a force that attracts","Give the handle a gentle pull.","a strong pull|the pull of",generated,no
+"free","v.","释放；使摆脱、腾出","to let someone leave or escape; to make something available","They freed the bird from the net.","free someone from|free up time",generated,no
+"drive","n.","驾车出行；动力；驱动器","a journey in a car; a strong wish to succeed; a device for storing computer data","The beach is a short drive from here.","go for a drive|a hard drive",generated,no
+"break","n.","休息；中断；裂口","a short rest or pause; a gap where something has separated","Let's take a break after lunch.","take a break|a lunch break",generated,no
+"pick","n.","选择、挑选；镐；拨片","a choice; a tool for breaking hard ground; a small tool for playing a guitar","You can have the first pick of the books.","take your pick|a guitar pick",generated,no
+"fail","n.","不及格；失败（口语）","an unsuccessful test result or attempt","He got a fail in the driving test.","a pass or fail|an epic fail",generated,no
+"blue","n.","蓝色","the colour of a clear sky during the day","She painted the wall a pale blue.","dark blue|pale blue",generated,no
+"green","n.","绿色；草地、公共绿地","the colour of grass; an area of grass for public use","The children played on the village green.","dark green|a village green",generated,no
+"yellow","n.","黄色","the colour of a lemon or the middle of an egg","She chose a bright yellow for the wall.","bright yellow|pale yellow",generated,no
+"sponge","v.","用海绵擦洗、吸去；揩油、依赖他人","to clean or absorb liquid with a soft pad; to live on what others provide","She sponged the spilled water off the table.","sponge off|sponge down",generated,no
+"more","det.","更多的、额外的","greater in number or amount; additional","We need more time to finish.","more time|more people",generated,no
+"more","pron.","更多、额外的数量","an additional amount or number","There is more to learn.","much more|a little more",generated,no
+"first","adj.","第一的；最早的、首要的","coming before all others in order or time; most important","This is my first visit to Beijing.","first time|first place",generated,no
+"only","adj.","唯一的、仅有的","being the single person or thing of a particular kind","This is the only key I have.","the only one|an only child",generated,no
+"ordinary","adj.","普通的、平常的","usual and not special or different","It was an ordinary day at work.","ordinary people|ordinary life",generated,yes
+"album","n.","音乐专辑；相册、集邮册","a collection of songs released together; a book for keeping photos or stamps","We looked through our family photo album.","a photo album|release an album",generated,yes
+"moreover","adv.","而且、此外","used to add another point that supports what you have just said","The flat is small. Moreover, it is too expensive.","",generated,yes
+"dog","n.","狗、犬","an animal often kept as a pet that can bark","We take our dog for a walk every evening.","walk the dog|a pet dog",generated,yes
+"silver","n.","银；银色；银器","a valuable shiny grey-white metal; its colour; objects made from this metal","The ring is made of silver.","a silver ring|silver coins",generated,yes
+"question","n.","问题、疑问；议题","something you ask to get information; a subject that needs an answer or discussion","May I ask you a question?","ask a question|answer a question",generated,yes
+"government","n.","政府；治理","the group of people who run a country or region; the work of running it","The government plans to build more schools.","local government|government policy",generated,yes
+"quote","n.","引文、引语；报价","words repeated from someone else; a price offered for a job or service","We asked for a quote to repair the roof.","a famous quote|get a quote",generated,yes
+"quote","v.","引用；报价","to repeat someone's words; to state a price for a job or service","She quoted a line from the poem.","quote a price|quote from",generated,no
+"severe","adj.","严重的、剧烈的；严厉的","very bad or serious; very strict or harsh","The storm caused severe damage.","severe pain|severe damage",generated,yes

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { ADULT_WORDS } from '../js/adult-words.js';
+import { spawnSync } from 'node:child_process';
 
 const WORDS_BY_ENGLISH = new Map(
   ADULT_WORDS.map((word) => [word.en.toLocaleLowerCase('en'), word]),
@@ -176,4 +177,67 @@ test('成人英英释义：前 500 高频词至少提供可读短语而非单个
     (word) => englishTokens(word.definition).length < 2,
     '前 500 高频词存在单词式同义替换，不能充当可读释义',
   );
+});
+
+test('生成器按词性精确匹配，不把主词性复制到缺失词性', () => {
+  const result = spawnSync('python3', ['-c', [
+    'import scripts.build_adult_vocab as b',
+    'b.LEARNER_CONTENT["fixture"] = [{"pos":"v.","primary":True,"definition":"to use something"}]',
+    'assert b.learner_content_for("fixture", "n.") is None',
+    'assert b.learner_content_for("fixture", "v.")["pos"] == "v."',
+    'assert b.learner_content_for("fixture")["pos"] == "v."',
+  ].join('\n')], { cwd: new URL('..', import.meta.url), encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+});
+
+test('多词性修复：mean/right/fall 的次要词性有独立意义和例句', () => {
+  const expected = {
+    mean: { 'adj.': /刻薄|吝啬/, 'n.': /平均/ },
+    right: { 'n.': /权利|右边/, 'adv.': /向右/ },
+    back: { 'n.': /背部/, 'v.': /支持/ },
+    fall: { 'n.': /秋天/ },
+    open: { 'v.': /打开/ },
+  };
+  for (const [en, poses] of Object.entries(expected)) {
+    const word = WORDS_BY_ENGLISH.get(en);
+    for (const [pos, pattern] of Object.entries(poses)) {
+      const sense = word.senses.find((item) => item.pos === pos);
+      assert.match(sense.zh, pattern);
+      assert.notEqual(sense.definition, word.definition, `${en} ${pos} 仍复制主释义`);
+      assert.ok(sense.example);
+    }
+  }
+});
+
+test('已知错误义项与学习者不友好释义不再出现', () => {
+  assert.match(WORDS_BY_ENGLISH.get('ordinary').definition, /usual|not special/);
+  assert.doesNotMatch(WORDS_BY_ENGLISH.get('ordinary').definition, /judge|probate/);
+  assert.match(WORDS_BY_ENGLISH.get('album').zh, /专辑/);
+  assert.match(WORDS_BY_ENGLISH.get('album').zh, /相册/);
+  assert.doesNotMatch(WORDS_BY_ENGLISH.get('moreover').definition, /["“”]|mice|quality/);
+  assert.doesNotMatch(WORDS_BY_ENGLISH.get('dog').definition, /genus|Canis|prehistoric/);
+  assert.doesNotMatch(WORDS_BY_ENGLISH.get('silver').definition, /univalent|conductivity/);
+  assert.doesNotMatch(WORDS_BY_ENGLISH.get('question').definition, /questioning/);
+  assert.match(WORDS_BY_ENGLISH.get('severe').zh, /严重/);
+  assert.equal(WORDS_BY_ENGLISH.get('resolute').senses, undefined);
+  assert.equal(WORDS_BY_ENGLISH.get('else').senses, undefined);
+  assert.deepEqual(WORDS_BY_ENGLISH.get('more').senses.map((s) => s.pos), ['adv.', 'det.', 'pron.']);
+  assert.deepEqual(WORDS_BY_ENGLISH.get('centre').senses.map((s) => s.pos), ['n.', 'v.']);
+});
+
+test('全量生成词库不得把两个词性的中英文同时复制成相同内容', () => {
+  const failures = ADULT_WORDS.filter((w) => w.senses?.some((s) =>
+    s.pos !== w.pos && s.definition && s.definition === w.definition && s.zh === w.zh));
+  assert.deepEqual(failures.map((w) => w.en), []);
+});
+
+test('审计覆盖次要义项而不只检查主卡片', () => {
+  const result = spawnSync('python3', ['-c', [
+    'from scripts.audit_adult_definitions import analyze_word',
+    'w={"en":"mean","pos":"v.","zh":"意味着","definition":"to express an idea","rank":100,"senses":[{"pos":"n.","zh":"意味着","definition":"to express an idea"}]}',
+    'r=analyze_word(w, {}, 3000, .5, .6)',
+    'assert "cross_pos_copy" in r["issue_codes"]',
+    'assert "sense_pos_definition_conflict" in r["issue_codes"]',
+  ].join('\n')], { cwd: new URL('..', import.meta.url), encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
 });

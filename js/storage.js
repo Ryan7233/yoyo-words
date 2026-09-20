@@ -55,6 +55,8 @@ export function defaultProfileState(profileId) {
     seen: {},     // 学过的单词（翻过卡片就算）
     knownWords: {}, // 成人背词中自评“我认识”的词，从后续学习计划中排除
     learnPos: {}, // 每个分类/单元上次学到第几张卡片
+    dailyPlans: {}, // 成人每日固定队列，按路线保存
+    practice: {}, // 按技能记录练习次数；自评开口不冒充记忆掌握
     missions: {}, // 完成过的单元综合任务（句型 → 对话 → 自主表达）
     wrongbookRewarded: {}, // 已从错题本毕业并领取过奖励的单词（终身一次）
     roomRewarded: {}, // 听指令模式已领取过首次奖励的单词
@@ -126,6 +128,8 @@ function normalizeProgress(value) {
       correct: nonNegativeInteger(entry.correct),
       wrong: nonNegativeInteger(entry.wrong),
       nextDue: nonNegativeInteger(entry.nextDue),
+      ...(Number.isFinite(entry.lastPromotedAt) && entry.lastPromotedAt >= 0
+        ? { lastPromotedAt: nonNegativeInteger(entry.lastPromotedAt) } : {}),
     };
   }
   return out;
@@ -135,6 +139,33 @@ function normalizeSeen(value) {
   const out = {};
   for (const [id, seen] of safeEntries(value)) {
     if (isSafeKey(id) && typeof seen === 'boolean') out[id] = seen;
+  }
+  return out;
+}
+
+function normalizeDailyPlans(value) {
+  const out = {};
+  for (const [route, plan] of safeEntries(value)) {
+    if (!ADULT_LEVEL_IDS.has(route) || !isRecord(plan)
+      || typeof plan.day !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(plan.day)) continue;
+    const ids = (items) => [...new Set((Array.isArray(items) ? items : [])
+      .filter((id) => typeof id === 'string' && isSafeKey(id)))].slice(0, 20);
+    const wordIds = ids(plan.wordIds);
+    out[route] = { day: plan.day, wordIds,
+      testedIds: ids(plan.testedIds).filter((id) => wordIds.includes(id)),
+      lastWordId: wordIds.includes(plan.lastWordId) ? plan.lastWordId : '',
+      phase: plan.phase === 'quiz' ? 'quiz' : 'learn' };
+  }
+  return out;
+}
+
+function normalizePractice(value) {
+  const out = {};
+  for (const [id, entry] of safeEntries(value)) {
+    if (!isSafeKey(id) || !isRecord(entry)) continue;
+    out[id] = Object.fromEntries(['recognition', 'spelling', 'sentence', 'speaking', 'action']
+      .filter((skill) => Number.isFinite(entry[skill]) && entry[skill] > 0)
+      .map((skill) => [skill, nonNegativeInteger(entry[skill])]));
   }
   return out;
 }
@@ -242,6 +273,8 @@ function normalizeProfile(value, profileId) {
     seen: normalizeSeen(input.seen),
     knownWords: normalizeRewarded(input.knownWords),
     learnPos: normalizeLearnPos(input.learnPos),
+    dailyPlans: normalizeDailyPlans(input.dailyPlans),
+    practice: normalizePractice(input.practice),
     missions: normalizeSeen(input.missions),
     wrongbookRewarded: normalizeRewarded(input.wrongbookRewarded),
     roomRewarded: normalizeRewarded(input.roomRewarded),

@@ -37,7 +37,7 @@ DEFAULT_JSON = ROOT / "reports" / "adult-definition-audit.json"
 DEFAULT_CSV = ROOT / "reports" / "adult-definition-findings.csv"
 DEFAULT_TOP_CSV = ROOT / "reports" / "adult-definition-top-500.csv"
 
-SCRIPT_VERSION = 1
+SCRIPT_VERSION = 2
 WORD_RE = re.compile(r"[A-Za-z]+(?:['’][A-Za-z]+)?")
 CONNECTOR_ENDINGS = {
     "a", "an", "and", "because", "or", "the", "which",
@@ -448,6 +448,18 @@ def analyze_word(
             f"{advanced_ratio:.0%} of content tokens fall outside the rank-{defining_rank} proxy list.",
         ))
 
+    for sense in word.get("senses", []):
+        if not sense.get("definition") or sense.get("pos") == pos:
+            continue
+        if sense.get("definition") == definition and sense.get("zh") == word.get("zh"):
+            issues.append(Issue("cross_pos_copy", "risk",
+                f"Secondary {sense['pos']} copies both the primary Chinese and English; verify independently."))
+        nested = analyze_word({**word, **sense, "senses": []}, ranks,
+                              defining_rank, outside_threshold, difficult_threshold)
+        for issue in nested["issues"]:
+            issues.append(Issue(f"sense_{issue.code}", issue.category,
+                                f"{sense['pos']}: {issue.explanation}"))
+
     issue_codes = sorted({issue.code for issue in issues})
     categories = Counter(issue.category for issue in issues)
     hard_codes = {
@@ -592,12 +604,22 @@ def main() -> None:
     write_csv(args.csv, findings)
     write_csv(args.top_csv, top_rows)
 
-    issue_metadata = ISSUE_DEFINITIONS
+    issue_metadata = dict(ISSUE_DEFINITIONS)
+    issue_metadata["cross_pos_copy"] = {
+        "category": "risk", "meaning": "Different POS entries share both Chinese and English copy; requires semantic review.",
+    }
+    for code in issue_counts:
+        if code.startswith("sense_"):
+            issue_metadata[code] = dict(ISSUE_DEFINITIONS[code.removeprefix("sense_")])
     json_payload = {
         "script_version": SCRIPT_VERSION,
         "input": display_path(args.input),
         "input_sha256": source_sha,
         "total_words": len(results),
+        "secondary_senses_with_definition": sum(
+            bool(s.get("definition")) and s.get("pos") != w.get("pos")
+            for w in words for s in w.get("senses", [])
+        ),
         "flagged_words": flagged_words,
         "automatically_unflagged_not_semantically_verified": len(results) - flagged_words,
         "top_n": len(top_rows),
@@ -656,12 +678,18 @@ def main() -> None:
         "high_outside_vocab_ratio": "词库外词比例过高（启发式）",
         "definition_too_advanced": "释义难度过高（启发式）",
     }
+    issue_labels["cross_pos_copy"] = "不同词性复制同一中英文候选"
+    for code in sorted(set(issue_counts) - set(issue_order)):
+        issue_order.append(code)
+        if code.startswith("sense_"):
+            issue_labels[code] = "次要义项：" + issue_labels.get(code.removeprefix("sense_"), code)
 
     lines = [
         "# 成人英英释义自动审计",
         "",
         "本报告由 `scripts/audit_adult_definitions.py` 对生成后的成人词卡做全量、确定性扫描。"
         "**匹配数量只是命中规则的精确数量，不等于语言学意义上的全部错误数量；未命中也不代表释义正确。**",
+        "次要义项只要有英英解释，也接受同一套规则检查；只有中文的次要义项仍需语义审校，不计作已通过英英检查。",
         "",
         "## 扫描信息",
         "",

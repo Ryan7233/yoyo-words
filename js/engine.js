@@ -81,15 +81,49 @@ export function gradeAnswer(entry, isCorrect, now = Date.now()) {
     nextDue: count(source.nextDue),
   };
   const safeNow = Number.isFinite(now) ? now : Date.now();
+  if (Number.isFinite(source.lastPromotedAt)) e.lastPromotedAt = source.lastPromotedAt;
   if (isCorrect) {
-    e.box = Math.min(e.box + 1, MAX_BOX);
+    // 即时重复属于练习，不是新的间隔回忆；提前复习也不能推迟原到期日。
+    const firstRecall = e.correct === 0;
+    const spacedRecall = e.nextDue <= safeNow
+      && (e.lastPromotedAt === undefined || safeNow - e.lastPromotedAt >= DAY_MS);
+    if (firstRecall || spacedRecall) {
+      e.box = Math.min(e.box + 1, MAX_BOX);
+      e.lastPromotedAt = safeNow;
+      e.nextDue = safeNow + BOX_INTERVALS_DAYS[e.box] * DAY_MS;
+    }
     e.correct += 1;
   } else {
     e.box = Math.min(e.box, 1);
     e.wrong += 1;
+    e.nextDue = safeNow + BOX_INTERVALS_DAYS[e.box] * DAY_MS;
   }
-  e.nextDue = safeNow + BOX_INTERVALS_DAYS[e.box] * DAY_MS;
   return e;
+}
+
+// 看过也要有首次复习安排，但不能因此算答对或升级。
+export function scheduleFirstReview(entry, now = Date.now()) {
+  return entry || { ...emptyEntry(), nextDue: now + DAY_MS };
+}
+
+export function localStudyDay(now = Date.now()) {
+  const date = new Date(now);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+}
+
+export function dailyStudyPlan(previous, words, progress, knownWords = {}, now = Date.now(), size = 20) {
+  const day = localStudyDay(now);
+  if (previous?.day === day) return previous;
+  const eligible = words.filter((w) => !knownWords[w.id]);
+  return { day, wordIds: dueWords(eligible, progress, now, size).map((w) => w.id),
+    testedIds: [], lastWordId: '', phase: 'learn' };
+}
+
+export function pendingPlanWords(plan, words, knownWords = {}) {
+  const tested = new Set(plan.testedIds);
+  const byId = new Map(words.map((w) => [w.id, w]));
+  return plan.wordIds.filter((id) => !tested.has(id) && !knownWords[id])
+    .map((id) => byId.get(id)).filter(Boolean);
 }
 
 export function isMastered(entry) {
@@ -97,7 +131,7 @@ export function isMastered(entry) {
 }
 
 // 挑选本关要考的单词：到期的优先（按盒子低→高），不够再补新词；
-// 刚出现过的词整体后移，非近期词不足时再按原顺序回填。
+// 刚出现过的词只在同一优先级内部后移，不牺牲到期词。
 export function dueWords(words, progress, now = Date.now(), limit = 8, recentIds = []) {
   const entries = progress && typeof progress === 'object' ? progress : {};
   const entryOf = (w) => entries[w.id];
@@ -106,13 +140,12 @@ export function dueWords(words, progress, now = Date.now(), limit = 8, recentIds
     .sort((a, b) => entryOf(a).box - entryOf(b).box || entryOf(a).nextDue - entryOf(b).nextDue);
   const fresh = words.filter((w) => !entryOf(w));
   const rest = words.filter((w) => entryOf(w) && entryOf(w).nextDue > now);
-  const ordered = [...due, ...fresh, ...rest];
   const recent = recentIds instanceof Set
     ? recentIds
     : new Set(Array.isArray(recentIds) ? recentIds : []);
-  const preferred = ordered.filter((w) => !recent.has(w.id));
-  const deferred = ordered.filter((w) => recent.has(w.id));
-  return [...preferred, ...deferred].slice(0, Math.min(limit, words.length));
+  // 去重轮换不能让到期弱词排到新词、甚至未到期词后面。
+  const rotate = (group) => [...group.filter((w) => !recent.has(w.id)), ...group.filter((w) => recent.has(w.id))];
+  return [...rotate(due), ...rotate(fresh), ...rotate(rest)].slice(0, Math.min(limit, words.length));
 }
 
 // 星星奖励：答对 1 颗，连击 3 的倍数额外 +1

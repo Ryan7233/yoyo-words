@@ -606,6 +606,34 @@ WORD_FAMILY_OVERRIDES = {
     ],
 }
 
+# Explicit relationships, not naive string-prefix matching (corner is not a
+# derivative of corn). Only existing vocabulary items are linked at build time.
+WORD_FAMILY_GROUPS = [
+    ("decide", "decision", "decisive", "indecisive"),
+    ("act", "action", "active", "activity"),
+    ("educate", "education", "educational", "educator"),
+    ("inform", "information", "informative"),
+    ("develop", "development", "developer"),
+    ("govern", "government", "governor"),
+    ("care", "careful", "careless", "carefully"),
+    ("help", "helpful", "helpless"),
+    ("kind", "kindness", "unkind"),
+    ("create", "creation", "creative", "creativity"),
+    ("employ", "employment", "employee", "employer", "unemployment"),
+    ("use", "useful", "useless", "reuse"),
+    ("rely", "reliable", "reliability"),
+    ("succeed", "success", "successful", "successfully"),
+    ("imagine", "imagination", "imaginative", "imaginary"),
+    ("compare", "comparison", "comparable", "comparative"),
+    ("permit", "permission", "permissible"),
+    ("protect", "protection", "protective"),
+    ("produce", "production", "producer", "productive"),
+    ("explain", "explanation", "explanatory"),
+    ("compete", "competition", "competitor", "competitive"),
+    ("treat", "treatment", "maltreat", "mistreat"),
+    ("function", "functional", "malfunction"),
+]
+
 # Only transparent, useful word-building relationships are shown. Ambiguous
 # short prefixes such as re- and dis- use explicit word lists; productive
 # suffixes additionally require the expected part of speech.
@@ -982,12 +1010,13 @@ COMMON_MULTIPOS = read_common_multipos()
 def read_learner_content(
     source: Path = LEARNER_CONTENT_SOURCE,
 ) -> dict[str, list[dict[str, Any]]]:
-    """Read human-reviewed learner copy kept outside the generated module.
+    """Read learner copy kept outside the generated module.
 
     The ECDICT English field is useful as source material, but it is not a
     learner dictionary and can select an abbreviation or a rare homograph for
     short, common words.  Reviewed rows are therefore the specification for
-    exposed definitions, examples and collocations.
+    exposed definitions, examples and collocations. The row status distinguishes
+    generated copy from independently reviewed content; loading is not approval.
     """
 
     if not source.is_file():
@@ -1065,8 +1094,8 @@ def learner_content_for(word: str, pos: str | None = None) -> dict[str, Any] | N
     senses = LEARNER_CONTENT.get(word.casefold(), [])
     if pos:
         matching = next((sense for sense in senses if sense["pos"] == pos), None)
-        if matching:
-            return matching
+        # 不存在相同词性的内容时保留原义，绝不能拿主词性冒充。
+        return matching
     return next((sense for sense in senses if sense["primary"]), None)
 
 # Merge a few known typo/orthographic duplicates before assigning ids so the
@@ -1423,6 +1452,21 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 sense for sense in senses if sense["pos"] not in reviewed_poses
             )
             senses = merged_senses if len(merged_senses) > 1 else senses
+        # Specific learner-dictionary corrections: resolute's obsolete noun;
+        # more's determiner/pronoun uses; else as an adverb; centre as noun/verb.
+        # Attributive nouns are not automatically separate adjective senses.
+        excluded = {"resolute": {"n."}, "more": {"n.", "adj."},
+                    "else": {"adj."}, "centre": {"adj."}}.get(key, set())
+        senses = [sense for sense in senses if sense["pos"] not in excluded]
+        if key == "lead":
+            for sense in senses:
+                if sense["pos"] == "n.":
+                    sense["phonetic"] = "liːd; led"
+                    sense["note"] = "领先、线索读 /liːd/；金属“铅”读 /led/。"
+        if key == "exploit":
+            record["phonetic"] = "ɪkˈsplɔɪt"
+            for sense in senses:
+                sense["phonetic"] = "ˈeksplɔɪt" if sense["pos"] == "n." else "ɪkˈsplɔɪt"
         definition = clean_english_definition(record["definition_raw"], pos, key)
         if not definition:
             raise ValueError(f"No English definition available for {record['en']!r}")
@@ -1472,6 +1516,16 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             word["parts"] = parts
         words.append(word)
 
+    by_name = {word["en"].casefold(): word for word in words}
+    for group in WORD_FAMILY_GROUPS:
+        for name in group:
+            word = by_name.get(name)
+            if not word or word.get("family"):
+                continue
+            related = [{"en": by_name[other]["en"], "zh": by_name[other]["zh"]}
+                       for other in group if other != name and other in by_name][:3]
+            if related:
+                word["family"] = related
     words.sort(key=lambda word: (word["rank"], word["en"].casefold()))
     return words
 

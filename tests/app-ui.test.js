@@ -26,8 +26,8 @@ test('PWA 强制更新只清理本应用作用域和缓存前缀', () => {
 });
 
 test('发布资源带版本号，强制更新不会继续命中旧 CSS 和主脚本', () => {
-  assert.match(htmlSource, /css\/style\.css\?v=28/);
-  assert.match(htmlSource, /js\/app\.js\?v=28/);
+  assert.match(htmlSource, /css\/style\.css\?v=29/);
+  assert.match(htmlSource, /js\/app\.js\?v=29/);
 });
 
 test('自然语音：换页停止旧朗读、支持设备音色选择和试听', () => {
@@ -64,7 +64,8 @@ test('成人路线：独立首页先背词再小测，测验不累加儿童星�
   assert.match(appSource, /id="prev" type="button"/);
   assert.match(appSource, /id="next" type="button"/);
   assert.match(appSource, /class="counter" aria-live="polite"/);
-  assert.match(appSource, /activeScope\.daily[\s\S]*startQuiz\(activeWords, '今日背词小测'/);
+  assert.match(appSource, /startAdultDailyQuiz\(activeScope\)/);
+  assert.match(appSource, /pending\.slice\(0, ADULT_QUIZ_SIZE\)/);
   assert.match(appSource, /activeQuiz\.adult\s*\?\s*0/);
   assert.match(appSource, /function showAdultResult\(\)/);
 });

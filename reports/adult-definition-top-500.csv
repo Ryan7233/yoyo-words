@@ -75,7 +75,7 @@
 78,its,pron.,它的,used to show that something belongs to or is connected with a thing or animal,life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,1.000,,
 79,our,pron.,我们的,used to show that something belongs to or is connected with us,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,1.000,,
 80,two,num.,二、二个,the cardinal number that is the sum of one and one or a numeral representing this number,life,AUTO_CLEAR,,0,0,0,8,0.125,0.375,0.750,numeral,cardinal|numeral|sum
-81,more,adv.,更多、更,"to a greater amount, number, or degree",life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
+81,more,adv.,更、更加；再,to a greater degree or for a longer time,life,P2,sense_pos_definition_conflict,0,1,0,4,0.000,0.000,0.750,,
 82,these,pron.,这些,used to point to people or things that are near or being discussed,life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
 83,want,v.,想要、需要,have need of,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
 84,way,n.,路、路线、路途,the condition of things generally,life,AUTO_CLEAR,,0,0,0,3,0.000,0.000,1.000,,
@@ -155,7 +155,7 @@
 167,help,v.,帮助、协助,to make it easier for someone to do something,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
 168,talk,n.,谈话、交谈、会谈,an exchange of ideas via conversation,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,1.000,,
 169,where,adv.,在哪里,At or in what place,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,1.000,,
-170,turn,v.,转动、转向、轮到,to move around a point or change direction,life,AUTO_CLEAR,,0,0,0,5,0.000,0.000,1.000,,
+170,turn,v.,转动、转向；变成,"to move around a point, change direction, or become different",life,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.857,,
 171,problem,n.,问题、难题,a state of difficulty that needs to be resolved,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.500,,
 172,every,adj.,每一、所有的,(used of count nouns) each and all of the members of a group considered singly and without exception,life,AUTO_CLEAR,,0,0,0,9,0.111,0.222,0.778,singly,nouns|singly
 173,start,v.,开始、出发,to begin doing something or begin to happen,life,AUTO_CLEAR,,0,0,0,4,0.000,0.000,0.250,,
@@ -178,10 +178,10 @@
 193,right,adj.,正确的、合适的,"correct, true, or suitable for a situation",life,AUTO_CLEAR,,0,0,0,4,0.000,0.250,1.000,,suitable
 194,program,n.,节目、节目单、程序,a system of projects or services intended to meet a public need,life+cet4+cet6,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.714,,
 195,hear,v.,听到、倾听、听说,perceive (sound) via the auditory sense,life,AUTO_CLEAR,,0,0,0,5,0.200,0.200,1.000,auditory,auditory
-197,question,n.,问题、询问,an instance of questioning,life,AUTO_CLEAR,,0,0,0,2,0.000,0.000,0.500,,
+197,question,n.,问题、疑问；议题,something you ask to get information; a subject that needs an answer or discussion,life,AUTO_CLEAR,,0,0,0,8,0.000,0.000,0.500,,
 198,during,prep.,在...的时候,In the time of,life,AUTO_CLEAR,,0,0,0,1,0.000,0.000,0.000,,
 200,play,v.,玩、播放、演奏,"to take part in a game, make music, or use something for enjoyment",life,AUTO_CLEAR,,0,0,0,8,0.125,0.125,0.375,enjoyment,enjoyment
-201,government,n.,政府、内阁,the organization that is the governing authority of a political unit,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,5,0.000,0.200,1.000,,governing
+201,government,n.,政府；治理,the group of people who run a country or region; the work of running it,life+cet4+cet6+postgrad,AUTO_CLEAR,,0,0,0,7,0.000,0.000,0.429,,
 202,run,v.,跑、运行、经营,"to move quickly on foot, operate, or manage something",life,AUTO_CLEAR,,0,0,0,6,0.000,0.000,0.833,,
 203,small,adj.,小的、少的、小型的,limited or below average in number or quantity or magnitude or extent,life,AUTO_CLEAR,,0,0,0,6,0.000,0.333,1.000,,magnitude|quantity
 204,number,n.,数、数字、数目,the property possessed by a sum or total or indefinite quantity of units or individuals,life,AUTO_CLEAR,,0,0,0,8,0.000,0.375,1.000,,indefinite|quantity|sum

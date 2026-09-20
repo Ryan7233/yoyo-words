@@ -123,6 +123,21 @@ python3 scripts/audit_adult_definitions.py
 
 ## 项目结构
 
+### v29 学习流程与内容修订
+
+本轮修订记录和核查边界见 [家庭英语学习 v29](reports/family-learning-v29.md)。
+每日词队列支持跨刷新继续，全部分批小测；同日重复答对不再反复升级。
+成人次要词性独立匹配内容，原始词典英文与学习版内容分开展示。
+儿童增加短练习和现实表达出口，跟读自评不视为发音评测。
+
+可选真实浏览器回归（需 Playwright 和 Chrome，不读取个人浏览器资料）：
+
+```bash
+python3 serve.py --port 18377
+# 另一个终端：
+node tests/browser-learning.mjs
+```
+
 ```
 index.html            应用入口
 manifest.webmanifest  PWA 清单（名称/图标/全屏模式）

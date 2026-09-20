@@ -4,6 +4,7 @@ import { WORDS, KIWI_ITEMS, wordsByCategory } from '../js/words.js';
 import {
   shuffle, pickDistractors, buildQuestion, buildQuiz,
   gradeAnswer, emptyEntry, isMastered, dueWords,
+  scheduleFirstReview, dailyStudyPlan, pendingPlanWords, localStudyDay,
   starReward, masteredCount, summarize, wrongBookWords, wrongBookReward,
   pickPicDistractors, buildPicQuestion, buildPicQuiz, PIC_QUIZ_SIZE,
   buildKiwiSession, buildKiwiQuiz,
@@ -154,8 +155,8 @@ test('gradeAnswer：答对升级、答错回到 1 级、边界不越界', () => 
   assert.equal(e.correct, 1);
   assert.equal(e.nextDue, now + BOX_INTERVALS_DAYS[1] * DAY_MS);
 
-  // 连续答对到顶
-  for (let i = 0; i < 10; i++) e = gradeAnswer(e, true, now);
+  // 只有到期后的间隔回忆才逐级提升。
+  for (let i = 0; i < 10; i++) e = gradeAnswer(e, true, e.nextDue);
   assert.equal(e.box, MAX_BOX, '盒子不应超过最大值');
 
   // 答错回到 1 级
@@ -179,6 +180,7 @@ test('gradeAnswer：不修改传入的原对象', () => {
 test('gradeAnswer：缺字段和坏数值会回退，不产生 NaN', () => {
   assert.deepEqual(gradeAnswer({ box: 2 }, true, 1000), {
     box: 3, correct: 1, wrong: 0, nextDue: 1000 + BOX_INTERVALS_DAYS[3] * DAY_MS,
+    lastPromotedAt: 1000,
   });
   const out = gradeAnswer({ box: 'bad', correct: NaN, wrong: -2, nextDue: Infinity }, false, NaN);
   assert.equal(out.box, 0);
@@ -225,7 +227,7 @@ test('dueWords：同盒子的到期词按 nextDue 从早到晚排序', () => {
     [words[1].id, words[2].id, words[0].id]);
 });
 
-test('dueWords：近期词整体后移，非近期词仍保持到期、新词、未到期顺序', () => {
+test('dueWords：仅在到期、新词、未到期各组内部避让近期词', () => {
   const now = 100;
   const words = WORDS.slice(0, 6);
   const progress = {
@@ -238,9 +240,9 @@ test('dueWords：近期词整体后移，非近期词仍保持到期、新词、
   const out = dueWords(words, progress, now, 4, [words[0].id, words[2].id, words[5].id]);
   assert.deepEqual(out.map((w) => w.id), [
     words[1].id, // 非近期到期词
+    words[0].id, // 到期词不能被新词挤走
     words[3].id, // 非近期新词
-    words[4].id, // 非近期未到期词
-    words[0].id, // 非近期词不够时才回填近期词
+    words[2].id, // 近期新词仍优先于未到期词
   ]);
 });
 

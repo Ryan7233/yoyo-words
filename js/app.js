@@ -5,6 +5,7 @@ import {
 } from './words.js';
 import {
   buildQuiz, gradeAnswer, dueWords, starReward, summarize, isMastered,
+  scheduleFirstReview, dailyStudyPlan, pendingPlanWords,
   wrongBookReward, WRONG_BOOK_CLEAR_STARS,
   wrongBookWords, buildPicQuiz, buildKiwiSession, buildKiwiQuiz, PIC_QUIZ_SIZE,
   spellableWords, spellingTiles, sentenceWords, sentenceTokens, shuffle,
@@ -27,6 +28,7 @@ import {
 
 const storage = createStorage();
 let state = storage.load();
+let lastKnownRemoval = null;
 
 const app = document.getElementById('app');
 
@@ -65,7 +67,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v28';
+const APP_VERSION = 'v29';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -284,7 +286,26 @@ function speedRow() {
 }
 
 function saveState() {
-  storage.save(state);
+  const saved = storage.save(state);
+  let warning = document.getElementById('save-warning');
+  if (saved) warning?.remove();
+  else if (!warning) {
+    warning = el('<div id="save-warning" role="alert">⚠️ 本次进度未能保存，请暂勿关闭页面；请到切换学习者页面导出备份。</div>');
+    document.body.prepend(warning);
+  }
+  return saved;
+}
+
+function recordPractice(wordId, skill) {
+  const d = pdata();
+  const entry = d.practice[wordId] || {};
+  d.practice[wordId] = { ...entry, [skill]: (entry[skill] || 0) + 1 };
+}
+
+function practiceSummary() {
+  const entries = Object.values(pdata().practice);
+  const count = (skill) => entries.reduce((sum, entry) => sum + (entry[skill] || 0), 0);
+  return `练习记录：认义 ${count('recognition')} · 拼写 ${count('spelling')} · 组句 ${count('sentence')} · 开口 ${count('speaking')} · 动作 ${count('action')}（次数，不是能力评分）`;
 }
 
 function el(html) {
@@ -308,6 +329,17 @@ function render(node) {
   viewGeneration += 1;
   app.innerHTML = '';
   app.appendChild(node);
+  if (lastKnownRemoval?.profileId === state.current) {
+    const undo = el(`<div class="known-undo" role="status">已移出 ${escapeHtml(lastKnownRemoval.word.en)} <button type="button">撤销</button></div>`);
+    undo.querySelector('button').addEventListener('click', () => {
+      const removal = lastKnownRemoval;
+      lastKnownRemoval = null;
+      delete pdata().knownWords[removal.word.id];
+      saveState();
+      showAdultLearn(removal.scope, removal.words, removal.index);
+    });
+    node.appendChild(undo);
+  }
   window.scrollTo(0, 0);
   const heading = node.querySelector('h1, h2, .topbar .title');
   if (heading) {
@@ -391,12 +423,13 @@ function showKiwiHome() {
         <div class="stat"><div class="num">⭐ ${d.stars}</div><div class="label">Kiwi 收集的星星</div></div>
         <div class="stat">
           <div class="num">${understood}/${KIWI_ITEMS.length}</div>
-          <div class="label">已经听懂</div>
+          <div class="label">间隔复习已记牢</div>
           <div class="progress-track" role="progressbar" aria-label="Kiwi 听说启蒙进度" aria-valuemin="0" aria-valuemax="${KIWI_ITEMS.length}" aria-valuenow="${understood}"><div class="progress-fill" style="width:${Math.round((understood / KIWI_ITEMS.length) * 100)}%"></div></div>
         </div>
       </div>
       <button class="btn kiwi-daily" id="kiwi-daily">▶️ 今日听说 · 只学 2 个新的</button>
-      <p class="counter">已经接触 ${learned} / ${KIWI_ITEMS.length} 项 · 其余都是复习</p>
+      <p class="counter">已经接触 ${learned} / ${KIWI_ITEMS.length} 项 · 同一天重复练不重复升级</p>
+      <p class="counter">${practiceSummary()}</p>
       <div id="speed-anchor"></div>
       <div class="cat-grid" id="kiwi-packs"></div>
       <p class="footer-note">为 Kiwi 特别制作 · 听声音、看图片、做动作 💙</p>
@@ -481,6 +514,28 @@ const ADULT_DAILY_SIZE = 20;
 const ADULT_QUIZ_SIZE = 10;
 const ADULT_DECK_SIZE = 200;
 
+function adultTodayPlan() {
+  const d = pdata();
+  const old = d.dailyPlans[d.level];
+  const plan = dailyStudyPlan(old, levelWords(), d.progress, d.knownWords, Date.now(), ADULT_DAILY_SIZE);
+  if (plan !== old) {
+    d.dailyPlans[d.level] = plan;
+    saveState();
+  }
+  return plan;
+}
+
+function startAdultDailyQuiz(scope) {
+  const plan = pdata().dailyPlans[scope.planRoute];
+  if (!plan || plan.day !== scope.planDay) return showAdultHome();
+  const pending = pendingPlanWords(plan, adultWordsForLevel(scope.planRoute), pdata().knownWords);
+  if (!pending.length) return showAdultHome();
+  startQuiz(pending.slice(0, ADULT_QUIZ_SIZE), '今日背词小测', {
+    adult: true, count: ADULT_QUIZ_SIZE,
+    pool: adultWordsToLearn(adultWordsForLevel(scope.planRoute)), sourceScope: scope,
+  });
+}
+
 function adultDecks(words) {
   const decks = [];
   for (let start = 0; start < words.length; start += ADULT_DECK_SIZE) {
@@ -502,13 +557,25 @@ function showAdultHome() {
   const p = profile();
   const d = pdata();
   const words = levelWords();
+  // 旧版本只记录 seen 的词也补上首次复习，不伪造答题记录。
+  let scheduledLegacy = false;
+  for (const w of words) {
+    if (d.seen[w.id] && !d.knownWords[w.id] && !d.progress[w.id]) {
+      d.progress[w.id] = scheduleFirstReview(undefined);
+      scheduledLegacy = true;
+    }
+  }
+  if (scheduledLegacy) saveState();
   const wordsToLearn = adultWordsToLearn(words, d);
   const lvl = findAdultLevel(d.level);
   const known = words.length - wordsToLearn.length;
   const learned = wordsToLearn.filter((w) => d.seen[w.id] || d.progress[w.id]).length;
   const mastered = wordsToLearn.filter((w) => isMastered(d.progress[w.id])).length;
   const reviewable = wordsToLearn.filter((w) => d.seen[w.id] || d.progress[w.id]);
-  const todayCount = Math.min(ADULT_DAILY_SIZE, wordsToLearn.length);
+  const plan = adultTodayPlan();
+  const todayWords = plan.wordIds.map((id) => wordsToLearn.find((w) => w.id === id)).filter(Boolean);
+  const todayCount = todayWords.length;
+  const todayPending = pendingPlanWords(plan, words, d.knownWords).length;
   const node = el(`
     <div class="adult-home">
       <div class="topbar">
@@ -529,8 +596,9 @@ function showAdultHome() {
           <div class="progress-track" role="progressbar" aria-label="${lvl.name} 掌握进度" aria-valuemin="0" aria-valuemax="${wordsToLearn.length}" aria-valuenow="${mastered}"><div class="progress-fill" style="width:${wordsToLearn.length ? Math.round((mastered / wordsToLearn.length) * 100) : 0}%"></div></div>
         </div>
       </div>
-      <button class="btn adult-primary" id="adult-daily" ${todayCount ? '' : 'disabled'}>${todayCount ? `📖 今日背词 · ${todayCount} 个` : '🎉 本路线已全部标记完成'}</button>
-      <p class="counter">先看单词、音标和释义，完成后再做 10 题小测</p>
+      <button class="btn adult-primary" id="adult-daily" ${todayPending ? '' : 'disabled'}>${todayPending ? `📖 ${plan.lastWordId || plan.phase === 'quiz' ? '继续今日计划' : '今日背词'} · ${todayCount} 个` : '✅ 今日计划已完成'}</button>
+      <p class="counter">已测 ${todayCount - todayPending}/${todayCount} · 全部词分批小测，每批最多 10 题；看过的词也会安排复习。</p>
+      <p class="counter">“掌握”需间隔复习；同一天反复答对不重复升级。已有历史进度保留。</p>
       <button class="btn secondary" id="adult-review" ${reviewable.length ? '' : 'disabled'}>${reviewable.length ? '🧠 直接复习小测' : '🧠 背完第一组后开启复习'}</button>
       ${known ? `<button class="btn ghost" id="adult-known">✅ 我认识的词 · ${known} 个（可恢复）</button>` : ''}
       <div id="speed-anchor"></div>
@@ -550,6 +618,7 @@ function showAdultHome() {
       </button>
     `);
     chip.addEventListener('click', () => {
+      lastKnownRemoval = null;
       d.level = route.id;
       saveState();
       showAdultHome();
@@ -598,16 +667,19 @@ function showAdultHome() {
   node.querySelector('#speed-anchor').replaceWith(speedRow());
   node.querySelector('#switch-user').addEventListener('click', showProfileSelect);
   node.querySelector('#adult-daily').addEventListener('click', () => {
-    if (!wordsToLearn.length) return;
-    const todayWords = scheduledWords(wordsToLearn, ADULT_DAILY_SIZE, 'adult-daily');
-    showAdultLearn({
+    if (!todayWords.length) return;
+    const scope = {
       key: `adult:${d.level}:daily`,
       title: `${lvl.name} 今日背词`,
       words: todayWords,
       pool: wordsToLearn,
       adult: true,
       daily: true,
-    }, todayWords, 0);
+      planRoute: d.level,
+      planDay: plan.day,
+    };
+    if (plan.phase === 'quiz') return startAdultDailyQuiz(scope);
+    showAdultLearn(scope, todayWords, Math.max(0, todayWords.findIndex((w) => w.id === plan.lastWordId)));
   });
   const knownBtn = node.querySelector('#adult-known');
   if (knownBtn) knownBtn.addEventListener('click', () => showAdultKnownWords());
@@ -649,6 +721,7 @@ function showAdultKnownWords() {
     `);
     item.querySelector('button').addEventListener('click', () => {
       delete d.knownWords[word.id];
+      if (lastKnownRemoval?.word.id === word.id) lastKnownRemoval = null;
       saveState();
       if (!levelWords().some((item) => d.knownWords[item.id])) return showAdultHome();
       showAdultKnownWords();
@@ -678,7 +751,7 @@ function showAdultCollection(scope) {
       <button class="btn adult-primary" id="learn">📖 ${savedIdx > 0 ? `从第 ${savedIdx + 1} 个继续背` : '从词卡开始背'}</button>
       ${savedIdx > 0 ? '<button class="btn ghost" id="restart">↺ 从第 1 个重新背</button>' : ''}
       <button class="btn secondary" id="quiz">${scope.wrongbook ? '🎯 训练并移出错词' : '🎯 做一组 10 题小测'}</button>
-      ${scope.wrongbook ? '<p class="counter">答对会提升熟练度，达到 3 级后自动移出；成人训练不计星星。</p>' : ''}
+      ${scope.wrongbook ? '<p class="counter">间隔复习答对后提升记忆等级，达到 3 级自动移出；同日重复练习不升级，成人训练不计星星。</p>' : ''}
       ${scope.wrongbook ? '<div class="wrong-list adult-wrong-list" id="wrong-list"></div>' : ''}
     </div>
   `);
@@ -771,7 +844,7 @@ function adultLearningMarkup(word) {
     </span>
   ` : '';
   const primarySenseHasDefinition = Boolean(word.senses?.[0]?.definition);
-  const englishClueMarkup = primarySenseHasDefinition
+  let englishClueMarkup = primarySenseHasDefinition
     ? (word.hook ? `
       <span class="adult-learning-block">
         <span class="adult-memory-hook">🧠 ${escapeHtml(word.hook)}</span>
@@ -786,6 +859,9 @@ function adultLearningMarkup(word) {
         ${word.hook ? `<span class="adult-memory-hook">🧠 ${escapeHtml(word.hook)}</span>` : ''}
       </span>
     `;
+  if (!word.definitionStatus && englishClueMarkup) {
+    englishClueMarkup = `<details class="adult-source-definition"><summary>词典参考解释（未逐条语义审校）</summary>${englishClueMarkup}<p class="counter">原词典可能含生僻义，不作为已核实的学习版解释。</p></details>`;
+  }
   const formsMarkup = word.forms?.length ? `
     <span class="adult-forms">
       <span>词形变化</span>
@@ -793,13 +869,16 @@ function adultLearningMarkup(word) {
     </span>
   ` : '';
   return `
-    <span class="adult-learning-panel">
+    <div class="adult-learning-panel">
       ${englishClueMarkup}
+      ${partMarkup || familyMarkup || patternMarkup || formsMarkup ? '<details class="adult-word-expansion"><summary>词形、构词与关联词（选学）</summary>' : ''}
       ${partMarkup}
       ${familyMarkup}
       ${patternMarkup}
       ${formsMarkup}
-    </span>
+      ${partMarkup || familyMarkup || patternMarkup || formsMarkup ? '</details>' : ''}
+      <a class="dictionary-reference" href="https://dictionary.cambridge.org/dictionary/english/${encodeURIComponent(word.en.toLowerCase())}" target="_blank" rel="noopener noreferrer">查 Cambridge 词典（需联网）↗</a>
+    </div>
   `;
 }
 
@@ -817,7 +896,11 @@ function showAdultLearn(scope, words, idx) {
   const safeIdx = Math.max(0, Math.min(idx, activeWords.length - 1));
   const w = activeWords[safeIdx];
   d.seen[w.id] = true;
+  d.progress[w.id] = scheduleFirstReview(d.progress[w.id]);
   d.learnPos[activeScope.key] = safeIdx;
+  if (activeScope.daily && d.dailyPlans[activeScope.planRoute]?.day === activeScope.planDay) {
+    d.dailyPlans[activeScope.planRoute].lastWordId = w.id;
+  }
   saveState();
   const seenCount = activeWords.filter((x) => d.seen[x.id]).length;
   const phonetic = w.phonetic ? `/${w.phonetic}/` : '点击听发音';
@@ -827,12 +910,14 @@ function showAdultLearn(scope, words, idx) {
     : letterCount >= 12 ? ' adult-word-long' : '';
   const senses = Array.isArray(w.senses) && w.senses.length > 1 ? w.senses : null;
   const meanings = senses
-    ? `<span class="adult-senses">${senses.map((sense) => `
+    ? `<div class="adult-senses">${senses.map((sense, senseIndex) => `
+        ${senseIndex === 1 ? '<details class="adult-extra-senses"><summary>其他常用词性与意思（点击展开）</summary>' : ''}
         <span class="adult-sense">
           <span class="adult-sense-label"><b>${sense.pos}</b>${sense.phonetic ? `<small>/${sense.phonetic}/</small>` : ''}</span>
           <span class="adult-sense-copy">
             <span>${escapeHtml(sense.zh)}</span>
             ${sense.definition ? `<small>${escapeHtml(sense.definition)}</small>` : ''}
+            ${sense.note ? `<small>${escapeHtml(sense.note)}</small>` : ''}
             ${sense.example ? `<em>${escapeHtml(sense.example)}</em>` : ''}
             ${sense.collocations?.length ? `
               <span class="adult-sense-collocations">
@@ -841,7 +926,7 @@ function showAdultLearn(scope, words, idx) {
             ` : ''}
           </span>
         </span>
-      `).join('')}</span>`
+      `).join('')}</details></div>`
     : `${w.pos ? `<span class="adult-pos">${w.pos}</span>` : ''}
        <span class="adult-meaning">${w.zh}</span>`;
   const learning = adultLearningMarkup(w);
@@ -853,13 +938,15 @@ function showAdultLearn(scope, words, idx) {
         <button class="icon-btn" id="replay" aria-label="播放单词发音">🔊</button>
       </div>
       <p class="counter" aria-live="polite">${safeIdx + 1} / ${activeWords.length} · 本组已看 ${seenCount} 个</p>
-      <button class="flashcard adult-flashcard" id="card" type="button">
+      <div class="flashcard adult-flashcard">
+        <button class="adult-word-audio" id="card" type="button" aria-label="播放 ${escapeHtml(w.en)} 的发音">
         <span class="adult-word${wordSizeClass}">${w.en}</span>
         <span class="adult-phonetic">${phonetic}</span>
+        <span class="hint">点单词听发音</span>
+        </button>
         ${meanings}
         ${learning}
-        <span class="hint">点卡片听单词发音</span>
-      </button>
+      </div>
       <button class="btn ghost adult-known-action" id="known" type="button">✅ 我认识，移出学习计划</button>
       <div class="learn-nav">
         <button class="btn secondary" id="prev" type="button" ${safeIdx === 0 ? 'disabled' : ''}>上一个</button>
@@ -872,6 +959,7 @@ function showAdultLearn(scope, words, idx) {
   node.querySelector('#replay').addEventListener('click', say);
   node.querySelector('#card').addEventListener('click', say);
   node.querySelector('#known').addEventListener('click', () => {
+    lastKnownRemoval = { profileId: state.current, word: w, scope: activeScope, words: activeWords, index: safeIdx };
     d.knownWords[w.id] = true;
     const remainingWords = adultWordsToLearn(activeWords, d);
     const remainingScope = {
@@ -890,12 +978,10 @@ function showAdultLearn(scope, words, idx) {
     d.learnPos[activeScope.key] = 0;
     saveState();
     if (!activeScope.daily) return showAdultCollection(activeScope);
-    startQuiz(activeWords, '今日背词小测', {
-      adult: true,
-      count: ADULT_QUIZ_SIZE,
-      pool: activeScope.pool || adultWordsToLearn(levelWords(), d),
-      sourceScope: activeScope,
-    });
+    const plan = d.dailyPlans[activeScope.planRoute];
+    if (plan?.day === activeScope.planDay) plan.phase = 'quiz';
+    saveState();
+    startAdultDailyQuiz(activeScope);
   });
   render(node);
   say();
@@ -929,7 +1015,8 @@ function showHome() {
           <div class="progress-track" role="progressbar" aria-label="本级掌握进度" aria-valuemin="0" aria-valuemax="${words.length}" aria-valuenow="${mastered}"><div class="progress-fill" style="width:${Math.round((mastered / words.length) * 100)}%"></div></div>
         </div>
       </div>
-      <button class="btn" id="smart-quiz">🚀 智能闯关（复习 + 新词）</button>
+      <button class="btn" id="smart-quiz">🌱 短练习：听一听 → 练一练 → 用一用</button>
+      <p class="counter">${practiceSummary()}</p>
       ${p.id === 'yoyo' ? '<button class="btn world-entry" id="world">🌍 我的世界（把单词摆出来）</button>' : ''}
       <div id="grad"></div>
       <div class="cat-grid" id="cats"></div>
@@ -1046,12 +1133,65 @@ function showHome() {
 
   node.querySelector('#switch-user').addEventListener('click', showProfileSelect);
   node.querySelector('#smart-quiz').addEventListener('click', () => {
-    startQuiz(scheduledWords(levelWords(), 8, 'smart-quiz'), '智能闯关');
+    startChildRoutine();
   });
   render(node);
 }
 
 // ————— 分类 / 单元 / 错题本页 —————
+function startChildRoutine() {
+  const d = pdata();
+  const pool = levelWords();
+  const fresh = pool.filter((w) => !d.seen[w.id] && !d.progress[w.id]).slice(0, 2);
+  const review = dueWords(pool.filter((w) => d.seen[w.id] || d.progress[w.id]), d.progress, Date.now(), 3);
+  const words = [...fresh, ...review];
+  if (!words.length) return showHome();
+  function intro(index) {
+    if (index >= fresh.length) return startQuiz(words, '今天的短练习', {
+      pool, count: words.length, sourceScope: { key: 'child:short', title: '短练习', words, pool },
+    });
+    const w = fresh[index];
+    d.seen[w.id] = true;
+    d.progress[w.id] = scheduleFirstReview(d.progress[w.id]);
+    saveState();
+    const node = el(`<div><div class="topbar"><button class="icon-btn" id="back" aria-label="退出短练习">✕</button><h1 class="title">听一听 · ${index + 1}/${fresh.length}</h1></div>
+      <button class="flashcard" id="listen"><span class="emoji">${w.emoji}</span><span class="en">${w.en}</span><span class="zh">${w.zh}</span><span class="hint">听懂意思，再试着说一遍</span></button>
+      <button class="btn" id="next">${index + 1 < fresh.length ? '下一个' : '开始练一练'}</button>
+      <p class="counter">最多 2 个新词、3 个复习词，最后去生活或绘本里用一用。</p></div>`);
+    const say = () => speakSeq([{ text: w.en }, { text: w.zh, lang: 'zh-CN' }, { text: w.en }]);
+    node.querySelector('#listen').addEventListener('click', say);
+    node.querySelector('#back').addEventListener('click', showHome);
+    node.querySelector('#next').addEventListener('click', () => intro(index + 1));
+    render(node);
+    say();
+  }
+  intro(0);
+}
+
+function showUseTask(words) {
+  const w = words.find((item) => item.kind === 'command') || words[0];
+  if (!w) return showHome();
+  const kiwi = profile().preReader;
+  const target = kiwi ? w.en : (w.sentence || w.en);
+  const instruction = kiwi
+    ? (w.kind === 'command' ? `和家人一起做这个动作：${w.zh}。图标只是提示，实际做出来才算这次练习。` : `在身边找一找或指一指“${w.zh}”，试着说出英文。`)
+    : '离开屏幕，在身边或今天的绘本里找一找这个词。先说一句，再换成你自己的内容；没有合适情境可以换天再试。';
+  const node = el(`<div class="result"><h1>把英语用到生活里</h1><div class="big-emoji">${w.emoji || '📖'}</div>
+    <h2>${escapeHtml(target)}</h2><p class="subtitle">${escapeHtml(instruction)}</p>
+    <button class="btn secondary" id="listen">🔊 听示范</button>
+    <button class="btn" id="done">${kiwi ? '我做过 / 说过啦' : '我尝试表达啦'} · 结束今天的练习</button>
+    <button class="btn ghost" id="later">今天先到这里</button>
+    <p class="counter">这里只记录实践，不自动判定发音正确，也不提升记忆等级。</p></div>`);
+  node.querySelector('#listen').addEventListener('click', () => speak(target));
+  node.querySelector('#done').addEventListener('click', () => {
+    recordPractice(w.id, w.kind === 'command' ? 'action' : 'speaking');
+    saveState();
+    showHome();
+  });
+  node.querySelector('#later').addEventListener('click', showHome);
+  render(node);
+}
+
 function showCollection(scope) {
   const d = pdata();
   const preReader = !!profile().preReader;
@@ -1083,7 +1223,7 @@ function showCollection(scope) {
       </div>
       <div class="mascot"><div class="yoyo"></div></div>
       <p class="subtitle" style="text-align:center">${scope.wrongbook
-        ? `${preReader ? '反复听对，熟练度到 3 级就会自动移出' : '答对会提升熟练度；到 3 级自动移出，并一次性奖励星星'}。`
+        ? `${preReader ? '分天复习听对，记忆等级到 3 级自动移出' : '间隔复习到 3 级自动移出，并一次性奖励星星'}；同一天反复练不重复升级。`
         : preReader
           ? `这里有 ${scope.words.length} 个声音、图片和动作等着 ${profile().name}！`
           : `这里有 ${scope.words.length} 个单词等着 ${profile().name}！`}</p>
@@ -1267,6 +1407,7 @@ function runSpelling(scope, words, idx, results, hadMistake = false) {
     d.progress[w.id] = gradeAnswer(d.progress[w.id], isCorrect);
     speak(w.en);
     if (isCorrect) {
+      recordPractice(w.id, 'spelling');
       d.stars += 1;
       results.push({ isCorrect: !hadMistake, starsEarned: 1 });
       saveState();
@@ -1351,6 +1492,7 @@ function runSentence(scope, words, idx, results, hadMistake = false) {
     d.progress[w.id] = gradeAnswer(d.progress[w.id], isCorrect);
     speak(w.sentence);
     if (isCorrect) {
+      recordPractice(w.id, 'sentence');
       d.stars += 2;
       results.push({ isCorrect: !hadMistake, starsEarned: 2 });
       saveState();
@@ -1411,11 +1553,10 @@ function runSpeaking(scope, words, idx, results) {
         ${w.sentence ? `<div class="sentence">💬 ${w.sentence}</div>` : `<div class="zh">${w.zh}</div>`}
         <div class="hint">👆 点卡片听示范，然后大声读出来</div>
       </div>
-      ${SR
-        ? '<button class="mic-btn" id="mic" aria-label="开始录音跟读">🎙️</button><p class="counter" id="status" aria-live="polite">点麦克风开始跟读</p>'
-        : `<p class="counter">这台设备不支持语音识别，听完自己大声读，读完自己打分：</p>
-           <button class="btn gold" id="self-ok">🌟 我读出来啦</button>
-           <button class="btn ghost" id="self-retry">🔁 再听一遍</button>`}
+      ${SR ? '<button class="mic-btn" id="mic" aria-label="开始录音跟读">🎙️</button><p class="counter" id="status" aria-live="polite">点麦克风开始跟读</p>' : '<p class="counter">这台设备不支持语音识别，可以听示范后自己读。</p>'}
+      <p class="counter">识别只帮助确认读了哪些词，不是发音评分；麦克风不可用也能继续。</p>
+      <button class="btn gold" id="self-ok">🌟 我已尝试读出来（自评）</button>
+      <button class="btn ghost" id="self-retry">🔁 再听一遍</button>
     </div>
   `);
   const say = () => speak(target);
@@ -1433,6 +1574,7 @@ function runSpeaking(scope, words, idx, results) {
     }
     const d = pdata();
     d.stars += starsEarned;
+    recordPractice(w.id, 'speaking');
     saveState();
     results.push({ isCorrect: true, starsEarned });
     later(() => runSpeaking(scope, words, idx + 1, results), gap(1600));
@@ -1446,7 +1588,7 @@ function runSpeaking(scope, words, idx, results) {
       if ('speechSynthesis' in window) speechSynthesis.cancel();
       const rec = new SR();
       activeRecognition = rec;
-      rec.lang = 'en-US';
+      rec.lang = 'en-GB';
       rec.interimResults = false;
       mic.disabled = true;
       mic.classList.add('recording');
@@ -1458,7 +1600,7 @@ function runSpeaking(scope, words, idx, results) {
         const transcript = e.results[0][0].transcript;
         const score = speechScore(transcript, target);
         if (score >= SPEECH_PASS) {
-          status.textContent = `⭐ 读得真棒！（听到："${transcript}"）`;
+          status.textContent = `⭐ 识别到了目标内容（听到："${transcript}"），不代表发音已评定。`;
           speakSeq([{ text: 'Great job!' }]);
           pass(2);
         } else {
@@ -1471,7 +1613,7 @@ function runSpeaking(scope, words, idx, results) {
         if (settled) return;
         mic.classList.remove('recording');
         mic.disabled = false;
-        status.textContent = '没听清，再点麦克风试一次（或跳过）';
+        status.textContent = '暂时无法识别，可以重试，也可以用下方自评继续。';
       };
       rec.onend = () => {
         if (activeRecognition === rec) activeRecognition = null;
@@ -1499,10 +1641,9 @@ function runSpeaking(scope, words, idx, results) {
       runSpeaking(scope, words, idx + 1, results);
     });
     node.appendChild(skip);
-  } else {
-    node.querySelector('#self-ok').addEventListener('click', () => pass(1));
-    node.querySelector('#self-retry').addEventListener('click', say);
   }
+  node.querySelector('#self-ok').addEventListener('click', () => pass(1));
+  node.querySelector('#self-retry').addEventListener('click', say);
   render(node);
   say();
 }
@@ -2197,6 +2338,12 @@ function answer(q, pickedId, box) {
   activeQuiz.results.push({ wordId: q.word.id, isCorrect, starsEarned, clearedWrongbook });
 
   d.progress[q.word.id] = afterProgress;
+  if (isCorrect) recordPractice(q.word.id, 'recognition');
+  const source = activeQuiz.sourceScope;
+  const plan = source?.daily ? d.dailyPlans[source.planRoute] : null;
+  if (plan && plan.day === source.planDay && plan.wordIds.includes(q.word.id) && !plan.testedIds.includes(q.word.id)) {
+    plan.testedIds.push(q.word.id);
+  }
   d.stars += starsEarned;
   if (wrongbookTraining && starsEarned > 0) {
     d.wrongbookRewarded = { ...(d.wrongbookRewarded || {}), [q.word.id]: true };
@@ -2243,13 +2390,15 @@ function showResult() {
         ? `移出错题本 ${clearedCount} 个 · 通关奖励 ⭐ × ${s.stars}`
         : `本关收获 ⭐ × ${s.stars}`}</div>
       <div class="accuracy">答对 ${s.correct} / ${s.total} 题（${s.accuracy}%）</div>
-      ${wrongbookTraining ? '<p class="subtitle">答对会提升熟练度；达到 3 级的词已自动移出，未达到的下轮继续练。</p>' : ''}
+      <p class="subtitle">这是本次练习的成绩；隔天仍能记得，才继续提升记忆等级。</p>
       <div style="margin-top:30px">
-        <button class="btn" id="again">${wrongbookTraining ? '📕 继续清错题' : '🚀 再来一关'}</button>
+        <button class="btn" id="use">🗣️ 离开屏幕，用一用</button>
+        <button class="btn secondary" id="again">${wrongbookTraining ? '📕 再练一组错题' : '再练一组（可选）'}</button>
         <button class="btn ghost" id="home">回到王国</button>
       </div>
     </div>
   `);
+  node.querySelector('#use').addEventListener('click', () => showUseTask(quiz.questions.map((q) => q.word)));
   node.querySelector('#again').addEventListener('click', () => {
     if (quiz.kiwiDaily) {
       startKiwiDaily();
@@ -2281,7 +2430,11 @@ function showAdultResult() {
   const routeWords = adultWordsToLearn(levelWords());
   const mastered = routeWords.filter((w) => isMastered(pdata().progress[w.id])).length;
   const clearedCount = quiz.results.filter((r) => r.clearedWrongbook).length;
-  const message = s.accuracy >= 90 ? '这一组记得很稳'
+  const dailySource = quiz.sourceScope?.daily ? quiz.sourceScope : null;
+  const dailyPlan = dailySource ? pdata().dailyPlans[dailySource.planRoute] : null;
+  const pending = dailyPlan && dailyPlan.day === dailySource.planDay
+    ? pendingPlanWords(dailyPlan, adultWordsForLevel(dailySource.planRoute), pdata().knownWords).length : 0;
+  const message = s.accuracy >= 90 ? '这一组当场回忆得很好'
     : s.accuracy >= 70 ? '已经形成印象，再复习一次会更牢'
     : '先看一遍错词，再测会更有效';
   const node = el(`
@@ -2291,13 +2444,15 @@ function showAdultResult() {
       <div class="accuracy">答对 ${s.correct} / ${s.total} 题</div>
       ${quiz.sourceScope?.wrongbook ? `<p class="subtitle">本轮有 ${clearedCount} 个词达到掌握线并自动移出错词。</p>` : ''}
       <p class="subtitle">当前路线已掌握 ${mastered} / ${routeWords.length} 个词；系统会按记忆间隔继续安排复习。</p>
+      ${dailySource ? `<p class="counter">${pending ? `今日还有 ${pending} 个词待测，可继续，也可稍后回来。` : '今日计划全部测过了。错词会继续安排复习，不等于已全部掌握。'}</p>` : ''}
       <div style="margin-top:30px">
-        <button class="btn adult-primary" id="again">再测一轮</button>
+        <button class="btn adult-primary" id="again">${dailySource ? (pending ? '继续下一批小测' : '完成今日学习') : '再测一轮'}</button>
         <button class="btn ghost" id="home">回到学习计划</button>
       </div>
     </div>
   `);
   node.querySelector('#again').addEventListener('click', () => {
+    if (dailySource) return pending ? startAdultDailyQuiz(dailySource) : showAdultHome();
     const source = quiz.sourceScope;
     const sourcePool = source?.pool || quiz.pool || routeWords;
     const sourceWords = source?.wrongbook

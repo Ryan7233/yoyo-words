@@ -52,7 +52,7 @@ body[data-theme="sage"] {
    preventDefault：它会吞掉孩子快速拼字母时的第二次点击。 */
 html, body, #app { touch-action: pan-x pan-y; }
 
-:where(button, a, input, textarea, select, [tabindex]):focus-visible {
+:where(button, a, input, textarea, select, summary, [tabindex]):focus-visible {
   outline: 4px solid #2f1b69;
   outline-offset: 3px;
   box-shadow: 0 0 0 3px #fff, 0 0 0 7px #2f1b69;
@@ -1375,8 +1375,8 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 }
 .adult-sense-label small {
   color: var(--purple);
-  font-size: 9px;
-  white-space: nowrap;
+  font-size: 12px;
+  overflow-wrap: anywhere;
 }
 .adult-sense-copy {
   display: grid;
@@ -1384,13 +1384,13 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 }
 .adult-sense-copy small {
   color: var(--ink-soft);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 650;
   line-height: 1.4;
 }
 .adult-sense-copy em {
-  color: var(--green);
-  font-size: 10px;
+  color: var(--ink);
+  font-size: 14px;
   font-style: normal;
   line-height: 1.4;
 }
@@ -1404,7 +1404,7 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   border-radius: 999px;
   background: rgba(116, 88, 168, 0.08);
   color: var(--purple);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 750;
 }
 .adult-learning-panel {
@@ -1555,6 +1555,54 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   color: var(--pink);
   font-size: 30px;
   font-weight: 900;
+}
+
+/* Native details keep all meanings available without making each card a wall of text. */
+.adult-word-audio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 0 16px;
+}
+.adult-extra-senses, .adult-word-expansion, .adult-source-definition { width: 100%; text-align: left; }
+.adult-extra-senses summary, .adult-word-expansion summary, .adult-source-definition summary {
+  color: var(--ink);
+  cursor: pointer;
+  min-height: 44px;
+  padding: 12px 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.dictionary-reference { color: var(--purple); font-size: 14px; padding: 12px 0; }
+.adult-extra-senses .adult-sense { margin-top: 12px; }
+.adult-word-expansion .adult-learning-block { margin-top: 10px; }
+.known-undo {
+  position: sticky;
+  bottom: calc(108px + env(safe-area-inset-bottom));
+  z-index: 999;
+  background: #fff;
+  color: #193c32;
+  border: 2px solid #267a62;
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin-top: 12px;
+  font-size: 16px;
+}
+.known-undo button { min-height: 44px; padding: 8px 16px; margin-left: 8px; cursor: pointer; }
+#save-warning {
+  position: relative;
+  margin: 8px;
+  background: #fff3cd;
+  color: #593b00;
+  border: 2px solid #a26b00;
+  padding: 12px;
+  border-radius: 12px;
 }
 
 @media (max-width: 380px) {
