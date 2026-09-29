@@ -1,0 +1,2384 @@
+[
+  {
+    "id": "adult:incapable",
+    "en": "incapable",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "无能力的；不能胜任的",
+        "definition": "not able to do something",
+        "example": "He was incapable of answering the question.",
+        "collocations": [
+          "incapable of"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "incapable of 表达无法做某事；中文改成能力不足，不误解为物理上不可能。"
+  },
+  {
+    "id": "adult:gigantic",
+    "en": "gigantic",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "巨大的；庞大的",
+        "definition": "extremely large",
+        "example": "A gigantic tree stood by the river.",
+        "collocations": [
+          "gigantic amount",
+          "gigantic building"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "gigantic 是程度很强的巨大；树木例句与建筑搭配自然。"
+  },
+  {
+    "id": "adult:repertoire",
+    "en": "repertoire",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "全部表演曲目；技能储备",
+        "definition": "all pieces a performer can play or skills someone can use",
+        "example": "The pianist added a new piece to her repertoire.",
+        "collocations": [
+          "musical repertoire",
+          "repertoire of skills"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "repertoire 兼顾演出曲目及个人技能库；钢琴例句对应演艺义。"
+  },
+  {
+    "id": "adult:scrutinize",
+    "en": "scrutinize",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "仔细检查；审视",
+        "definition": "to examine something very carefully",
+        "example": "The team scrutinized every line of the report.",
+        "collocations": [
+          "scrutinize a document"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "scrutinize 是细致审视而非普通浏览；逐行检查报告合适。"
+  },
+  {
+    "id": "adult:residual",
+    "en": "residual",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "剩余的；残留的",
+        "definition": "remaining after most has gone",
+        "example": "A residual smell remained in the room.",
+        "collocations": [
+          "residual value",
+          "residual effect"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "残余物；剩余部分",
+        "definition": "a quantity or part that remains",
+        "example": "The model showed a small residual.",
+        "collocations": [
+          "residuals in a model"
+        ],
+        "note": "名词多见于统计、财务等专业语境。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "residual 形容词常指剩余价值/效应；名词为剩余量，统计语境可用。"
+  },
+  {
+    "id": "adult:uranium",
+    "en": "uranium",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "铀",
+        "definition": "a heavy metal used as fuel in some nuclear reactors",
+        "example": "The country has uranium deposits.",
+        "collocations": [
+          "uranium mine",
+          "uranium fuel"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "uranium 是元素铀；核反应堆燃料解释及矿藏例句准确。"
+  },
+  {
+    "id": "adult:layoff",
+    "en": "layoff",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "裁员；停工",
+        "definition": "An occasion when an employer stops giving someone work because fewer workers are needed.",
+        "example": "The factory announced another layoff.",
+        "collocations": [
+          "mass layoff",
+          "temporary layoff"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "layoff 是雇主裁员或暂时停工，不泛指任何失业；定义已收紧。"
+  },
+  {
+    "id": "adult:marvel",
+    "en": "marvel",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "令人惊叹的事物",
+        "definition": "something that causes great surprise or admiration",
+        "example": "The bridge is a marvel of engineering.",
+        "collocations": [
+          "modern marvel",
+          "marvel of"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "惊叹；赞叹",
+        "definition": "to feel great surprise or admiration",
+        "example": "We marvelled at the night sky.",
+        "collocations": [
+          "marvel at"
+        ],
+        "note": "英式 marvelled；美式 marveled。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "marvel 名词是令人赞叹之物，动词常与 at 连用；双词性保留。"
+  },
+  {
+    "id": "adult:tailor",
+    "en": "tailor",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "裁缝",
+        "definition": "a person who makes or alters clothes to fit",
+        "example": "The tailor shortened the sleeves.",
+        "collocations": [
+          "visit a tailor"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "量身调整；使适合",
+        "definition": "to change something to fit a need",
+        "example": "The lessons were tailored to each child.",
+        "collocations": [
+          "tailor to",
+          "tailor for"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "tailor 人与按需调整的动词均常用；tailored to 例句自然。"
+  },
+  {
+    "id": "adult:ceramic",
+    "en": "ceramic",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "陶瓷的",
+        "definition": "made from clay hardened by heat",
+        "example": "She bought a ceramic bowl.",
+        "collocations": [
+          "ceramic tile",
+          "ceramic bowl"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "陶瓷制品；陶瓷材料",
+        "definition": "a thing made from heated clay or similar material",
+        "example": "The museum displayed colourful ceramics.",
+        "collocations": [
+          "fine ceramics"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "ceramic 形容词与名词均常见；陶瓷碗和陶瓷制品已区分。"
+  },
+  {
+    "id": "adult:violently",
+    "en": "violently",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "猛烈地；剧烈地；暴力地",
+        "definition": "with great force or in an aggressive way",
+        "example": "The door shook violently in the wind.",
+        "collocations": [
+          "shake violently",
+          "react violently"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "violently 可指暴力也可指物体猛烈运动；风吹门例句属后者。"
+  },
+  {
+    "id": "adult:brighten",
+    "en": "brighten",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "变亮；使明亮；使愉快",
+        "definition": "to become lighter or make someone happier",
+        "example": "Her smile brightened the room.",
+        "collocations": [
+          "brighten up",
+          "brighten a day"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "brighten 同时可指增亮及使心情好转；笑容例句属比喻用法。"
+  },
+  {
+    "id": "adult:convene",
+    "en": "convene",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "召集；召开；聚集",
+        "definition": "To meet for a formal discussion, or to call people together for such a meeting.",
+        "example": "The committee will convene on Friday.",
+        "collocations": [
+          "convene a meeting"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "convene 既可召集会议也可由会议成员聚集；改定义覆盖不及物例句。"
+  },
+  {
+    "id": "adult:nineteen",
+    "en": "nineteen",
+    "author": "root",
+    "primaryPos": "num.",
+    "senses": [
+      {
+        "pos": "num.",
+        "zh": "十九；十九个",
+        "definition": "the number 19",
+        "example": "She was nineteen when she started university.",
+        "collocations": [
+          "nineteen years"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "nineteen 数词及年龄例句对应，未附会其他义项。"
+  },
+  {
+    "id": "adult:wrinkle",
+    "en": "wrinkle",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "皱纹；褶皱；新难题",
+        "definition": "a line in skin or cloth or an unexpected problem",
+        "example": "There is a small wrinkle in the shirt.",
+        "collocations": [
+          "facial wrinkles",
+          "new wrinkle"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "起皱；使起皱",
+        "definition": "to form lines or folds",
+        "example": "The shirt wrinkles easily.",
+        "collocations": [
+          "wrinkle your nose"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "wrinkle 皮肤/布料皱纹为主，小问题和动词用法同属常用义。"
+  },
+  {
+    "id": "adult:amongst",
+    "en": "amongst",
+    "author": "root",
+    "primaryPos": "prep.",
+    "senses": [
+      {
+        "pos": "prep.",
+        "zh": "在…之中；在…当中",
+        "definition": "in the middle of or included in a group",
+        "example": "She felt relaxed amongst friends.",
+        "collocations": [
+          "amongst friends"
+        ],
+        "note": "amongst 与 among 意思相近；among 更常用。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "amongst 与 among 同义，英式风格较明显；朋友中例句合适。"
+  },
+  {
+    "id": "adult:compute",
+    "en": "compute",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "计算；运算",
+        "definition": "To calculate a result, often with a computer.",
+        "example": "The program computes the total automatically.",
+        "collocations": [
+          "compute a result"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "compute 指计算结果，不限于数字；已放宽英文定义。"
+  },
+  {
+    "id": "adult:comprehension",
+    "en": "comprehension",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "理解；理解力",
+        "definition": "the ability to understand",
+        "example": "This exercise tests reading comprehension.",
+        "collocations": [
+          "reading comprehension"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "comprehension 是理解能力；reading comprehension 是高频搭配。"
+  },
+  {
+    "id": "adult:aspire",
+    "en": "aspire",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "渴望；立志",
+        "definition": "to strongly hope to achieve something",
+        "example": "She aspires to become a teacher.",
+        "collocations": [
+          "aspire to",
+          "aspire to be"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "aspire 通常接 to/to be，表达追求目标；教师例句匹配。"
+  },
+  {
+    "id": "adult:specification",
+    "en": "specification",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "规格；技术要求；详细说明",
+        "definition": "a detailed statement of what a product or work must do",
+        "example": "Please check the laptop's specifications.",
+        "collocations": [
+          "technical specification"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "specification 是产品的详细要求或规格；复数 specs 语境自然。"
+  },
+  {
+    "id": "adult:walnut",
+    "en": "walnut",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "核桃；核桃木",
+        "definition": "a round nut with a hard shell or the wood of its tree",
+        "example": "She added walnuts to the cake.",
+        "collocations": [
+          "walnut tree",
+          "walnut wood"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "walnut 核桃果实与核桃木均为普通名词义；烘焙例句清楚。"
+  },
+  {
+    "id": "adult:pier",
+    "en": "pier",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "码头；栈桥；桥墩",
+        "definition": "a structure over water or a support under a bridge",
+        "example": "The boat stopped at the pier.",
+        "collocations": [
+          "walk along the pier",
+          "bridge pier"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "pier 可为水上栈桥也可为桥墩；船靠码头示主用法。"
+  },
+  {
+    "id": "adult:nickel",
+    "en": "nickel",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "镍；五美分硬币",
+        "definition": "a silver-coloured metal or a US coin worth five cents",
+        "example": "The coin contains nickel.",
+        "collocations": [
+          "nickel coin",
+          "nickel alloy"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "nickel 包含金属镍及美式五美分硬币；元素例句清楚。"
+  },
+  {
+    "id": "adult:geometry",
+    "en": "geometry",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "几何学",
+        "definition": "the area of mathematics about shapes and space",
+        "example": "The class studied triangles in geometry.",
+        "collocations": [
+          "study geometry"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "geometry 对形状和空间的数学研究，三角形例句准确。"
+  },
+  {
+    "id": "adult:ideally",
+    "en": "ideally",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "理想情况下；最好",
+        "definition": "in the best possible situation",
+        "example": "Ideally, we should leave before eight.",
+        "collocations": [
+          "ideally suited"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "ideally 有理想情况下和最恰当地的用法；保留 ideally suited 搭配。"
+  },
+  {
+    "id": "adult:breach",
+    "en": "breach",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "违约；违反；缺口",
+        "definition": "a failure to obey a rule or a gap in a barrier",
+        "example": "The leak was a serious breach of privacy.",
+        "collocations": [
+          "data breach",
+          "breach of contract"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "违反；突破",
+        "definition": "to break a rule or make a gap in a barrier",
+        "example": "The company breached the agreement.",
+        "collocations": [
+          "breach a contract"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "breach 名词/动词均指违反，也可指防线缺口；隐私泄露例句合适。"
+  },
+  {
+    "id": "adult:knob",
+    "en": "knob",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "旋钮；把手",
+        "definition": "a round handle used to open or control something",
+        "example": "Turn the knob to lower the heat.",
+        "collocations": [
+          "door knob",
+          "control knob"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "knob 是圆形旋钮或门把；调低热量的例句匹配。"
+  },
+  {
+    "id": "adult:tablet",
+    "en": "tablet",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "药片；平板电脑；石板",
+        "definition": "a piece of medicine, a flat computer, or a flat piece of stone",
+        "example": "She uses a tablet to read books.",
+        "collocations": [
+          "take a tablet",
+          "tablet computer"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/tablet",
+        "note": "Dictionary lists medicine, computer, and hard block."
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "tablet 药片、平板电脑、石板均常见；电子阅读例句清楚。"
+  },
+  {
+    "id": "adult:squat",
+    "en": "squat",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "蹲下；蹲坐",
+        "definition": "to bend the knees and sit low",
+        "example": "He squatted down to tie his shoe.",
+        "collocations": [
+          "squat down"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "深蹲；蹲姿",
+        "definition": "a position or exercise with bent knees",
+        "example": "She did ten squats before running.",
+        "collocations": [
+          "do squats"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "矮胖的；低矮宽阔的",
+        "definition": "short and wide in shape",
+        "example": "A squat building stood at the corner.",
+        "collocations": [
+          "squat building"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "squat 动词蹲下、名词深蹲、形容词矮宽均不同；逐义保留。"
+  },
+  {
+    "id": "adult:evaporate",
+    "en": "evaporate",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "蒸发；消失",
+        "definition": "to change from liquid into gas or disappear",
+        "example": "The water evaporated in the sun.",
+        "collocations": [
+          "evaporate quickly"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "evaporate 蒸发也可比喻消失；水在日光下蒸发准确。"
+  },
+  {
+    "id": "adult:seventy",
+    "en": "seventy",
+    "author": "root",
+    "primaryPos": "num.",
+    "senses": [
+      {
+        "pos": "num.",
+        "zh": "七十；七十个",
+        "definition": "the number 70",
+        "example": "My grandfather turned seventy this year.",
+        "collocations": [
+          "seventy years"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "seventy 仅数词七十；年龄例句直接。"
+  },
+  {
+    "id": "adult:radioactive",
+    "en": "radioactive",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "放射性的",
+        "definition": "giving off energy from unstable atoms",
+        "example": "Radioactive waste must be stored safely.",
+        "collocations": [
+          "radioactive material"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "radioactive 指不稳定原子产生辐射，废料搭配常见。"
+  },
+  {
+    "id": "adult:simulate",
+    "en": "simulate",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "模拟；假装",
+        "definition": "to model a real situation or pretend",
+        "example": "The software simulates a flight.",
+        "collocations": [
+          "simulate a situation"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "simulate 表示模拟真实情况，也可假装；飞行软件例句正确。"
+  },
+  {
+    "id": "adult:volleyball",
+    "en": "volleyball",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "排球；排球运动",
+        "definition": "a game where teams hit a ball over a net",
+        "example": "We play volleyball after school.",
+        "collocations": [
+          "play volleyball"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "volleyball 可指排球运动，结合 play 搭配；未混为球拍运动。"
+  },
+  {
+    "id": "adult:intrigue",
+    "en": "intrigue",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "激起兴趣；引起好奇",
+        "definition": "to make someone curious or interested",
+        "example": "The title of the book intrigued me.",
+        "collocations": [
+          "be intrigued by"
+        ],
+        "phonetic": "/ɪnˈtriːɡ/"
+      },
+      {
+        "pos": "n.",
+        "zh": "阴谋；神秘有趣的事",
+        "definition": "secret plans or a sense of mystery",
+        "example": "The film is full of political intrigue.",
+        "collocations": [
+          "political intrigue"
+        ],
+        "phonetic": "/ˈɪn.triːɡ/"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "intrigue 动词激起兴趣，名词阴谋或神秘感；电影政治阴谋例句准确。"
+  },
+  {
+    "id": "adult:alignment",
+    "en": "alignment",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "对齐；校准；方向一致",
+        "definition": "things being in a line or plans being in agreement",
+        "example": "Check the alignment of the text.",
+        "collocations": [
+          "in alignment with",
+          "wheel alignment"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "alignment 是排成一线或方向一致；改去误导性的队列译法。"
+  },
+  {
+    "id": "adult:wink",
+    "en": "wink",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "眨眼；使眼色",
+        "definition": "to close one eye briefly as a signal",
+        "example": "She winked at her friend.",
+        "collocations": [
+          "wink at"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "眨眼；眼色",
+        "definition": "a quick closing of one eye as a signal",
+        "example": "He gave us a wink.",
+        "collocations": [
+          "give a wink"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "wink 眨一眼可示意；动作与名词眼色均保留。"
+  },
+  {
+    "id": "adult:coarse",
+    "en": "coarse",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "粗糙的；粗粒的；粗俗的",
+        "definition": "rough, made of large pieces, or rude",
+        "example": "The sand felt coarse under her feet.",
+        "collocations": [
+          "coarse sand",
+          "coarse language"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "coarse 可指粗粒、粗糙或言语粗俗；沙粒例句准确。"
+  },
+  {
+    "id": "adult:spelling",
+    "en": "spelling",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "拼写；拼法",
+        "definition": "the way a word is written with letters",
+        "example": "Check the spelling of each new word.",
+        "collocations": [
+          "correct spelling",
+          "spelling mistake"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "spelling 是单词字母写法；拼写错误搭配自然。"
+  },
+  {
+    "id": "adult:catalyst",
+    "en": "catalyst",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "催化剂；促成变化的事物",
+        "definition": "a substance that speeds a reaction or something that causes change",
+        "example": "The meeting was a catalyst for change.",
+        "collocations": [
+          "catalyst for change",
+          "chemical catalyst"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "catalyst 化学催化剂与变化诱因并用；会议促成变化例句自然。"
+  },
+  {
+    "id": "adult:wardrobe",
+    "en": "wardrobe",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "衣柜；全部衣物",
+        "definition": "a tall piece of furniture for clothes or all someone's clothes",
+        "example": "Her coat is in the wardrobe.",
+        "collocations": [
+          "open the wardrobe",
+          "winter wardrobe"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "wardrobe 衣柜与个人全部衣物均常见；外套例句示家具义。"
+  },
+  {
+    "id": "adult:grease",
+    "en": "grease",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "油脂；润滑脂",
+        "definition": "thick oil or fat used for cooking or moving parts",
+        "example": "There was grease on the pan.",
+        "collocations": [
+          "cooking grease"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "给…涂油；润滑",
+        "definition": "to put grease or oil on something",
+        "example": "Grease the baking tray before using it.",
+        "collocations": [
+          "grease a pan"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "grease 名词油脂与动词涂油均常用；烤盘例句对应动词。"
+  },
+  {
+    "id": "adult:aviation",
+    "en": "aviation",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "航空；航空业",
+        "definition": "the business and activity of flying aircraft",
+        "example": "She wants to work in aviation.",
+        "collocations": [
+          "civil aviation",
+          "aviation industry"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "aviation 是航空活动/行业，不是单架飞机；职业例句匹配。"
+  },
+  {
+    "id": "adult:hawk",
+    "en": "hawk",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "鹰；鹰派人物",
+        "definition": "a bird that hunts or a person favouring strong action",
+        "example": "A hawk circled above the field.",
+        "collocations": [
+          "policy hawk"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "兜售；沿街叫卖",
+        "definition": "to sell goods loudly in public",
+        "example": "Vendors hawked snacks near the station.",
+        "collocations": [
+          "hawk goods"
+        ],
+        "note": "动词义与鸟无关。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "hawk 鸟类及主张强硬者双义保留，沿街兜售的动词也存在。"
+  },
+  {
+    "id": "adult:imaginative",
+    "en": "imaginative",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "富有想象力的；有创意的",
+        "definition": "good at thinking of new ideas",
+        "example": "The children gave imaginative answers.",
+        "collocations": [
+          "imaginative story"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "imaginative 是善于构想新点子；儿童创意答案例句合适。"
+  },
+  {
+    "id": "adult:hopeless",
+    "en": "hopeless",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "没有希望的；无能为力的；很差的",
+        "definition": "unlikely to succeed or very poor at something",
+        "example": "I felt hopeless after several failed attempts.",
+        "collocations": [
+          "hopeless situation",
+          "hopeless at"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "hopeless 可指无望或某方面很差；情绪例句与后义搭配均自然。"
+  },
+  {
+    "id": "adult:pathetic",
+    "en": "pathetic",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "令人怜悯的；差劲得可鄙的",
+        "definition": "causing sympathy through suffering or earning little respect through poor effort",
+        "example": "His excuse was pathetic.",
+        "collocations": [
+          "pathetic excuse",
+          "pathetic sight"
+        ],
+        "note": "既可表同情，也常带贬义；须看上下文。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pathetic",
+        "note": "Dictionary separates sympathy and disapproving senses."
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "pathetic 有令人怜悯与糟糕可鄙两种语气；中文措辞已区分。"
+  },
+  {
+    "id": "adult:fasten",
+    "en": "fasten",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "系紧；扣牢；固定",
+        "definition": "to attach firmly or close so it stays in place",
+        "example": "Please fasten your seat belt.",
+        "collocations": [
+          "fasten a belt",
+          "fasten to"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "fasten 表示扣紧固定，不仅是系带；安全带例句高频。"
+  },
+  {
+    "id": "adult:decay",
+    "en": "decay",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "腐烂；衰败",
+        "definition": "to break down slowly or become weaker",
+        "example": "The old wood began to decay.",
+        "collocations": [
+          "decay over time"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "腐烂；衰退",
+        "definition": "the process of breaking down or becoming weaker",
+        "example": "The dentist found early tooth decay.",
+        "collocations": [
+          "tooth decay",
+          "urban decay"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "decay 动词腐朽与名词腐烂/衰退都常见；蛀牙搭配准确。"
+  },
+  {
+    "id": "adult:hen",
+    "en": "hen",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "母鸡；雌鸟",
+        "definition": "a female chicken or other female bird",
+        "example": "The hen laid an egg.",
+        "collocations": [
+          "hen house",
+          "mother hen"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "hen 为母鸡，也可泛指某些雌鸟；产蛋例句清楚。"
+  },
+  {
+    "id": "adult:resonance",
+    "en": "resonance",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "共鸣；共振；深远影响",
+        "definition": "A strong or lasting effect on people's feelings, or a sound made stronger by vibration.",
+        "example": "Her story had resonance with readers.",
+        "collocations": [
+          "emotional resonance",
+          "resonance with"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "resonance 有物理共振及情感共鸣；英文定义改为覆盖两种义。"
+  },
+  {
+    "id": "adult:conserve",
+    "en": "conserve",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "保护；节约使用",
+        "definition": "to keep something safe or use less so it lasts",
+        "example": "We should conserve water.",
+        "collocations": [
+          "conserve energy",
+          "conserve resources"
+        ],
+        "phonetic": "/kənˈsɜːv/"
+      },
+      {
+        "pos": "n.",
+        "zh": "果酱（含大块果肉）",
+        "definition": "a kind of jam with whole or large pieces of fruit",
+        "example": "She put strawberry conserve on toast.",
+        "collocations": [
+          "fruit conserve"
+        ],
+        "note": "较少见的名词义；优先掌握动词“节约、保护”。",
+        "phonetic": "/ˈkɒn.sɜːv/"
+      }
+    ],
+    "evidence": [
+      "https://dictionary.cambridge.org/dictionary/english/conserve"
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "conserve 动词节约/保护为主；名词整果果酱罕见，保留但标明优先级。"
+  },
+  {
+    "id": "adult:noodle",
+    "en": "noodle",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "面条；面食条",
+        "definition": "a long thin strip of food made from flour or rice",
+        "example": "She made noodles for lunch.",
+        "collocations": [
+          "rice noodles",
+          "noodle soup"
+        ],
+        "note": "口语中的贬义称呼不适合作为首页义。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "noodle 为面条；米粉及汤面搭配可理解。"
+  },
+  {
+    "id": "adult:bowling",
+    "en": "bowling",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "保龄球运动",
+        "definition": "a game in which a ball is rolled towards pins",
+        "example": "We went bowling after dinner.",
+        "collocations": [
+          "go bowling",
+          "bowling alley"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "bowling 主用法为保龄球运动；保龄球馆搭配自然。"
+  },
+  {
+    "id": "adult:specially",
+    "en": "specially",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "特意地；专门地",
+        "definition": "for a particular purpose or person",
+        "example": "The cake was made specially for her birthday.",
+        "collocations": [
+          "specially made"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "specially 指为特定人或目的特意做；生日蛋糕例句合适。"
+  },
+  {
+    "id": "adult:shaky",
+    "en": "shaky",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "摇晃的；不稳固的；不确定的",
+        "definition": "moving slightly or not dependable",
+        "example": "The old chair felt shaky.",
+        "collocations": [
+          "shaky ground",
+          "shaky hands"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "shaky 可指手/物体抖动，也可指根据不可靠；两类搭配均保留。"
+  },
+  {
+    "id": "adult:durable",
+    "en": "durable",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "耐用的；持久的",
+        "definition": "able to last a long time without breaking",
+        "example": "This bag is made from durable material.",
+        "collocations": [
+          "durable goods"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "durable 是经久耐用而非仅结实；商品搭配自然。"
+  },
+  {
+    "id": "adult:vapour",
+    "en": "vapour",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "蒸气；气态物质",
+        "definition": "gas formed from a substance that is usually liquid or solid",
+        "example": "Warm air can carry water vapour.",
+        "collocations": [
+          "water vapour"
+        ],
+        "note": "英式 vapour；美式 vapor。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "vapour 是气态物，不是窗上凝结水滴；修正物理错误例句。",
+    "evidence": [
+      "https://dictionary.cambridge.org/dictionary/english/water-vapour"
+    ]
+  },
+  {
+    "id": "adult:generosity",
+    "en": "generosity",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "慷慨；大方",
+        "definition": "willingness to give money, time, or help freely",
+        "example": "We thanked her for her generosity.",
+        "collocations": [
+          "great generosity"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "generosity 包括给出时间和帮助；非仅金钱慷慨。"
+  },
+  {
+    "id": "adult:sift",
+    "en": "sift",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "筛；仔细筛选",
+        "definition": "to pass powder through a sieve or examine information carefully",
+        "example": "Sift the flour before adding it.",
+        "collocations": [
+          "sift flour",
+          "sift through"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "sift 筛粉与筛查信息均成立；through 搭配对应引申义。"
+  },
+  {
+    "id": "adult:compass",
+    "en": "compass",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "指南针；圆规；范围",
+        "definition": "a device for finding direction, a drawing tool, or a range",
+        "example": "Use a compass to find north.",
+        "collocations": [
+          "compass needle",
+          "a pair of compasses"
+        ],
+        "note": "圆规常用复数 compasses；“范围”义较正式。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "compass 常用名词指南针/圆规；旧版动词包围图谋过时，显式移除。",
+    "removedPos": {
+      "v.": "旧版动词‘包围、达到、图谋’为过时或极少见用法，现代学习卡保留常用名词。"
+    },
+    "evidence": [
+      "https://dictionary.cambridge.org/dictionary/english/compass"
+    ]
+  },
+  {
+    "id": "adult:novelty",
+    "en": "novelty",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "新奇；新鲜事物",
+        "definition": "the quality of being new or something unusual",
+        "example": "The novelty of the game soon wore off.",
+        "collocations": [
+          "novelty of",
+          "novelty item"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "novelty 可指新奇感及新奇小物；新鲜感消退例句正确。"
+  },
+  {
+    "id": "adult:brightness",
+    "en": "brightness",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "亮度；明亮",
+        "definition": "the amount of light something gives or reflects",
+        "example": "Lower the screen brightness at night.",
+        "collocations": [
+          "screen brightness"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "brightness 指光的明亮程度；屏幕亮度例句直接。"
+  },
+  {
+    "id": "adult:outset",
+    "en": "outset",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "开始；开端",
+        "definition": "the beginning of an event or period",
+        "example": "We agreed on the rules at the outset.",
+        "collocations": [
+          "at the outset"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "outset 是开始时点，惯用 at the outset；定义与例句一致。"
+  },
+  {
+    "id": "adult:repay",
+    "en": "repay",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "偿还；报答",
+        "definition": "to pay money back or return help or kindness",
+        "example": "I will repay the loan next year.",
+        "collocations": [
+          "repay a loan"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "repay 偿还债务或回报善意；贷款例句示最常见义。"
+  },
+  {
+    "id": "adult:jeopardize",
+    "en": "jeopardize",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "危及；使受威胁",
+        "definition": "to put something important at risk",
+        "example": "The delay could jeopardize the project.",
+        "collocations": [
+          "jeopardize safety"
+        ],
+        "note": "美式 jeopardize；英式也写 jeopardise。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "jeopardize 是使有风险而非已经破坏；项目延期例句匹配。"
+  },
+  {
+    "id": "adult:subscribe",
+    "en": "subscribe",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "订阅；定期缴费；认购",
+        "definition": "to arrange regular access to a service or pay for shares",
+        "example": "She subscribes to an English magazine.",
+        "collocations": [
+          "subscribe to",
+          "subscribe for shares"
+        ],
+        "note": "subscribe to 表示订阅或赞同；“签署”通常用 sign。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "subscribe to 订阅、subscribe for shares 认购股份；多义不混淆。"
+  },
+  {
+    "id": "adult:institute",
+    "en": "institute",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "研究所；学院；学会",
+        "definition": "an organization for education or research",
+        "example": "She works at a research institute.",
+        "collocations": [
+          "research institute"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "设立；推行",
+        "definition": "to start a rule or system officially",
+        "example": "The school instituted a new programme.",
+        "collocations": [
+          "institute a policy"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "institute 机构名词与正式推行的动词均较常用；政策例句合适。"
+  },
+  {
+    "id": "adult:sprout",
+    "en": "sprout",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "发芽；萌生",
+        "definition": "to begin to grow or develop",
+        "example": "The seeds sprouted after the rain.",
+        "collocations": [
+          "sprout leaves"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "嫩芽；芽菜",
+        "definition": "a new growth from a plant or an edible young shoot",
+        "example": "Tiny sprouts appeared in the pot.",
+        "collocations": [
+          "bean sprouts"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "sprout 发芽动词与嫩芽名词并保留；雨后种子例句准确。"
+  },
+  {
+    "id": "adult:spinal",
+    "en": "spinal",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "脊柱的；脊髓的",
+        "definition": "relating to the backbone or spinal cord",
+        "example": "The doctor checked for a spinal injury.",
+        "collocations": [
+          "spinal injury",
+          "spinal cord"
+        ],
+        "note": "spinal 来自 spine（脊柱），不是“针的”。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/spinal",
+        "note": "Dictionary says relating to the spine."
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "spinal 指脊柱或脊髓相关；伤情和 cord 搭配自然。"
+  },
+  {
+    "id": "adult:pigeon",
+    "en": "pigeon",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "鸽子",
+        "definition": "a common bird with a small head and short legs",
+        "example": "A pigeon landed on the balcony.",
+        "collocations": [
+          "carrier pigeon"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "pigeon 指常见鸽子；信鸽搭配是其用途。"
+  },
+  {
+    "id": "adult:heighten",
+    "en": "heighten",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "加强；提高；使更强烈",
+        "definition": "to make a feeling or effect stronger",
+        "example": "The news heightened public concern.",
+        "collocations": [
+          "heighten awareness",
+          "heighten tension"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "heighten 是使程度增强，不仅物理高度提高；公众担忧例句恰当。"
+  },
+  {
+    "id": "adult:latitude",
+    "en": "latitude",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "纬度；自由度",
+        "definition": "a position north or south of the equator, or freedom to act",
+        "example": "The city lies at a high northern latitude.",
+        "collocations": [
+          "latitude and longitude",
+          "give someone latitude"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "latitude 为纬度，也可指行动自由度；自由度搭配已写完整。"
+  },
+  {
+    "id": "adult:equate",
+    "en": "equate",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "等同；把…视为相等",
+        "definition": "to consider two things equal or the same",
+        "example": "Do not equate price with quality.",
+        "collocations": [
+          "equate with",
+          "equate to"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "equate with/to 均表示视作等同；价格与质量例句对应。"
+  },
+  {
+    "id": "adult:yearn",
+    "en": "yearn",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "渴望；向往",
+        "definition": "to strongly want something for a long time",
+        "example": "She yearned to travel abroad.",
+        "collocations": [
+          "yearn for",
+          "yearn to"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "yearn 含强烈、持续的渴望；旅行目标例句自然。"
+  },
+  {
+    "id": "adult:sociology",
+    "en": "sociology",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "社会学",
+        "definition": "the study of how people live together in groups",
+        "example": "She studies sociology at university.",
+        "collocations": [
+          "study sociology",
+          "sociology department"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "sociology 研究人类社会群体；大学专业例句匹配。"
+  },
+  {
+    "id": "adult:bound",
+    "en": "bound",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "一定会…的；受约束的；开往…的",
+        "definition": "Certain to happen, required by duty, or travelling towards a particular place.",
+        "example": "It is bound to rain later.",
+        "collocations": [
+          "bound to",
+          "bound by",
+          "bound for"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "界限；范围；跳跃",
+        "definition": "a limit or a large jumping step",
+        "example": "The dog crossed the garden in one bound.",
+        "collocations": [
+          "beyond bounds",
+          "leaps and bounds"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "跳跃；划定边界",
+        "definition": "to move with long jumps or form a limit around something",
+        "example": "The deer bounded across the field.",
+        "collocations": [
+          "bound across",
+          "be bounded by"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "bound 形容词还可指开往某处；名词界限/跳跃、动词跳跃均保留。",
+    "evidence": [
+      "https://dictionary.cambridge.org/dictionary/english/bound"
+    ]
+  },
+  {
+    "id": "adult:unify",
+    "en": "unify",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "统一；使成一体",
+        "definition": "to bring separate parts together into one",
+        "example": "The project aims to unify the two systems.",
+        "collocations": [
+          "unify a system",
+          "unify efforts"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "unify 是将分离部分合一；两个系统整合例句恰当。"
+  },
+  {
+    "id": "adult:clearing",
+    "en": "clearing",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "林中空地；清理；清算",
+        "definition": "an open space in a forest, removing obstacles, or settling payments",
+        "example": "We stopped in a small forest clearing.",
+        "collocations": [
+          "forest clearing",
+          "bank clearing"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "clearing 可指林间空地、清除及银行清算；主例句清楚。"
+  },
+  {
+    "id": "adult:pharmacy",
+    "en": "pharmacy",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "药店；药房；药学",
+        "definition": "A shop that sells medicines, or the study of preparing medicines.",
+        "example": "You can buy the medicine at the pharmacy.",
+        "collocations": [
+          "local pharmacy",
+          "study pharmacy"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "pharmacy 药店与药学均常用；不强称所有药店都现场配药。"
+  },
+  {
+    "id": "adult:acceleration",
+    "en": "acceleration",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "加速；加速度",
+        "definition": "an increase in speed or the rate at which speed changes",
+        "example": "The car's acceleration surprised me.",
+        "collocations": [
+          "rapid acceleration",
+          "acceleration of"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "acceleration 可指速度增加或其变化率；车辆例句合适。"
+  },
+  {
+    "id": "adult:wavelength",
+    "en": "wavelength",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "波长；相同想法（习语）",
+        "definition": "the distance between repeating parts of a wave",
+        "example": "Red light has a longer wavelength than blue light.",
+        "collocations": [
+          "light wavelength",
+          "on the same wavelength"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "wavelength 字面为波的重复部分距离；same wavelength 是观点相近习语。"
+  },
+  {
+    "id": "adult:bill",
+    "en": "bill",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "账单；钞票；议案；鸟嘴",
+        "definition": "a request for payment, paper money, a proposed law, or a bird's beak",
+        "example": "We paid the restaurant bill.",
+        "collocations": [
+          "pay a bill",
+          "dollar bill",
+          "pass a bill"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "给…开账单；宣传",
+        "definition": "to ask someone to pay or advertise someone as a performer",
+        "example": "The hotel billed us for breakfast.",
+        "collocations": [
+          "bill someone for",
+          "be billed as"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "bill 有账单、美钞、法案、鸟喙；动词收费/宣传；例句各有所指。"
+  },
+  {
+    "id": "adult:spiral",
+    "en": "spiral",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "螺旋；螺旋线",
+        "definition": "a curved line winding around a centre",
+        "example": "The staircase formed a spiral.",
+        "collocations": [
+          "downward spiral",
+          "spiral shape"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "盘旋；急剧变化",
+        "definition": "to move in a spiral or change quickly in an uncontrolled way",
+        "example": "Costs spiralled after the delay.",
+        "collocations": [
+          "spiral out of control",
+          "spiral upwards"
+        ],
+        "note": "英式 spiralled；美式 spiraled。"
+      },
+      {
+        "pos": "adj.",
+        "zh": "螺旋形的",
+        "definition": "shaped like a curve around a centre",
+        "example": "She bought a spiral notebook.",
+        "collocations": [
+          "spiral staircase",
+          "spiral notebook"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "spiral 形状名词、急剧变化动词、螺旋形容词均常用；保留。"
+  },
+  {
+    "id": "adult:distinctly",
+    "en": "distinctly",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "清楚地；明显地；明确不同地",
+        "definition": "in a way that is easy to notice or understand",
+        "example": "I distinctly remember meeting her.",
+        "collocations": [
+          "distinctly different",
+          "distinctly remember"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "distinctly 可指清晰或明显；清楚记得例句准确。"
+  },
+  {
+    "id": "adult:paw",
+    "en": "paw",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "爪；动物的脚",
+        "definition": "the foot of an animal with claws or pads",
+        "example": "The dog put a paw on my knee.",
+        "collocations": [
+          "front paw",
+          "paw print"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "用爪扒；笨拙地摸索",
+        "definition": "to touch or scratch with a paw or hand",
+        "example": "The dog pawed at the door.",
+        "collocations": [
+          "paw at"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "paw 动物脚爪名词，动词用爪扒或乱摸；门口例句对应。"
+  },
+  {
+    "id": "adult:whirl",
+    "en": "whirl",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "旋转；迅速转动",
+        "definition": "to turn or move quickly around",
+        "example": "The leaves whirled in the wind.",
+        "collocations": [
+          "whirl around",
+          "whirl through"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "旋转；纷乱",
+        "definition": "a rapid circular movement or confused activity",
+        "example": "The dance was a whirl of colour.",
+        "collocations": [
+          "in a whirl"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "whirl 是快速旋转或忙乱状态；叶片例句示动作。"
+  },
+  {
+    "id": "adult:sovereign",
+    "en": "sovereign",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "主权独立的；最高的",
+        "definition": "having complete power to govern itself or the highest authority",
+        "example": "The country became a sovereign state.",
+        "collocations": [
+          "sovereign state",
+          "sovereign power"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "君主；元首",
+        "definition": "a king or queen who rules a country",
+        "example": "The sovereign opened the ceremony.",
+        "collocations": [
+          "reigning sovereign"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "sovereign 形容词主权/最高权力，名词君主；国体例句恰当。"
+  },
+  {
+    "id": "adult:flutter",
+    "en": "flutter",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "飘动；拍翅；颤动",
+        "definition": "to move quickly and lightly back and forth",
+        "example": "The flag fluttered in the wind.",
+        "collocations": [
+          "flutter in the wind",
+          "flutter down"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "拍翅；轻微颤动；一阵紧张",
+        "definition": "a quick light movement or a brief nervous feeling",
+        "example": "She felt a flutter of excitement.",
+        "collocations": [
+          "flutter of excitement"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "flutter 是轻快摆动/振翅，也有紧张心跳；旗帜例句清楚。"
+  },
+  {
+    "id": "adult:incur",
+    "en": "incur",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "招致；产生（费用或损失）",
+        "definition": "To have to pay a cost or suffer a loss because of something that happens.",
+        "example": "Late payments may incur a fee.",
+        "collocations": [
+          "incur costs",
+          "incur a loss"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "incur 通常指招致费用或不利后果；改用更易懂解释。"
+  },
+  {
+    "id": "adult:delete",
+    "en": "delete",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "删除；删去",
+        "definition": "to remove written or stored information",
+        "example": "Please delete the old file.",
+        "collocations": [
+          "delete a file",
+          "delete a message"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "delete 删除文字/储存信息，不等同实物销毁；文件例句准确。"
+  },
+  {
+    "id": "adult:blaze",
+    "en": "blaze",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "大火；火光；强烈光芒",
+        "definition": "a large fire or bright light",
+        "example": "Firefighters put out the blaze.",
+        "collocations": [
+          "forest blaze",
+          "blaze of light"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "猛烈燃烧；闪耀",
+        "definition": "to burn strongly or shine brightly",
+        "example": "The fire blazed through the night.",
+        "collocations": [
+          "blaze brightly",
+          "blaze away"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "blaze 大火或强烈光芒，动词猛烈燃烧/发光；消防例句匹配。"
+  },
+  {
+    "id": "adult:physiological",
+    "en": "physiological",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "生理的；生理学的",
+        "definition": "relating to how a living body's parts work",
+        "example": "The study measured physiological responses.",
+        "collocations": [
+          "physiological change",
+          "physiological response"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "physiological 指生理机能，非心理反应；研究反应例句准确。"
+  },
+  {
+    "id": "adult:carpenter",
+    "en": "carpenter",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "木匠",
+        "definition": "a person whose job is making or repairing things from wood",
+        "example": "The carpenter repaired the door.",
+        "collocations": [
+          "skilled carpenter",
+          "carpenter's tools"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "carpenter 专门以木材制作修理者；修门例句自然。"
+  },
+  {
+    "id": "adult:souvenir",
+    "en": "souvenir",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "纪念品",
+        "definition": "something kept to remember a place or event",
+        "example": "She bought a small souvenir from the museum.",
+        "collocations": [
+          "buy a souvenir",
+          "souvenir shop"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "souvenir 为旅行/事件纪念物；博物馆例句合适。"
+  },
+  {
+    "id": "adult:successive",
+    "en": "successive",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "连续的；接连的",
+        "definition": "following one after another without a break",
+        "example": "The team won three successive games.",
+        "collocations": [
+          "successive years",
+          "successive governments"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "successive 表接连无间隔，与连续比赛获胜例句吻合。"
+  },
+  {
+    "id": "adult:conversely",
+    "en": "conversely",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "相反地；反过来说",
+        "definition": "Used to introduce an idea that is opposite to the one just mentioned.",
+        "example": "More exercise can improve sleep; conversely, less exercise may make sleep worse.",
+        "collocations": [
+          "or conversely",
+          "and conversely"
+        ]
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "conversely 用于相反方向的论述；原例对比关系不够反向，已修。",
+    "evidence": [
+      "https://dictionary.cambridge.org/dictionary/english/conversely"
+    ]
+  },
+  {
+    "id": "adult:biscuit",
+    "en": "biscuit",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "饼干；小圆面包（美式）",
+        "definition": "A small, usually sweet baked snack in Britain, or a soft bread roll in the US.",
+        "example": "She had a biscuit with her tea.",
+        "collocations": [
+          "chocolate biscuit",
+          "buttermilk biscuit"
+        ],
+        "note": "英式 biscuit 通常是饼干；美式 biscuit 常是松软小面包。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "biscuit 英式主要小烤饼干，美式为松软咸面包；标明地域。"
+  },
+  {
+    "id": "adult:intern",
+    "en": "intern",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "实习生；实习医生（美式）",
+        "definition": "a person working temporarily to gain experience or a first-year doctor in the US",
+        "example": "She worked as an intern at the museum.",
+        "collocations": [
+          "summer intern",
+          "medical intern"
+        ],
+        "phonetic": "/ˈɪn.tɜːn/"
+      },
+      {
+        "pos": "v.",
+        "zh": "实习；拘留",
+        "definition": "to work for experience or hold someone for political or military reasons",
+        "example": "He interned at a local newspaper.",
+        "collocations": [
+          "intern at",
+          "be interned"
+        ],
+        "note": "动词“拘留”常用被动；英式两种动词义的重音可能不同。"
+      }
+    ],
+    "evidence": [
+      "https://dictionary.cambridge.org/dictionary/english/intern"
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "intern 名词实习生及美式初年医生，动词实习/战时拘留均存在。"
+  },
+  {
+    "id": "adult:accordance",
+    "en": "accordance",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "依照；符合（用于 in accordance with）",
+        "definition": "Agreement with a rule or wish, especially in the phrase 'in accordance with'.",
+        "example": "The work was done in accordance with the plan.",
+        "collocations": [
+          "in accordance with"
+        ],
+        "note": "常用固定搭配 in accordance with＝按照、符合。"
+      }
+    ],
+    "reviewer": "/root/review_c007",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "accordance 主要见 in accordance with，意为依照规定；释义及例句强调搭配。",
+    "evidence": [
+      "https://dictionary.cambridge.org/dictionary/english/accordance"
+    ]
+  }
+]

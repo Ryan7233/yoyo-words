@@ -188,17 +188,17 @@ test('成人词库：重叠考试词只存一份，并记录多条共享路线',
 test('成人词库：高频多义词使用日常义，不把生僻首义当成主卡片', () => {
   const byEnglish = new Map(ADULT_WORDS.map((word) => [word.en.toLowerCase(), word]));
   const expected = {
-    a: '一个、任一',
-    can: '能、可以',
-    will: '将、会、愿意',
-    want: '想要、需要',
-    give: '给、给予',
-    well: '很好地、充分地',
-    may: '可以、可能',
-    still: '仍然、还是',
-    just: '只是、刚刚、正好',
-    mean: '意思是、意味着、打算',
-    might: '可能、也许',
+    a: '一（个）；某一；每一',
+    can: '能；可以；可能会',
+    will: '将、会；愿意；表示请求或意愿',
+    want: '想要；希望；需要',
+    give: '给；提供；使产生；举办；让步',
+    well: '好地；充分地；很、相当',
+    may: '可能；可以；愿（表示祝愿）',
+    still: '仍然；还是；尽管如此；更加',
+    just: '刚刚；只是；正好；仅仅',
+    mean: '意思是；意味着；打算；对……重要',
+    might: '可能；也许；可以（委婉建议）',
     lot: '许多、大量',
     natural: '自然的、天然的',
     special: '特别的、特殊的',
@@ -216,8 +216,8 @@ test('成人词库：生活路线的错误首义和冒犯性旧义已校正', ()
   const lifeWords = adultWordsForLevel('life');
   const byEnglish = new Map(lifeWords.map((word) => [word.en.toLowerCase(), word]));
   const expected = {
-    woman: ['女人、女性', 'n.'],
-    girl: ['女孩、少女', 'n.'],
+    woman: ['成年女子；女性', 'n.'],
+    girl: ['女孩；少女；年轻女子', 'n.'],
     save: ['保存、节省、挽救', 'v.'],
     medical: ['医疗的、医学的', 'adj.'],
     current: ['当前的、现行的', 'adj.'],
@@ -284,8 +284,8 @@ test('成人词库：跨路线语义抽检使用现代常用义和正确主词�
     configuration: ['配置、结构、布局', 'n.'],
     doll: ['玩偶、洋娃娃', 'n.'],
     'ice-cream': ['冰淇淋', 'n.'],
-    intermediate: ['中间的、中级的', 'adj.'],
-    loose: ['松的、宽松的、不牢固的', 'adj.'],
+    intermediate: ['中间的；中级的', 'adj.'],
+    loose: ['松动的；宽松的；未捆住的；不严密的', 'adj.'],
     temperamental: ['喜怒无常的、情绪不稳定的', 'adj.'],
     resolute: ['坚决的、坚定的', 'adj.'],
     invert: ['使倒置、使反转', 'v.'],
@@ -313,8 +313,8 @@ test('成人词库：常用多词性分开保留，过时或冒犯义不重新�
     { pos: 'n.', zh: '亲戚、亲属' },
   ]);
   assert.deepEqual(sensesOf('civilian'), [
-    { pos: 'adj.', zh: '平民的、民用的' },
-    { pos: 'n.', zh: '平民' },
+    { pos: 'n.', zh: '平民；非军职人员' },
+    { pos: 'adj.', zh: '平民的；民用的；非军事的' },
   ]);
   assert.deepEqual(sensesOf('tender'), [
     { pos: 'adj.', zh: '柔软的、嫩的、温柔的' },
@@ -362,7 +362,7 @@ test('成人词库：考研高风险旧义、错译和大小写同形词已校�
 
   const expectedPrimary = {
     less: ['更少的、较小的', 'adj.'],
-    pale: ['苍白的、浅色的、微弱的', 'adj.'],
+    pale: ['苍白的；浅色的；暗淡的', 'adj.'],
     render: ['使成为、提供、呈现、渲染', 'v.'],
     interact: ['互动、相互作用', 'v.'],
     shy: ['害羞的、胆怯的', 'adj.'],
@@ -396,7 +396,7 @@ test('成人词库：字幕词性只发现风险，不再覆盖考试常用主�
     orphan: ['孤儿', 'n.'],
     missionary: ['传教士', 'n.'],
     anchor: ['锚、主持人', 'n.'],
-    eclipse: ['日食、月食', 'n.'],
+    eclipse: ['日食；月食；黯然失色的时期', 'n.'],
     token: ['标志、代币、令牌', 'n.'],
     latent: ['潜在的、潜伏的', 'adj.'],
     periodical: ['期刊、杂志', 'n.'],

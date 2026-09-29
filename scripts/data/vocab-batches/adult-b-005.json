@@ -1,0 +1,2453 @@
+[
+  {
+    "id": "adult:acid",
+    "en": "acid",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "酸；酸类物质",
+        "definition": "a substance with a sour taste that can react with other materials; some kinds can burn skin",
+        "example": "Lemon juice contains a weak acid.",
+        "collocations": [
+          "citric acid",
+          "acid rain",
+          "stomach acid"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "酸的；酸性的；尖刻的",
+        "definition": "having a sour taste or acidic properties, or showing sharp unkind humour",
+        "example": "She replied with an acid comment.",
+        "collocations": [
+          "an acid taste",
+          "acid soil",
+          "an acid remark"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:odds",
+    "en": "odds",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "可能性；胜算；赔率；差异",
+        "definition": "the chance of an event, the betting payment compared with the stake, or a difference between things",
+        "example": "The odds of finding my ring in the park are low.",
+        "collocations": [
+          "against the odds",
+          "at odds with",
+          "the odds of"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:medium",
+    "en": "medium",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "媒介；手段；创作材料；培养基；灵媒",
+        "definition": "a way to communicate, a material used in art or science, or a person claiming contact with the dead",
+        "example": "Film is a powerful medium for telling stories.",
+        "collocations": [
+          "a medium of communication",
+          "a growth medium",
+          "social media"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "中等的；中号的；半熟的",
+        "definition": "in the middle of a range of sizes or amounts; for meat, cooked but still slightly pink inside",
+        "example": "I usually wear a medium shirt.",
+        "collocations": [
+          "medium size",
+          "medium heat",
+          "a medium steak"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:physically",
+    "en": "physically",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "身体上；体力上；实际地；物理上",
+        "definition": "in a way relating to the body, physical effort, or the real material world",
+        "example": "The job is physically demanding, so he rests well at night.",
+        "collocations": [
+          "physically fit",
+          "physically demanding",
+          "physically present"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:shore",
+    "en": "shore",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "海岸；湖岸；岸边；支撑柱",
+        "definition": "land beside a sea or lake, or a strong support placed against a structure",
+        "example": "We walked along the shore and collected shells.",
+        "collocations": [
+          "on the shore",
+          "the sea shore",
+          "a timber shore"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "支撑；支持巩固（常用 shore up）",
+        "definition": "to support a structure or make a weak system, position, or plan stronger",
+        "example": "They added posts to shore up the roof.",
+        "collocations": [
+          "shore up a wall",
+          "shore up confidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:repeatedly",
+    "en": "repeatedly",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "反复地；再三地",
+        "definition": "many times, often in the same way",
+        "example": "I called repeatedly, but nobody answered.",
+        "collocations": [
+          "repeatedly ask",
+          "repeatedly warn",
+          "fail repeatedly"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:distinguish",
+    "en": "distinguish",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "区分；辨认；使有别；使出众",
+        "definition": "to tell things apart, notice something clearly, or make someone or something different or outstanding",
+        "example": "Can you distinguish these two bird calls?",
+        "collocations": [
+          "distinguish between",
+          "distinguish A from B",
+          "distinguish yourself"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:lung",
+    "en": "lung",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "肺；城市绿地（比喻）",
+        "definition": "one of the organs used for breathing; a green area described as helping a city breathe",
+        "example": "Air enters the lungs when you breathe in.",
+        "collocations": [
+          "the left lung",
+          "lung capacity",
+          "the lungs of the city"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:artistic",
+    "en": "artistic",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "艺术的；有艺术才能的；有美感的",
+        "definition": "connected with art, skilled in creating art, or made in an attractive and creative way",
+        "example": "Her artistic skills helped her design the poster.",
+        "collocations": [
+          "artistic talent",
+          "artistic expression",
+          "artistic freedom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:discourse",
+    "en": "discourse",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "论述；交谈；话语",
+        "definition": "serious speech or writing about a subject, or the way people discuss it",
+        "example": "The issue became part of public discourse.",
+        "collocations": [
+          "public discourse",
+          "political discourse",
+          "a discourse on"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "论述；详谈（正式）",
+        "definition": "to speak or write at length about a subject",
+        "example": "The speaker discoursed on the history of the town.",
+        "collocations": [
+          "discourse on",
+          "discourse upon"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:distinct",
+    "en": "distinct",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "不同的；分明的；明确的；显著的",
+        "definition": "clearly different, easy to notice, or certain and definite",
+        "example": "The two rooms have distinct purposes.",
+        "collocations": [
+          "distinct from",
+          "a distinct smell",
+          "a distinct possibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:impressive",
+    "en": "impressive",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "令人赞叹的；给人深刻印象的",
+        "definition": "making people admire something because of its quality, size, skill, or success",
+        "example": "She made impressive progress in a few weeks.",
+        "collocations": [
+          "an impressive achievement",
+          "impressive results",
+          "an impressive view"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:competitor",
+    "en": "competitor",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "竞争者；参赛者",
+        "definition": "a person or organisation trying to win the same contest or customers as others",
+        "example": "Each competitor had three attempts.",
+        "collocations": [
+          "a strong competitor",
+          "a business competitor",
+          "a fellow competitor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:powder",
+    "en": "powder",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "粉末；化妆粉；火药；粉雪",
+        "definition": "a dry substance made of very small pieces, such as face makeup, explosive material, or fine loose snow",
+        "example": "Add a little cocoa powder to the milk.",
+        "collocations": [
+          "washing powder",
+          "face powder",
+          "fresh powder"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "给……扑粉；磨成粉",
+        "definition": "to put fine dry material on a surface or crush something into very small pieces",
+        "example": "She powdered her face before the performance.",
+        "collocations": [
+          "powder your face",
+          "powdered sugar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:ugly",
+    "en": "ugly",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "丑的；难看的；令人不快的；险恶的",
+        "definition": "unpleasant to look at, upsetting, or likely to become violent or harmful",
+        "example": "The argument turned ugly when they began shouting.",
+        "collocations": [
+          "an ugly building",
+          "an ugly scene",
+          "turn ugly"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:portray",
+    "en": "portray",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "描绘；描写；扮演；把……描述成",
+        "definition": "to show someone or something in art or words, or play a character in a film or show",
+        "example": "The film portrays life in a small village.",
+        "collocations": [
+          "portray a character",
+          "portray someone as",
+          "portray life"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:moderate",
+    "en": "moderate",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "适度的；中等的；温和的；不极端的",
+        "definition": "not very large, strong, or extreme; staying between opposite positions",
+        "example": "The walk requires a moderate level of fitness.",
+        "collocations": [
+          "moderate exercise",
+          "a moderate amount",
+          "moderate views"
+        ],
+        "phonetic": "ˈmɒdərət"
+      },
+      {
+        "pos": "v.",
+        "zh": "使缓和；减轻；主持；审核内容",
+        "definition": "to make less extreme, lead a discussion, or check that shared content follows rules",
+        "example": "She will moderate the discussion after the talk.",
+        "collocations": [
+          "moderate a debate",
+          "moderate comments",
+          "moderate your tone"
+        ],
+        "phonetic": "ˈmɒdəreɪt"
+      },
+      {
+        "pos": "n.",
+        "zh": "温和派；持中间立场的人",
+        "definition": "a person whose political or other views are not extreme",
+        "example": "Moderates in the party supported the agreement.",
+        "collocations": [
+          "a political moderate",
+          "party moderates"
+        ],
+        "phonetic": "ˈmɒdərət"
+      }
+    ]
+  },
+  {
+    "id": "adult:persuade",
+    "en": "persuade",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "说服；劝服；使相信",
+        "definition": "to make someone agree to do or believe something by giving reasons or encouragement",
+        "example": "I persuaded him to take a short break.",
+        "collocations": [
+          "persuade someone to",
+          "persuade someone of",
+          "persuade someone that"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:ghost",
+    "en": "ghost",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "鬼魂；幽灵；隐约的痕迹",
+        "definition": "the spirit of a dead person as imagined by some people, or a faint sign of something",
+        "example": "There was a ghost of a smile on her face.",
+        "collocations": [
+          "a ghost story",
+          "a ghost of a smile",
+          "give up the ghost"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "突然断联；代笔（非正式）",
+        "definition": "to stop answering someone's messages without explanation, or write work published under another person's name",
+        "example": "After two friendly meetings, he suddenly ghosted me.",
+        "collocations": [
+          "ghost someone",
+          "ghost a memoir"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:subsequent",
+    "en": "subsequent",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "随后的；后来的",
+        "definition": "happening or coming after something else",
+        "example": "The first visit was free, but subsequent visits cost money.",
+        "collocations": [
+          "subsequent events",
+          "subsequent to",
+          "a subsequent version"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:carrier",
+    "en": "carrier",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "运输公司；携带者；运载工具；航母；运营商",
+        "definition": "a company, person, vehicle, or object that carries things; a ship for aircraft; a phone network provider",
+        "example": "Check the baggage rules with your carrier.",
+        "collocations": [
+          "an aircraft carrier",
+          "a mobile carrier",
+          "a disease carrier"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:frequent",
+    "en": "frequent",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "频繁的；经常发生的",
+        "definition": "happening many times or at short intervals",
+        "example": "We make frequent trips to the library.",
+        "collocations": [
+          "a frequent visitor",
+          "frequent changes",
+          "a frequent flyer"
+        ],
+        "phonetic": "ˈfriːkwənt"
+      },
+      {
+        "pos": "v.",
+        "zh": "常去；常到（正式）",
+        "definition": "to visit or spend time in a place often",
+        "example": "Local artists frequent this small cafe.",
+        "collocations": [
+          "frequent a cafe",
+          "a place frequented by tourists"
+        ],
+        "phonetic": "frɪˈkwent"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/frequent",
+        "note": "本轮搜索返回官方词条内容，核对现代常用义与词性；释义例句自主编写。"
+      }
+    ]
+  },
+  {
+    "id": "adult:ban",
+    "en": "ban",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "禁止；取缔",
+        "definition": "to officially say that something is not allowed",
+        "example": "The school banned smoking on its grounds.",
+        "collocations": [
+          "ban smoking",
+          "ban someone from",
+          "ban the use of"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "禁令；禁止",
+        "definition": "an official rule that does not allow an activity or item",
+        "example": "There is a ban on parking in this street.",
+        "collocations": [
+          "a ban on",
+          "lift a ban",
+          "a travel ban"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:awful",
+    "en": "awful",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "糟糕的；可怕的；极大的",
+        "definition": "very bad or unpleasant, or very great in amount or degree in informal speech",
+        "example": "I had an awful headache yesterday.",
+        "collocations": [
+          "an awful smell",
+          "feel awful",
+          "an awful lot"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "非常（非正式，尤美式）",
+        "definition": "very, used informally to make a description stronger",
+        "example": "That was awful nice of you.",
+        "collocations": [
+          "awful nice",
+          "awful tired"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:admire",
+    "en": "admire",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "钦佩；欣赏；赞赏",
+        "definition": "to respect someone for their qualities or look at something with pleasure",
+        "example": "I admire her patience with the children.",
+        "collocations": [
+          "admire someone for",
+          "admire the view",
+          "greatly admire"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:pet",
+    "en": "pet",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "宠物；受宠爱的人",
+        "definition": "an animal kept for company, or a person treated as a favourite",
+        "example": "Our cat has always been a much-loved pet.",
+        "collocations": [
+          "a family pet",
+          "keep a pet",
+          "teacher's pet"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "特别喜爱的；特别关注的；养作宠物的",
+        "definition": "especially liked or personally important, or kept for company rather than work",
+        "example": "This is one of his pet projects.",
+        "collocations": [
+          "a pet project",
+          "a pet theory",
+          "a pet dog"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "抚摸；宠爱",
+        "definition": "to gently touch an animal or person, or treat someone with special affection",
+        "example": "The child asked if she could pet the dog.",
+        "collocations": [
+          "pet a dog",
+          "pet gently"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:miracle",
+    "en": "miracle",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "奇迹；非凡的成就；不可思议的事",
+        "definition": "an event believed to have a divine cause, or something so surprising and good that it seems almost impossible",
+        "example": "It was a miracle that nobody was hurt.",
+        "collocations": [
+          "a small miracle",
+          "work miracles",
+          "by a miracle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:rhythm",
+    "en": "rhythm",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "节奏；韵律；规律性的变化",
+        "definition": "a repeated pattern of beats, sounds, movements, or changes",
+        "example": "We clapped to the rhythm of the music.",
+        "collocations": [
+          "a sense of rhythm",
+          "a steady rhythm",
+          "daily rhythms"
+        ]
+      }
+    ],
+    "notes": "节奏/韵律与旋律 melody 有区别，不把 rhythm 首义译为旋律。",
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/rhythm",
+        "note": "本轮搜索返回官方词条内容，核对现代常用义与词性；释义例句自主编写。"
+      }
+    ]
+  },
+  {
+    "id": "adult:exceed",
+    "en": "exceed",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "超过；超出；超越",
+        "definition": "to be greater than a number, limit, or expected standard",
+        "example": "The final cost exceeded our budget.",
+        "collocations": [
+          "exceed expectations",
+          "exceed the speed limit",
+          "exceed a budget"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:widespread",
+    "en": "widespread",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "广泛的；普遍的；分布广的",
+        "definition": "found or happening in many places or among many people",
+        "example": "The plan received widespread support.",
+        "collocations": [
+          "widespread use",
+          "widespread concern",
+          "widespread damage"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:sin",
+    "en": "sin",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "罪过；罪孽；严重过错",
+        "definition": "an act against religious or moral rules, or something considered very wrong",
+        "example": "He believed that lying was a sin.",
+        "collocations": [
+          "commit a sin",
+          "a deadly sin",
+          "a sin against"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "犯宗教或道德上的罪",
+        "definition": "to do something against religious or moral rules",
+        "example": "The story is about a man who sins and later seeks forgiveness.",
+        "collocations": [
+          "sin against",
+          "sin and repent"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:acre",
+    "en": "acre",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "英亩",
+        "definition": "a unit for measuring land, equal to about 4,047 square metres",
+        "example": "The farm covers twenty acres.",
+        "collocations": [
+          "an acre of land",
+          "a five-acre field"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:script",
+    "en": "script",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "剧本；讲稿；文字体系；笔迹；脚本程序",
+        "definition": "words prepared for a performance or speech, a writing system or style, or a short computer program",
+        "example": "The actors read the script together.",
+        "collocations": [
+          "a film script",
+          "a handwritten script",
+          "a computer script"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "写剧本；编写讲稿或脚本",
+        "definition": "to write the words or instructions for a performance, speech, or computer task",
+        "example": "She scripted a short film about her childhood.",
+        "collocations": [
+          "script a film",
+          "a scripted speech"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:charity",
+    "en": "charity",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "慈善机构；慈善；宽容；仁爱",
+        "definition": "an organisation or activity that helps people in need, or kindness when judging others",
+        "example": "The event raised money for a local charity.",
+        "collocations": [
+          "give to charity",
+          "a charity event",
+          "charity begins at home"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:tactic",
+    "en": "tactic",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "策略；手段；战术",
+        "definition": "a particular action used to achieve a goal or gain an advantage",
+        "example": "Changing the subject was a delaying tactic.",
+        "collocations": [
+          "a delaying tactic",
+          "change tactics",
+          "a clever tactic"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:atlantic",
+    "en": "Atlantic",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "大西洋",
+        "definition": "the ocean between the Americas and Europe and Africa",
+        "example": "They flew across the Atlantic overnight.",
+        "collocations": [
+          "the North Atlantic",
+          "cross the Atlantic"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "大西洋的；大西洋沿岸的",
+        "definition": "connected with that ocean or the lands beside it",
+        "example": "The town lies on the Atlantic coast.",
+        "collocations": [
+          "the Atlantic coast",
+          "Atlantic waters"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:identification",
+    "en": "identification",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "识别；身份确认；身份证明；认同",
+        "definition": "recognising who or what something is, proof of identity, or a feeling of connection with someone",
+        "example": "You need identification to collect the parcel.",
+        "collocations": [
+          "proof of identification",
+          "personal identification",
+          "identification with"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:transformation",
+    "en": "transformation",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "转变；改造；变形",
+        "definition": "a major change in appearance, form, character, or the way something works",
+        "example": "The old factory's transformation into a library took two years.",
+        "collocations": [
+          "a complete transformation",
+          "digital transformation",
+          "a transformation into"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:everyday",
+    "en": "everyday",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "日常的；普通的；每天使用的",
+        "definition": "ordinary or used as part of normal daily life",
+        "example": "The course teaches English for everyday situations.",
+        "collocations": [
+          "everyday life",
+          "everyday tasks",
+          "everyday language"
+        ],
+        "note": "everyday 是形容词，如 everyday life；表示每天做某事用两个词 every day。"
+      }
+    ]
+  },
+  {
+    "id": "adult:turkey",
+    "en": "turkey",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "火鸡；火鸡肉；失败之作（非正式）",
+        "definition": "a large bird raised for food, its meat, or a very unsuccessful film or other product",
+        "example": "We had roast turkey for dinner.",
+        "collocations": [
+          "roast turkey",
+          "a turkey sandwich",
+          "a box-office turkey"
+        ],
+        "note": "小写 turkey 是火鸡；国家名应大写 Turkey（现常用 Türkiye），不把国家义混入本卡。"
+      }
+    ]
+  },
+  {
+    "id": "adult:headline",
+    "en": "headline",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "新闻标题；头条；重要新闻摘要",
+        "definition": "the title of a news report, or the main news stories",
+        "example": "The headline caught my attention.",
+        "collocations": [
+          "a newspaper headline",
+          "make headlines",
+          "the main headlines"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "给……加标题；担任主角或主打演出",
+        "definition": "to give a news story a title or be the main performer at an event",
+        "example": "The band will headline the festival on Saturday.",
+        "collocations": [
+          "headline a festival",
+          "headline a show"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:venture",
+    "en": "venture",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "风险项目；新企业；冒险活动",
+        "definition": "a new activity or business that involves risk or an uncertain result",
+        "example": "Opening the cafe was their first business venture.",
+        "collocations": [
+          "a joint venture",
+          "a business venture",
+          "a new venture"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "冒险去；大胆提出；冒险投入",
+        "definition": "to go somewhere despite risk, say something despite uncertainty, or risk money or another valuable thing",
+        "example": "She ventured outside after the storm.",
+        "collocations": [
+          "venture into",
+          "venture an opinion",
+          "venture out"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:invasion",
+    "en": "invasion",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "入侵；侵略；侵犯；大量涌入",
+        "definition": "entering a place by force or in large numbers, or unfairly entering someone's private life",
+        "example": "The new cameras felt like an invasion of privacy.",
+        "collocations": [
+          "an invasion of privacy",
+          "a military invasion",
+          "an invasion of insects"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:adequate",
+    "en": "adequate",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "足够的；合格的；尚可的",
+        "definition": "enough or good enough for a particular need, without being especially good",
+        "example": "The room has adequate space for a small desk.",
+        "collocations": [
+          "adequate for",
+          "adequate support",
+          "adequate to meet a need"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:nonetheless",
+    "en": "nonetheless",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "尽管如此；仍然；然而",
+        "definition": "despite what has just been said",
+        "example": "The work was difficult. Nonetheless, we finished on time.",
+        "collocations": [
+          "difficult but nonetheless useful",
+          "nonetheless important"
+        ]
+      }
+    ],
+    "removedPos": {
+      "conj.": "连接副词不是从属或并列连词；保留尽管如此的实际意义，统一标 adv.。"
+    }
+  },
+  {
+    "id": "adult:intensity",
+    "en": "intensity",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "强度；强烈程度；专注程度",
+        "definition": "how strong, powerful, or concentrated something is",
+        "example": "The intensity of the light made it hard to see.",
+        "collocations": [
+          "light intensity",
+          "high intensity",
+          "emotional intensity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:grocery",
+    "en": "grocery",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "食品杂货店；食品杂货（常用复数）",
+        "definition": "a shop selling food and household items, or those items when the word is used in the plural",
+        "example": "I need to buy groceries on the way home.",
+        "collocations": [
+          "a grocery store",
+          "buy groceries",
+          "a grocery bill"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:exhibit",
+    "en": "exhibit",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "展出；陈列；表现出",
+        "definition": "to show objects publicly or display a quality or sign",
+        "example": "Local artists will exhibit their work next month.",
+        "collocations": [
+          "exhibit paintings",
+          "exhibit signs of",
+          "exhibit behaviour"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "展品；证物；展览（尤美式）",
+        "definition": "an object shown to the public, an item used as evidence, or a public display",
+        "example": "The museum's newest exhibit is a model ship.",
+        "collocations": [
+          "a museum exhibit",
+          "an exhibit in court",
+          "a travelling exhibit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:mouse",
+    "en": "mouse",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "鼠；老鼠；鼠标；胆小安静的人",
+        "definition": "a small animal with a long tail, a device for controlling a computer pointer, or a very quiet timid person",
+        "example": "Move the mouse to select the picture.",
+        "collocations": [
+          "a computer mouse",
+          "a field mouse",
+          "as quiet as a mouse"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:blanket",
+    "en": "blanket",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "毯子；覆盖层",
+        "definition": "a warm cover for a bed, or a layer that covers a wide area",
+        "example": "Snow formed a white blanket over the fields.",
+        "collocations": [
+          "a warm blanket",
+          "a blanket of snow",
+          "a security blanket"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "覆盖；笼罩",
+        "definition": "to cover something completely or over a wide area",
+        "example": "Thick fog blanketed the town.",
+        "collocations": [
+          "blanket the area",
+          "be blanketed in snow"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "全面的；一概而论的",
+        "definition": "applying to every person or situation without making distinctions",
+        "example": "The council rejected a blanket ban on outdoor music.",
+        "collocations": [
+          "a blanket ban",
+          "blanket coverage",
+          "a blanket statement"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:margin",
+    "en": "margin",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "页边空白；边缘；差额；利润率；余地",
+        "definition": "an empty edge, the difference between two amounts, the share of sales kept as profit, or room for error",
+        "example": "Leave a wide margin on the left side of the page.",
+        "collocations": [
+          "a profit margin",
+          "a narrow margin",
+          "a margin for error"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:rope",
+    "en": "rope",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "绳；粗绳；一串",
+        "definition": "a thick strong cord, or a long connected series of things",
+        "example": "Tie the boat to the post with a rope.",
+        "collocations": [
+          "a length of rope",
+          "a rope of pearls",
+          "learn the ropes"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "用绳捆；套住；拉入（某事）",
+        "definition": "to fasten or catch with a cord, or persuade someone to join an activity",
+        "example": "They roped off the damaged section of the path.",
+        "collocations": [
+          "rope off",
+          "rope someone in",
+          "rope together"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:concrete",
+    "en": "concrete",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "混凝土",
+        "definition": "a hard building material made by mixing cement with sand, small stones, and water",
+        "example": "The path is made of concrete.",
+        "collocations": [
+          "reinforced concrete",
+          "pour concrete",
+          "a concrete floor"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "具体的；确实的；混凝土制的",
+        "definition": "clear and specific rather than abstract, based on facts, or made from a hard building mixture",
+        "example": "We need concrete evidence before making a decision.",
+        "collocations": [
+          "concrete evidence",
+          "a concrete example",
+          "concrete plans"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "铺混凝土",
+        "definition": "to cover a surface with a hard building mixture that sets solid",
+        "example": "They concreted the small yard behind the house.",
+        "collocations": [
+          "concrete over",
+          "concrete a driveway"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:prescription",
+    "en": "prescription",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "处方；处方药；建议方案；规定",
+        "definition": "a medical order for a medicine, the medicine ordered, or a suggested way to deal with a problem",
+        "example": "She took the prescription to the pharmacy.",
+        "collocations": [
+          "a doctor's prescription",
+          "a prescription for",
+          "on prescription"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:chase",
+    "en": "chase",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "追赶；追求；催促；在金属上雕饰",
+        "definition": "to run after, try to obtain, repeatedly ask for something owed, or cut a design into metal",
+        "example": "The dog chased a ball across the garden.",
+        "collocations": [
+          "chase a dream",
+          "chase payment",
+          "chase after"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "追赶；追逐；追求",
+        "definition": "the act of trying to catch someone or obtain something",
+        "example": "The film opened with a car chase.",
+        "collocations": [
+          "a car chase",
+          "give chase",
+          "the chase for a prize"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:recruit",
+    "en": "recruit",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "招募；招聘；吸收新成员",
+        "definition": "to find and bring new people into a job, team, army, or other group",
+        "example": "The company is recruiting more engineers.",
+        "collocations": [
+          "recruit staff",
+          "recruit volunteers",
+          "recruit for a role"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "新成员；新员工；新兵",
+        "definition": "a person who has recently joined an organisation or the armed forces",
+        "example": "Each new recruit receives a week of training.",
+        "collocations": [
+          "a new recruit",
+          "an army recruit",
+          "a recent recruit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:brick",
+    "en": "brick",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "砖；砖状物；可靠热心的人（英式非正式）",
+        "definition": "a hard block used in building, something shaped like it, or a helpful reliable person",
+        "example": "The house is built of red brick.",
+        "collocations": [
+          "a brick wall",
+          "a brick of ice cream",
+          "a real brick"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "用砖砌；封堵；使电子设备失效（非正式）",
+        "definition": "to build or block with hard building blocks, or make an electronic device unable to work",
+        "example": "A failed update can brick the device.",
+        "collocations": [
+          "brick up a window",
+          "brick a phone"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:patch",
+    "en": "patch",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "补丁；一小块；斑块；时期；软件补丁",
+        "definition": "a piece used to cover a hole, a small area or mark, a period, or a small software update",
+        "example": "There is a patch of sunlight on the floor.",
+        "collocations": [
+          "a rough patch",
+          "a patch of grass",
+          "a software patch"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "修补；打补丁；接通",
+        "definition": "to repair with a small piece or update, or connect a call or signal",
+        "example": "The team patched the software before the launch.",
+        "collocations": [
+          "patch a hole",
+          "patch things up",
+          "patch someone through"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:consensus",
+    "en": "consensus",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "普遍共识；一致意见",
+        "definition": "an opinion or decision generally agreed on by a group",
+        "example": "The team reached a consensus on the new design.",
+        "collocations": [
+          "reach a consensus",
+          "a broad consensus",
+          "consensus on"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:horror",
+    "en": "horror",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "恐惧；震惊；可怕的事物；恐怖作品",
+        "definition": "a strong feeling of fear or shock, something terrible, or stories designed to frighten people",
+        "example": "She watched in horror as the bridge collapsed.",
+        "collocations": [
+          "a horror film",
+          "in horror",
+          "the horrors of war"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:colonial",
+    "en": "colonial",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "殖民的；殖民地的；殖民时期的",
+        "definition": "connected with a place controlled by another country or with that period of its history",
+        "example": "The museum explores the country's colonial past.",
+        "collocations": [
+          "colonial rule",
+          "colonial history",
+          "colonial architecture"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "殖民地居民；殖民风格房屋",
+        "definition": "a person living in a territory ruled by another country, or a house built in a style from that period",
+        "example": "They bought a colonial with a wide front porch.",
+        "collocations": [
+          "a colonial house",
+          "a two-storey colonial"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:painter",
+    "en": "painter",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "画家；油漆工；小艇系缆",
+        "definition": "someone who creates pictures or paints buildings, or a rope used to tie a small boat",
+        "example": "The painter is putting a second coat on the door.",
+        "collocations": [
+          "a portrait painter",
+          "a house painter",
+          "a boat's painter"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:pie",
+    "en": "pie",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "馅饼；可分配的总额（比喻）",
+        "definition": "food baked inside or under pastry, or a total amount that can be divided into shares",
+        "example": "We shared a slice of apple pie.",
+        "collocations": [
+          "an apple pie",
+          "a slice of the pie",
+          "a meat pie"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:courage",
+    "en": "courage",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "勇气；胆量",
+        "definition": "the ability to face danger or difficulty despite feeling afraid",
+        "example": "It took courage to admit the mistake.",
+        "collocations": [
+          "show courage",
+          "have the courage to",
+          "lose courage"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:sake",
+    "en": "sake",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "利益；缘故；目的；日本清酒（另读音）",
+        "definition": "someone's benefit or a reason for doing something; also a Japanese alcoholic drink made from rice",
+        "example": "For the sake of safety, keep the doorway clear.",
+        "collocations": [
+          "for the sake of",
+          "for your sake",
+          "a glass of sake"
+        ],
+        "phonetic": "seɪk; ˈsɑːki",
+        "note": "for the sake of 中 sake 读 /seɪk/；日本清酒 sake 读 /ˈsɑːki/。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/sake",
+        "note": "核对缘故/利益与日本清酒两同形异读。"
+      }
+    ]
+  },
+  {
+    "id": "adult:defeat",
+    "en": "defeat",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "击败；使失败；否决；难倒",
+        "definition": "to win against someone, stop a plan from succeeding, reject a proposal, or prove too difficult",
+        "example": "The home team defeated the visitors by two goals.",
+        "collocations": [
+          "defeat an opponent",
+          "defeat a proposal",
+          "defeat the purpose"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "失败；战败；败北",
+        "definition": "failure to win or achieve an aim",
+        "example": "The team learned from its narrow defeat.",
+        "collocations": [
+          "suffer defeat",
+          "admit defeat",
+          "a heavy defeat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:gaze",
+    "en": "gaze",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "凝视；注视",
+        "definition": "to look steadily at someone or something for a long time",
+        "example": "She gazed out of the window at the hills.",
+        "collocations": [
+          "gaze at",
+          "gaze into",
+          "gaze out of"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "凝视；注视的目光",
+        "definition": "a long steady look",
+        "example": "He lowered his gaze when she entered.",
+        "collocations": [
+          "meet someone's gaze",
+          "a steady gaze",
+          "lower your gaze"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:pregnancy",
+    "en": "pregnancy",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "怀孕；妊娠；妊娠期",
+        "definition": "the state or period in which a baby develops inside a woman's body before birth",
+        "example": "She kept a journal during her pregnancy.",
+        "collocations": [
+          "during pregnancy",
+          "a pregnancy test",
+          "early pregnancy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:reinforce",
+    "en": "reinforce",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "加强；巩固；增援；加固",
+        "definition": "to make something stronger or more firmly believed, or send extra people or supplies to help",
+        "example": "The extra examples reinforced the main point.",
+        "collocations": [
+          "reinforce a message",
+          "reinforce a wall",
+          "reinforce a belief"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:swear",
+    "en": "swear",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "发誓；坚称；说脏话；使宣誓",
+        "definition": "to make a serious promise, insist that something is true, use offensive words, or make someone take an oath",
+        "example": "I swear I left the keys on this table.",
+        "collocations": [
+          "swear to tell the truth",
+          "swear at someone",
+          "swear someone in"
+        ]
+      }
+    ],
+    "removedPos": {
+      "n.": "旧誓言/诅咒名词不是本卡现代常用义；誓言通常 oath，粗话 swear word，行为 swearing。动词发誓/骂人保留，请独立复核此边界。"
+    }
+  },
+  {
+    "id": "adult:clue",
+    "en": "clue",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "线索；提示；解题提示",
+        "definition": "information that helps solve a mystery or find an answer",
+        "example": "The note gave us a clue about where to look.",
+        "collocations": [
+          "a clue to",
+          "have no clue",
+          "a crossword clue"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "向……提供情况（clue in/up）",
+        "definition": "to give someone information that helps them understand a situation",
+        "example": "Can you clue me in on what happened?",
+        "collocations": [
+          "clue someone in",
+          "clue someone up"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:slice",
+    "en": "slice",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "薄片；一部分；斜切球；煎铲",
+        "definition": "a thin flat piece, a share of something, a curved sports shot, or a flat tool for lifting food",
+        "example": "Would you like a slice of bread?",
+        "collocations": [
+          "a slice of bread",
+          "a slice of the profits",
+          "a fish slice"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "切片；切开；打出斜切球",
+        "definition": "to cut into thin pieces, cut through something, or hit a ball so it spins and curves",
+        "example": "Slice the tomatoes and put them in the bowl.",
+        "collocations": [
+          "slice bread",
+          "slice through",
+          "slice a ball"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:occupation",
+    "en": "occupation",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "职业；活动；占领；居住使用",
+        "definition": "a job or activity, control of a place by an outside force, or use of a building",
+        "example": "Please write your occupation on the form.",
+        "collocations": [
+          "a main occupation",
+          "military occupation",
+          "ready for occupation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:confusion",
+    "en": "confusion",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "困惑；混淆；混乱",
+        "definition": "a lack of clear understanding, a mistake between similar things, or a disorganised situation",
+        "example": "The change of room caused some confusion.",
+        "collocations": [
+          "cause confusion",
+          "confusion about",
+          "confusion between"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:coal",
+    "en": "coal",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "煤；煤块；燃烧的煤块",
+        "definition": "a black or brown material dug from the ground and burned for heat, or pieces of it",
+        "example": "The old heating system burned coal.",
+        "collocations": [
+          "a coal mine",
+          "a lump of coal",
+          "hot coals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:sacred",
+    "en": "sacred",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "神圣的；宗教的；不可侵犯的",
+        "definition": "connected with religion or treated as too important to damage or question",
+        "example": "The mountain is sacred to local people.",
+        "collocations": [
+          "a sacred place",
+          "sacred music",
+          "hold something sacred"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:formula",
+    "en": "formula",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "公式；配方；方案；惯用表达；配方奶",
+        "definition": "a rule written with symbols, a recipe or plan, a fixed expression, or specially prepared milk for babies",
+        "example": "There is no simple formula for a happy life.",
+        "collocations": [
+          "a mathematical formula",
+          "a formula for success",
+          "baby formula"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:exact",
+    "en": "exact",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "精确的；准确的；完全符合的",
+        "definition": "correct in every detail or matching something perfectly",
+        "example": "Can you tell me the exact time?",
+        "collocations": [
+          "the exact amount",
+          "an exact match",
+          "the exact opposite"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "强求；索取；使付出代价（正式）",
+        "definition": "to demand and obtain something, or cause someone to pay a high cost in effort or suffering",
+        "example": "The long journey exacted a heavy toll on the team.",
+        "collocations": [
+          "exact a price",
+          "exact a toll",
+          "exact revenge"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:collective",
+    "en": "collective",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "集体的；共同的",
+        "definition": "done or shared by people acting as a group",
+        "example": "The decision was a collective effort.",
+        "collocations": [
+          "collective responsibility",
+          "collective action",
+          "collective memory"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "集体组织；合作团体",
+        "definition": "a group whose members share work, resources, or decisions",
+        "example": "The artists formed a collective to share studio space.",
+        "collocations": [
+          "an artists' collective",
+          "a workers' collective"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:cognitive",
+    "en": "cognitive",
+    "author": "root",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "认知的；认识过程的",
+        "definition": "connected with thinking, learning, remembering, and understanding",
+        "example": "The game is designed to develop cognitive skills.",
+        "collocations": [
+          "cognitive skills",
+          "cognitive development",
+          "cognitive ability"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:attribute",
+    "en": "attribute",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "特征；品质；属性",
+        "definition": "a quality or feature that belongs to a person or thing",
+        "example": "Patience is an important attribute of a good teacher.",
+        "collocations": [
+          "a key attribute",
+          "a personal attribute",
+          "a product attribute"
+        ],
+        "phonetic": "ˈætrɪbjuːt"
+      },
+      {
+        "pos": "v.",
+        "zh": "把……归因于；认为是……所作",
+        "definition": "to regard something as caused by a person or thing, or as the work of a particular person",
+        "example": "She attributes her progress to regular practice.",
+        "collocations": [
+          "attribute success to",
+          "be attributed to"
+        ],
+        "phonetic": "əˈtrɪbjuːt"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/pronunciation/english/attribute",
+        "note": "核对名词和动词重音、元音区别。"
+      }
+    ]
+  },
+  {
+    "id": "adult:captain",
+    "en": "captain",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "船长；机长；队长；上尉或海军上校",
+        "definition": "the person in charge of a ship, aircraft, or sports team, or an officer with a rank that depends on the armed service",
+        "example": "The captain announced that the flight would be delayed.",
+        "collocations": [
+          "a team captain",
+          "a ship's captain",
+          "an army captain"
+        ],
+        "note": "军衔译法随军种而变：陆军/空军通常为上尉，海军通常为上校；不统一译成某一种军衔。"
+      },
+      {
+        "pos": "v.",
+        "zh": "担任队长；率领；指挥",
+        "definition": "to lead a sports team or command a ship",
+        "example": "She captained the school team last year.",
+        "collocations": [
+          "captain a team",
+          "captain a ship"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:dare",
+    "en": "dare",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "敢于；激将；向……挑战",
+        "definition": "to be brave enough to do something, or challenge someone to do a risky thing",
+        "example": "I did not dare to ask another question.",
+        "collocations": [
+          "dare to ask",
+          "dare someone to",
+          "how dare you"
+        ]
+      },
+      {
+        "pos": "aux.",
+        "zh": "敢（情态用法）",
+        "definition": "used especially in questions and negatives to express courage or lack of it",
+        "example": "I dare not tell him yet.",
+        "collocations": [
+          "dare not",
+          "dare I ask"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "激将；挑战",
+        "definition": "a challenge to do something difficult, risky, or embarrassing",
+        "example": "She jumped into the cold lake on a dare.",
+        "collocations": [
+          "on a dare",
+          "take a dare",
+          "truth or dare"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/dare",
+        "note": "官方搜索摘要确认主要动词与半情态动词分类。"
+      }
+    ]
+  },
+  {
+    "id": "adult:sigh",
+    "en": "sigh",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "叹气；叹息",
+        "definition": "to breathe out slowly and audibly because of sadness, tiredness, or relief",
+        "example": "She sighed with relief when the train arrived.",
+        "collocations": [
+          "sigh with relief",
+          "sigh deeply",
+          "sigh at"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "叹气；叹息声",
+        "definition": "a long outward breath showing sadness, tiredness, or relief",
+        "example": "He gave a sigh and closed the book.",
+        "collocations": [
+          "a sigh of relief",
+          "let out a sigh",
+          "a deep sigh"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:soccer",
+    "en": "soccer",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "足球",
+        "definition": "the sport in which two teams try to kick a ball into the other team's goal without using their hands",
+        "example": "The children play soccer in the park.",
+        "collocations": [
+          "play soccer",
+          "a soccer team",
+          "a soccer match"
+        ],
+        "note": "这是通常所说的足球；英式常说 football。规则中守门员等情况有专门的用手限制与例外。"
+      }
+    ]
+  },
+  {
+    "id": "adult:gallery",
+    "en": "gallery",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "画廊；展览馆；长廊；楼座；图片集",
+        "definition": "a place showing art, a long passage, an upper seating area, or a collection of images",
+        "example": "The gallery is showing paintings by local artists.",
+        "collocations": [
+          "an art gallery",
+          "a public gallery",
+          "a photo gallery"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:tunnel",
+    "en": "tunnel",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "隧道；地道；通道",
+        "definition": "a passage through a hill, under the ground, or through another material",
+        "example": "The train entered a tunnel under the mountain.",
+        "collocations": [
+          "a railway tunnel",
+          "a road tunnel",
+          "a tunnel entrance"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "挖隧道；打洞穿过",
+        "definition": "to dig or make an underground passage",
+        "example": "The workers tunnelled through the hillside.",
+        "collocations": [
+          "tunnel through",
+          "tunnel under",
+          "tunnel into"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:defendant",
+    "en": "defendant",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "被告；被告人",
+        "definition": "a person or organisation accused of wrongdoing or sued in a court case",
+        "example": "The defendant denied the allegation.",
+        "collocations": [
+          "the defendant in a case",
+          "a criminal defendant"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:fitness",
+    "en": "fitness",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "体能；健康；健身；适合；适应度（生物）",
+        "definition": "being healthy and strong, exercising to stay so, suitability for a purpose, or success in surviving and producing young",
+        "example": "Swimming has helped improve her fitness.",
+        "collocations": [
+          "physical fitness",
+          "a fitness centre",
+          "fitness for the job"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/fitness",
+        "note": "本轮查询官方词条确认身体健康强壮与合适性两个常用义。生物学补充义待独立复核。"
+      }
+    ]
+  },
+  {
+    "id": "adult:grave",
+    "en": "grave",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "坟墓；墓穴；死亡（比喻）",
+        "definition": "a place in the ground where a dead person is buried; sometimes a way of referring to death",
+        "example": "They placed flowers on the grave.",
+        "collocations": [
+          "a family grave",
+          "from cradle to grave",
+          "dig a grave"
+        ],
+        "phonetic": "ɡreɪv"
+      },
+      {
+        "pos": "adj.",
+        "zh": "严重的；严肃的；庄重的",
+        "definition": "very serious or worrying, or showing a serious manner",
+        "example": "The news raised grave concerns about safety.",
+        "collocations": [
+          "grave danger",
+          "a grave mistake",
+          "a grave expression"
+        ],
+        "phonetic": "ɡreɪv"
+      }
+    ]
+  },
+  {
+    "id": "adult:lap",
+    "en": "lap",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "大腿面（坐下时）；一圈；一段行程",
+        "definition": "the flat area above your knees when sitting, one circuit of a track, or one part of a journey",
+        "example": "The child fell asleep on her father's lap.",
+        "collocations": [
+          "sit on someone's lap",
+          "run a lap",
+          "the final lap"
+        ],
+        "note": "lap 不是膝盖骨本身，而是坐下时从腰到膝上方可放东西的区域。"
+      },
+      {
+        "pos": "v.",
+        "zh": "舔食；轻拍；套圈；搭接",
+        "definition": "to drink with the tongue, wash gently against a shore, pass a racer by a whole circuit, or overlap at an edge",
+        "example": "The cat lapped water from a bowl.",
+        "collocations": [
+          "lap up",
+          "waves lap the shore",
+          "lap another runner"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:toe",
+    "en": "toe",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "脚趾；鞋袜尖部",
+        "definition": "one of the small parts at the end of a foot, or the part of a shoe or sock covering them",
+        "example": "There is a hole in the toe of my sock.",
+        "collocations": [
+          "your big toe",
+          "stand on tiptoe",
+          "keep on your toes"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "用脚尖碰；服从（toe the line）",
+        "definition": "to touch or move with the front of the foot; in toe the line, to obey rules or expectations",
+        "example": "All team members are expected to toe the line.",
+        "collocations": [
+          "toe the line",
+          "toe a ball"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:container",
+    "en": "container",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "容器；集装箱；容器环境（计算机）",
+        "definition": "an object for holding things, a large shipping box, or a separate software environment that runs an application",
+        "example": "Keep the food in a sealed container.",
+        "collocations": [
+          "a storage container",
+          "a shipping container",
+          "a software container"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:virtue",
+    "en": "virtue",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "美德；优点；长处",
+        "definition": "a good moral quality or a useful advantage",
+        "example": "Patience is a virtue when teaching young children.",
+        "collocations": [
+          "by virtue of",
+          "the virtues of",
+          "a great virtue"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:architect",
+    "en": "architect",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "建筑师；设计者；策划者",
+        "definition": "a person who designs buildings, or someone responsible for planning an important project or change",
+        "example": "The architect designed a house full of natural light.",
+        "collocations": [
+          "a leading architect",
+          "the architect of a plan",
+          "a software architect"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "设计；规划（尤技术或商业）",
+        "definition": "to design the structure of a system or a complex plan",
+        "example": "The team architected a system that could grow with demand.",
+        "collocations": [
+          "architect a system",
+          "architect a solution"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:makeup",
+    "en": "makeup",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "化妆品；化妆；构成；性格；补考或补做",
+        "definition": "cosmetics, the parts or character of something, or a replacement for a missed test or activity",
+        "example": "She wears very little makeup at work.",
+        "collocations": [
+          "put on makeup",
+          "the makeup of a team",
+          "a makeup exam"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:inquiry",
+    "en": "inquiry",
+    "author": "root",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "询问；调查；探究",
+        "definition": "a request for information or a careful attempt to find out facts",
+        "example": "The council opened an inquiry into the accident.",
+        "collocations": [
+          "make an inquiry",
+          "a public inquiry",
+          "an inquiry into"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:surprisingly",
+    "en": "surprisingly",
+    "author": "root",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "令人惊讶地；出乎意料地",
+        "definition": "in a way that is different from what was expected",
+        "example": "The room was surprisingly quiet despite the busy street.",
+        "collocations": [
+          "surprisingly good",
+          "surprisingly easy",
+          "not surprisingly"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:highlight",
+    "en": "highlight",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "强调；突出；标亮；挑染",
+        "definition": "to draw attention to something, mark text in a bright colour, or colour some strands of hair",
+        "example": "The report highlights the need for better training.",
+        "collocations": [
+          "highlight a problem",
+          "highlight text",
+          "highlight your hair"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "最精彩部分；亮点；亮部；挑染发束",
+        "definition": "the best or most important part, a bright part of an image, or lighter strands of hair",
+        "example": "Meeting the author was the highlight of my trip.",
+        "collocations": [
+          "the highlight of",
+          "match highlights",
+          "blonde highlights"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:decrease",
+    "en": "decrease",
+    "author": "root",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "减少；降低",
+        "definition": "to become smaller in size or amount, or make something smaller",
+        "example": "The noise decreased after the doors were closed.",
+        "collocations": [
+          "decrease by",
+          "decrease to",
+          "decrease the risk"
+        ],
+        "phonetic": "dɪˈkriːs"
+      },
+      {
+        "pos": "n.",
+        "zh": "减少；减少量",
+        "definition": "a reduction in size, number, or amount",
+        "example": "There has been a decrease in traffic this month.",
+        "collocations": [
+          "a decrease in",
+          "a sharp decrease",
+          "a ten-percent decrease"
+        ],
+        "phonetic": "ˈdiːkriːs"
+      }
+    ]
+  }
+]

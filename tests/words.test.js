@@ -11,6 +11,41 @@ test('单词库：总量不少于 400，覆盖四个级别', () => {
   assert.deepEqual(LEVELS.map((l) => l.id), ['seed', 'starters', 'movers', 'flyers']);
 });
 
+test('儿童全库：459 个词都有例句，不仅限于较高级别', () => {
+  assert.equal(WORDS.length, 459);
+  for (const word of WORDS) {
+    assert.ok(typeof word.sentence === 'string' && word.sentence.trim(), `${word.id} 缺例句`);
+  }
+});
+
+test('儿童词义复核：家人、英美楼层、具体词义边界', () => {
+  assert.match(findWord('grandson').zh, /外孙/);
+  assert.match(findWord('granddaughter').zh, /外孙女/);
+  assert.match(findWord('firstfloor').zh, /英式二楼.*美式一楼/);
+  assert.match(findWord('secondfloor').zh, /英式三楼.*美式二楼/);
+  assert.equal(findWord('moustache').zh, '上唇的胡子');
+  assert.match(findWord('hop').zh, /蹦跳/);
+  assert.match(findWord('octopus').sentence, /eight arms/);
+  assert.match(findWord('artist').zh, /艺术家/);
+  assert.match(findWord('queen').zh, /王后/);
+  assert.match(KIWI_ITEMS.find(w => w.id === 'kiwi_done').zh, /做完/);
+});
+
+test('儿童图义一致性：不用椅子、辣椒、方形、站牌冒充目标词', () => {
+  for (const id of ['desk', 'pepper', 'square', 'busstop']) {
+    const picture = findWord(id).emoji;
+    assert.match(picture, /^<svg\s/);
+    assert.match(picture, /viewBox="0 0 96 96"/);
+    assert.doesNotMatch(picture, /<script|<foreignObject|<image|\son\w+=|href\s*=/i);
+  }
+  assert.match(findWord('busstop').zh, /总站/);
+  assert.equal(findWord('secret').cat, 'objects');
+  assert.match(findWord('paint').zh, /画画/);
+  assert.match(findWord('evening').zh, /晚上/);
+  assert.match(findWord('knife').sentence, /^Dad /);
+  assert.match(findWord('boil').sentence, /^Mum /);
+});
+
 test('单词库：每个级别的词量在合理范围（60~260）', () => {
   for (const lvl of LEVELS) {
     const n = wordsForLevel(lvl.id).length;

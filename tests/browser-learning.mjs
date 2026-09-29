@@ -169,6 +169,39 @@ try {
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
   console.log('PASS desktop layout; no page errors');
+  const noteState = defaultState();
+  noteState.current = 'mom';
+  noteState.profiles.mom.level = 'life';
+  noteState.profiles.mom.dailyPlans.life = { day: localStudyDay(), wordIds: ['adult:girl', 'adult:read'], testedIds: [], lastWordId: '', phase: 'learn' };
+  await seed(noteState);
+  await page.locator('#adult-daily').click();
+  assert.equal(await page.locator('.adult-word').textContent(), 'girl');
+  assert.match(await page.locator('.adult-usage-note').innerText(), /woman/);
+  await page.locator('#next').click();
+  assert.equal(await page.locator('.adult-word').textContent(), 'read');
+  assert.match(await page.locator('.adult-senses').innerText(), /过去式.*red/);
+  console.log('PASS single- and multi-POS learner notes remain visible');
+  const picturePage = await context.newPage();
+  await picturePage.goto(base);
+  await picturePage.evaluate(async () => {
+    const { WORDS } = await import('/js/words.js');
+    document.body.innerHTML = '<main id="pictures" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px;background:white;color:#17372d"></main>';
+    for (const id of ['desk', 'pepper', 'square', 'busstop']) {
+      const word = WORDS.find(w => w.id === id);
+      const card = document.createElement('div');
+      card.dataset.id = id;
+      card.innerHTML = `<div style="font-size:112px;line-height:1.2">${word.emoji}</div><p>${word.en}</p><p>${word.zh}</p>`;
+      document.querySelector('#pictures').append(card);
+    }
+  });
+  assert.equal(await picturePage.locator('#pictures svg').count(), 4);
+  for (const svg of await picturePage.locator('#pictures svg').all()) {
+    const box = await svg.boundingBox();
+    assert.ok(box.width >= 110 && box.height >= 110);
+  }
+  await picturePage.screenshot({ path: '/tmp/yoyo-word-pictures.png', fullPage: true });
+  await picturePage.close();
+  console.log('PASS local word illustrations render at mobile size');
 } finally {
   await browser.close();
 }

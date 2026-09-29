@@ -14,6 +14,7 @@ import {
   learnedStickerWords, availableStickerWords, buildRoomTask, isNear,
   levelMastery, canGraduate, wordsToGraduation, nextLevelId, isGraduationPassed,
   GRADUATION_QUIZ_SIZE, GRADUATION_PASS_CORRECT, GRADUATION_BONUS_STARS, GRADUATION_THRESHOLD,
+  formatDefinition,
 } from './engine.js';
 import {
   createStorage, PROFILES, findProfile, encodeBackup, decodeBackup,
@@ -67,7 +68,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v29';
+const APP_VERSION = 'v30';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -853,7 +854,8 @@ function adultLearningMarkup(word) {
     : `
       <span class="adult-learning-block adult-english-clue">
         <span class="adult-learning-label">ENGLISH CLUE · 英英理解</span>
-        <span class="adult-definition">${escapeHtml(word.definition)}</span>
+        <span class="adult-definition">${escapeHtml(formatDefinition(word.definition))}</span>
+        ${word.note ? `<span class="adult-usage-note"><small>用法提醒</small><span>${escapeHtml(word.note)}</span></span>` : ''}
         ${exampleMarkup}
         ${collocationMarkup}
         ${word.hook ? `<span class="adult-memory-hook">🧠 ${escapeHtml(word.hook)}</span>` : ''}
@@ -916,7 +918,7 @@ function showAdultLearn(scope, words, idx) {
           <span class="adult-sense-label"><b>${sense.pos}</b>${sense.phonetic ? `<small>/${sense.phonetic}/</small>` : ''}</span>
           <span class="adult-sense-copy">
             <span>${escapeHtml(sense.zh)}</span>
-            ${sense.definition ? `<small>${escapeHtml(sense.definition)}</small>` : ''}
+            ${sense.definition ? `<small>${escapeHtml(formatDefinition(sense.definition))}</small>` : ''}
             ${sense.note ? `<small>${escapeHtml(sense.note)}</small>` : ''}
             ${sense.example ? `<em>${escapeHtml(sense.example)}</em>` : ''}
             ${sense.collocations?.length ? `

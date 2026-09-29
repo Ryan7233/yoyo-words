@@ -5,3 +5,6 @@ __pycache__/
 .idea/
 .vscode/
 
+
+# 与本项目无关的本地业务 SQL，勿提交到公开仓库
+reports/sql-optimization/

@@ -1,0 +1,2497 @@
+[
+  {
+    "id": "adult:gradual",
+    "en": "gradual",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "逐渐的；逐步的；平缓的",
+        "definition": "Happening slowly through small changes, or changing height at a gentle angle.",
+        "example": "There has been a gradual improvement in her reading.",
+        "collocations": [
+          "a gradual change",
+          "a gradual increase"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "渐进和平缓坡度均覆盖；坡度定义调整成不只上升。"
+  },
+  {
+    "id": "adult:solitary",
+    "en": "solitary",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "独自的；单独的；喜欢独处的",
+        "definition": "Alone, the only one present, or preferring to spend time without others.",
+        "example": "A solitary tree stood in the middle of the field.",
+        "collocations": [
+          "a solitary figure",
+          "a solitary life"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "单独监禁（非正式）",
+        "definition": "Being kept alone in a prison cell, short for 'solitary confinement'.",
+        "example": "The prisoner spent several days in solitary.",
+        "collocations": [
+          "in solitary",
+          "put in solitary"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/solitary",
+        "note": "Checked modern main senses and part-of-speech coverage; wording and examples newly written."
+      }
+    ],
+    "notes": "Restored adjective primary; replaced rare '独居者' main noun with current solitary-confinement abbreviation.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "独自形容词为主，单独监禁名词独立，原作者证据保留未重访。"
+  },
+  {
+    "id": "adult:puppy",
+    "en": "puppy",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "小狗；幼犬",
+        "definition": "A young dog.",
+        "example": "The puppy fell asleep beside my feet.",
+        "collocations": [
+          "a playful puppy",
+          "train a puppy"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "幼犬名词及训练搭配正确。"
+  },
+  {
+    "id": "adult:remainder",
+    "en": "remainder",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "剩余部分；其余人；余数",
+        "definition": "What is left after some has gone, or the amount left after dividing one whole number by another.",
+        "example": "We spent the remainder of the afternoon by the river.",
+        "collocations": [
+          "the remainder of",
+          "divide with a remainder"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "把滞销书削价出售",
+        "definition": "To sell unsold books cheaply after demand has fallen.",
+        "example": "The publisher remaindered the unsold copies.",
+        "collocations": [
+          "remaindered books"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "剩余部分和整数除法余数准确，出版削价出售动词标签清楚。"
+  },
+  {
+    "id": "adult:prohibition",
+    "en": "prohibition",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "禁止；禁令；禁酒",
+        "definition": "A rule or act that stops something being allowed, especially the sale of alcohol in some historical periods.",
+        "example": "The sign announced a prohibition on open fires.",
+        "collocations": [
+          "a prohibition on",
+          "the prohibition of"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "禁止行为、禁令及历史禁酒义一致。"
+  },
+  {
+    "id": "adult:dislike",
+    "en": "dislike",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "不喜欢；厌恶",
+        "definition": "To find someone or something unpleasant or not enjoyable.",
+        "example": "She dislikes being interrupted when she is reading.",
+        "collocations": [
+          "dislike doing",
+          "strongly dislike"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "不喜欢；反感；讨厌的事物",
+        "definition": "A feeling that something is unpleasant, or something you do not enjoy.",
+        "example": "He has a strong dislike of crowded places.",
+        "collocations": [
+          "a dislike of",
+          "likes and dislikes"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "不喜欢动词与反感名词对应，动名词作宾语自然。"
+  },
+  {
+    "id": "adult:badge",
+    "en": "badge",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "徽章；证章；标志",
+        "definition": "A small sign worn to show a role, membership, or achievement, or a feature showing a quality.",
+        "example": "Visitors must wear a name badge inside the building.",
+        "collocations": [
+          "a name badge",
+          "a badge of honour"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "佩戴身份徽章与某品质标志的比喻义保留。"
+  },
+  {
+    "id": "adult:void",
+    "en": "void",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "无效的；空的；缺乏的",
+        "definition": "Having no legal force, empty, or completely lacking something.",
+        "example": "The ticket is void if the date has been changed.",
+        "collocations": [
+          "null and void",
+          "void of meaning"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "空隙；空白；空虚感",
+        "definition": "An empty space or a feeling that something important is missing.",
+        "example": "Her retirement left a void in the team.",
+        "collocations": [
+          "fill a void",
+          "an empty void"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "使无效；作废",
+        "definition": "To cancel something so it no longer has legal or practical force.",
+        "example": "The shop voided the incorrect transaction.",
+        "collocations": [
+          "void a contract",
+          "void a transaction"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "无效形容词、空白名词及作废动词分开。"
+  },
+  {
+    "id": "adult:paradise",
+    "en": "paradise",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "天堂；乐园；理想去处",
+        "definition": "A place believed to offer perfect happiness after death, or a very beautiful and pleasant place.",
+        "example": "For bird watchers, the island is a paradise.",
+        "collocations": [
+          "a tropical paradise",
+          "a paradise for"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "宗教天堂与理想去处比喻区分，观鸟例句自然。"
+  },
+  {
+    "id": "adult:granite",
+    "en": "granite",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "花岗岩",
+        "definition": "A very hard rock, often used for buildings, floors, and kitchen surfaces.",
+        "example": "The kitchen has a polished granite worktop.",
+        "collocations": [
+          "a granite rock",
+          "polished granite"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "花岗岩的硬度用途解释可懂，厨房台面例句合适。"
+  },
+  {
+    "id": "adult:hum",
+    "en": "hum",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "哼唱；发出嗡嗡声；活跃运转",
+        "definition": "To sing with closed lips, make a low continuous sound, or be busy and active.",
+        "example": "She hummed a tune while making breakfast.",
+        "collocations": [
+          "hum a tune",
+          "hum with activity"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "嗡嗡声；低沉连续的声音",
+        "definition": "A low steady sound, such as the noise of a machine or distant voices.",
+        "example": "I could hear the hum of the refrigerator.",
+        "collocations": [
+          "a steady hum",
+          "the hum of traffic"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "闭唇哼唱、连续低声及忙碌比喻均覆盖。"
+  },
+  {
+    "id": "adult:synthetic",
+    "en": "synthetic",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "人造的；合成的；虚假的",
+        "definition": "Made by chemical or artificial processes rather than obtained directly from nature; also, not sincere or real.",
+        "example": "The jacket is filled with synthetic fibres.",
+        "collocations": [
+          "synthetic rubber",
+          "synthetic fibres"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "合成材料；人造物质",
+        "definition": "An artificial substance, especially a material used to make cloth.",
+        "example": "This fabric is a blend of wool and synthetics.",
+        "collocations": [
+          "natural fibres and synthetics"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/synthetic",
+        "note": "Checked modern main senses and part-of-speech coverage; wording and examples newly written."
+      }
+    ],
+    "notes": "Restored missing common adjective; material noun retained.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "人造合成形容词与合成物名词均保留，未只教材料名词。"
+  },
+  {
+    "id": "adult:restrain",
+    "en": "restrain",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "制止；约束；抑制",
+        "definition": "To stop someone moving or acting freely, or control a strong feeling or action.",
+        "example": "She struggled to restrain her laughter.",
+        "collocations": [
+          "restrain yourself",
+          "restrain anger"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "物理制止和情绪抑制两义，restrain laughter 例句自然。"
+  },
+  {
+    "id": "adult:qualification",
+    "en": "qualification",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "资格；资历；学历；限定条件",
+        "definition": "A skill or certificate showing fitness for a task, or a condition that limits a statement.",
+        "example": "The job requires a teaching qualification.",
+        "collocations": [
+          "professional qualifications",
+          "without qualification"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "技能证书资历与限定条件明确，without qualification 搭配正确。"
+  },
+  {
+    "id": "adult:beverage",
+    "en": "beverage",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "饮料（正式）",
+        "definition": "A drink, especially one prepared for people to buy or consume.",
+        "example": "The cafe serves hot and cold beverages.",
+        "collocations": [
+          "hot beverages",
+          "alcoholic beverages"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "正式饮料名词，不局限含酒精饮品。"
+  },
+  {
+    "id": "adult:wholly",
+    "en": "wholly",
+    "author": "vocab_author_c",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "完全地；全部地",
+        "definition": "Completely, rather than only partly.",
+        "example": "I am not wholly convinced by that explanation.",
+        "collocations": [
+          "wholly owned",
+          "wholly different"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "完全而非部分，否定句并无语义冲突。"
+  },
+  {
+    "id": "adult:pierce",
+    "en": "pierce",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "刺穿；穿透；打孔",
+        "definition": "To make a hole with a sharp object, or pass through something strongly.",
+        "example": "A nail pierced the tyre.",
+        "collocations": [
+          "pierce an ear",
+          "pierce the darkness"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "锐物穿孔及光穿透的常见义对应。"
+  },
+  {
+    "id": "adult:indulge",
+    "en": "indulge",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "尽情享受；纵容；满足愿望",
+        "definition": "To allow yourself something enjoyable, or let someone have what they want too freely.",
+        "example": "We occasionally indulge in a large breakfast at the weekend.",
+        "collocations": [
+          "indulge in",
+          "indulge a child"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "自我享受与纵容他人区分，indulge in 结构正确。"
+  },
+  {
+    "id": "adult:pest",
+    "en": "pest",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "害虫；有害动物；讨厌的人",
+        "definition": "An animal or insect that damages crops or buildings, or a person who repeatedly annoys others.",
+        "example": "The farmer uses nets to protect crops from pests.",
+        "collocations": [
+          "pest control",
+          "garden pests"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "对作物建筑有害生物及烦人者比喻符合语义。"
+  },
+  {
+    "id": "adult:lodge",
+    "en": "lodge",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "度假小屋；门房；山林旅舍；分会",
+        "definition": "A small house or holiday building, a house by an entrance, or a local branch of a society.",
+        "example": "We stayed in a wooden lodge near the lake.",
+        "collocations": [
+          "a hunting lodge",
+          "a ski lodge"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "寄宿；提出；卡住；安置",
+        "definition": "To stay or provide a place to stay, submit something formally, or become stuck in a place.",
+        "example": "She lodged a complaint about the broken heating.",
+        "collocations": [
+          "lodge a complaint",
+          "lodge an appeal",
+          "lodge in"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "补寄宿安置他人的及物义，使中文安置有英英对应。"
+  },
+  {
+    "id": "adult:interim",
+    "en": "interim",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "临时的；过渡期间的",
+        "definition": "Intended to last only until a permanent arrangement is ready.",
+        "example": "An interim manager will lead the team for three months.",
+        "collocations": [
+          "an interim report",
+          "an interim solution"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "过渡时期；中间一段时间",
+        "definition": "The time between two events or arrangements.",
+        "example": "The new office opens in May; in the interim, we will work from home.",
+        "collocations": [
+          "in the interim"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "临时过渡形容词和期间名词区分，in the interim 用法自然。"
+  },
+  {
+    "id": "adult:prairie",
+    "en": "prairie",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "北美大草原；草原",
+        "definition": "A large area of mostly flat grassland, especially in North America.",
+        "example": "Bison once roamed across the prairie.",
+        "collocations": [
+          "the open prairie",
+          "prairie grass"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "北美典型平坦草原，未泛指任何草地。"
+  },
+  {
+    "id": "adult:atmospheric",
+    "en": "atmospheric",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "大气的；有氛围的",
+        "definition": "Related to the air around the Earth, or creating a strong mood or feeling.",
+        "example": "The old lamps made the restaurant feel atmospheric.",
+        "collocations": [
+          "atmospheric pressure",
+          "an atmospheric film"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "大气和营造氛围两义区别清楚。"
+  },
+  {
+    "id": "adult:serial",
+    "en": "serial",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "连续的；系列的；连载的；屡次的",
+        "definition": "Happening in a sequence or repeated pattern, or presented in several separate parts.",
+        "example": "Each machine has a unique serial number.",
+        "collocations": [
+          "a serial number",
+          "a serial offender"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "连载小说；连续剧；连载节目",
+        "definition": "A story or programme released in separate parts over a period of time.",
+        "example": "My grandmother listens to a radio serial every evening.",
+        "collocations": [
+          "a television serial",
+          "a radio serial"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "连续、屡次与连载形容词、连续节目名词均覆盖。"
+  },
+  {
+    "id": "adult:dwarf",
+    "en": "dwarf",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "使相形见绌；使显得矮小",
+        "definition": "To be so much larger or more important that something else seems small.",
+        "example": "The new tower dwarfs the houses around it.",
+        "collocations": [
+          "dwarf nearby buildings"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "童话矮人；矮星；矮小者（可能冒犯）",
+        "definition": "A small magical person in stories; a small star; or a potentially offensive term for a person with unusually short height.",
+        "example": "A friendly dwarf guided the travellers through the forest.",
+        "collocations": [
+          "a white dwarf",
+          "a fairy-tale dwarf"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "矮小的；矮生的",
+        "definition": "Much smaller than the usual size, especially for a plant or animal.",
+        "example": "We planted a dwarf apple tree in a large pot.",
+        "collocations": [
+          "a dwarf tree",
+          "dwarf plants"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/dwarf",
+        "note": "Checked modern main senses and part-of-speech coverage; wording and examples newly written."
+      }
+    ],
+    "notes": "Noun applied to people can offend; person with dwarfism is often preferable. Story/astronomy nouns, small-plant adjective, and comparison verb kept separately.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "比较动词、故事及天文名词、矮生形容词分开；称人时冒犯提示保留。"
+  },
+  {
+    "id": "adult:pear",
+    "en": "pear",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "梨；梨树",
+        "definition": "A sweet fruit with a rounded bottom and a narrower top, or the tree it grows on.",
+        "example": "She packed a pear and a sandwich for lunch.",
+        "collocations": [
+          "a ripe pear",
+          "a pear tree"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "典型梨形和梨树义清楚，非所有梨都如此但作为入门原型可理解。"
+  },
+  {
+    "id": "adult:surpass",
+    "en": "surpass",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "超过；胜过；超越",
+        "definition": "To be greater or better than someone or something.",
+        "example": "Sales surpassed our expectations this month.",
+        "collocations": [
+          "surpass expectations",
+          "surpass a record"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "超过水平与预期，及物结构正确。"
+  },
+  {
+    "id": "adult:infinite",
+    "en": "infinite",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "无限的；无穷的；极大的",
+        "definition": "Having no end or limit, or seeming too great to measure.",
+        "example": "The children seemed to have infinite energy.",
+        "collocations": [
+          "infinite possibilities",
+          "infinite patience"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "无限；无穷（the infinite）",
+        "definition": "Something without any end or limit, usually expressed as 'the infinite'.",
+        "example": "The painting suggests a sense of the infinite.",
+        "collocations": [
+          "the infinite"
+        ]
+      }
+    ],
+    "notes": "Adjective primary; noun the infinite retained, but obsolete/generalized '神' not used as core definition.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "无限形容词主位，the infinite 名词化用法保留。"
+  },
+  {
+    "id": "adult:gossip",
+    "en": "gossip",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "闲话；流言；爱传闲话的人",
+        "definition": "Talk about other people's private lives, often not checked as true, or a person who enjoys spreading it.",
+        "example": "I do not believe all the gossip I hear at work.",
+        "collocations": [
+          "office gossip",
+          "a piece of gossip"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "说闲话；传播流言",
+        "definition": "To talk about other people's private lives, often without knowing the facts.",
+        "example": "They spent the break gossiping about their neighbours.",
+        "collocations": [
+          "gossip about"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "未经核实的私人闲话和传话人名词、传播行为动词区分。"
+  },
+  {
+    "id": "adult:contradict",
+    "en": "contradict",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "反驳；与……矛盾",
+        "definition": "To say the opposite of someone, or show that a statement cannot be true.",
+        "example": "The new evidence contradicts his account of the accident.",
+        "collocations": [
+          "contradict a statement",
+          "contradict yourself"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "反驳言语与事实相矛盾两义准确。"
+  },
+  {
+    "id": "adult:muscular",
+    "en": "muscular",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "肌肉的；肌肉发达的；强有力的",
+        "definition": "Related to muscles, having well-developed muscles, or showing physical strength.",
+        "example": "The swimmer has strong, muscular shoulders.",
+        "collocations": [
+          "muscular strength",
+          "muscular pain"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "肌肉相关及肌肉发达含义兼具。"
+  },
+  {
+    "id": "adult:commute",
+    "en": "commute",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "通勤；减刑；变换支付方式",
+        "definition": "To travel regularly between home and work, reduce a legal punishment, or exchange one form of payment for another.",
+        "example": "She commutes to the city by train every day.",
+        "collocations": [
+          "commute to work",
+          "commute a sentence"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "通勤路程；上下班往返",
+        "definition": "A regular journey between home and work.",
+        "example": "My new job has a much shorter commute.",
+        "collocations": [
+          "a daily commute",
+          "a long commute"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "通勤与减刑、支付转变动词，以及通勤名词保留。"
+  },
+  {
+    "id": "adult:pluck",
+    "en": "pluck",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "拔；摘；拨弦；拔羽毛",
+        "definition": "To pull something out or off, pick it, or pull and release the strings of an instrument.",
+        "example": "He plucked a ripe apple from the tree.",
+        "collocations": [
+          "pluck a string",
+          "pluck a feather",
+          "pluck up courage"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "勇气；胆量",
+        "definition": "Courage and determination when facing difficulty.",
+        "example": "She showed real pluck by finishing the race despite the rain.",
+        "collocations": [
+          "show pluck",
+          "pluck and determination"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "拔摘与拨弦动作、勇气名词分明。"
+  },
+  {
+    "id": "adult:lunar",
+    "en": "lunar",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "月球的；月亮的；阴历的",
+        "definition": "Related to the moon or based on its movement.",
+        "example": "The class learned about the first lunar landing.",
+        "collocations": [
+          "a lunar eclipse",
+          "the lunar calendar"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "月亮及基于月相的历法，未与 solar 混淆。"
+  },
+  {
+    "id": "adult:discrepancy",
+    "en": "discrepancy",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "差异；不一致；出入",
+        "definition": "A difference between things that should agree or match.",
+        "example": "We found a discrepancy between the receipt and the bank statement.",
+        "collocations": [
+          "a discrepancy between",
+          "explain a discrepancy"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "本应一致的数据不合，账单例句明确。"
+  },
+  {
+    "id": "adult:utter",
+    "en": "utter",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "完全的；彻底的",
+        "definition": "Complete or extreme, often used to stress something bad or surprising.",
+        "example": "The room was in utter chaos after the party.",
+        "collocations": [
+          "utter nonsense",
+          "utter disbelief"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "说出；发出声音",
+        "definition": "To say something or make a sound.",
+        "example": "He did not utter a word during the journey.",
+        "collocations": [
+          "utter a word",
+          "utter a cry"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "彻底形容词与发出言语动词同形分开。"
+  },
+  {
+    "id": "adult:sincere",
+    "en": "sincere",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "真诚的；诚挚的",
+        "definition": "Honestly meaning what you say or feel, without pretending.",
+        "example": "Please accept my sincere thanks for your help.",
+        "collocations": [
+          "sincere thanks",
+          "a sincere apology"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "说的与真实感受一致，诚挚谢意例句自然。"
+  },
+  {
+    "id": "adult:intermediate",
+    "en": "intermediate",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "中间的；中级的",
+        "definition": "Between two points or stages, or at a level between beginner and advanced.",
+        "example": "This course is suitable for intermediate learners.",
+        "collocations": [
+          "an intermediate level",
+          "an intermediate stage"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "中级学习者；中间产物",
+        "definition": "A person at a middle skill level, or a substance formed during the stages of making another substance.",
+        "example": "The class is aimed at intermediates rather than beginners.",
+        "collocations": [
+          "beginners and intermediates",
+          "a chemical intermediate"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "中间中级形容词、学习者及中间物名词均覆盖。"
+  },
+  {
+    "id": "adult:enrich",
+    "en": "enrich",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "充实；使丰富；使富裕；强化营养",
+        "definition": "To improve something by adding valuable qualities, increase wealth, or add nutrients.",
+        "example": "Learning a language can enrich your experience of travel.",
+        "collocations": [
+          "enrich your life",
+          "enrich the soil",
+          "enriched flour"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "丰富提升、增加财富及添加营养范围完整。"
+  },
+  {
+    "id": "adult:submarine",
+    "en": "submarine",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "潜艇；长条三明治（美式）",
+        "definition": "A vessel built to travel under the sea, or in American English a long bread roll filled with meat, cheese, or vegetables.",
+        "example": "The submarine stayed underwater for several days.",
+        "collocations": [
+          "a nuclear submarine",
+          "a submarine sandwich"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "海底的；水下的",
+        "definition": "Situated, used, or happening under the sea.",
+        "example": "Submarine cables carry data between continents.",
+        "collocations": [
+          "a submarine cable",
+          "a submarine volcano"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "潜艇与水下形容词保留，补美式长条三明治名词义并注明词组。",
+    "evidence": [
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/submarine",
+        "note": "Reviewer checked sandwich sense alongside underwater vessel; newly written definition."
+      }
+    ]
+  },
+  {
+    "id": "adult:premature",
+    "en": "premature",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "过早的；早产的；未成熟的",
+        "definition": "Happening before the right or expected time, including a birth before the usual length of pregnancy.",
+        "example": "It is premature to celebrate before we know the result.",
+        "collocations": [
+          "a premature baby",
+          "a premature conclusion"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "早于合适时间和早产义清楚，没有一律译为不成熟。"
+  },
+  {
+    "id": "adult:exploitation",
+    "en": "exploitation",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "剥削；利用；开发；开采",
+        "definition": "Using someone unfairly for your benefit, or using resources to gain value from them.",
+        "example": "The report exposed the exploitation of low-paid workers.",
+        "collocations": [
+          "worker exploitation",
+          "the exploitation of resources"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "不公平剥削与资源利用开发分开解释。"
+  },
+  {
+    "id": "adult:clown",
+    "en": "clown",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "小丑；滑稽的人；蠢人（贬义）",
+        "definition": "A performer who makes people laugh, often in unusual clothes, or someone acting foolishly.",
+        "example": "The clown made a balloon animal for each child.",
+        "collocations": [
+          "a circus clown",
+          "act like a clown"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "扮小丑；胡闹；逗乐",
+        "definition": "To behave in a silly way to make others laugh.",
+        "example": "The boys were clowning around instead of getting ready.",
+        "collocations": [
+          "clown around",
+          "clown about"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "表演者和贬义蠢人名词、胡闹动词都保留。"
+  },
+  {
+    "id": "adult:ditch",
+    "en": "ditch",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "沟；排水沟",
+        "definition": "A long narrow channel dug in the ground, often to carry water away.",
+        "example": "The ball rolled into a ditch beside the road.",
+        "collocations": [
+          "a drainage ditch",
+          "dig a ditch"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "抛弃；摆脱；逃课；使飞机迫降水面",
+        "definition": "To get rid of or leave something informally, skip an activity, or land an aircraft on water in an emergency.",
+        "example": "I decided to ditch the heavy bag and travel light.",
+        "collocations": [
+          "ditch a plan",
+          "ditch school",
+          "ditch an aircraft"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "排水沟名词及抛弃/逃课/水上迫降动词区分。"
+  },
+  {
+    "id": "adult:secondly",
+    "en": "secondly",
+    "author": "vocab_author_c",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "第二；其次",
+        "definition": "Used to introduce the second point in a list or argument.",
+        "example": "Firstly, it is too expensive; secondly, we do not have enough space.",
+        "collocations": [
+          "firstly and secondly"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "论证第二点副词明确，例句与 firstly 配对。"
+  },
+  {
+    "id": "adult:loaf",
+    "en": "loaf",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "一条面包；长条形食品",
+        "definition": "Bread baked in one piece, or another food made in a similar shape.",
+        "example": "I bought a fresh loaf from the bakery.",
+        "collocations": [
+          "a loaf of bread",
+          "a meat loaf"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "闲荡；游手好闲",
+        "definition": "To spend time doing little or nothing useful.",
+        "example": "They spent the afternoon loafing around the house.",
+        "collocations": [
+          "loaf around",
+          "loaf about"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "整条烘烤食品与闲荡动词两义独立。"
+  },
+  {
+    "id": "adult:cushion",
+    "en": "cushion",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "靠垫；软垫；缓冲物；储备",
+        "definition": "A soft bag used for comfort, or something that reduces a shock or protects against difficulty.",
+        "example": "Keep some savings as a cushion against unexpected bills.",
+        "collocations": [
+          "a seat cushion",
+          "a financial cushion"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "缓冲；减轻冲击",
+        "definition": "To soften a blow or reduce the harmful effect of a change.",
+        "example": "The thick grass cushioned her fall.",
+        "collocations": [
+          "cushion a fall",
+          "cushion the impact"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "软垫和缓冲储备名词、减弱冲击动词匹配。"
+  },
+  {
+    "id": "adult:twilight",
+    "en": "twilight",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "暮光；曙光；黄昏；衰退期",
+        "definition": "The weak light before sunrise or after sunset, or the final period of something's existence.",
+        "example": "We walked home in the quiet twilight.",
+        "collocations": [
+          "at twilight",
+          "the twilight of a career"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "日出前日落后弱光及事物末期，未仅译为日落时分。"
+  },
+  {
+    "id": "adult:comprehend",
+    "en": "comprehend",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "理解；领会",
+        "definition": "To understand the meaning or nature of something.",
+        "example": "I could not comprehend why she had left without a word.",
+        "collocations": [
+          "fully comprehend",
+          "comprehend the meaning"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "领会理解，未与全面包含的旧义混为主条。"
+  },
+  {
+    "id": "adult:dispose",
+    "en": "dispose",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "处理掉；使倾向于；安排放置",
+        "definition": "To get rid of something with 'of'; make someone likely to act a certain way; or arrange things in a position.",
+        "example": "Please dispose of the empty bottles in the recycling bin.",
+        "collocations": [
+          "dispose of waste",
+          "be disposed to",
+          "well disposed towards"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "处理物必须 dispose of，倾向及排列形式分别说明。"
+  },
+  {
+    "id": "adult:unlock",
+    "en": "unlock",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "开锁；解锁；发掘；释放潜能",
+        "definition": "To open a lock, remove a restriction, or make hidden ability or information available.",
+        "example": "The course helped her unlock her potential.",
+        "collocations": [
+          "unlock a door",
+          "unlock a phone",
+          "unlock potential"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "解物理锁与开放限制、潜能释放多义清楚。"
+  },
+  {
+    "id": "adult:squirrel",
+    "en": "squirrel",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "松鼠",
+        "definition": "A small animal with a long bushy tail that climbs trees and often eats nuts.",
+        "example": "A squirrel ran along the garden fence.",
+        "collocations": [
+          "a red squirrel",
+          "a grey squirrel"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "储藏；积存（squirrel away）",
+        "definition": "To hide or save small amounts of something for later use.",
+        "example": "She squirreled away a little money each month.",
+        "collocations": [
+          "squirrel away money"
+        ]
+      }
+    ],
+    "notes": "Past spelling can be squirreled (US) or squirrelled (UK).",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "动物松鼠与储藏短语动词保留，美英过去式说明清楚。"
+  },
+  {
+    "id": "adult:destine",
+    "en": "destine",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "注定；预定（通常用于被动语态）",
+        "definition": "To determine that someone or something will have a particular future or destination.",
+        "example": "The young singer seemed destined for success.",
+        "collocations": [
+          "be destined for",
+          "be destined to"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "通常被动的未来安排/注定，用 destined for 展示。"
+  },
+  {
+    "id": "adult:royalty",
+    "en": "royalty",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "王室成员；王族；版税；特许权使用费",
+        "definition": "Kings, queens, and their families; also, payments for the use or sale of someone's work, invention, or property.",
+        "example": "The writer receives a royalty for every copy sold.",
+        "collocations": [
+          "a member of royalty",
+          "royalty payments",
+          "earn royalties"
+        ]
+      }
+    ],
+    "notes": "The payment sense usually appears in the plural royalties; royalty can also be one payment.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "王室和版税分明，将非自然并列搭配改为实际名词搭配。"
+  },
+  {
+    "id": "adult:superb",
+    "en": "superb",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "极好的；出色的",
+        "definition": "Extremely good in quality or performance.",
+        "example": "The restaurant served a superb meal.",
+        "collocations": [
+          "a superb performance",
+          "superb quality"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "出色极好，食物例句与表演搭配自然。"
+  },
+  {
+    "id": "adult:loosely",
+    "en": "loosely",
+    "author": "vocab_author_c",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "松松地；大致地；不严格地",
+        "definition": "Without being tight, firm, or exact.",
+        "example": "The film is loosely based on a true story.",
+        "collocations": [
+          "loosely based on",
+          "loosely tied",
+          "loosely defined"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "松、不精确的副词，用 loose 的变化没有串词性。"
+  },
+  {
+    "id": "adult:evacuate",
+    "en": "evacuate",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "疏散；撤离；排空",
+        "definition": "To move people away from danger, leave a dangerous place, or remove contents from a space.",
+        "example": "Firefighters evacuated the building after the alarm sounded.",
+        "collocations": [
+          "evacuate a building",
+          "evacuate residents"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "将人撤出、主动撤离及排空三个语法方向都覆盖。"
+  },
+  {
+    "id": "adult:hardship",
+    "en": "hardship",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "艰难；困苦",
+        "definition": "A condition that makes life difficult, especially a lack of money, food, or shelter.",
+        "example": "Many families faced financial hardship after the factory closed.",
+        "collocations": [
+          "financial hardship",
+          "suffer hardship"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "物质资源不足导致困苦定义明确。"
+  },
+  {
+    "id": "adult:squash",
+    "en": "squash",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "压扁；挤入；压制",
+        "definition": "To press something until it loses shape, force something into a small space, or stop an idea or action.",
+        "example": "Do not squash the tomatoes at the bottom of the bag.",
+        "collocations": [
+          "squash a can",
+          "squash into",
+          "squash a rumour"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "壁球；南瓜类蔬菜；浓缩果汁饮料（英）",
+        "definition": "An indoor racket game, a vegetable such as a pumpkin, or a British fruit drink diluted with water.",
+        "example": "He plays squash with a colleague every Friday.",
+        "collocations": [
+          "play squash",
+          "butternut squash",
+          "orange squash"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "挤压动词与球类、蔬菜、英式饮品名词独立。"
+  },
+  {
+    "id": "adult:postcard",
+    "en": "postcard",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "明信片",
+        "definition": "A card sent without an envelope, usually with a picture on one side and a message and address on the other.",
+        "example": "I sent my grandmother a postcard from the seaside.",
+        "collocations": [
+          "send a postcard",
+          "a picture postcard"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "补 usually，避免断言所有明信片都必须有图片。"
+  },
+  {
+    "id": "adult:instability",
+    "en": "instability",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "不稳定；动荡；不稳固",
+        "definition": "A tendency to change suddenly, fail, or lose balance.",
+        "example": "Political instability made businesses delay their plans.",
+        "collocations": [
+          "political instability",
+          "financial instability"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "变动、故障与失衡均可说明不稳定。"
+  },
+  {
+    "id": "adult:affiliate",
+    "en": "affiliate",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "使隶属；使关联；加入",
+        "definition": "To connect a person or organisation officially with a larger group.",
+        "example": "The club is affiliated with a national sports association.",
+        "collocations": [
+          "be affiliated with",
+          "affiliate to"
+        ],
+        "phonetic": "əˈfɪlieɪt"
+      },
+      {
+        "pos": "n.",
+        "zh": "附属机构；关联公司；成员组织",
+        "definition": "An organisation or company officially connected with a larger one.",
+        "example": "The broadcaster has a local affiliate in each region.",
+        "collocations": [
+          "a local affiliate",
+          "an overseas affiliate"
+        ],
+        "phonetic": "əˈfɪliət"
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "关联动词与附属机构名词区分，末尾发音不同已标出。"
+  },
+  {
+    "id": "adult:gulf",
+    "en": "gulf",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "海湾；巨大差距；隔阂",
+        "definition": "A large area of sea partly enclosed by land, or a very large difference between people or things.",
+        "example": "There is a wide gulf between their incomes.",
+        "collocations": [
+          "a wide gulf",
+          "bridge the gulf"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "地理海湾和巨大差异的比喻义都覆盖。"
+  },
+  {
+    "id": "adult:claw",
+    "en": "claw",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "爪；螯；爪状物",
+        "definition": "A sharp curved part on an animal's toe, a crab's gripping arm, or a tool shaped like one.",
+        "example": "The cat caught the fabric with one claw.",
+        "collocations": [
+          "sharp claws",
+          "a crab's claw"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "抓挠；用力抓住；艰难夺回",
+        "definition": "To scratch or pull with sharp nails, or struggle to gain something.",
+        "example": "The cat clawed at the closed door.",
+        "collocations": [
+          "claw at",
+          "claw your way back"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "趾爪和蟹螯名词、抓挠及费力夺回动词保留。"
+  },
+  {
+    "id": "adult:marvelous",
+    "en": "marvelous",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "极好的；了不起的；令人惊奇的",
+        "definition": "Extremely good or causing great wonder.",
+        "example": "We had a marvelous time on our trip.",
+        "collocations": [
+          "a marvelous idea",
+          "a marvelous experience"
+        ]
+      }
+    ],
+    "notes": "American spelling; British marvellous.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "极好惊奇义，美式与英式双l提示准确。"
+  },
+  {
+    "id": "adult:mercury",
+    "en": "mercury",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "汞；水银",
+        "definition": "A silver-coloured metal that is liquid at normal room temperature.",
+        "example": "The old thermometer contained mercury.",
+        "collocations": [
+          "mercury pollution",
+          "a mercury thermometer"
+        ]
+      }
+    ],
+    "notes": "Lowercase mercury is the element, not '使者'. Capitalized Mercury can name the planet or Roman god.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "小写仅元素水银，大写行星神名另说明，不混入信使。"
+  },
+  {
+    "id": "adult:incomplete",
+    "en": "incomplete",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "不完整的；未完成的",
+        "definition": "Missing some parts or not yet finished.",
+        "example": "The application is incomplete without your signature.",
+        "collocations": [
+          "an incomplete form",
+          "incomplete information"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "缺少部分和仍未完成两个含义明确。"
+  },
+  {
+    "id": "adult:immunity",
+    "en": "immunity",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "免疫力；豁免；免除",
+        "definition": "Protection against a disease, or freedom from a particular legal duty or punishment.",
+        "example": "The agreement gave the witnesses immunity from prosecution.",
+        "collocations": [
+          "immunity to disease",
+          "diplomatic immunity"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "疾病保护与法律豁免两义，不等于绝对不生病。"
+  },
+  {
+    "id": "adult:reliance",
+    "en": "reliance",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "依赖；依靠；信任",
+        "definition": "Dependence on someone or something for help or support.",
+        "example": "Better public transport could reduce our reliance on cars.",
+        "collocations": [
+          "reliance on",
+          "heavy reliance"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "依赖帮助支持，减少用车例句自然。"
+  },
+  {
+    "id": "adult:nucleus",
+    "en": "nucleus",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "原子核；细胞核；核心",
+        "definition": "An atom's center, the part of a cell containing most of its genetic information, or a core group that something develops around.",
+        "example": "A small group of volunteers formed the nucleus of the project.",
+        "collocations": [
+          "an atomic nucleus",
+          "a cell nucleus",
+          "the nucleus of"
+        ]
+      }
+    ],
+    "notes": "Corrected 核子 to 原子核/细胞核. A nucleon (核子) is a proton or neutron, not a nucleus.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "修正细胞核不一定居于细胞中央，保留原子核和团队核心义。"
+  },
+  {
+    "id": "adult:cater",
+    "en": "cater",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "提供餐饮；满足需求；迎合",
+        "definition": "To provide food for an event, meet particular needs, or satisfy someone's wishes.",
+        "example": "The cafe caters for people who do not eat meat.",
+        "collocations": [
+          "cater for",
+          "cater to",
+          "cater an event"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "餐饮服务、满足需求与迎合均覆盖，for/to搭配正确。"
+  },
+  {
+    "id": "adult:chess",
+    "en": "chess",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "国际象棋",
+        "definition": "A two-player board game whose goal is to attack the other king so that it has no legal way to escape.",
+        "example": "She learned to play chess with her grandfather.",
+        "collocations": [
+          "play chess",
+          "a chess board"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "细化目标为使对方王受攻且无合法脱困，而非笼统困住。"
+  },
+  {
+    "id": "adult:camel",
+    "en": "camel",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "骆驼；驼色",
+        "definition": "A large desert animal with one or two humps, or a light brown colour.",
+        "example": "The camel carried supplies across the desert.",
+        "collocations": [
+          "a camel ride",
+          "camel hair"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "一峰双峰动物与浅棕颜色名词清楚。"
+  },
+  {
+    "id": "adult:conform",
+    "en": "conform",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "遵守；符合；顺从",
+        "definition": "To follow rules or accepted behaviour, or match a required standard.",
+        "example": "All equipment must conform to the safety standards.",
+        "collocations": [
+          "conform to",
+          "conform with"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "行为遵从与达到标准，to/with 搭配有效。"
+  },
+  {
+    "id": "adult:worthwhile",
+    "en": "worthwhile",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "值得花时间或精力的；有价值的",
+        "definition": "Useful or rewarding enough to justify the time, effort, or money needed.",
+        "example": "Helping at the library was a worthwhile experience.",
+        "collocations": [
+          "a worthwhile project",
+          "make something worthwhile"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "价值足以值得投入而非单纯昂贵。"
+  },
+  {
+    "id": "adult:bud",
+    "en": "bud",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "芽；花蕾；老兄（非正式称呼）",
+        "definition": "A small growth that develops into a leaf or flower; also, an informal way to address a friend.",
+        "example": "The rose bushes are covered in buds.",
+        "collocations": [
+          "a flower bud",
+          "in bud",
+          "nip something in the bud"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "发芽；萌芽",
+        "definition": "To produce new leaf or flower growth, or begin developing.",
+        "example": "The trees began to bud after a week of warm weather.",
+        "collocations": [
+          "trees bud",
+          "a budding artist"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "植物芽、非正式朋友称呼与萌芽动词分开。"
+  },
+  {
+    "id": "adult:shipment",
+    "en": "shipment",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "一批货物；装运；发货",
+        "definition": "Goods sent together, or the act of sending goods from one place to another.",
+        "example": "The shop received a new shipment of books this morning.",
+        "collocations": [
+          "a shipment of goods",
+          "ready for shipment"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "货物一批和装运行为都覆盖。"
+  },
+  {
+    "id": "adult:admiration",
+    "en": "admiration",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "钦佩；赞赏；欣赏",
+        "definition": "Respect and approval for someone's qualities or achievements, or pleasure in something attractive.",
+        "example": "I have great admiration for her patience.",
+        "collocations": [
+          "admiration for",
+          "with admiration"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "敬佩成就与欣赏美物匹配，耐心例句自然。"
+  },
+  {
+    "id": "adult:withstand",
+    "en": "withstand",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "抵挡；承受；经受住",
+        "definition": "To remain strong or undamaged despite force, difficulty, or pressure.",
+        "example": "The roof is designed to withstand heavy snow.",
+        "collocations": [
+          "withstand pressure",
+          "withstand heat"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "经受压力后仍保持完整，不等于单纯经历。"
+  },
+  {
+    "id": "adult:irrigation",
+    "en": "irrigation",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "灌溉；冲洗",
+        "definition": "Supplying water to land so crops can grow, or washing a body part with a flow of liquid.",
+        "example": "The farms depend on irrigation during the dry summer.",
+        "collocations": [
+          "an irrigation system",
+          "drip irrigation"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "农作灌溉与医疗冲洗两义明示，未只用难懂术语。"
+  },
+  {
+    "id": "adult:expel",
+    "en": "expel",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "驱逐；开除；排出",
+        "definition": "To force someone to leave a place or organisation, or push something out.",
+        "example": "The school may expel students for serious violence.",
+        "collocations": [
+          "expel from",
+          "expel air"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "迫使离开与排出气体都为及物用法。"
+  },
+  {
+    "id": "adult:extinction",
+    "en": "extinction",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "灭绝；消亡；熄灭",
+        "definition": "The end of a species or something else that no longer exists, or the putting out of a fire.",
+        "example": "The species is at risk of extinction.",
+        "collocations": [
+          "face extinction",
+          "on the brink of extinction"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "物种灭绝、事物消亡及火熄灭区别清楚。"
+  },
+  {
+    "id": "adult:apparatus",
+    "en": "apparatus",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "设备；器械；组织机构",
+        "definition": "Equipment used for a particular purpose, or the structure of an organisation or system.",
+        "example": "The laboratory has new apparatus for measuring air quality.",
+        "collocations": [
+          "scientific apparatus",
+          "the state apparatus"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "设备集合与制度组织结构两义保留。"
+  },
+  {
+    "id": "adult:scarcely",
+    "en": "scarcely",
+    "author": "vocab_author_c",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "几乎不；刚刚；勉强",
+        "definition": "Almost not, or only just.",
+        "example": "We had scarcely sat down when the phone rang.",
+        "collocations": [
+          "scarcely any",
+          "scarcely enough",
+          "scarcely had"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "几乎不、才刚；scarcely…when 时间结构正确。"
+  },
+  {
+    "id": "adult:cabbage",
+    "en": "cabbage",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "卷心菜；甘蓝",
+        "definition": "A vegetable with many thick leaves packed closely into a round head.",
+        "example": "She chopped the cabbage for a salad.",
+        "collocations": [
+          "red cabbage",
+          "a head of cabbage"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "卷心菜层层叶片的定义和切菜例句对应。"
+  },
+  {
+    "id": "adult:slack",
+    "en": "slack",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "松弛的；松懈的；清淡的",
+        "definition": "Not tight, not careful or strict enough, or lacking activity.",
+        "example": "The rope was too slack to hold the tent steady.",
+        "collocations": [
+          "a slack rope",
+          "slack demand",
+          "slack discipline"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "松弛部分；富余能力；长裤（slacks）",
+        "definition": "The loose part of a rope, unused capacity, or, in the plural, casual trousers.",
+        "example": "Pull the rope until there is no slack left.",
+        "collocations": [
+          "take up the slack",
+          "a pair of slacks"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "偷懒；松懈；减弱",
+        "definition": "To work with less effort than you should, or become less active.",
+        "example": "Do not slack off just because the manager is away.",
+        "collocations": [
+          "slack off",
+          "slack on the job"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "松散清淡形容词、绳松余量/长裤名词与偷懒动词清楚。"
+  },
+  {
+    "id": "adult:lumber",
+    "en": "lumber",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "木材（美）；笨重杂物（英）",
+        "definition": "Wood prepared for building, especially in American English, or unwanted bulky objects in British English.",
+        "example": "The shed was built from recycled lumber.",
+        "collocations": [
+          "a lumber yard",
+          "cut lumber"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "笨重地移动；使背负负担",
+        "definition": "To move slowly and heavily, or burden someone with an unwanted duty or object.",
+        "example": "The old truck lumbered up the hill.",
+        "collocations": [
+          "lumber along",
+          "be lumbered with"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "美式木材、英式杂物与笨重移动/负担动词区分。"
+  },
+  {
+    "id": "adult:prevalent",
+    "en": "prevalent",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "普遍的；盛行的",
+        "definition": "Common or widespread in a place or at a time.",
+        "example": "These beliefs were prevalent in the region a century ago.",
+        "collocations": [
+          "prevalent among",
+          "widely prevalent"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "某时地普遍出现，不误作为质量优势。"
+  },
+  {
+    "id": "adult:benign",
+    "en": "benign",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "善意的；温和的；良性的",
+        "definition": "Kind or not harmful; in medicine, not cancerous when describing a growth.",
+        "example": "The specialist described the lump as benign.",
+        "collocations": [
+          "a benign tumour",
+          "a benign smile"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "日常温和及肿瘤非癌性两义区分，未说良性一定没有危害。"
+  },
+  {
+    "id": "adult:eve",
+    "en": "eve",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "前夕；前夜",
+        "definition": "The day or evening before a holiday or important event.",
+        "example": "The family gathers on Christmas Eve.",
+        "collocations": [
+          "Christmas Eve",
+          "on the eve of"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "重要日之前一天或夜晚，圣诞前夜搭配正确。"
+  },
+  {
+    "id": "adult:kidnap",
+    "en": "kidnap",
+    "author": "vocab_author_c",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "绑架；劫持",
+        "definition": "To take someone away by force and keep them against their will.",
+        "example": "The gang kidnapped a businessman and demanded money.",
+        "collocations": [
+          "kidnap someone",
+          "be kidnapped"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "违背意愿强行带走，不限儿童，不要求一定索赎。"
+  },
+  {
+    "id": "adult:apt",
+    "en": "apt",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "恰当的；易于……的；有天赋的",
+        "definition": "Suitable for a situation, likely to do something, or quick to learn.",
+        "example": "Her description of the noisy room was very apt.",
+        "collocations": [
+          "an apt description",
+          "be apt to",
+          "an apt pupil"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "恰当、容易发生与善学三义兼顾。"
+  },
+  {
+    "id": "adult:earnest",
+    "en": "earnest",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "认真的；真诚而坚定的",
+        "definition": "Serious, sincere, and determined rather than joking or careless.",
+        "example": "He made an earnest effort to improve his writing.",
+        "collocations": [
+          "an earnest attempt",
+          "an earnest request"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "认真（in earnest）；定金（正式）",
+        "definition": "Serious intention, especially in 'in earnest'; also, money given as proof of an intention to buy.",
+        "example": "Work on the new bridge began in earnest in March.",
+        "collocations": [
+          "in earnest",
+          "earnest money"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/earnest",
+        "note": "Checked modern main senses and part-of-speech coverage; wording and examples newly written."
+      },
+      {
+        "url": "https://www.ahdictionary.com/word/search.html?q=earnest",
+        "note": "Checked separate deposit/pledge noun before retaining as a labeled secondary meaning."
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "真诚认真形容词、in earnest与定金名词分别标明。"
+  },
+  {
+    "id": "adult:optimal",
+    "en": "optimal",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "最佳的；最适宜的",
+        "definition": "The best or most suitable for a particular purpose or situation.",
+        "example": "Plants grow faster under optimal light and temperature conditions.",
+        "collocations": [
+          "optimal conditions",
+          "optimal performance"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "特定目的最佳不等于绝对完美。"
+  },
+  {
+    "id": "adult:coherent",
+    "en": "coherent",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "连贯的；条理清楚的；一致的",
+        "definition": "Clear and logically connected, or forming a whole whose parts fit together.",
+        "example": "She gave a coherent account of what had happened.",
+        "collocations": [
+          "a coherent argument",
+          "a coherent plan"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "条理逻辑及整体相容两义清楚。"
+  },
+  {
+    "id": "adult:simplicity",
+    "en": "simplicity",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "简单；简明；朴素",
+        "definition": "The quality of being easy to understand or use, or plain without unnecessary detail.",
+        "example": "I like this design for its simplicity.",
+        "collocations": [
+          "simplicity of design",
+          "for simplicity"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "简单易用及朴素风格均覆盖。"
+  },
+  {
+    "id": "adult:staple",
+    "en": "staple",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "订书钉；主食；主要产品或常用品",
+        "definition": "A small wire fastener for paper, or a basic food or item regularly used or produced.",
+        "example": "Rice is a staple in many Asian countries.",
+        "collocations": [
+          "a staple food",
+          "remove a staple",
+          "a household staple"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "用订书钉钉住",
+        "definition": "To join sheets of paper or other materials with a small wire fastener.",
+        "example": "Please staple the receipt to the form.",
+        "collocations": [
+          "staple together",
+          "staple papers"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "主要的；经常需要的",
+        "definition": "Basic and regularly used, especially when describing food or products.",
+        "example": "Potatoes are a staple ingredient in many local dishes.",
+        "collocations": [
+          "staple crops",
+          "staple foods"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "订书钉、主食、主要品类名词，钉住动词，常备形容词均保留。"
+  },
+  {
+    "id": "adult:confidential",
+    "en": "confidential",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "保密的；机密的；表示信任的",
+        "definition": "Intended to remain private, or spoken in a way that suggests trust and secrecy.",
+        "example": "Please keep these financial records confidential.",
+        "collocations": [
+          "confidential information",
+          "a confidential conversation"
+        ]
+      }
+    ],
+    "notes": "Removed misleading 易于信任他人: confidential is not the same as trusting or gullible.",
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "保密及私下信任的语气，不是轻信别人的性格。"
+  },
+  {
+    "id": "adult:autobiography",
+    "en": "autobiography",
+    "author": "vocab_author_c",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "自传",
+        "definition": "The story of someone's life written by that person.",
+        "example": "She published her autobiography after retiring from teaching.",
+        "collocations": [
+          "write an autobiography",
+          "publish an autobiography"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "本人写自己人生，与 biography 区别明确。"
+  },
+  {
+    "id": "adult:compatible",
+    "en": "compatible",
+    "author": "vocab_author_c",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "兼容的；合得来的；可并存的",
+        "definition": "Able to work, live, or exist together without problems.",
+        "example": "Check that the new charger is compatible with your phone.",
+        "collocations": [
+          "compatible with",
+          "compatible software"
+        ]
+      }
+    ],
+    "reviewer": "vocab_author_b",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "共同工作生活无冲突，compatible with 结构正确。"
+  }
+]

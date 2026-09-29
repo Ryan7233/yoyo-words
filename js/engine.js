@@ -394,6 +394,25 @@ export function isGraduationPassed(correctCount) {
   return correctCount >= GRADUATION_PASS_CORRECT;
 }
 
+// 英英释义统一成学习词典体例：首字母小写、句末不加句号。
+// 只在展示时调整，不改词库数据——复核记录要求释义与词库逐字一致。
+// 专有名词、缩写开头，以及 etc. / U.S. 这类缩写结尾保持原样。
+const DEFINITION_KEEP_CAPITAL = /^(?:I\b|[A-Z]{2,}|[A-Z]\.|(?:American|British|English|European|Eurasian|Scottish|Irish|Welsh|French|German|Italian|Spanish|Mexican|Russian|Chinese|Japanese|Indian|African|Asian|Australian|Canadian|Christian|Catholic|Protestant|Jewish|Muslim|Buddhist|Hindu|Roman|Greek|Latin|Arabic|Western|Eastern|Northern|Southern|United|Europe|Asia|Africa|America|Britain|God|Jesus|Christ|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|January|February|March|April|May|June|July|August|September|October|November|December)\b)/;
+
+export function formatDefinition(text) {
+  let out = String(text ?? '').trim();
+  if (!out) return out;
+  if (!DEFINITION_KEEP_CAPITAL.test(out) && /^(?:A\s|[A-Z][a-z])/.test(out)) {
+    out = out[0].toLowerCase() + out.slice(1);
+  }
+  const last = out.split(/\s+/).pop();
+  const abbreviation = /\.[A-Za-z]+\.$/.test(last) || /^(?:etc|e\.g|i\.e|approx|vs|Mr|Mrs|Ms|Dr|St|No)\.$/i.test(last);
+  if (out.endsWith('.') && !out.endsWith('..') && !abbreviation) {
+    out = out.slice(0, -1);
+  }
+  return out;
+}
+
 // 结算一关：返回 { stars, correct, total, accuracy }
 export function summarize(results) {
   const correct = results.filter((r) => r.isCorrect).length;
