@@ -1,0 +1,4904 @@
+[
+  {
+    "id": "cat",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cat 的儿童语境译义“猫”；例句“The cat is on the chair.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e99f1010cb7abf696cc51d002fd65a4068eabd970e8ec1f68f547de965d1faf2",
+    "verdict": "pass"
+  },
+  {
+    "id": "dog",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dog 的儿童语境译义“狗”；例句“The dog wants to play.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b67916e4707a8b148b009cf5bc230e46cc1aff48df1d385eb830fa1a8753acc1",
+    "verdict": "pass"
+  },
+  {
+    "id": "bird",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bird 的儿童语境译义“鸟”；例句“Look at the bird in the tree.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9e2f503290a8c092cdf8b937b194e6bdf21133ef50ec8f42d7121758206a0438",
+    "verdict": "pass"
+  },
+  {
+    "id": "fish",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "fish 单数/复数均可；本例 The fish swims 表达单条鱼自然。",
+    "content_sha256": "8ba0856058dbccc85047788f6f9e54fb5a279929235bd048ccc8895c2ed3ac03",
+    "verdict": "pass"
+  },
+  {
+    "id": "rabbit",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 rabbit 的儿童语境译义“兔子”；例句“The rabbit can hop and run.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4ad73225e1ce875430c27ecac84476ba85512c65b9cc8550848a7af698c5c4cd",
+    "verdict": "pass"
+  },
+  {
+    "id": "panda",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 panda 的儿童语境译义“熊猫”；例句“The panda eats green leaves.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cfe31393c6818541d7306c0aa0a1124824829309cb6a49f91b8cc71e38efa97c",
+    "verdict": "pass"
+  },
+  {
+    "id": "lion",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lion 的儿童语境译义“狮子”；例句“The lion can run very fast.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4be91f084e97daf185963a1f10bc805ded4dff429d5130fc8383cdf13abc5288",
+    "verdict": "pass"
+  },
+  {
+    "id": "elephant",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 elephant 的儿童语境译义“大象”；例句“The elephant has big ears.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3164bd58ce6864a1f100a43034f57a159dae1b970ae2c6c2aa40611e41cc1223",
+    "verdict": "pass"
+  },
+  {
+    "id": "monkey",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 monkey 的儿童语境译义“猴子”；例句“The monkey is in the tree.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6d2ab3ade1aff88edd455cc929ab334d7d6d6b4b212dce099e86f43073616825",
+    "verdict": "pass"
+  },
+  {
+    "id": "duck",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 duck 的儿童语境译义“鸭子”；例句“The duck swims in the pond.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "56ffdb4dc1971e45a1d27d50288aebbb7f6e4b6f36c975d6cad1a9e3b55d086b",
+    "verdict": "pass"
+  },
+  {
+    "id": "apple",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 apple 的儿童语境译义“苹果”；例句“I have a red apple.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a0c897b42f86c579e2835c941a988fdd5bb6d3ed4104d186f99e5378e6819af3",
+    "verdict": "pass"
+  },
+  {
+    "id": "banana",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 banana 的儿童语境译义“香蕉”；例句“Would you like a banana?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "749387205d0cf4fc4c27f978e500d0da88d9328f80d7323b8ec4d711dbec6c4a",
+    "verdict": "pass"
+  },
+  {
+    "id": "orange",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 orange 的儿童语境译义“橙子”；例句“Let us share this orange.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d9c76477df8fc46df260fff9d77e3e806b53b164e548c067d93f9e7304d33a1a",
+    "verdict": "pass"
+  },
+  {
+    "id": "grape",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 grape 的儿童语境译义“葡萄”；例句“This grape is sweet.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2d21169bf7b76d9db512a3f8780dbe2fed867b5ffa1bc7333436645c7b59f390",
+    "verdict": "pass"
+  },
+  {
+    "id": "watermelon",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 watermelon 的儿童语境译义“西瓜”；例句“We can share the watermelon.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c36f43bec7c5e3a36f46e627ba324325b77c6e31b179d31887578abea4ebe60c",
+    "verdict": "pass"
+  },
+  {
+    "id": "cake",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cake 的儿童语境译义“蛋糕”；例句“This cake is for you.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b0b5d764678916583e2f734ba87e58308c4dbcef2b43d5e4704f9f5dd118c69c",
+    "verdict": "pass"
+  },
+  {
+    "id": "milk",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 milk 的儿童语境译义“牛奶”；例句“There is milk in my cup.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "643c7812a3f370daa43e01f01d02d47d598d02b823bae3a17c735922c1e071cd",
+    "verdict": "pass"
+  },
+  {
+    "id": "egg",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 egg 的儿童语境译义“鸡蛋”；例句“I have an egg for breakfast.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "148a4a2f16ece1871a5a3f229925bde7b378936b8af6be74afe96bdb8794db99",
+    "verdict": "pass"
+  },
+  {
+    "id": "rice",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 rice 的儿童语境译义“米饭”；例句“I like rice with vegetables.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d9c2d4129961bc31567cf9defc7c3a5454dc944a8f37ba00bb0e8073cf81a0cf",
+    "verdict": "pass"
+  },
+  {
+    "id": "bread",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bread 的儿童语境译义“面包”；例句“Would you like some bread?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "93edf5a13d23d57196ca2834c9eb2d4a55f7cd817c25d7831e3de09c97daa52d",
+    "verdict": "pass"
+  },
+  {
+    "id": "red",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 red 的儿童语境译义“红色”；例句“My bag is red.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "993583af86a97ebe40ae9e641091dea123c422f449a645f1004c980145174fd6",
+    "verdict": "pass"
+  },
+  {
+    "id": "blue",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 blue 的儿童语境译义“蓝色”；例句“The sky is blue.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f16f6dddd0d3fec8849119c7eb3ce5a2f2f7c945cdb909452cd6b6954a4e03e9",
+    "verdict": "pass"
+  },
+  {
+    "id": "yellow",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 yellow 的儿童语境译义“黄色”；例句“This flower is yellow.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "01714b192d290d23da4f0be2cee916a4b165305a399ec3deb12db26983b24859",
+    "verdict": "pass"
+  },
+  {
+    "id": "green",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 green 的儿童语境译义“绿色”；例句“The grass is green.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3677845f71ff32605a7b187a4c4142b0e19c84e04c6743b765e59bf844ad5d80",
+    "verdict": "pass"
+  },
+  {
+    "id": "pink",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pink 的儿童语境译义“粉色”；例句“I have a pink cup.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cfba0f68c160a656f45e93bff07ac274f7a8e3f2d73e6b657b2f7d1872f24161",
+    "verdict": "pass"
+  },
+  {
+    "id": "purple",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 purple 的儿童语境译义“紫色”；例句“My hat is purple.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "af1c9ee3e6aae613164af52c128db0f252e916b29eca0e58a9002c54ca26ce2b",
+    "verdict": "pass"
+  },
+  {
+    "id": "black",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 black 的儿童语境译义“黑色”；例句“The cat has black fur.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "974a92fd83fe2f90b4e45fe2488199d4486344e690a031eb7105555353aa1d4d",
+    "verdict": "pass"
+  },
+  {
+    "id": "white",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 white 的儿童语境译义“白色”；例句“The rabbit is white.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "63063d6db4bf1657aa3f3e8693c2f42523e44770437b59b4bab9735477d52c69",
+    "verdict": "pass"
+  },
+  {
+    "id": "one",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 one 的儿童语境译义“一”；例句“I have one apple.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a89dff760475eaa46a2522464f787278b3fd257e7f5f3a87e1885c52139731f0",
+    "verdict": "pass"
+  },
+  {
+    "id": "two",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 two 的儿童语境译义“二”；例句“There are two ducks.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3fa1dddfca5c8793c7a77300d3fd33c42e0a7d0a7b6f028087d6a157e5fa947f",
+    "verdict": "pass"
+  },
+  {
+    "id": "three",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 three 的儿童语境译义“三”；例句“I can see three birds.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8c7f4e893b9ec0fde3be877a34ee155ee6a2f9b38e47ed7c88d8d3fc68a54fe3",
+    "verdict": "pass"
+  },
+  {
+    "id": "four",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 four 的儿童语境译义“四”；例句“We have four cups.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9e47c8895b10790d693d42ac9fea3a6d4b416e2fd764486f5b876151df180b8b",
+    "verdict": "pass"
+  },
+  {
+    "id": "five",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 five 的儿童语境译义“五”；例句“There are five stars.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "61842d2547680f16849e2fb41099d8b9e46d9e8c5687a11ea89c4c630def7dce",
+    "verdict": "pass"
+  },
+  {
+    "id": "six",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 six 的儿童语境译义“六”；例句“I have six pencils.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f46068b3515a3588e4db5e19b0dff138819ed32a71991b98338ee4c6240ac8d5",
+    "verdict": "pass"
+  },
+  {
+    "id": "seven",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 seven 的儿童语境译义“七”；例句“We can see seven fish.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "995441d33d2f8f738a228c84cb4bc79ab227da1fde98a9c0cde7674d728a2686",
+    "verdict": "pass"
+  },
+  {
+    "id": "eight",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 eight 的儿童语境译义“八”；例句“There are eight chairs.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5a8957f42f0b86470814471f6b5bd89d91609cf6be5b58d3b65116f4dacf2b3c",
+    "verdict": "pass"
+  },
+  {
+    "id": "nine",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 nine 的儿童语境译义“九”；例句“I have nine blocks.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "843527037cf7ec7e8b538839cb8b58279f192292672a60c7f51b408bf50170c9",
+    "verdict": "pass"
+  },
+  {
+    "id": "ten",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ten 的儿童语境译义“十”；例句“Let us count to ten.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "834a88b8ab22cff9888590640d90a2b2280a9adeffc79181528bbcc13558856e",
+    "verdict": "pass"
+  },
+  {
+    "id": "eye",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 eye 的儿童语境译义“眼睛”；例句“Close one eye.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "dda9c186ab5cbef25eeb73e2703c0a2c6197b225534e9c9548e88760326582b4",
+    "verdict": "pass"
+  },
+  {
+    "id": "ear",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ear 的儿童语境译义“耳朵”；例句“Can you touch your ear?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "eb2eabdf7f94237bd6db736997baeb5f95776c19cb1e0ce00f80cf8513e4c8f2",
+    "verdict": "pass"
+  },
+  {
+    "id": "nose",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 nose 的儿童语境译义“鼻子”；例句“Touch your nose.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a2e53a5b62a7f86437f2e8886c02091730997c5ef6c52559e25e031af007ec97",
+    "verdict": "pass"
+  },
+  {
+    "id": "mouth",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 mouth 的儿童语境译义“嘴巴”；例句“Open your mouth.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ae0b88499551fa03fe34200bf566cf883ee53055f5242696c60b456f7624b215",
+    "verdict": "pass"
+  },
+  {
+    "id": "hand",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hand 的儿童语境译义“手”；例句“Hold my hand.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ba3a382e5cff7084bcf6016bcb8f551e3a18e0d375e2a7c9f2f8238a234fa363",
+    "verdict": "pass"
+  },
+  {
+    "id": "foot",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 foot 的儿童语境译义“脚”；例句“Put your foot in your shoe.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "db7cc21d52959cd91400b69e843592bbe8a5151b856bb9c9e27e17c0e00c3a14",
+    "verdict": "pass"
+  },
+  {
+    "id": "head",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 head 的儿童语境译义“头”；例句“Put the hat on your head.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "69c128fc114da320b57b604a16ee8d1772db6a2b724c270566e9fbde069748bb",
+    "verdict": "pass"
+  },
+  {
+    "id": "hair",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hair 的儿童语境译义“头发”；例句“My hair is wet.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "004f45baecebc510df0385e7df7d89d784a546b620559af8ade61dc501795f8b",
+    "verdict": "pass"
+  },
+  {
+    "id": "mom",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "mum 是英式妈妈，固定 id=mom 不影响词义；例句使用同一 mum 拼写。",
+    "content_sha256": "c3b56490587307d4bab9a6528decfb14d6ebf8141495921a2e814d98a9129e3a",
+    "verdict": "pass"
+  },
+  {
+    "id": "dad",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dad 的儿童语境译义“爸爸”；例句“My dad is cooking dinner.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f924ac9276db1e02a9f15a030f0f9f85d3f747acd30747fc7006fd780692c615",
+    "verdict": "pass"
+  },
+  {
+    "id": "sister",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "sister 可指姐姐或妹妹；中文姐妹涵盖两者，未误限年长。",
+    "content_sha256": "0f8864ae6137fa606b02d927022accabcab5b512a0ad38d6d1a271619606b19f",
+    "verdict": "pass"
+  },
+  {
+    "id": "brother",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "brother 可指哥哥或弟弟；中文兄弟涵盖两者，未误限年长。",
+    "content_sha256": "e7020163c4063c7e45015979de4e3849add5a14f10e5f5f66adaff4c5b14846b",
+    "verdict": "pass"
+  },
+  {
+    "id": "grandma",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对父母双方的祖母，奶奶、姥姥/外婆都保留；日常 call my grandma 自然。",
+    "content_sha256": "c6c9166d0735dd9f7ad198a7e0c2075e44e9b525694b182db14ed7f30af863da",
+    "verdict": "pass"
+  },
+  {
+    "id": "grandpa",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对父母双方的祖父，爷爷、姥爷/外公都保留；tell me a story 搭配自然。",
+    "content_sha256": "b80f2dc1287a45c99b7491bf118d05daab245918699237c0b42e0c38152121d6",
+    "verdict": "pass"
+  },
+  {
+    "id": "baby",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 baby 的儿童语境译义“宝宝”；例句“The baby is sleeping.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c89138a2b5653fa466570d550a0b784fd4f510f050637a6530d28af7dc06578f",
+    "verdict": "pass"
+  },
+  {
+    "id": "family",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 family 的儿童语境译义“家庭”；例句“I love my family.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f5fcb7fe50cb4465e734194aa69bd93830104abcc63f2994893db17125d2b8b8",
+    "verdict": "pass"
+  },
+  {
+    "id": "book",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 book 的儿童语境译义“书”；例句“Let us read this book.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a8022107a3535b8f9cde86e58b1391c859b90536cb1a9d877c3399e30474419c",
+    "verdict": "pass"
+  },
+  {
+    "id": "pen",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "pen 不只指钢笔，当前已包含圆珠笔等，不与 pencil 混同。",
+    "content_sha256": "f92b2fe7fb9eea78be48f341c26eacbf797f2163efdc67fd15649fd8417d1f9f",
+    "verdict": "pass"
+  },
+  {
+    "id": "pencil",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pencil 的儿童语境译义“铅笔”；例句“Draw a cat with your pencil.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3550872a968da6fda08903b9455f76d96bf89bf5f0a1f29b90b383f3d61235f2",
+    "verdict": "pass"
+  },
+  {
+    "id": "bag",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bag 的儿童语境译义“包、袋子”；例句“Put the book in your bag.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "72ada00eae12c24ac2a0797b44e983594146d003dc439dc345fbcacad4efed55",
+    "verdict": "pass"
+  },
+  {
+    "id": "desk",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：书桌、课桌、办公桌均为 desk 常用义；例句自然。SVG 路径包含桌面、桌腿、抽屉、书及台灯，内容与学习义一致；本次为源码语义核对，不作视觉可辨识性背书。",
+    "content_sha256": "9e464f9177c5083eaa84e0316f6dd65c32c363e6b46fe18865388587141786da",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "zh",
+      "issue": "desk 包括书桌、办公桌和课桌。仅写课桌会使家庭场景迁移受限。",
+      "suggested": "书桌；课桌"
+    }
+  },
+  {
+    "id": "teacher",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 teacher 的儿童语境译义“老师”；例句“Our teacher reads us a story.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3ad25bc4a43c45f8b96d549550b379e67887858ed9e15c4c332473687576b107",
+    "verdict": "pass"
+  },
+  {
+    "id": "school",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 school 的儿童语境译义“学校”；例句“I walk to school.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "00ba5ee6a0b4e3b47355a74a231f3501736d649e99017e0737fb201b9d2eddaf",
+    "verdict": "pass"
+  },
+  {
+    "id": "ruler",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ruler 的儿童语境译义“尺子”；例句“Use a ruler to draw a line.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "78bce9bf7f1a7133967df46b2c11a932b44faf9424ad5038ef9a5192af580b5f",
+    "verdict": "pass"
+  },
+  {
+    "id": "sun",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sun 的儿童语境译义“太阳”；例句“The sun is bright today.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7390d215fbd82c93375d76c87b87b429a271007ac91965dc2916cc19c0e9e8fe",
+    "verdict": "pass"
+  },
+  {
+    "id": "moon",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 moon 的儿童语境译义“月亮”；例句“I can see the moon.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a1fc90b45fb52c5458cf9966bbfadc1a26874370d5ca23eb55cad7bd7631155f",
+    "verdict": "pass"
+  },
+  {
+    "id": "star",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 star 的儿童语境译义“星星”；例句“That star is very bright.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1d5404d333e5f05fb2109f2884b8998f6e6cfa77355ef709e1cec234f7feb19c",
+    "verdict": "pass"
+  },
+  {
+    "id": "tree",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tree 的儿童语境译义“树”；例句“There is a tall tree by the river.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e8087c3e9acab622cc38e846d68a4b35eaeec23034557e0bfdf88e0775b75d99",
+    "verdict": "pass"
+  },
+  {
+    "id": "flower",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 flower 的儿童语境译义“花”；例句“This flower smells nice.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cb7873ed8955d8bd689fbe68613925e54a6501628fed2c22878db8500c623c0d",
+    "verdict": "pass"
+  },
+  {
+    "id": "rain",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 rain 的儿童语境译义“雨”；例句“The rain makes the ground wet.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ff64168cb41322eda298004d7c475607eb000a5d4f050e36c123d3bd33df81f5",
+    "verdict": "pass"
+  },
+  {
+    "id": "snow",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 snow 的儿童语境译义“雪”；例句“The snow is cold and white.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "05205c33379da16b4155f3daf34038bfe43b6d932ca7e3aa4846ace3d137b1bf",
+    "verdict": "pass"
+  },
+  {
+    "id": "cloud",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cloud 的儿童语境译义“云”；例句“A grey cloud is over the town.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "29c12293a280b29c903ec6862b1d7c192ce5cfcdf7d23d610bc49e9a7a9d4545",
+    "verdict": "pass"
+  },
+  {
+    "id": "tiger",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tiger 的儿童语境译义“老虎”；例句“The tiger has stripes.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e4015c921049688de6dcb97b271fc0d40e37189c8b5ece1145463651e6da70b6",
+    "verdict": "pass"
+  },
+  {
+    "id": "zebra",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 zebra 的儿童语境译义“斑马”；例句“The zebra is black and white.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "05e436ab737a271290a8c96a8ea417f912a454e3eb597d879ee186029b1cbcb1",
+    "verdict": "pass"
+  },
+  {
+    "id": "giraffe",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 giraffe 的儿童语境译义“长颈鹿”；例句“The giraffe has a long neck.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4b75919de1dd63e13f76d3ab3524b2e7e2c2bd8cea3e091392d2f6ea7b53421d",
+    "verdict": "pass"
+  },
+  {
+    "id": "horse",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 horse 的儿童语境译义“马”；例句“The horse runs across the field.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3c45f2e1b9395209ef393a5a650a28e42d9b2c8ff288b541a2552f3cbcef2716",
+    "verdict": "pass"
+  },
+  {
+    "id": "sheep",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "sheep 单复数同形；当前 The sheep eats grass 明确单数，与动词一致。",
+    "content_sha256": "f18ab0ce0c9c7e0064735129c3148f5580fb06bf9ad4b2ab41d440c6486cfccd",
+    "verdict": "pass"
+  },
+  {
+    "id": "cow",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：母牛（如奶牛）不再把 cow 限制为产奶牛；田野例句与动物图标一致。",
+    "content_sha256": "1ce5f065f1fd39597c68ac2f7f3f9f3f1b83b15b3e5c1a8a2cd8ae9c6ba784a0",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "zh",
+      "issue": "cow 更广是成年母牛，不仅限奶牛。儿童句子没有限定产奶，当前中文范围偏窄。",
+      "suggested": "母牛；奶牛"
+    }
+  },
+  {
+    "id": "pig",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pig 的儿童语境译义“猪”；例句“The pig is playing in the mud.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9db0ff79b462de166e128d238ddf5e74955f106c372cadce1ddefc30cf76da85",
+    "verdict": "pass"
+  },
+  {
+    "id": "frog",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 frog 的儿童语境译义“青蛙”；例句“The frog can jump.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "048de893613284f28a59be5a0d4b13caf7fde74605c5a4759d010ab8f5e073c2",
+    "verdict": "pass"
+  },
+  {
+    "id": "snake",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 snake 的儿童语境译义“蛇”；例句“The snake moves through the grass.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c26730cdd0b40bcf9848a9e50472dfe2d2bef25815c3fa7239e8462fde622106",
+    "verdict": "pass"
+  },
+  {
+    "id": "spider",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 spider 的儿童语境译义“蜘蛛”；例句“The spider has eight legs.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "da98fefc3addff8087bfc68676b82cf8c39627d0b956eca666a6d362071df017",
+    "verdict": "pass"
+  },
+  {
+    "id": "icecream",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ice cream 的儿童语境译义“冰淇淋”；例句“I like chocolate ice cream.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "04e9577ea8d7915d9c63d3a2f6ae289d52ea6103fc79bed3f4541f8c1f1ed169",
+    "verdict": "pass"
+  },
+  {
+    "id": "juice",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 juice 的儿童语境译义“果汁”；例句“Would you like some apple juice?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4536888d880ada9de78cbac144f44dfeca655474e631360eb378af543fbed9c1",
+    "verdict": "pass"
+  },
+  {
+    "id": "water",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 water 的儿童语境译义“水”；例句“May I have some water?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6c838782337801084a45ccc43e85838734d0b334900ed4b7860796d22cd18625",
+    "verdict": "pass"
+  },
+  {
+    "id": "carrot",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 carrot 的儿童语境译义“胡萝卜”；例句“This carrot is orange.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c5ccf128cc4d9d5aa90158a761b0956cc56576c1b9ba3080147efb0c3e33debd",
+    "verdict": "pass"
+  },
+  {
+    "id": "potato",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 potato 的儿童语境译义“土豆”；例句“We can cook this potato.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ad33e3e8777b9ece070aa317d188d98d7c368229331d2a91b5eabed83ead33f3",
+    "verdict": "pass"
+  },
+  {
+    "id": "tomato",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tomato 的儿童语境译义“西红柿”；例句“Put a tomato in the salad.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a7ff8ec9d7a600558f4265b5d4b88e7864f65b8de0daac77daa7a0d8f6e1486c",
+    "verdict": "pass"
+  },
+  {
+    "id": "pear",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pear 的儿童语境译义“梨”；例句“This pear is sweet.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b2f3c5e4adc1d4329078d0870ea1ebc7e0f085e9024cde1886c255e42bd6c6bd",
+    "verdict": "pass"
+  },
+  {
+    "id": "lemon",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lemon 的儿童语境译义“柠檬”；例句“The lemon tastes sour.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1d05adf69ac982465635e29d345577aa7e140ba67bbfb0a996736f4672ccad71",
+    "verdict": "pass"
+  },
+  {
+    "id": "mango",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 mango 的儿童语境译义“芒果”；例句“Let us share a mango.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "02cd4b543635e865daad8a41a248de89edb10aae281103fdff44372ab4f28b4a",
+    "verdict": "pass"
+  },
+  {
+    "id": "pineapple",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pineapple 的儿童语境译义“菠萝”；例句“I like fresh pineapple.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "65ffea65bccc21dace6bfb2c378f7b8772cf8f90cf3171c871dab7e97701af06",
+    "verdict": "pass"
+  },
+  {
+    "id": "burger",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 burger 的儿童语境译义“汉堡”；例句“I would like a burger, please.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3839631ce3112f2741cc082e2b80a084b0aafbf04f14f1dc858f30491ee8a53c",
+    "verdict": "pass"
+  },
+  {
+    "id": "chocolate",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 chocolate 的儿童语境译义“巧克力”；例句“We can share the chocolate.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b080eb4040ae55e81cda384cf23747bab15256bbc822a41ca7ae99ae252e7dec",
+    "verdict": "pass"
+  },
+  {
+    "id": "tshirt",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 T-shirt 的儿童语境译义“T恤”；例句“I wear a T-shirt on sunny days.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3a9d9a8a422be7ede676486344e849a70cdad4a523d52b642bd392c8a580d245",
+    "verdict": "pass"
+  },
+  {
+    "id": "dress",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dress 的儿童语境译义“连衣裙”；例句“She is wearing a blue dress.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b8f31063e6b5dfdceb79c52ba1947dcc9cca2f8cf533817deb74047c30112a18",
+    "verdict": "pass"
+  },
+  {
+    "id": "hat",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hat 的儿童语境译义“帽子”；例句“Put on your hat.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "239aeae2984a0fd0c7a090731c8fa0a8de555fc0adcf560a8be11f619d979875",
+    "verdict": "pass"
+  },
+  {
+    "id": "shoes",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 shoes 的儿童语境译义“鞋子”；例句“My shoes are by the door.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5851a08396f23e22e75086cd5a741eb3d3f061b0cb5427ff45f9fd7824468d52",
+    "verdict": "pass"
+  },
+  {
+    "id": "socks",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 socks 的儿童语境译义“袜子”；例句“These socks keep my feet warm.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c83a35af15b77c343162cae875f8898ce89e870803ae228435d34f9a5c5bf499",
+    "verdict": "pass"
+  },
+  {
+    "id": "jacket",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 jacket 的儿童语境译义“夹克”；例句“Take your jacket with you.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b578d4a62bf94602a4245617eb739476e8474db38d545e385d953529af7e7461",
+    "verdict": "pass"
+  },
+  {
+    "id": "jeans",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 jeans 的儿童语境译义“牛仔裤”；例句“My jeans are blue.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "83b2a6f9441ecd488e246ac1e1e35c7bacb1897d3c7e270c07c60162b88bd5bc",
+    "verdict": "pass"
+  },
+  {
+    "id": "glasses",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 glasses 的儿童语境译义“眼镜”；例句“I wear glasses to read.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b5e3a65386bf6d52acff10beeb611f2a6a0a66abd0d46943f5ae30ab5acb9953",
+    "verdict": "pass"
+  },
+  {
+    "id": "boots",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 boots 的儿童语境译义“靴子”；例句“Put on your boots in the rain.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7e204afbf13e0fae04c82c27575e5d4b7a1e4958b45aaa2114638e190d27367f",
+    "verdict": "pass"
+  },
+  {
+    "id": "watch",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 watch 的儿童语境译义“手表”；例句“Look at the time on my watch.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "895ee1f32b21bc1cd34eccd34ec830a4c6ba8f7a0e5c492796a0d8f1f4dcfadd",
+    "verdict": "pass"
+  },
+  {
+    "id": "bed",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bed 的儿童语境译义“床”；例句“My teddy bear is on the bed.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f01c48fb7a4e77530a20db803240bb4436a269f57a5bdabd07227cab0c64cc0a",
+    "verdict": "pass"
+  },
+  {
+    "id": "chair",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 chair 的儿童语境译义“椅子”；例句“Please sit on this chair.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "870013e5779c9deefcd475314229d2bed07012234380730b0cbe10af5e7e3dab",
+    "verdict": "pass"
+  },
+  {
+    "id": "door",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 door 的儿童语境译义“门”；例句“Please close the door.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "163a9a3de864c77f398d95e89926dc01799032501ff7851a0452d7037e31052a",
+    "verdict": "pass"
+  },
+  {
+    "id": "window",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 window 的儿童语境译义“窗户”；例句“Look out of the window.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3e4035858437a59ee4d0b169b6313e66e4847737b54a7ac95d8d1c22f9f248bb",
+    "verdict": "pass"
+  },
+  {
+    "id": "clock",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 clock 的儿童语境译义“时钟”；例句“The clock is on the wall.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "96c78dc93e7718394a9f203d3d880b651206cb4f3c9bfdcaa1bb4e1261e9e66c",
+    "verdict": "pass"
+  },
+  {
+    "id": "lamp",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lamp 的儿童语境译义“灯（如台灯）”；例句“Please turn on the lamp.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "dfd8c227e1414ea4828c84909e505c9f3a379f8db34121beac764ad0db72c3d0",
+    "verdict": "pass"
+  },
+  {
+    "id": "phone",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "现代 phone 可指手机和电话，手机图标与当前拿在包里的句子一致。",
+    "content_sha256": "e9aba2b5a4809deed9303c1959b1549839b042865f08c3bc693e94cfa90a184f",
+    "verdict": "pass"
+  },
+  {
+    "id": "tv",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 TV 的儿童语境译义“电视”；例句“We watch TV after dinner.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "222d61ab680d26300e524b06893d9bd9f587c448f039d80397d2ea4351b08fd1",
+    "verdict": "pass"
+  },
+  {
+    "id": "bath",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "bath 包含泡澡及英式浴缸，当前中文已明示；have a warm bath 例句为泡澡。",
+    "content_sha256": "545f259f08bd30a0af60ffdb38a7f04c41069c5a86ee597d5db2c731a6b9328b",
+    "verdict": "pass"
+  },
+  {
+    "id": "mirror",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 mirror 的儿童语境译义“镜子”；例句“I can see myself in the mirror.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2e26f2d7169d0557a2356cff7fe28e80f56756d620a28f333a6acef674aacaf8",
+    "verdict": "pass"
+  },
+  {
+    "id": "kitchen",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 kitchen 的儿童语境译义“厨房”；例句“We cook in the kitchen.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ffa9b735247d96533094f525e4683292afd62a1e02655f54e70cb8c4fbc110b4",
+    "verdict": "pass"
+  },
+  {
+    "id": "garden",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 garden 的儿童语境译义“花园”；例句“We grow flowers in our garden.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "85aa86a1b98643646550df7dc6bc2114c3c0f92d5db780b6cc1da7bdcb9f7231",
+    "verdict": "pass"
+  },
+  {
+    "id": "football",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 football 的儿童语境译义“足球”；例句“Let us play football.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4a0c5c35106afbff71f03a8991e95350cc2031bc1bb5dd882d3769c9b17b8264",
+    "verdict": "pass"
+  },
+  {
+    "id": "basketball",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 basketball 的儿童语境译义“篮球”；例句“I play basketball with my friends.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5d70bb31962d2232178e6bd5d3c8695af472580ac388ea640b2bdff322f0d28b",
+    "verdict": "pass"
+  },
+  {
+    "id": "tennis",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tennis 的儿童语境译义“网球”；例句“We play tennis in the park.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0c756b803dbfa49897b2acb4db5dd1e904bcabfe5ebd55f75f9246457f7a1b29",
+    "verdict": "pass"
+  },
+  {
+    "id": "doll",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 doll 的儿童语境译义“娃娃”；例句“My doll has a red hat.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d68bf2416e3485ed18e586b59a9205241f357bb1bb07d88db0213e8c1226bbca",
+    "verdict": "pass"
+  },
+  {
+    "id": "kite",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 kite 的儿童语境译义“风筝”；例句“We fly a kite in the park.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "59094829ea05f65bfa832be74a36c28d404635362d61ea17502296820be33742",
+    "verdict": "pass"
+  },
+  {
+    "id": "robot",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 robot 的儿童语境译义“机器人”；例句“My toy robot can walk.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6084322326642e5b6534e7535c47b4531872e842220af22724ee585b8f8a3bb5",
+    "verdict": "pass"
+  },
+  {
+    "id": "guitar",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 guitar 的儿童语境译义“吉他”；例句“My sister plays the guitar.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d78b81718d82d9812075f83f9c45e4245cafa0d31299f7b49a1ab795219bc1e1",
+    "verdict": "pass"
+  },
+  {
+    "id": "piano",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 piano 的儿童语境译义“钢琴”；例句“I like playing the piano.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "205e7220906540defd6839c5dedbf08c74e7491eabd9c791345ad0da2865c295",
+    "verdict": "pass"
+  },
+  {
+    "id": "game",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 game 的儿童语境译义“游戏”；例句“Let us play a game.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "972ed40bd8e23fd90e2ba9ac31fd4f653e2e4b5f769a5a804732526211e6110e",
+    "verdict": "pass"
+  },
+  {
+    "id": "teddybear",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 teddy bear 的儿童语境译义“泰迪熊”；例句“My teddy bear is soft.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ce4193f3e3fc03a667cd1796b508452b6e3f8ce118c2aaf38480132b28519e2f",
+    "verdict": "pass"
+  },
+  {
+    "id": "car",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 car 的儿童语境译义“汽车”；例句“We go to the park by car.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7b2713cf3b964913348ef0028dc0ffb2da34bfcd024f4db945dfd4df06ef115c",
+    "verdict": "pass"
+  },
+  {
+    "id": "bus",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bus 的儿童语境译义“公共汽车”；例句“We take the bus to school.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "593d73df801619d15b87407f0c7cc63faa0c037b2b185583f1784227d0f27039",
+    "verdict": "pass"
+  },
+  {
+    "id": "train",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 train 的儿童语境译义“火车”；例句“The train is at the station.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6fbf258151033d8782c12d114c8ce61254ff45f185beb74a0d0ec890170ba818",
+    "verdict": "pass"
+  },
+  {
+    "id": "plane",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 plane 的儿童语境译义“飞机”；例句“I can see a plane in the sky.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "bb2fd6327105a3a76dc6d089b777dae1552a50052cd57af356e68a634a3b72db",
+    "verdict": "pass"
+  },
+  {
+    "id": "boat",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 boat 的儿童语境译义“小船”；例句“The boat is on the lake.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "da3313f68c0f7f061ae3b6cb0f7789e9f15546b4480d2143e3771c29db855fab",
+    "verdict": "pass"
+  },
+  {
+    "id": "bike",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bike 的儿童语境译义“自行车”；例句“I ride my bike in the park.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "573da3af56ed1954f466076aa2bfb759c602d20877e3f28d836d4d2b594c2d24",
+    "verdict": "pass"
+  },
+  {
+    "id": "helicopter",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 helicopter 的儿童语境译义“直升机”；例句“The helicopter flies over the trees.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2c5642a796a42157012855270727969a836972303807d6fc8bfc6a5a4b1659d1",
+    "verdict": "pass"
+  },
+  {
+    "id": "ship",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ship 的儿童语境译义“轮船”；例句“The ship is on the sea.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d4e5a881614c390b363418847a7d3991e35a289abc53780542b4f9b24b27ef1d",
+    "verdict": "pass"
+  },
+  {
+    "id": "run",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 run 的儿童语境译义“跑”；例句“The children run across the field.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1548f12933de58b71f519443d586e85a0c9991e09d9f5e1963fc979e3986b3f1",
+    "verdict": "pass"
+  },
+  {
+    "id": "jump",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 jump 的儿童语境译义“跳”；例句“Kangaroos can jump very high.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4083b7a71bd1cf872c821d99a5cd3bcac1dbff5d8a2ba0f4a402dd6aebdc474d",
+    "verdict": "pass"
+  },
+  {
+    "id": "swim",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 swim 的儿童语境译义“游泳”；例句“Dolphins swim in the sea.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1b8f34fe8d07b486a96918a997a2cb71f19ff8a50a60719d246b75ca14ea50d9",
+    "verdict": "pass"
+  },
+  {
+    "id": "sing",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sing 的儿童语境译义“唱歌”；例句“Let us sing a song.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "431eaa7e23aba346f1d99cbf79d9c76ebb80811b8c80283901c0293cedd2fa77",
+    "verdict": "pass"
+  },
+  {
+    "id": "dance",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dance 的儿童语境译义“跳舞”；例句“I like to dance to music.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4b2c2ff718e786f0561bece027eea11cad5b1f90914cd1f0bec64a95ab818a48",
+    "verdict": "pass"
+  },
+  {
+    "id": "read",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 read 的儿童语境译义“读、阅读”；例句“Can you read this word?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2772f4d06a4d27c88696fdc7bb4707b1cdae8ac8c2ac2e9be8d9bfdad1ec5ae3",
+    "verdict": "pass"
+  },
+  {
+    "id": "draw",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 draw 的儿童语境译义“画画”；例句“Let us draw a tree.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "dee5ce48179a9a9dd0cdbd814dfd2f9914b1136360b63085ae1b1f24dbc4c900",
+    "verdict": "pass"
+  },
+  {
+    "id": "sleep",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sleep 的儿童语境译义“睡觉”；例句“I sleep in my bed.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "de1f22dd2298e5df395d5281d629d5bb332938a326d264dc0ee70d69b35feaec",
+    "verdict": "pass"
+  },
+  {
+    "id": "eat",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 eat 的儿童语境译义“吃”；例句“We eat lunch together.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cb159aa42eba38ce6a9d58ba9bf596df418bc1de01248a5bdf6d40646a0c6543",
+    "verdict": "pass"
+  },
+  {
+    "id": "drink",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 drink 的儿童语境译义“喝”；例句“I drink water when I am thirsty.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "51ef858826859a11fc71b764fbe480648be6b0b8dea9f7dd8ec1b117279481ef",
+    "verdict": "pass"
+  },
+  {
+    "id": "dolphin",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dolphin 的儿童语境译义“海豚”；例句“Dolphins live in the sea.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "36b532c8df7995791822862503577dac1bfe05ac50e83578ae33e78e2b0e36cd",
+    "verdict": "pass"
+  },
+  {
+    "id": "shark",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 shark 的儿童语境译义“鲨鱼”；例句“A shark has sharp teeth.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b0acbf0e450495eb3a6d111541fbbe8baa6caa1372f2ee066b2c2d88d306af6a",
+    "verdict": "pass"
+  },
+  {
+    "id": "whale",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 whale 的儿童语境译义“鲸鱼”；例句“The whale is very big.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1793d4c08a7fa6890b6344561d2bfb9590df2f060b27421c598ad65b602033d1",
+    "verdict": "pass"
+  },
+  {
+    "id": "penguin",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 penguin 的儿童语境译义“企鹅”；例句“Penguins can't fly.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8ae4a8c43b1e22feed84862991f944760bb5b9ef7f28794499e822ead4e1bab1",
+    "verdict": "pass"
+  },
+  {
+    "id": "kangaroo",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 kangaroo 的儿童语境译义“袋鼠”；例句“A kangaroo can jump high.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b15a8faf7c5a01a797c32a359177d987a7b135d4e485f3d5a83c1d0a88704f4e",
+    "verdict": "pass"
+  },
+  {
+    "id": "bear",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bear 的儿童语境译义“熊”；例句“The bear likes honey.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d6c8e2211513af90f02e3fe4ad4229a68cf8ba395e4c7094793029f9b8d1a316",
+    "verdict": "pass"
+  },
+  {
+    "id": "bat",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bat 的儿童语境译义“蝙蝠”；例句“A bat sleeps in the day.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1e5d71b9e65c505bef8db567274a9db2b210d9b6dac248e86c32cf32753745a1",
+    "verdict": "pass"
+  },
+  {
+    "id": "parrot",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 parrot 的儿童语境译义“鹦鹉”；例句“My parrot can talk.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4964b4d1ae8733dc79f4011c79c9e2e9a1d4d50e365a1d3704415d9b5c80fb03",
+    "verdict": "pass"
+  },
+  {
+    "id": "snail",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 snail 的儿童语境译义“蜗牛”；例句“A snail is very slow.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4dd8a46028a4a4f471dd034f0ca86384623e02833b789eccf6be63ecb046d1cd",
+    "verdict": "pass"
+  },
+  {
+    "id": "fly",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "动物类别中的 fly 是苍蝇，句子 A fly is on the window 不混入飞行动词。",
+    "content_sha256": "74a4ce7b2245c7902208adfc1b483653b0bf4839090f62a0476778baf9cbca2f",
+    "verdict": "pass"
+  },
+  {
+    "id": "hospital",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hospital 的儿童语境译义“医院”；例句“The doctor works in a hospital.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "30b6d69f10eecf99a04f1dac09e1e802b950f3ed9cce16bb152faaa22cd7dd40",
+    "verdict": "pass"
+  },
+  {
+    "id": "library",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 library 的儿童语境译义“图书馆”；例句“We read books in the library.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b11704f961826c957dd34f89aefa8392d7a0491e034a11a8a399ff0cb657577f",
+    "verdict": "pass"
+  },
+  {
+    "id": "cinema",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cinema 的儿童语境译义“电影院”；例句“Let's watch a film at the cinema.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8900ff4d875545a1a4e83ac9ba686992ac281894b11e21a01002ba4e08abee10",
+    "verdict": "pass"
+  },
+  {
+    "id": "supermarket",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 supermarket 的儿童语境译义“超市”；例句“Mum buys food at the supermarket.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1cc3fb27ee496906d065b562a85c5e6e14aa42f6f982b4aaf778e817231e4cec",
+    "verdict": "pass"
+  },
+  {
+    "id": "farm",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 farm 的儿童语境译义“农场”；例句“There are cows on the farm.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "86e8377499cf670f6e98133d263b73f8faa0b94bb9d3bf2eeb5ef7cd6602e008",
+    "verdict": "pass"
+  },
+  {
+    "id": "park",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 park 的儿童语境译义“公园”；例句“We play in the park.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d71393d0e7f9db6617105da1c4d3a6b712edea57acb756e2937fd4eae33bf053",
+    "verdict": "pass"
+  },
+  {
+    "id": "beach",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 beach 的儿童语境译义“海滩”；例句“We make sandcastles on the beach.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5bb3de5f0a9321219b7ea179c9feac69301ed190ad889af74a87e4db23c56df6",
+    "verdict": "pass"
+  },
+  {
+    "id": "pool",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 swimming pool 的儿童语境译义“游泳池”；例句“I swim in the swimming pool.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2f5727c2cb259a6abd8c73049278139f29f1f579d43774894ee78bdf6c4f1eb7",
+    "verdict": "pass"
+  },
+  {
+    "id": "city",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 city 的儿童语境译义“城市”；例句“The city is big and busy.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8176e89c1ff9db5a7bfd6117cc38dfc6b2690650077b8b33437d004ef883bdc4",
+    "verdict": "pass"
+  },
+  {
+    "id": "village",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 village 的儿童语境译义“村庄”；例句“My grandma lives in a village.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d01db80c654cdbacd6af6e6884c36eea5d2e6e97a8d18e97559146d128efaf6e",
+    "verdict": "pass"
+  },
+  {
+    "id": "cafe",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cafe 的儿童语境译义“咖啡馆”；例句“We drink juice at the cafe.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ddf7314c3b3b5c80c5426ce9d1b19cba78db393c50cbb60a8bb5bbaec463619f",
+    "verdict": "pass"
+  },
+  {
+    "id": "busstop",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核第二次修订：词头 bus station、中文汽车总站/公交总站及发车例句一致；SVG 内容含 BUS 建筑站棚、停靠公交车及站台，已替换路边站牌，源码图义核对通过（非视觉辨识测试）。",
+    "content_sha256": "cc53dca68264ddb052448823f33d9b19dfab4b839773728f5880b9431d3af8c1",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "major",
+      "field": "emoji",
+      "issue": "汽车总站的文字已修正，但 🚏 仍是路边站牌，不能区分 bus station 与 bus stop。",
+      "suggested": "采用公交总站建筑/多车停靠场景，或取消该卡图片辨义题。"
+    }
+  },
+  {
+    "id": "sunny",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sunny 的儿童语境译义“晴朗的”；例句“It's sunny today. Let's go out!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b5d659767ed9d70a13337f5bfd16360d130dfa5b1e2901fedc744d4dc518e524",
+    "verdict": "pass"
+  },
+  {
+    "id": "cloudy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cloudy 的儿童语境译义“多云的”；例句“The sky is grey and cloudy.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6d428c6759a4f1035b9f64e51ce2cc248a588171566a8fd862d8de457d19e54e",
+    "verdict": "pass"
+  },
+  {
+    "id": "windy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 windy 的儿童语境译义“刮风的”；例句“It's windy. My hat flew away!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ef9aac7ea24edeea0f618a183839bdedc011ef704447c14f8a5db5ea485a4ee3",
+    "verdict": "pass"
+  },
+  {
+    "id": "rainbow",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 rainbow 的儿童语境译义“彩虹”；例句“Look! There is a rainbow in the sky.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6fd9b911671310b573af5aebcf3e0d54e6d48455073e062e636819311a56cdd3",
+    "verdict": "pass"
+  },
+  {
+    "id": "storm",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 storm 的儿童语境译义“暴风雨”；例句“The storm is loud at night.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "72fbdd7c23f87b67d770eae81ae097054581f84dc2afa05784a38731e5ea20c5",
+    "verdict": "pass"
+  },
+  {
+    "id": "hot",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hot 的儿童语境译义“热的”；例句“It's hot in summer.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7a84d23dca182803a5126a5cfe20543410836d56bcf8688bc276c6b573b37769",
+    "verdict": "pass"
+  },
+  {
+    "id": "cold",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cold 的儿童语境译义“冷的”；例句“It's cold in winter.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0bef6413626e08ae9f2ad2d4cf0f345848dfad9a04aab447be61d171b74630ca",
+    "verdict": "pass"
+  },
+  {
+    "id": "snowy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 snowy 的儿童语境译义“下雪的”；例句“It's snowy. Let's make a snowman!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "79cd007c05a7c2149ac20f71e7ea8d5b84da1d8e8576c435cd861db3fbc22c65",
+    "verdict": "pass"
+  },
+  {
+    "id": "happy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 happy 的儿童语境译义“开心的”；例句“I'm happy on my birthday.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "74641cf5ea4b7b48f94ff263a7eb36a5de4e90cfb2c9882825ddb8662662e795",
+    "verdict": "pass"
+  },
+  {
+    "id": "sad",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sad 的儿童语境译义“难过的”；例句“He is sad because he lost his toy.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d6ddeb3a11e48592ffc8d7647ee9920d903e20c6dc23cff85e1ea26ab0818461",
+    "verdict": "pass"
+  },
+  {
+    "id": "angry",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "dad angry about the mess 是情绪例句，未把儿童人格描述为坏；亦可另做非命令式情绪表达教学。",
+    "content_sha256": "ae26a6869a688a86ba4fe48226ed1defc2611d7e664af6e3b766492386865a56",
+    "verdict": "pass"
+  },
+  {
+    "id": "tired",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tired 的儿童语境译义“累的”；例句“I'm tired after school.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a0b7cc5537839e106996887bca88c40adcf376030b063a774b014871a95f2403",
+    "verdict": "pass"
+  },
+  {
+    "id": "hungry",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hungry 的儿童语境译义“饿的”；例句“I'm hungry. Can I have a sandwich?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c5ffcbcb1d0e796c5733acac5d2e593a9eeea8741774eb2f3c52949aae7dd9b6",
+    "verdict": "pass"
+  },
+  {
+    "id": "brave",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 brave 的儿童语境译义“勇敢的”；例句“The brave girl helps the cat.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "021234da9a6c23005820fea3b04e323bfdca1b5afe4d826978b4e68ad9e2ebf4",
+    "verdict": "pass"
+  },
+  {
+    "id": "clever",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "clever at maths 为可接受搭配，不必须改成 good at 才算语法正确。",
+    "content_sha256": "71f10ac26bca083f4ba56aedfa73b75d738da0f354aca3d2b88c1975c5081edd",
+    "verdict": "pass"
+  },
+  {
+    "id": "strong",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 strong 的儿童语境译义“强壮的”；例句“An elephant is very strong.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "218a2fbbff3cc5016b7e60ddcadf1b2ad322178054af24e2f86df1c144e65a34",
+    "verdict": "pass"
+  },
+  {
+    "id": "quick",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 quick 的儿童语境译义“快的”；例句“The rabbit is quick.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "30b10691bf36c865a31b7801a8dc2595bf862c7acbbe67dc506b0223d6223d37",
+    "verdict": "pass"
+  },
+  {
+    "id": "quiet",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 quiet 的儿童语境译义“安静的”；例句“Please be quiet in the library.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4e15e0a73aecd24881ddc7881c614cc44a2e16838579e9cd60f415b192e62c56",
+    "verdict": "pass"
+  },
+  {
+    "id": "beautiful",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 beautiful 的儿童语境译义“美丽的”；例句“The flowers are beautiful.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "db601e16c10eeb0d51760978ea9bed503e441f2d124c0188c4dc0dbaf5c2af6d",
+    "verdict": "pass"
+  },
+  {
+    "id": "funny",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 funny 的儿童语境译义“搞笑的”；例句“The clown is funny.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0cc434e78ecbdbaee7195363653c980dcf2f5147110e1fb3bb5c9a6bdbda9627",
+    "verdict": "pass"
+  },
+  {
+    "id": "climb",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 climb 的儿童语境译义“爬”；例句“Monkeys climb trees.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3aa2d2735aea359dae50f9a24302e518108556e615833c86c793616fb726b67f",
+    "verdict": "pass"
+  },
+  {
+    "id": "ride",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ride 的儿童语境译义“骑”；例句“I ride my bike to school.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "43fd81170260b4f8763c77d183c40d895a61dffe66d5b42a0686600aa3d06d28",
+    "verdict": "pass"
+  },
+  {
+    "id": "cook",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "动作卡 cook 为做饭，例句 Dad cooks dinner 与厨师名词卡区分。",
+    "content_sha256": "f263da457ffac73dfe97db82213f7730767513aaa06c14902db3c547e41fb721",
+    "verdict": "pass"
+  },
+  {
+    "id": "clean",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 clean 的儿童语境译义“打扫”；例句“I clean my room on Sunday.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c84df9da361f1144ff46c606d686bd5b86a7f1c3458c7ead385e02f5a2caac65",
+    "verdict": "pass"
+  },
+  {
+    "id": "wash",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 wash 的儿童语境译义“洗”；例句“Wash your hands before lunch.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "69ec7685b2fbd6a310ceb26162218fe8ab732eb350760536ecb9632995a2d4df",
+    "verdict": "pass"
+  },
+  {
+    "id": "buy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 buy 的儿童语境译义“买”；例句“Let's buy some apples.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cb6c39c7e648d7e2fe399d980fa98f0c6337a5c718b34ef93a4a352c1ded0c31",
+    "verdict": "pass"
+  },
+  {
+    "id": "build",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 build 的儿童语境译义“建造”；例句“We build a sandcastle.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3b48c75b1390f6bf93b76c0d8f1693ae2a3e08801fc1f56941857a834ca2d5fe",
+    "verdict": "pass"
+  },
+  {
+    "id": "paint",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：用颜料画画、涂色、刷漆覆盖 paint 常用动作，paint a picture 例句与首义一致。",
+    "content_sha256": "1d4da47b71c02d5148f9902a59708841fb2751397ae0b9959822e4356698c66d",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "zh",
+      "issue": "paint a picture 是用颜料画画，中文涂颜色不足以覆盖当前例句，易混淆 colour a picture。",
+      "suggested": "用颜料画；涂、刷颜色"
+    }
+  },
+  {
+    "id": "listen",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 listen 的儿童语境译义“听”；例句“Listen to the teacher.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "faa4e7571036281ee5237831d8b5c8fe410973452a8b350f391af8fc4e87a2d3",
+    "verdict": "pass"
+  },
+  {
+    "id": "speak",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 speak 的儿童语境译义“说”；例句“Can you speak English?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6b757c6e38f7d47aff3d03c4ee6df9cc104b591764106eeac0cb73d316106f58",
+    "verdict": "pass"
+  },
+  {
+    "id": "write",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 write 的儿童语境译义“写”；例句“I write my name on the book.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "fe888d1756f63550d3642b7e78152fcae29498208cd1c90e76a689357f83dda4",
+    "verdict": "pass"
+  },
+  {
+    "id": "drive",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 drive 的儿童语境译义“开车”；例句“Mum drives a blue car.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "57769d65627d6bcaaecea31c22abddb9778c6d3cd2d9a48e40137e2998b61f99",
+    "verdict": "pass"
+  },
+  {
+    "id": "morning",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 morning 的儿童语境译义“早上”；例句“I get up in the morning.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6782bb2703abb64298ed74c2134e7b71a3daa75c05ed1f2cd105eb68481eba02",
+    "verdict": "pass"
+  },
+  {
+    "id": "afternoon",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 afternoon 的儿童语境译义“下午”；例句“We play games in the afternoon.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b39378fb4c35a02d74ead875039855f136b83cc245ffbe29e5fd902dc2b505d7",
+    "verdict": "pass"
+  },
+  {
+    "id": "evening",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：傍晚、晚上（入睡前的一段时间）匹配 evening 的时间范围；晚餐例句自然。",
+    "content_sha256": "5ffdbe5ef37e5a095afd61b40680729787cf5019520ef65424d34954320f456e",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "zh",
+      "issue": "evening 通常从傍晚延续到入睡前，当前仅译傍晚过窄；晚餐例句也可能是晚上。",
+      "suggested": "傍晚；晚上"
+    }
+  },
+  {
+    "id": "night",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 night 的儿童语境译义“夜晚”；例句“The stars come out at night.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b41cc68783b137271c27f53d2fc5ea14ef9cf13047be307dbc16c1cf00234927",
+    "verdict": "pass"
+  },
+  {
+    "id": "week",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 week 的儿童语境译义“一周、一个星期”；例句“There are seven days in a week.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "37686430b2ff5b26a74a4cadf8f4b980917404e4fe283c9cec1aa0951d1b10da",
+    "verdict": "pass"
+  },
+  {
+    "id": "weekend",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 weekend 的儿童语境译义“周末”；例句“We go to the park at the weekend.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "46c2ed73bb78d69b54fe3cfedcd178e70045a62b2d097f78642e4e8cd43ab23c",
+    "verdict": "pass"
+  },
+  {
+    "id": "today",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 today 的儿童语境译义“今天”；例句“Today is my birthday!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f1e2c46980eea1633e658a47fdde13924fc85ece51e099de9e4c1a52af5186c2",
+    "verdict": "pass"
+  },
+  {
+    "id": "yesterday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 yesterday 的儿童语境译义“昨天”；例句“Yesterday I went to the zoo.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "52c57a31311daae49ed907b6bf2bd5cf1e2b456c8e886711261feb716198aa14",
+    "verdict": "pass"
+  },
+  {
+    "id": "cheese",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cheese 的儿童语境译义“奶酪”；例句“The mouse likes cheese.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f830e5ad8fef65f34f1b279ce3d06e32279ab41d30826b00afc0583aac2e0828",
+    "verdict": "pass"
+  },
+  {
+    "id": "soup",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 soup 的儿童语境译义“汤”；例句“The soup is hot.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "fcbc26de5669301e297e23552d39042ca201affcf3e5feb0717b470a18fd5e22",
+    "verdict": "pass"
+  },
+  {
+    "id": "salad",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 salad 的儿童语境译义“沙拉”；例句“I eat salad with tomatoes.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e5d1965216a6782ac71726a7e0aa130bea6175bb92a1a4af9ef0329833297d23",
+    "verdict": "pass"
+  },
+  {
+    "id": "sandwich",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sandwich 的儿童语境译义“三明治”；例句“I have a sandwich for lunch.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ec7449f319e2a5ab0d41349c415f48c6bf0b1dd357d3f8cf982f4fcadb2763bd",
+    "verdict": "pass"
+  },
+  {
+    "id": "noodles",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 noodles 的儿童语境译义“面条”；例句“I love noodles!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6cc3ce17f24ce1a7807f98ddc15bc46abe9a43934d8756b2fc8e797e15700dcc",
+    "verdict": "pass"
+  },
+  {
+    "id": "pancake",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pancake 的儿童语境译义“煎饼”；例句“We eat pancakes for breakfast.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "464220e7b1c99a94391deb9ff2980411866a2857e5f4cd2b318fe165d540e55b",
+    "verdict": "pass"
+  },
+  {
+    "id": "tea",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tea 的儿童语境译义“茶”；例句“Grandpa drinks tea.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ee35d6341b3d1fd0a1932bc7342581ca51c453b142ebf583e78baabf4c5aaa7c",
+    "verdict": "pass"
+  },
+  {
+    "id": "coffee",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 coffee 的儿童语境译义“咖啡”；例句“Mum drinks coffee in the morning.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4d30cb90897ab46bb4648098ad470301fe4f1b3060d0e2e7952ce4bc25085ad7",
+    "verdict": "pass"
+  },
+  {
+    "id": "vegetables",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 vegetables 的儿童语境译义“蔬菜”；例句“Eat your vegetables!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0268eda1e6e1f9f2af7306fd3260ff526323d5a035ecb3143753912014bb045c",
+    "verdict": "pass"
+  },
+  {
+    "id": "milkshake",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "banana milkshake 在英式英语可作饮品不可数用法，I like banana milkshake 可接受。",
+    "content_sha256": "2051b7065cf9b6afefbfce8b8e6914711b2dee348c903b61d0926b0f9abfc988",
+    "verdict": "pass"
+  },
+  {
+    "id": "aunt",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "父母双方姐妹及父母兄弟的配偶均在中文覆盖内；例句为女性亲属来访。",
+    "content_sha256": "f2130d2270651ebd2ad2b2c82c3e8ce5b632c04b524167935fd12c07c2a4fc82",
+    "verdict": "pass"
+  },
+  {
+    "id": "uncle",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "父母双方兄弟及父母姐妹的配偶均在中文覆盖内；例句与男性亲属踢足球对应。",
+    "content_sha256": "3f69a0a10c1f176efecc31765c3a16e2f81a16930218499c68508dde02464595",
+    "verdict": "pass"
+  },
+  {
+    "id": "cousin",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "堂表兄弟姐妹均覆盖，不以性别或年龄限定；例句只指一名同辈亲属。",
+    "content_sha256": "dffbfbbd27866a8892037d2ce9076f679e261aa5504b1e3ce37f218d2a5a1c16",
+    "verdict": "pass"
+  },
+  {
+    "id": "doctor",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 doctor 的儿童语境译义“医生”；例句“The doctor helps sick people.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8eb1ed19dee85560a5be7da0c7d56450ed18bf2950ed9c2c098ee1869d7da0cb",
+    "verdict": "pass"
+  },
+  {
+    "id": "nurse",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 nurse 的儿童语境译义“护士”；例句“The nurse works at the hospital.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6cabd356f758e04ee8dae6393ac2c61e1299c1fd4d52891f3e19a3f0d21d2fb2",
+    "verdict": "pass"
+  },
+  {
+    "id": "farmer",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 farmer 的儿童语境译义“农民”；例句“The farmer feeds the animals.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5db76e3e0f0e589e2ca41617a730b77b4ac2678a8323d55e34961846eecde48e",
+    "verdict": "pass"
+  },
+  {
+    "id": "dictionary",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dictionary 的儿童语境译义“词典”；例句“I look up words in the dictionary.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b46727000c33ab880c72b5b54e73be88a95da9fbb64068272114767b0c497901",
+    "verdict": "pass"
+  },
+  {
+    "id": "homework",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 homework 的儿童语境译义“作业”；例句“I do my homework after school.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2fbef4670a8fa2ffa0625eba64680fa71d1356ea4700e4711da279da0bb2eb0c",
+    "verdict": "pass"
+  },
+  {
+    "id": "playground",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 playground 的儿童语境译义“操场”；例句“Children play in the playground.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9a1c4c0307992f4bbd3eb4e2407b3ff88769193279446bc6f42b42147e5c49da",
+    "verdict": "pass"
+  },
+  {
+    "id": "mistake",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 mistake 的儿童语境译义“错误”；例句“It's OK to make a mistake.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "073b03f51400f04647f9521a49b928357c6ef47610de7722321b8e649cf802ae",
+    "verdict": "pass"
+  },
+  {
+    "id": "comic",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 comic 的儿童语境译义“漫画”；例句“I read a funny comic.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "eb26e9d1798719be4a8139d25286681b3ab2e697999d43e7e5db4a2a1919dc9b",
+    "verdict": "pass"
+  },
+  {
+    "id": "lesson",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lesson 的儿童语境译义“课”；例句“The English lesson is fun.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7f8a4af360865bced2bea3d4e8d004e75b85479a27838d92d67fe381d3834707",
+    "verdict": "pass"
+  },
+  {
+    "id": "island",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 island 的儿童语境译义“岛”；例句“The island is in the blue sea.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "86b9102409e4ba7eda2b1b362f509e393d04032cd9c5251ee877abdf520ba86c",
+    "verdict": "pass"
+  },
+  {
+    "id": "lake",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lake 的儿童语境译义“湖”；例句“We row a boat on the lake.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "babef52d2490b3453edfad29609a256f6ceba7658e1cc06e90b3366ccbc35396",
+    "verdict": "pass"
+  },
+  {
+    "id": "river",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 river 的儿童语境译义“河”；例句“The river is long and wide.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ea76b2dfab9863121853209bf8870f12eb4a0a5a2a00bb93a618723e6111d5d2",
+    "verdict": "pass"
+  },
+  {
+    "id": "mountain",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 mountain 的儿童语境译义“山”；例句“The mountain is very high.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f54b2c9baef2b8825676be20934d9b3e87b3071d5abb30107d8626a7ba650b8f",
+    "verdict": "pass"
+  },
+  {
+    "id": "forest",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 forest 的儿童语境译义“森林”；例句“Many trees grow in the forest.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "dcf330301ccd4a9d4d3f34d72623bee2e16c784c37c46592b89292b200bb3384",
+    "verdict": "pass"
+  },
+  {
+    "id": "jungle",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 jungle 的儿童语境译义“丛林”；例句“Monkeys live in the jungle.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ac616ee77eb66f4c4d9198ca43d9880f59f84ad0ab1166fb2c27590e23eea40a",
+    "verdict": "pass"
+  },
+  {
+    "id": "leaf",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "leaf/leaves 单复数及 falls/fall 动词一致；示例用于显式形态练习，可接受不强求对话式。",
+    "content_sha256": "fd1d2cc3803d83e96e6883d3f3b58a95fe3ea19b8593b2b04a8249de82ed299a",
+    "verdict": "pass"
+  },
+  {
+    "id": "grass",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 grass 的儿童语境译义“草”；例句“The grass is soft and green.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f36988f048670b59d6014ceb53de1a451186001cf98668c661d9dfe03ac61dc8",
+    "verdict": "pass"
+  },
+  {
+    "id": "coat",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 coat 的儿童语境译义“大衣”；例句“Put on your coat. It's cold!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "12793fcb55c1dc289ebe0465cc9cf13d6357f62db9ff6e2cdb03e7814a4d1f98",
+    "verdict": "pass"
+  },
+  {
+    "id": "scarf",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 scarf 的儿童语境译义“围巾”；例句“Grandma made a red scarf for me.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a1488287ad6bd596e94c0b908c4059769c4dcba6c1369dfecbda92fc3a00f360",
+    "verdict": "pass"
+  },
+  {
+    "id": "sweater",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sweater 的儿童语境译义“毛衣”；例句“I wear a warm sweater in winter.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a4ec1beccd48dfb66fa8f7194e11e0925af5706d498cd1378ebd177d1ab2dace",
+    "verdict": "pass"
+  },
+  {
+    "id": "swimsuit",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 swimsuit 的儿童语境译义“泳衣”；例句“I wear my swimsuit at the pool.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8d2b8b64eb2f6e373331538aa33b5862e7ce669c5b92a44fc911e789881ea7d7",
+    "verdict": "pass"
+  },
+  {
+    "id": "helmet",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 helmet 的儿童语境译义“头盔”；例句“Wear a helmet when you ride a bike.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "bc1da4ae85e82b164d34c02884f1b1e1c6e298313e035e5d984209b62daa10ff",
+    "verdict": "pass"
+  },
+  {
+    "id": "gloves",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 gloves 的儿童语境译义“手套”；例句“My gloves keep my hands warm.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5a653689ca873b51c9aad5c6f16bc8ccba6b396e74773b6b5564d9d42829aa18",
+    "verdict": "pass"
+  },
+  {
+    "id": "tram",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tram 的儿童语境译义“有轨电车”；例句“We take a tram in the city.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f8071ef631f145a2b83299f312c6eec11b210e0e5256a37a853753806b1f56a1",
+    "verdict": "pass"
+  },
+  {
+    "id": "tractor",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tractor 的儿童语境译义“拖拉机”；例句“The farmer drives a tractor.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cf8e3e9704fb9437180a5f6ef683d31cae8981ba7d7aa8154ea26a0993b12099",
+    "verdict": "pass"
+  },
+  {
+    "id": "lorry",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lorry 的儿童语境译义“卡车”；例句“A big lorry carries the boxes.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ce2193ce901f01b2c5e90fd616012094939a6df208d2c329d965cde6f5d94555",
+    "verdict": "pass"
+  },
+  {
+    "id": "driver",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 driver 的儿童语境译义“司机”；例句“The bus driver says hello.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "15d255432c92777aad42196d7fc17be6bed1fcb489a3d03024ae80ef8aad6b9e",
+    "verdict": "pass"
+  },
+  {
+    "id": "machine",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 machine 的儿童语境译义“机器”；例句“This machine washes clothes.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7dfab585886f6f4343e3dfb5e8c7a01b99b86c629867199fd05ab1e340d97dff",
+    "verdict": "pass"
+  },
+  {
+    "id": "motorbike",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 motorbike 的儿童语境译义“摩托车”；例句“Uncle rides a motorbike.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "929f4225a04316aabe1551e59582d58a87687109bf805e7755687a0bd27b3376",
+    "verdict": "pass"
+  },
+  {
+    "id": "getdressed",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 get dressed 的儿童语境译义“穿衣服”；例句“I get dressed after breakfast.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "242e5b915cd8660a5db44f1b80bd6b3f16b12bd616d6631e62d7adeddf48a70f",
+    "verdict": "pass"
+  },
+  {
+    "id": "getup",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 get up 的儿童语境译义“起床”；例句“I get up at seven.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b73f72b79e45f023035362a45d6991d30d911a54b589c43d2c983ebb0931962c",
+    "verdict": "pass"
+  },
+  {
+    "id": "haveshower",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 have a shower 的儿童语境译义“洗澡”；例句“I have a shower every evening.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "fcfffe8a9aff4e20022b1b1dc31a098fcf3aa6c31e3f21aaeaee357cb0aaafc6",
+    "verdict": "pass"
+  },
+  {
+    "id": "havebreakfast",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 have breakfast 的儿童语境译义“吃早饭”；例句“We have breakfast at eight.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a903903327e76a0f5d808bb3c7fe0490a5ee61e40d41abf31c0a098a29b0f7bc",
+    "verdict": "pass"
+  },
+  {
+    "id": "wakeup",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 wake up 的儿童语境译义“醒来”；例句“Wake up! It's Monday.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "de420cf659e67cf5c56ef0f54b6a42cb13c1772c473b01298986fa57a014b490",
+    "verdict": "pass"
+  },
+  {
+    "id": "brushteeth",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 brush my teeth 的儿童语境译义“刷牙”；例句“I brush my teeth every day.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c9a59369fd3b5830c5750059716f6099824cbf66e7d9e23b02bb3fca4f8330ac",
+    "verdict": "pass"
+  },
+  {
+    "id": "cleanteeth",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 clean my teeth 的儿童语境译义“清洁牙齿”；例句“I clean my teeth at night.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1cacda505a23ff65f6a34ad7a4ee443d8fd68b22e99733029ee49f1fc64d56b4",
+    "verdict": "pass"
+  },
+  {
+    "id": "catchbus",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 catch the bus 的儿童语境译义“赶公交车”；例句“We run to catch the bus.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "60aa377955611193be2a27ff55dce120ab04f5e40f7024608fba4c9ec6d5b07f",
+    "verdict": "pass"
+  },
+  {
+    "id": "walkschool",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：Dad 已按家庭称呼大写，walk to school 为步行上学，例句规范。",
+    "content_sha256": "036c0cb2496a866a63045216df4f8841a70d1760423506cdea3af72013f8f596",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "sentence",
+      "issue": "with dad 中 Dad 作家庭称呼专名通常大写；或加 my dad 更适合作规范学习例句。",
+      "suggested": "I walk to school with my dad."
+    }
+  },
+  {
+    "id": "monday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 Monday 的儿童语境译义“星期一”；例句“On Monday I have a piano lesson.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "30d4a608f6b423cdce2f46749fb0d21758822e08ada004f66d76b68d07255b5f",
+    "verdict": "pass"
+  },
+  {
+    "id": "tuesday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 Tuesday 的儿童语境译义“星期二”；例句“We play football on Tuesday.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "02298b52bfab1ee4aa8b0223a5289d98d787cf00a006edd5d468ef9f0421f5ef",
+    "verdict": "pass"
+  },
+  {
+    "id": "wednesday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 Wednesday 的儿童语境译义“星期三”；例句“Wednesday is the middle of the week.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "bc8af9b52575886faea055512a54fd49a739d6d48d379d9be97b875622319e19",
+    "verdict": "pass"
+  },
+  {
+    "id": "thursday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 Thursday 的儿童语境译义“星期四”；例句“On Thursday we go swimming.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "49312027f919d6210bdda8791fb3137d015ed559463faee6abe925defb3e6913",
+    "verdict": "pass"
+  },
+  {
+    "id": "friday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 Friday 的儿童语境译义“星期五”；例句“Friday is my favourite day!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "31a25bc990630a78284a74b62b0fe95acd9d6b0f41b0777a178d08645c38b2de",
+    "verdict": "pass"
+  },
+  {
+    "id": "saturday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 Saturday 的儿童语境译义“星期六”；例句“On Saturday we visit grandma.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c283f4e3ae6f027fd4b70179fc2c0d59514ae00a90a6c1a9dd031483a517ceb0",
+    "verdict": "pass"
+  },
+  {
+    "id": "sunday",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 Sunday 的儿童语境译义“星期日”；例句“We rest at home on Sunday.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9e890c2826bc1acaebdce23cc57fbfd548f77759d418e99bb77a5536cf1f8dd4",
+    "verdict": "pass"
+  },
+  {
+    "id": "always",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 always 的儿童语境译义“总是”；例句“I always wash my hands.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4c067d59958965ec8452a89eec1d8c82eb2cc8aaa468a0a0214b47bf1cec0cbf",
+    "verdict": "pass"
+  },
+  {
+    "id": "never",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 never 的儿童语境译义“从不”；例句“I never go to bed late.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8fba1c698c0e8e8d97442792f378e466b956fc1bf2ad0176cc7c3101390efbca",
+    "verdict": "pass"
+  },
+  {
+    "id": "field",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 field 的儿童语境译义“田野”；例句“Sheep eat grass in the field.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "33de3d163239e86b98bf4f1aa199e92715cde94c50e6e333c439de1f86ba8753",
+    "verdict": "pass"
+  },
+  {
+    "id": "ground",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ground 的儿童语境译义“地面”；例句“The ball is on the ground.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6df6b7426270b1822c06e61f31f701ba68e193834a086a4d8e5e6afd586774e8",
+    "verdict": "pass"
+  },
+  {
+    "id": "rock",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 rock 的儿童语境译义“岩石”；例句“A crab hides under the rock.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a4ebd50cc84a20edf9dc1939b7eb18f84ddfc5065e25d2788e43ad1865059d52",
+    "verdict": "pass"
+  },
+  {
+    "id": "blanket",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 blanket 的儿童语境译义“毯子”；例句“The baby sleeps under a blanket.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "fc6a752d91e8d795d589947d5906cd350bd7a77c2207d8dfff8bcb9c02d50490",
+    "verdict": "pass"
+  },
+  {
+    "id": "picnic",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 picnic 的儿童语境译义“野餐”；例句“We have a picnic by the lake.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cb2ebf52b483507248bfa5242d773ed5971ea7cb11133d0f943787a17128d5e4",
+    "verdict": "pass"
+  },
+  {
+    "id": "loud",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 loud 的儿童语境译义“大声的”；例句“The music is too loud!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "edc63e2383c24500b612910fdf4694c493090c1edc11418cd2e9e7cbc8119eaa",
+    "verdict": "pass"
+  },
+  {
+    "id": "slow",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 slow 的儿童语境译义“慢的”；例句“A snail is very slow.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "32d6f3c90ad36fe171c6bcc165931ac2459e5b7bc0dfe84898b93cfe81b77ea1",
+    "verdict": "pass"
+  },
+  {
+    "id": "path",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 path 的儿童语境译义“小路”；例句“We walk along the path.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a2361579367c754c2d3c6bdb6a1fd9d806aaf3976e19215a44b52ed8597153a8",
+    "verdict": "pass"
+  },
+  {
+    "id": "plant",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 plant 的儿童语境译义“植物”；例句“I water my plant every day.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "761fc4a1b54e0cbaf9a1f0144c4eddb3b97280ce84278429ddca82665e8e394d",
+    "verdict": "pass"
+  },
+  {
+    "id": "goshopping",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 go shopping 的儿童语境译义“去购物”；例句“We go shopping at the weekend.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "748674ff9d3a39e9d8089e6325d681d6efece6a7640dff49b7aaab004ba485ac",
+    "verdict": "pass"
+  },
+  {
+    "id": "goskating",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 go skating 的儿童语境译义“去滑冰”；例句“Let's go skating on the ice!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b8086bef20780d4f2e026e4f1740d1ea3d6b899710d698243fc874a82300cd3b",
+    "verdict": "pass"
+  },
+  {
+    "id": "listenmusic",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 listen to music 的儿童语境译义“听音乐”；例句“I listen to music in my room.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "83a86a6473052291d8266fe6dcca88a19b35b4e61ff878dd61a7874a1ac9b6f2",
+    "verdict": "pass"
+  },
+  {
+    "id": "listencd",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 listen to a CD 的儿童语境译义“听CD”；例句“We listen to a CD in the car.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9b8123f142ed02bf3d624e58e36f5da4e727380aaa9a53da5dc3ec0cd8fae2ab",
+    "verdict": "pass"
+  },
+  {
+    "id": "watchdvd",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 watch a DVD 的儿童语境译义“看DVD”；例句“Let's watch a DVD tonight.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0194912bff2b22f268adc6fb7d3388a03508995fb3f4c25bb04d32b81ae52fa3",
+    "verdict": "pass"
+  },
+  {
+    "id": "watchfilm",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 watch a film 的儿童语境译义“看电影”；例句“We watch a film at the cinema.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "072fd1be4de81a09b608a58f4572454874ee5644dbd8828fa6fe5c3cf8201dfb",
+    "verdict": "pass"
+  },
+  {
+    "id": "readcomic",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 read a comic 的儿童语境译义“看漫画”；例句“I read a comic in bed.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "213bdc372213312aa64a879b1abc6bbceea05c36dd683558025c88643faa09ac",
+    "verdict": "pass"
+  },
+  {
+    "id": "writeemail",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 write an email 的儿童语境译义“写电子邮件”；例句“I write an email to my cousin.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a1fbffb3db66935c8f660be70afd275c078cc5ae541d4fdbbe68a0f8fb08889c",
+    "verdict": "pass"
+  },
+  {
+    "id": "playgames",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 play games 的儿童语境译义“玩游戏”；例句“We play games after dinner.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4ca40418c7dac9874f8bb36332b0dc0e67dd38353824c43890b0b9f1fa833b6d",
+    "verdict": "pass"
+  },
+  {
+    "id": "often",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 often 的儿童语境译义“经常”；例句“I often help my mum.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9bab0f61655fb12c5b52e03e2f7d035f1923164c0ac7206a529bd0f9b8f167fb",
+    "verdict": "pass"
+  },
+  {
+    "id": "sometimes",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sometimes 的儿童语境译义“有时”；例句“Sometimes we eat pizza.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4bdbee3c7f93588b67346cb0559abab3ce7cbb43d6f5f3a3166dcf7cf711b29e",
+    "verdict": "pass"
+  },
+  {
+    "id": "hobby",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hobby 的儿童语境译义“爱好”；例句“Drawing is my hobby.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4faae212dfb6be0d0bcf4656ca9f347b482cb45574e470c63380520ba3b4164c",
+    "verdict": "pass"
+  },
+  {
+    "id": "camera",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 camera 的儿童语境译义“照相机”；例句“Dad takes photos with his camera.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "296ce6ddc8c905582f26e931ac8dd2f0b2a363fe0a7c9f21b0c752da8e1ae32b",
+    "verdict": "pass"
+  },
+  {
+    "id": "photo",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 photo 的儿童语境译义“照片”；例句“This is a photo of my cat.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "db89cea8f6b0e04a148a8fb4983a2eabe530e9035f5d64f93970794f67880964",
+    "verdict": "pass"
+  },
+  {
+    "id": "clown",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 clown 的儿童语境译义“小丑”；例句“The clown makes everyone laugh.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "918634abe72c7c6e6442975bdcb763ce63142d655bae4a61f93339a48a95bc75",
+    "verdict": "pass"
+  },
+  {
+    "id": "cookperson",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "显式 noun 区分厨师与 cook 做饭，例句 The cook makes soup 是名词。",
+    "content_sha256": "2242b88ced9bb6279f604d3621210c93200e2f80859db3694aa114808d1e8eb6",
+    "verdict": "pass"
+  },
+  {
+    "id": "dentist",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dentist 的儿童语境译义“牙医”；例句“The dentist looks at my teeth.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "178b135c0c5e452444e81856644837adaa47acec4936a419da017387c647524f",
+    "verdict": "pass"
+  },
+  {
+    "id": "filmstar",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 film star 的儿童语境译义“电影明星”；例句“The film star waves to everyone.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "789cf737702bf0942717e75e43d101d23b128b8a70aabc201ccdaf97960de270",
+    "verdict": "pass"
+  },
+  {
+    "id": "pirate",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pirate 的儿童语境译义“海盗”；例句“The pirate looks for treasure.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c01825c6a28b34366ecd7702cf803333a73b1f5cc1f7b51423600ebd7390c29b",
+    "verdict": "pass"
+  },
+  {
+    "id": "popstar",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pop star 的儿童语境译义“流行歌手”；例句“The pop star sings on stage.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "23c2bec7639b1046f3588bd674456216b62ce141c4927bcd3e4b66a909d3cb71",
+    "verdict": "pass"
+  },
+  {
+    "id": "beard",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 beard 的儿童语境译义“胡子”；例句“Santa has a long white beard.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d0639c0f7651d046af14e1e19d126dcd01137f8068c6123c0d2c05b3cbe4ecfb",
+    "verdict": "pass"
+  },
+  {
+    "id": "moustache",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "明确仅上唇胡须，与 beard 相区别。",
+    "content_sha256": "cb688d4614bcfb0b1c88ff6bbd856ba5ad5bdf37b60f49d9c33ab9774de893d3",
+    "verdict": "pass"
+  },
+  {
+    "id": "blonde",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "blonde hair 是自然形容词搭配，中文金发的准确。",
+    "content_sha256": "a30c3af57fb013ba85438b01660dfedbe0b218be8520ded773273def032d9d15",
+    "verdict": "pass"
+  },
+  {
+    "id": "curly",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 curly 的儿童语境译义“卷曲的”；例句“The baby has curly hair.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "60b8f40570fa1a7737b8ff22b5577ba1c94d12ebf56e5a02ee3e4fc18e266170",
+    "verdict": "pass"
+  },
+  {
+    "id": "fair",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "本儿童卡专教头发浅色/肤色白皙，例句 hair 对齐；未把公平强套到例句。",
+    "content_sha256": "a3bfb7ed362d7f57dee996247efd74c5d6d65c69b14efd07e10b660205d18afe",
+    "verdict": "pass"
+  },
+  {
+    "id": "fat",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "句子描述动物而非评价孩子体型，符合当前家庭低龄材料语境；中文基本义准确。",
+    "content_sha256": "046c31f29a6427bbc068ed10b94a9e2fd4c50c854edf90f4ff6529476430ab6c",
+    "verdict": "pass"
+  },
+  {
+    "id": "short",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 short 的儿童语境译义“短的、矮的”；例句“This pencil is short.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d6ef1644907121cca703a5800ff5e180086cc2a741f8d47a7cca31b0a3b79c47",
+    "verdict": "pass"
+  },
+  {
+    "id": "straight",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 straight 的儿童语境译义“直的”；例句“Her hair is long and straight.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ef9f42b66cc0b4e00e7430fa7136f7095c8b143d181e7b6ea53e62a9196e8d8e",
+    "verdict": "pass"
+  },
+  {
+    "id": "tall",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tall 的儿童语境译义“高的”；例句“The giraffe is very tall.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "08ce2958549a047d7978371bd98ea5b0de360cf3471464c88f05ad5777754953",
+    "verdict": "pass"
+  },
+  {
+    "id": "thin",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "细、薄、瘦三种中文含义均列出；snake 例句对应身体细长而非纸薄。",
+    "content_sha256": "ca65c0883df80fb4dc722046b3686838f37ee777e158bd127e8e310f9d8c2602",
+    "verdict": "pass"
+  },
+  {
+    "id": "naughty",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "用猴子行为举例，未给孩子固定人格标签；took my hat 搭配自然。",
+    "content_sha256": "b7879b2848ce702ac920a2137df2a52f1f11f1ef6c69896e78650ed47840960d",
+    "verdict": "pass"
+  },
+  {
+    "id": "present",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "礼物名词与礼盒符号对应，不与出席/呈现义混淆。",
+    "content_sha256": "03fd0b3b0a48389eca789f59c7fcf7f86359bde3b17f638e68a1024430fd81ae",
+    "verdict": "pass"
+  },
+  {
+    "id": "treasure",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 treasure 的儿童语境译义“宝藏”；例句“The treasure is in the cave.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "fdee2c0219e0cc463d34a296bbd33adcfeb7ff5c3052915b290a527d74e1fc84",
+    "verdict": "pass"
+  },
+  {
+    "id": "daughter",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 daughter 的儿童语境译义“女儿”；例句“Their daughter loves to dance.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3a92b8031c59ce512aaf3bd2638bc06600d49a84bd8849a816e6297fb72038ed",
+    "verdict": "pass"
+  },
+  {
+    "id": "son",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 son 的儿童语境译义“儿子”；例句“Their son plays football.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "39107596fdcb846f0fbee190a1465adbaf91a9dadacf94c7327cd0185e964072",
+    "verdict": "pass"
+  },
+  {
+    "id": "grandson",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "孙子与外孙均覆盖，例句为祖父向男性孙辈读书。",
+    "content_sha256": "b5262188b2190fe32af49ba94ab663f9956eb2e94e30d6ee350a9f70fdd86efb",
+    "verdict": "pass"
+  },
+  {
+    "id": "granddaughter",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "孙女与外孙女均覆盖，例句为祖母拥抱女性孙辈。",
+    "content_sha256": "8443baf2f647a87450e7460559df9189ee192e7fce24902850e35b55f5c6e914",
+    "verdict": "pass"
+  },
+  {
+    "id": "grandparents",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "父系祖父母与母系外祖父母均覆盖；例句复数与 live 一致。",
+    "content_sha256": "b74ccd393a8648ba4db6760e87d4412d9b56aaafb01810a8f26acd8070359dc2",
+    "verdict": "pass"
+  },
+  {
+    "id": "parents",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "中文父母对应复数 parents；例句使用复数主语。",
+    "content_sha256": "f18a7cc3194eded974834df758de1f67b7d5226e2ecad7f14296937cf325a891",
+    "verdict": "pass"
+  },
+  {
+    "id": "balcony",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 balcony 的儿童语境译义“阳台”；例句“We grow flowers on the balcony.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0bcdd0d60e443724feaf3abfa8f6361d10cd5f4c22da069a2e5e6fe38e2b066d",
+    "verdict": "pass"
+  },
+  {
+    "id": "basement",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 basement 的儿童语境译义“地下室”；例句“The bikes are in the basement.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a3e3a40136687d952bc8a86ce04a4e24264e18f268243a9009060d2600090f09",
+    "verdict": "pass"
+  },
+  {
+    "id": "downstairs",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 downstairs 的儿童语境译义“楼下”；例句“The kitchen is downstairs.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "fff5630e65719bc081e3cf45309a29d909bea8ddd391b28a7d71358bde038aef",
+    "verdict": "pass"
+  },
+  {
+    "id": "upstairs",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 upstairs 的儿童语境译义“楼上”；例句“My bedroom is upstairs.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2c1f526374b42bcdf9e42bc5bb217772fd73c2ea40a0fc4861adfa01004de1a5",
+    "verdict": "pass"
+  },
+  {
+    "id": "inside",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 inside 的儿童语境译义“在里面”；例句“Come inside! It's raining.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "42bca17ff9194beefe6c724d98f28b2b96279f57f270989018714391e8448f81",
+    "verdict": "pass"
+  },
+  {
+    "id": "outside",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 outside 的儿童语境译义“在外面”；例句“The dog plays outside.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7f8377db8ebb9a458e8b2dda4a2bd8722ebf34c2f56aa7c5a833120f9d59ee24",
+    "verdict": "pass"
+  },
+  {
+    "id": "roof",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 roof 的儿童语境译义“屋顶”；例句“A bird sits on the roof.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "16cdf33e81351a853175c9d6bf9158bb450c3cd3a0ac93139ded8d78c5fd8b9a",
+    "verdict": "pass"
+  },
+  {
+    "id": "stairs",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 stairs 的儿童语境译义“楼梯”；例句“Don't run on the stairs.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e87f31eaa8c52bcc9341ee4f881591de552f672124e7c8851f902e5b70cf8724",
+    "verdict": "pass"
+  },
+  {
+    "id": "lift",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lift 的儿童语境译义“电梯”；例句“Take the lift to the fifth floor.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "64457cc1ebec59a55cc33107a46bfe8927145b47b5cc10240dafb164916e2291",
+    "verdict": "pass"
+  },
+  {
+    "id": "address",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 address 的儿童语境译义“地址”；例句“Write your address here.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "54a263c65405d56990f1922321587a4bc9554889f7eb3dd5f12f8245182a6dc1",
+    "verdict": "pass"
+  },
+  {
+    "id": "home",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 home 的儿童语境译义“家”；例句“There's no place like home.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ad06a52bf084ff62ca823b50834b8fab0f735d36da4b44ee61798393eaf9ddb9",
+    "verdict": "pass"
+  },
+  {
+    "id": "groundfloor",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "ground floor 译地面层/一楼准确；不把英式楼层编号与美式 first floor 混淆。",
+    "content_sha256": "c0b672888e0463256fa889d3c028d081faafd25bbde70bbd29c20b06f8e191c7",
+    "verdict": "pass"
+  },
+  {
+    "id": "firstfloor",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "明确英式二楼、美式一楼；例句自身不锁定英美体系，中文承担差异说明。",
+    "content_sha256": "9a698be8c7d0d97d4f32b38db6e16442eca827cc2b772ee470ea3922b7fad0be",
+    "verdict": "pass"
+  },
+  {
+    "id": "secondfloor",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "明确英式三楼、美式二楼；例句自身不锁定英美体系，中文承担差异说明。",
+    "content_sha256": "a6797cdcfdefbc6d192b8157409e3bf3fb8b83bef063ea5c87430335c2f5de0e",
+    "verdict": "pass"
+  },
+  {
+    "id": "cage",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cage 的儿童语境译义“笼子”；例句“The parrot's cage is open!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b1776ae23823eaacd99377ff1ca56d1cc8f7b72974d0298c7e0f1e747e00ed23",
+    "verdict": "pass"
+  },
+  {
+    "id": "pet",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pet 的儿童语境译义“宠物”；例句“My pet is a little hamster.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6832959922a052ad0acbb776cedb1483b412df7cbb018d27d705a0f3ec3c0488",
+    "verdict": "pass"
+  },
+  {
+    "id": "fall",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 fall 的儿童语境译义“落下”；例句“Leaves fall in autumn.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9369ae149abce6b8c492b02f3955294d04cf368c2e39605484b337f957f5bc4f",
+    "verdict": "pass"
+  },
+  {
+    "id": "hide",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hide 的儿童语境译义“躲藏”；例句“Let's hide behind the tree!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b9c9876f9b162896234f32c98b375f45fe605328eb9165ef5a7a337174823541",
+    "verdict": "pass"
+  },
+  {
+    "id": "lose",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lose 的儿童语境译义“丢失”；例句“Don't lose your keys.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e1dc6bcb00c88aee37e3824e1055e5b0e53f86fdbaa0fcfce0c06fd6fb942d99",
+    "verdict": "pass"
+  },
+  {
+    "id": "move",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 move 的儿童语境译义“移动”；例句“Robots can move fast.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2e34a3035f27e475902623ce18106db6e6e01d6baabecea41f6e4794e1e06f8d",
+    "verdict": "pass"
+  },
+  {
+    "id": "hop",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "同时涵盖人的单脚跳和兔的蹦跳，例句 Rabbits hop 与后者对应。",
+    "content_sha256": "c0c3cc7ba52dea2f046f836b8bd93bb7fb830c6da286ce83e2dd787c0a14b87b",
+    "verdict": "pass"
+  },
+  {
+    "id": "skip",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "当前蹦跳中文与 skip in the playground 对齐；绳子图标同时可能联想到英式跳绳，属于可补的常用义，不是当前句错译。",
+    "content_sha256": "4fce4862769bebe1d5a25b5d2794f20c90fa746d63e8aea4307bbf4b99ee93d8",
+    "verdict": "pass"
+  },
+  {
+    "id": "walk",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 walk 的儿童语境译义“走”；例句“We walk in the park.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a6dbad1a23dfeb27ac723caf850ed1f3dead8945394dddb46da2d382afbd35fc",
+    "verdict": "pass"
+  },
+  {
+    "id": "flyverb",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "另设稳定 id=flyverb 显示 fly 的飞行动词，配 birds can fly。",
+    "content_sha256": "11f8a2c7dbf8afb718b55a9916ff7a15b04c42cb3eec33266e457d212e1c5b01",
+    "verdict": "pass"
+  },
+  {
+    "id": "wind",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "本卡为风的名词，不应使用 wind 卷绕动词的另一种发音。",
+    "content_sha256": "c3532bd990d080eb077b6b2814b17084655b70244e979e602052f51ffe0f2137",
+    "verdict": "pass"
+  },
+  {
+    "id": "weather",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 weather 的儿童语境译义“天气”；例句“What's the weather like today?”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9e6d0316c81111658e37b58c8872516cf52cba5809933826ad311c88239efa16",
+    "verdict": "pass"
+  },
+  {
+    "id": "dry",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dry 的儿童语境译义“干的”；例句“The desert is very dry.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1c5183da62a1af2228db13de7fc63178274aed935ba769ff24a492692c8dd46f",
+    "verdict": "pass"
+  },
+  {
+    "id": "wet",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 wet 的儿童语境译义“湿的”；例句“My socks are wet!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "93424dc8814a2c5b0fa601ad6bb06e22a90c2e67150d1a21ff4fb9989ef7b683",
+    "verdict": "pass"
+  },
+  {
+    "id": "shorts",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 shorts 的儿童语境译义“短裤”；例句“I wear shorts in summer.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5661db5350bf2701dd9464947ad9d0ec6b09b49c9ad2ab9548f9f8a7b5f3fde3",
+    "verdict": "pass"
+  },
+  {
+    "id": "puton",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 put on 的儿童语境译义“穿上”；例句“Put on your coat!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "04236aa692a9a6cc803a860a3c98ce12b8419d7f989d2622f035f8fe0e3647a2",
+    "verdict": "pass"
+  },
+  {
+    "id": "takeoff",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 take off 的儿童语境译义“脱下”；例句“Take off your wet shoes.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3b0ea1957df16a29902d2c27d7744dd106050f7e5156494ece19a4ecccf4dc14",
+    "verdict": "pass"
+  },
+  {
+    "id": "wear",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 wear 的儿童语境译义“穿着”；例句“I wear a hat in the sun.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "53a1fe66c22a38c4b0e9b132a2eaec0b16f410e97c224ef46143cf434daa3df3",
+    "verdict": "pass"
+  },
+  {
+    "id": "bottle",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bottle 的儿童语境译义“瓶子”；例句“The bottle is full of juice.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8b6189efc8eacd2f0d60d9af10d7d4b09ce06874c782c2507491f4ffea414b4c",
+    "verdict": "pass"
+  },
+  {
+    "id": "bowl",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bowl 的儿童语境译义“碗”；例句“I eat rice from a bowl.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "37ec58e0d92cb76aca99dc97fe920817d49427d0047acc791613517b6fe46361",
+    "verdict": "pass"
+  },
+  {
+    "id": "cup",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cup 的儿童语境译义“杯子”；例句“A cup of tea for grandma.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6ef1f6efff0cab389b4067f62b025ea21a5c3675944ba3e1445c9a50266835fc",
+    "verdict": "pass"
+  },
+  {
+    "id": "glass",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 glass 的儿童语境译义“玻璃杯”；例句“A glass of milk, please.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5882ee36ff088b5138f339c53689e310a221a3c8558717aae736fa4a7efcfbac",
+    "verdict": "pass"
+  },
+  {
+    "id": "pasta",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pasta 的儿童语境译义“意大利面”；例句“We eat pasta on Fridays.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "69692d6035326dd82c2e8ff6840b5a768547e10a1a6796ebb2a19ca87a4f6011",
+    "verdict": "pass"
+  },
+  {
+    "id": "plate",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 plate 的儿童语境译义“盘子”；例句“Put the cake on a plate.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f2bc4d10ce80831534109ab1c1ebd6c082f38b2c915710a557e0052f76d8a080",
+    "verdict": "pass"
+  },
+  {
+    "id": "meal",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 meal 的儿童语境译义“一餐”；例句“Dinner is my favourite meal.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6cd2cd9a5c57f3e578f48c77dd89949cbb7042de7b1acf36a84383e470173975",
+    "verdict": "pass"
+  },
+  {
+    "id": "boil",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：Mum 为煮水操作主体，保留煮沸词义且不向幼童下达危险操作命令。",
+    "content_sha256": "1dfd8b2f6e112ee9c670ad2726c72e1945f53448ee421553bf2ae096e039c515",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "sentence",
+      "issue": "直接命令低龄学习者煮沸水，不是词义错误，但不如让成人操作的例句适龄。",
+      "suggested": "Mum boils water for the eggs."
+    }
+  },
+  {
+    "id": "carry",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：携带、提、抱、搬运覆盖 carry；携带书包上学的例句与中文一致。",
+    "content_sha256": "b17e053b475b531df151c894dbf0cbd6fbc561920e082a00b388d004785aaa30",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "zh",
+      "issue": "当前例句 carry my bag 是携带书包，不只是搬运重物，中文范围可更自然。",
+      "suggested": "携带；搬运"
+    }
+  },
+  {
+    "id": "cut",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cut 的儿童语境译义“切”；例句“Cut the banana into pieces.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2c6e551853212307eae9ee871bd3e10f3c045494caf90591ba9f905ab443872c",
+    "verdict": "pass"
+  },
+  {
+    "id": "cry",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 cry 的儿童语境译义“哭泣”；例句“Babies cry when they are hungry.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "53bf8f82833ce638fb91373d611c785f805b10a38a05a77f5ff1b2737b482fd6",
+    "verdict": "pass"
+  },
+  {
+    "id": "drop",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 drop 的儿童语境译义“掉落”；例句“Don't drop the eggs!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5fae2f0ae29dadecceba9a64bc73027b5beed1c836f63f78fbffcb36994618e9",
+    "verdict": "pass"
+  },
+  {
+    "id": "fry",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 fry 的儿童语境译义“煎炸”；例句“We fry eggs for breakfast.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "1c781d2420279bc0cd009732e87b53f34a0917e55704f1e72287d30173a286d1",
+    "verdict": "pass"
+  },
+  {
+    "id": "thirsty",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 thirsty 的儿童语境译义“渴的”；例句“I'm thirsty. Water, please!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "9cd96c87769044e1a5c28dc8af91dee2a4d6ce83e063383504f371a3274103b0",
+    "verdict": "pass"
+  },
+  {
+    "id": "carpark",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 car park 的儿童语境译义“停车场”；例句“Dad leaves the car in the car park.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "21afd0805c37f2bc3c01c90c58c70ba2a9c1a4c0d9ecaeb39269a806cf703784",
+    "verdict": "pass"
+  },
+  {
+    "id": "citycentre",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 city centre 的儿童语境译义“市中心”；例句“The shops are in the city centre.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8c354473f4883fe797e3ad83025f1cadf86dfd809f5dea08136d5718b37f250c",
+    "verdict": "pass"
+  },
+  {
+    "id": "funfair",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 funfair 的儿童语境译义“游乐场”；例句“The funfair has a big wheel.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "8e53aa523c89672871b10bc09d3f65fbc6061f9ae1ef3fbf27c578484e7a69e3",
+    "verdict": "pass"
+  },
+  {
+    "id": "market",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 market 的儿童语境译义“市场”；例句“We buy fruit at the market.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "15fe9d6c7851b99b20d33b908e326fe73b2135eab7b751bed595e3978a99bd23",
+    "verdict": "pass"
+  },
+  {
+    "id": "shoppingcentre",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 shopping centre 的儿童语境译义“购物中心”；例句“The shopping centre is busy today.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2ac1be4707b9e8242a90bee79603413b1fcbfd80bea94a0b07e567b56fdff4e8",
+    "verdict": "pass"
+  },
+  {
+    "id": "sportscentre",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sports centre 的儿童语境译义“体育中心”；例句“I swim at the sports centre.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b5ef95f47d2c40cb6b673c183157c7c1d9ad573e641f361ddf8106aef919ea7c",
+    "verdict": "pass"
+  },
+  {
+    "id": "square",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：广场义及跳舞例句一致；SVG 内容为建筑之间的铺装公共空间和喷泉，已不再使用正方形图。核对为源码语义，不等于视觉测试。",
+    "content_sha256": "ba5c92d7c5e3b453fd4de4bde568d53311acdbf67e6226534aa9b0e223583289",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "major",
+      "field": "emoji",
+      "issue": "词头在本卡取广场义、句子也是广场，但 ⬜ 展示的是正方形义，图片学习会词义错配。",
+      "suggested": "使用广场/城镇空间的场景性图标，或取消该词的看图释义题。"
+    }
+  },
+  {
+    "id": "station",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 station 的儿童语境译义“车站”；例句“The train leaves the station.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6d7f4eaffbd022ff7c55d15f0876b437eba332a738374b45ae126527710d2ca8",
+    "verdict": "pass"
+  },
+  {
+    "id": "road",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Look both ways before crossing 表达道路安全提醒；没有把词汇句当法律充分条件。",
+    "content_sha256": "73c86fa83faba4dba81dc2a960e3d513b90c1a251319f0b39a2dfd587466a262",
+    "verdict": "pass"
+  },
+  {
+    "id": "town",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 town 的儿童语境译义“城镇”；例句“Our town has a nice park.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d47ab4c4fb5f08a1a755d70aafe5369ae549427fb2720f35109484c0091445c0",
+    "verdict": "pass"
+  },
+  {
+    "id": "ticket",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ticket 的儿童语境译义“票”；例句“Show your ticket to the driver.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0257d70b4dd96a74e7c332734a216c7666349a649e17d4cd2c22d9c9b8a93cc2",
+    "verdict": "pass"
+  },
+  {
+    "id": "trip",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 trip 的儿童语境译义“旅行”；例句“Our school trip is on Friday!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "886f2e82c0ed059cee2eaba1e06ca1e8a8eb6645f97ced119cbc1e09d68babf1",
+    "verdict": "pass"
+  },
+  {
+    "id": "afraid",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 afraid 的儿童语境译义“害怕的”；例句“Don't be afraid of the dark.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "17c3492f4d91e4d68d829ec8d937b8337a7af9b198f1fe64eec0961ddf8c7acc",
+    "verdict": "pass"
+  },
+  {
+    "id": "boring",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "明确令人厌烦，对应 film 作为产生感受的事物。",
+    "content_sha256": "cbecb1d61e38b131f8a0f883cfc5bae5f532d53ff876efac3e59098af58b53f9",
+    "verdict": "pass"
+  },
+  {
+    "id": "busy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 busy 的儿童语境译义“忙碌的”；例句“Mum is busy in the kitchen.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b4ff8208775e4b8defa22cf237a9ac64c7030268b71f2315814921db4b9f59ae",
+    "verdict": "pass"
+  },
+  {
+    "id": "careful",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 careful 的儿童语境译义“小心的”；例句“Be careful on the stairs!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0c448b2f772aa8c50f41c784d7cc699b861d21b867aa8217a13468a8dd05b13b",
+    "verdict": "pass"
+  },
+  {
+    "id": "dangerous",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 dangerous 的儿童语境译义“危险的”；例句“Playing in the road is dangerous.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b37c385adcc69ccc6cb073355e04dea495fc2fb03911da23bd4419b40b593307",
+    "verdict": "pass"
+  },
+  {
+    "id": "difficult",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 difficult 的儿童语境译义“困难的”；例句“This puzzle is difficult.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d6f9e95f648c0c68d22ef3224f111fb04888512e4609f206fa04f854e56b6b0c",
+    "verdict": "pass"
+  },
+  {
+    "id": "easy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 easy 的儿童语境译义“容易的”；例句“The homework is easy today.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "77fbea63977757499728c2773edb318e5055d1e60d5e84b6efb4ff57150a5d81",
+    "verdict": "pass"
+  },
+  {
+    "id": "exciting",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "令人兴奋的，修饰 rollercoaster，未与 excited 混同。",
+    "content_sha256": "57560cb710e71be49b2d80cd057ed7e360dc9a7c372209f220c2f840ae40a361",
+    "verdict": "pass"
+  },
+  {
+    "id": "frightened",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "受惊吓的，修饰猫实际感受，时态 ran 合理。",
+    "content_sha256": "1025d4b955a65abfd56cd1b2a116db691d019b618329d0fafb635f6c03f3e9ec",
+    "verdict": "pass"
+  },
+  {
+    "id": "surprised",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 surprised 的儿童语境译义“惊讶的”；例句“I was surprised by the party!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "67baa985db4fd72b9f2d15ef27cd466faceacbdca081f9931ee9cb00e1fc28fb",
+    "verdict": "pass"
+  },
+  {
+    "id": "terrible",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 terrible 的儿童语境译义“糟糕的”；例句“What a terrible storm!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6363f85de947947f44871ed987fe0fa8f28ab7ea85cd44e8bacd8ce0bf869ba4",
+    "verdict": "pass"
+  },
+  {
+    "id": "round",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 round 的儿童语境译义“圆的”；例句“The moon is big and round.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "17fc92b83ee240317e3aaf72bd2730e646d9d451d73d79c9ace2e644d28264c0",
+    "verdict": "pass"
+  },
+  {
+    "id": "adventure",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 adventure 的儿童语境译义“冒险”；例句“Our camping trip was an adventure.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "12595042ed1e9bea351df74d8b720b5bdbea6c02719281ac216505c2f81b8bc5",
+    "verdict": "pass"
+  },
+  {
+    "id": "camel",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 camel 的儿童语境译义“骆驼”；例句“A camel walks in the desert.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a0a3c7a613603693042df1d81d50029826a5a4def02aeac20758aaf552c1379c",
+    "verdict": "pass"
+  },
+  {
+    "id": "eagle",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 eagle 的儿童语境译义“老鹰”；例句“An eagle flies very high.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "54e0eb757714149a23d18e53ba7c85ff0a8c712944849d164f06adab47805990",
+    "verdict": "pass"
+  },
+  {
+    "id": "owl",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "本例描述一只夜间活动的猫头鹰，可接受；不是对所有种类作全天绝对判断。",
+    "content_sha256": "d9add3e33b12fb33f46241f19390c1d7602212feecac51080c24e6d86f13c339",
+    "verdict": "pass"
+  },
+  {
+    "id": "octopus",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "八条腕足用 arms，不误作章鱼八条 legs。",
+    "content_sha256": "a2602e0ad5aa16e07e6036a68b7b1705bcb1d0ac32e957503566e64e8e03549b",
+    "verdict": "pass"
+  },
+  {
+    "id": "butterfly",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 butterfly 的儿童语境译义“蝴蝶”；例句“A butterfly lands on the flower.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "814e64fc4e4de50ef4a05f6885b41e401540be3660ed0d21ca69449a1a2edd55",
+    "verdict": "pass"
+  },
+  {
+    "id": "dinosaur",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "儿童常用非鸟恐龙语境中 lived long ago 自然，不把该句当全部演化学分类定义。",
+    "content_sha256": "2a64ec25937ab12a1cd5913fa9966030008a5cfe8e3ed17b976f4cc429d3c111",
+    "verdict": "pass"
+  },
+  {
+    "id": "swan",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 swan 的儿童语境译义“天鹅”；例句“A white swan swims on the lake.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "17cfcbf4346e441829e6b866e9cd3c71073207d2b1e9f23580bf76e5ac96d786",
+    "verdict": "pass"
+  },
+  {
+    "id": "puppy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 puppy 的儿童语境译义“小狗”；例句“The puppy runs after the ball.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6c9d2721cbc1b1bc24677d2d608e0a23f28fafe47700f1f777b8334a30223376",
+    "verdict": "pass"
+  },
+  {
+    "id": "kitten",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 kitten 的儿童语境译义“小猫”；例句“The kitten sleeps in a basket.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b2f2165d6de608ce6ce1b35cce5be88adda0432562937abbab9f01d662b650f7",
+    "verdict": "pass"
+  },
+  {
+    "id": "insect",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 insect 的儿童语境译义“昆虫”；例句“A bee is a small insect.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "320cffc6e5fb490405989031b7eadf49877e5500dbaa3650b57a91f904ab0a28",
+    "verdict": "pass"
+  },
+  {
+    "id": "airport",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 airport 的儿童语境译义“机场”；例句“We catch our plane at the airport.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "cb6e82ffaa4f5e172cbf36aae337ba4093b42430bae1ed3cae6798b3f64f1bab",
+    "verdict": "pass"
+  },
+  {
+    "id": "castle",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 castle 的儿童语境译义“城堡”；例句“The king lives in a castle.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "5e1e7eff64f5a878b7452e50d375dfc85062ba9fc753bdb7f86780e52c25b391",
+    "verdict": "pass"
+  },
+  {
+    "id": "museum",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 museum 的儿童语境译义“博物馆”；例句“We saw dinosaur bones at the museum.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "58f4947d15bc4871fecae01cdc36b5806929147fe2e6f9aafc17735c81b41c3e",
+    "verdict": "pass"
+  },
+  {
+    "id": "hotel",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 hotel 的儿童语境译义“酒店”；例句“We stayed at a hotel by the sea.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "382ec594425f682e2c43aa68bee43680d38bcad2f18d54d78c77a04e6532e246",
+    "verdict": "pass"
+  },
+  {
+    "id": "restaurant",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 restaurant 的儿童语境译义“餐厅”；例句“We had dinner at a restaurant.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "71f1247f785d0cbf7b2cfb08bd21fa7b687ac1a2bd7d41f23b42534219dd8ca2",
+    "verdict": "pass"
+  },
+  {
+    "id": "postoffice",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 post office 的儿童语境译义“邮局”；例句“I send a letter at the post office.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3e341c13545bd4799b1dd4bb9207b80dc03bea6e01e8b6776dbbbe8eac748452",
+    "verdict": "pass"
+  },
+  {
+    "id": "stadium",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 stadium 的儿童语境译义“体育场”；例句“The football match is at the stadium.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c6813d82d48efe15acbea9465e176084930f77256cfa5e50c1f5a95f31d36706",
+    "verdict": "pass"
+  },
+  {
+    "id": "factory",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 factory 的儿童语境译义“工厂”；例句“Cars are made in a factory.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a1884715ecbc3c80c953c22afb263cf8293cfbddb36e068b2f59923c01517826",
+    "verdict": "pass"
+  },
+  {
+    "id": "bridge",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 bridge 的儿童语境译义“桥”；例句“The bridge goes over the river.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "10663039515860c1009961a768acfb28e7be7ba74a88464a16426208eac52655",
+    "verdict": "pass"
+  },
+  {
+    "id": "desert",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "当前是在描述特定沙漠 The desert，而非断言所有沙漠都热；中文名词义正确。",
+    "content_sha256": "8e6a1d4927722b052f510a1e9be068415723594130d15718161833573ab236fe",
+    "verdict": "pass"
+  },
+  {
+    "id": "university",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 university 的儿童语境译义“大学”；例句“My cousin studies at university.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "33f80c972172eb2aa40cdd561d43c113b3c5f68a0c71e9c1bc3ca9da67702f55",
+    "verdict": "pass"
+  },
+  {
+    "id": "theatre",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 theatre 的儿童语境译义“剧院”；例句“We watched a play at the theatre.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e7fdfdf5ce1875f3375392446b2a11d84e81a765f907b9524705158aa5e477dd",
+    "verdict": "pass"
+  },
+  {
+    "id": "pilot",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 pilot 的儿童语境译义“飞行员”；例句“The pilot flies the plane.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "4689bb5ee54d1b45dbde30c3bbb4eee6a0c5046bd7043758ad63e612528f63e8",
+    "verdict": "pass"
+  },
+  {
+    "id": "policeofficer",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 police officer 的儿童语境译义“警察”；例句“The police officer helps people.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ec7e9637a4d1298e0c1a634c2b4dbbbe6f796dc71310b788903d73be5cd3efbb",
+    "verdict": "pass"
+  },
+  {
+    "id": "firefighter",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 firefighter 的儿童语境译义“消防员”；例句“The firefighter is very brave.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "59c9955b3648a2ecbd5eef7df99ee3e23aaf973e9742966a7b7e272fec768683",
+    "verdict": "pass"
+  },
+  {
+    "id": "singer",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 singer 的儿童语境译义“歌手”；例句“The singer has a beautiful voice.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "fbbd3275a7f82070111ff12232bccb482f672428c93cf6cbfe305b51dd528983",
+    "verdict": "pass"
+  },
+  {
+    "id": "artist",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 artist 的儿童语境译义“艺术家、画家”；例句“The artist paints pictures.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "f870757e9f530579b340c6cf72dddc5ee594561d4d5cc223eeea3a7c4dca44df",
+    "verdict": "pass"
+  },
+  {
+    "id": "engineer",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 engineer 的儿童语境译义“工程师”；例句“The engineer builds bridges.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e93347a57b62aa9411cee5f99dcead00c1f426dae612d3da29b7bebb6a7f05ea",
+    "verdict": "pass"
+  },
+  {
+    "id": "king",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 king 的儿童语境译义“国王”；例句“The king wears a gold crown.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c188330b85710018395003d67c6479d885c4eed8a993b0c900637be431dc0104",
+    "verdict": "pass"
+  },
+  {
+    "id": "queen",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "女王及王后均保留，不限制政治身份；宫殿例句可适用于两者。",
+    "content_sha256": "33049ff9bc4f7183775f0ac23ca6d31915e4bb75c7588fea8d37a99e62284ef0",
+    "verdict": "pass"
+  },
+  {
+    "id": "planet",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 planet 的儿童语境译义“行星”；例句“Mars is a red planet.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "807907be54a3220d67ab64305de2090a90a22e46f99d1471ea98d83f8715dc23",
+    "verdict": "pass"
+  },
+  {
+    "id": "rocket",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 rocket 的儿童语境译义“火箭”；例句“The rocket flies to the moon.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e834652c0f7f2eb17006e24c424bb73a311eae1f8e262248f53ba4dcc131d5ea",
+    "verdict": "pass"
+  },
+  {
+    "id": "earth",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 earth 的儿童语境译义“地球”；例句“The Earth is our home.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ab139675cf1c0543537e565227f2914f1fa8fe19fcc5d0420d465d50c1a5a996",
+    "verdict": "pass"
+  },
+  {
+    "id": "space",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 space 的儿童语境译义“太空”；例句“Astronauts travel into space.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "ecd251286fcd08e6d08e72a1e8e15db20f9fbfddc2f97a2911e0c897f152ec17",
+    "verdict": "pass"
+  },
+  {
+    "id": "lightning",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lightning 的儿童语境译义“闪电”；例句“Lightning lights up the sky.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c4133a33c76241b8f08e1c5f717692b9fa5a39460ea072c761a511634edad56e",
+    "verdict": "pass"
+  },
+  {
+    "id": "fog",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 fog 的儿童语境译义“雾”；例句“We can't see far in the fog.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e9b03f1f94c4a01d0e2eaf486f200890d7560137abbdb6c92ee46c2734664859",
+    "verdict": "pass"
+  },
+  {
+    "id": "ocean",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ocean 的儿童语境译义“海洋”；例句“Whales live in the ocean.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "b304a486f6224a7f55be6c5e5df9458ee41c6df12f1cfe997236b4a7b48843e2",
+    "verdict": "pass"
+  },
+  {
+    "id": "fire",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Don't play with fire 是适龄提醒而非鼓励操作火。",
+    "content_sha256": "31e72ed6dc582733c9396c01cc29d0439a067a0e735cc1ebf89534f7cf262c13",
+    "verdict": "pass"
+  },
+  {
+    "id": "biscuit",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "英式饼干义与整体 mum/colour/lorry 的英式语境一致，不强混美式松饼义。",
+    "content_sha256": "e5b99783d68ee10b718458352ffd9d4a415d64cebcfb0256bb9e6da25a8c6c92",
+    "verdict": "pass"
+  },
+  {
+    "id": "butter",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 butter 的儿童语境译义“黄油”；例句“Put some butter on the bread.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "abf17e9ed74c66d1070e71142c6be620f5ae2e530dba2c26822f1e36040a1210",
+    "verdict": "pass"
+  },
+  {
+    "id": "salt",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 salt 的儿童语境译义“盐”；例句“Don't add too much salt.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "0482766f77a03983218f5b43b7f1bde52d73d2f7250883da9ea17f8493f5b241",
+    "verdict": "pass"
+  },
+  {
+    "id": "pepper",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：胡椒和打喷嚏例句一致；SVG 表现胡椒磨与胡椒粒，已去除辣椒图义误导。核对为源码语义，不等于视觉测试。",
+    "content_sha256": "0c67835acf4008c7e9be87a2d2a31dc4c9eff1f37a92fe6e65a4964d43e42c3c",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "major",
+      "field": "emoji",
+      "issue": "中文胡椒和例句打喷嚏指调味胡椒，🌶️ 却是辣椒，若用于看图选择就给出了另一个义项的视觉线索。",
+      "suggested": "改成不误导为辣椒的调味料容器图标；或完整改为辣椒义和匹配例句。"
+    }
+  },
+  {
+    "id": "sugar",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 sugar 的儿童语境译义“糖”；例句“Sugar makes the cake sweet.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d94c39e3e749854c5b60fd6f487ecbfefef1e685a96d4ae85e6b6f7c949397dc",
+    "verdict": "pass"
+  },
+  {
+    "id": "snack",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 snack 的儿童语境译义“小吃、点心、加餐”；例句“I have a snack after school.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c7b323384dacd1326f44d1fb0186b5584181ba1df21c0341e99f5937afd3ad65",
+    "verdict": "pass"
+  },
+  {
+    "id": "spoon",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 spoon 的儿童语境译义“勺子”；例句“I eat soup with a spoon.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7de713aca4d9049155f65951fc83e7f7a20c751eda633b4a3d162eef9c6ead90",
+    "verdict": "pass"
+  },
+  {
+    "id": "fork",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 fork 的儿童语境译义“叉子”；例句“Use a knife and fork.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "7a3c038d6ebf14d3b7d04e3dd844e2a8304cfc38ed32e45f2e79cb766ec69b4a",
+    "verdict": "pass"
+  },
+  {
+    "id": "knife",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：刀的译义正确；Dad 操作切苹果，适合儿童词卡而非命令孩子动刀。",
+    "content_sha256": "64da7a41a6d03563cabe4435dd6b7792102e2e395b76929d9b568c1038932ac1",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "sentence",
+      "issue": "直接让学习者持刀切苹果；用成人操作或明确求助的句子更适合家庭儿童卡。",
+      "suggested": "Dad cuts the apple with a knife."
+    }
+  },
+  {
+    "id": "chopsticks",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 chopsticks 的儿童语境译义“筷子”；例句“We eat rice with chopsticks.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "bfcfa00a59b04e3f81dd312b698db7cfdd1c59e2d18e2c039161d6bba0b67daa",
+    "verdict": "pass"
+  },
+  {
+    "id": "scissors",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "剪纸场景适龄但实际操作仍应按儿童工具安全规则；复数 scissors 形式正确。",
+    "content_sha256": "8618bcf657d86bf7bf60c3cfa9a21bf388916e34c6a05406e8d415cf47b3fd55",
+    "verdict": "pass"
+  },
+  {
+    "id": "map",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 map 的儿童语境译义“地图”；例句“The map shows us the way.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "bac2e43df8e8d75f7d6ffb823b975bdc984e482a8dc52acecc7225fed3e34651",
+    "verdict": "pass"
+  },
+  {
+    "id": "flag",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 flag 的儿童语境译义“旗子”；例句“The flag is red and yellow.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "426fd80618023d995bd3cdd69a2659025a7bed1c1ef93079d6e34c3a263220a2",
+    "verdict": "pass"
+  },
+  {
+    "id": "key",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 key 的儿童语境译义“钥匙”；例句“I open the door with a key.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e0c362d573e2ec02e7000246ee7f7990b74d066e8e78c856e228a37abb8d083d",
+    "verdict": "pass"
+  },
+  {
+    "id": "letter",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 letter 的儿童语境译义“信”；例句“I write a letter to my friend.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "03e63638cd7592dab91dd56344bc1be57981f53476322d93944b0a5b9077c7ec",
+    "verdict": "pass"
+  },
+  {
+    "id": "postcard",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 postcard 的儿童语境译义“明信片”；例句“Send me a postcard from your trip!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "919934ae048769f567df86b4c488abadc0f15426fe0549ebe16e81e1654aa0fa",
+    "verdict": "pass"
+  },
+  {
+    "id": "newspaper",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 newspaper 的儿童语境译义“报纸”；例句“Dad reads the newspaper every morning.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d8116ad722742c9ef6a44e0ec8956d43f1537b4191825cc52186cba7934bb520",
+    "verdict": "pass"
+  },
+  {
+    "id": "prize",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 prize 的儿童语境译义“奖品”；例句“She won first prize in the race.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6e0300275ed2a6df634b4daa0443e3298e80e26b0078cd9e7ff31b01775c1aec",
+    "verdict": "pass"
+  },
+  {
+    "id": "drum",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "可说 play the drum，单个鼓的乐器活动自然；不必机械全部改成 drums。",
+    "content_sha256": "eff5b15af43a0d854741e54d1a782c17cd586ae19df6dfd177db9d1e7ca9857f",
+    "verdict": "pass"
+  },
+  {
+    "id": "violin",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 violin 的儿童语境译义“小提琴”；例句“She plays the violin beautifully.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "95d9377cba445ca180cc1c14cd44ec1c5789cdd417fee0d81fc595310cac6267",
+    "verdict": "pass"
+  },
+  {
+    "id": "tent",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 tent 的儿童语境译义“帐篷”；例句“We sleep in a tent outside.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "a206889f289a5f34042d1cf5042f2707eada259f0dc341847378dc064ea80be1",
+    "verdict": "pass"
+  },
+  {
+    "id": "suitcase",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 suitcase 的儿童语境译义“行李箱”；例句“Pack your suitcase for the holiday.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "23c3f800934dc22ce86b2437b2cdcef0671bc706cec5477cb83857f91536c090",
+    "verdict": "pass"
+  },
+  {
+    "id": "bored",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "明确感到无聊，对应人 I，而非把 bored/boring 混同。",
+    "content_sha256": "43f78a4e46df6f1a0f1c2bc93c3b936b5fdddde9fecbb06bf2bb4926eed2b4f8",
+    "verdict": "pass"
+  },
+  {
+    "id": "brilliant",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 brilliant 的儿童语境译义“超棒的”；例句“Your idea is brilliant!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "e6bb476926b70f7a75c0c4c77ed33d53d5829a956c6b682c8852fc8f86f061c4",
+    "verdict": "pass"
+  },
+  {
+    "id": "friendly",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 friendly 的儿童语境译义“友好的”；例句“Our new neighbour is friendly.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3a189cab851c551a13c015d2861ec01fab605e15fe614e8a8bf5145c1bbbb096",
+    "verdict": "pass"
+  },
+  {
+    "id": "heavy",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 heavy 的儿童语境译义“重的”；例句“This box is too heavy for me.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "add4d0e559b43b5bc096f824b8eed9437b61dbc52858352f8a49294273ac8fb1",
+    "verdict": "pass"
+  },
+  {
+    "id": "lucky",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 lucky 的儿童语境译义“幸运的”；例句“I found a coin. I'm so lucky!”使用该义，语法及当前难度可接受。",
+    "content_sha256": "63cfffa2a00e2ce49c5e319e455bf423c7db55642280616e67ddf7985910817e",
+    "verdict": "pass"
+  },
+  {
+    "id": "nervous",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 nervous 的儿童语境译义“紧张的”；例句“I feel nervous before the exam.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "813b22414173b12c721377ccf558579bbec107da71ccd091beb60daec8c42db4",
+    "verdict": "pass"
+  },
+  {
+    "id": "rich",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 rich 的儿童语境译义“富有的”；例句“The rich man has a big house.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "3bce5a7521a402c39e7143dc67433f7cc19169f2129235625d27fda0b613ef2c",
+    "verdict": "pass"
+  },
+  {
+    "id": "secret",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "复核修订：分类 objects 不再误放 adjectives；秘密为名词，keep a secret 例句一致。",
+    "content_sha256": "ad943b3ed0fa3b3c81520ed6f41cfb9954b5e4e5dc7c8edeeb1d0be089c9697f",
+    "verdict": "pass",
+    "resolvedFinding": {
+      "severity": "minor",
+      "field": "cat",
+      "issue": "zh=秘密及 keep a secret 都使用名词，但分类为 adjectives，儿童按形容词分类学习时词性错配。",
+      "suggested": "cat 改 objects，或另外建立秘密的形容词卡。"
+    }
+  },
+  {
+    "id": "ski",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 ski 的儿童语境译义“滑雪”；例句“We ski down the snowy hill.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "c26fa170874a0b582b4182321787369a8f98a91ab7a2263e5b0da79da2c6ff24",
+    "verdict": "pass"
+  },
+  {
+    "id": "chess",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 chess 的儿童语境译义“国际象棋”；例句“Grandpa taught me to play chess.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "6288a0a9b2e8eb2b6f2c87c1d1d7f0c59987c71c5e252cf425d11581704ae556",
+    "verdict": "pass"
+  },
+  {
+    "id": "golf",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 golf 的儿童语境译义“高尔夫”；例句“Dad plays golf on Sundays.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "80d870c6b4be093212aebd3e8ea60a4b0b1b1a78e8c645ef58252d0a522d640f",
+    "verdict": "pass"
+  },
+  {
+    "id": "juggle",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "连续抛接与 five balls 对应，不再误译为杂耍的所有种类。",
+    "content_sha256": "9d367c0d54ff1332e099e69a2b4bab914656fe22bae2fef666ccc6a75d5423e1",
+    "verdict": "pass"
+  },
+  {
+    "id": "fireworks",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 fireworks 的儿童语境译义“烟花”；例句“We watch fireworks at New Year.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "dfae79744d56bf701f09c0b04d23850b8aff927499a464fb38ef78309ea069b9",
+    "verdict": "pass"
+  },
+  {
+    "id": "camping",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 camping 的儿童语境译义“露营”；例句“We go camping in the forest.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "2902c3a98a84b4a606624c0cfd91ed4216217f62f216c1b8a45593fc372ffeb4",
+    "verdict": "pass"
+  },
+  {
+    "id": "fishing",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对 fishing 的儿童语境译义“钓鱼”；例句“We go fishing with grandpa.”使用该义，语法及当前难度可接受。",
+    "content_sha256": "d8c1cd38ba23040d56dd8dad80d87fbc519c11ed17b8f5ff72d763beb54172ef",
+    "verdict": "pass"
+  },
+  {
+    "id": "sledge",
+    "scope": "children",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "英式雪橇对应儿童雪地活动，句子 ride a sledge 自然。",
+    "content_sha256": "53e216c981f7e349cfe836f8e02abd22cbee4b0d53ad00bc859c6619b92c8b7f",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_nose",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "身体名词 nose→鼻子，无需冠词作为指认词头，适合身体动作识别。",
+    "content_sha256": "76af8ad5dfd2f9780150033fd199f3b0c74244454c2070f66e0e770439dac85e",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_hands",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "hands 为复数手；家庭身体指认译双手合适，不把两只手视为单数。",
+    "content_sha256": "67b0b42e9def39634125ebaf286f62f14e53c5544cf24c50ceade34a421d065e",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_feet",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "feet 是 foot 不规则复数；身体动作语境译双脚准确。",
+    "content_sha256": "fbfede2aea96748577dc344ffaec4865d456958c42b254332faf9ad83ee1923b",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_jump",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Jump! 是简短自然动作口令，中文跳起来一致。",
+    "content_sha256": "106df06ec07b75061ffd839048beb6a32d8f9a4290ad4477b3be26b6ade9d681",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_clap",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Clap your hands! 对应拍手；不使用 clap hands 的不自然缺所属表达。",
+    "content_sha256": "6ca897b400bd4ea1f26ef42263c31fc91c20b92aedee53268b1e87fd77e18e94",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_sit",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Sit down! 是自然坐下口令，方向副词不可省略成同义断言。",
+    "content_sha256": "0a1d8e1a1c523d29a81f677a488f3fb05adf2696814f849ae16b8546302b25f2",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_mum",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Mummy 为亲昵的妈妈称谓，适合幼儿，不应按大写泛义释作木乃伊。",
+    "content_sha256": "4e03f89cc5d866d988e6a0330f3f7c5bb339a5b098eeade0222056fa5015cef3",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_dad",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Daddy 为亲昵的爸爸称谓，适合家庭口语。",
+    "content_sha256": "389ca647e67edf6cd472f0784fcdf25763c671f78b3254f7ed06ad4db9fd569e",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_yoyo",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Yoyo 是本家庭姐姐的名字，中文是人物说明而非宣称 Yoyo 在英语中意为姐姐；家庭个性化项可保留。",
+    "content_sha256": "047453f4c7acb741e1f26d2c8c3e75be2a758e1223f1b964e45df6fb4f798309",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_me",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Kiwi 是幼儿个人名字，中文我 Kiwi 为人物说明，不是把普通英语 kiwi 翻译成我。",
+    "content_sha256": "bad0370992fcc539ea75aa4600a3f8495ecb05c0a411e75283aea2113db8cf76",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_hello",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Hello! 对应你好，常用见面招呼完整自然。",
+    "content_sha256": "8b0467fe706ac759d6a8e4a491e5d1d5db27b6bfedd5222189121438931e4ad2",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_bye",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Bye-bye! 对应再见，幼儿日常口语自然。",
+    "content_sha256": "6d7894d56edbf801eeab5f59c993e5240879991aede859529ddbfafa065be5af",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_water",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "water→水，可作为幼儿最初需求词，不假称是完整礼貌请求。",
+    "content_sha256": "332b2f5cd79c661c6bbcc00669bb25c0628829c19abbe32b95248e9e3de88e03",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_milk",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "milk→牛奶，在家庭饮食语境是常用对应。",
+    "content_sha256": "e56aef7cf967f52d237673b904aea083618967e2f561f695f79e1903f27fe5ca",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_apple",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "apple→苹果，食物指认可使用不带冠词词头。",
+    "content_sha256": "8f1ef7db442d2c8bdd71a52e0353c30ccc630edb007fbf47f3bd2558a117c298",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_banana",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "banana→香蕉，指认日常食物，难度适龄。",
+    "content_sha256": "f5fdd552bc36a39731c523f20671d30f6facc73c107c6c065d6106c37b728b47",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_more",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "More, please. 是省略式自然需求表达，中文请再给我一点对齐。",
+    "content_sha256": "d2db49874220418d8f02ce21a2f2310a557b453b93ffee38040a975768055491",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_done",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "All done! 已扩展为全好了/做完了，并在吃饭时释吃完了；不再把它只限餐食。",
+    "content_sha256": "360fa135dfb5c5e037ee9e6e5b6be0b5976cbf30937d7669321accf2834c5059",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_ball",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "ball→球，玩具语境准确，不引入舞会等成人次义。",
+    "content_sha256": "b4e1735598d4ba355af23dffdf07957e1d15d91d1fcebd78ebad124d3256de86",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_car",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "car→小汽车，玩具语境可接受，未误译成所有交通工具。",
+    "content_sha256": "2b9f1e20e7f221dd511367de94f34efa4b2d8f72c5de1bcaef8770b3aa9940ae",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_book",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "book→书，幼儿玩读语境准确，不加入预订动词干扰。",
+    "content_sha256": "b5bf5af027db711c018d8bb6f98e735485da720149755d4c042f0f2c5827ca63",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_open",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Open it. 自然指物口令，it 需当前实物语境；把它打开翻译准确。",
+    "content_sha256": "1ef40d2b0c614b9ae0335826a2b70c01a84c983dd0f55041239c32056f4aacca",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_give",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Give it to me. 自然传递口令，中文接收方向正确；日常社交可补 please 但非语法错误。",
+    "content_sha256": "be40cfe9ca9f16247dc7461a1400d34c6d1577f096ad24b70e38bb547b1b207f",
+    "verdict": "pass"
+  },
+  {
+    "id": "kiwi_putin",
+    "scope": "kiwi",
+    "author": "root",
+    "reviewer": "vocab_author_a",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "Put it in. 自然容器游戏口令，须面对当前容器，中文方向准确。",
+    "content_sha256": "3988b6ffc9a47e0a94abe25198eaa50852f87c5e0b654c799bdc30c280aacbc7",
+    "verdict": "pass"
+  }
+]

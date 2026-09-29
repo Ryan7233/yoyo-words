@@ -164,6 +164,36 @@ HOMOGRAPH_DOMAIN_PATTERNS = {
     "intent noun sense": re.compile(r"^\s*a fixed and persistent intent\b", re.IGNORECASE),
 }
 
+# WordNet often lists a famous person or a place under a common word
+# (hunt -> Holman Hunt, buffalo -> the city, forth -> the River Forth).
+# For a lowercase headword such a sense is never the learner's meaning.
+NATIONALITY = (
+    r"(?:United States|American|English|British|Scottish|Irish|Welsh|French|German|"
+    r"Italian|Spanish|Mexican|Russian|Dutch|Swiss|Austrian|Greek|Canadian|Australian|"
+    r"Englishman|Polish|Swedish|Norwegian|Danish|Hungarian|Czech|Belgian|Portuguese|"
+    r"Flemish|Prussian|Israeli|Brazilian)"
+)
+OCCUPATION = (
+    r"(?:songwriter|painter|philosopher|chemist|physicist|leader|writer|novelist|poet|"
+    r"composer|statesman|actor|actress|singer|general|politician|economist|astronomer|"
+    r"mathematician|explorer|inventor|architect|sculptor|dramatist|playwright|filmmaker|"
+    r"biologist|psychologist|historian|journalist|educator|theologian|abolitionist|"
+    r"musician|pianist|lawyer|jurist|physician|surgeon|engineer|industrialist|financier|"
+    r"soldier|admiral|revolutionary|comedian|author|essayist|critic|aviator|naturalist|"
+    r"botanist|geologist|sociologist|linguist|scholar|photographer|athlete)"
+)
+PROPER_NAME_SENSE_PATTERNS = {
+    "biography": re.compile(
+        rf"^\s*(?:[a-z-]+\s+){{0,2}}{NATIONALITY}(?:\s+and\s+[\w-]+)?\s+(?:[a-z-]+\s+){{0,3}}{OCCUPATION}\b"
+        r"|\(\d{3,4}\s*[-–]\s*\d{2,4}\)",
+    ),
+    "place": re.compile(
+        r"\b(?:a|the) (?:city|town|port|river|county|province|island) (?:in|on)\b|\bcapital of\b",
+        re.IGNORECASE,
+    ),
+}
+TAXONOMY_RE = re.compile(r"\bgenus [A-Z][a-z]+|\bfamily [A-Z][a-z]+ae\b|\border [A-Z][a-z]+\b")
+
 ISSUE_DEFINITIONS = {
     "missing_definition": {
         "category": "defect",
@@ -197,9 +227,21 @@ ISSUE_DEFINITIONS = {
         "category": "defect",
         "meaning": "A non-noun card selected a known concrete or abstract noun homograph sense.",
     },
+    "proper_name_sense_mismatch": {
+        "category": "defect",
+        "meaning": "A common lowercase word is explained as a specific person or place.",
+    },
     "pos_definition_conflict": {
         "category": "risk",
         "meaning": "The grammatical shape of the definition conflicts with the card's primary POS.",
+    },
+    "circular_definition": {
+        "category": "risk",
+        "meaning": "The definition reuses the headword (or its inflection) as a content word.",
+    },
+    "taxonomic_definition": {
+        "category": "heuristic",
+        "meaning": "The definition uses a biological genus/family/order name instead of plain words.",
     },
     "high_outside_vocab_ratio": {
         "category": "heuristic",
@@ -385,6 +427,34 @@ def analyze_word(
                 ))
                 break
 
+    original = str(word.get("en") or "")
+    if original[:1].islower() and not matched_domain:
+        for label, pattern in PROPER_NAME_SENSE_PATTERNS.items():
+            if pattern.search(definition):
+                matched_domain = label
+                issues.append(Issue(
+                    "proper_name_sense_mismatch",
+                    "defect",
+                    f"The common word is explained as a specific {label}.",
+                ))
+                break
+
+    if len(headword) >= 3 and headword not in STOPWORDS and any(
+        headword in lemma_candidates(token) for token in tokens[1:]
+    ):
+        issues.append(Issue(
+            "circular_definition",
+            "risk",
+            "The definition reuses the headword as a content word.",
+        ))
+
+    if TAXONOMY_RE.search(definition):
+        issues.append(Issue(
+            "taxonomic_definition",
+            "heuristic",
+            "The definition relies on a biological genus/family/order name.",
+        ))
+
     # POS-shape rules deliberately produce review candidates rather than
     # verdicts.  A noun-phrase definition can be valid for words such as
     # "there", while often exposing a wrong noun sense for "well" or "still".
@@ -467,6 +537,8 @@ def analyze_word(
         "letter_sense_mismatch",
         "abbreviation_sense_mismatch",
         "homograph_sense_mismatch",
+        "proper_name_sense_mismatch",
+        "sense_proper_name_sense_mismatch",
     }
     if any(code in hard_codes for code in issue_codes):
         priority = "P0"
@@ -657,11 +729,14 @@ def main() -> None:
         "letter_sense_mismatch",
         "abbreviation_sense_mismatch",
         "homograph_sense_mismatch",
+        "proper_name_sense_mismatch",
         "headword_self_reference",
         "obvious_truncation",
         "legacy_cross_reference",
         "legacy_grammar_notation",
         "pos_definition_conflict",
+        "circular_definition",
+        "taxonomic_definition",
         "high_outside_vocab_ratio",
         "definition_too_advanced",
     ]
@@ -670,6 +745,9 @@ def main() -> None:
         "letter_sense_mismatch": "字母义错配",
         "abbreviation_sense_mismatch": "缩写/同形词义项错配",
         "homograph_sense_mismatch": "常见同形词义项错配",
+        "proper_name_sense_mismatch": "普通词错配人名/地名义",
+        "circular_definition": "循环定义候选（释义中复用原词）",
+        "taxonomic_definition": "生物学名式释义（启发式）",
         "headword_self_reference": "释义以原词开头",
         "obvious_truncation": "明显截断",
         "legacy_cross_reference": "古旧交叉引用",

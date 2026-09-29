@@ -1,0 +1,139 @@
+{
+  "status": "drafts_only_not_semantically_approved",
+  "files": [
+    {
+      "file": "adult-a-001.json",
+      "words": 100,
+      "senses": 180
+    },
+    {
+      "file": "adult-a-002.json",
+      "words": 100,
+      "senses": 194
+    },
+    {
+      "file": "adult-a-003.json",
+      "words": 100,
+      "senses": 174
+    },
+    {
+      "file": "adult-a-004.json",
+      "words": 100,
+      "senses": 165
+    },
+    {
+      "file": "adult-a-005.json",
+      "words": 100,
+      "senses": 171
+    },
+    {
+      "file": "adult-a-006.json",
+      "words": 100,
+      "senses": 167
+    },
+    {
+      "file": "adult-a-007.json",
+      "words": 100,
+      "senses": 159
+    },
+    {
+      "file": "adult-a-008.json",
+      "words": 100,
+      "senses": 145
+    },
+    {
+      "file": "adult-a-009.json",
+      "words": 100,
+      "senses": 147
+    },
+    {
+      "file": "adult-a-010.json",
+      "words": 100,
+      "senses": 145
+    },
+    {
+      "file": "adult-a-011.json",
+      "words": 100,
+      "senses": 135
+    },
+    {
+      "file": "adult-b-001.json",
+      "words": 100,
+      "senses": 130
+    },
+    {
+      "file": "adult-b-002.json",
+      "words": 100,
+      "senses": 142
+    },
+    {
+      "file": "adult-b-003.json",
+      "words": 100,
+      "senses": 134
+    },
+    {
+      "file": "adult-b-004.json",
+      "words": 100,
+      "senses": 143
+    },
+    {
+      "file": "adult-b-005.json",
+      "words": 100,
+      "senses": 147
+    },
+    {
+      "file": "adult-b-006.json",
+      "words": 100,
+      "senses": 145
+    },
+    {
+      "file": "adult-b-007.json",
+      "words": 100,
+      "senses": 132
+    },
+    {
+      "file": "adult-c-001.json",
+      "words": 100,
+      "senses": 127
+    },
+    {
+      "file": "adult-c-002.json",
+      "words": 100,
+      "senses": 133
+    },
+    {
+      "file": "adult-c-003.json",
+      "words": 100,
+      "senses": 134
+    },
+    {
+      "file": "adult-c-004.json",
+      "words": 100,
+      "senses": 131
+    },
+    {
+      "file": "adult-c-005.json",
+      "words": 100,
+      "senses": 134
+    },
+    {
+      "file": "adult-c-006.json",
+      "words": 100,
+      "senses": 134
+    },
+    {
+      "file": "adult-c-007.json",
+      "words": 100,
+      "senses": 127
+    },
+    {
+      "file": "adult-c-008.json",
+      "words": 100,
+      "senses": 129
+    }
+  ],
+  "draft_words": 2600,
+  "total_words": 6912,
+  "words_without_draft": 4312,
+  "issues": []
+}

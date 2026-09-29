@@ -1,46 +1,90 @@
 ﻿rank,en,pos,zh,definition,tracks,priority,issue_codes,defect_count,risk_count,heuristic_count,content_token_count,outside_vocab_ratio,advanced_token_ratio,harder_than_headword_ratio,outside_tokens,advanced_tokens
-39,get,v.,得到、获得、变成,come into the possession of something concrete or abstract,life,P3,definition_too_advanced,0,0,1,5,0.000,0.600,1.000,,abstract|concrete|possession
-53,there,adv.,在那里,a location other than here,life,P2,pos_definition_conflict,0,1,0,1,0.000,0.000,1.000,,
-72,now,adv.,现在、刚才、目前,the momentary present,life,P2,pos_definition_conflict,0,1,0,2,0.000,0.500,1.000,,momentary
-74,like,v.,喜欢、像,find enjoyable or agreeable,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,enjoyable,agreeable|enjoyable
-81,more,adv.,更、更加；再,to a greater degree or for a longer time,life,P2,sense_pos_definition_conflict,0,1,0,4,0.000,0.000,0.750,,
-93,no,adv.,不、没有,a negative,life,P2,pos_definition_conflict,0,1,0,1,0.000,0.000,1.000,,
-96,here,adv.,在这里、此时、这里,the present location,life,P2,pos_definition_conflict,0,1,0,2,0.000,0.000,1.000,,
-130,last,adj.,最后的、持续,the last or lowest in an ordering or series,life,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.750,,
-164,begin,v.,开始,"have a beginning, in a temporal, spatial, or evaluative sense",life,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.800,evaluative|temporal,evaluative|spatial|temporal
-174,hand,n.,手、爪、指针,the (prehensile) extremity of the superior limb,life,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,1.000,1.000,extremity|prehensile,extremity|limb|prehensile|superior
-177,show,n.,显示、表现、展览,the act of publicly exhibiting or entertaining,life,P3,definition_too_advanced,0,0,1,4,0.250,0.750,1.000,publicly,entertaining|exhibiting|publicly
-191,system,n.,系统、体系、制度,instrumentality that combines interrelated interacting artifacts designed to work as a coherent entity,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,9,0.333,0.667,0.889,artifacts|instrumentality|interrelated,artifacts|coherent|entity|instrumentality|interacting|interrelated
+60,some,det.,一些；某个,an amount or number that is not exact; a person or thing not identified,life,P2,sense_pos_definition_conflict,0,1,0,6,0.000,0.167,1.000,,exact
+62,people,n.,人们；人民；民族,human beings as a group; the members of a country or a group sharing a language and culture,life,P2,sense_circular_definition,0,1,0,9,0.000,0.000,0.889,,
+66,just,adv.,刚刚；只是；正好；仅仅,a very short time ago; only; exactly; by a small amount,life,P2,pos_definition_conflict,0,1,0,6,0.000,0.000,0.833,,
+75,other,det.,其他的；另外的；其余的,"different from the one mentioned, additional, or remaining",life,P2,sense_pos_definition_conflict,0,1,0,5,0.000,0.000,0.800,,
+81,more,det.,更多的；额外的,greater in number or amount; additional,life,P2,sense_pos_definition_conflict,0,1,0,4,0.000,0.000,1.000,,
+99,many,det.,许多的（修饰可数名词）,a large number of people or things,life,P2,sense_pos_definition_conflict,0,1,0,4,0.000,0.000,0.500,,
+109,any,det.,任何的；一些（用于疑问或否定）,"one or more of a kind without choosing which; some, especially in questions and negative statements",life,P1,sense_obvious_truncation|sense_pos_definition_conflict,1,1,0,8,0.000,0.000,0.875,,
+113,us,pron.,我们（作宾语）,"the speaker and one or more others, as the object of a verb or after a word such as 'with'",life,P2,pos_definition_conflict,0,1,0,6,0.000,0.167,0.667,,verb
+117,work,v.,工作；运转；奏效；操作,"do a job or task, function correctly, have the intended effect, or operate something",life,P2,sense_circular_definition,0,1,0,8,0.000,0.125,1.000,,correctly
+141,high,adj.,高的；大量的；高级的；高音的；陶醉的,"far above the ground, large, important, or near the top of a sound range; also very excited or affected by drugs",life,P2,sense_circular_definition,0,1,0,11,0.000,0.091,1.000,,excited
+142,something,pron.,某事；某物；重要或出色的事物,a thing not named or not known; sometimes a thing considered important or impressive,life,P2,pos_definition_conflict,0,1,0,8,0.000,0.125,0.625,,impressive
+144,most,det.,大多数的；最多的,more than half of a group or amount; the greatest number or amount,life,P2,sense_pos_definition_conflict,0,1,0,6,0.000,0.000,1.000,,
+146,much,det.,许多的；大量的（修饰不可数名词）,"a large amount of something, especially in questions or negative statements",life,P2,sense_pos_definition_conflict,0,1,0,7,0.000,0.000,0.857,,
+150,leave,v.,离开；留下；使处于；遗留；交给,"go away, let something remain, cause a state, or give a task or property to someone",life,P2,sense_circular_definition,0,1,0,11,0.000,0.000,0.636,,
+161,same,adj.,相同的；同一个的；未改变的,not different; exactly the person or thing already mentioned; unchanged,life,P2,sense_pos_definition_conflict,0,1,0,7,0.143,0.143,0.857,unchanged,unchanged
+167,help,v.,帮助；有助于；忍住（否定搭配中）,make something easier or better; avoid or stop an action in expressions such as 'cannot help',life,P2,circular_definition,0,1,0,10,0.100,0.100,0.600,cannot,cannot
+172,every,det.,每一个；每隔；一切可能的,"each member of a group; at repeated intervals; or all of a kind, as in 'every effort'",life,P2,circular_definition,0,1,0,7,0.000,0.143,0.714,,intervals
+173,start,v.,开始；启动；出发；惊跳,"begin an action or journey, make a machine operate, or move suddenly because of surprise",life,P2,sense_circular_definition,0,1,0,9,0.000,0.000,0.778,,
+174,hand,n.,手；帮助；指针；工人；手中牌,the body part at the end of an arm; help; a clock pointer; a worker; the cards a player holds,life,P2,sense_circular_definition,0,1,0,11,0.091,0.091,0.909,pointer,pointer
+183,such,det.,这样的；如此的,of the kind mentioned or to a great degree,life,P2,sense_pos_definition_conflict,0,1,0,4,0.000,0.000,0.750,,
+185,few,det.,很少的；少数的（a few：有几个）,"not many; with 'a', a small but positive number",life,P2,sense_pos_definition_conflict,0,1,0,4,0.000,0.000,0.750,,
+193,right,adj.,正确的；合适的；右边的；正当的,correct or suitable; on the side opposite the left; morally fair or acceptable,life,P2,sense_circular_definition,0,1,0,8,0.125,0.375,0.875,morally,acceptable|morally|suitable
+202,run,v.,跑；运行；经营；流动；竞选；延伸,"move fast on foot, operate, manage, flow, seek elected office, or extend in a direction",life,P2,sense_circular_definition,0,1,0,11,0.000,0.000,1.000,,
+203,small,adj.,小的；少的；年幼的；不重要的,not large in size or amount; young; not very important,life,P2,sense_circular_definition,0,1,0,5,0.000,0.000,1.000,,
+204,number,n.,数字；数量；号码；一首歌曲或节目,"a value used for counting, an amount, an identifying code, or a song or performance",life,P2,sense_circular_definition,0,1,0,8,0.000,0.000,0.875,,
+217,next,adj.,下一个的；紧接着的；隔壁的,"immediately following in time, order, or position",life,P2,sense_pos_definition_conflict,0,1,0,5,0.000,0.000,0.800,,
 226,water,n.,水、雨水、海水,binary compound that occurs at room temperature as a clear colorless odorless tasteless liquid,life,P3,definition_too_advanced,0,0,1,10,0.400,0.600,1.000,binary|colorless|odorless|tasteless,binary|colorless|compound|liquid|odorless|tasteless
+229,mother,n.,母亲、修女院长,a woman who has given birth to a child (also used as a term of address to your mother),life,P2,circular_definition,0,1,0,8,0.000,0.000,0.375,,
 258,yes,adv.,是,an affirmative,life,P2,pos_definition_conflict,0,1,0,1,1.000,1.000,1.000,affirmative,affirmative
 264,around,prep.,包围、在...周围、四处,by a circular or circuitous route,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,circuitous,circuitous|circular
+267,father,n.,父亲、祖先、长辈,a male parent (also used as a term of address to your father),life,P2,circular_definition,0,1,0,6,0.000,0.000,0.667,,
+281,stand,n.,站立、站住、停顿,the position where a thing or person stands,life,P2,circular_definition,0,1,0,4,0.000,0.000,0.500,,
 301,white,adj.,白色的,having the colour of fresh snow or milk,life,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,1.000,colour|milk,colour|milk
-367,himself,pron.,他自己、他亲自,An emphasized form of the third person masculine,life,P2,pos_definition_conflict,0,1,0,5,0.000,0.200,0.800,,masculine
-376,education,n.,教育、训练、教育学,the activities of educating or instructing,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,educating|instructing
-407,sense,n.,感应、感觉、感官,a general conscious awareness,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,awareness,awareness|conscious
-419,someone,pron.,有人、某人,a human being,life,P2,pos_definition_conflict,0,1,0,1,0.000,0.000,0.000,,
+337,read,v.,阅读；读出；理解；显示；读数,"To get meaning from written words, say them aloud, understand signs, or show or check a measurement.",life,P2,sense_circular_definition,0,1,0,11,0.000,0.182,0.364,,aloud|measurement
+355,open,adj.,打开的；营业的；开放的；坦率的；未定的,Not closed or blocked; available to use; willing to discuss or accept ideas; or not yet decided.,life,P2,sense_circular_definition,0,1,0,10,0.000,0.000,0.600,,
+357,morning,n.,早晨；上午,The part of a day from midnight or sunrise until noon.,life,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,noon,midnight|noon|sunrise
+358,walk,v.,步行；陪……走；遛；保送上垒（棒球）,"To move on foot, accompany someone, exercise a dog, or, in baseball, give a player a free move to first base.",life,P2,sense_circular_definition,0,1,0,13,0.000,0.000,0.692,,
+360,low,adj.,低的；少的；低沉的；消沉的；不足的,"Not high or large, quiet or deep in sound, sad, or having little left.",life,P2,sense_circular_definition,0,1,0,8,0.125,0.125,0.500,sad,sad
+366,food,n.,食物；食品；营养物；思考材料（比喻）,"Things eaten to live and grow; in food for thought, ideas worth thinking about.",life,P2,circular_definition,0,1,0,9,0.000,0.000,0.222,,
+367,himself,pron.,他自己；他本人；他独自,"The same male person as the subject, or a word that stresses that he acts personally or alone.",life,P2,pos_definition_conflict,0,1,0,8,0.125,0.125,0.750,personally,personally
+370,air,n.,空气；空中；神态；曲调；架子,"The mixture of gases we breathe, the space above the ground, a manner or impression, a tune, or a show of importance.",life,P2,sense_circular_definition,0,1,0,10,0.000,0.100,0.900,,tune
+374,enough,det.,足够的,"As much or as many as needed, used with a noun.",life,P2,sense_pos_definition_conflict,0,1,0,5,0.000,0.200,0.200,,noun
+400,wait,v.,等待；等候；延缓；服侍（用于短语）,"To stay until something happens, leave a task until later, or serve food in phrases such as wait on people and wait tables.",life,P2,circular_definition,0,1,0,13,0.000,0.000,0.385,,
+419,someone,pron.,某人；有人,A person whose name or identity is not stated or known.,life,P2,pos_definition_conflict,0,1,0,5,0.000,0.000,0.200,,
+424,six,num.,六；六个,The number after five and before seven.,life,P2,sense_circular_definition,0,1,0,3,0.000,0.000,0.333,,
+425,kill,v.,杀死；扼杀；终止；消磨；使极痛或疲惫,"To cause death, stop something completely, pass time, or cause great pain or tiredness in informal speech.",life+cet4+postgrad,P2,sense_circular_definition,0,1,0,13,0.154,0.154,0.615,informal|tiredness,informal|tiredness
 460,heart,n.,心、心脏、中心,the locus of feelings and intuitions,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,locus,intuitions|locus
 464,light,n.,光、灯,(physics) electromagnetic radiation that can produce a visual sensation,life,P3,definition_too_advanced,0,0,1,6,0.167,0.667,1.000,electromagnetic,electromagnetic|physics|radiation|sensation
+472,return,n.,回来、返回、来回票,a coming to or returning home,life,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
+474,military,n.,军队,the military forces of a nation,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
 480,explain,v.,解释、说明,make plain and comprehensible,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,comprehensible,comprehensible|plain
 499,value,n.,价值、价格、购买力,a numerical quantity measured or assigned or computed,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,1.000,,computed|numerical|quantity
+516,record,n.,记录、档案、纪录,anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,11,0.091,0.091,0.636,phonograph,phonograph
+520,special,adj.,特别的、特殊的,for a special service or occasion,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.333,,
 528,matter,n.,事件、物质、原因,a vaguely specified concern,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,vaguely,specified|vaguely
 546,oil,n.,油、石油、油画颜料,a slippery or viscous liquid or liquefiable substance not miscible with water,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,7,0.286,0.714,0.857,liquefiable|miscible,liquefiable|liquid|miscible|slippery|viscous
-556,itself,pron.,它本身、它自己,The neuter reciprocal pronoun of It,life,P2,definition_too_advanced|pos_definition_conflict,0,1,1,3,0.333,1.000,1.000,neuter,neuter|pronoun|reciprocal
 560,cover,v.,覆盖、包括、保护,the act of concealing the existence of something by obstructing the view of it,life,P2,pos_definition_conflict,0,1,0,6,0.000,0.333,0.667,,concealing|obstructing
 563,clear,adj.,清楚的、明确的、澄清的,the state of being free of suspicion,life,P2,pos_definition_conflict,0,1,0,3,0.000,0.333,0.333,,suspicion
+566,land,n.,陆地、地面、地界,the land on which real estate is located,life,P2,circular_definition,0,1,0,4,0.000,0.000,0.500,,
 577,certain,adj.,确定的、某一个的、必然的,definite but not specified or identified,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,definite|specified
 586,catch,v.,抓住、赶上、接住,a drawback or difficulty that is not readily evident,life,P2,definition_too_advanced|pos_definition_conflict,0,1,1,4,0.000,0.750,1.000,,drawback|evident|readily
 592,draw,v.,拉、拖、拔剑,a gully that is shallower than a ravine,life,P2,definition_too_advanced|high_outside_vocab_ratio|pos_definition_conflict,0,1,2,3,1.000,1.000,1.000,gully|ravine|shallower,gully|ravine|shallower
+594,republican,n.,共和主义者、共和党员,a member of the Republican Party,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
+600,choose,v.,选择、宁愿、欲,"pick out, select, or choose from a number of alternatives",life+cet4+postgrad,P2,circular_definition,0,1,0,5,0.000,0.000,0.400,,
 655,wrong,adj.,错误的、不正当的、失常的,contrary to conscience or morality or law,life,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.750,,conscience|contrary|morality
-677,throw,v.,投、掷、抛,the act of throwing (propelling something with a rapid movement of the arm and wrist),life,P2,pos_definition_conflict,0,1,0,8,0.000,0.375,0.625,,propelling|rapid|wrist
+660,increase,n.,增加、增进、利益,a change resulting in an increase,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
+670,subject,n.,科目、主题、臣民,the subject matter of a conversation or discussion,life,P2,circular_definition,0,1,0,4,0.000,0.000,0.500,,
+676,fight,n.,打架、争吵、斗志,the act of fighting,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.500,,
+677,throw,v.,投、掷、抛,the act of throwing (propelling something with a rapid movement of the arm and wrist),life,P2,circular_definition|pos_definition_conflict,0,2,0,8,0.000,0.375,0.625,,propelling|rapid|wrist
+685,author,n.,作家、作家的著作、创始人,be the author of,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,1,0.000,0.000,0.000,,
+692,blood,n.,血、血统、流血,"the fluid (red in vertebrates) that is pumped through the body by the heart and contains plasma, blood cells, and platelets",life+cet4+postgrad,P2,circular_definition,0,1,0,11,0.273,0.455,0.636,plasma|platelets|vertebrates,fluid|plasma|platelets|pumped|vertebrates
 720,similar,adj.,相似的、类似的,marked by correspondence or resemblance,life,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,correspondence|resemblance
 748,exactly,adv.,确切地、精确地、恰好,indicating exactness or preciseness,life+cet4,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,1.000,exactness|preciseness,exactness|preciseness
+771,left,adj.,左边的、左倾的、左侧的,location near or direction toward the left side,life,P2,circular_definition,0,1,0,6,0.000,0.000,0.333,,
+774,prepare,v.,准备、筹备、使在思想上有准备,"to prepare verbally, either for written or spoken delivery",life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.200,0.200,0.400,verbally,verbally
 792,herself,pron.,她自己、她亲自,An emphasized form of the third person feminine,life,P2,pos_definition_conflict,0,1,0,5,0.000,0.200,0.400,,feminine
 795,box,n.,盒子、箱、方框,a (usually rectangular) container,life,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,container|rectangular
 797,pretty,adj.,漂亮的、优美的、机灵的,pleasing by delicacy or grace,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,delicacy|grace
+804,general,n.,一般、将军、大体,a general officer of the highest rank,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.000,0.250,,
+809,outside,n.,外面、外表、外界,the region that is outside of something,life,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
 820,glass,n.,玻璃、玻璃杯、透镜,a brittle transparent solid with irregular atomic structure,life,P3,definition_too_advanced,0,0,1,6,0.000,0.667,1.000,,atomic|brittle|irregular|transparent
+827,financial,adj.,财政的、金融的,involving financial matters,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
 829,France,n.,法国,a republic in western Europe,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,europe,europe|republic
 830,OK,adj.,好、不错、可以,being satisfactory or in satisfactory condition,life,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,satisfactory
+861,laugh,n.,笑、笑声,the sound of laughing,life,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
+867,hang,n.,悬挂、诀窍、意义,the way a garment hangs,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.333,,garment
 885,cold,n.,感冒、寒冷,a mild viral infection involving the nose and respiratory passages (but not the lungs),life+cet4+postgrad,P3,definition_too_advanced,0,0,1,8,0.375,0.625,0.875,passages|respiratory|viral,lungs|mild|passages|respiratory|viral
 887,final,adj.,最后的、最终的,conclusive in a process or progression,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,progression,conclusive|progression
 890,green,adj.,绿色的、环保的,having the colour of grass or causing little harm to the environment,life,P3,sense_high_outside_vocab_ratio,0,0,1,6,0.333,0.500,0.500,colour|grass,colour|grass|harm
@@ -48,71 +92,109 @@
 927,reveal,v.,露出、显示、透露,disclose directly or through prophets,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,disclose|prophets
 929,Germany,n.,德国,a republic in central Europe,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,europe,europe|republic
 938,apply,v.,涂、应用,be pertinent or relevant or applicable,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,applicable|pertinent
+953,perform,v.,进行、履行、完成,carry out or perform an action,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
+964,inside,n.,内部、内脏、内幕,the region that is inside of something,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
+975,deep,adj.,深的,relatively deep or strong,life,P2,circular_definition,0,1,0,3,0.000,0.000,0.333,,
 996,stuff,n.,原料、要素、东西,miscellaneous unspecified objects,life+cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,1.000,miscellaneous|unspecified,miscellaneous|unspecified
 1000,somebody,pron.,某人、有人,a human being,life,P2,pos_definition_conflict,0,1,0,1,0.000,0.000,0.000,,
 1012,tough,adj.,艰难的、强硬的,not given to gentleness or sentimentality,life+cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,gentleness|sentimentality,gentleness|sentimentality
+1013,sing,v.,唱、唱歌、演唱,deliver by singing,life,P2,circular_definition,0,1,0,2,0.000,0.000,0.500,,
+1027,commercial,adj.,商业的、商用的、商品化的,connected with or engaged in or sponsored by or used in commerce or commercial enterprises,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,7,0.000,0.286,0.714,,commerce|sponsored
 1036,beat,n.,心跳(声)、打、敲打声,a regular route for a sentry or policeman,life,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,1.000,policeman|sentry,policeman|sentry
 1039,tend,v.,走向、有某种的倾向、易于,have a tendency or disposition to do or be something,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,disposition|tendency
+1046,modern,adj.,现代的、近代的,belonging to the modern era,life,P2,circular_definition,0,1,0,3,0.000,0.000,0.667,,
+1047,task,n.,工作、任务、作业,assign a task to,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.500,,
 1049,positive,adj.,肯定的、积极的、有把握的,characterized by or displaying affirmation or acceptance or certainty etc.,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,1.000,affirmation|etc,acceptance|affirmation|certainty|etc
 1062,nor,conj.,也不、也没有,"A negative connective or particle, introducing the second",life,P2,pos_definition_conflict,0,1,0,5,0.200,0.400,0.800,connective,connective|particle
+1079,western,n.,西方人、西部片、西部小说,a film about life in the western United States during the period of exploration and development,life,P2,circular_definition,0,1,0,8,0.000,0.125,0.125,,exploration
 1086,none,pron.,没有一个、毫无,a canonical hour that is the ninth hour of the day counting from sunrise,life,P2,pos_definition_conflict,0,1,0,7,0.286,0.429,0.571,canonical|ninth,canonical|ninth|sunrise
+1089,admit,v.,承认、接受、允许进入,declare to be true or admit the existence or reality or truth of,life+cet4+postgrad,P2,circular_definition,0,1,0,6,0.000,0.000,0.333,,
 1090,senior,n.,年长者、资深者、毕业班学生,an undergraduate student during the year preceding graduation,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,graduation,graduation|preceding|undergraduate
+1106,university,n.,大学,the body of faculty and students at a university,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.000,0.250,,
+1123,labor,n.,劳动、努力、工作,a social class comprising those who do manual labor or work for wages,life+postgrad,P2,circular_definition,0,1,0,7,0.000,0.286,0.429,,comprising|manual
 1141,species,n.,物种、种类,(biology) taxonomic group whose members can interbreed,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,interbreed|taxonomic,biology|interbreed|taxonomic
 1142,immediately,adv.,直接地、立刻、立即,without delay or hesitation,life+cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,hesitation,delay|hesitation
 1150,plane,n.,平面、扁平物、机翼,(mathematics) an unbounded two-dimensional shape,life,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.800,dimensional|unbounded,dimensional|mathematics|unbounded
 1151,nobody,pron.,没有人、无人,a person of no influence,life,P2,pos_definition_conflict,0,1,0,2,0.000,0.000,0.500,,
 1153,object,n.,物体、目标、对象,a tangible and visible entity,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,tangible,entity|tangible
+1167,please,adv.,请,give pleasure to or be pleasing to,life,P2,circular_definition,0,1,0,3,0.000,0.000,0.333,,
 1175,investigation,n.,调查、审查,the work of inquiring into something thoroughly and systematically,life+cet4+cet6,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.600,,inquiring|systematically|thoroughly
 1194,dozen,n.,打、十二个,the cardinal number that is the sum of eleven and one,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,eleven,cardinal|eleven|sum
+1211,easily,adv.,容易地、轻易地、流利地,with ease (`easy' is sometimes used informally for `easily'),life+cet4,P2,circular_definition,0,1,0,6,0.167,0.333,0.333,informally,ease|informally
 1218,Chinese,n.,中文、中国话、中国人,any of the Sino-Tibetan languages spoken in China,life,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.600,0.600,china|sino|tibetan,china|sino|tibetan
+1222,slowly,adv.,慢慢地、迟缓地,without speed (`slow' is sometimes used informally for `slowly'),life+cet4+cet6,P2,circular_definition,0,1,0,7,0.143,0.143,0.429,informally,informally
 1226,driver,n.,驾驶员、驱动器、驱动程序,the operator of a motor vehicle,life,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,motor|operator
 1232,Christmas,n.,圣诞节,period extending from Dec. 24 to Jan. 6,life+cet4+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.750,dec|jan,dec|jan
 1237,truck,n.,卡车、货车、对...进行交易,an automotive vehicle suitable for hauling,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,1.000,automotive,automotive|hauling|suitable
+1246,Soviet,n.,代表会议、苏维埃、苏联,an elected governmental council in a communist country (especially one that is a member of the Union of Soviet Socialist Republics),life+cet4+cet6,P2,circular_definition,0,1,0,12,0.083,0.333,0.583,governmental,communist|governmental|republics|socialist
+1256,gold,n.,黄金、钱财、金块,coins made of gold,life+cet4+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.333,,coins
+1258,farm,n.,农场、农田,workplace consisting of farm buildings and cultivated land as a unit,life,P2,circular_definition,0,1,0,7,0.143,0.286,0.429,workplace,cultivated|workplace
 1263,European,n.,欧洲人,a native or inhabitant of Europe,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,europe,europe|inhabitant
 1267,shape,n.,形状、形态、外形,any spatial attributes (especially as defined by outline),life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.600,,attributes|outline|spatial
+1271,Christian,n.,基督徒、基督教的,a religious person who believes Jesus is the Christ and who is a member of a Christian denomination,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,8,0.125,0.125,0.375,denomination,denomination
+1273,apartment,n.,房间、公寓,a suite of rooms usually on one floor of an apartment house,life+cet4+postgrad,P2,circular_definition,0,1,0,7,0.000,0.143,0.143,,suite
 1274,willing,adj.,乐意的、自愿的、甘愿的,disposed or inclined toward,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,disposed|inclined
 1278,obviously,adv.,显而易见地、明显地,unmistakably (`plain' is often used informally for `plainly'),life+cet4+cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.667,informally|plainly|unmistakably,informally|plain|plainly|unmistakably
 1279,horse,n.,马、骑兵、脚架,solid-hoofed herbivorous quadruped domesticated since prehistoric times,life,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,8,0.625,0.625,0.750,domesticated|herbivorous|hoofed|prehistoric|quadruped,domesticated|herbivorous|hoofed|prehistoric|quadruped
-1283,ride,n.,骑马、乘坐、乘车,a mechanical device that you ride for amusement or excitement,life,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.800,,amusement|excitement|mechanical
+1283,ride,n.,骑马、乘坐、乘车,a mechanical device that you ride for amusement or excitement,life,P2,circular_definition|definition_too_advanced,0,1,1,5,0.000,0.600,0.800,,amusement|excitement|mechanical
 1287,demand,n.,要求、需求、需要,an urgent or peremptory request,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,peremptory,peremptory|urgent
-1292,wild,n.,荒野、荒地,a wild primitive state untouched by civilization,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,untouched,civilization|primitive|untouched
+1292,wild,n.,荒野、荒地,a wild primitive state untouched by civilization,life+cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,5,0.200,0.600,0.600,untouched,civilization|primitive|untouched
+1295,flight,n.,飞行、射程、逃走,a formation of aircraft in flight,life,P2,circular_definition,0,1,0,3,0.000,0.333,0.667,,formation
 1323,title,n.,头衔、名称、标题,a heading that names a statute or legislative bill,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,legislative,bill|legislative|statute
+1329,living,n.,生活、生计、生存,people who are still living,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
 1353,worth,n.,价值、财产,an indefinite quantity of something having a specified value,life,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.600,,indefinite|quantity|specified
 1359,insist,v.,坚持、坚决主张、强调,be emphatic or resolute and refuse to budge,life+cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,budge|emphatic,budge|emphatic|resolute
-1370,regular,adj.,规则的、常例的、有秩序的,a regular patron,life+cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,2,0.000,0.500,0.500,,patron
+1370,regular,adj.,规则的、常例的、有秩序的,a regular patron,life+cet4+cet6+postgrad,P2,circular_definition|pos_definition_conflict,0,2,0,2,0.000,0.500,0.500,,patron
 1376,egg,n.,蛋、卵,animal reproductive body consisting of an ovum or embryo together with nutritive and protective envelopes,life,P3,definition_too_advanced,0,0,1,10,0.400,0.600,0.700,embryo|nutritive|ovum|reproductive,embryo|envelopes|nutritive|ovum|protective|reproductive
+1388,coffee,n.,咖啡、咖啡色,a beverage consisting of an infusion of ground coffee beans,life,P2,circular_definition,0,1,0,6,0.000,0.333,0.667,,beverage|infusion
+1395,threaten,v.,恐吓、威胁、预示...的凶兆,"to utter intentions of injury or punishment against:""He threatened me when I tried to call the police""",life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,8,0.000,0.250,0.500,,punishment|utter
 1396,female,n.,女性、女人、雌性动物,an animal that produces gametes (ova) that can be fertilized by male gametes (spermatozoa),life+cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,8,0.625,0.625,0.750,fertilized|gametes|ova|spermatozoa,fertilized|gametes|ova|spermatozoa
+1419,cook,n.,厨子、厨师,someone who cooks food,life,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
+1426,grade,n.,等级、年级、阶段,a relative position or degree of value in a graded group,life,P2,circular_definition,0,1,0,6,0.000,0.000,0.167,,
+1442,function,n.,官能、职务、功能,(mathematics) a mathematical relation such that each element of a given set (the domain of the function) is associated with an element of another set,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,12,0.000,0.250,0.250,,domain|mathematical|mathematics
 1443,bone,n.,骨头、骨、骨制品,rigid connective tissue that makes up the skeleton of vertebrates,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.833,connective|vertebrates,connective|rigid|skeleton|vertebrates
 1449,wine,n.,葡萄酒、果酒、暗红色,fermented juice (of grapes especially),life+cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,fermented|juice,fermented|grapes|juice
 1465,academic,adj.,学院的、学术的、不切实际的,associated with academia or an academy,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,academia,academia|academy
 1471,following,n.,下列各项、部下、追随者,a group of followers or enthusiasts,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,enthusiasts,enthusiasts|followers
 1475,depend,v.,靠、视...而定、信赖,be contingent upon (something that is elided),life+cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,contingent|elided,contingent|elided
 1489,flower,n.,花、开花植物、精华,a plant cultivated for its blooms or blossoms,life,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.750,,blooms|blossoms|cultivated
+1491,hire,n.,租金、租用、雇用,a newly hired employee,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.333,,
 1501,tie,n.,带子、线、鞋带,equality of score in a contest,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,contest|equality
 1504,primary,n.,最主要者、原色,a preliminary election where delegates or nominees are chosen,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,nominees,delegates|nominees|preliminary
+1514,clean,adj.,干净的、清白的、简洁的,"make clean by removing dirt, filth, or unwanted substances from",life,P2,circular_definition,0,1,0,7,0.143,0.286,0.571,unwanted,filth|unwanted
 1530,male,n.,男人、雄性动物,an animal that produces gametes (spermatozoa) that can fertilize female gametes (ova),life+cet4+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,8,0.625,0.625,0.625,fertilize|gametes|ova|spermatozoa,fertilize|gametes|ova|spermatozoa
+1538,chicken,n.,小鸡、鸡肉,the flesh of a chicken used for food,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.250,0.250,,flesh
+1545,welcome,n.,欢迎、欢迎词,the state of being welcome,life,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
 1557,nod,n.,点头、打盹、晃动,a sign of assent or salutation or command,life+cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.750,assent|salutation,assent|salutation
 1561,dry,adj.,干的、无酒的、枯燥无味的,free from liquid or moisture,life,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,liquid|moisture
 1562,Russian,n.,俄国人、俄语,a native or inhabitant of Russia,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,russia,inhabitant|russia
 1566,climb,v.,攀登、上升、爬,go upward with gradual or continuous progress,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.600,,continuous|gradual|upward
+1574,metal,n.,金属、金属制品、合金,cover with metal,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
 1588,somewhere,adv.,到某处、在某处,an indefinite or unknown location,life,P2,pos_definition_conflict,0,1,0,3,0.000,0.333,0.667,,indefinite
 1591,sugar,n.,糖、糖块、甜言蜜语,a white crystalline carbohydrate used as a sweetener and preservative,life,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.667,crystalline|preservative|sweetener,carbohydrate|crystalline|preservative|sweetener
+1602,repeat,n.,重复、反复,an event that repeats,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
 1619,bear,n.,熊,massive plantigrade carnivorous or omnivorous mammals with long shaggy coats and strong claws,life,P3,definition_too_advanced,0,0,1,10,0.400,0.600,0.800,carnivorous|omnivorous|plantigrade|shaggy,carnivorous|claws|mammals|omnivorous|plantigrade|shaggy
+1628,breath,n.,呼吸、气息、瞬间,the process of taking in and expelling air during breathing,life+cet4+postgrad,P2,circular_definition,0,1,0,5,0.000,0.200,0.200,,expelling
 1642,okay,adj.,好、可以、行,in a satisfactory or adequate manner,life+cet4+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,adequate|satisfactory
-1644,empty,adj.,空的、空虚的、空腹的,a container that has been emptied,life,P2,pos_definition_conflict,0,1,0,2,0.000,0.500,0.500,,container
+1644,empty,adj.,空的、空虚的、空腹的,a container that has been emptied,life,P2,circular_definition|pos_definition_conflict,0,2,0,2,0.000,0.500,0.500,,container
 1651,Iraqi,n.,伊拉克人、伊拉克阿拉伯语,a native or inhabitant of Iraq,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,iraq,inhabitant|iraq
 1665,yellow,adj.,黄色的,having the colour of lemons or ripe bananas,life,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,1.000,1.000,bananas|colour,bananas|colour|lemons|ripe
 1704,profit,n.,利润、赢利、利益,the advantageous quality of being beneficial,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,advantageous|beneficial
 1718,Japanese,n.,日本人、日语,a native or inhabitant of Japan,life,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,japan,inhabitant|japan
-1729,ethnic,adj.,人种的、种族的,a person who is a member of an ethnic group,life+cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.000,,
+1729,ethnic,adj.,人种的、种族的,a person who is a member of an ethnic group,life+cet6+postgrad,P2,circular_definition|pos_definition_conflict,0,2,0,4,0.000,0.000,0.000,,
+1730,link,n.,环、连结物、链接,the means of connection between things linked in series,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.000,0.000,,
+1731,stress,n.,压力、紧迫、强调,the relative prominence of a syllable or musical note (especially with regard to stress or pitch),life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,9,0.111,0.333,0.667,syllable,pitch|prominence|syllable
+1733,select,v.,选择、挑选,"pick out, select, or choose from a number of alternatives",life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.000,0.200,,
 1735,nose,n.,鼻子、突出部分、嗅觉,the organ of smell and entrance to the respiratory tract,life,P3,definition_too_advanced,0,0,1,5,0.400,0.800,1.000,respiratory|smell,organ|respiratory|smell|tract
 1736,declare,v.,宣布、声明、申报,state emphatically and authoritatively,life+cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,authoritatively|emphatically,authoritatively|emphatically
+1757,catholic,n.,天主教徒,a member of a Catholic church,life+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
 1769,brown,n.,褐色,an orange of low brightness and saturation,life,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.750,orange,brightness|orange|saturation
+1775,cat,n.,猫,feline mammal usually having thick soft fur and no ability to roar: domestic cats,life,P2,circular_definition,0,1,0,10,0.100,0.400,0.400,feline,feline|fur|mammal|roar
 1797,blame,n.,过失、责备,a reproach for some lapse or misdeed,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,1.000,misdeed,lapse|misdeed|reproach
 1798,estimate,n.,估计、判断,an approximate calculation of quantity or degree or worth,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.600,,approximate|calculation|quantity
 1803,crazy,adj.,发狂的、狂热的,foolish; totally unsound,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,unsound,foolish|unsound
+1823,German,n.,德国人、德语,a person of German nationality,life+cet4+cet6,P2,circular_definition,0,1,0,3,0.000,0.333,0.333,,nationality
 1824,gender,n.,性,a grammatical category in inflected languages governing the agreement between nouns and pronouns and adjectives,life+postgrad,P3,definition_too_advanced,0,0,1,9,0.111,0.667,0.667,inflected,adjectives|governing|grammatical|inflected|nouns|pronouns
-1834,forth,adv.,往前、以后、向外,a river in southern Scotland that flows eastward to the Firth of Forth,life+cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,7,0.286,0.429,0.571,firth|scotland,eastward|firth|scotland
 1854,tooth,n.,牙齿、齿状物、爱好,hard bonelike structures in the jaws of vertebrates,life,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,bonelike|vertebrates,bonelike|jaws|vertebrates
 1856,smart,adj.,聪明的、漂亮的、刺痛的,showing mental alertness and calculation and resourcefulness,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,alertness|resourcefulness,alertness|calculation|resourcefulness
 1859,complain,v.,抱怨、抗议、控诉,"express complaints, discontent, displeasure, or unhappiness",life+cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.600,0.800,discontent|displeasure|unhappiness,discontent|displeasure|unhappiness
@@ -126,29 +208,47 @@
 1926,intervention,n.,插入、介入、调停,"the act of intervening (as to mediate a dispute, etc.)",life+cet6,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.800,etc,etc|intervening|mediate
 1929,India,n.,印度,a republic in the Asian subcontinent in southern Asia,cet4+cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.800,0.800,asia|asian|subcontinent,asia|asian|republic|subcontinent
 1955,upper,adj.,上面的、较高的、上级的,the topmost one of two,life+cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.333,0.333,0.333,topmost,topmost
+1962,employ,n.,雇用,the state of being employed or having a job,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.000,0.000,,
 1986,waste,n.,浪费、废物、损耗,any materials unused and rejected as worthless or unwanted,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.800,unused|unwanted,unused|unwanted|worthless
 2003,cable,n.,电缆、海底电报、缆,a telegram sent abroad,life+cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,abroad,abroad|telegram
+2011,solid,n.,固体,matter that is solid at room temperature and pressure,life+cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.000,0.000,,
 2017,legislation,n.,立法、法律,law enacted by a legislative body,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,enacted|legislative,enacted|legislative
+2031,taste,n.,味道、品味、味觉,the sensation that results when taste buds in the tongue and throat convey information about the chemical composition of a soluble stimulus,cet4+cet6+postgrad,P2,circular_definition,0,1,0,12,0.000,0.417,0.750,,buds|convey|sensation|soluble|stimulus
+2034,escape,n.,逃亡、避难设备、逃跑,the act of escaping physically,cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.333,,physically
 2040,height,n.,高度、海拔、高地,the vertical dimension of extension,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,1.000,,extension|vertical
+2052,lower,adj.,低的、下级的、下层的,move something or somebody to a lower position,cet4+postgrad,P2,circular_definition,0,1,0,5,0.000,0.000,0.000,,
+2057,honor,n.,荣誉、头衔、信用,the state of being honored,postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
 2058,proper,adj.,适当的、固有的、高尚的,marked by suitability or rightness or appropriateness,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,appropriateness|rightness|suitability,appropriateness|rightness|suitability
 2061,guilty,adj.,犯罪的、有过失的、自觉有错的,responsible for or chargeable with a reprehensible act,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,chargeable|reprehensible,chargeable|reprehensible
 2073,alternative,n.,两者择一、供替代的选择,necessitating a choice between mutually exclusive possibilities,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,mutually,exclusive|mutually|necessitating
+2090,wrap,n.,外套、围巾、包裹物,cloak that is folded or wrapped around a person,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.400,0.400,,cloak|folded
 2098,prayer,n.,祈祷、恳求、祷辞,the act of communicating with a deity (especially as a petition or in adoration or contrition or thanksgiving),cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.375,0.625,0.750,adoration|contrition|deity,adoration|contrition|deity|petition|thanksgiving
+2116,request,n.,请求、需要、申请书,a formal message requesting something that is submitted to an authority,cet4+cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.167,0.333,,submitted
 2138,initiative,n.,主动行动、首创精神、主动权,readiness to embark on bold new ventures,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.800,0.800,readiness,bold|embark|readiness|ventures
 2185,transform,v.,使转换、改变、改造,subject to a mathematical transformation,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,mathematical|transformation
+2191,alcohol,n.,酒精、酒,a liquor or brew containing alcohol as the active agent,cet4+postgrad,P2,circular_definition,0,1,0,6,0.167,0.333,0.333,brew,brew|liquor
 2194,bend,v.,变弯曲、屈服,a circular segment of a curve,cet4+cet6+postgrad,P2,definition_too_advanced|pos_definition_conflict,0,1,1,3,0.000,0.667,1.000,,circular|curve
 2199,cop,n.,警官,uncomplimentary terms for a policeman,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,policeman|uncomplimentary,policeman|uncomplimentary
+2207,print,n.,打印、版、印刷物,"the text appearing in a book, newspaper, or other printed publication",cet4+postgrad,P2,circular_definition,0,1,0,6,0.000,0.000,0.167,,
+2211,formal,adj.,正式的、形式的、礼仪的,being in accord with established forms and conventions and requirements (as e.g. of formal dress),cet4+cet6+postgrad,P2,circular_definition,0,1,0,9,0.222,0.333,0.444,e|g,accord|e|g
 2220,cycle,n.,周期、循环、自行车,an interval during which a recurring sequence of events occurs,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.600,,interval|recurring|sequence
+2224,deserve,v.,该得到、值得,be worthy or deserving,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.500,,worthy
+2225,consistent,adj.,一致的、坚持的、并立的,(sometimes followed by `with') in agreement or consistent or reliable,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.200,0.200,,reliable
 2246,joke,n.,笑话、玩笑、笑柄,a humorous anecdote or remark intended to provoke laughter,cet4+postgrad,P3,definition_too_advanced,0,0,1,6,0.000,0.833,0.833,,anecdote|humorous|laughter|provoke|remark
 2280,iron,n.,铁、熨斗、铁器,a heavy ductile magnetic metallic element,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,ductile,ductile|magnetic|metallic
+2315,transfer,n.,迁移、移动、传递,someone who transfers or is transferred from one position to another,cet4+cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.000,0.000,,
+2320,attach,v.,附上、使依附、使附属,cause to be attached,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
+2358,concentrate,n.,浓缩、精选,a concentrated form of a foodstuff,cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.333,0.333,0.333,foodstuff,foodstuff
 2386,constant,adj.,持续的、不变的,steadfast in purpose or devotion or affection,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.750,steadfast,affection|devotion|steadfast
 2399,pray,v.,祈祷、恳求、请,"address a deity, a prophet, a saint or an object of worship",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.667,deity,deity|prophet|saint|worship
 2401,exception,n.,例外、除外、异议,a deliberate act of omission,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,omission,deliberate|omission
 2402,butter,n.,奶油、黄油,an edible emulsion of fat globules made by churning milk or cream,cet4+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,8,0.500,0.625,0.625,churning|emulsion|globules|milk,churning|edible|emulsion|globules|milk
 2404,bathroom,n.,浴室、厕所,a room (as in a residence) containing a bathtub or shower and usually a washbasin and toilet,cet4+postgrad,P3,definition_too_advanced,0,0,1,8,0.250,0.625,0.625,bathtub|washbasin,bathtub|residence|shower|toilet|washbasin
+2407,electronic,adj.,电子的,of or relating to electronics,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
+2410,surely,adv.,的确地、安全地,definitely or positively (`sure' is sometimes used informally for `surely'),cet4+cet6,P2,circular_definition,0,1,0,7,0.143,0.286,0.286,informally,informally|positively
 2422,smooth,adj.,平滑的、平稳的、流畅的,having a surface free from roughness or bumps or ridges or irregularities,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.667,roughness,bumps|irregularities|ridges|roughness
 2430,belt,n.,带子、地带,endless loop of flexible material between two rotating shafts or pulleys,cet4+postgrad,P3,definition_too_advanced,0,0,1,8,0.000,0.750,0.750,,endless|flexible|loop|pulleys|rotating|shafts
-2436,coast,n.,海岸、滑坡,a slope down which sleds may coast,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,sleds,sleds|slope
+2436,coast,n.,海岸、滑坡,a slope down which sleds may coast,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,3,0.333,0.667,0.667,sleds,sleds|slope
 2440,teenager,n.,十三岁到十九岁的少年,a juvenile between the onset of puberty and maturity,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,1.000,1.000,onset|puberty,juvenile|maturity|onset|puberty
 2446,whisper,n.,耳语、密谈、谣传,speaking softly without vibration of the vocal cords,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.000,0.667,0.667,,cords|softly|vibration|vocal
 2454,throat,n.,咽喉、喉咙、嗓音,the passage to the stomach and lungs,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,1.000,passage,lungs|passage
@@ -159,6 +259,7 @@
 2530,honest,adj.,诚实的、坦直的、可靠的,not disposed to cheat or defraud,cet4+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,1.000,defraud,cheat|defraud|disposed
 2547,origin,n.,起源、起因、出身,properties attributable to your ancestry,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,ancestry|attributable,ancestry|attributable
 2555,depth,n.,深度、深处、深奥,the extent downward or backward or inward,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.750,,backward|downward|inward
+2567,onion,n.,洋葱,the bulb of an onion plant,cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.333,,bulb
 2569,flat,adj.,平坦的、单调的、无力的,a level tract of land,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.333,0.333,,tract
 2597,snap,v.,使突然中断、猛咬、争夺,a spell of cold weather,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.333,0.333,,spell
 2610,minor,adj.,较小的、次要的,of lesser importance or stature or rank,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.750,lesser|stature,lesser|stature
@@ -167,40 +268,32 @@
 2637,Italian,n.,意大利人、意大利语,a native or inhabitant of Italy,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,italy,inhabitant|italy
 2645,button,n.,钮扣、按钮,a round fastener sewn to shirts and coats etc to fit through buttonholes,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.375,0.625,0.625,buttonholes|etc|round,buttonholes|etc|fastener|round|sewn
 2655,portrait,n.,肖像、人像、半身像,"any likeness of a person, in any medium",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,likeness|medium
-2657,roughly,adv.,概略地、粗糙地、粗暴地,with roughness or violence (`rough' is an informal variant for `roughly'),cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,6,0.500,0.500,0.500,informal|roughness|variant,informal|roughness|variant
-2714,cousin,n.,堂兄弟姊妹、表兄弟姊妹,the child of your aunt or uncle,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,aunt|uncle,aunt|uncle
-2741,tight,adj.,紧的、密封的、吝啬的,closely constrained or constricted or constricting,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,constricted|constricting,constrained|constricted|constricting
-2775,innocent,adj.,无罪的、不懂事的、无知的,free from evil or guilt,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,evil|guilt
-2777,pause,n.,暂停、中止、停顿,a time interval during which there is a temporary cessation of something,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,cessation,cessation|interval|temporary
-2783,raw,n.,擦伤处、半成品,informal terms for nakedness,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,informal|nakedness,informal|nakedness
-2807,freeze,v.,冻结、冷冻、僵硬,the withdrawal of heat to change something from a liquid to a solid,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,6,0.167,0.333,0.333,withdrawal,liquid|withdrawal
-2809,God,n.,上帝、神像、偶像,the supernatural being conceived as the perfect and omnipotent and omniscient originator and ruler of the universe,cet4+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,8,0.500,0.750,0.750,omnipotent|omniscient|originator|supernatural,conceived|omnipotent|omniscient|originator|ruler|supernatural
-2813,diverse,adj.,不同的、变化多的,distinctly dissimilar or unlike,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,dissimilar,dissimilar|distinctly
-2835,protest,n.,抗议、反对、抗议书,a formal and solemn declaration of objection,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.750,,declaration|objection|solemn
-2856,prior,adj.,更重要的、较早的、在先的,the head of a religious order,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.000,0.000,,
-2871,tongue,n.,舌、语言能力、讲话方式,a mobile mass of muscular tissue covered with mucous membrane and located in the oral cavity,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,10,0.200,0.600,0.600,membrane|mucous,cavity|membrane|mobile|mucous|muscular|oral
-2901,load,n.,负荷、担子、重担,weight to be borne or conveyed,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,borne,borne|conveyed
-2911,deer,n.,鹿,distinguished from Bovidae by the male's having solid deciduous antlers,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.667,antlers|bovidae|deciduous,antlers|bovidae|deciduous|distinguished
-2924,nowhere,adv.,无处、到处都无,an insignificant place,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,2,0.000,0.500,0.500,,insignificant
-2926,exciting,adj.,令人兴奋的、刺激的,creating or arousing excitement,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,arousing|excitement
-2951,lawn,n.,草地、草坪、上等细麻布,a field of cultivated and mowed grass,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,grass|mowed,cultivated|grass|mowed
-2954,wisdom,n.,智慧、明智行为、学识,accumulated knowledge or erudition or enlightenment,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,enlightenment|erudition,accumulated|enlightenment|erudition
-2956,garlic,n.,大蒜,bulbous herb of southern Europe widely naturalized,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.667,bulbous|europe|naturalized,bulbous|europe|herb|naturalized
-2958,capability,n.,能力、性能、约束力,the quality of being capable -- physically or intellectually or legally,cet6,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,legally,intellectually|legally|physically
-2979,owe,v.,亏欠、负...债、归功于,be obliged to pay or repay,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,obliged|repay
-3004,carbon,n.,碳、副本、复写纸,an abundant nonmetallic tetravalent element occurring in three allotropic forms: amorphous carbon and graphite and diamond,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,12,0.333,0.667,0.583,allotropic|amorphous|nonmetallic|tetravalent,abundant|allotropic|amorphous|carbon|diamond|graphite|nonmetallic|tetravalent
-3039,calculate,v.,计算、预测、计划,make a mathematical calculation or computation,cet4+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.750,computation,calculation|computation|mathematical
-3047,efficiency,n.,效率、效能、功效,the ratio of the output to the input of any system,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.750,,input|output|ratio
-3077,sophisticated,adj.,复杂的、久经世故的,having or appealing to those having worldly knowledge and refinement and savoir-faire,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.667,0.667,0.667,faire|refinement|savoir|worldly,faire|refinement|savoir|worldly
-3097,Islam,n.,伊斯兰教,the civilization of Muslims collectively which is governed by the Muslim religion,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.833,0.833,collectively|muslim|muslims,civilization|collectively|governed|muslim|muslims
-3114,prompt,adj.,迅速的、及时的,a cue given to a performer (usually the beginning of the next line to be spoken),cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,8,0.125,0.250,0.250,performer,cue|performer
-3130,workshop,n.,工场、车间、研讨会,small workplace where handcrafts or manufacturing are done,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,handcrafts|workplace,handcrafts|manufacturing|workplace
-3160,versus,prep.,对,"Against; as, John Doe versus Richard Roe; -- chiefly",cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.833,1.000,0.833,chiefly|doe|john|richard|roe,chiefly|doe|john|richard|roe|versus
-3171,boom,n.,繁荣、隆隆声,a deep prolonged loud noise,postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.500,noise,loud|noise|prolonged
-3179,lemon,n.,柠檬、柠檬树、柠檬色,yellow oval fruit with juicy acidic flesh,cet4+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.667,acidic|juicy,acidic|flesh|juicy|oval
-3204,shower,n.,阵雨、淋浴、一阵,a plumbing fixture that sprays water over you,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.750,plumbing,fixture|plumbing|sprays
-3215,mortgage,n.,抵押、约束性义务、抵押借款,a conditional conveyance of property as security for the repayment of a loan,cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,6,0.500,0.500,0.500,conditional|conveyance|repayment,conditional|conveyance|repayment
-3234,wise,adj.,明智的、慎虑的、聪明的,having or prompted by wisdom or discernment,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,discernment,discernment|prompted
+2657,roughly,adv.,概略地、粗糙地、粗暴地,with roughness or violence (`rough' is an informal variant for `roughly'),cet4+cet6+postgrad,P2,circular_definition|high_outside_vocab_ratio,0,1,1,6,0.500,0.500,0.500,informal|roughness|variant,informal|roughness|variant
+2684,resort,n.,度假胜地、手段、凭借,a hotel located in a resort area,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.000,0.000,,
+2714,cousin,n.,堂兄弟姐妹；表兄弟姐妹,A child of your aunt or uncle.,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,aunt|uncle,aunt|uncle
+2725,latter,adj.,较后的；后半部分的；两者中后者的,"Near the end of a period, or referring to the second of two things just mentioned.",cet4+cet6+postgrad,P2,sense_pos_definition_conflict,0,1,0,8,0.000,0.000,0.000,,
+2741,tight,adj.,紧的；严密的；紧张的；拮据的,"Fitting closely, firmly controlled, or leaving very little space, time, or money.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,9,0.111,0.111,0.111,firmly,firmly
+2742,bible,n.,《圣经》；权威指南,"The Christian holy book, usually written Bible; also a book treated as a trusted guide to a subject.",cet4+postgrad,P2,circular_definition,0,1,0,11,0.000,0.000,0.000,,
+2743,chart,n.,图表；航海图；排行榜,"A picture showing information, a map used at sea, or a list ranked by popularity.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,9,0.000,0.111,0.111,,popularity
+2783,raw,adj.,生的；未加工的；未经分析的；磨痛的,"Not cooked or processed, not yet studied or developed, or sore because the skin has been rubbed.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,8,0.000,0.125,0.250,,sore
+2791,newly,adv.,新近；最近；刚刚,A short time ago or only recently.,cet4+cet6,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.000,,
+2807,freeze,v.,结冰；冷冻；僵住；冻结,"To turn to ice, preserve by cold, stop moving from fear, or stop something from changing or being used.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,11,0.000,0.000,0.000,,
+2809,God,n.,上帝；神（泛指时通常小写 god）,The supreme being in some religions; a god is a being believed to have power over nature or human life.,cet4+postgrad,P2,circular_definition,0,1,0,8,0.000,0.000,0.000,,
+2850,tire,v.,使疲倦；感到厌倦,"To become tired or make someone tired, or lose interest in something.",cet4+cet6+postgrad,P2,circular_definition,0,1,0,8,0.000,0.000,0.000,,
+2863,stair,n.,一级台阶；楼梯（通常用 stairs）,One step in a set leading up or down; stairs means the whole set.,cet4+cet6+postgrad,P2,circular_definition,0,1,0,8,0.000,0.000,0.000,,
+2875,rub,v.,擦；搓；摩擦；涂抹,"To move something against a surface with pressure, often to clean it or spread a substance.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,8,0.000,0.000,0.000,,
+2884,net,n.,网；球网；互联网（非正式）,"A material made of connected strings, a frame covered with it, or informally the internet.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,8,0.125,0.125,0.125,informally,informally
+2914,steady,adj.,稳定的；持续的；沉着的,"Not shaking or changing suddenly, continuing regularly, or calm and reliable.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,7,0.000,0.286,0.286,,calm|reliable
+2935,pale,adj.,苍白的；浅色的；暗淡的,"Having little color, being lighter than usual, or giving weak light.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,7,0.000,0.143,0.143,,lighter
+3041,rid,v.,使摆脱；清除,"To remove something unwanted, usually with of or in the phrase get rid of.",cet4+cet6+postgrad,P2,circular_definition,0,1,0,7,0.143,0.286,0.143,unwanted,rid|unwanted
+3043,uniform,n.,制服；校服,A set of clothes worn by members of the same organization.,cet4+cet6+postgrad,P2,sense_pos_definition_conflict,0,1,0,5,0.000,0.000,0.000,,
+3081,asleep,adj.,睡着的；麻木的,"Sleeping, or temporarily unable to feel a body part because of pressure.",cet4+postgrad,P2,sense_circular_definition,0,1,0,7,0.143,0.143,0.143,temporarily,temporarily
+3135,romantic,adj.,浪漫的；爱情的；不切实际的；浪漫主义的,"Connected with love, idealized hopes, or an artistic style that values feeling and imagination.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,9,0.111,0.222,0.222,idealized,artistic|idealized
+3136,cotton,n.,棉花；棉布；棉线,"A plant's soft white fibers, or cloth and thread made from them.",cet4+postgrad,P2,sense_circular_definition,0,1,0,7,0.000,0.286,0.286,,cloth|thread
+3138,motor,n.,发动机；马达,A machine that uses energy to produce movement.,cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,5,0.000,0.000,0.000,,
+3144,jet,n.,喷气式飞机；喷射流；煤玉,"An aircraft driven by jet engines, a narrow stream forced out under pressure, or a hard black stone.",cet4+cet6+postgrad,P2,circular_definition|sense_circular_definition,0,2,0,11,0.000,0.091,0.000,,jet
+3153,bite,v.,咬；叮；产生不良影响,"To cut or grip with teeth, pierce skin as some insects do, or begin to have a harmful effect.",cet4+postgrad,P2,sense_circular_definition,0,1,0,9,0.000,0.444,0.444,,grip|harmful|insects|pierce
+3208,garage,n.,车库；汽车修理厂；加油站（英式）；车库音乐,"A place for keeping or repairing cars, a petrol station in British use, or a kind of dance music.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,11,0.000,0.182,0.182,,petrol|repairing
 3247,lung,n.,肺、肺脏、空地,either of two saclike respiratory organs in the chest of vertebrates,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.667,respiratory|saclike|vertebrates,organs|respiratory|saclike|vertebrates
 3259,competitor,n.,竞争者,the contestant you hope to defeat,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,contestant,contestant|defeat
 3273,ban,n.,禁令,100 bani equal 1 leu in Moldova,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,bani|leu|moldova,bani|leu|moldova
@@ -211,27 +304,30 @@
 3311,prescription,n.,处方、命令、指定,directions prescribed beforehand,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,beforehand|prescribed
 3349,sigh,n.,叹息,an utterance made by exhaling audibly,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,audibly|exhaling|utterance,audibly|exhaling|utterance
 3381,mess,n.,食堂、伙食、用膳,a state of confusion and disorderliness,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,disorderliness,confusion|disorderliness
-3386,adolescent,adj.,青春期的、青少年的,relating to or peculiar to or suggestive of an adolescent,cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.500,suggestive,adolescent|peculiar|suggestive
+3386,adolescent,adj.,青春期的、青少年的,relating to or peculiar to or suggestive of an adolescent,cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,4,0.250,0.750,0.500,suggestive,adolescent|peculiar|suggestive
 3388,upset,adj.,弄翻的、混乱的、心烦的,the act of disturbing the mind or body,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.000,0.250,0.250,,disturbing
 3404,ritual,n.,仪式、典礼、宗教仪式,any customary observance or practice,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,observance,customary|observance
 3411,magic,n.,魔术、魔法,any art that invokes supernatural powers,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,invokes|supernatural,invokes|supernatural
 3415,acceptable,adj.,可接受的、合意的、可忍受的,worthy of acceptance or satisfactory,cet4,P3,definition_too_advanced,0,0,1,3,0.000,1.000,1.000,,acceptance|satisfactory|worthy
-3420,hunt,n.,狩猎、追捕、搜寻,Englishman and Pre-Raphaelite painter (1827-1910),cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,1.000,0.750,pre|raphaelite,englishman|painter|pre|raphaelite
 3434,slope,n.,倾斜、斜坡、斜率,an elevated geological formation,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.667,geological,elevated|formation|geological
 3447,evil,n.,邪恶、不幸、罪恶,morally objectionable behavior,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,morally|objectionable,morally|objectionable
 3464,integrity,n.,正直、廉正、完整,an undivided or unbroken completeness or totality with nothing wanting,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.667,0.667,0.667,completeness|totality|unbroken|undivided,completeness|totality|unbroken|undivided
 3481,snake,n.,蛇、阴险的人,limbless scaly elongate reptile,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,1.000,1.000,elongate|limbless|scaly,elongate|limbless|reptile|scaly
-3493,fold,n.,折层、折、羊栏,an angular or rounded shape made by folding,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,angular|rounded,angular|folding|rounded
+3493,fold,n.,折层、折、羊栏,an angular or rounded shape made by folding,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,5,0.400,0.600,0.400,angular|rounded,angular|folding|rounded
 3504,reliable,adj.,可靠的、可信赖的,worthy of reliance or trust,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,reliance|worthy
 3569,obstacle,n.,障碍、妨害物、阻碍,something immaterial that stands in the way and must be circumvented or surmounted,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,6,0.500,0.500,0.500,circumvented|immaterial|surmounted,circumvented|immaterial|surmounted
 3611,bacteria,n.,细菌,(microbiology) single-celled or noncellular spherical or spiral or rod-shaped organisms lacking chlorophyll that reproduce by fission,cet4+cet6,P3,definition_too_advanced,0,0,1,13,0.231,0.692,0.692,chlorophyll|microbiology|noncellular,chlorophyll|fission|microbiology|noncellular|organisms|reproduce|rod|spherical|spiral
 3616,temple,n.,圣堂、庙宇、教堂,place of worship consisting of an edifice for the worship of a deity,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.667,deity|edifice,deity|edifice|worship
 3633,minimum,adj.,最小的、最低的,the smallest possible quantity,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.333,0.333,,quantity
+3636,dump,n.,垃圾场,a piece of land where waste materials are dumped,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.200,0.000,,dumped
 3640,uncomfortable,adj.,不舒服的、不自在的、不安的,conducive to or feeling mental discomfort,cet4+cet6,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,conducive|discomfort,conducive|discomfort
 3642,execute,v.,执行、实行、完成,kill as a means of socially sanctioned punishment,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,socially,punishment|sanctioned|socially
 3644,ideology,n.,思想体系、意识形态、观念学,imaginary or visionary theorization,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,1.000,1.000,theorization|visionary,imaginary|theorization|visionary
 3646,tune,n.,歌曲、主旋律、心情,a succession of notes forming a distinctive sequence,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.400,,distinctive|sequence|succession
+3649,railroad,n.,铁路、铁路公司,supply with railroad lines,cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,railroad
+3651,harm,n.,伤害、害处,cause or do harm to,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,harm
 3655,peaceful,adj.,平静的、和平的、和平时期的,not disturbed by strife or turmoil or war,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.750,,disturbed|strife|turmoil
+3671,spill,n.,溢出、溅出、摔下,liquid that is spilled,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,1.000,0.500,,liquid|spilled
 3688,landing,n.,登陆、码头、降落,an intermediate platform in a staircase,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,intermediate|staircase
 3692,bat,n.,蝙蝠、球棒,nocturnal mouselike mammal with forelimbs modified to form membranous wings and anatomical adaptations for echolocation by which they navigate,cet4+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,12,0.667,0.833,0.750,adaptations|anatomical|echolocation|forelimbs|membranous|mouselike|navigate|nocturnal,adaptations|anatomical|echolocation|forelimbs|mammal|membranous|modified|mouselike|navigate|nocturnal
 3695,festival,adj.,节日的、喜庆的、快乐的,a day or period of time set aside for feasting and celebration,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,7,0.143,0.286,0.286,celebration,celebration|feasting
@@ -240,26 +336,39 @@
 3757,complexity,n.,复杂、复杂性、复杂的事物,the quality of being intricate and compounded,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,compounded|intricate
 3766,residence,n.,住宅、居留、驻扎,any address at which you dwell more than temporarily,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,temporarily,dwell|temporarily
 3767,shame,n.,羞耻、羞愧、耻辱,a painful emotion resulting from an awareness of inadequacy or guilt,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.333,awareness|inadequacy,awareness|guilt|inadequacy|painful
+3779,fluid,n.,液体、分泌液、流体,a substance that is fluid at room temperature and pressure,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.200,0.000,,fluid
+3803,carve,v.,雕刻、切开,form by carving,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,carving
 3814,ankle,n.,踝,a gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,9,0.556,0.667,0.667,distal|fibula|proximal|talus|tibia,distal|fibula|gliding|proximal|talus|tibia
 3826,precise,adj.,精确的、严谨的、明确的,sharply exact or accurate or delimited,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.500,delimited,delimited|exact|sharply
 3839,oxygen,n.,氧,a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas,cet4+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,10,0.700,0.700,0.700,bivalent|colorless|diatomic|nonflammable|nonmetallic|odorless|tasteless,bivalent|colorless|diatomic|nonflammable|nonmetallic|odorless|tasteless
 3872,statue,v.,以雕像装饰,a sculpture representing a human or animal,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.000,0.250,0.000,,sculpture
 3878,decent,adj.,有分寸的、得体的、大方的,socially or conventionally correct,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,conventionally|socially,conventionally|socially
 3885,exploration,n.,探险、踏勘、探测,to travel for the purpose of discovery,cet6,P2,pos_definition_conflict,0,1,0,3,0.000,0.000,0.000,,
-3894,purple,n.,紫色、帝位,a purple color or pigment,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,pigment,pigment|purple
+3894,purple,n.,紫色、帝位,a purple color or pigment,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,3,0.333,0.667,0.333,pigment,pigment|purple
 3896,laser,n.,激光,an acronym for light amplification by stimulated emission of radiation,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.500,acronym|amplification,acronym|amplification|radiation|stimulated
 3907,parade,n.,游行、炫耀、阅兵,a ceremonial procession including people marching,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,ceremonial|marching,ceremonial|marching|procession
 3911,realm,n.,王国、领土、领域,a domain in which something is dominant,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,domain|dominant
 3915,cancel,v.,取消、撤销,postpone indefinitely or annul something that was scheduled,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.600,annul,annul|indefinitely|postpone
 3919,recipient,adj.,领受的、容易接受的、感受性强的,a person who receives something,cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.000,0.000,,
+3936,ton,n.,吨,"a unit for measuring weight; a metric ton is 1,000 kilograms",cet4+cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.500,0.333,,kilograms|metric|ton
 3949,vanish,v.,消失、不见、成为零,become invisible or unnoticeable,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,unnoticeable,invisible|unnoticeable
 3955,casual,adj.,偶然的、不经意的、便装的,marked by blithe unconcern,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,blithe|unconcern,blithe|unconcern
+3973,steep,n.,浸渍、悬崖,a steep place (as on a hill),cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,steep
+3983,toilet,n.,厕所、梳妆,a room or building equipped with one or more toilets,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.400,0.200,,equipped|toilets
 4000,outstanding,adj.,杰出的、突出的、未偿付的,distinguished from others in excellence,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,excellence,distinguished|excellence
+4005,automobile,n.,汽车,travel in an automobile,cet4+cet6,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,automobile
+4031,scan,n.,审视、浏览、扫描,the act of scanning,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,scanning
 4043,ridiculous,adj.,荒谬的、可笑的,inspiring scornful pity,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,pity|scornful,pity|scornful
-4044,diamond,n.,钻石、菱形,a transparent piece of diamond that has been cut and polished and is valued as a precious gem,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.125,0.625,0.375,gem,diamond|gem|polished|precious|transparent
+4044,diamond,n.,钻石、菱形,a transparent piece of diamond that has been cut and polished and is valued as a precious gem,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,8,0.125,0.625,0.375,gem,diamond|gem|polished|precious|transparent
 4051,sentiment,n.,感情、感伤、情操,"tender, romantic, or nostalgic feeling or emotion",cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.400,nostalgic,nostalgic|romantic|tender
+4068,sacrifice,n.,牺牲、供奉、祭品,"personnel that are sacrificed (e.g., surrendered or lost in order to gain an objective)",cet4+cet6+postgrad,P2,circular_definition,0,1,0,9,0.222,0.444,0.333,e|g,e|g|sacrificed|surrendered
 4082,gasoline,n.,汽油,a volatile flammable mixture of hydrocarbons (hexane and heptane and octane etc.) derived from petroleum,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,10,0.600,0.900,0.800,etc|flammable|heptane|hexane|octane|volatile,derived|etc|flammable|heptane|hexane|hydrocarbons|octane|petroleum|volatile
+4094,rocket,n.,火箭、烟火,any vehicle self-propelled by a rocket engine,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.400,0.200,,propelled|rocket
 4104,bubble,n.,泡沫,"a hollow globule of gas (e.g., air or carbon dioxide)",cet4+postgrad,P3,definition_too_advanced,0,0,1,8,0.375,0.750,0.625,e|g|globule,carbon|dioxide|e|g|globule|hollow
+4112,carpet,n.,地毯、地毯状物,a natural object that resembles or suggests a carpet,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.400,0.000,,carpet|resembles
+4123,shallow,n.,水浅的地方、浅滩,make shallow,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,shallow
+4124,sail,n.,帆、篷、帆船,a large piece of fabric (usually canvas fabric) by means of which wind is used to propel a sailing vessel,cet4+cet6+postgrad,P2,circular_definition,0,1,0,12,0.000,0.417,0.083,,canvas|fabric|propel|sailing
+4146,unite,v.,联合、接合、混合,act in concert or unite in a common purpose or belief,cet4+cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.167,0.000,,unite
 4150,wolf,n.,狼、残忍贪婪之人、极度穷困,any of various predatory carnivorous canine mammals of North America and Eurasia that usually hunt in packs,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,11,0.455,0.636,0.545,america|canine|carnivorous|eurasia|predatory,america|canine|carnivorous|eurasia|hunt|mammals|predatory
 4154,grin,n.,露齿笑,"to draw back the lips and reveal the teeth, in a smile, grimace, or snarl",cet6+postgrad,P2,pos_definition_conflict,0,1,0,8,0.250,0.250,0.250,grimace|snarl,grimace|snarl
 4163,hostile,adj.,敌人的、怀敌意的、敌对的,characterized by enmity or ill will,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,enmity|ill,enmity|ill
@@ -269,30 +378,38 @@
 4184,revelation,n.,揭露、泄露、发觉,an enlightening or astonishing disclosure,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,1.000,disclosure,astonishing|disclosure|enlightening
 4187,jewelry,n.,珠宝、珠宝类,an adornment (as a bracelet or ring or necklace) made of precious metals and set with gems (or imitation gems),postgrad,P3,definition_too_advanced,0,0,1,11,0.364,0.636,0.545,adornment|bracelet|gems,adornment|bracelet|gems|imitation|necklace|precious
 4197,ruin,n.,毁灭、推翻、废墟,an irrecoverable state of devastation and destruction,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,devastation|irrecoverable,devastation|irrecoverable
+4198,sheer,adj.,绝对的、全然的、纯粹的,cause to sheer,cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,sheer
 4202,reliability,n.,信度、可靠性,the quality of being dependable or reliable,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,dependable,dependable|reliable
 4211,discourage,v.,使气馁、阻碍,deprive of courage or hope,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,courage|deprive
 4218,empire,n.,帝国、帝权,the domain ruled by an emperor or empress,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.500,empress,domain|emperor|empress
 4244,skull,n.,头盖骨、头脑、好学生,the bony skeleton of the head of vertebrates,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,bony|vertebrates,bony|skeleton|vertebrates
 4248,manipulate,v.,操纵、利用、操作,influence or control shrewdly or deviously,cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,deviously|shrewdly,deviously|shrewdly
+4254,whip,n.,鞭子、抽打、车夫,an instrument with a handle and a flexible lash that is used for whipping,cet4+cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.500,0.167,,flexible|lash|whipping
+4296,aesthetic,adj.,美学的、审美的、有美感的,relating to or dealing with the subject of aesthetics,cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,aesthetics
 4299,spell,n.,符咒、魅力、轮值,a verbal formula believed to have magical force,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,magical,formula|magical|verbal
 4305,lion,n.,狮子、狮子(星)座、国际狮子会会员,large gregarious predatory feline of Africa and India having a tawny coat with a shaggy mane in the male,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,11,0.545,0.545,0.545,feline|gregarious|mane|predatory|shaggy|tawny,feline|gregarious|mane|predatory|shaggy|tawny
 4306,penny,n.,便士、一分、小钱,a fractional monetary unit of Ireland and the United Kingdom,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.667,fractional|ireland,fractional|ireland|kingdom|monetary
-4306,royal,n.,王室、皇族,a sail set next above the topgallant on a royal mast,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.333,topgallant,mast|royal|sail|topgallant
+4306,royal,n.,王室、皇族,a sail set next above the topgallant on a royal mast,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,6,0.167,0.667,0.333,topgallant,mast|royal|sail|topgallant
 4313,minimal,adj.,最小的、极微的、最小限度的,the least possible,cet6,P2,pos_definition_conflict,0,1,0,2,0.000,0.000,0.000,,
 4315,cocaine,n.,可卡因、古柯碱,a narcotic (alkaloid) extracted from coca leaves,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.800,0.800,alkaloid|coca|narcotic,alkaloid|coca|extracted|narcotic
 4326,scramble,n.,攀缘、爬行、抢夺,an unceremonious and disorganized struggle,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,disorganized|unceremonious,disorganized|unceremonious
 4346,rival,n.,对手、竞争者,the contestant you hope to defeat,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,contestant,contestant|defeat
-4347,pin,n.,大头针、针、别针,a piece of jewelry that is pinned onto the wearer's garment,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.333,wearer's,garment|jewelry|pinned|wearer's
+4347,pin,n.,大头针、针、别针,a piece of jewelry that is pinned onto the wearer's garment,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,6,0.167,0.667,0.333,wearer's,garment|jewelry|pinned|wearer's
 4355,elephant,n.,象,five-toed pachyderm,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,pachyderm|toed,pachyderm|toed
+4358,purse,n.,钱包、小钱袋、金钱,a sum of money spoken of as the contents of a money purse,cet4+cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.333,0.000,,purse|sum
+4360,liquid,n.,液体、流体、流音,a substance that is liquid at room temperature and pressure,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.200,0.000,,liquid
 4378,sensation,n.,感觉、轰动,an unelaborated elementary awareness of stimulation,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,awareness|stimulation|unelaborated,awareness|stimulation|unelaborated
 4381,upstairs,adv.,在楼上、往楼上,the part of a building above the ground floor,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.000,,
+4384,shove,n.,推、挤,the act of shoving (giving a push to someone or something),cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.167,0.000,,shoving
 4417,spray,n.,水沫、浪花、水花,a pesticide in suspension or solution,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,pesticide,pesticide|suspension
+4423,oak,n.,橡树、橡木,the hard durable wood of any oak,cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.500,0.250,,durable|oak
 4424,interfere,v.,妨碍、冲突、干涉,come between so as to be hindrance or obstacle,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,hindrance|obstacle
 4428,beast,n.,畜生、动物、野兽,a cruelly rapacious person,cet4+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,cruelly|rapacious,cruelly|rapacious
 4432,ray,n.,光线、射线、闪烁,a branch of an umbel or an umbelliform inflorescence,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,inflorescence|umbel|umbelliform,inflorescence|umbel|umbelliform
-4439,mill,n.,压榨机、磨坊、制造厂,Scottish philosopher who expounded Bentham's utilitarianism,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.800,1.000,1.000,bentham's|expounded|scottish|utilitarianism,bentham's|expounded|philosopher|scottish|utilitarianism
+4434,behalf,n.,利益、方面,"as the agent of or on someone's part (usually expressed as ""on behalf of"" rather than ""in behalf of"")",cet4+cet6+postgrad,P2,circular_definition,0,1,0,8,0.000,0.250,0.000,,behalf
 4452,sensitivity,n.,敏感、灵敏度,(physiology) responsiveness to external stimuli,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,physiology|responsiveness,physiology|responsiveness|stimuli
 4487,kingdom,n.,王国、领域,a domain in which something is dominant,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,domain|dominant
+4491,tyre,n.,轮胎,a thick rubber ring filled with air that fits around the wheel of a car or bicycle,cet4+cet6,P2,sense_circular_definition,0,1,0,10,0.000,0.200,0.100,,bicycle|rubber
 4493,unfair,adj.,不公平的、不正直的、不正当的,not fair; marked by injustice or partiality or deception,cet4+cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.600,0.600,deception|injustice|partiality,deception|injustice|partiality
 4501,merit,n.,优点、功绩、价值,any admirable quality or attribute,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,admirable,admirable|attribute
 4519,skip,n.,跳跃、跳读,a gait in which steps and hops alternate,cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.750,gait,alternate|gait|hops
@@ -300,11 +417,14 @@
 4532,dip,v.,浸、降下、把(手、勺等)伸入,a depression in an otherwise level surface,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.000,,
 4535,sole,n.,脚掌、鞋底、底部,the underside of footwear or a golf club,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,footwear|underside,footwear|underside
 4557,sneak,v.,鬼鬼祟祟做事,to go stealthily or furtively,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,furtively|stealthily,furtively|stealthily
+4568,rib,n.,肋骨、肋状物、笑话,support resembling the rib of an animal,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.500,0.000,,resembling|rib
+4582,Saint,n.,圣徒、圣人,a person who has died and has been declared a saint by canonization,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.200,0.400,0.200,canonization,canonization|saint
 4596,likelihood,n.,可能、可能性,the probability of a specified outcome,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,probability|specified
+4597,carrot,n.,胡萝卜,deep orange edible root of the cultivated carrot plant,cet4+cet6+postgrad,P2,circular_definition,0,1,0,7,0.143,0.571,0.429,orange,carrot|cultivated|edible|orange
 4603,suspicious,adj.,可疑的、多疑的、怀疑的,openly distrustful and unwilling to confide,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,1.000,1.000,confide|distrustful|openly,confide|distrustful|openly|unwilling
 4610,plunge,n.,钻进、跳进、跳水,a steep and rapid fall,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,rapid|steep
 4626,intact,adj.,尚未被人碰过的、原封不动的、完整的,(of a woman) having the hymen unbroken,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,hymen|unbroken,hymen|unbroken
-4627,peanut,n.,花生、小人物、极小的数额,underground pod of the peanut vine,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,1.000,0.750,pod|underground,peanut|pod|underground|vine
+4627,peanut,n.,花生、小人物、极小的数额,underground pod of the peanut vine,postgrad,P2,circular_definition|definition_too_advanced|high_outside_vocab_ratio,0,1,2,4,0.500,1.000,0.750,pod|underground,peanut|pod|underground|vine
 4643,constraint,n.,强制、约束,the state of being physically constrained,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,constrained|physically
 4650,bacterium,n.,细菌,(microbiology) single-celled or noncellular spherical or spiral or rod-shaped organisms lacking chlorophyll that reproduce by fission,cet6+postgrad,P3,definition_too_advanced,0,0,1,13,0.231,0.692,0.538,chlorophyll|microbiology|noncellular,chlorophyll|fission|microbiology|noncellular|organisms|reproduce|rod|spherical|spiral
 4674,goat,n.,山羊、替罪羊、色鬼,any of numerous agile ruminants related to sheep but having a beard and straight horns,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.375,0.625,0.500,agile|ruminants|sheep,agile|beard|horns|ruminants|sheep
@@ -314,10 +434,13 @@
 4741,prevail,v.,获胜、流行、盛行,"be valid, applicable, or true",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,applicable|valid
 4770,loyal,adj.,忠诚的、忠实的、忠贞的,steadfast in allegiance or duty,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,steadfast,allegiance|steadfast
 4784,frown,n.,皱眉,a facial expression of dislike or displeasure,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.750,displeasure|facial,dislike|displeasure|facial
+4821,provoke,v.,激怒、惹起、诱导,evoke or provoke to appear or occur,cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.500,0.250,,evoke|provoke
 4826,explicit,adj.,详述的、清楚的、直言的,precisely and clearly expressed or readily observable,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,observable|precisely,observable|precisely|readily
 4892,convenience,n.,方便、便利的事物、方便的时候,the state of being suitable or opportune,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,opportune,opportune|suitable
+4893,weave,n.,编法、织法、编织式样,pattern of weaving or structure of a fabric,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.500,0.000,,fabric|weaving
 4901,bulb,n.,球茎、电灯泡,a modified bud consisting of a thickened globular underground stem serving as a reproductive structure,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,10,0.300,0.700,0.500,globular|reproductive|underground,bud|globular|modified|reproductive|stem|thickened|underground
 4914,sometime,adv.,某个时候、改天,at some indefinite or unstated time,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,unstated,indefinite|unstated
+4916,marine,n.,舰队、水兵、海景画,a member of the United States Marine Corps,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.400,0.200,,corps|marine
 4919,epidemic,n.,传染病、流行病,a widespread outbreak of an infectious disease,cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.500,,infectious|outbreak|widespread
 4922,warehouse,n.,仓库、货栈、大商店,a storehouse for goods and merchandise,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,storehouse,merchandise|storehouse
 4923,butterfly,n.,蝴蝶,diurnal insect typically having a slender body with knobbed antennae and broad colorful wings,cet4+postgrad,P3,definition_too_advanced,0,0,1,10,0.400,0.700,0.600,antennae|colorful|diurnal|typically,antennae|colorful|diurnal|insect|knobbed|slender|typically
@@ -328,41 +451,56 @@
 4968,brass,n.,黄铜、黄铜制品,an alloy of copper and zinc,cet4+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,1.000,1.000,,alloy|copper|zinc
 5013,faithful,adj.,忠实的、详确的、可靠的,steadfast in affection or allegiance,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,1.000,steadfast,affection|allegiance|steadfast
 5053,copper,n.,铜、警察,a ductile malleable reddish-brown corrosion-resistant diamagnetic metallic element,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,9,0.444,0.778,0.778,diamagnetic|ductile|malleable|reddish,corrosion|diamagnetic|ductile|malleable|metallic|reddish|resistant
+5063,neglect,n.,疏忽、忽略、漏做,the state of something that has been unused and neglected,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.250,0.500,0.250,unused,neglected|unused
 5069,bang,n.,重击、突然巨响、刘海,a sudden very loud noise,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,noise,loud|noise
 5070,tilt,n.,倾斜、倾向、船篷,a slight but noticeable partiality,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,partiality,noticeable|partiality
-5085,dragon,n.,龙、凶暴的人,a creature of Teutonic mythology,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,mythology|teutonic,mythology|teutonic
+5094,dull,adj.,钝的、无趣的、呆滞的,make dull in appearance,cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,dull
 5096,raid,n.,袭击、突袭、搜捕,an attempt by speculators to defraud investors,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,defraud|speculators,defraud|speculators
 5100,crab,n.,螃蟹、偏航、脾气乖戾的人,decapod having eyes on short stalks and a broad flattened carapace with a small abdomen folded under the thorax and pincers,cet6+postgrad,P3,definition_too_advanced,0,0,1,12,0.333,0.667,0.583,carapace|decapod|pincers|thorax,abdomen|carapace|decapod|flattened|folded|pincers|stalks|thorax
 5103,hydrogen,n.,氢,a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,10,0.600,0.600,0.600,colorless|diatomic|flammable|nonmetallic|odorless|univalent,colorless|diatomic|flammable|nonmetallic|odorless|univalent
 5121,dive,n.,潜水、跳水,a headlong plunge into water,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,headlong|plunge
 5125,soda,n.,苏打、碳酸水,a sodium salt of carbonic acid,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,carbonic,acid|carbonic|sodium
+5147,breakdown,n.,崩溃、故障,a mental or physical breakdown,cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,breakdown
+5174,herd,n.,兽群、人群、牧人,a group of cattle or sheep or other domestic mammals all of the same kind that are herded by humans,cet4+cet6+postgrad,P2,circular_definition,0,1,0,8,0.125,0.500,0.250,sheep,cattle|herded|mammals|sheep
 5178,probe,n.,探索、调查、探针,an inquiry into unfamiliar or questionable activities,cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.500,unfamiliar,inquiry|questionable|unfamiliar
+5188,ending,n.,终止、终了、收场,the end of a word (a suffix or inflectional ending or final morpheme),cet4+cet6+postgrad,P2,circular_definition,0,1,0,7,0.429,0.429,0.429,inflectional|morpheme|suffix,inflectional|morpheme|suffix
 5191,competence,n.,胜任、职称、能力,the quality of being adequately or well qualified physically and intellectually,cet6,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.333,adequately,adequately|intellectually|physically|qualified
 5192,supplement,n.,补充物、增刊、补充,a quantity added (e.g. to make up for a deficiency),cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.500,e|g,deficiency|e|g|quantity
+5209,sympathetic,adj.,有同情心的、合意的、赞成的,of or relating to the sympathetic nervous system,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,sympathetic
+5226,pea,n.,豌豆、似豌豆的东西,seed of a pea plant used for food,cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.200,0.000,,pea
 5230,rotation,n.,旋转、循环、轮流,the act of rotating as if on an axis,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,axis|rotating
+5235,prejudice,n.,偏见、成见、侵害,disadvantage by prejudice,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,1.000,0.500,,disadvantage|prejudice
+5280,revenge,n.,报仇、复仇、报复,take revenge for a perceived wrong,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,revenge
 5281,sour,adj.,酸的、酸臭的、发酵的,a cocktail made of a liquor (especially whiskey or gin) mixed with lemon or lime juice and sugar,cet4+cet6+postgrad,P2,definition_too_advanced|pos_definition_conflict,0,1,1,11,0.364,0.636,0.545,cocktail|gin|juice|whiskey,cocktail|gin|juice|lemon|lime|liquor|whiskey
 5292,loom,n.,织布机、若隐若现的景象,a textile machine for weaving yarn into a textile,postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.800,0.600,yarn,textile|weaving|yarn
 5312,slim,adj.,瘦的、苗条的、微小的,being of delicate or slender build,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,delicate|slender
 5328,excite,v.,刺激、使兴奋、激励,arouse or elicit a feeling,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,arouse|elicit
-5340,orthodox,adj.,正统的、传统的、惯常的,of or pertaining to or characteristic of Judaism,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,judaism|pertaining,judaism|pertaining
+5332,pronounce,v.,发音、宣告、断言,"speak, pronounce, or utter in a certain way",cet4+cet6+postgrad,P2,circular_definition,0,1,0,5,0.000,0.400,0.200,,pronounce|utter
 5348,grim,adj.,冷酷的、坚强的、残忍的,not to be placated or appeased or moved by entreaty,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,appeased|entreaty|placated,appeased|entreaty|placated
 5370,bin,n.,(贮存谷物等的)容器、箱子,a container; usually has a lid,postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,container|lid
 5370,frog,n.,青蛙,any of various tailless stout-bodied amphibians with long hind limbs for leaping,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,9,0.333,0.667,0.444,amphibians|hind|tailless,amphibians|hind|leaping|limbs|stout|tailless
 5380,courtesy,n.,礼貌、谦恭、好意,a courteous or respectful or considerate act,cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.750,,considerate|courteous|respectful
 5388,illuminate,v.,照明、用灯装饰、阐明,add embellishments and paintings to (medieval manuscripts),cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,embellishments,embellishments|manuscripts|medieval
+5400,champagne,n.,香槟酒、香槟酒色,a white sparkling wine either produced in Champagne or resembling that produced there,postgrad,P2,circular_definition,0,1,0,7,0.000,0.429,0.143,,champagne|resembling|sparkling
 5424,tin,n.,锡、马口铁、罐头,a silvery malleable metallic element that resists corrosion,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.667,malleable|silvery,corrosion|malleable|metallic|silvery
+5429,lime,n.,石灰、粘鸟胶、酸橙,any of various related trees bearing limes,cet4+cet6,P2,circular_definition,0,1,0,5,0.000,0.200,0.000,,limes
 5438,atomic,adj.,原子的、原子能的,of or relating to or comprising atoms,cet4,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,atoms|comprising
 5441,portable,adj.,可携带的、可搬运的、可移动的,easily or conveniently transported,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,conveniently,conveniently|transported
+5458,tease,n.,揶揄、戏弄、逗惹,someone given to teasing (as by mocking or stirring curiosity),cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.500,0.167,,curiosity|mocking|teasing
 5469,rigid,adj.,坚硬的、刚性的、严格的,incapable of or resistant to bending,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.667,,incapable|resistant
 5480,eighteen,num.,十八、十八个,the cardinal number that is the sum of seventeen and one,cet4+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.400,,cardinal|seventeen|sum
-5494,scrape,n.,刮、擦、挖,a harsh noise made by scraping,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,noise,harsh|noise|scraping
+5494,scrape,n.,刮、擦、挖,a harsh noise made by scraping,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,4,0.250,0.750,0.250,noise,harsh|noise|scraping
 5515,Egyptian,n.,埃及人,a native or inhabitant of Egypt,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,egypt,egypt|inhabitant
 5531,peach,n.,桃子、桃树、桃色,cultivated in temperate regions,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,temperate,cultivated|temperate
+5543,communist,n.,共产主义者、共产党员,a member of the communist party,cet4+cet6,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,communist
 5558,obsession,n.,困扰、困扰人的情绪,an unhealthy and compulsive preoccupation with something or someone,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,compulsive|unhealthy,compulsive|preoccupation|unhealthy
 5563,nutrition,n.,营养、营养学,(physiology) the organic process of nourishing or being nourished,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.800,0.600,physiology,nourished|nourishing|organic|physiology
+5571,maple,n.,枫、枫木、淡棕色,wood of any of various maple trees,cet6,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,maple
+5582,cherry,n.,樱桃、樱桃树、樱桃色,wood of any of various cherry trees especially the black cherry,cet4+postgrad,P2,circular_definition,0,1,0,7,0.000,0.286,0.000,,cherry
 5592,tempt,v.,诱惑、引诱、引起...的兴趣,dispose or incline or entice to,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,1.000,entice,dispose|entice|incline
 5600,suitcase,n.,手提箱,a portable rectangular container for carrying clothes,cet6,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.200,,container|portable|rectangular
 5620,gravel,n.,砂砾、碎石,rock fragments and pebbles,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,fragments|pebbles
+5647,hop,n.,单脚跳、跳跃、舞会,the act of hopping,cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,hopping
 5651,ashamed,adj.,惭愧的、羞耻的,feeling shame or guilt or embarrassment or remorse,cet4+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.400,embarrassment|remorse,embarrassment|guilt|remorse|shame
 5657,useless,adj.,无用的、无效的、无益的,having no beneficial use or incapable of functioning usefully,cet4+cet6,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.400,usefully,beneficial|incapable|usefully
 5662,flu,n.,流感、流行性感冒,an acute febrile highly contagious viral disease,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.500,contagious|febrile|viral,acute|contagious|febrile|viral
@@ -372,13 +510,16 @@
 5709,weep,n.,哭、哭泣,"shed tears because of sadness, rage, or pain",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,rage|sadness|shed
 5711,liquor,n.,酒、液体、汁,an alcoholic beverage that is distilled rather than fermented,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.800,alcoholic|fermented,alcoholic|beverage|distilled|fermented
 5712,dioxide,n.,二氧化物,an oxide containing two atoms of oxygen in the molecule,cet6,P3,definition_too_advanced,0,0,1,6,0.000,0.667,0.167,,atoms|molecule|oxide|oxygen
-5714,affirm,v.,断言、确认,to declare or affirm solemnly and formally as true,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,formally|solemnly,affirm|formally|solemnly
+5714,affirm,v.,断言、确认,to declare or affirm solemnly and formally as true,cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,5,0.400,0.600,0.400,formally|solemnly,affirm|formally|solemnly
 5727,Swiss,n.,瑞士人、瑞士腔调,the natives or inhabitants of Switzerland,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,switzerland,inhabitants|switzerland
 5734,injection,n.,注射、注射剂,the forceful insertion of a substance under pressure,cet4+cet6,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,forceful|insertion,forceful|insertion
+5750,dairy,n.,牛奶公司、乳品店、乳牛场,a farm where dairy products are produced,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,dairy
 5755,wit,n.,机智、智力、头脑,a message whose ingenuity or verbal skill or incongruity has the power to evoke laughter,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.125,0.625,0.250,incongruity,evoke|incongruity|ingenuity|laughter|verbal
 5798,primitive,adj.,原始的、早期的、简陋的,used of preliterate or tribal or nonindustrial societies,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.600,0.600,nonindustrial|preliterate|tribal,nonindustrial|preliterate|tribal
 5801,mosque,n.,清真寺,(Islam) a Muslim place of worship that usually has a minaret,cet6,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.500,minaret|muslim,islam|minaret|muslim|worship
 5805,reasoning,n.,推论、推理、论证,thinking that is coherent and logical,postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,coherent|logical
+5808,worship,n.,崇拜、礼拜、尊敬,the activity of worshipping,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,worshipping
+5840,parallel,n.,平行、对比、相匹敌之物,(mathematics) one of a set of parallel geometric figures (parallel lines or planes),cet4+cet6+postgrad,P2,circular_definition,0,1,0,9,0.111,0.444,0.111,geometric,geometric|mathematics|parallel
 5867,recreation,n.,娱乐、消遣、休息,an activity that diverts or amuses or stimulates,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.250,,amuses|diverts|stimulates
 5881,nitrogen,n.,氮,a common nonmetallic element that is normally a colorless odorless tasteless inert diatomic gas,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,10,0.600,0.600,0.600,colorless|diatomic|inert|nonmetallic|odorless|tasteless,colorless|diatomic|inert|nonmetallic|odorless|tasteless
 5882,integral,adj.,不可缺少的、完整的,constituting the undiminished entirety,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,entirety|undiminished,entirety|undiminished
@@ -386,19 +527,23 @@
 5906,temptation,n.,诱惑、诱惑物,something that seduces or has the quality to seduce,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,seduce|seduces,seduce|seduces
 5908,tiger,n.,老虎、虎、凶暴的人,a fierce or audacious person,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,audacious,audacious|fierce
 5946,defect,n.,缺点,an imperfection in a bodily system,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,bodily|imperfection,bodily|imperfection
+5959,petition,n.,请愿、诉状、陈情书,write a petition for something to somebody,cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,petition
 5963,static,n.,静电、静电干扰,a crackling or hissing noise caused by electrical interference,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.500,crackling|noise,crackling|electrical|interference|noise
 5975,audio,adj.,音频的、声音的,the audible part of a transmitted signal,cet4+postgrad,P2,pos_definition_conflict,0,1,0,4,0.250,0.500,0.250,audible,audible|transmitted
-5993,tuna,n.,金枪鱼、金枪鱼肉,tropical American prickly pear of Jamaica,cet6,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.600,jamaica|prickly,jamaica|pear|prickly|tropical
+5983,complicate,v.,弄复杂、使错综、使恶化,make more complicated,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
 6000,horizontal,n.,水平线、水平面、水平位置,something that is oriented horizontally,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,horizontally,horizontally|oriented
 6009,linen,n.,亚麻布、亚麻线、亚麻制品,a fabric woven with fibers from the flax plant,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,flax,fabric|flax|woven
+6035,lease,n.,租约、租期、租,property that is leased or rented out or let,cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.500,0.000,,leased|rented
 6039,murmur,n.,低语、低声的怨言,speak softly or indistinctly,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,indistinctly,indistinctly|softly
+6056,stride,n.,大步、步幅、步态,"significant progress (especially in the phrase ""make strides"")",cet6+postgrad,P2,circular_definition,0,1,0,6,0.000,0.167,0.000,,strides
 6088,misery,n.,痛苦、悲惨、不幸,a state of ill-being due to affliction or misfortune,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,affliction|ill,affliction|ill|misfortune
-6095,mustard,n.,芥末、芥菜、强烈的兴趣,any of several cruciferous plants of the genus Brassica,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.600,0.600,brassica|cruciferous|genus,brassica|cruciferous|genus
-6098,mug,n.,有柄大杯、脸、苦读者,the quantity that can be held in a mug,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,mug|quantity
+6098,mug,n.,有柄大杯、脸、苦读者,the quantity that can be held in a mug,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,3,0.000,0.667,0.000,,mug|quantity
 6122,cereal,n.,谷类食品、谷类植物,grass whose starchy grains are used as food: wheat,cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.333,grass|starchy,grains|grass|starchy|wheat
 6154,velvet,n.,天鹅绒,a silky densely piled fabric with a plain back,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.833,0.333,densely|silky,densely|fabric|piled|plain|silky
+6160,olive,n.,橄榄、橄榄树、橄榄色,small ovoid fruit of the European olive tree,cet6,P2,circular_definition,0,1,0,6,0.167,0.333,0.167,ovoid,olive|ovoid
 6161,roller,n.,滚筒、滚轴、压路机,a grounder that rolls along the infield,cet4+cet6,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,grounder|infield,grounder|infield
-6163,toast,n.,吐司、烤面包、干杯,slices of bread that have been toasted,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.333,bread,bread|slices|toasted
+6163,toast,n.,吐司、烤面包、干杯,slices of bread that have been toasted,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,3,0.333,1.000,0.333,bread,bread|slices|toasted
+6172,fling,n.,投掷、急冲、嘲弄,the act of flinging,cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,flinging
 6191,glorious,adj.,光荣的,having or deserving or conferring glory,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,conferring|glory
 6200,overturn,n.,倾覆、破灭、革命,an improbable and unexpected victory,postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,improbable,improbable|unexpected
 6209,flourish,v.,繁荣、茂盛、活跃,a showy gesture,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,2,0.500,0.500,0.500,showy,showy
@@ -415,91 +560,40 @@
 6330,pasture,n.,牧场、草地、牧草,a field covered with grass or herbage and suitable for grazing by livestock,cet6+postgrad,P3,definition_too_advanced,0,0,1,7,0.286,0.714,0.429,grass|herbage,grass|grazing|herbage|livestock|suitable
 6336,dash,n.,冲撞、破折号、短跑,distinctive and stylish elegance,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,1.000,0.667,elegance|stylish,distinctive|elegance|stylish
 6349,sore,adj.,悲伤的、痛的、引起痛苦的,an open skin infection,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.000,0.000,,
-6356,erect,adj.,直立的、竖立的、笔直的,upright in position or posture,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,posture|upright
-6395,cement,n.,水泥、胶结剂,concrete pavement is sometimes referred to as cement,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.200,,cement|concrete|pavement
-6430,resent,v.,愤恨、憎恶、怨恨,feel bitter or indignant about,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,bitter|indignant
-6435,petty,adj.,琐碎的、小规模的、小气的,contemptibly narrow in outlook,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,contemptibly,contemptibly|outlook
-6448,marathon,n.,马拉松、耐力的考验,any long and arduous undertaking,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,arduous,arduous|undertaking
-6458,spur,n.,马刺、刺激物、鼓舞,any sharply pointed projection,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,projection,projection|sharply
-6459,trench,n.,渠、沟渠、战壕,a ditch dug as a fortification having a parapet of the excavated earth,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.667,0.833,0.833,dug|excavated|fortification|parapet,ditch|dug|excavated|fortification|parapet
-6490,turtle,n.,海龟,any of various aquatic and land reptiles having a bony shell and flipper-like limbs for swimming,cet6,P3,definition_too_advanced,0,0,1,10,0.400,0.600,0.500,aquatic|bony|flipper|swimming,aquatic|bony|flipper|limbs|reptiles|swimming
-6499,clergy,n.,牧师、僧侣、神职人员,"in Christianity, clergymen collectively (as distinguished from the laity)",postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.800,1.000,0.800,christianity|clergymen|collectively|laity,christianity|clergymen|collectively|distinguished|laity
-6512,mathematical,adj.,数学的、精确的,of or pertaining to or of the nature of mathematics,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,pertaining,mathematics|pertaining
-6537,fox,n.,狐狸、狡猾的人,alert carnivorous mammal with pointed muzzle and ears and a bushy tail,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.375,0.625,0.375,bushy|carnivorous|muzzle,alert|bushy|carnivorous|mammal|muzzle
-6540,pavement,n.,路面、人行道、铺面路,the paved surface of a thoroughfare,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,thoroughfare,paved|thoroughfare
-6578,slender,adj.,苗条的、纤弱的、微少的,being of delicate or slender build,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,delicate|slender
-6591,inn,n.,旅馆、客栈,a hotel providing overnight lodging for travelers,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.400,travelers,lodging|overnight|travelers
-6592,perfume,n.,香水、香气、(悦人的)气氛,a toiletry that emits and diffuses a fragrant odor,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,1.000,0.600,toiletry,diffuses|emits|fragrant|odor|toiletry
-6596,flock,n.,兽群、鸟群、一群人,a church congregation guided by a pastor,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,congregation|pastor,congregation|pastor
-6632,undo,v.,解开、取消、破坏,"cancel, annul, or reverse an action or its effect",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,annul,annul|cancel|reverse
-6635,intimidate,v.,威胁、恐吓,make timid or fearful,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,fearful|timid
-6638,plague,n.,瘟疫、天罚、麻烦,a serious (sometimes fatal) infection of rodents caused by Yersinia pestis and accidentally transmitted to humans by the bite of a flea that has,cet6+postgrad,P3,definition_too_advanced,0,0,1,13,0.385,0.615,0.385,accidentally|flea|pestis|rodents|yersinia,accidentally|bite|fatal|flea|pestis|rodents|transmitted|yersinia
-6718,rude,adj.,粗鲁无礼的、粗陋的、粗暴的,socially incorrect in behavior,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,socially,incorrect|socially
-6724,landlord,n.,房东、地主,a landowner who leases to others,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,landowner,landowner|leases
-6732,amusement,n.,兴味、娱乐、消遣,a feeling of delight at being entertained,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,delight|entertained
-6761,weary,adj.,疲倦的、萎靡的、厌倦的,physically and mentally fatigued,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.333,mentally,fatigued|mentally|physically
-6775,paradox,n.,似非而是的论点、自相矛盾的话、悖论,(logic) a statement that contradicts itself,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,contradicts|logic
-6798,solitary,n.,独居者,confinement of a prisoner in isolation from other prisoners,cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,confinement|isolation,confinement|isolation
-6807,prohibition,n.,禁令、禁止,a law forbidding the sale of alcoholic beverages,cet6,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.400,alcoholic,alcoholic|beverages|forbidding
-6813,dislike,n.,嫌恶,a feeling of aversion or antipathy,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,antipathy|aversion,antipathy|aversion
-6816,paradise,n.,天堂、乐园、伊甸园,(Christianity) the abode of righteous souls after death,cet4+cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.600,0.600,abode|christianity|righteous,abode|christianity|righteous
-6819,granite,n.,花岗岩,plutonic igneous rock having visibly crystalline texture,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.667,0.833,0.667,crystalline|igneous|plutonic|visibly,crystalline|igneous|plutonic|texture|visibly
-6831,beverage,n.,饮料,any liquid suitable for drinking,postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,liquid|suitable
-6842,pest,n.,令人讨厌之物、有害之物、害虫,a persistently annoying person,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,annoying|persistently,annoying|persistently
-6843,lodge,n.,小屋、门房、支部,English physicist who studied electromagnetic radiation and was a pioneer of radiotelegraphy (1851-1940),cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,7,0.429,0.714,0.429,electromagnetic|pioneer|radiotelegraphy,electromagnetic|physicist|pioneer|radiation|radiotelegraphy
-6846,prairie,n.,大草原、草甸,a treeless grassy plain,cet6,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.667,treeless,grassy|plain|treeless
-6881,submarine,n.,潜水艇、海底生物,a submersible warship usually armed with torpedoes,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,submersible|warship,submersible|torpedoes|warship
-6889,clown,n.,小丑、乡下人,a rude or vulgar fool,cet6,P3,definition_too_advanced,0,0,1,3,0.000,1.000,0.333,,fool|rude|vulgar
-6904,squirrel,n.,松鼠、松鼠毛皮,a kind of arboreal rodent having a long bushy tail,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,6,0.500,0.500,0.500,arboreal|bushy|rodent,arboreal|bushy|rodent
-6906,destine,v.,注定、预定,decree or designate beforehand,cet6,P3,definition_too_advanced,0,0,1,3,0.000,1.000,0.667,,beforehand|decree|designate
-6934,claw,n.,爪、螯、抓伤,sharp curved horny process on the toe of a bird or some mammals or reptiles,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.125,0.625,0.250,horny,curved|horny|mammals|reptiles|toe
-6937,mercury,n.,水银、汞、使者,a heavy silvery toxic univalent and bivalent metallic element,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,7,0.429,0.714,0.571,bivalent|silvery|univalent,bivalent|metallic|silvery|toxic|univalent
-7008,staple,n.,主要产物、常用品、主要要素,"a natural fiber (raw cotton, wool, hemp, flax) that can be twisted to form yarn",postgrad,P3,definition_too_advanced,0,0,1,10,0.300,0.600,0.300,flax|hemp|yarn,cotton|flax|hemp|twisted|wool|yarn
-7058,gratitude,n.,感激之情,a feeling of thankfulness and appreciation,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,thankfulness,appreciation|thankfulness
-7060,emperor,n.,皇帝、君主,the male ruler of an empire,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,empire|ruler
-7063,triple,adj.,三倍的,a base hit at which the batter stops safely at third base,cet6+postgrad,P2,pos_definition_conflict,0,1,0,7,0.143,0.286,0.143,batter,batter|safely
-7085,communism,n.,共产主义,a form of socialism that abolishes private ownership,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.400,,abolishes|ownership|socialism
-7087,heap,n.,堆、许多、累积,bestow in large quantities,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,bestow|quantities
-7135,harass,v.,使困扰、使烦恼、折磨,annoy continually or chronically,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,1.000,1.000,1.000,annoy|chronically|continually,annoy|chronically|continually
-7184,hay,n.,干草,grass mowed and cured for use as fodder,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.800,0.600,fodder|grass|mowed,cured|fodder|grass|mowed
-7222,provocative,adj.,激发感情的、挑拨的、刺激的,"serving or tending to provoke, excite, or stimulate",cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,excite|provoke|stimulate
-7253,throne,n.,王座、君主,"the chair of state for a monarch, bishop, etc.",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.400,etc,bishop|etc|monarch
-7297,bleak,adj.,萧瑟的、荒凉的、阴冷的,unpleasantly cold and damp,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,unpleasantly,damp|unpleasantly
-7298,setback,n.,挫折、退步、逆流,an unfortunate happening that hinders or impedes,cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.500,impedes,hinders|impedes|unfortunate
-7313,lily,n.,百合、百合花,any liliaceous plant of the genus Lilium having showy pendulous flowers,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,7,0.714,0.714,0.714,genus|liliaceous|lilium|pendulous|showy,genus|liliaceous|lilium|pendulous|showy
-7328,ginger,n.,姜、精力、姜黄色,perennial plants having thick branching aromatic rhizomes and leafy reedlike stems,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,9,0.556,0.667,0.556,aromatic|leafy|perennial|reedlike|rhizomes,aromatic|leafy|perennial|reedlike|rhizomes|stems
-7343,prosperous,adj.,成功的、繁盛的、幸运的,in fortunate circumstances financially,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,financially,financially|fortunate
-7353,respectable,adj.,值得尊重的、人格高尚的、相当数量的,characterized by socially or conventionally acceptable morals,cet6,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,conventionally|socially,acceptable|conventionally|socially
-7363,dispatch,v.,派遣,an official report (usually sent in haste),cet6,P2,pos_definition_conflict,0,1,0,5,0.000,0.200,0.200,,haste
-7398,bully,n.,欺凌弱小者、土霸,a cruel and brutal fellow,postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,brutal|cruel
-7410,plight,n.,困境、窘境,a solemn pledge of fidelity,postgrad,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.667,fidelity,fidelity|pledge|solemn
-7451,impatient,adj.,不耐烦的、着急的、急切的,restless or short-tempered under delay or opposition,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,delay|restless|tempered
-7469,doom,n.,厄运、不幸、法律,an unpleasant or disastrous destiny,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,1.000,0.000,,destiny|disastrous|unpleasant
-7485,accidental,adj.,意外的、偶然的、非主要的,happening by chance or unexpectedly or unintentionally,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,unexpectedly|unintentionally,unexpectedly|unintentionally
-7487,lever,n.,杠杆、似杠杆之工具,a rigid bar pivoted about a fulcrum,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.500,fulcrum|pivoted,fulcrum|pivoted|rigid
-7508,diversion,n.,转移,an activity that diverts or amuses or stimulates,cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.250,,amuses|diverts|stimulates
-7546,scrub,n.,用力擦洗、矮树、矮人,dense vegetation consisting of stunted trees or bushes,cet6,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.333,stunted,bushes|dense|stunted|vegetation
-7548,stubborn,adj.,顽固的、不听话的、执拗的,tenaciously unwilling or marked by tenacious unwillingness to yield,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.500,tenacious|tenaciously|unwillingness,tenacious|tenaciously|unwilling|unwillingness
-7568,compliment,n.,称赞、恭维、敬意,a remark (or act) expressing praise and admiration,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,admiration|praise|remark
-7598,oneself,pron.,自己、亲自,A reflexive form of the indefinite pronoun one.,cet4+postgrad,P2,definition_too_advanced|pos_definition_conflict,0,1,1,5,0.200,0.600,0.600,reflexive,indefinite|pronoun|reflexive
-7619,paste,n.,面团、面食、浆糊,any mixture of a soft and malleable consistency,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,consistency|malleable,consistency|malleable
-7662,quantitative,adj.,数量的、定量的,expressible as a quantity or relating to or susceptible of measurement,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.800,0.200,expressible,expressible|measurement|quantity|susceptible
-7665,symphony,n.,交响乐、交响曲,a long and complex sonata for symphony orchestra,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,sonata,orchestra|sonata|symphony
-7682,kindness,n.,仁慈、亲切、和蔼,the quality of being warmhearted and considerate and humane and sympathetic,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.600,humane|warmhearted,considerate|humane|sympathetic|warmhearted
-7683,repression,n.,抑制、压抑、制止,a state of forcible subjugation,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,forcible|subjugation,forcible|subjugation
-7712,foul,adj.,污秽的、邪恶的、恶臭的,an act that violates the rules of a sport,cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.000,,
-7735,spicy,adj.,香的、多香料的、辛辣的,having an agreeably pungent taste,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,agreeably|pungent,agreeably|pungent
-7741,pinch,n.,捏、拧、撮,a painful or straitened circumstance,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,straitened,painful|straitened
-7744,orderly,adj.,有秩序的、整齐的、值班的,devoid of violence or disruption,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,devoid|disruption,devoid|disruption
+6411,spoil,v.,毁坏；扫兴；变质；宠坏,"To damage something, become bad and unsafe to eat, or give someone so much that they expect too much.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,11,0.091,0.091,0.091,unsafe,unsafe
+6472,unpleasant,adj.,令人不快的；讨厌的；不友善的,"Causing discomfort or dislike, or behaving in an unfriendly way.",cet4+cet6,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.500,discomfort|unfriendly,behaving|discomfort|dislike|unfriendly
+6514,orient,v.,确定方向；使适应；使面向,"To find or arrange a direction, help someone understand a new situation, or aim something at a particular need.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,12,0.000,0.000,0.000,,
+6592,perfume,n.,香水；芳香,"A liquid worn for its pleasant smell, or a pleasant smell itself.",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.833,0.333,smell,liquid|pleasant|smell
+6593,colonel,n.,上校,"A senior army or air force officer, usually below a general and above a lieutenant colonel.",cet4+cet6+postgrad,P2,circular_definition,0,1,0,9,0.000,0.222,0.000,,colonel|lieutenant
+6718,rude,adj.,粗鲁的；无礼的；猥亵的；突然而不快的,"Not polite, offensively sexual, or sudden and unpleasant in phrases such as 'a rude shock'.",cet4+cet6+postgrad,P2,circular_definition,0,1,0,8,0.250,0.500,0.250,offensively|polite,offensively|polite|rude|unpleasant
+6750,siren,n.,警报器；汽笛；海妖；迷人的女性,A device making a loud warning sound; a mythical being whose song lures sailors; or a dangerously attractive woman.,cet6+postgrad,P2,sense_circular_definition,0,1,0,12,0.167,0.417,0.167,dangerously|mythical,dangerously|loud|lures|mythical|sailors
+6798,solitary,adj.,独自的；单独的；喜欢独处的,"Alone, the only one present, or preferring to spend time without others.",cet6+postgrad,P2,sense_circular_definition,0,1,0,8,0.000,0.000,0.000,,
+6860,infinite,adj.,无限的；无穷的；极大的,"Having no end or limit, or seeming too great to measure.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,5,0.000,0.000,0.000,,
+6983,slack,adj.,松弛的；松懈的；清淡的,"Not tight, not careful or strict enough, or lacking activity.",cet6+postgrad,P3,sense_definition_too_advanced,0,0,1,6,0.000,0.167,0.000,,strict
+7000,earnest,adj.,认真的；真诚而坚定的,"Serious, sincere, and determined rather than joking or careless.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,6,0.000,0.333,0.167,,careless|sincere
+7002,optimal,adj.,最佳的；最适宜的,The best or most suitable for a particular purpose or situation.,cet6,P2,pos_definition_conflict,0,1,0,5,0.000,0.200,0.000,,suitable
+7060,emperor,n.,皇帝,The male ruler of an empire.,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,empire|ruler
+7089,fry,v.,油煎；油炸,To cook food in hot oil or fat.,cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,5,0.000,0.000,0.000,,
+7155,napkin,n.,餐巾；餐巾纸；卫生巾（sanitary napkin）,"Cloth or paper used at meals to wipe hands and mouth; in 'sanitary napkin', an absorbent menstrual pad.",cet6+postgrad,P2,circular_definition,0,1,0,12,0.250,0.500,0.250,absorbent|menstrual|sanitary,absorbent|cloth|menstrual|napkin|pad|sanitary
+7228,wax,n.,蜡；蜡状物；耳垢,"A substance that softens with heat and is used in candles or polish, or a similar substance produced by the body.",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,10,0.000,0.300,0.000,,candles|polish|softens
+7328,ginger,n.,姜；姜红色,"A plant root used to give food a hot flavour, or a reddish-orange colour.",cet6,P2,sense_circular_definition|sense_definition_too_advanced,0,1,1,10,0.300,0.400,0.300,colour|orange|reddish,colour|flavour|orange|reddish
+7424,madame,n.,夫人；女士（源自法语的尊称）,"A French title used in English when addressing or naming a woman, usually before a surname and written 'Madame'.",postgrad,P2,circular_definition,0,1,0,11,0.000,0.182,0.091,,madame|surname
+7433,saw,n.,锯；格言（较旧用法）,"A tool with a toothed blade for cutting, or an old saying in the phrase 'an old saw'.",cet4+cet6+postgrad,P2,circular_definition,0,1,0,9,0.000,0.111,0.000,,blade
+7546,scrub,v.,用力擦洗；取消（非正式）,"To clean something by rubbing hard, or cancel a plan or event.",cet6,P2,sense_circular_definition,0,1,0,7,0.000,0.143,0.000,,cancel
+7616,premier,adj.,首要的；一流的,The most important or among the best of its kind.,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.000,0.000,0.000,,
+7712,foul,adj.,恶臭的；污秽的；恶劣的；犯规的,"Very unpleasant, dirty, or unfair, or against the rules in sport.",cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,dirty,dirty|unfair|unpleasant
+7715,dove,n.,鸽子；主和派人物,"A bird related to a pigeon, often used as a peace symbol, or a person favouring peaceful policies.",cet6+postgrad,P2,sense_pos_definition_conflict,0,1,0,11,0.000,0.273,0.182,,favouring|peaceful|pigeon
+7807,ceramic,adj.,陶瓷的,of or relating to or made from a ceramic,cet6,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,ceramic
 7818,nineteen,num.,十九、十九个,the cardinal number that is the sum of eighteen and one,cet4+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.200,,cardinal|eighteen|sum
 7824,compute,v.,计算、估算,make a mathematical calculation or computation,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,computation,calculation|computation|mathematical
+7840,walnut,n.,胡桃,nut of any of various walnut trees having a wrinkled two-lobed seed with a hard shell,cet6,P2,circular_definition,0,1,0,10,0.100,0.400,0.100,lobed,lobed|nut|walnut|wrinkled
 7847,nickel,n.,镍、镍币、五分镍币,a hard malleable ductile silvery metallic element that is resistant to corrosion,cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.375,0.750,0.625,ductile|malleable|silvery,corrosion|ductile|malleable|metallic|resistant|silvery
 7863,knob,n.,把手、瘤、旋钮,a circular rounded projection or protuberance,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,1.000,0.750,projection|protuberance|rounded,circular|projection|protuberance|rounded
 7890,radioactive,adj.,放射性的、有放射能的,exhibiting or caused by radioactivity,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,exhibiting|radioactivity
 7935,resonance,n.,共鸣、回声、反响,an excited state of a stable particle causing a sharp maximum in the probability of absorption of electromagnetic radiation,cet6,P3,definition_too_advanced,0,0,1,11,0.091,0.636,0.182,electromagnetic,absorption|electromagnetic|excited|maximum|particle|probability|radiation
 7939,noodle,n.,面条、笨蛋,a ribbonlike strip of pasta,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,pasta|ribbonlike,pasta|ribbonlike
 7947,shaky,adj.,震动的、摇晃的、动摇的,vibrating slightly and irregularly,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,irregularly,irregularly|vibrating
-7983,spinal,adj.,针的、尖刺的、尖刺状突起的,of or relating to the spine or spinal cord,cet6,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.000,,cord|spinal|spine
+7983,spinal,adj.,针的、尖刺的、尖刺状突起的,of or relating to the spine or spinal cord,cet6,P2,circular_definition|definition_too_advanced,0,1,1,4,0.000,0.750,0.000,,cord|spinal|spine
 7992,latitude,n.,纬度、范围,the angular distance between an imaginary line around a heavenly body parallel to its equator and the equator itself,cet6+postgrad,P3,definition_too_advanced,0,0,1,10,0.200,0.600,0.400,angular|heavenly,angular|equator|heavenly|imaginary|parallel
 7997,equate,v.,使相等、视为平等,"be equivalent or parallel, in mathematics",cet6,P3,definition_too_advanced,0,0,1,3,0.000,1.000,0.000,,equivalent|mathematics|parallel
 8058,physiological,adj.,生理学的、生理学上的、生理机能的,of or relating to the biological study of physiology,cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,biological|physiology,biological|physiology
@@ -511,14 +605,13 @@
 8129,advent,n.,来到、来临,arrival that has been awaited (especially of something momentous),postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,momentous,arrival|awaited|momentous
 8181,porcelain,n.,瓷器、瓷,ceramic ware made of a more or less translucent ceramic,cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.333,translucent,ceramic|translucent|ware
 8191,buzz,n.,嗡嗡声、流言,sound of rapid vibration,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,rapid|vibration
-8248,bamboo,n.,竹子,the hard woody stems of bamboo plants,cet6,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,woody,bamboo|stems|woody
+8248,bamboo,n.,竹子,the hard woody stems of bamboo plants,cet6,P2,circular_definition|definition_too_advanced,0,1,1,5,0.200,0.600,0.200,woody,bamboo|stems|woody
 8293,vocational,adj.,职业的,of or relating to a vocation or occupation,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,occupation|vocation
-8294,cucumber,n.,黄瓜,a melon vine of the genus Cucumis,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,1.000,0.750,cucumis|genus,cucumis|genus|melon|vine
-8359,reed,n.,芦苇、芦笛、簧舌,tall woody perennial grasses with hollow slender stems especially of the genera Arundo and Phragmites,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,11,0.545,0.818,0.545,arundo|genera|grasses|perennial|phragmites|woody,arundo|genera|grasses|hollow|perennial|phragmites|slender|stems|woody
+8325,groove,n.,凹槽、惯例、理想境况,a long narrow furrow cut either by a natural process (such as erosion) or by a tool (as e.g. a groove in a phonograph record),cet6,P2,circular_definition,0,1,0,13,0.308,0.462,0.308,e|furrow|g|phonograph,e|erosion|furrow|g|groove|phonograph
 8423,temperament,n.,气质、性格、性情,excessive emotionalism or irritability and excitability (especially when displayed openly),cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,7,0.571,0.714,0.571,emotionalism|excitability|irritability|openly,emotionalism|excessive|excitability|irritability|openly
-8436,knit,v.,编织、结合,make (textiles) by knitting,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,knitting|textiles
+8436,knit,v.,编织、结合,make (textiles) by knitting,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,3,0.000,0.667,0.000,,knitting|textiles
 8450,disruptive,adj.,分裂的、破坏(性)的,characterized by unrest or disorder or insubordination,cet6,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,insubordination|unrest,insubordination|unrest
-8459,enclose,v.,围绕、圈起、放入封套,"close in; darkness enclosed him""",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,darkness,darkness|enclosed
+8459,enclose,v.,围绕、圈起、放入封套,"close in; darkness enclosed him""",cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,3,0.333,0.667,0.333,darkness,darkness|enclosed
 8466,irritate,v.,激怒、使发怒、使兴奋,"excite to an abnormal condition, or chafe or inflame",cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.400,chafe|inflame,abnormal|chafe|excite|inflame
 8484,cock,n.,公鸡、雄禽、龙头,obscene terms for penis,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,penis,obscene|penis
 8508,bitterly,adv.,怨恨地、悲痛地、残酷地,"with bitterness, in a resentful manner",cet4,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,resentful,bitterness|resentful
@@ -528,13 +621,14 @@
 8650,crank,adj.,不稳的、脾气暴燥的、易怒的,a hand tool consisting of a rotating shaft with parallel handle,cet6,P2,pos_definition_conflict,0,1,0,7,0.000,0.429,0.000,,parallel|rotating|shaft
 8653,spacious,adj.,广大的、宽广的,very large in expanse or scope,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,expanse,expanse|scope
 8659,relish,n.,滋味、风味、美味,spicy or savory condiment,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,1.000,0.667,condiment|savory,condiment|savory|spicy
-8674,mint,n.,薄荷、造币厂、巨额,any north temperate plant of the genus Mentha with aromatic leaves and small mauve flowers,cet6,P3,high_outside_vocab_ratio,0,0,1,10,0.500,0.500,0.500,aromatic|genus|mauve|mentha|temperate,aromatic|genus|mauve|mentha|temperate
 8708,moss,n.,苔藓、泥沼,tiny leafy-stemmed flowerless plants,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,flowerless|leafy,flowerless|leafy|stemmed
 8736,semiconductor,n.,半导体,a substance as germanium or silicon whose electrical conductivity is intermediate between that of a metal and an insulator,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.250,0.750,0.375,conductivity|germanium,conductivity|electrical|germanium|insulator|intermediate|silicon
 8740,dizzy,adj.,晕眩的、眼花缭乱的,having or causing a whirling sensation,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,sensation|whirling
+8745,growl,n.,吠声、咆哮声,the sound of growling (as made by animals),cet6,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,growling
 8748,purity,n.,纯净、纯正、纯粹,being undiluted or unmixed with extraneous material,cet4+cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,extraneous|undiluted|unmixed,extraneous|undiluted|unmixed
 8761,exterior,n.,外部、表面、外貌,situated in or suitable for the outdoors or outside of a building,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.200,,outdoors|situated|suitable
-8874,muse,n.,沉思、冥想,in ancient Greek mythology any of 9 daughters of Zeus and Mnemosyne,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.500,mnemosyne|mythology|zeus,greek|mnemosyne|mythology|zeus
+8889,overtake,v.,赶上、突然降临于、压倒,catch up with and possibly overtake,cet4+cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,overtake
+8936,trumpet,n.,喇叭、小号、喇叭声,"proclaim on, or as if on, a trumpet",cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,1.000,0.000,,proclaim|trumpet
 8937,rash,adj.,轻率的、匆忙的、鲁莽的,imprudently incurring risk,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,imprudently,imprudently|incurring
 8947,continental,adj.,大陆的、洲的,of or pertaining to or typical of Europe,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,europe|pertaining,europe|pertaining
 8974,salute,v.,行礼、致意、问候,greet in a friendly way,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,friendly,friendly|greet
@@ -543,13 +637,15 @@
 9054,vegetarian,n.,素食者、食草动物,eater of fruits and grains and nuts,postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,eater,eater|grains|nuts
 9064,luxurious,adj.,豪华的、奢侈的、放纵的,displaying luxury and furnishing gratification to the senses,cet6,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,gratification,furnishing|gratification|luxury
 9082,tuberculosis,n.,肺结核,infection transmitted by inhalation or ingestion of tubercle bacilli and manifested in fever and small lesions (usually in the lungs but in various,cet6,P3,definition_too_advanced,0,0,1,13,0.385,0.692,0.385,bacilli|ingestion|inhalation|lesions|tubercle,bacilli|fever|ingestion|inhalation|lesions|lungs|manifested|transmitted|tubercle
-9083,fluorescent,n.,荧光,a lighting fixture that uses a fluorescent lamp,cet6,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,fixture|fluorescent|lamp
+9083,fluorescent,n.,荧光,a lighting fixture that uses a fluorescent lamp,cet6,P2,circular_definition|definition_too_advanced,0,1,1,5,0.000,0.600,0.000,,fixture|fluorescent|lamp
+9093,tutor,n.,家庭教师、导师、助教,be a tutor to someone,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,tutor
 9095,chalk,n.,粉笔、白垩,a soft whitish calcite,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,calcite|whitish,calcite|whitish
 9115,fortress,n.,城堡、要塞,a fortified defensive structure,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,defensive|fortified,defensive|fortified
 9160,console,v.,安慰、慰藉,a scientific instrument consisting of displays and an input device that an operator can use to monitor and control a system (especially a computer,cet6+postgrad,P2,pos_definition_conflict,0,1,0,13,0.000,0.154,0.000,,input|operator
 9181,dread,n.,恐惧、可怕的人(或事),fearful expectation or anticipation,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,anticipation,anticipation|fearful
 9185,chemist,n.,化学家、药剂师,a scientist who specializes in chemistry,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,chemistry|specializes
 9205,energize,v.,使活跃、激励、供给...能量,cause to be alert and energetic,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,alert|energetic
+9258,stray,n.,走失的家畜、浪子,an animal that has strayed (especially a domestic animal),cet6,P2,circular_definition,0,1,0,5,0.000,0.200,0.000,,strayed
 9309,shriek,n.,尖锐的响声,utter a shrill cry,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,shrill|utter
 9318,fridge,n.,电冰箱,a refrigerator in which the coolant is pumped around by an electric motor,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.167,coolant,coolant|motor|pumped|refrigerator
 9346,tyranny,n.,专制、暴政,a form of government in which the ruler is an absolute dictator (not restricted by a constitution or laws or opposition etc.),cet6,P3,definition_too_advanced,0,0,1,10,0.100,0.600,0.100,etc,absolute|constitution|dictator|etc|restricted|ruler
@@ -558,12 +654,14 @@
 9380,bowel,n.,肠、内脏、内部,the part of the alimentary canal between the stomach and the anus,postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,alimentary|anus,alimentary|anus|canal
 9398,ruthless,adj.,无情的、残忍的、毫不留情的,without mercy or pity,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,pity,mercy|pity
 9401,cripple,v.,严重损害、使残疾,deprive of strength or efficiency,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,deprive|efficiency
-9440,tangle,n.,缠结、纠结的一团、困惑,a twisted and tangled mass that is highly interwoven,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,interwoven,interwoven|tangled|twisted
+9440,tangle,n.,缠结、纠结的一团、困惑,a twisted and tangled mass that is highly interwoven,cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,5,0.200,0.600,0.200,interwoven,interwoven|tangled|twisted
 9447,digest,n.,文摘,a periodical that summarizes the news,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,periodical|summarizes
 9493,vanity,n.,虚荣心、虚无、自负,the quality of being valueless or futile,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,valueless,futile|valueless
+9518,ascend,v.,上升、追溯、登高,"travel up, ""We ascended the mountain""",cet6+postgrad,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,ascended
 9550,sulfur,n.,硫、硫磺,an abundant tasteless odorless multivalent nonmetallic element,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.667,0.833,0.667,multivalent|nonmetallic|odorless|tasteless,abundant|multivalent|nonmetallic|odorless|tasteless
 9593,luminous,adj.,发光的、明亮的,softly bright or radiant,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,radiant|softly
 9598,staggering,adj.,蹒跚的、巨大的、惊人的,so surprisingly impressive as to stun or overwhelm,postgrad,P3,definition_too_advanced,0,0,1,4,0.000,1.000,0.000,,impressive|overwhelm|stun|surprisingly
+9626,grunt,v.,作呼噜声,"issue a grunting, low, animal-like noise",cet6,P2,circular_definition,0,1,0,6,0.167,0.333,0.167,noise,grunting|noise
 9666,vibrate,v.,振动、颤动、激动,"shake, quiver, or throb",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.667,throb,quiver|throb
 9683,amuse,v.,消遣、娱乐、使发笑,"occupy in an agreeable, entertaining or pleasant fashion",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.200,,agreeable|entertaining|pleasant
 9711,abdomen,n.,腹部,the region of the body of a vertebrate between the thorax and the pelvis,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.600,0.600,pelvis|thorax|vertebrate,pelvis|thorax|vertebrate
@@ -580,19 +678,23 @@
 9924,stale,n.,尿,"urinate, of cattle and horses",cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,urinate,cattle|urinate
 9933,flatter,v.,奉承、阿谀、使高兴,praise somewhat dishonestly,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,dishonestly,dishonestly|praise
 9982,lame,adj.,跛足的、僵痛的、不完全的,a fabric interwoven with threads of metal,cet4+cet6+postgrad,P2,definition_too_advanced|pos_definition_conflict,0,1,1,4,0.250,0.750,0.250,interwoven,fabric|interwoven|threads
+10001,yeast,n.,酵母,a commercial leavening agent containing yeast cells,cet6,P2,circular_definition,0,1,0,6,0.167,0.333,0.167,leavening,leavening|yeast
 10011,savage,adj.,凶猛的、野蛮的、猛烈的,a member of an uncivilized people,cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.333,0.333,0.333,uncivilized,uncivilized
-10016,willow,n.,柳树、柳木制品,any of numerous deciduous trees and shrubs of the genus Salix,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.500,deciduous|genus|salix,deciduous|genus|salix|shrubs
-10076,villa,n.,别墅,Mexican revolutionary leader (1877-1923),cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,mexican,mexican|revolutionary
+10016,willow,n.,柳树、柳木制品,a tree with long thin branches and narrow leaves that often grows near water; also its wood,cet6,P2,sense_circular_definition,0,1,0,11,0.000,0.000,0.000,,
 10077,Marxist,adj.,马克思主义的,following the ideas of Marx and Engels,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,engels|marx,engels|marx
+10105,winding,n.,绕、卷、弯曲,the act of winding or twisting,cet6,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,twisting
 10119,coupon,n.,息票、赠券,a negotiable certificate that can be detached and redeemed as needed,postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.600,negotiable|redeemed,certificate|detached|negotiable|redeemed
 10123,grope,v.,摸索,feel about uncertainly or blindly,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,blindly|uncertainly,blindly|uncertainly
 10166,hearty,adj.,诚恳的、健壮的、热烈的,showing warm and heartfelt friendliness,cet6,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,friendliness|heartfelt,friendliness|heartfelt
 10183,snail,n.,蜗牛、行动迟缓的人、脑筋迟钝的人,freshwater or marine or terrestrial gastropod mollusk usually having an external enclosing spiral shell,cet6,P3,definition_too_advanced,0,0,1,10,0.400,0.700,0.400,freshwater|gastropod|mollusk|terrestrial,enclosing|freshwater|gastropod|marine|mollusk|spiral|terrestrial
 10211,highland,n.,高地、苏格兰高地,"elevated (e.g., mountainous) land",postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.600,e|g,e|elevated|g|mountainous
+10236,precipitate,n.,沉淀物、凝结物、结果,a precipitated solid substance in suspension or after settling or filtering,cet6,P2,circular_definition,0,1,0,6,0.000,0.500,0.000,,filtering|precipitated|suspension
 10247,hysteria,n.,歇斯底里症、不正常的兴奋、癔病,excessive or uncontrollable fear,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,uncontrollable,excessive|uncontrollable
+10264,insulate,v.,使绝缘、隔离,"protect from heat, cold, or noise by surrounding with insulating material",cet6+postgrad,P2,circular_definition,0,1,0,7,0.143,0.286,0.143,noise,insulating|noise
 10285,Portuguese,n.,葡萄牙人、葡萄牙语,the Romance language spoken in Portugal and Brazil,cet4+cet6,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,brazil|portugal,brazil|portugal|romance
 10392,brandy,n.,白兰地酒,distilled from wine or fermented fruit juice,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.600,fermented|juice,distilled|fermented|juice
-10440,snore,n.,鼾声、打鼾,the rattling noise produced when snoring,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,noise,noise|rattling|snoring
+10420,detach,v.,使分离、分遣,cause to become detached or separated,cet6+postgrad,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,detached
+10440,snore,n.,鼾声、打鼾,the rattling noise produced when snoring,cet6,P2,circular_definition|definition_too_advanced,0,1,1,4,0.250,0.750,0.250,noise,noise|rattling|snoring
 10443,zinc,n.,锌,a bluish-white lustrous metallic element,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,bluish|lustrous,bluish|lustrous|metallic
 10491,satire,n.,讽刺文学、讽刺,witty language used to convey insults or scorn,postgrad,P3,definition_too_advanced,0,0,1,6,0.000,0.667,0.167,,convey|insults|scorn|witty
 10500,wring,v.,拧、绞、扭,"twist and compress, as if in pain or anguish",cet6,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.000,,anguish|compress|twist
@@ -600,19 +702,21 @@
 10575,neuron,n.,神经原、轴索、神经细胞,a cell that is specialized to conduct nerve impulses,cet6,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,impulses|nerve|specialized
 10602,sparkle,n.,闪耀、火花、活力,merriment expressed by a brightness or gleam or animation of countenance,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.833,0.500,animation|countenance|merriment,animation|brightness|countenance|gleam|merriment
 10731,unreliable,adj.,不可靠的,not worthy of reliance or trust,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,reliance|worthy
+10775,clothe,v.,给...穿衣、盖上、赋予,cover as if with clothing,cet4+postgrad,P2,circular_definition,0,1,0,2,0.000,0.000,0.000,,
 10996,shabby,adj.,衣衫褴褛的、低劣的、破旧的,mean and unworthy and despicable,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,despicable|unworthy,despicable|unworthy
 10997,censor,n.,检查员,someone who censures or condemns,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,censures,censures|condemns
 11001,overhaul,v.,分解检查、翻修、精细检查,"make repairs, renovations, revisions or adjustments to",postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.800,0.200,adjustments,adjustments|renovations|repairs|revisions
 11015,scoff,v.,嘲笑、嘲弄,treat with contemptuous disregard,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,contemptuous|disregard
 11066,bristle,n.,刚毛、猪鬃,a stiff fiber (coarse hair or filament),cet4+cet6,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.200,,coarse|filament|stiff
-11159,thorn,n.,刺、棘、荆棘,a Germanic character of runic origin,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,germanic|runic,germanic|runic
 11161,discreet,adj.,小心的、慎重的,marked by prudence or modesty and wise self-restraint,postgrad,P3,definition_too_advanced,0,0,1,6,0.000,0.667,0.333,,modesty|prudence|restraint|wise
 11261,graphite,n.,石墨,used as a lubricant and as a moderator in nuclear reactors,cet6,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,lubricant|moderator,lubricant|moderator|reactors
+11271,esteem,n.,尊敬、尊重,the condition of being honored (esteemed or respected or well regarded),postgrad,P2,circular_definition,0,1,0,6,0.000,0.167,0.000,,esteemed
 11317,vulgar,adj.,粗俗的、庸俗的、普通的,lacking refinement or cultivation or taste,cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,cultivation|refinement,cultivation|refinement
 11330,doze,v.,打瞌睡、假寐,a light fitful sleep,postgrad,P2,pos_definition_conflict,0,1,0,3,0.333,0.333,0.333,fitful,fitful
-11355,primate,n.,大主教、灵长目动物,any placental mammal of the order Primates,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,placental,mammal|placental|primates
 11388,axe,n.,斧、斧头,chop or split with an ax,postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,ax|chop
+11448,thrash,v.,打、使逆行、胜过,give a thrashing to,cet6,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,thrashing
 11468,converse,n.,相反的事物、倒、逆向,a proposition obtained by conversion,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,conversion|proposition
+11471,barley,n.,大麦,a grain of barley,cet6,P2,circular_definition,0,1,0,2,0.000,1.000,0.000,,barley|grain
 11481,fearless,adj.,大胆的、勇敢的、无畏的,oblivious of dangers or perils or calmly resolute in facing them,cet6,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.500,calmly|oblivious,calmly|oblivious|perils|resolute
 11487,dormant,adj.,睡眠状态的、静止的,in a condition of biological rest or suspended animation,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,animation|biological,animation|biological|suspended
 11526,appal,v.,使惊骇、使吓坏,strike with disgust or revulsion,postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,revulsion,disgust|revulsion
@@ -625,11 +729,12 @@
 11687,fruitful,adj.,结果实的、多实的、产量多的,productive or conducive to producing in abundance,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,conducive,abundance|conducive|productive
 11709,deportation,n.,驱逐出境、放逐,the expulsion from a country of an undesirable alien,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,expulsion,alien|expulsion|undesirable
 11745,mast,n.,桅、桅杆、杆,a vertical spar for supporting sails,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,spar,sails|spar|vertical
-11804,ox,n.,牛,an adult castrated bull of the genus Bos,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,5,0.600,0.800,0.600,bos|castrated|genus,bos|bull|castrated|genus
-11805,wasp,n.,黄蜂、胡蜂、易怒的人,a white person of Anglo-Saxon ancestry who belongs to a Protestant denomination,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,8,0.625,0.625,0.625,ancestry|anglo|denomination|protestant|saxon,ancestry|anglo|denomination|protestant|saxon
+11772,elastic,n.,松紧带、橡皮筋,a fabric made of yarns containing an elastic material,cet4+cet6+postgrad,P2,circular_definition,0,1,0,6,0.167,0.500,0.167,yarns,elastic|fabric|yarns
 11845,modesty,n.,谦逊、质朴、羞怯,freedom from vanity or conceit,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,conceit|vanity
-11885,opium,n.,鸦片,an addictive narcotic extracted from seed capsules of the opium poppy,cet6,P3,definition_too_advanced,0,0,1,7,0.429,0.857,0.429,addictive|narcotic|poppy,addictive|capsules|extracted|narcotic|opium|poppy
+11885,opium,n.,鸦片,an addictive narcotic extracted from seed capsules of the opium poppy,cet6,P2,circular_definition|definition_too_advanced,0,1,1,7,0.429,0.857,0.429,addictive|narcotic|poppy,addictive|capsules|extracted|narcotic|opium|poppy
+11903,tar,n.,焦油、柏油、水手,coat with tar,cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,tar
 11905,brute,n.,畜生、残忍或好色之人,a cruelly rapacious person,cet4+cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,cruelly|rapacious,cruelly|rapacious
+11916,leopard,n.,豹、美洲豹,the pelt of a leopard,cet6,P2,circular_definition,0,1,0,2,0.500,1.000,0.500,pelt,leopard|pelt
 11920,weaver,n.,织布者、织工,a craftsman who weaves cloth,cet6,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.333,craftsman,cloth|craftsman|weaves
 11990,plumber,n.,水管工人,a craftsman who installs and repairs pipes and fixtures and appliances,postgrad,P3,definition_too_advanced,0,0,1,6,0.167,0.667,0.167,craftsman,appliances|craftsman|fixtures|repairs
 11997,latent,adj.,潜在的、潜伏的,potentially existing but not presently evident or realized,cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,potentially,evident|potentially|presently
@@ -638,18 +743,22 @@
 12195,civility,n.,礼貌、礼仪,formal or perfunctory politeness,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,perfunctory|politeness,perfunctory|politeness
 12224,telegram,n.,电报、一封电报,a message transmitted by telegraph,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.333,,telegraph|transmitted
 12325,antarctic,adj.,南极的、南极地带的,the region around the south pole: Antarctica and surrounding waters,cet6,P2,pos_definition_conflict,0,1,0,7,0.143,0.143,0.143,antarctica,antarctica
+12370,segregate,adj.,分离的、被隔离的,someone who is or has been segregated,cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,segregated
 12379,paradoxical,adj.,似非而是的、矛盾的、诡论的,seemingly contradictory but nonetheless possibly true,postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,contradictory|nonetheless|seemingly
 12413,toad,n.,蟾蜍、癞蛤蟆、讨厌的家伙,any of various tailless stout-bodied amphibians with long hind limbs for leaping,cet6,P3,definition_too_advanced,0,0,1,9,0.333,0.667,0.444,amphibians|hind|tailless,amphibians|hind|leaping|limbs|stout|tailless
 12415,mania,n.,狂躁、热衷、狂热,an irrational but irresistible motive for a belief or action,postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,irrational|irresistible,irrational|irresistible|motive
+12466,ornamental,n.,装饰物、观赏植物,any plant grown for its beauty or ornamental value,cet6,P2,circular_definition,0,1,0,5,0.000,0.200,0.000,,ornamental
 12516,majesty,n.,最高权威、威严、王权,impressiveness in scale or proportion,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,impressiveness,impressiveness|proportion
 12600,gnaw,v.,咬、啃、侵蚀,bite or chew on with the teeth,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,bite|chew
 12646,appall,v.,使丧胆、使惊骇,strike with disgust or revulsion,postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,revulsion,disgust|revulsion
+12670,fluctuate,v.,变动、起伏、动摇,cause to fluctuate or move in a wavelike pattern,cet6+postgrad,P2,circular_definition,0,1,0,5,0.200,0.400,0.200,wavelike,fluctuate|wavelike
 12717,sneer,n.,冷笑、嘲笑,a facial expression of contempt or scorn,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,facial,contempt|facial|scorn
 12769,twinkle,n.,闪烁、闪耀、瞬息,a rapid change in brightness,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,brightness|rapid
 12776,pious,adj.,虔诚的、敬神的、尽责的,having or showing or expressing reverence for a deity,cet6,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,deity|reverence,deity|reverence
 12790,algebra,n.,代数学,the mathematics of generalized arithmetical operations,cet4+cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,arithmetical,arithmetical|generalized|mathematics
 12813,cunning,adj.,狡猾的、巧妙的、可爱的,attractive especially by means of smallness or prettiness or quaintness,cet4+cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,6,0.500,0.500,0.500,prettiness|quaintness|smallness,prettiness|quaintness|smallness
 12817,sullen,adj.,愠怒的、沉闷的、阴沉的,showing a brooding ill humor,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.500,ill,brooding|humor|ill
+12958,lodging,n.,寄宿处、寄宿,the act of lodging,cet6,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,lodging
 13150,uproar,n.,骚动、喧嚣,a state of commotion and noise and confusion,cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.500,commotion|noise,commotion|confusion|noise
 13154,jolly,adj.,愉快的、高兴的、宜人的,a happy party,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,2,0.000,0.000,0.000,,
 13179,axle,n.,轴、车轴,a shaft on which a wheel rotates,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,rotates|shaft
@@ -669,15 +778,18 @@
 14064,resultant,adj.,结果的、合成的,the final point in a process,cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.000,0.000,,
 14100,crippling,word,(往复)曲折、断裂、临界的,that cripples or disables or incapacitates,cet6,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.333,incapacitates,cripples|disables|incapacitates
 14139,diligent,adj.,勤勉的、用功的,quietly and steadily persevering especially in detail or exactness,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.333,exactness|quietly,exactness|persevering|quietly|steadily
-14177,pail,n.,桶、提桶,the quantity contained in a pail,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,pail|quantity
+14177,pail,n.,桶、提桶,the quantity contained in a pail,cet4+cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,3,0.000,0.667,0.000,,pail|quantity
 14205,amplitude,n.,广阔、充足、幅度,(physics) the maximum displacement of a periodic wave,cet6,P3,definition_too_advanced,0,0,1,5,0.000,0.800,0.000,,displacement|maximum|periodic|physics
 14314,stammer,v.,口吃、结结巴巴地说,a speech disorder involving hesitations and involuntary repetitions of certain sounds,cet6,P2,pos_definition_conflict,0,1,0,8,0.250,0.375,0.250,hesitations|involuntary,hesitations|involuntary|repetitions
+14339,overload,v.,超载、过载、超过负荷,become overloaded,cet6,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,overloaded
 14382,leakage,n.,漏、漏出物、泄漏,the discharge of a fluid from some container,cet6,P3,definition_too_advanced,0,0,1,3,0.000,1.000,0.000,,container|discharge|fluid
 14433,cordial,n.,兴奋剂、补品,politely warm and friendly,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,3,0.667,0.667,0.667,friendly|politely,friendly|politely
 14495,hateful,adj.,憎恨的、可恨的、可恶的,evoking or deserving hatred,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,evoking|hatred
 14655,spherical,adj.,球的、球面的、球状的,of or relating to spheres or resembling a sphere,cet6,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.000,,resembling|sphere|spheres
 14740,blacksmith,n.,铁匠,a smith who forges and shapes iron with a hammer and anvil,cet6,P3,definition_too_advanced,0,0,1,6,0.333,0.667,0.333,anvil|smith,anvil|forges|hammer|smith
+14750,ripen,v.,使成熟,cause to ripen or develop fully,cet4+cet6,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,ripen
 14858,courteous,adj.,彬彬有礼、谦恭的,exhibiting courtesy and politeness,cet6,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.333,politeness,courtesy|exhibiting|politeness
+14885,tram,n.,电车轨道、煤车、纬纱,travel by tram,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,tram
 14920,radish,n.,小萝卜,pungent fleshy edible root,cet4+cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.500,fleshy|pungent,edible|fleshy|pungent
 14953,southwards,adv.,在南方,the cardinal compass point that is at 180 degrees,cet6,P2,pos_definition_conflict,0,1,0,4,0.000,0.500,0.250,,cardinal|compass
 14955,rubbish,n.,废物、垃圾、胡说,worthless material that is to be disposed of,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,disposed|worthless
@@ -687,22 +799,26 @@
 15579,slumber,n.,睡眠、麻木状态,a dormant or quiescent state,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,quiescent,dormant|quiescent
 16007,degenerate,adj.,堕落的,unrestrained by convention or morality,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,unrestrained,morality|unrestrained
 16587,quartz,n.,石英,a hard glossy mineral consisting of silicon dioxide in crystal form,cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.250,0.625,0.250,glossy|mineral,crystal|dioxide|glossy|mineral|silicon
+16675,fowl,n.,鸟、飞禽、家禽,hunt fowl,cet6,P2,circular_definition,0,1,0,2,0.000,1.000,0.000,,fowl|hunt
 16774,ramble,n.,漫步、随笔,an aimless amble on a winding course,cet6,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,aimless|amble,aimless|amble
 16805,monotonous,adj.,单调的、无变化的,tediously repetitious or lacking in variety,postgrad,P3,high_outside_vocab_ratio,0,0,1,4,0.500,0.500,0.500,repetitious|tediously,repetitious|tediously
 16823,longitude,n.,经度、经线,the angular distance between a point on any meridian and the prime meridian at Greenwich,cet6+postgrad,P3,high_outside_vocab_ratio,0,0,1,7,0.571,0.571,0.571,angular|greenwich|meridian,angular|greenwich|meridian
 16953,gunpowder,n.,火药,"a mixture of potassium nitrate, charcoal, and sulfur in a 75:15:10 ratio which is used in gunnery, time fuses, and fireworks",cet4+cet6,P3,definition_too_advanced,0,0,1,11,0.273,0.727,0.273,gunnery|nitrate|potassium,charcoal|fireworks|fuses|gunnery|nitrate|potassium|ratio|sulfur
+17026,fro,adv.,向那边、向后,"away; now used only in the phrase to and fro, meaning backwards and forwards",cet6,P2,circular_definition,0,1,0,8,0.000,0.250,0.000,,backwards|fro
 17034,axial,adj.,轴的、成轴的、轴向的,of or relating to or resembling an axis of rotation,cet6,P3,definition_too_advanced,0,0,1,4,0.000,0.750,0.000,,axis|resembling|rotation
 17096,stewardess,n.,空中小姐、女管理人、女管家,a woman steward on an airplane,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,airplane|steward
 17159,theorem,n.,定理、原理,a proposition deducible from basic postulates,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,deducible,deducible|postulates|proposition
 17169,blackmail,n.,勒索,extortion of money by threats to divulge discrediting information,postgrad,P3,high_outside_vocab_ratio,0,0,1,6,0.500,0.500,0.500,discrediting|divulge|extortion,discrediting|divulge|extortion
 17204,whisky,n.,威士忌酒、轻便马车,a liquor made from fermented mash of grain,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,5,0.400,0.800,0.400,fermented|mash,fermented|grain|liquor|mash
+17288,wharf,n.,码头,provide with a wharf,cet6,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,wharf
 17663,vex,v.,使烦恼、使苦恼,"subject to prolonged examination, discussion, or deliberation",cet4+cet6,P3,definition_too_advanced,0,0,1,5,0.200,0.600,0.200,deliberation,deliberation|examination|prolonged
 17812,stereotyped,adj.,用铅版印的、老一套的、套用老调的,lacking spontaneity or originality or individuality,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.750,0.750,0.750,individuality|originality|spontaneity,individuality|originality|spontaneity
 18288,reproach,n.,责备、耻辱,a mild rebuke or criticism,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,mild|rebuke
 18407,curt,adj.,简略的、简短的、生硬的,marked by rude or peremptory shortness,cet6,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.500,peremptory|shortness,peremptory|rude|shortness
 18804,Moslem,n.,穆斯林,a believer in or follower of Islam,cet6,P3,definition_too_advanced,0,0,1,3,0.333,1.000,0.333,believer,believer|follower|islam
-19393,interconnect,v.,使互相连接,cause to be interconnected or interwoven,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,interwoven,interconnected|interwoven
+19393,interconnect,v.,使互相连接,cause to be interconnected or interwoven,cet6,P2,circular_definition|definition_too_advanced,0,1,1,3,0.333,0.667,0.333,interwoven,interconnected|interwoven
 19549,retell,v.,再讲、重复、重说,"render verbally, ""recite a poem""",cet4+cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,verbally,recite|render|verbally
+19873,lubricate,v.,使润滑、涂油,have lubricating properties,cet4+cet6+postgrad,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,lubricating
 19930,inversely,adv.,相反地,in an inverse or contrary manner,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,contrary|inverse
 20084,radioactivity,n.,放射性,the spontaneous emission of a stream of particles or electromagnetic rays in nuclear decay,cet4+cet6,P3,definition_too_advanced,0,0,1,8,0.125,0.625,0.125,electromagnetic,decay|electromagnetic|particles|rays|spontaneous
 20210,sociable,adj.,好交际的、社交的、过社会生活的,inclined to or conducive to companionship with others,postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,4,0.500,0.750,0.500,companionship|conducive,companionship|conducive|inclined
@@ -710,19 +826,24 @@
 21711,ultrasonic,n.,超声波,having frequencies above those of audible sound,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,audible,audible|frequencies
 22027,petrol,n.,汽油,a volatile flammable mixture of hydrocarbons (hexane and heptane and octane etc.) derived from petroleum,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,10,0.600,0.900,0.600,etc|flammable|heptane|hexane|octane|volatile,derived|etc|flammable|heptane|hexane|hydrocarbons|octane|petroleum|volatile
 22127,dishonour,n.,不名誉、使人丢脸的人/事、耻辱,a state of shame or disgrace,cet4+cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,disgrace|shame
+22759,sulphur,n.,硫、硫磺,treat with sulphur in order to preserve,cet4+cet6,P2,circular_definition,0,1,0,4,0.000,0.250,0.000,,sulphur
+23395,disorient,v.,使失去方向、使迷惑,cause to be lost or disoriented,cet6,P2,circular_definition,0,1,0,3,0.000,0.333,0.000,,disoriented
 23460,bay,n.,海湾、狗吠声、月桂,an indentation of a shoreline larger than a cove but smaller than a gulf,cet4+cet6+postgrad,P3,definition_too_advanced|high_outside_vocab_ratio,0,0,2,6,0.500,0.667,0.500,cove|indentation|shoreline,cove|gulf|indentation|shoreline
 23567,distill,v.,蒸馏,undergo the process of distillation,postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,distillation,distillation|undergo
 23933,lamentation,n.,悲叹、哀悼,the passionate and demonstrative activity of expressing grief,cet6,P3,definition_too_advanced,0,0,1,5,0.400,0.600,0.400,demonstrative|passionate,demonstrative|grief|passionate
 24690,insulator,n.,绝缘体、从事绝缘工作的工人,a material such as glass or porcelain with negligible electrical or thermal conductivity,cet6,P3,definition_too_advanced,0,0,1,7,0.143,0.714,0.143,conductivity,conductivity|electrical|negligible|porcelain|thermal
 26238,adverb,n.,副词,the word class that qualifies verbs or clauses,cet4+postgrad,P3,definition_too_advanced,0,0,1,5,0.000,0.600,0.000,,clauses|qualifies|verbs
+27624,civilize,v.,使开化、使文明,raise from a barbaric to a civilized state,cet4+cet6+postgrad,P2,circular_definition,0,1,0,4,0.250,0.500,0.250,barbaric,barbaric|civilized
 28011,sophisticate,n.,久经世故的人、精于...之道的人,a worldly-wise person,cet6,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,worldly,wise|worldly
 30041,xerox,v.,静电复印,a copy made by a xerographic printer,cet6+postgrad,P2,pos_definition_conflict,0,1,0,4,0.250,0.500,0.250,xerographic,printer|xerographic
 30215,bewilder,v.,使迷惑、使不知所措,cause to be confused emotionally,cet6+postgrad,P3,definition_too_advanced,0,0,1,3,0.333,0.667,0.333,emotionally,confused|emotionally
+33037,telex,n.,用户直通电报、电传打字机,communicate by telex,cet6,P2,circular_definition,0,1,0,2,0.000,0.500,0.000,,telex
 33505,worst,adj.,最坏的、最糟的,the least favorable outcome,cet4+cet6+postgrad,P2,pos_definition_conflict,0,1,0,3,0.000,0.333,0.000,,favorable
 34122,jewellery,n.,宝石、贵重饰物、珠宝,an adornment (as a bracelet or ring or necklace) made of precious metals and set with gems (or imitation gems),cet6,P3,definition_too_advanced,0,0,1,11,0.364,0.636,0.364,adornment|bracelet|gems,adornment|bracelet|gems|imitation|necklace|precious
 36003,cosy,adj.,温暖舒适的,a padded cloth covering to keep a teapot warm,postgrad,P2,pos_definition_conflict,0,1,0,6,0.167,0.500,0.167,teapot,cloth|padded|teapot
-37798,ruby,n.,红宝石、深红色,a transparent piece of ruby that has been cut and polished and is valued as a precious gem,cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.125,0.625,0.125,gem,gem|polished|precious|ruby|transparent
+37508,grey,adj.,灰色的、阴沉的,"having the colour between black and white, like rain clouds; also dull and without life",cet4+cet6+postgrad,P2,sense_circular_definition,0,1,0,9,0.111,0.222,0.111,colour,colour|dull
+37798,ruby,n.,红宝石、深红色,a transparent piece of ruby that has been cut and polished and is valued as a precious gem,cet6+postgrad,P2,circular_definition|definition_too_advanced,0,1,1,8,0.125,0.625,0.125,gem,gem|polished|precious|ruby|transparent
+37826,ampere,n.,安培,a former unit of electric current (slightly smaller than the SI ampere),cet4+cet6,P2,circular_definition,0,1,0,8,0.125,0.250,0.125,si,ampere|si
 43081,queen,n.,王后、女王,the only fertile female in a colony of social insects such as bees and ants and termites,cet4+cet6+postgrad,P3,definition_too_advanced,0,0,1,8,0.125,0.750,0.125,termites,ants|bees|colony|fertile|insects|termites
 43440,predestine,v.,预定、注定,decree or determine beforehand,cet6,P3,definition_too_advanced,0,0,1,3,0.000,0.667,0.000,,beforehand|decree
 43874,northwards,adv.,向北方,the cardinal compass point that is at 0 or 360 degrees,cet6,P2,pos_definition_conflict,0,1,0,4,0.000,0.500,0.000,,cardinal|compass
-999999,seminate,v.,播种于、传播、散布,t. To sow; to spread; to propagate.,cet6,P3,definition_too_advanced,0,0,1,4,0.250,0.750,0.250,t,propagate|sow|t

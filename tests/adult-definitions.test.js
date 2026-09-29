@@ -13,6 +13,41 @@ const TOP_500 = [...ADULT_WORDS]
   .sort((left, right) => left.rank - right.rank)
   .slice(0, 500);
 
+test('全库首批修订：对待/治疗、批次和接待处不能被狭窄旧义替代', () => {
+  const treat = WORDS_BY_ENGLISH.get('treat');
+  assert.equal(treat.pos, 'v.');
+  assert.match(treat.zh, /对待/);
+  assert.match(treat.zh, /治疗/);
+  assert.ok(treat.senses.some(s => s.pos === 'n.' && /享受/.test(s.zh)));
+  const batch = WORDS_BY_ENGLISH.get('batch');
+  assert.match(batch.zh, /一批/);
+  assert.doesNotMatch(batch.definition, /loaves|bread/);
+  assert.ok(batch.senses.some(s => s.pos === 'v.' && s.example));
+  assert.match(WORDS_BY_ENGLISH.get('reception').zh, /接待处/);
+  assert.match(WORDS_BY_ENGLISH.get('entertain').zh, /考虑/);
+  assert.ok(WORDS_BY_ENGLISH.get('feast').senses.every(s => s.example));
+  assert.match(WORDS_BY_ENGLISH.get('maltreat').family.find(w => w.en === 'treat').zh, /对待/);
+});
+
+test('成人英英释义：普通词不能被解释成人物、地名或生物学名', () => {
+  // WordNet 把同名人物/地点挂在普通词下：hunt→画家 Hunt，buffalo→布法罗市……
+  const expected = {
+    hunt: /chasing animals|search/, foster: /child/, mill: /flour|factory/,
+    curl: /hair|curved/, crane: /lifting|bird/, barber: /hair/, villa: /house/,
+    piston: /engine/, weld: /metal/, seaman: /sailor/, forth: /forward/,
+    buffalo: /cattle/, tuna: /fish/, thorn: /plant|rose/, wasp: /insect/,
+    donkey: /horse/, dot: /mark/, north: /direction/, south: /direction/,
+    chase: /follow/, peel: /skin/, tyre: /wheel/, grey: /colour/,
+    cosmos: /universe/, everlasting: /forever/, thrift: /money/,
+  };
+  for (const [en, pattern] of Object.entries(expected)) {
+    const word = WORDS_BY_ENGLISH.get(en);
+    const text = [word.definition, ...(word.senses || []).map((s) => s.definition || '')].join(' ');
+    assert.match(text, pattern, `${en}: ${word.definition}`);
+    assert.doesNotMatch(text, /\(\d{3,4}\s*[-–]\s*\d{2,4}\)|\bgenus [A-Z]|\ba (?:city|river|port) (?:in|on)\b/, en);
+  }
+});
+
 const ENGLISH_TOKEN_PATTERN = /[a-z]+(?:'[a-z]+)?/gi;
 const CROSS_REFERENCE_PATTERN =
   /(?:^|[.;]\s*)(?:i\.\s*)?(?:see|compare|cf\.?)\s+[a-z][a-z'-]*\.?\s*$/i;
@@ -57,6 +92,8 @@ test('成人英英释义：审计摘要对应当前生成词库且高置信缺�
     'letter_sense_mismatch',
     'abbreviation_sense_mismatch',
     'homograph_sense_mismatch',
+    'proper_name_sense_mismatch',
+    'sense_proper_name_sense_mismatch',
     'headword_self_reference',
     'obvious_truncation',
     'legacy_cross_reference',
@@ -77,7 +114,7 @@ test('成人英英释义：全量词库不允许空释义', () => {
 test('成人英英释义：高频短词不能错配到字母、缩写、州名或货币义', () => {
   const checks = {
     the: {
-      required: /\b(?:particular|specific|already (?:known|mentioned)|clear which)\b/i,
+      required: /\b(?:particular|specific|already (?:known|mentioned)|clear which|knows which)\b/i,
       forbidden: /\b(?:thee|letter|alphabet)\b/i,
     },
     a: {
@@ -195,7 +232,7 @@ test('多词性修复：mean/right/fall 的次要词性有独立意义和例句'
     mean: { 'adj.': /刻薄|吝啬/, 'n.': /平均/ },
     right: { 'n.': /权利|右边/, 'adv.': /向右/ },
     back: { 'n.': /背部/, 'v.': /支持/ },
-    fall: { 'n.': /秋天/ },
+    fall: { 'n.': /秋(?:天|季)/ },
     open: { 'v.': /打开/ },
   };
   for (const [en, poses] of Object.entries(expected)) {
@@ -221,8 +258,23 @@ test('已知错误义项与学习者不友好释义不再出现', () => {
   assert.match(WORDS_BY_ENGLISH.get('severe').zh, /严重/);
   assert.equal(WORDS_BY_ENGLISH.get('resolute').senses, undefined);
   assert.equal(WORDS_BY_ENGLISH.get('else').senses, undefined);
-  assert.deepEqual(WORDS_BY_ENGLISH.get('more').senses.map((s) => s.pos), ['adv.', 'det.', 'pron.']);
+  assert.deepEqual(WORDS_BY_ENGLISH.get('more').senses.map((s) => s.pos).sort(), ['adv.', 'det.', 'pron.']);
   assert.deepEqual(WORDS_BY_ENGLISH.get('centre').senses.map((s) => s.pos), ['n.', 'v.']);
+});
+
+test('新增语义复核：常用漏义、单词性提醒与异读不能丢失', () => {
+  const roast = WORDS_BY_ENGLISH.get('roast');
+  assert.match(roast.zh, /严厉批评/);
+  assert.match(roast.definition, /harshly/);
+  const flake = WORDS_BY_ENGLISH.get('flake').senses.find(s => s.pos === 'v.');
+  assert.match(flake.zh, /累倒或睡着/);
+  assert.match(flake.note, /主要英式/);
+  assert.match(WORDS_BY_ENGLISH.get('bathe').zh, /游泳/);
+  assert.match(WORDS_BY_ENGLISH.get('girl').note, /woman/);
+  assert.match(WORDS_BY_ENGLISH.get('read').senses.find(s => s.pos === 'v.').note, /过去式.*red/);
+  const second = WORDS_BY_ENGLISH.get('second').senses.find(s => s.pos === 'v.');
+  assert.equal(second.phonetic, 'ˈsekənd; sɪˈkɒnd');
+  assert.match(second.note, /借调/);
 });
 
 test('全量生成词库不得把两个词性的中英文同时复制成相同内容', () => {

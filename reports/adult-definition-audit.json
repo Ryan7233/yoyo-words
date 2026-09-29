@@ -1,13 +1,13 @@
 {
   "script_version": 2,
   "input": "js/adult-words.js",
-  "input_sha256": "12ac49e891d6357a4fc855e12883d4e42245a4711c5a99b0c1db0113b565ca5b",
+  "input_sha256": "2a776a53f80d7076d29d11a2459b06ff8353a12c040ecb5c8f1338a7505dfcd9",
   "total_words": 6912,
-  "secondary_senses_with_definition": 61,
-  "flagged_words": 727,
-  "automatically_unflagged_not_semantically_verified": 6185,
+  "secondary_senses_with_definition": 656,
+  "flagged_words": 848,
+  "automatically_unflagged_not_semantically_verified": 6064,
   "top_n": 500,
-  "top_flagged_words": 25,
+  "top_flagged_words": 55,
   "top_p0_words": 0,
   "thresholds": {
     "defining_rank": 3000,
@@ -16,20 +16,29 @@
     "minimum_content_tokens_for_ratio_flags": 3
   },
   "issue_counts": {
-    "definition_too_advanced": 614,
-    "high_outside_vocab_ratio": 177,
-    "pos_definition_conflict": 70,
+    "circular_definition": 221,
+    "definition_too_advanced": 500,
+    "high_outside_vocab_ratio": 132,
+    "pos_definition_conflict": 61,
+    "sense_circular_definition": 45,
+    "sense_definition_too_advanced": 2,
     "sense_high_outside_vocab_ratio": 1,
-    "sense_pos_definition_conflict": 1
+    "sense_obvious_truncation": 1,
+    "sense_pos_definition_conflict": 15
   },
   "category_matches": {
-    "heuristic": 792,
-    "risk": 71
+    "defect": 1,
+    "heuristic": 635,
+    "risk": 342
   },
   "issue_metadata": {
     "abbreviation_sense_mismatch": {
       "category": "defect",
       "meaning": "A short non-noun card selected an abbreviation or unrelated domain sense."
+    },
+    "circular_definition": {
+      "category": "risk",
+      "meaning": "The definition reuses the headword (or its inflection) as a content word."
     },
     "cross_pos_copy": {
       "category": "risk",
@@ -75,13 +84,33 @@
       "category": "risk",
       "meaning": "The grammatical shape of the definition conflicts with the card's primary POS."
     },
+    "proper_name_sense_mismatch": {
+      "category": "defect",
+      "meaning": "A common lowercase word is explained as a specific person or place."
+    },
+    "sense_circular_definition": {
+      "category": "risk",
+      "meaning": "The definition reuses the headword (or its inflection) as a content word."
+    },
+    "sense_definition_too_advanced": {
+      "category": "heuristic",
+      "meaning": "Too many content tokens fall outside the configured rank-based proxy list."
+    },
     "sense_high_outside_vocab_ratio": {
       "category": "heuristic",
       "meaning": "Too many content tokens are absent from the 6,912-word inventory."
     },
+    "sense_obvious_truncation": {
+      "category": "defect",
+      "meaning": "The definition ends with dangling punctuation or a connector."
+    },
     "sense_pos_definition_conflict": {
       "category": "risk",
       "meaning": "The grammatical shape of the definition conflicts with the card's primary POS."
+    },
+    "taxonomic_definition": {
+      "category": "heuristic",
+      "meaning": "The definition uses a biological genus/family/order name instead of plain words."
     }
   },
   "top_p0": []

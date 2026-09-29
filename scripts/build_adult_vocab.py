@@ -24,6 +24,7 @@ DEFAULT_SOURCE = Path("/tmp/ecdict.csv")
 DEFAULT_OUTPUT = ROOT / "js" / "adult-words.js"
 COMMON_MULTIPOS_SOURCE = ROOT / "scripts" / "data" / "adult-vocab-senses.csv"
 LEARNER_CONTENT_SOURCE = ROOT / "scripts" / "data" / "adult-vocab-learner-content.csv"
+REVIEWED_BATCHES = ROOT / "scripts" / "data" / "vocab-reviewed"
 LIFE_LIMIT = 1_800
 
 TRACK_ORDER = ("life", "cet4", "cet6", "postgrad")
@@ -699,7 +700,7 @@ WORD_PART_GROUPS: dict[str, dict[str, Any]] = {
         "zh": "在……之间、相互",
         "words": (
             "international", "interaction", "interact", "interconnect", "interface",
-            "interfere", "intermediate", "internal", "interpret", "interrupt",
+            "interfere", "intermediate", "interpret", "interrupt",
             "intersection", "interval", "intervene", "interview",
         ),
         "examples": (("interact", "互动"), ("international", "国际的"), ("interconnect", "相互连接")),
@@ -928,7 +929,8 @@ WORD_PART_GROUPS: dict[str, dict[str, Any]] = {
         "zh": "从事者、研究者或信奉者",
         "suffixes": ("ist",),
         "poses": ("n.",),
-        "exclude": ("christ",),
+        # assist is an act of help, not a person formed with the suffix -ist.
+        "exclude": ("christ", "assist"),
         "examples": (("scientist", "科学家"), ("artist", "艺术家"), ("journalist", "记者")),
     },
     "ism": {
@@ -947,6 +949,9 @@ WORD_PART_GROUPS: dict[str, dict[str, Any]] = {
         "zh": "……学、对……的研究",
         "suffixes": ("ology",),
         "poses": ("n.",),
+        # These modern meanings are not fields of study. Shared final letters
+        # alone do not justify teaching the simple "study of" construction.
+        "exclude": ("ideology", "terminology", "anthology", "apology"),
         "examples": (("biology", "生物学"), ("psychology", "心理学"), ("sociology", "社会学")),
     },
     "graphy": {
@@ -1250,6 +1255,8 @@ def detect_word_parts(word: str, poses: set[str]) -> list[str]:
     for part_id, group in WORD_PART_GROUPS.items():
         exact_words = {item.casefold() for item in group.get("words", ())}
         excluded = {item.casefold() for item in group.get("exclude", ())}
+        if key in excluded:
+            continue
         is_match = key in exact_words
         if not is_match and key not in excluded and group.get("suffixes"):
             allowed_poses = set(group.get("poses", ()))
@@ -1516,6 +1523,9 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             word["parts"] = parts
         words.append(word)
 
+    # Drafts never enter the published module. Only separately reviewed batches
+    # are considered, with exact ID/spelling checks and no implicit POS removal.
+    apply_reviewed_batches(words)
     by_name = {word["en"].casefold(): word for word in words}
     for group in WORD_FAMILY_GROUPS:
         for name in group:
@@ -1528,6 +1538,98 @@ def build_words(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 word["family"] = related
     words.sort(key=lambda word: (word["rank"], word["en"].casefold()))
     return words
+
+
+def apply_reviewed_batches(words: list[dict[str, Any]], directory: Path = REVIEWED_BATCHES) -> None:
+    """Apply model-reviewed copy without mislabelling it as human-reviewed.
+
+    The notes are a review trail, not a proof of correctness. Unmentioned old
+    senses are retained unless the reviewer explicitly records their removal.
+    Case-sensitive IDs prevent Polish/polish from overwriting each other.
+    """
+    if not directory.is_dir():
+        return
+    by_id = {word["id"]: word for word in words}
+    seen: set[str] = set()
+    for path in sorted(directory.glob("*.json")):
+        rows = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(rows, list):
+            raise ValueError(f"Reviewed batch must contain an array: {path.name}")
+        for row in rows:
+            word = by_id.get(row.get("id"))
+            label = row.get("id", path.name)
+            if word is None or row.get("en") != word["en"] or label in seen:
+                raise ValueError(f"Unknown, duplicate or renamed reviewed word: {label}")
+            seen.add(label)
+            author, reviewer = row.get("author", ""), row.get("reviewer", "")
+            if not author.strip() or not reviewer.strip() or author.strip() == reviewer.strip():
+                raise ValueError(f"Independent author/reviewer required: {label}")
+            # 作者派生出的子代理（名字形如 /root/review_x）与作者不算相互独立。
+            if reviewer.strip().startswith(f"/{author.strip()}/"):
+                raise ValueError(f"Reviewer derived from the author is not independent: {label}")
+            if row.get("reviewType") != "model-semantic-review":
+                raise ValueError(f"Explicit model semantic review type required: {label}")
+            if not isinstance(row.get("reviewNotes"), str) or not row["reviewNotes"].strip():
+                raise ValueError(f"Per-word review notes required: {label}")
+            incoming = row.get("senses")
+            if not isinstance(incoming, list) or not incoming:
+                raise ValueError(f"No reviewed senses: {label}")
+            poses = [s.get("pos") for s in incoming]
+            if len(set(poses)) != len(poses) or poses.count(row.get("primaryPos")) != 1:
+                raise ValueError(f"Duplicate POS or missing primary: {label}")
+            sense_fields = ("pos", "zh", "definition", "example", "definitionStatus", "phonetic", "note", "collocations")
+            previous = {s["pos"]: {key: s[key] for key in sense_fields if key in s}
+                        for s in word.get("senses", [word])}
+            merged = []
+            for item in sorted(incoming, key=lambda s: s["pos"] != row["primaryPos"]):
+                for field in ("pos", "zh", "definition", "example"):
+                    if not isinstance(item.get(field), str) or not item[field].strip():
+                        raise ValueError(f"Missing {field}: {label}")
+                if len(item["zh"]) > 36 or len(item["definition"]) > 150:
+                    raise ValueError(f"Reviewed copy exceeds card limits: {label}")
+                collocations = item.get("collocations", [])
+                if (not isinstance(collocations, list) or len(collocations) > 3
+                        or any(not isinstance(c, str) or not c.strip() for c in collocations)):
+                    raise ValueError(f"Invalid collocations: {label}")
+                sense = {field: item[field] for field in ("pos", "zh", "definition", "example")}
+                if collocations:
+                    sense["collocations"] = list(dict.fromkeys(collocations))
+                for field in ("phonetic", "note"):
+                    value = item.get(field) or previous.get(item["pos"], {}).get(field)
+                    if value:
+                        sense[field] = value
+                sense["definitionStatus"] = "generated"
+                merged.append(sense)
+            removed = row.get("removedPos", {})
+            if not isinstance(removed, dict) or any(not isinstance(v, str) or not v.strip() for v in removed.values()):
+                raise ValueError(f"POS removal needs a written reason: {label}")
+            if any(pos in poses for pos in removed):
+                raise ValueError(f"POS cannot be both kept and removed: {label}")
+            merged.extend(s for pos, s in previous.items() if pos not in poses and pos not in removed)
+            primary = merged[0]
+            for field in ("pos", "zh", "definition", "example", "definitionStatus"):
+                word[field] = primary[field]
+            word.pop("collocations", None)
+            if primary.get("collocations"):
+                word["collocations"] = primary["collocations"]
+            if primary.get("phonetic"):
+                word["phonetic"] = primary["phonetic"]
+            # A single-POS card has no senses array: retain its learner note too.
+            word.pop("note", None)
+            if primary.get("note"):
+                word["note"] = primary["note"]
+            if len(merged) > 1:
+                word["senses"] = merged
+            else:
+                word.pop("senses", None)
+            if "family" in row:
+                family = row["family"]
+                if not isinstance(family, list) or any(not r.get("en") or not r.get("zh") for r in family):
+                    raise ValueError(f"Invalid word family: {label}")
+                if family:
+                    word["family"] = family
+                else:
+                    word.pop("family", None)
 
 
 def render_module(words: list[dict[str, Any]], source_sha256: str) -> str:

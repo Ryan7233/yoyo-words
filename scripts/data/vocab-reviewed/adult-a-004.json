@@ -1,0 +1,2957 @@
+[
+  {
+    "id": "adult:parent",
+    "en": "parent",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "父母之一；亲本；母公司",
+        "definition": "A mother or father; a living thing that produces young; or a company that owns another company.",
+        "example": "Each parent received a copy of the school report.",
+        "collocations": [
+          "a single parent",
+          "the parent company"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "养育；做父母",
+        "definition": "To care for and guide a child as a mother or father.",
+        "example": "They try to parent with patience and clear rules.",
+        "collocations": [
+          "parent a child",
+          "parent together"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对亲属、亲本及母公司名词与养育动词，例句分别匹配。"
+  },
+  {
+    "id": "adult:stop",
+    "en": "stop",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "停止；阻止；停车；堵住",
+        "definition": "To end an action, prevent something, bring a vehicle to rest, or block an opening.",
+        "example": "Please stop talking while she explains the rules.",
+        "collocations": [
+          "stop doing something",
+          "stop someone from doing something",
+          "stop the car"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "停止；停留；车站",
+        "definition": "An end or pause in movement or activity, or a place where a bus or train lets people get on and off.",
+        "example": "The bus stop is beside the library.",
+        "collocations": [
+          "come to a stop",
+          "a bus stop",
+          "make a stop"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "停止动作与车站名词分开；stop doing 和 stop from 搭配正确。"
+  },
+  {
+    "id": "adult:face",
+    "en": "face",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "脸；表情；表面；正面；颜面",
+        "definition": "The front of a head, an expression, a front or surface, or the respect other people have for someone.",
+        "example": "She had a big smile on her face.",
+        "collocations": [
+          "face to face",
+          "the face of a clock",
+          "lose face"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "面对；面向；正视；覆盖表面",
+        "definition": "To look toward something, deal with a problem, or cover the front of a building with a material.",
+        "example": "The room faces the garden.",
+        "collocations": [
+          "face a problem",
+          "face the facts",
+          "face south"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "修改名词英文中不自然的 public respect，明确别人给予的尊重；面向与正视保留。"
+  },
+  {
+    "id": "adult:anything",
+    "en": "anything",
+    "author": "vocab_author_a",
+    "primaryPos": "pron.",
+    "senses": [
+      {
+        "pos": "pron.",
+        "zh": "任何事物；某事物（疑问或否定句）",
+        "definition": "Any thing at all, or a thing of any kind in questions and negative statements.",
+        "example": "Is there anything you need from the shop?",
+        "collocations": [
+          "anything else",
+          "anything at all",
+          "anything but"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对疑问句中的不定代词用法及 anything but 搭配。"
+  },
+  {
+    "id": "adult:create",
+    "en": "create",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "创造；创作；建立；引起",
+        "definition": "To make something new or cause a situation to exist.",
+        "example": "The children created a story about a lost dog.",
+        "collocations": [
+          "create a story",
+          "create jobs",
+          "create a problem"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "创造新事物与引起情况两类动词用法一致。"
+  },
+  {
+    "id": "adult:public",
+    "en": "public",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "公众的；公共的；公开的；政府的",
+        "definition": "For everyone to use or know about, or connected with people in general or the government.",
+        "example": "The council opened a new public library.",
+        "collocations": [
+          "public transport",
+          "public opinion",
+          "public money"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "公众；民众",
+        "definition": "People in general, or the people interested in a particular activity.",
+        "example": "The garden is open to the public every weekend.",
+        "collocations": [
+          "the general public",
+          "in public",
+          "the reading public"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "公共/公开形容词与 the public 群体名词分开，公共图书馆例句自然。"
+  },
+  {
+    "id": "adult:already",
+    "en": "already",
+    "author": "vocab_author_a",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "已经；早已；竟然已经",
+        "definition": "Before now or before a stated time, sometimes earlier than expected.",
+        "example": "I have already packed my bag.",
+        "collocations": [
+          "already done",
+          "already know",
+          "already too late"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "时间在参照点之前及出乎预料地早均适用，完成时例句正确。"
+  },
+  {
+    "id": "adult:speak",
+    "en": "speak",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "说话；讲某种语言；发言；表明",
+        "definition": "To use your voice to say words, use a language, give a talk, or express an opinion or message.",
+        "example": "Can you speak a little more slowly?",
+        "collocations": [
+          "speak English",
+          "speak to someone",
+          "speak up"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "说话、语言能力、公开发言及表达均保留，慢说请求自然。"
+  },
+  {
+    "id": "adult:others",
+    "en": "others",
+    "author": "vocab_author_a",
+    "primaryPos": "pron.",
+    "senses": [
+      {
+        "pos": "pron.",
+        "zh": "其他的人或事物；其余的人或事物",
+        "definition": "People or things apart from those already mentioned.",
+        "example": "Some seats are empty, but others are taken.",
+        "collocations": [
+          "help others",
+          "the others",
+          "among others"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "只列复数代词，例句中 other seats 的省略指代清楚。"
+  },
+  {
+    "id": "adult:read",
+    "en": "read",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "阅读；读出；理解；显示；读数",
+        "definition": "To get meaning from written words, say them aloud, understand signs, or show or check a measurement.",
+        "example": "I read a few pages before bed every night.",
+        "collocations": [
+          "read a book",
+          "read aloud",
+          "read the instructions"
+        ],
+        "phonetic": "riːd",
+        "note": "原形和现在时 read 读 /riːd/；过去式及过去分词 read 读 /red/，拼写不变。名词读 /riːd/。"
+      },
+      {
+        "pos": "n.",
+        "zh": "阅读；读物；理解或判断（非正式）",
+        "definition": "A period of reading, something worth reading, or someone's understanding of a situation.",
+        "example": "This short novel is a great read.",
+        "collocations": [
+          "a good read",
+          "have a read",
+          "a read on the situation"
+        ],
+        "phonetic": "riːd"
+      }
+    ],
+    "notes": "原形和现在时 read 读 /riːd/；过去式及过去分词 read 读 /red/，拼写不变。名词读 /riːd/。",
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "现在时与名词均为 riːd；把过去式 red 说明移到动词 note，确保卡片可见。"
+  },
+  {
+    "id": "adult:level",
+    "en": "level",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "水平；高度；数量程度；楼层；水平仪",
+        "definition": "A height, amount, standard, or floor of a building; also a tool for checking whether a surface is horizontal.",
+        "example": "The water level rose after the rain.",
+        "collocations": [
+          "sea level",
+          "a high level of",
+          "a spirit level"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "平的；同高的；平稳的；比分相同的",
+        "definition": "Flat and not sloping, at the same height or score, or steady and calm.",
+        "example": "Keep the shelf level while I tighten the screws.",
+        "collocations": [
+          "a level surface",
+          "level with",
+          "a level voice"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "弄平；夷平；使相等；指向；直说",
+        "definition": "To make flat or equal, destroy a building, aim something, or, with 'with', speak honestly.",
+        "example": "The workers levelled the ground for the new path.",
+        "collocations": [
+          "level the ground",
+          "level an accusation at",
+          "level with someone"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "修正水平仪不是检测任意表面是否平滑；指明是否水平。简化动词说明的 with with。"
+  },
+  {
+    "id": "adult:allow",
+    "en": "allow",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "允许；给予；留出；承认；考虑到",
+        "definition": "To let something happen, give or set aside time or money, or accept or take account of a fact.",
+        "example": "Allow ten minutes to walk to the station.",
+        "collocations": [
+          "allow someone to do something",
+          "allow time for",
+          "allow for delays"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "许可、分配时间和考虑因素保留，allow ten minutes 例句与留出义一致。"
+  },
+  {
+    "id": "adult:add",
+    "en": "add",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "添加；增加；相加；补充说",
+        "definition": "To put something with what is already there, total numbers, or say an extra point.",
+        "example": "Add the onions and cook for two minutes.",
+        "collocations": [
+          "add to",
+          "add up",
+          "add a comment"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "增加、算术相加和补充发言相符，烹饪例句自然。"
+  },
+  {
+    "id": "adult:office",
+    "en": "office",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "办公室；办事处；事务所；公职；职务",
+        "definition": "A place for desk work or services, or an official position with duties.",
+        "example": "Her office is on the third floor.",
+        "collocations": [
+          "an office job",
+          "the post office",
+          "take office"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "办公地点与公职分清，take office 对应公职不是办公室。"
+  },
+  {
+    "id": "adult:spend",
+    "en": "spend",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "花费；度过；消耗",
+        "definition": "To use money, time, or energy for something.",
+        "example": "We spent the afternoon walking beside the river.",
+        "collocations": [
+          "spend money on",
+          "spend time doing something",
+          "spend the night"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "花费；支出额（尤商业用语）",
+        "definition": "The amount of money used for a particular purpose.",
+        "example": "The team reduced its advertising spend this year.",
+        "collocations": [
+          "annual spend",
+          "advertising spend"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "动词花费与商业名词支出额分开，广告支出例句正确。"
+  },
+  {
+    "id": "adult:door",
+    "en": "door",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "门；入口；机会",
+        "definition": "A part that opens and closes an entrance, the entrance itself, or a possible way to achieve something.",
+        "example": "Please close the door to keep the room warm.",
+        "collocations": [
+          "the front door",
+          "knock on the door",
+          "open doors for someone"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "实体门与机会的比喻保留，不把机会当作独立词性。"
+  },
+  {
+    "id": "adult:health",
+    "en": "health",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "健康；健康状况；运行状况",
+        "definition": "The condition of a person's body and mind, or how well an organization or system is doing.",
+        "example": "Regular walks are good for your health.",
+        "collocations": [
+          "good health",
+          "mental health",
+          "the health of the economy"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "身体、心理健康及经济运行状况均对齐，mental health 搭配自然。"
+  },
+  {
+    "id": "adult:person",
+    "en": "person",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "人；本人；人身；人称",
+        "definition": "A human being, someone's body or presence, or a grammar form showing who speaks or is spoken about.",
+        "example": "Only one person can use the lift at a time.",
+        "collocations": [
+          "in person",
+          "a young person",
+          "the first person"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "自然人、本人和语法人称保留，人称定义虽略抽象但没有误配。"
+  },
+  {
+    "id": "adult:art",
+    "en": "art",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "艺术；艺术作品；技艺；人文学科",
+        "definition": "Creative work such as painting or music, the things made this way, a learned skill, or subjects such as literature.",
+        "example": "The children enjoyed making art from old boxes.",
+        "collocations": [
+          "a work of art",
+          "the art of cooking",
+          "the arts"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "创作、作品、技巧及复数 arts 学科义均可，做手工例句自然。"
+  },
+  {
+    "id": "adult:sure",
+    "en": "sure",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "确信的；一定的；可靠的",
+        "definition": "Having no doubt, certain to happen, or able to be trusted.",
+        "example": "Are you sure this is the right address?",
+        "collocations": [
+          "be sure of",
+          "make sure",
+          "a sure sign"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "当然；确实（非正式）",
+        "definition": "Used to agree readily or strongly say that something is true.",
+        "example": "It sure feels warmer in here.",
+        "collocations": [
+          "sure can",
+          "sure does",
+          "sure enough"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "确信形容词与非正式强调副词分开，sure feels 的副词例句正确。"
+  },
+  {
+    "id": "adult:war",
+    "en": "war",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "战争；激烈斗争",
+        "definition": "Armed fighting between countries or groups, or a determined fight against a serious problem.",
+        "example": "The families left the city because of the war.",
+        "collocations": [
+          "at war",
+          "a civil war",
+          "a war on poverty"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "交战；激烈争斗",
+        "definition": "To fight against another group, country, or force.",
+        "example": "The two groups had warred over the land for years.",
+        "collocations": [
+          "war against",
+          "war with"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "战争/斗争名词和交战动词均成立，动词未抢主位。"
+  },
+  {
+    "id": "adult:history",
+    "en": "history",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "历史；历史学；过去经历；记录",
+        "definition": "Events of the past, the study of them, or a record of what happened to a person or thing.",
+        "example": "The doctor asked about my medical history.",
+        "collocations": [
+          "world history",
+          "a history of",
+          "make history"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "历史研究、既往经历和医疗史一致，不限于政治史。"
+  },
+  {
+    "id": "adult:party",
+    "en": "party",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "聚会；政党；一方；一群人",
+        "definition": "A social celebration, a political organization, a person or side in an agreement, or a group travelling together.",
+        "example": "We invited our neighbours to the birthday party.",
+        "collocations": [
+          "a birthday party",
+          "a political party",
+          "both parties"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "参加聚会；尽情玩乐",
+        "definition": "To enjoy yourself at a social celebration, often with music and dancing.",
+        "example": "They partied until midnight after the final exam.",
+        "collocations": [
+          "party all night",
+          "party with friends"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "聚会、政党、合同一方、同行群体均保留，动词例句明确庆祝。"
+  },
+  {
+    "id": "adult:within",
+    "en": "within",
+    "author": "vocab_author_a",
+    "primaryPos": "prep.",
+    "senses": [
+      {
+        "pos": "prep.",
+        "zh": "在…以内；不超过；在…内部",
+        "definition": "Inside a place, period, group, or limit.",
+        "example": "Please reply within three days.",
+        "collocations": [
+          "within walking distance",
+          "within the budget",
+          "within a week"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "在内部；从里面",
+        "definition": "Inside a place, organization, or person.",
+        "example": "The company decided to promote someone from within.",
+        "collocations": [
+          "from within",
+          "look within"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "介词时间/空间边界和独立副词 from within 分开。"
+  },
+  {
+    "id": "adult:grow",
+    "en": "grow",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "生长；增长；种植；逐渐变得；培育",
+        "definition": "To become bigger or change gradually, or help plants, a business, or another thing develop.",
+        "example": "We grow tomatoes in pots on the balcony.",
+        "collocations": [
+          "grow vegetables",
+          "grow older",
+          "grow a business"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "不及物生长/变化与及物种植/培育兼顾，种番茄例句自然。"
+  },
+  {
+    "id": "adult:result",
+    "en": "result",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "结果；成绩；比赛结果；计算答案",
+        "definition": "Something caused by an action, or a score or answer from a test, match, or calculation.",
+        "example": "The results of the test will arrive tomorrow.",
+        "collocations": [
+          "as a result",
+          "exam results",
+          "get results"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "由…造成；导致",
+        "definition": "To happen because of something, or lead to an outcome.",
+        "example": "The heavy rain resulted in several road closures.",
+        "collocations": [
+          "result in",
+          "result from"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "名词结果与 result in/from 动词分开，雨导致封路因果方向正确。"
+  },
+  {
+    "id": "adult:open",
+    "en": "open",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "打开的；营业的；开放的；坦率的；未定的",
+        "definition": "Not closed or blocked; available to use; willing to discuss or accept ideas; or not yet decided.",
+        "example": "The shop is open until eight tonight.",
+        "collocations": [
+          "an open door",
+          "open to suggestions",
+          "an open question"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "打开；开办；开始；开放",
+        "definition": "To make something no longer closed, or begin a business, event, or opportunity.",
+        "example": "Could you open the window a little?",
+        "collocations": [
+          "open a door",
+          "open a shop",
+          "open a meeting"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "户外；公开状态；公开赛",
+        "definition": "An outdoor place, a state of being publicly known, or a sports contest open to people beyond one restricted group.",
+        "example": "We ate our lunch out in the open.",
+        "collocations": [
+          "in the open",
+          "out in the open",
+          "the British Open"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "修改公开赛定义，不限于业余与职业混赛；其余形容词、动词与户外名词成立。"
+  },
+  {
+    "id": "adult:morning",
+    "en": "morning",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "早晨；上午",
+        "definition": "The part of a day from midnight or sunrise until noon.",
+        "example": "I usually go for a walk in the morning.",
+        "collocations": [
+          "this morning",
+          "early in the morning",
+          "tomorrow morning"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "午夜至中午和日出后的日常用法兼顾，例句无昼夜错位。"
+  },
+  {
+    "id": "adult:walk",
+    "en": "walk",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "步行；陪……走；遛；保送上垒（棒球）",
+        "definition": "To move on foot, accompany someone, exercise a dog, or, in baseball, give a player a free move to first base.",
+        "example": "I walk to work when the weather is fine.",
+        "collocations": [
+          "walk home",
+          "walk the dog",
+          "walk someone to the door"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "步行；散步；路线；步态；保送（棒球）",
+        "definition": "A journey on foot, a walking route or way of walking, or a free move to first base in baseball.",
+        "example": "Let's go for a short walk after dinner.",
+        "collocations": [
+          "go for a walk",
+          "a ten-minute walk",
+          "draw a walk"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "简化棒球动词术语 on balls，并给中文保送义明确标注棒球；步行主位保留。"
+  },
+  {
+    "id": "adult:reason",
+    "en": "reason",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "原因；理由；理智；道理",
+        "definition": "A cause or explanation for something, or the ability to think clearly and make sensible judgments.",
+        "example": "What was the reason for the delay?",
+        "collocations": [
+          "a reason for",
+          "for some reason",
+          "within reason"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "推理；思考；劝说",
+        "definition": "To reach a conclusion by thinking carefully, or try to persuade someone using clear arguments.",
+        "example": "We tried to reason with him, but he would not listen.",
+        "collocations": [
+          "reason with someone",
+          "reason that",
+          "reason things out"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "原因、理智能力与推理/劝说動词匹配，reason with 例句自然。"
+  },
+  {
+    "id": "adult:low",
+    "en": "low",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "低的；少的；低沉的；消沉的；不足的",
+        "definition": "Not high or large, quiet or deep in sound, sad, or having little left.",
+        "example": "The water in the lake is very low this summer.",
+        "collocations": [
+          "a low price",
+          "a low voice",
+          "low on fuel"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "在低处；低声地；以低价",
+        "definition": "At or to a small height, in a quiet or deep voice, or at a small price.",
+        "example": "The birds flew low over the water.",
+        "collocations": [
+          "fly low",
+          "buy low",
+          "lie low"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "低点；低谷；低压区",
+        "definition": "A small recorded amount, a period of poor mood or success, or an area of low air pressure.",
+        "example": "The temperature fell to a new low last night.",
+        "collocations": [
+          "an all-time low",
+          "highs and lows",
+          "a record low"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "高低、音量/音调、心情、剩余量与低点名词均保留，未混词性。"
+  },
+  {
+    "id": "adult:programme",
+    "en": "programme",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "节目；计划；课程；节目单；机器运行程序",
+        "definition": "A broadcast, a planned set of activities or studies, a printed event guide, or a series of machine actions.",
+        "example": "The programme on the radio was about life at sea.",
+        "collocations": [
+          "a television programme",
+          "a training programme",
+          "a theatre programme"
+        ],
+        "note": "英式 programme 用于节目、活动计划等；计算机程序通常英美都写 program。机器的洗涤等运行程序可写 programme。"
+      },
+      {
+        "pos": "v.",
+        "zh": "安排；规划；设置机器步骤；使形成固定行为",
+        "definition": "To plan activities, set a machine's actions, or make a person or animal behave in a fixed way without thinking.",
+        "example": "The museum has programmed several talks for the autumn.",
+        "collocations": [
+          "programme an event",
+          "programme a machine"
+        ]
+      }
+    ],
+    "notes": "英式 programme 用于节目、活动计划等；计算机程序通常英美都写 program。机器的洗涤等运行程序可写 programme。",
+    "evidence": [
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/programme_1",
+        "note": "本轮访问核对节目、计划、课程、节目单与机器运行步骤等名词义。"
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/programme_2",
+        "note": "本轮访问动词页面，核对安排与设置机器行为。"
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/program_1",
+        "note": "本轮搜索返回的官方词条摘要明确英式 programme 拼写例外为计算机义。"
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "核对英式节目/计划拼写；将 computer 通常拼 program 的提示放入词性 note。"
+  },
+  {
+    "id": "adult:win",
+    "en": "win",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "赢；获胜；赢得；争取到",
+        "definition": "To do best in a contest, receive a prize, or gain something through effort.",
+        "example": "Our team won the match by one point.",
+        "collocations": [
+          "win a game",
+          "win a prize",
+          "win someone's trust"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "胜利；成功",
+        "definition": "A victory in a contest or a successful outcome.",
+        "example": "The team celebrated its first win of the season.",
+        "collocations": [
+          "a big win",
+          "a narrow win",
+          "a win for everyone"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "及物赢得、不及物获胜及名词胜利相符，比赛和信任搭配自然。"
+  },
+  {
+    "id": "adult:research",
+    "en": "research",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "研究；调查",
+        "definition": "Careful study to discover facts or understand something better.",
+        "example": "She is doing research into how children learn to read.",
+        "collocations": [
+          "do research",
+          "scientific research",
+          "research into"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "研究；调查",
+        "definition": "To study a subject carefully and collect information about it.",
+        "example": "We researched the area before choosing a hotel.",
+        "collocations": [
+          "research a topic",
+          "research a problem"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "研究名词与动词均保留，名词例句不错误使用 a research。"
+  },
+  {
+    "id": "adult:girl",
+    "en": "girl",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "女孩；少女；年轻女子",
+        "definition": "A female child or young woman.",
+        "example": "The girl in the red coat is my cousin.",
+        "collocations": [
+          "a young girl",
+          "a little girl",
+          "a baby girl"
+        ],
+        "note": "称成年女性 girl 可能显得不够尊重；正式或不熟悉的关系中用 woman。"
+      }
+    ],
+    "notes": "称成年女性 girl 可能显得不够尊重；正式或不熟悉的关系中用 woman。",
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "女孩/年轻女性含义准确，将称成年女性的语用提醒放入可见 note。"
+  },
+  {
+    "id": "adult:guy",
+    "en": "guy",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "男人、家伙；大家（guys，非正式）；拉索",
+        "definition": "A man in informal speech; in the plural, a group of people; or a rope holding a tent or pole steady.",
+        "example": "The guy at the next table offered to help.",
+        "collocations": [
+          "a nice guy",
+          "you guys",
+          "a guy rope"
+        ],
+        "note": "you guys 在非正式交流中可称呼一群人，不限全是男性；正式场合可用 everyone。拉索义与男人义是不同来源的同形词。"
+      }
+    ],
+    "notes": "you guys 在非正式交流中可称呼一群人，不限全是男性；正式场合可用 everyone。拉索义与男人义是不同来源的同形词。",
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "中文补 guys 的大家/一群人，使其与英文复数说明一致；保留拉索补充义。"
+  },
+  {
+    "id": "adult:early",
+    "en": "early",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "早的；初期的；提前的",
+        "definition": "Near the beginning of a period or happening before the usual or expected time.",
+        "example": "We caught an early train to avoid the crowds.",
+        "collocations": [
+          "an early start",
+          "the early years",
+          "early signs"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "早；提前；在初期",
+        "definition": "Near the beginning of a period or before the expected time.",
+        "example": "Please arrive ten minutes early.",
+        "collocations": [
+          "get up early",
+          "early on",
+          "early in the morning"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "提前/早期形容词和副词区分正确，arrive early 不是形容词。"
+  },
+  {
+    "id": "adult:food",
+    "en": "food",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "食物；食品；营养物；思考材料（比喻）",
+        "definition": "Things eaten to live and grow; in food for thought, ideas worth thinking about.",
+        "example": "We brought enough food for the whole trip.",
+        "collocations": [
+          "fresh food",
+          "food for thought",
+          "a food allergy"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "中文补 food for thought 的思考材料比喻，与英文及搭配对齐。"
+  },
+  {
+    "id": "adult:himself",
+    "en": "himself",
+    "author": "vocab_author_a",
+    "primaryPos": "pron.",
+    "senses": [
+      {
+        "pos": "pron.",
+        "zh": "他自己；他本人；他独自",
+        "definition": "The same male person as the subject, or a word that stresses that he acts personally or alone.",
+        "example": "He made the shelves himself.",
+        "collocations": [
+          "by himself",
+          "help himself",
+          "he himself"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "反身及强调本人两种功能清楚，by himself 是独自而非只反身。"
+  },
+  {
+    "id": "adult:moment",
+    "en": "moment",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "片刻；时刻；时机；重要性（正式）；力矩",
+        "definition": "A very short time, a particular time or opportunity, importance, or the turning effect of a force.",
+        "example": "Wait a moment while I find my keys.",
+        "collocations": [
+          "at the moment",
+          "for a moment",
+          "of great moment"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "片刻为首义，正式重要性及力矩为补充，未把技术义置顶。"
+  },
+  {
+    "id": "adult:air",
+    "en": "air",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "空气；空中；神态；曲调；架子",
+        "definition": "The mixture of gases we breathe, the space above the ground, a manner or impression, a tune, or a show of importance.",
+        "example": "Open the window and let in some fresh air.",
+        "collocations": [
+          "fresh air",
+          "an air of confidence",
+          "put on airs"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "通风；晾晒；发表；播出",
+        "definition": "To let fresh air reach something, express a view publicly, or broadcast a programme.",
+        "example": "The meeting gave everyone a chance to air their concerns.",
+        "collocations": [
+          "air a room",
+          "air concerns",
+          "air a programme"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "空气、空间、神态、曲调及架子与通风/表达/播出分开。"
+  },
+  {
+    "id": "adult:teacher",
+    "en": "teacher",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "教师；老师；传授经验者",
+        "definition": "A person who helps others learn, especially as a job in a school.",
+        "example": "My teacher showed me another way to solve the problem.",
+        "collocations": [
+          "a primary school teacher",
+          "an English teacher",
+          "a good teacher"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "以教人学习为核心，不限学校持证教师，例句符合角色。"
+  },
+  {
+    "id": "adult:force",
+    "en": "force",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "力量；武力；影响力；部队；警力",
+        "definition": "Physical strength, power to cause change, violent action, or a group trained for military or police work.",
+        "example": "The force of the wind broke a large branch.",
+        "collocations": [
+          "by force",
+          "the armed forces",
+          "a driving force"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "强迫；迫使；用力推动；强行取得；勉强做出",
+        "definition": "To make someone act against their wishes, cause an event, move or open with strength, or produce something with effort.",
+        "example": "Heavy rain forced us to cancel the picnic.",
+        "collocations": [
+          "force someone to do something",
+          "force a door open",
+          "force a smile"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "补充勉强做出以对齐 force a smile；武力和强迫不是互换词性。"
+  },
+  {
+    "id": "adult:offer",
+    "en": "offer",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "提供；提议；出价；主动愿意做",
+        "definition": "To make something available, suggest an action or price, or say you are willing to help.",
+        "example": "She offered to drive us to the station.",
+        "collocations": [
+          "offer help",
+          "offer to do something",
+          "offer a price"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "提议；出价；提供物；特价",
+        "definition": "A suggestion, a price proposed, something made available, or a reduced-price deal.",
+        "example": "I accepted the offer of a new job.",
+        "collocations": [
+          "a job offer",
+          "a special offer",
+          "make an offer"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "提供、提议、出价与特价名词相符，工作邀约例句清楚。"
+  },
+  {
+    "id": "adult:enough",
+    "en": "enough",
+    "author": "vocab_author_a",
+    "primaryPos": "det.",
+    "senses": [
+      {
+        "pos": "det.",
+        "zh": "足够的",
+        "definition": "As much or as many as needed, used with a noun.",
+        "example": "We have enough chairs for all the guests.",
+        "collocations": [
+          "enough time",
+          "enough money",
+          "enough people"
+        ]
+      },
+      {
+        "pos": "pron.",
+        "zh": "足够的数量；够了",
+        "definition": "An amount that meets a need; also used to say that no more is wanted.",
+        "example": "There is enough for everyone.",
+        "collocations": [
+          "enough for everyone",
+          "have had enough",
+          "enough to eat"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "足够地；相当地",
+        "definition": "To the degree needed, or to a fairly good degree.",
+        "example": "The bag is large enough for my books.",
+        "collocations": [
+          "good enough",
+          "old enough",
+          "well enough"
+        ],
+        "note": "副词 enough 一般置于形容词/副词之后：large enough。不同词典对数量用法有形容词/名词或限定词/代词两套分析，本卡统一采用后者。"
+      }
+    ],
+    "removedPos": {
+      "n.": "数量代指用法按本词库现代语法体系改列 pron.，含义保留；并非认定所有词典的名词分析错误。",
+      "adj.": "名词前数量修饰用法改列 det.，足够的含义完整保留；采用 Cambridge 的限定词/代词/副词分类。"
+    },
+    "notes": "副词 enough 一般置于形容词/副词之后：large enough。不同词典对数量用法有形容词/名词或限定词/代词两套分析，本卡统一采用后者。",
+    "evidence": [
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/enough",
+        "note": "本轮访问核对限定词、代词、副词分类及副词位置。"
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "数量限定/独立指代/程度副词统一分类；将形容词后置规则放入副词 note。"
+  },
+  {
+    "id": "adult:education",
+    "en": "education",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "教育；受教育经历；教育学",
+        "definition": "The process of teaching and learning, the knowledge gained, or the study of how people are taught.",
+        "example": "Every child deserves a good education.",
+        "collocations": [
+          "primary education",
+          "higher education",
+          "adult education"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "教育过程、所得知识和学科保留，例句没有可数误用。"
+  },
+  {
+    "id": "adult:across",
+    "en": "across",
+    "author": "vocab_author_a",
+    "primaryPos": "prep.",
+    "senses": [
+      {
+        "pos": "prep.",
+        "zh": "横过；在…对面；遍及；跨越",
+        "definition": "From one side to another, on the opposite side, or in many parts of a place or group.",
+        "example": "We walked across the bridge together.",
+        "collocations": [
+          "across the road",
+          "across the country",
+          "across generations"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "从一边到另一边；在对面；横向",
+        "definition": "From one side to another or on the other side, often describing width or movement.",
+        "example": "The river is too wide to swim across.",
+        "collocations": [
+          "get across",
+          "come across",
+          "ten metres across"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "介词后接桥与独立 swim across 副词用法一致。"
+  },
+  {
+    "id": "adult:although",
+    "en": "although",
+    "author": "vocab_author_a",
+    "primaryPos": "conj.",
+    "senses": [
+      {
+        "pos": "conj.",
+        "zh": "虽然；尽管；不过",
+        "definition": "Used to link facts that contrast or make each other surprising.",
+        "example": "Although it was raining, we still enjoyed the walk.",
+        "collocations": [
+          "although possible",
+          "although not always"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "让步连词定义和 although it was raining 完整从句对应。"
+  },
+  {
+    "id": "adult:remember",
+    "en": "remember",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "记得；想起；记住去做；纪念；代问候",
+        "definition": "To bring a fact to mind, not forget an action, keep someone's memory alive, or send greetings through another person.",
+        "example": "Remember to take your keys when you leave.",
+        "collocations": [
+          "remember doing something",
+          "remember to do something",
+          "remember someone to someone"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "记得经历和记得去做两搭配保留，to take keys 是未做任务。"
+  },
+  {
+    "id": "adult:foot",
+    "en": "foot",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "脚；底部；英尺；音步",
+        "definition": "The part of the body you stand on, the bottom of something, a length of 12 inches, or a unit of rhythm in poetry.",
+        "example": "We rested at the foot of the hill.",
+        "collocations": [
+          "on foot",
+          "the foot of a hill",
+          "six feet tall"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "支付账单（用于 foot the bill）",
+        "definition": "To pay a bill, especially a large one or one for other people.",
+        "example": "The company will foot the bill for the repairs.",
+        "collocations": [
+          "foot the bill"
+        ],
+        "note": "动词优先展示现代常见 foot the bill 支付；不把旧词典罕见的给鞋换底放入首屏。"
+      }
+    ],
+    "notes": "动词优先展示现代常见 foot the bill 支付；不把旧词典罕见的给鞋换底放入首屏。",
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "脚、底部、单位及诗歌音步保留；动词仅给常见 foot the bill。"
+  },
+  {
+    "id": "adult:second",
+    "en": "second",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "秒；片刻；第二名；添的一份；次品",
+        "definition": "One of 60 equal parts of a minute, a brief time, the place after first, an extra helping of food, or an item with a small fault.",
+        "example": "The light changed after thirty seconds.",
+        "collocations": [
+          "a few seconds",
+          "come a close second",
+          "have seconds"
+        ],
+        "phonetic": "ˈsekənd"
+      },
+      {
+        "pos": "adj.",
+        "zh": "第二的；另一个的；次要的",
+        "definition": "After the first in order or importance, or another of the same kind.",
+        "example": "This is my second visit to the city.",
+        "collocations": [
+          "a second chance",
+          "second place",
+          "every second day"
+        ],
+        "phonetic": "ˈsekənd"
+      },
+      {
+        "pos": "adv.",
+        "zh": "第二；其次；位列第二地",
+        "definition": "In the next position after first, or introducing the next point in a list.",
+        "example": "She finished second in the race.",
+        "collocations": [
+          "come second",
+          "second largest",
+          "second only to"
+        ],
+        "phonetic": "ˈsekənd"
+      },
+      {
+        "pos": "v.",
+        "zh": "附议；支持；临时借调",
+        "definition": "To formally support a suggestion, or temporarily send someone to work in another team or organization.",
+        "example": "I second your proposal to start the meeting earlier.",
+        "collocations": [
+          "second a motion",
+          "second a proposal",
+          "be seconded to"
+        ],
+        "note": "秒、第二及附议通常读 /ˈsekənd/；英式动词“借调”通常读 /sɪˈkɒnd/。seconds 可指添的一份食物或次品。",
+        "phonetic": "ˈsekənd; sɪˈkɒnd"
+      }
+    ],
+    "notes": "秒、第二及附议通常读 /ˈsekənd/；英式动词“借调”通常读 /sɪˈkɒnd/。seconds 可指添的一份食物或次品。",
+    "evidence": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/second",
+        "note": "本轮访问核对副词、附议动词、英式借调及其不同重音；释义例句为自主编写。"
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "给动词补双读音及对应义项说明，避免借调与附议被一个默认读音覆盖。"
+  },
+  {
+    "id": "adult:boy",
+    "en": "boy",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "男孩；少年；儿子；男伴们（非正式）",
+        "definition": "A male child or young person; also someone's son or a male friend in informal speech.",
+        "example": "The boy waited outside the classroom with his sister.",
+        "collocations": [
+          "a little boy",
+          "a teenage boy",
+          "the boys"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "男孩/儿子及非正式男性伙伴成立，没有把所有成年男子称呼方式推荐为中性。"
+  },
+  {
+    "id": "adult:maybe",
+    "en": "maybe",
+    "author": "vocab_author_a",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "也许；大概；可能",
+        "definition": "Used when something is possible but you are not certain, or when making a gentle suggestion.",
+        "example": "Maybe we could take the train instead.",
+        "collocations": [
+          "maybe later",
+          "maybe not",
+          "maybe we could"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "可能性；不确定的回答",
+        "definition": "An uncertain answer or a possible thing that has not been decided.",
+        "example": "She gave me a maybe rather than a definite yes.",
+        "collocations": [
+          "a definite maybe",
+          "too many maybes"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "可能副词与不确定答复名词分开，a maybe 例句展示转类用法。"
+  },
+  {
+    "id": "adult:toward",
+    "en": "toward",
+    "author": "vocab_author_a",
+    "primaryPos": "prep.",
+    "senses": [
+      {
+        "pos": "prep.",
+        "zh": "朝；接近；对于；用于；有助于",
+        "definition": "In the direction of, close to a time or amount, in relation to someone, or helping to pay for or achieve something.",
+        "example": "She walked toward the open door.",
+        "collocations": [
+          "toward the end",
+          "an attitude toward",
+          "go toward the cost"
+        ],
+        "note": "toward 与 towards 词义相同；toward 在美式英语更常见，towards 在英式英语更常见。"
+      }
+    ],
+    "notes": "toward 与 towards 词义相同；toward 在美式英语更常见，towards 在英式英语更常见。",
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "方向、时间接近、态度和费用用途均对应，将英美偏好提示放入可见 note。"
+  },
+  {
+    "id": "adult:able",
+    "en": "able",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "能够的；能干的；有能力的",
+        "definition": "Having the power, skill, or chance to do something, or being good at a task.",
+        "example": "Will you be able to join us tomorrow?",
+        "collocations": [
+          "be able to",
+          "an able leader",
+          "more able"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "能力与机会条件均保留，be able to 后接动词原形正确。"
+  },
+  {
+    "id": "adult:age",
+    "en": "age",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "年龄；时代；很长时间；老年",
+        "definition": "How long someone or something has existed, a period of history, a very long time, or the later years of life.",
+        "example": "Children of the same age can develop at different speeds.",
+        "collocations": [
+          "at the age of",
+          "old age",
+          "for ages"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "变老；使显老；使成熟",
+        "definition": "To become older, make someone seem older, or develop the taste of food or drink over time.",
+        "example": "The cheese is aged for six months before it is sold.",
+        "collocations": [
+          "age well",
+          "age cheese",
+          "an ageing population"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "年龄、时代、长时间与老化/熟化动词区分，奶酪成熟例句正确。"
+  },
+  {
+    "id": "adult:policy",
+    "en": "policy",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "政策；方针；原则；保险单",
+        "definition": "A planned way of making decisions or acting, a personal rule, or a written insurance agreement.",
+        "example": "The school has a clear policy on mobile phones.",
+        "collocations": [
+          "government policy",
+          "an insurance policy",
+          "a policy on"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "政策/行事原则和保险单同形多义共存，保险合同并非政府政策。"
+  },
+  {
+    "id": "adult:everything",
+    "en": "everything",
+    "author": "vocab_author_a",
+    "primaryPos": "pron.",
+    "senses": [
+      {
+        "pos": "pron.",
+        "zh": "所有事物；一切；最重要的事物",
+        "definition": "All the things in a situation, or what matters most to someone.",
+        "example": "Have you packed everything you need?",
+        "collocations": [
+          "everything else",
+          "everything possible",
+          "everything to someone"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "全体与最重要之物代词义均可，单数代词用法正确。"
+  },
+  {
+    "id": "adult:love",
+    "en": "love",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "爱；爱情；喜爱；心爱的人；零分（网球）",
+        "definition": "Deep care or affection, strong enjoyment, a person you care for, or a score of zero in tennis.",
+        "example": "Her love of music began when she was very young.",
+        "collocations": [
+          "fall in love",
+          "love of",
+          "thirty-love"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "爱；喜爱；很愿意",
+        "definition": "To care deeply for someone, greatly enjoy something, or very much want to do it.",
+        "example": "I love spending quiet evenings with my family.",
+        "collocations": [
+          "love someone",
+          "love doing something",
+          "would love to"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "感情、爱好、心爱的人与网球零分分清，动词 would love to 自然。"
+  },
+  {
+    "id": "adult:process",
+    "en": "process",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "过程；程序；工序；法律程序",
+        "definition": "A series of actions or changes leading to a result, including steps used in law, making goods, or running software.",
+        "example": "Learning to drive is a gradual process.",
+        "collocations": [
+          "in the process of",
+          "a decision-making process",
+          "due process"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "处理；加工；办理；理解消化",
+        "definition": "To deal with information or requests, change materials into products, or take time to understand an experience.",
+        "example": "The office will process your application within a week.",
+        "collocations": [
+          "process data",
+          "process an application",
+          "process food"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "流程与办理/加工动词分开，申请办理例句正确，技术义未挤掉主义。"
+  },
+  {
+    "id": "adult:music",
+    "en": "music",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "音乐；乐曲；乐谱",
+        "definition": "Sounds arranged to create rhythm or a tune, pieces made this way, or written signs showing how to play them.",
+        "example": "Soft music was playing in the café.",
+        "collocations": [
+          "listen to music",
+          "live music",
+          "sheet music"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "声音作品和乐谱均覆盖，sheet music 不译成另一独立词性。"
+  },
+  {
+    "id": "adult:including",
+    "en": "including",
+    "author": "vocab_author_a",
+    "primaryPos": "prep.",
+    "senses": [
+      {
+        "pos": "prep.",
+        "zh": "包括；包含…在内",
+        "definition": "Used to name something as part of a larger group or total.",
+        "example": "Six people came to dinner, including my parents.",
+        "collocations": [
+          "including taxes",
+          "including everyone",
+          "up to and including"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "介词引出总体中的成员，父母包含在六人总数而非额外增加。"
+  },
+  {
+    "id": "adult:consider",
+    "en": "consider",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "考虑；认为；体谅；把…纳入考虑",
+        "definition": "To think carefully about something, hold an opinion, or take account of someone's needs or a relevant fact.",
+        "example": "We are considering moving closer to the school.",
+        "collocations": [
+          "consider doing something",
+          "consider someone to be",
+          "consider the options"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "考虑行动、认为和照顾因素一致，consider moving 不误写 consider to move。"
+  },
+  {
+    "id": "adult:appear",
+    "en": "appear",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "出现；显得；发表；出演；出庭",
+        "definition": "To become visible, seem to be something, be published, or take part in a performance or court case.",
+        "example": "A small boat appeared through the mist.",
+        "collocations": [
+          "appear to be",
+          "appear in a film",
+          "appear in court"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "出现、看起来、发表、出演和出庭均对齐，雾中船出现例句正确。"
+  },
+  {
+    "id": "adult:actually",
+    "en": "actually",
+    "author": "vocab_author_a",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "实际上；其实；竟然",
+        "definition": "Used to give the real facts, correct an idea, or express surprise that something really happens.",
+        "example": "I thought the shop was closed, but it is actually open.",
+        "collocations": [
+          "actually happened",
+          "actually mean",
+          "not actually"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "事实纠正和惊讶作用匹配，不能译成目前。"
+  },
+  {
+    "id": "adult:buy",
+    "en": "buy",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "购买；换取；收买；相信（非正式）",
+        "definition": "To get something by paying, gain an advantage with money, bribe someone, or accept a story as true.",
+        "example": "We bought fresh bread on the way home.",
+        "collocations": [
+          "buy a ticket",
+          "buy time",
+          "buy someone's story"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "买到的东西；划算的交易",
+        "definition": "Something purchased, especially when judging whether it was worth the price.",
+        "example": "These comfortable shoes were a very good buy.",
+        "collocations": [
+          "a good buy",
+          "a bargain buy",
+          "a best buy"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "购买、争取时间、收买及相信均合理，名词好买卖有独立例句。"
+  },
+  {
+    "id": "adult:probably",
+    "en": "probably",
+    "author": "vocab_author_a",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "很可能；大概",
+        "definition": "Used when you think something is likely to be true or happen, but are not completely certain.",
+        "example": "The train will probably arrive a few minutes late.",
+        "collocations": [
+          "probably because",
+          "probably not",
+          "will probably"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "很可能但不确定与例句相符，不等于必然。"
+  },
+  {
+    "id": "adult:human",
+    "en": "human",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "人的；人类的；有人性的；难免犯错的",
+        "definition": "Related to people, or showing the feelings, needs, and weaknesses that people naturally have.",
+        "example": "Everyone makes mistakes; we are all human.",
+        "collocations": [
+          "human beings",
+          "human rights",
+          "human error"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "人；人类成员",
+        "definition": "A person, as distinct from other animals or from machines.",
+        "example": "The animals had rarely seen humans before.",
+        "collocations": [
+          "humans and animals",
+          "modern humans"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "改英文为非其他动物而非声称人不是动物；保留人与机器对比。"
+  },
+  {
+    "id": "adult:wait",
+    "en": "wait",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "等待；等候；延缓；服侍（用于短语）",
+        "definition": "To stay until something happens, leave a task until later, or serve food in phrases such as wait on people and wait tables.",
+        "example": "I'll wait here while you buy the tickets.",
+        "collocations": [
+          "wait for someone",
+          "wait and see",
+          "wait tables"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "等待；等候时间",
+        "definition": "A period spent staying until something happens.",
+        "example": "We had a long wait at the airport.",
+        "collocations": [
+          "a long wait",
+          "a short wait",
+          "after a wait"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "简化服务义为 wait on people / wait tables，避免误导必须加 at。"
+  },
+  {
+    "id": "adult:serve",
+    "en": "serve",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "服务；供应；担任；适用；服刑；发球",
+        "definition": "To help or work for others, give food, do a duty, be useful, spend time in prison, or start a point in a racket sport.",
+        "example": "This café serves breakfast until eleven.",
+        "collocations": [
+          "serve a meal",
+          "serve as",
+          "serve a sentence"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "发球",
+        "definition": "The action that starts a point in a sport such as tennis by hitting the ball to the other player.",
+        "example": "Her first serve landed outside the line.",
+        "collocations": [
+          "a powerful serve",
+          "return a serve",
+          "first serve"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "服务、供应、担任、服刑和发球相符，名词单独显示发球。"
+  },
+  {
+    "id": "adult:market",
+    "en": "market",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "市场；集市；需求；买方群体",
+        "definition": "A place or system for buying and selling, or the people who want a particular product.",
+        "example": "We buy fresh vegetables at the Saturday market.",
+        "collocations": [
+          "a local market",
+          "the housing market",
+          "a market for"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "销售；推销；推广",
+        "definition": "To offer or promote a product so that people will buy it.",
+        "example": "The company markets its bags as light and durable.",
+        "collocations": [
+          "market a product",
+          "market to customers",
+          "market as"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "市场/需求群体与推销动词分开，market as 表定位自然。"
+  },
+  {
+    "id": "adult:die",
+    "en": "die",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "死亡；枯萎；消失；熄灭；停止工作",
+        "definition": "To stop living, become weaker until gone, or stop working or burning.",
+        "example": "My phone died before I could send the message.",
+        "collocations": [
+          "die of a disease",
+          "die out",
+          "die down"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "骰子；模具；裸芯片",
+        "definition": "One numbered object used in games, a tool that shapes or cuts material, or a bare piece of material containing an electronic circuit.",
+        "example": "Roll the die and move your piece along the board.",
+        "collocations": [
+          "roll a die",
+          "a metal die",
+          "a silicon die"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "修正裸芯片不是芯片的一小片；骰子和工业模具保留。"
+  },
+  {
+    "id": "adult:send",
+    "en": "send",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "发送；寄；派遣；使进入某状态",
+        "definition": "To cause something or someone to go somewhere, or make a person enter a particular state.",
+        "example": "Please send me the address by email.",
+        "collocations": [
+          "send a message",
+          "send for help",
+          "send someone to sleep"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "发送、派遣及使进入状态兼顾，send to sleep 非普通邮寄。"
+  },
+  {
+    "id": "adult:expect",
+    "en": "expect",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "预料；期待；要求；等待到来；怀孕",
+        "definition": "To think something will happen, believe someone should do something, wait for an arrival, or be pregnant.",
+        "example": "We expect the parcel to arrive tomorrow.",
+        "collocations": [
+          "expect someone to do something",
+          "expect a delivery",
+          "be expecting a baby"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "预期、要求、等候及怀孕习语保留，孕义搭配写 be expecting。"
+  },
+  {
+    "id": "adult:sense",
+    "en": "sense",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "感官；感觉；意识；道理；意义",
+        "definition": "An ability such as sight, a feeling or awareness, good judgment, or the meaning of words.",
+        "example": "That explanation makes sense to me.",
+        "collocations": [
+          "common sense",
+          "a sense of humour",
+          "make sense"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "感觉到；察觉；检测",
+        "definition": "To notice something without being told, or detect it with a device.",
+        "example": "I sensed that she wanted to leave.",
+        "collocations": [
+          "sense a change",
+          "sense danger",
+          "sense movement"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "感官、感觉、意义和判断力与察觉动词分开。"
+  },
+  {
+    "id": "adult:build",
+    "en": "build",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "建造；建立；逐步增强",
+        "definition": "To make a structure, develop something over time, or become stronger or larger.",
+        "example": "We are building a small shed in the garden.",
+        "collocations": [
+          "build a house",
+          "build confidence",
+          "build on experience"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "体格；构建版本；制造方式",
+        "definition": "The shape and strength of someone's body, a version of software, or how something is constructed.",
+        "example": "He has a strong build from years of swimming.",
+        "collocations": [
+          "a slim build",
+          "the latest build",
+          "build quality"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "建造、逐步建立与体格/软件构建名词保留，未漏名词常用技术义。"
+  },
+  {
+    "id": "adult:stay",
+    "en": "stay",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "停留；暂住；保持；暂停（法律）",
+        "definition": "To remain in a place or state, live somewhere briefly, or officially delay an action.",
+        "example": "We stayed with my sister for the weekend.",
+        "collocations": [
+          "stay at home",
+          "stay calm",
+          "stay the proceedings"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "停留；暂住；暂停执行；支撑物",
+        "definition": "A period spent in a place, an official delay, or a support that holds something firmly.",
+        "example": "Thank you for making our stay so comfortable.",
+        "collocations": [
+          "a short stay",
+          "a stay of execution",
+          "a support stay"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "停留为首义，法律暂停与支撑物有明确标注，不与继续保持混用。"
+  },
+  {
+    "id": "adult:fall",
+    "en": "fall",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "落下；跌倒；下降；陷入；发生在；失守",
+        "definition": "To move down, lose balance, become less, enter a state, happen at a time, or lose power or control.",
+        "example": "The temperature will fall below zero tonight.",
+        "collocations": [
+          "fall asleep",
+          "fall in love",
+          "fall on a Monday"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "跌倒；下降；倒台；秋季；瀑布（复数）",
+        "definition": "A drop or decrease, a loss of power, autumn in American English, or water dropping over a steep edge in a river.",
+        "example": "She hurt her wrist in a fall on the stairs.",
+        "collocations": [
+          "a fall in prices",
+          "in the fall",
+          "the falls"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "落下、减少、状态变化与秋季/瀑布保留，复数 falls 标注正确。"
+  },
+  {
+    "id": "adult:oh",
+    "en": "oh",
+    "author": "vocab_author_a",
+    "primaryPos": "interj.",
+    "senses": [
+      {
+        "pos": "interj.",
+        "zh": "哦；噢；啊（惊讶、领悟等）",
+        "definition": "A sound used to show surprise, understanding, disappointment, or a sudden thought.",
+        "example": "Oh, I left my keys on the kitchen table!",
+        "collocations": [
+          "oh dear",
+          "oh no",
+          "oh well"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "感叹词正确，不错误视为字母或化学缩写。"
+  },
+  {
+    "id": "adult:nation",
+    "en": "nation",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "国家；民族；国民",
+        "definition": "A country and its people, or a large group sharing a history, culture, or identity.",
+        "example": "People from many nations took part in the festival.",
+        "collocations": [
+          "an independent nation",
+          "the whole nation",
+          "a nation of"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "政治国家与共享文化身份群体均可，不机械等同于政府。"
+  },
+  {
+    "id": "adult:plan",
+    "en": "plan",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "计划；方案；打算；平面图",
+        "definition": "An intended set of actions, an idea about what to do, or a drawing showing a building or layout.",
+        "example": "Our plan is to leave before the roads get busy.",
+        "collocations": [
+          "make a plan",
+          "a floor plan",
+          "a business plan"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "计划；打算；安排；设计",
+        "definition": "To decide in advance what to do or how something will be arranged or built.",
+        "example": "We plan to visit the museum on Saturday.",
+        "collocations": [
+          "plan to do something",
+          "plan ahead",
+          "plan a trip"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "计划与平面图名词、预先安排动词分开。"
+  },
+  {
+    "id": "adult:cut",
+    "en": "cut",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "切；割；剪；削减；停止；删去；逃课",
+        "definition": "To divide or wound with something sharp, make less, stop a supply, leave something out, or skip a class.",
+        "example": "We need to cut our spending this month.",
+        "collocations": [
+          "cut costs",
+          "cut the paper",
+          "cut off"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "切口；伤口；削减；份额；剪裁；剪辑版",
+        "definition": "A wound or opening, a reduction, a share of money, the shape of clothing, or a version of an edited film.",
+        "example": "The workers opposed the proposed pay cut.",
+        "collocations": [
+          "a deep cut",
+          "a pay cut",
+          "a cut of the profits"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "切开的；剪下的；有伤口的",
+        "definition": "Separated with a sharp tool or having a wound made by one.",
+        "example": "She put the cut flowers in a vase.",
+        "collocations": [
+          "cut flowers",
+          "freshly cut grass",
+          "a cut finger"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "削减/切割/中断及份额/版本/剪下形容词匹配，pay cut 例句明确名词。"
+  },
+  {
+    "id": "adult:college",
+    "en": "college",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "学院；大学；职业学校；学会",
+        "definition": "A place of education after or alongside secondary school, a part of a university, or a professional organization.",
+        "example": "She is studying engineering at college.",
+        "collocations": [
+          "go to college",
+          "a college student",
+          "a medical college"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "不同地区中高等院校及专业团体的边界保留，不仅译学院。"
+  },
+  {
+    "id": "adult:interest",
+    "en": "interest",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "兴趣；爱好；利息；利益；权益",
+        "definition": "A wish to know more, an activity you enjoy, money paid for borrowing or saving, or a benefit or share in something.",
+        "example": "The account pays interest on your savings.",
+        "collocations": [
+          "an interest in",
+          "an interest rate",
+          "in someone's interests"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "使感兴趣",
+        "definition": "To make someone want to know more or become involved.",
+        "example": "Would a course in photography interest you?",
+        "collocations": [
+          "interest someone in",
+          "greatly interest",
+          "be interested in"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "好奇/爱好/利息/利益/权益均保留，名词利息与动词吸引兴趣分开。"
+  },
+  {
+    "id": "adult:death",
+    "en": "death",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "死亡；灭亡；终结",
+        "definition": "The end of a life, or the complete end of something.",
+        "example": "The family gathered after their grandmother's death.",
+        "collocations": [
+          "the death of",
+          "cause of death",
+          "a death in the family"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "生命结束为首义，事物终结为比喻，不把死的形容词混入。"
+  },
+  {
+    "id": "adult:course",
+    "en": "course",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "课程；路线；进程；一道菜；疗程；场地",
+        "definition": "A set of lessons, a route or development, one part of a meal, a series of treatments, or a sports ground.",
+        "example": "The meal included three courses.",
+        "collocations": [
+          "take a course",
+          "the main course",
+          "in the course of"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "奔流；迅速流动",
+        "definition": "To flow or move quickly through or across something.",
+        "example": "Water coursed down the street after the storm.",
+        "collocations": [
+          "course through",
+          "course down"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "课程、路线、菜、疗程及场地与流动动词分开，三道菜例句自然。"
+  },
+  {
+    "id": "adult:someone",
+    "en": "someone",
+    "author": "vocab_author_a",
+    "primaryPos": "pron.",
+    "senses": [
+      {
+        "pos": "pron.",
+        "zh": "某人；有人",
+        "definition": "A person whose name or identity is not stated or known.",
+        "example": "Someone has left a scarf on the chair.",
+        "collocations": [
+          "someone else",
+          "someone to talk to",
+          "someone special"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "某人不定代词明确，不误作 some one 两词数量结构。"
+  },
+  {
+    "id": "adult:experience",
+    "en": "experience",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "经验；经历；体验",
+        "definition": "Knowledge gained by doing things, or an event that you live through.",
+        "example": "She has years of experience teaching young children.",
+        "collocations": [
+          "work experience",
+          "a new experience",
+          "experience in"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "经历；感受；体验",
+        "definition": "To have something happen to you or feel something yourself.",
+        "example": "We experienced a short power cut last night.",
+        "collocations": [
+          "experience a problem",
+          "experience joy",
+          "experience a change"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "不可数经验和可数经历均保留，动词经历停电匹配。"
+  },
+  {
+    "id": "adult:behind",
+    "en": "behind",
+    "author": "vocab_author_a",
+    "primaryPos": "prep.",
+    "senses": [
+      {
+        "pos": "prep.",
+        "zh": "在…后面；落后于；支持；是…原因",
+        "definition": "At the back of, less advanced than, supporting, or responsible for something.",
+        "example": "The garden is behind the house.",
+        "collocations": [
+          "behind schedule",
+          "behind the idea",
+          "the reason behind"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "在后面；留在原处；落后",
+        "definition": "At the back, remaining in a place, or not keeping up.",
+        "example": "I waited for the children who had fallen behind.",
+        "collocations": [
+          "stay behind",
+          "leave behind",
+          "fall behind"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "屁股（委婉语）",
+        "definition": "A person's bottom, used as a mild or polite expression.",
+        "example": "The toddler landed on his behind and laughed.",
+        "collocations": [
+          "fall on your behind",
+          "sit on your behind"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "后方、落后、支持及原因介词与副词/委婉屁股名词分开。"
+  },
+  {
+    "id": "adult:reach",
+    "en": "reach",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "到达；达到；伸手够到；联系上；影响到",
+        "definition": "To arrive at a place or goal, stretch to touch something, contact someone, or have an effect on people.",
+        "example": "Can you reach the cup on the top shelf?",
+        "collocations": [
+          "reach an agreement",
+          "reach for",
+          "reach someone by phone"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "触及范围；影响范围；河段",
+        "definition": "The distance you can stretch or have an effect over, or a section of a river.",
+        "example": "Keep the medicine out of children's reach.",
+        "collocations": [
+          "within reach",
+          "out of reach",
+          "the lower reaches"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "到达、够到、联系及影响动词与范围/河段名词一致。"
+  },
+  {
+    "id": "adult:local",
+    "en": "local",
+    "author": "vocab_author_a",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "当地的；地方的；局部的",
+        "definition": "Connected with a nearby area or limited to one part of a body or thing.",
+        "example": "We bought fruit at the local shop.",
+        "collocations": [
+          "local people",
+          "a local school",
+          "a local anaesthetic"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "本地人；附近酒吧（英式）；慢车",
+        "definition": "A person living nearby, a pub someone regularly visits, or a train that stops at many stations.",
+        "example": "A local showed us the shortest route to the beach.",
+        "collocations": [
+          "ask a local",
+          "meet at the local",
+          "take the local"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "本地/局部形容词与居民/酒吧/慢车名词分开，英式酒吧注明。"
+  },
+  {
+    "id": "adult:six",
+    "en": "six",
+    "author": "vocab_author_a",
+    "primaryPos": "num.",
+    "senses": [
+      {
+        "pos": "num.",
+        "zh": "六；六个",
+        "definition": "The number after five and before seven.",
+        "example": "There are six eggs left in the box.",
+        "collocations": [
+          "six people",
+          "six years old",
+          "six o'clock"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "数字6；六点的牌或骰子；六分球（板球）",
+        "definition": "The written number 6, a card or die showing it, or a cricket hit that scores six runs.",
+        "example": "She rolled a six and moved to the final square.",
+        "collocations": [
+          "roll a six",
+          "hit a six"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "数词六与骰子点数/板球六分名词匹配，体育义不为主释义。"
+  },
+  {
+    "id": "adult:kill",
+    "en": "kill",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "杀死；扼杀；终止；消磨；使极痛或疲惫",
+        "definition": "To cause death, stop something completely, pass time, or cause great pain or tiredness in informal speech.",
+        "example": "We read magazines to kill time before the appointment.",
+        "collocations": [
+          "kill time",
+          "kill bacteria",
+          "kill an idea"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "猎杀；被杀的猎物；致命一击",
+        "definition": "An act of killing, an animal killed by a hunter or predator, or the final action that ends a contest.",
+        "example": "The lions returned to their kill.",
+        "collocations": [
+          "make a kill",
+          "move in for the kill"
+        ]
+      }
+    ],
+    "notes": "删除同一名词行误并入的“小河”：该义主要是荷兰语来源的特定地名成分，不适合此现代常用动词卡。猎杀/猎物的名词保留。",
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "常用杀死/消磨/终止与猎物名词保留，旧小河地名义不置入学习主卡。"
+  },
+  {
+    "id": "adult:remain",
+    "en": "remain",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "仍然是；留下；剩余；尚待",
+        "definition": "To continue to be somewhere or in a state, be left over, or still need to be done.",
+        "example": "Please remain seated until the train stops.",
+        "collocations": [
+          "remain calm",
+          "remain a mystery",
+          "remain to be seen"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "遗迹；残余；遗体（通常用 remains）",
+        "definition": "Things left after other parts are gone, or the body of a person or animal after death; usually in the plural.",
+        "example": "We visited the remains of an old castle.",
+        "collocations": [
+          "human remains",
+          "the remains of",
+          "ancient remains"
+        ],
+        "note": "名词常用复数 remains，表示残存物、遗迹或遗体，不应把裸词 remain 当普通单数遗体使用。"
+      }
+    ],
+    "notes": "名词常用复数 remains，表示残存物、遗迹或遗体，不应把裸词 remain 当普通单数遗体使用。",
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "名词只在 remains 复数中常见，将此限制放入名词 note，避免单数误学。"
+  },
+  {
+    "id": "adult:effect",
+    "en": "effect",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "影响；效果；作用；特效；财物（复数）",
+        "definition": "A change caused by something, an impression or created sound or image, or belongings when used in the plural.",
+        "example": "The medicine had little effect on the pain.",
+        "collocations": [
+          "have an effect on",
+          "side effects",
+          "personal effects"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "实现；使发生（正式）",
+        "definition": "To bring about a change or achieve a result.",
+        "example": "The new rules effected a major change in how the team worked.",
+        "collocations": [
+          "effect a change",
+          "effect a transfer"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "影响名词与正式使发生动词分开，effected a change 不与 affected 混淆。"
+  },
+  {
+    "id": "adult:yeah",
+    "en": "yeah",
+    "author": "vocab_author_a",
+    "primaryPos": "interj.",
+    "senses": [
+      {
+        "pos": "interj.",
+        "zh": "是；对；嗯（非正式）",
+        "definition": "An informal way to agree or say yes.",
+        "example": "Yeah, that time works for me.",
+        "collocations": [
+          "oh yeah",
+          "yeah right"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "非正式同意感叹词正确，yeah right 可含讽刺需按语境理解。"
+  },
+  {
+    "id": "adult:suggest",
+    "en": "suggest",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "建议；提议；暗示；使联想到",
+        "definition": "To put forward an idea, show that something may be true, or bring a thought to mind.",
+        "example": "I suggest taking a short break before we continue.",
+        "collocations": [
+          "suggest doing something",
+          "suggest that",
+          "strongly suggest"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "建议、暗示及联想一致，suggest doing 结构正确。"
+  },
+  {
+    "id": "adult:class",
+    "en": "class",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "班级；课；阶层；类别；等级；风度",
+        "definition": "A group of students or a lesson, a social group or category, a level of quality, or stylish behaviour.",
+        "example": "Our class is learning about plants this week.",
+        "collocations": [
+          "a class of students",
+          "the middle class",
+          "travel in first class"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "把…归类；把…看作",
+        "definition": "To place someone or something in a category.",
+        "example": "These animals are classed as endangered.",
+        "collocations": [
+          "class as",
+          "class among",
+          "class together"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "优秀的；高水平的",
+        "definition": "Very good or showing a high standard, especially in informal praise.",
+        "example": "That was a class performance from the young goalkeeper.",
+        "collocations": [
+          "a class act",
+          "a class player"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/class_3",
+        "note": "本轮官方搜索内容核对 class 为非正式的优质形容词，通常置于名词前。"
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "班级、课、阶层、类别与归类动词匹配；非正式优质形容词另列。"
+  },
+  {
+    "id": "adult:control",
+    "en": "control",
+    "author": "vocab_author_a",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "控制；管理；克制；操纵装置；对照组",
+        "definition": "The power to direct things, restraint, a device used to operate something, or a comparison group in a test.",
+        "example": "She stayed calm and kept control of the situation.",
+        "collocations": [
+          "under control",
+          "lose control",
+          "a control group"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "控制；操纵；管理；抑制",
+        "definition": "To direct how something works, manage a situation, or limit an unwanted action or amount.",
+        "example": "Use this button to control the volume.",
+        "collocations": [
+          "control costs",
+          "control the situation",
+          "control your temper"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "管理/克制/装置/实验对照与控制动词分开，音量操纵例句正确。"
+  },
+  {
+    "id": "adult:raise",
+    "en": "raise",
+    "author": "vocab_author_a",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "举起；提高；筹集；抚养；提出；引起",
+        "definition": "To lift or increase, collect money, bring up a child or animal, introduce a topic, or cause a feeling.",
+        "example": "The school raised money for new library books.",
+        "collocations": [
+          "raise money",
+          "raise children",
+          "raise a question"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "加薪（美式）；加注",
+        "definition": "An increase in pay, especially in American English, or a higher bet in a card game.",
+        "example": "She received a raise after taking on more responsibility.",
+        "collocations": [
+          "a pay raise",
+          "ask for a raise",
+          "call a raise"
+        ]
+      }
+    ],
+    "reviewer": "root",
+    "reviewType": "model-semantic-review",
+    "reviewNotes": "举起、增加、筹资、抚养、提问/情绪与美式加薪名词分开。"
+  }
+]

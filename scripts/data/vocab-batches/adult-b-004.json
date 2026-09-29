@@ -1,0 +1,2246 @@
+[
+  {
+    "id": "adult:helicopter",
+    "en": "helicopter",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "直升机",
+        "definition": "An aircraft kept in the air by long blades turning above it.",
+        "example": "A helicopter flew over the mountains to rescue the hikers.",
+        "collocations": [
+          "a rescue helicopter",
+          "a helicopter pilot"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:modest",
+    "en": "modest",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "谦虚的；不大的；朴素的；端庄的",
+        "definition": "Not boastful, not large or expensive, or not showing much of the body.",
+        "example": "She is modest about her achievements.",
+        "collocations": [
+          "a modest income",
+          "modest success"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:delay",
+    "en": "delay",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "延误；耽搁；延期",
+        "definition": "A period of waiting caused by something happening later than planned.",
+        "example": "There was a two-hour delay at the airport.",
+        "collocations": [
+          "a long delay",
+          "without delay"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "推迟；耽搁；使延误",
+        "definition": "To make something happen later or cause someone to be late.",
+        "example": "Heavy traffic delayed our arrival.",
+        "collocations": [
+          "delay a decision",
+          "delay doing something"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:explode",
+    "en": "explode",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "爆炸；爆发；激增；驳倒",
+        "definition": "To burst violently, show a sudden strong feeling, grow very quickly, or prove a belief false.",
+        "example": "Demand for the product exploded after the review.",
+        "collocations": [
+          "explode with anger",
+          "explode a myth"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:scope",
+    "en": "scope",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "范围；机会；发挥余地；观测仪器",
+        "definition": "The range of a subject or activity, room to act or improve, or a viewing instrument such as a telescope.",
+        "example": "The project is beyond the scope of our budget.",
+        "collocations": [
+          "the scope of",
+          "scope for improvement"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "仔细查看；界定范围",
+        "definition": "To look at something carefully, often with out, or decide the range of planned work.",
+        "example": "We scoped out the venue before booking it.",
+        "collocations": [
+          "scope out a place",
+          "scope a project"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:stroke",
+    "en": "stroke",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "抚摸；划动；一击；笔画；中风",
+        "definition": "A gentle touch, one repeated movement or hit, a mark in writing, or sudden brain damage from a blood-flow problem.",
+        "example": "The character is written with six strokes.",
+        "collocations": [
+          "a stroke of luck",
+          "a swimming stroke"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "轻抚；抚摸",
+        "definition": "To move your hand gently over a surface, especially a person or animal.",
+        "example": "The child stroked the cat's back.",
+        "collocations": [
+          "stroke a cat",
+          "stroke someone's hair"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:handful",
+    "en": "handful",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "一把；少数；难管的人或事",
+        "definition": "An amount held in one hand, a small number, or someone or something difficult to manage.",
+        "example": "Only a handful of people attended the meeting.",
+        "collocations": [
+          "a handful of nuts",
+          "quite a handful"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:punishment",
+    "en": "punishment",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "惩罚；处罚；折磨",
+        "definition": "An unpleasant consequence imposed for wrongdoing, or rough treatment that causes strain or damage.",
+        "example": "The teacher chose a fair punishment for the broken rule.",
+        "collocations": [
+          "a severe punishment",
+          "punishment for"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:badly",
+    "en": "badly",
+    "author": "vocab_author_b",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "糟糕地；严重地；非常",
+        "definition": "In a poor way, to a serious degree, or very much when describing a need or wish.",
+        "example": "The house was badly damaged in the storm.",
+        "collocations": [
+          "badly injured",
+          "badly needed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:curious",
+    "en": "curious",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "好奇的；奇怪的；不寻常的",
+        "definition": "Wanting to learn or know more, or strange enough to attract attention.",
+        "example": "The children were curious about how the machine worked.",
+        "collocations": [
+          "curious about",
+          "a curious fact"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:horizon",
+    "en": "horizon",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "地平线；眼界；未来限度",
+        "definition": "The line where the earth seems to meet the sky, or the limits of what you know or expect.",
+        "example": "A ship appeared on the horizon.",
+        "collocations": [
+          "on the horizon",
+          "broaden your horizons"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:prompt",
+    "en": "prompt",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "促使；提示；给…提词",
+        "definition": "To cause an action or help someone remember what to say or do.",
+        "example": "Her question prompted a lively discussion.",
+        "collocations": [
+          "prompt a response",
+          "prompt someone to act"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "迅速的；及时的；准时的",
+        "definition": "Done without delay or at the expected time.",
+        "example": "Thank you for your prompt reply.",
+        "collocations": [
+          "prompt action",
+          "prompt payment"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "提示；提词；输入提示",
+        "definition": "A clue encouraging a response, words supplied to a performer, or a message asking a computer user for input.",
+        "example": "Use this picture as a prompt for your story.",
+        "collocations": [
+          "a writing prompt",
+          "a command prompt"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:van",
+    "en": "van",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "厢式货车；客货两用车",
+        "definition": "A road vehicle with an enclosed space for carrying goods or passengers.",
+        "example": "We hired a van to move the furniture.",
+        "collocations": [
+          "a delivery van",
+          "a camper van"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:downtown",
+    "en": "downtown",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "市中心；商业中心区",
+        "definition": "The central part of a town or city, usually where many shops and offices are located.",
+        "example": "The hotel is near downtown.",
+        "collocations": [
+          "the downtown area",
+          "downtown traffic"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "往市中心；在市中心",
+        "definition": "In or toward the central business area of a town or city.",
+        "example": "We went downtown to see a film.",
+        "collocations": [
+          "go downtown",
+          "work downtown"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "市中心的",
+        "definition": "Located in the central business area of a town or city.",
+        "example": "She works in a downtown office.",
+        "collocations": [
+          "a downtown hotel",
+          "downtown streets"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:flavor",
+    "en": "flavor",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "风味；味道；特色",
+        "definition": "The taste of food or drink, or the special quality of an experience or place.",
+        "example": "The soup has a rich garlic flavor.",
+        "collocations": [
+          "a strong flavor",
+          "local flavor"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "给…调味；赋予特色",
+        "definition": "To add something that changes the taste of food or the character of an experience.",
+        "example": "We flavored the rice with lemon and herbs.",
+        "collocations": [
+          "flavor with herbs",
+          "flavor a dish"
+        ]
+      }
+    ],
+    "notes": "美式拼写；英式 flavour。"
+  },
+  {
+    "id": "adult:absorb",
+    "en": "absorb",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "吸收；吸纳；理解；使专注；承担",
+        "definition": "To take in liquid, information, or costs, include something within a larger whole, or hold someone's attention.",
+        "example": "The towel absorbed the spilled water.",
+        "collocations": [
+          "absorb water",
+          "absorbed in a book"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:eager",
+    "en": "eager",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "渴望的；热切的",
+        "definition": "Very interested and keen to do or have something.",
+        "example": "She was eager to hear about his trip.",
+        "collocations": [
+          "eager to learn",
+          "eager for news"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:principal",
+    "en": "principal",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "主要的；最重要的",
+        "definition": "More important than the others.",
+        "example": "The principal reason for the move was the cost.",
+        "collocations": [
+          "the principal reason",
+          "a principal concern"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "校长；负责人；本金；委托人",
+        "definition": "A head teacher or leading person, the original amount of a loan or investment, or someone represented by an agent.",
+        "example": "The principal welcomed the new pupils.",
+        "collocations": [
+          "a school principal",
+          "principal and interest"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:restriction",
+    "en": "restriction",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "限制；约束；限制规定",
+        "definition": "A rule or condition that limits what can be done.",
+        "example": "There are restrictions on parking near the school.",
+        "collocations": [
+          "travel restrictions",
+          "a restriction on"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:assignment",
+    "en": "assignment",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "任务；作业；分派；转让",
+        "definition": "A piece of work given to someone, the act of giving a role, or the legal transfer of a right.",
+        "example": "Our first assignment is to write a short report.",
+        "collocations": [
+          "a homework assignment",
+          "on assignment"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:workshop",
+    "en": "workshop",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "工作坊；研讨班；车间",
+        "definition": "A practical learning session, or a room where things are made or repaired.",
+        "example": "We attended a workshop on repairing bicycles.",
+        "collocations": [
+          "a writing workshop",
+          "a repair workshop"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:laboratory",
+    "en": "laboratory",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "实验室；研究室",
+        "definition": "A place equipped for scientific tests, research, or technical work.",
+        "example": "The samples were sent to a laboratory for testing.",
+        "collocations": [
+          "a research laboratory",
+          "laboratory equipment"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:auto",
+    "en": "auto",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "汽车（美式非正式）",
+        "definition": "A car, especially in informal American English.",
+        "example": "The town has several auto repair shops.",
+        "collocations": [
+          "the auto industry",
+          "auto insurance"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:romantic",
+    "en": "romantic",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "浪漫的；爱情的；不切实际的；浪漫主义的",
+        "definition": "Connected with love, idealized hopes, or an artistic style that values feeling and imagination.",
+        "example": "They had a romantic dinner beside the river.",
+        "collocations": [
+          "a romantic evening",
+          "romantic ideals"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "浪漫的人；浪漫主义者",
+        "definition": "Someone who values love or idealized hopes, or a follower of Romantic art and literature.",
+        "example": "He is a romantic who still writes handwritten love letters.",
+        "collocations": [
+          "a hopeless romantic",
+          "a true romantic"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:cotton",
+    "en": "cotton",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "棉花；棉布；棉线",
+        "definition": "A plant's soft white fibers, or cloth and thread made from them.",
+        "example": "This shirt is made from pure cotton.",
+        "collocations": [
+          "cotton fabric",
+          "a cotton shirt"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "领会；喜欢上（用于短语）",
+        "definition": "To begin to understand, as in cotton on, or begin to like something, as in cotton to.",
+        "example": "It took me a moment to cotton on to the joke.",
+        "collocations": [
+          "cotton on",
+          "cotton to"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:sue",
+    "en": "sue",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "起诉；控告",
+        "definition": "To bring a legal claim against someone, usually seeking money or another remedy.",
+        "example": "The customer sued the company over the faulty product.",
+        "collocations": [
+          "sue for damages",
+          "sue someone over"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:motor",
+    "en": "motor",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "发动机；马达",
+        "definition": "A machine that uses energy to produce movement.",
+        "example": "The electric motor drives the pump.",
+        "collocations": [
+          "an electric motor",
+          "a motor vehicle"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "机动车的；控制肌肉运动的",
+        "definition": "Related to vehicles or to the body's control of movement.",
+        "example": "The activity helps young children develop motor skills.",
+        "collocations": [
+          "motor skills",
+          "motor insurance"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "乘汽车行驶；迅速行进",
+        "definition": "To travel in a motor vehicle or move quickly and steadily.",
+        "example": "They motored along the coast all afternoon.",
+        "collocations": [
+          "motor along",
+          "motor through"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:overlook",
+    "en": "overlook",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "忽略；宽容；俯瞰",
+        "definition": "To fail to notice something, choose not to criticize a fault, or have a view over a place.",
+        "example": "We overlooked one important detail in the plan.",
+        "collocations": [
+          "overlook a mistake",
+          "overlook the sea"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:float",
+    "en": "float",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "漂浮；飘动；提出建议；发行上市",
+        "definition": "To stay on a liquid or in the air, suggest an idea, or offer a company's shares for public sale.",
+        "example": "She floated the idea of a shorter working week.",
+        "collocations": [
+          "float on water",
+          "float an idea"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "浮子；彩车；备用零钱；股票流通量",
+        "definition": "An object supporting things on water, a decorated parade vehicle, a shop's starting cash, or shares available to trade.",
+        "example": "A colorful float led the parade through town.",
+        "collocations": [
+          "a fishing float",
+          "a parade float"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:undergo",
+    "en": "undergo",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "经历；经受；接受治疗或检查",
+        "definition": "To experience a change, process, test, or treatment.",
+        "example": "The building is undergoing major repairs.",
+        "collocations": [
+          "undergo surgery",
+          "undergo a change"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:sequence",
+    "en": "sequence",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "顺序；一连串；片段；序列",
+        "definition": "The order of things, a connected series of events, or a section of a film or piece of music.",
+        "example": "Put the pictures in the correct sequence.",
+        "collocations": [
+          "a sequence of events",
+          "in sequence"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "按顺序排列；测定序列",
+        "definition": "To arrange things in order or find the order of parts in something such as DNA.",
+        "example": "The tasks are sequenced from easiest to hardest.",
+        "collocations": [
+          "sequence activities",
+          "sequence DNA"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:jet",
+    "en": "jet",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "喷气式飞机；喷射流；煤玉",
+        "definition": "An aircraft driven by jet engines, a narrow stream forced out under pressure, or a hard black stone.",
+        "example": "A jet of water shot from the broken pipe.",
+        "collocations": [
+          "a private jet",
+          "a jet of water"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "乘喷气式飞机旅行；喷射",
+        "definition": "To travel by jet aircraft or send out liquid or gas in a narrow fast stream.",
+        "example": "They jetted off to Madrid for the weekend.",
+        "collocations": [
+          "jet off",
+          "jet around the world"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:consumption",
+    "en": "consumption",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "消费；消耗；摄入量",
+        "definition": "The use of resources or goods, or the amount of food, drink, or energy used.",
+        "example": "The new lights reduce electricity consumption.",
+        "collocations": [
+          "energy consumption",
+          "food consumption"
+        ]
+      }
+    ],
+    "notes": "痨病是旧称，不放入现代消费/消耗学习主卡。"
+  },
+  {
+    "id": "adult:assert",
+    "en": "assert",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "断言；坚称；维护；表现自信",
+        "definition": "To state something firmly, insist on a right, or act confidently so others recognize your position.",
+        "example": "She asserted her right to speak at the meeting.",
+        "collocations": [
+          "assert a right",
+          "assert yourself"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:blade",
+    "en": "blade",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "刀刃；叶片；草叶；桨叶",
+        "definition": "The flat cutting part of a tool, a thin flat part of a machine, or a narrow leaf of grass.",
+        "example": "Be careful: the blade is very sharp.",
+        "collocations": [
+          "a razor blade",
+          "a blade of grass"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:temporary",
+    "en": "temporary",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "暂时的；临时的",
+        "definition": "Lasting for a limited time rather than permanently.",
+        "example": "We found temporary housing while the roof was repaired.",
+        "collocations": [
+          "a temporary job",
+          "a temporary solution"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "临时雇员",
+        "definition": "A worker hired for a short period, often to replace someone or handle extra work.",
+        "example": "The office hired two temporaries during the busy season.",
+        "collocations": [
+          "hire a temporary",
+          "temporary staff"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:cabin",
+    "en": "cabin",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "小木屋；船舱；飞机客舱",
+        "definition": "A small simple house, a room on a ship, or the passenger area of an aircraft.",
+        "example": "We stayed in a cabin beside the lake.",
+        "collocations": [
+          "a log cabin",
+          "cabin crew"
+        ]
+      }
+    ],
+    "removedPos": {
+      "v.": "原关在小屋为极少见旧文学动词，不属于当代常用词性；名词小屋、船舱和客舱均保留。"
+    }
+  },
+  {
+    "id": "adult:bite",
+    "en": "bite",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "咬；叮；产生不良影响",
+        "definition": "To cut or grip with teeth, let an insect break the skin, or begin to have a harmful effect.",
+        "example": "The dog tried to bite the toy.",
+        "collocations": [
+          "bite into",
+          "mosquitoes bite"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "一口；咬伤；叮伤；少量食物；刺激感",
+        "definition": "An act or wound from biting, a small amount of food, or a sharp, strong quality.",
+        "example": "She took a bite of the apple.",
+        "collocations": [
+          "a mosquito bite",
+          "a bite to eat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:edition",
+    "en": "edition",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "版；版本；一期；一届",
+        "definition": "A particular published form of a book or newspaper, or one occurrence of a repeated event.",
+        "example": "The new edition includes a chapter on climate change.",
+        "collocations": [
+          "a revised edition",
+          "a limited edition"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:pitch",
+    "en": "pitch",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "音高；推销介绍；球场；投球；沥青；程度",
+        "definition": "A sound's high or low level, a sales talk, a playing field, a throw, black road material, or a degree of intensity.",
+        "example": "She gave a short pitch for her business idea.",
+        "collocations": [
+          "a sales pitch",
+          "a football pitch"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "投掷；推销；搭帐篷；定调；倾斜",
+        "definition": "To throw, present an idea, put up a tent, aim at a level, or move sharply forward and down.",
+        "example": "We pitched our tent beside the river.",
+        "collocations": [
+          "pitch a tent",
+          "pitch an idea"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:pine",
+    "en": "pine",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "松树；松木",
+        "definition": "An evergreen tree with needle-like leaves, or its wood.",
+        "example": "The path winds through a forest of pine trees.",
+        "collocations": [
+          "a pine tree",
+          "pine furniture"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "苦苦思念；憔悴",
+        "definition": "To feel a strong, sad wish for someone or something, sometimes becoming weak as a result.",
+        "example": "He pined for home during his first month abroad.",
+        "collocations": [
+          "pine for",
+          "pine away"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:brilliant",
+    "en": "brilliant",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "杰出的；极聪明的；明亮的；极好的",
+        "definition": "Extremely clever or good, or shining with strong light or color.",
+        "example": "That is a brilliant idea for using the small space.",
+        "collocations": [
+          "a brilliant idea",
+          "brilliant sunshine"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:versus",
+    "en": "versus",
+    "author": "vocab_author_b",
+    "primaryPos": "prep.",
+    "senses": [
+      {
+        "pos": "prep.",
+        "zh": "对阵；与…相比；对抗",
+        "definition": "Used between opposing sides in a contest, legal case, or comparison.",
+        "example": "The debate focused on speed versus accuracy.",
+        "collocations": [
+          "quality versus quantity",
+          "team A versus team B"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:chef",
+    "en": "chef",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "专业厨师；主厨",
+        "definition": "A trained cook who works in a restaurant or similar place, especially the person in charge.",
+        "example": "The chef prepared a special meal for the guests.",
+        "collocations": [
+          "a head chef",
+          "a pastry chef"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:absolute",
+    "en": "absolute",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "完全的；绝对的；不受限制的",
+        "definition": "Complete, without exceptions, or not limited by anything else.",
+        "example": "The plan requires absolute trust between the partners.",
+        "collocations": [
+          "absolute silence",
+          "absolute power"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "绝对原则；绝对标准",
+        "definition": "Something accepted as always true or right without depending on circumstances.",
+        "example": "She questioned whether there are any moral absolutes.",
+        "collocations": [
+          "moral absolutes",
+          "an absolute standard"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:discrimination",
+    "en": "discrimination",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "歧视；区别对待；辨别力",
+        "definition": "Unfair treatment based on personal characteristics, or the ability to notice important differences.",
+        "example": "The policy aims to prevent discrimination at work.",
+        "collocations": [
+          "racial discrimination",
+          "discrimination against"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:offensive",
+    "en": "offensive",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "冒犯的；令人不快的；进攻的",
+        "definition": "Likely to upset or insult people, unpleasant to the senses, or intended for attacking.",
+        "example": "Several readers complained about the offensive joke.",
+        "collocations": [
+          "offensive language",
+          "an offensive weapon"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "进攻；攻势",
+        "definition": "A planned attack or organized effort to achieve an advantage.",
+        "example": "The army began a new offensive at dawn.",
+        "collocations": [
+          "launch an offensive",
+          "a publicity offensive"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:boom",
+    "en": "boom",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "繁荣；激增；轰鸣声；长臂杆",
+        "definition": "A rapid increase in activity, a deep loud sound, or a long support arm used on equipment.",
+        "example": "The town grew rapidly during the tourism boom.",
+        "collocations": [
+          "an economic boom",
+          "a loud boom"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "蓬勃发展；发出低沉巨响",
+        "definition": "To grow quickly and successfully, or make a deep loud sound.",
+        "example": "Online sales boomed during the holiday season.",
+        "collocations": [
+          "business is booming",
+          "a booming voice"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:appoint",
+    "en": "appoint",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "任命；指定；安排",
+        "definition": "To choose someone for a role or officially set a time or place.",
+        "example": "The board appointed her as the new director.",
+        "collocations": [
+          "appoint a manager",
+          "the appointed time"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:register",
+    "en": "register",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "登记；注册；显示读数；意识到",
+        "definition": "To record officially, sign up, show a measurement, or notice and understand something.",
+        "example": "I registered for the course online.",
+        "collocations": [
+          "register for a course",
+          "register a complaint"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "登记簿；收银机；语体；音域；寄存器",
+        "definition": "An official list, a device recording shop payments, a language style or voice range, or fast computer storage.",
+        "example": "The teacher checked the attendance register.",
+        "collocations": [
+          "an attendance register",
+          "a formal register"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:dominant",
+    "en": "dominant",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "占优势的；主导的；显性的",
+        "definition": "More powerful or important than others; in genetics, expressed when one copy of a gene form is present.",
+        "example": "The company has a dominant position in the market.",
+        "collocations": [
+          "a dominant role",
+          "a dominant gene"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:heritage",
+    "en": "heritage",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "文化遗产；传统；传承",
+        "definition": "Traditions, buildings, beliefs, or qualities passed down from earlier generations.",
+        "example": "The festival celebrates the town's cultural heritage.",
+        "collocations": [
+          "cultural heritage",
+          "a heritage site"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:successfully",
+    "en": "successfully",
+    "author": "vocab_author_b",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "成功地；顺利地",
+        "definition": "In a way that achieves the intended result.",
+        "example": "The team successfully completed the project on time.",
+        "collocations": [
+          "successfully complete",
+          "successfully manage"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:lemon",
+    "en": "lemon",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "柠檬；柠檬色；劣质货（非正式）",
+        "definition": "A yellow sour fruit, its color, or a product that has serious faults.",
+        "example": "I added a slice of lemon to the water.",
+        "collocations": [
+          "a slice of lemon",
+          "lemon juice"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:wander",
+    "en": "wander",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "漫步；游荡；走神；偏离",
+        "definition": "To move without a fixed direction, or let thoughts move away from the current subject.",
+        "example": "We wandered through the old streets after lunch.",
+        "collocations": [
+          "wander around",
+          "let your mind wander"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:submit",
+    "en": "submit",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "提交；呈送；屈服；主张（正式）",
+        "definition": "To send work for consideration, accept another's authority, or formally state a view.",
+        "example": "Please submit your application before Friday.",
+        "collocations": [
+          "submit an application",
+          "submit to pressure"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:naked",
+    "en": "naked",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "裸体的；赤裸的；无遮蔽的；公开的",
+        "definition": "Without clothes or a covering, or clearly shown without an attempt to hide it.",
+        "example": "The tiny stars were barely visible to the naked eye.",
+        "collocations": [
+          "the naked eye",
+          "naked ambition"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:economics",
+    "en": "economics",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "经济学；经济方面的因素",
+        "definition": "The study of how resources, money, and goods are produced and used, or the financial details of an activity.",
+        "example": "She studied economics before starting her own business.",
+        "collocations": [
+          "study economics",
+          "the economics of"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:anticipate",
+    "en": "anticipate",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "预料；期待；预先应对",
+        "definition": "To expect something, look forward to it, or act before a likely need or problem occurs.",
+        "example": "We anticipated heavy traffic and left early.",
+        "collocations": [
+          "anticipate a problem",
+          "eagerly anticipate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:nut",
+    "en": "nut",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "坚果；螺母；狂热爱好者（非正式）",
+        "definition": "A hard-shelled edible seed, a metal fastener screwed onto a bolt, or an enthusiastic fan of something.",
+        "example": "Add a handful of nuts to the salad.",
+        "collocations": [
+          "a wheel nut",
+          "a fitness nut"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:legacy",
+    "en": "legacy",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "遗产；遗留影响；遗赠",
+        "definition": "Something left by the past or a previous person, or money or property left in a will.",
+        "example": "The old factory left a legacy of pollution.",
+        "collocations": [
+          "a lasting legacy",
+          "leave a legacy"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "旧有的；遗留的",
+        "definition": "Still in use from an earlier period, especially a computer system that is difficult to replace.",
+        "example": "The team must connect the new app to a legacy system.",
+        "collocations": [
+          "a legacy system",
+          "legacy software"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:extension",
+    "en": "extension",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "延长；扩建部分；分机；扩展程序",
+        "definition": "Extra time or length, an added building section, a telephone connection, or software adding new features.",
+        "example": "She asked for an extension to the deadline.",
+        "collocations": [
+          "a deadline extension",
+          "a browser extension"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:shrug",
+    "en": "shrug",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "耸肩；表示无所谓",
+        "definition": "To raise and lower your shoulders to show doubt, lack of knowledge, or lack of concern.",
+        "example": "He shrugged when I asked what had happened.",
+        "collocations": [
+          "shrug your shoulders",
+          "shrug off"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "耸肩；短披肩",
+        "definition": "A movement of the shoulders showing doubt or indifference, or a short garment covering the shoulders.",
+        "example": "She answered with a shrug.",
+        "collocations": [
+          "give a shrug",
+          "a casual shrug"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:battery",
+    "en": "battery",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "电池；一组；炮兵连；殴打",
+        "definition": "A device storing electrical energy, a set of similar things, an artillery unit, or unlawful physical contact.",
+        "example": "The phone's battery needs charging.",
+        "collocations": [
+          "charge a battery",
+          "a battery of tests"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:arrival",
+    "en": "arrival",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "到达；抵达者；新出现之物",
+        "definition": "The act of reaching a place, someone who has just arrived, or the start of something new.",
+        "example": "Please call me on your arrival at the station.",
+        "collocations": [
+          "on arrival",
+          "a new arrival"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:legitimate",
+    "en": "legitimate",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "合法的；正当的；合理的；婚生的（旧式法律用语）",
+        "definition": "Allowed by law, fair or reasonable, or born to married parents in older legal language.",
+        "example": "You have a legitimate reason to ask for a refund.",
+        "collocations": [
+          "a legitimate concern",
+          "a legitimate business"
+        ],
+        "phonetic": "lɪˈdʒɪtɪmət"
+      },
+      {
+        "pos": "v.",
+        "zh": "使合法；使正当化（正式）",
+        "definition": "To make something lawful or show it as acceptable.",
+        "example": "The new law legitimated the existing arrangement.",
+        "collocations": [
+          "legitimate a claim",
+          "legitimate authority"
+        ],
+        "phonetic": "lɪˈdʒɪtɪmeɪt"
+      }
+    ],
+    "notes": "保留法律历史婚生义但明确语域，不作为评价儿童价值的用语。动词更常见的同义形式是 legitimize。"
+  },
+  {
+    "id": "adult:orientation",
+    "en": "orientation",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "方向；定位；倾向；入职或入学介绍",
+        "definition": "The direction something faces, awareness of position, a person's outlook, or an introduction to a new place or role.",
+        "example": "New students attend orientation before classes begin.",
+        "collocations": [
+          "a training orientation",
+          "sexual orientation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:inflation",
+    "en": "inflation",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "通货膨胀；充气；夸大",
+        "definition": "A general rise in prices over time, filling something with air, or making an amount seem larger.",
+        "example": "Rising inflation reduced what the same money could buy.",
+        "collocations": [
+          "price inflation",
+          "tire inflation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:cope",
+    "en": "cope",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "应付；处理；承受",
+        "definition": "To manage a difficult situation despite problems or pressure.",
+        "example": "She is learning to cope with the extra work.",
+        "collocations": [
+          "cope with stress",
+          "cope well"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:flame",
+    "en": "flame",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "火焰；强烈感情；旧情人；网络辱骂",
+        "definition": "The visible burning part of a fire, a strong feeling, a former lover, or an angry online message.",
+        "example": "A small flame appeared when he struck the match.",
+        "collocations": [
+          "an open flame",
+          "an old flame"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "燃烧；突然变红；在网上辱骂",
+        "definition": "To burn brightly, become red, or send an angry and insulting message online.",
+        "example": "The fire flamed up when the dry wood was added.",
+        "collocations": [
+          "flame up",
+          "flame someone online"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:cluster",
+    "en": "cluster",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "一簇；一群；集群",
+        "definition": "A close group of similar things, people, or connected computers.",
+        "example": "A cluster of houses stood beside the river.",
+        "collocations": [
+          "a cluster of stars",
+          "a computer cluster"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "聚集；使成群",
+        "definition": "To gather or arrange in close groups.",
+        "example": "People clustered around the noticeboard.",
+        "collocations": [
+          "cluster around",
+          "cluster together"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:dependent",
+    "en": "dependent",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "依赖的；取决于…的；成瘾的",
+        "definition": "Needing support, determined by another factor, or unable to stop using a substance.",
+        "example": "The trip is dependent on good weather.",
+        "collocations": [
+          "dependent on",
+          "financially dependent"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "受抚养者；家属（美式常用拼写）",
+        "definition": "Someone who relies on another person for financial support.",
+        "example": "The form asks how many dependents you have.",
+        "collocations": [
+          "a dependent child",
+          "support dependents"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:wound",
+    "en": "wound",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "伤口；创伤",
+        "definition": "An injury that breaks the skin or deeply hurts a person's feelings.",
+        "example": "The nurse cleaned the wound on his arm.",
+        "collocations": [
+          "a deep wound",
+          "heal a wound"
+        ],
+        "phonetic": "wuːnd"
+      },
+      {
+        "pos": "v.",
+        "zh": "使受伤；伤害感情",
+        "definition": "To injure someone physically or hurt their feelings deeply.",
+        "example": "His cruel words wounded her pride.",
+        "collocations": [
+          "seriously wounded",
+          "wound someone's feelings"
+        ],
+        "phonetic": "wuːnd"
+      }
+    ],
+    "notes": "本词条为伤口/受伤，读 wuːnd；相同拼写还可能是 wind 的过去式 wound，读 waʊnd，不应混用发音。"
+  },
+  {
+    "id": "adult:shower",
+    "en": "shower",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "淋浴；淋浴器；阵雨；一阵；送礼聚会",
+        "definition": "A wash under sprayed water, the device for it, a short rainfall, many things falling, or a gift-giving party.",
+        "example": "We had a brief shower of rain before lunch.",
+        "collocations": [
+          "take a shower",
+          "a baby shower"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "淋浴；倾注；大量给予",
+        "definition": "To wash under sprayed water, or give or fall in large amounts.",
+        "example": "Friends showered them with gifts after the wedding.",
+        "collocations": [
+          "shower with gifts",
+          "shower praise on"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:depict",
+    "en": "depict",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "描绘；描述",
+        "definition": "To show someone or something in a picture, story, or other form of representation.",
+        "example": "The painting depicts a busy street market.",
+        "collocations": [
+          "depict a scene",
+          "depict as"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:garage",
+    "en": "garage",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "车库；汽车修理厂；车房音乐",
+        "definition": "A building for keeping cars, a business repairing them, or a style of dance music.",
+        "example": "We keep the bicycles in the garage.",
+        "collocations": [
+          "a double garage",
+          "a repair garage"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "把车停入车库",
+        "definition": "To keep or put a vehicle in a garage.",
+        "example": "The car is garaged every night in winter.",
+        "collocations": [
+          "garage a car",
+          "be garaged"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:flesh",
+    "en": "flesh",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "肉；果肉；肉体",
+        "definition": "The soft parts of a body, the soft edible part of a fruit, or the human body as distinct from the mind.",
+        "example": "The peach had sweet, yellow flesh.",
+        "collocations": [
+          "fruit flesh",
+          "in the flesh"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "充实细节（用于 flesh out）",
+        "definition": "To add details so that a plan or idea becomes fuller and clearer.",
+        "example": "We need to flesh out the plan before presenting it.",
+        "collocations": [
+          "flesh out a plan",
+          "flesh out an idea"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:operator",
+    "en": "operator",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "操作员；运营者；接线员；运算符",
+        "definition": "Someone controlling a machine, a company running a service, a phone worker, or a symbol directing a calculation.",
+        "example": "The machine operator checks the equipment each morning.",
+        "collocations": [
+          "a tour operator",
+          "a machine operator"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:instructor",
+    "en": "instructor",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "教练；指导员；讲师",
+        "definition": "A person who teaches a practical skill or gives instruction in a subject.",
+        "example": "The swimming instructor showed us how to breathe.",
+        "collocations": [
+          "a driving instructor",
+          "a fitness instructor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:collapse",
+    "en": "collapse",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "倒塌；昏倒；崩溃；折叠",
+        "definition": "To fall down, suddenly become weak, fail completely, or fold into a smaller shape.",
+        "example": "The old roof collapsed during the storm.",
+        "collocations": [
+          "collapse under pressure",
+          "collapse a table"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "倒塌；昏倒；崩溃",
+        "definition": "A sudden fall, physical failure, or complete breakdown of a system or organization.",
+        "example": "The collapse of the bridge closed the road.",
+        "collocations": [
+          "an economic collapse",
+          "a sudden collapse"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:furthermore",
+    "en": "furthermore",
+    "author": "vocab_author_b",
+    "primaryPos": "adv.",
+    "senses": [
+      {
+        "pos": "adv.",
+        "zh": "而且；此外",
+        "definition": "Used to add another point that supports what has already been said.",
+        "example": "The room is too small; furthermore, it has no windows.",
+        "collocations": [
+          "and furthermore",
+          "furthermore it"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:mortgage",
+    "en": "mortgage",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "房产抵押贷款；抵押权",
+        "definition": "A loan secured by a house or other property, which the lender may take if payments are not made.",
+        "example": "They are still paying off the mortgage on their home.",
+        "collocations": [
+          "pay a mortgage",
+          "a mortgage payment"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "以房产抵押借款",
+        "definition": "To use a house or other property as security when borrowing money.",
+        "example": "They mortgaged their home to finance the new business.",
+        "collocations": [
+          "mortgage a house",
+          "mortgage property"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:comedy",
+    "en": "comedy",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "喜剧；喜剧作品；滑稽情景",
+        "definition": "Entertainment intended to make people laugh, or a situation that is amusing.",
+        "example": "We watched a comedy after dinner.",
+        "collocations": [
+          "a romantic comedy",
+          "a comedy show"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:sanction",
+    "en": "sanction",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "制裁；处罚；批准",
+        "definition": "A penalty used to enforce rules, often between countries, or official permission for an action.",
+        "example": "The project went ahead without official sanction.",
+        "collocations": [
+          "economic sanctions",
+          "official sanction"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "批准；制裁；处罚",
+        "definition": "To officially approve an action, or impose a penalty to enforce a rule.",
+        "example": "The committee sanctioned the use of the new equipment.",
+        "collocations": [
+          "sanction a plan",
+          "sanction a company"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:civilian",
+    "en": "civilian",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "平民；非军职人员",
+        "definition": "A person who is not serving in the armed forces, and in some contexts not a police officer or firefighter.",
+        "example": "Civilians were allowed to return to their homes.",
+        "collocations": [
+          "protect civilians",
+          "a civilian population"
+        ]
+      },
+      {
+        "pos": "adj.",
+        "zh": "平民的；民用的；非军事的",
+        "definition": "Connected with people or activities outside military service.",
+        "example": "The old airfield is now used for civilian flights.",
+        "collocations": [
+          "civilian life",
+          "civilian use"
+        ]
+      }
+    ],
+    "notes": "平民通常相对于军人；某些词典或机构语境还排除警察/消防人员，不宜将此额外界限写成所有语境的唯一规则。"
+  },
+  {
+    "id": "adult:humour",
+    "en": "humour",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "幽默；幽默感；心情",
+        "definition": "The quality of being funny or noticing funny things, or a person's mood.",
+        "example": "Her sense of humour helped everyone relax.",
+        "collocations": [
+          "a sense of humour",
+          "in good humour"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "迁就；顺着…的意思",
+        "definition": "To agree with someone's wishes or ideas to keep them happy, even when you do not share them.",
+        "example": "I humoured him and listened to the whole story.",
+        "collocations": [
+          "humour someone",
+          "humour a request"
+        ]
+      }
+    ],
+    "notes": "英式拼写；与美式 humor 的名词和动词内容保持一致。"
+  },
+  {
+    "id": "adult:weekly",
+    "en": "weekly",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "每周的；一周一次的",
+        "definition": "Happening or produced once a week, or relating to one week.",
+        "example": "We have a weekly meeting on Monday.",
+        "collocations": [
+          "a weekly meeting",
+          "weekly pay"
+        ]
+      },
+      {
+        "pos": "adv.",
+        "zh": "每周；一周一次地",
+        "definition": "Once each week or every week.",
+        "example": "The newsletter is published weekly.",
+        "collocations": [
+          "meet weekly",
+          "paid weekly"
+        ]
+      },
+      {
+        "pos": "n.",
+        "zh": "周刊；周报",
+        "definition": "A newspaper or magazine published once each week.",
+        "example": "She writes a column for the local weekly.",
+        "collocations": [
+          "a local weekly",
+          "a news weekly"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:habitat",
+    "en": "habitat",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "栖息地；生长环境",
+        "definition": "The natural place and conditions in which an animal or plant lives.",
+        "example": "The wetland is an important habitat for birds.",
+        "collocations": [
+          "natural habitat",
+          "habitat loss"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:grain",
+    "en": "grain",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "谷物；谷粒；颗粒；木纹；纹理",
+        "definition": "Seeds used as food, a tiny piece of material, or the natural lines and texture in wood or other substances.",
+        "example": "Brush the wood in the direction of the grain.",
+        "collocations": [
+          "a grain of rice",
+          "whole grain"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:consciousness",
+    "en": "consciousness",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "意识；知觉；觉察",
+        "definition": "The state of being awake and aware, or knowledge of a particular issue.",
+        "example": "He regained consciousness a few minutes after the fall.",
+        "collocations": [
+          "lose consciousness",
+          "public consciousness"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:devote",
+    "en": "devote",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "投入；奉献；专用于",
+        "definition": "To give time, effort, or resources to a person, purpose, or activity.",
+        "example": "She devotes an hour each evening to reading.",
+        "collocations": [
+          "devote time to",
+          "devote yourself to"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:measurement",
+    "en": "measurement",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "测量；尺寸；测量结果",
+        "definition": "The act of finding a size or amount, or the result obtained.",
+        "example": "Check the measurements before ordering the curtains.",
+        "collocations": [
+          "take measurements",
+          "an accurate measurement"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:province",
+    "en": "province",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "省；职责范围；领域",
+        "definition": "A large administrative area in some countries, or a field of activity or responsibility.",
+        "example": "This decision is outside the province of our team.",
+        "collocations": [
+          "a coastal province",
+          "the province of"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:ease",
+    "en": "ease",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "轻松；自在；容易",
+        "definition": "The state of feeling relaxed, or lack of difficulty in doing something.",
+        "example": "She solved the problem with ease.",
+        "collocations": [
+          "at ease",
+          "with ease"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "减轻；缓和；小心移动",
+        "definition": "To make something less painful or difficult, become less severe, or move something gently.",
+        "example": "A short walk helped ease the tension.",
+        "collocations": [
+          "ease the pain",
+          "ease into"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:seize",
+    "en": "seize",
+    "author": "vocab_author_b",
+    "primaryPos": "v.",
+    "senses": [
+      {
+        "pos": "v.",
+        "zh": "抓住；夺取；没收；把握机会",
+        "definition": "To take hold suddenly, take control by force or law, or quickly use an opportunity.",
+        "example": "She seized the chance to ask a question.",
+        "collocations": [
+          "seize an opportunity",
+          "seize control"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:ethics",
+    "en": "ethics",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "道德规范；伦理学",
+        "definition": "Principles about right and wrong behavior, or the study of those principles.",
+        "example": "The course explores ethics in medical research.",
+        "collocations": [
+          "professional ethics",
+          "business ethics"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:permission",
+    "en": "permission",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "许可；准许",
+        "definition": "Approval allowing someone to do something.",
+        "example": "You need permission before using these photographs.",
+        "collocations": [
+          "ask permission",
+          "without permission"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:wise",
+    "en": "wise",
+    "author": "vocab_author_b",
+    "primaryPos": "adj.",
+    "senses": [
+      {
+        "pos": "adj.",
+        "zh": "明智的；有智慧的；知情的（非正式）",
+        "definition": "Able to make good judgments, or aware of someone's intentions when used with to.",
+        "example": "It was wise to keep a spare key.",
+        "collocations": [
+          "a wise decision",
+          "wise to a trick"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:summit",
+    "en": "summit",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "山顶；顶峰；首脑会议",
+        "definition": "The highest point of a mountain or achievement, or a meeting between leaders.",
+        "example": "They reached the summit just before sunrise.",
+        "collocations": [
+          "a mountain summit",
+          "an international summit"
+        ]
+      },
+      {
+        "pos": "v.",
+        "zh": "登上山顶",
+        "definition": "To reach the highest point of a mountain.",
+        "example": "The climbers hope to summit before noon.",
+        "collocations": [
+          "summit a mountain",
+          "summit successfully"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "adult:actress",
+    "en": "actress",
+    "author": "vocab_author_b",
+    "primaryPos": "n.",
+    "senses": [
+      {
+        "pos": "n.",
+        "zh": "女演员",
+        "definition": "A woman whose job is to perform characters in films, plays, or television.",
+        "example": "The actress answered questions after the performance.",
+        "collocations": [
+          "a leading actress",
+          "a stage actress"
+        ]
+      }
+    ],
+    "notes": "Actress 是仍在使用的女性职业称呼；actor 也可作为不区分性别的称呼。"
+  }
+]

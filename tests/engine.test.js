@@ -16,7 +16,23 @@ import {
   levelMastery, canGraduate, wordsToGraduation, nextLevelId, isGraduationPassed,
   BOX_INTERVALS_DAYS, MAX_BOX, MASTERED_BOX, WRONG_BOOK_CLEAR_STARS, QUIZ_MODES, DAY_MS,
   GRADUATION_THRESHOLD, GRADUATION_PASS_CORRECT,
+  formatDefinition,
 } from '../js/engine.js';
+
+test('英英释义展示：统一首字母小写、句末无句号，专名与缩写保持原样', () => {
+  assert.equal(formatDefinition('To make something new.'), 'to make something new');
+  assert.equal(formatDefinition('A mother or father'), 'a mother or father');
+  assert.equal(formatDefinition('An outdoor place.'), 'an outdoor place');
+  assert.equal(formatDefinition('used to join words'), 'used to join words');
+  assert.equal(formatDefinition('I or me in formal use'), 'I or me in formal use');
+  assert.equal(formatDefinition('TV programmes for children'), 'TV programmes for children');
+  assert.equal(formatDefinition('American English for trousers.'), 'American English for trousers');
+  assert.equal(formatDefinition('a unit used in the U.S.'), 'a unit used in the U.S.');
+  assert.equal(formatDefinition('fruit, vegetables, etc.'), 'fruit, vegetables, etc.');
+  assert.equal(formatDefinition('the story continues...'), 'the story continues...');
+  assert.equal(formatDefinition('  '), '');
+  assert.equal(formatDefinition(undefined), '');
+});
 
 // 可复现的伪随机数生成器
 function seededRng(seed = 42) {
