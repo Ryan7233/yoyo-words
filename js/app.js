@@ -41,10 +41,16 @@ let activeRecognition = null;
 let speechRunId = 0;
 let activeUtterance = null;
 
+// 返回 true 表示刚取消了正在朗读或排队的语音。iOS Safari 在 cancel() 后立刻 speak()
+// 会把新的一句静默丢掉，调用方需要稍等再开始。
 function stopSpeech() {
   speechRunId += 1;
   activeUtterance = null;
-  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  if (!('speechSynthesis' in window)) return false;
+  let busy = false;
+  try { busy = speechSynthesis.speaking || speechSynthesis.pending; } catch { busy = false; }
+  speechSynthesis.cancel();
+  return busy;
 }
 
 function clearViewAsync() {
@@ -68,7 +74,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v30';
+const APP_VERSION = 'v31';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -159,12 +165,16 @@ function deviceVoices() {
   try { return speechSynthesis.getVoices(); } catch { return []; }
 }
 
-function utteranceFor(part) {
+// 本次打开期间，开口失败过的音色（iOS 上列出来的高级音色可能在网页里不出声），之后直接用系统默认声音
+const silentVoices = new Set();
+// useVoice=false 时只设语言、交给系统默认声音：用于第一次没开口时重试。
+function utteranceFor(part, useVoice = true) {
   const lang = part.lang || 'en-GB';
   const text = String(part.text || '').trim();
   const utterance = new SpeechSynthesisUtterance(text);
   const preferred = lang.toLowerCase().startsWith('en') ? (state.speechVoice || 'auto') : 'auto';
-  const voice = selectVoice(deviceVoices(), lang, preferred);
+  const picked = useVoice ? selectVoice(deviceVoices(), lang, preferred) : null;
+  const voice = picked && !silentVoices.has(picked.voiceURI || picked.name) ? picked : null;
   if (voice) {
     utterance.voice = voice;
     utterance.lang = voice.lang || lang;
@@ -187,22 +197,29 @@ function speak(text, lang = 'en-GB', options = {}) {
 }
 
 // 连续朗读多段（如英文单词 + 中文释义），给不识字的小朋友"听懂"用
+// 新版 iOS 上有两类“点了没声音”：cancel() 后立刻 speak() 被丢弃；或系统列出的高级音色
+// 网页其实用不了。这里先唤醒可能被挂起的引擎；若一句话迟迟没开始，就改用系统默认声音重试一次。
+const SPEECH_START_TIMEOUT = 1500;
 function speakSeq(parts) {
   if (!('speechSynthesis' in window)) return;
   const queue = parts.filter((part) => String(part?.text || '').trim());
   if (!queue.length) return;
-  stopSpeech();
+  const wasBusy = stopSpeech();
   const runId = speechRunId;
 
-  const play = (index) => {
+  // retried=true：这一句第一次没开口，第二次只用系统默认声音再试一次，仍不行就跳过
+  const play = (index, retried = false) => {
     if (runId !== speechRunId || index >= queue.length) return;
     const part = queue[index];
-    const utterance = utteranceFor(part);
+    const utterance = utteranceFor(part, !retried);
     activeUtterance = utterance; // 防止部分 Safari 在朗读结束前回收对象
     let settled = false;
+    let started = false;
+    let watchdog = null;
     const finish = () => {
       if (settled) return;
       settled = true;
+      window.clearTimeout(watchdog);
       if (runId !== speechRunId) return;
       const next = queue[index + 1];
       const changedLanguage = next && (part.lang || 'en-GB').slice(0, 2) !== (next.lang || 'en-GB').slice(0, 2);
@@ -211,11 +228,27 @@ function speakSeq(parts) {
         : changedLanguage ? 320 : 190;
       window.setTimeout(() => play(index + 1), pause);
     };
+    utterance.onstart = () => { started = true; };
     utterance.onend = finish;
     utterance.onerror = finish;
-    speechSynthesis.speak(utterance);
+    try {
+      if (speechSynthesis.paused) speechSynthesis.resume();
+      speechSynthesis.speak(utterance);
+    } catch {
+      finish();
+      return;
+    }
+    watchdog = window.setTimeout(() => {
+      if (started || settled || runId !== speechRunId) return;
+      settled = true; // 旧句子被取消时触发的 onerror 不能推进队列
+      speechSynthesis.cancel();
+      if (utterance.voice) silentVoices.add(utterance.voice.voiceURI || utterance.voice.name);
+      window.setTimeout(() => play(retried ? index + 1 : index, !retried), 80);
+    }, SPEECH_START_TIMEOUT);
   };
-  play(0);
+  // 有语音被打断时稍等再开始；否则同步开始，保留用户点击带来的播放许可。
+  if (wasBusy) window.setTimeout(() => play(0), 60);
+  else play(0);
 }
 
 // 语速 + 音色：允许家长在这台设备上试听并固定最自然的声音。
