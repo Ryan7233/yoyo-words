@@ -1,9 +1,14 @@
 // ✍️ 手写默写：词单解析、每个词走哪几步、结果汇总。纯逻辑，便于在 Node 里测试。
 // 新词：看 → 读 → 盖住 → 写 → 对照；复习词：只听读音 → 写 → 对照。
 // 写错了就回到“看”再写一次，不扣分；写两次还不对可以先跳过，下次再练。
+// 听写（selfCheck: false，花园的周末小听写）：只听写一遍、不翻开对照，交给家长判对错。
+// 每个词第一次写的笔迹会带回花园，家长确认时能看到。
 
 export const DICTATION_MAX_WORDS = 15;
 export const DICTATION_SKIP_AFTER = 2;
+/** 笔迹缩略图：宽 320 像素的 JPEG，单张一般十几 KB */
+export const INK_WIDTH = 320;
+const INK_MAX_LENGTH = 200_000;
 
 // 花园 ↔ 默写页之间的消息类型（同源 iframe + postMessage）
 export const MSG_READY = 'yoyo-dictation:ready';
@@ -64,8 +69,22 @@ export function recordCheck(results, word, ok) {
     firstTry: prev ? prev.firstTry : ok,
     done: ok,
     skipped: false,
+    checkedBy: 'self',
   };
   return [...results.filter((r) => r.word !== word.word), entry];
+}
+
+/** 听写：只记写过了，对错等家长判 */
+export function recordWritten(results, word) {
+  const entry = { word: word.word, kind: word.kind, attempts: 1, firstTry: false, done: false, skipped: false, checkedBy: 'none' };
+  return [...results.filter((r) => r.word !== word.word), entry];
+}
+
+/** 只留第一次写的笔迹（看她一开始会不会写） */
+export function keepFirstInk(inks, word, dataUrl) {
+  if (inks.has(word) || typeof dataUrl !== 'string') return inks;
+  if (!dataUrl.startsWith('data:image/') || dataUrl.length > INK_MAX_LENGTH) return inks;
+  return new Map(inks).set(word, dataUrl);
 }
 
 /** 写了两次还没写对，可以先跳过 */
@@ -78,17 +97,20 @@ export function markSkipped(results, word) {
   return results.map((r) => (r.word === word.word ? { ...r, skipped: true } : r));
 }
 
-export function summarizeDictation(items, results) {
+export function summarizeDictation(items, results, inks = new Map()) {
   const byWord = new Map(results.map((r) => [r.word, r]));
   const words = items.map((item) => {
     const r = byWord.get(item.word);
-    return {
+    const out = {
       word: item.word,
       kind: item.kind,
       firstTry: !!r?.firstTry,
       done: !!r?.done,
       attempts: r?.attempts || 0,
+      checkedBy: r?.checkedBy || 'self',
     };
+    if (inks.has(item.word)) out.ink = inks.get(item.word);
+    return out;
   });
   return {
     total: words.length,

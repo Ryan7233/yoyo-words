@@ -75,7 +75,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v32';
+const APP_VERSION = 'v33';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {

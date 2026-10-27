@@ -61,14 +61,15 @@ function post(message) {
 }
 
 let started = false;
-function start(rawItems, finishLabel) {
+function start(rawItems, finishLabel, selfCheck = true) {
   const items = enrich(normalizeItems(rawItems));
   if (!items.length) return showEmpty();
   started = true;
   mountDictation(root, {
     items,
     speak,
-    title: '✍️ 今日默写',
+    title: selfCheck ? '✍️ 今日默写' : '📝 小听写',
+    selfCheck,
     finishLabel: finishLabel || (embedded ? '🌷 回花园' : '完成'),
     onFinish(summary) {
       post({ type: MSG_RESULT, summary, at: new Date().toISOString() });
@@ -100,7 +101,7 @@ window.addEventListener('message', (event) => {
   if (event.origin !== location.origin || event.source !== window.parent) return;
   const data = event.data;
   if (!data || data.type !== MSG_START || started) return;
-  start(data.items, data.finishLabel);
+  start(data.items, data.finishLabel, data.selfCheck !== false);
 });
 
 const fromHash = parseHashItems(location.hash);

@@ -89,7 +89,7 @@ function makeResponse({
 
 test('service worker lifecycle waits for activation and only deletes its own old caches', async () => {
   const { listeners, state } = loadWorker({
-    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26', 'yoyo-words-v27', 'yoyo-words-v28', 'yoyo-words-v29', 'yoyo-words-v30', 'yoyo-words-v31', 'yoyo-words-v32', 'another-app-v9', 'shared-cache'],
+    cacheKeys: ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26', 'yoyo-words-v27', 'yoyo-words-v28', 'yoyo-words-v29', 'yoyo-words-v30', 'yoyo-words-v31', 'yoyo-words-v32', 'yoyo-words-v33', 'another-app-v9', 'shared-cache'],
   });
 
   let installWork;
@@ -97,8 +97,8 @@ test('service worker lifecycle waits for activation and only deletes its own old
   await installWork;
   assert.equal(state.skipWaiting, 1);
   assert.ok(state.addedAssets.includes('./index.html'));
-  assert.ok(state.addedAssets.includes('./css/style.css?v=32'));
-  assert.ok(state.addedAssets.includes('./js/app.js?v=32'));
+  assert.ok(state.addedAssets.includes('./css/style.css?v=33'));
+  assert.ok(state.addedAssets.includes('./js/app.js?v=33'));
   assert.ok(state.addedAssets.includes('./dictation.html'));
   assert.ok(state.addedAssets.includes('./js/dictation-core.js'));
   assert.ok(state.addedAssets.includes('./js/speech.js'));
@@ -107,7 +107,7 @@ test('service worker lifecycle waits for activation and only deletes its own old
   let activateWork;
   listeners.activate({ waitUntil: (promise) => { activateWork = promise; } });
   await activateWork;
-  assert.deepEqual(state.deleted, ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26', 'yoyo-words-v27', 'yoyo-words-v28', 'yoyo-words-v29', 'yoyo-words-v30', 'yoyo-words-v31']);
+  assert.deepEqual(state.deleted, ['yoyo-words-v14', 'yoyo-words-v21', 'yoyo-words-v22', 'yoyo-words-v23', 'yoyo-words-v24', 'yoyo-words-v25', 'yoyo-words-v26', 'yoyo-words-v27', 'yoyo-words-v28', 'yoyo-words-v29', 'yoyo-words-v30', 'yoyo-words-v31', 'yoyo-words-v32']);
   assert.equal(state.claimed, 1);
 });
 

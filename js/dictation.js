@@ -1,8 +1,9 @@
 // ✍️ 手写默写界面：上面看词 / 听词，下面在 iPad 上用手指或 Apple Pencil 直接写。
-// 不做手写识别：写完翻开对照，孩子自己点“写对了 / 再写一次”。
+// 不做手写识别：写完翻开对照，孩子自己点“写对了 / 再写一次”；每个词第一次写的笔迹交回花园给家长看。
+// selfCheck: false（周末小听写）：只听写、不翻开对照，对错由家长判。
 // 主应用（Words 里的默写模式）和 dictation.html（花园里全屏打开）共用这一个组件。
 import {
-  firstStage, recordCheck, canSkip, markSkipped, summarizeDictation,
+  firstStage, recordCheck, recordWritten, keepFirstInk, canSkip, markSkipped, summarizeDictation, INK_WIDTH,
 } from './dictation-core.js';
 
 function escapeHtml(value) {
@@ -71,7 +72,9 @@ export function createPad(canvas) {
   canvas.addEventListener('pointermove', (e) => {
     if (!drawing || e.pointerId !== drawing.id) return;
     e.preventDefault();
-    const events = e.getCoalescedEvents?.() || [e];
+    // 有的浏览器（以及脚本派发的事件）返回空列表，这时至少画当前这一点
+    const coalesced = e.getCoalescedEvents?.();
+    const events = coalesced && coalesced.length ? coalesced : [e];
     for (const ev of events) {
       const p = point(ev);
       ctx.lineWidth = lineWidth(ev);
@@ -97,6 +100,18 @@ export function createPad(canvas) {
     },
     isEmpty: () => strokes === 0,
     lock(value) { locked = value; drawing = null; },
+    /** 笔迹缩略图（白底 JPEG）；画布是透明的，直接转 JPEG 会变黑 */
+    snapshot() {
+      if (!strokes || !canvas.width) return null;
+      const out = document.createElement('canvas');
+      out.width = INK_WIDTH;
+      out.height = Math.round((canvas.height / canvas.width) * INK_WIDTH);
+      const c = out.getContext('2d');
+      c.fillStyle = '#fff';
+      c.fillRect(0, 0, out.width, out.height);
+      c.drawImage(canvas, 0, 0, out.width, out.height);
+      try { return out.toDataURL('image/jpeg', 0.6); } catch { return null; }
+    },
   };
 }
 
@@ -104,13 +119,15 @@ export function createPad(canvas) {
  * 挂载默写流程。
  * @param {HTMLElement} root
  * @param {{ items: Array, speak: (text: string) => void, onFinish: (summary) => void,
- *           onExit: () => void, finishLabel?: string, title?: string }} options
+ *           onExit: () => void, finishLabel?: string, title?: string, selfCheck?: boolean }} options
  */
 export function mountDictation(root, options) {
   const { items, speak, onFinish, onExit } = options;
   const finishLabel = options.finishLabel || '完成';
   const title = options.title || '✍️ 默写';
+  const selfCheck = options.selfCheck !== false;
   let results = [];
+  let inks = new Map();
   let idx = 0;
   let stage = null;
   let pad = null;
@@ -135,13 +152,13 @@ export function mountDictation(root, options) {
         <div class="big-emoji">✍️</div>
         <h2>今天默写 ${items.length} 个词</h2>
         <p class="subtitle">${parts}</p>
-        <ol class="dict-steps">
+        ${selfCheck ? `<ol class="dict-steps">
           <li><b>看</b>看清楚这个词</li>
           <li><b>读</b>听一听，跟着读</li>
           <li><b>盖</b>把它盖住</li>
           <li><b>写</b>在下面的格子里写出来</li>
           <li><b>查</b>翻开对一对</li>
-        </ol>
+        </ol>` : '<p class="subtitle">听一听，在格子里写下来。写完交给爸爸妈妈批改，这次不用自己对答案。</p>'}
         <button class="btn" data-act="start">开始 →</button>
       </div>`));
     bind();
@@ -179,7 +196,7 @@ export function mountDictation(root, options) {
       look: '<button class="btn" data-act="cover">我记住了，盖住它 🙈</button>',
       write: `<div class="dict-row">
           <button class="btn secondary" data-act="clear">🧽 擦掉重写</button>
-          <button class="btn" data-act="written" disabled>写好了，翻开 👀</button>
+          <button class="btn" data-act="written" disabled>${selfCheck ? '写好了，翻开 👀' : (idx + 1 < items.length ? '写好了，下一个 →' : '写好了，交卷 ✋')}</button>
         </div>`,
       check: `<div class="dict-row">
           <button class="btn secondary" data-act="again">🔁 再写一次</button>
@@ -227,7 +244,18 @@ export function mountDictation(root, options) {
   }
 
   function showDone() {
-    const summary = summarizeDictation(items, results);
+    const summary = summarizeDictation(items, results, inks);
+    if (!selfCheck) {
+      root.replaceChildren(el(`
+        <div class="dictation dict-done result">
+          <div class="big-emoji">✋</div>
+          <h2>写完啦！</h2>
+          <p class="subtitle">${summary.total} 个词都写好了，交给爸爸妈妈批改吧。</p>
+          <button class="btn" data-act="finish">${escapeHtml(finishLabel)}</button>
+        </div>`));
+      bind(summary);
+      return;
+    }
     const praise = summary.firstTry === summary.total
       ? '一次全写对，太厉害啦！🏆'
       : summary.done === summary.total ? '全部写对啦，坚持就是胜利！💪' : '写过就会记得更牢 🌱';
@@ -268,7 +296,11 @@ export function mountDictation(root, options) {
           case 'say': return speak(item.word);
           case 'cover': pad.clear(); return go('write');
           case 'clear': return pad.clear();
-          case 'written': return go('check');
+          case 'written':
+            inks = keepFirstInk(inks, item.word, pad.snapshot());
+            if (selfCheck) return go('check');
+            results = recordWritten(results, item);
+            return nextWord();
           case 'ok':
             results = recordCheck(results, item, true);
             speak('Well done!');

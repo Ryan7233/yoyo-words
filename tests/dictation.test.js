@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import {
-  normalizeItems, parseHashItems, firstStage, recordCheck, canSkip, markSkipped,
+  normalizeItems, parseHashItems, firstStage, recordCheck, recordWritten, keepFirstInk, canSkip, markSkipped,
   summarizeDictation, DICTATION_MAX_WORDS,
 } from '../js/dictation-core.js';
 
@@ -34,13 +34,26 @@ test('对照：第一次写对才算一次写对；写错两次可以跳过', ()
   assert.deepEqual(summary, {
     total: 2, firstTry: 1, done: 1,
     words: [
-      { word: 'sunny', kind: 'new', firstTry: true, done: true, attempts: 1 },
-      { word: 'hot', kind: 'new', firstTry: false, done: false, attempts: 2 },
+      { word: 'sunny', kind: 'new', firstTry: true, done: true, attempts: 1, checkedBy: 'self' },
+      { word: 'hot', kind: 'new', firstTry: false, done: false, attempts: 2, checkedBy: 'self' },
     ],
   });
   // 写错后再写对：完成，但不算一次写对
   const fixed = recordCheck(recordCheck([], hot, false), hot, true);
-  assert.deepEqual(summarizeDictation([hot], fixed).words[0], { word: 'hot', kind: 'new', firstTry: false, done: true, attempts: 2 });
+  assert.deepEqual(summarizeDictation([hot], fixed).words[0], { word: 'hot', kind: 'new', firstTry: false, done: true, attempts: 2, checkedBy: 'self' });
+});
+
+test('听写：只记写过，对错留给家长；笔迹只留第一次、只收图片', () => {
+  const hot = { word: 'hot', kind: 'review' };
+  const results = recordWritten([], hot);
+  let inks = keepFirstInk(new Map(), 'hot', 'data:image/jpeg;base64,AAA');
+  inks = keepFirstInk(inks, 'hot', 'data:image/jpeg;base64,BBB');
+  inks = keepFirstInk(inks, 'jump', 'javascript:alert(1)');
+  inks = keepFirstInk(inks, 'sun', `data:image/jpeg;base64,${'A'.repeat(300_000)}`);
+  assert.deepEqual([...inks.keys()], ['hot']);
+  assert.deepEqual(summarizeDictation([hot], results, inks).words[0], {
+    word: 'hot', kind: 'review', firstTry: false, done: false, attempts: 1, checkedBy: 'none', ink: 'data:image/jpeg;base64,AAA',
+  });
 });
 
 test('默写页只接受同源父页面的消息，并且不读写 Words 进度', async () => {
