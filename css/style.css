@@ -14,6 +14,8 @@
   --ball-hi: #ffb3d1;
   --ball-mid: #ff6fa5;
   --ball-dark: #d94f86;
+  /* 只给 iPad 用：内容列宽度，横屏竖屏都放得下 */
+  --app-max: 760px;
 }
 
 /* 弟弟 Kiwi 的蓝色主题 */
@@ -87,7 +89,7 @@ textarea {
 }
 
 #app {
-  max-width: 480px;
+  max-width: var(--app-max);
   margin: 0 auto;
   min-height: 100dvh;
   padding: calc(env(safe-area-inset-top) + 16px) 20px calc(env(safe-area-inset-bottom) + 24px);
@@ -1193,8 +1195,8 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
 .adult-learn .learn-nav {
   position: fixed;
   z-index: 1000;
-  left: max(16px, calc((100vw - 480px) / 2 + 16px));
-  right: max(16px, calc((100vw - 480px) / 2 + 16px));
+  left: max(16px, calc((100vw - var(--app-max)) / 2 + 16px));
+  right: max(16px, calc((100vw - var(--app-max)) / 2 + 16px));
   bottom: calc(10px + env(safe-area-inset-bottom));
   width: auto;
   padding: 10px;
@@ -1608,17 +1610,6 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   border-radius: 12px;
 }
 
-@media (max-width: 380px) {
-  .profile-card.theme-sage { grid-template-columns: auto 1fr; }
-  .profile-card.theme-sage .pstars { grid-column: 2; grid-row: 3; justify-self: start; }
-  .adult-routes { grid-template-columns: 1fr 1fr; }
-  .adult-meaning { font-size: 20px; }
-  .flashcard.adult-flashcard { padding: 24px 13px 20px; }
-  .adult-learning-block { padding: 11px 12px; }
-  .adult-part { grid-template-columns: 78px 1fr; gap: 8px; }
-  .adult-related-list { grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
@@ -1631,4 +1622,143 @@ h1 { font-size: 26px; margin: 8px 0 2px; }
   .confetti {
     display: none;
   }
+}
+
+/* —— iPad：列变宽以后，按钮、选项和字母块跟着放大，适合手指点 —— */
+h1 { font-size: 30px; }
+.subtitle { font-size: 17px; }
+.btn { font-size: 20px; min-height: 72px; }
+.topbar .title { font-size: 21px; }
+.icon-btn { width: 52px; height: 52px; font-size: 22px; }
+.options:not(.pics) { grid-template-columns: repeat(2, 1fr); }
+.option { font-size: 22px; min-height: 76px; }
+.mode-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.mode-btn { font-size: 19px; min-height: 84px; }
+.mode-btn span { font-size: 14px; }
+.slot { width: 52px; height: 60px; font-size: 32px; }
+.tile { min-width: 60px; min-height: 64px; font-size: 30px; }
+.flashcard .en { font-size: 48px; }
+.flashcard .zh { font-size: 26px; }
+
+/* —— ✍️ 手写默写：上面看词 / 听词，下面四线格里写 —— */
+.dictation { display: flex; flex-direction: column; min-height: calc(100dvh - 40px); }
+.dict-progress { min-width: 52px; text-align: right; font-weight: 800; color: var(--ink-soft); }
+.dict-intro { text-align: center; }
+.dict-intro .big-emoji { font-size: 72px; }
+.dict-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 26px;
+  list-style: none;
+  counter-reset: step;
+}
+.dict-steps li {
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 14px 8px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.dict-steps b { display: block; font-size: 26px; color: var(--pink); }
+.dict-layout { flex: 1; display: grid; grid-template-rows: auto 1fr; gap: 14px; }
+.dict-card {
+  background: var(--card);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding: 22px 20px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.dict-card.cover { background: linear-gradient(135deg, #fff4fa, #f1eaff); }
+.dict-emoji { font-size: 64px; line-height: 1.1; }
+.dict-cover { font-size: 76px; line-height: 1.1; }
+.dict-word {
+  font-family: "Chalkboard SE", "Comic Sans MS", -apple-system, sans-serif;
+  font-size: 68px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.dict-zh { font-size: 20px; color: var(--ink-soft); font-weight: 700; }
+.dict-letters { display: flex; gap: 8px; justify-content: center; }
+.dict-letters span {
+  min-width: 44px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #f3ecff;
+  font-size: 26px;
+  font-weight: 800;
+}
+.dict-bottom { display: flex; flex-direction: column; gap: 10px; }
+.dict-pad {
+  position: relative;
+  flex: 1;
+  min-height: 260px;
+  background: #fffdf7;
+  border-radius: 28px;
+  box-shadow: var(--shadow), inset 0 0 0 3px #efe3ff;
+  overflow: hidden;
+}
+.dict-pad canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* 写字时不滚动页面、不缩放 */
+  touch-action: none;
+}
+.dict-pad.resting canvas { pointer-events: none; }
+/* 英语四线三格：第三条线是基线，颜色深一点 */
+.dict-guides { position: absolute; inset: 14% 4%; pointer-events: none; }
+.dict-guides i { position: absolute; left: 0; right: 0; border-top: 2px dashed #d9c9ff; }
+.dict-guides i:nth-child(1) { top: 0; border-top-style: solid; }
+.dict-guides i:nth-child(2) { top: 33.3%; }
+.dict-guides i:nth-child(3) { top: 66.6%; border-top: 3px solid #f2a7c8; }
+.dict-guides i:nth-child(4) { top: 100%; border-top-style: solid; }
+.dict-pad-tip {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 18px;
+  font-weight: 700;
+  background: rgba(255, 253, 247, 0.72);
+}
+.dict-row { display: flex; gap: 12px; }
+.dict-row .btn { flex: 1; }
+.dict-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 24px;
+  list-style: none;
+}
+.dict-summary li {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 10px 16px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.dict-summary li.redo { color: var(--purple); }
+.dict-summary li.skip { color: var(--ink-soft); }
+/* 横屏：左边看词，右边写，手写区更高 */
+@media (orientation: landscape) {
+  .dictation-page #app, body.dictating #app { max-width: 1100px; }
+  .dict-layout { grid-template-columns: 2fr 3fr; grid-template-rows: 1fr; }
+  .dict-card { height: 100%; }
 }

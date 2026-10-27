@@ -16,6 +16,7 @@ import {
   GRADUATION_QUIZ_SIZE, GRADUATION_PASS_CORRECT, GRADUATION_BONUS_STARS, GRADUATION_THRESHOLD,
   formatDefinition,
 } from './engine.js';
+import { mountDictation } from './dictation.js';
 import {
   createStorage, PROFILES, findProfile, encodeBackup, decodeBackup,
 } from './storage.js';
@@ -74,7 +75,7 @@ function later(fn, delay) {
 }
 
 // 版本号：每次发布跟着 sw.js 的 CACHE 一起改，方便确认是否更新到最新
-const APP_VERSION = 'v31';
+const APP_VERSION = 'v32';
 
 // 强制更新：只注销当前应用的 Service Worker、清理本应用缓存，再带时间戳重载。
 async function forceUpdate() {
@@ -300,7 +301,7 @@ function speedRow() {
     const chosen = selectVoice(voices, 'en-GB', select.value);
     note.textContent = chosen
       ? `当前使用：${chosen.name}（${chosen.lang}）`
-      : '当前使用系统默认声音；可在 iPhone 设置中下载增强英语声音。';
+      : '当前使用系统默认声音；可在 iPad 设置中下载增强英语声音。';
   };
   select.addEventListener('change', () => {
     state.speechVoice = select.value;
@@ -1244,7 +1245,8 @@ function showCollection(scope) {
   const canBuild = !preReader && !scope.wrongbook && sentenceWords(scope.words).length >= 3;
   const modeGridHtml = (preReader || scope.wrongbook) ? '' : `
     <div class="mode-grid">
-      ${canSpell ? '<button class="mode-btn" id="spell">✍️ 拼一拼<span>看图拼单词</span></button>' : ''}
+      ${canSpell ? '<button class="mode-btn" id="spell">🔤 拼一拼<span>字母块拼单词</span></button>' : ''}
+      ${canSpell ? '<button class="mode-btn" id="dictate">✍️ 默写<span>听一听，在 iPad 上写</span></button>' : ''}
       ${canBuild ? '<button class="mode-btn" id="build">🧩 组句子<span>把句子拼回来</span></button>' : ''}
       <button class="mode-btn" id="speak-mode">🎙️ 跟读<span>大声读出来</span></button>
     </div>`;
@@ -1272,6 +1274,8 @@ function showCollection(scope) {
   `);
   const spellBtn = node.querySelector('#spell');
   if (spellBtn) spellBtn.addEventListener('click', () => showSpelling(scope));
+  const dictateBtn = node.querySelector('#dictate');
+  if (dictateBtn) dictateBtn.addEventListener('click', () => showDictation(scope));
   const buildBtn = node.querySelector('#build');
   if (buildBtn) buildBtn.addEventListener('click', () => showSentenceBuilder(scope));
   const speakBtn = node.querySelector('#speak-mode');
@@ -1476,6 +1480,38 @@ function runSpelling(scope, words, idx, results, hadMistake = false) {
   paint();
   render(node);
   speak(w.en);
+}
+
+// ————— ✍️ 写：手写默写（听读音，在 iPad 上用手指或笔直接写，翻开自己对照）—————
+function showDictation(scope) {
+  const picked = shuffle(spellableWords(scope.words)).slice(0, 6);
+  const byWord = new Map(picked.map((w) => [w.en.toLowerCase(), w]));
+  const node = el('<div class="dictation-host"></div>');
+  render(node);
+  document.body.classList.add('dictating');
+  const leave = () => {
+    handle.destroy();
+    document.body.classList.remove('dictating');
+    showCollection(scope);
+  };
+  const handle = mountDictation(node, {
+    items: picked.map((w) => ({ word: w.en.toLowerCase(), kind: 'review', zh: w.zh, emoji: w.emoji })),
+    speak,
+    finishLabel: '返回',
+    onFinish(summary) {
+      const d = pdata();
+      for (const r of summary.words) {
+        const w = byWord.get(r.word);
+        if (!w || !r.attempts) continue;
+        d.progress[w.id] = gradeAnswer(d.progress[w.id], r.firstTry);
+        recordPractice(w.id, 'spelling');
+        if (r.done) d.stars += 1;
+      }
+      saveState();
+      leave();
+    },
+    onExit: leave,
+  });
 }
 
 // ————— 🧩 读：组句子（乱序词块拼回例句）—————
